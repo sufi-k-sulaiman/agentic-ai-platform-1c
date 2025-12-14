@@ -290,19 +290,19 @@ export default function InvestorRelations() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Niroshi Nadarajah',
-                role: 'CEO',
-                background: 'Microbiology researcher turned AI visionary with deep experience in enterprise transformation'
+               name: 'Niroshi Nadarajah',
+               role: 'CEO & Co-Founder',
+               background: 'Former microbiology researcher at leading pharmaceutical companies, now pioneering enterprise AI transformation with a vision for autonomous business intelligence'
               },
               {
-                name: 'Suf K Sulaiman',
-                role: 'CTO',
-                background: '30+ years in AI, hardware, and software engineering. Built systems that scale to billions'
+               name: 'Suf K Sulaiman',
+               role: 'CTO & Co-Founder',
+               background: '30+ years driving innovation across AI, hardware, and software at global tech giants. Architect of systems processing billions of transactions daily'
               },
               {
-                name: 'Emily Zhang',
-                role: 'CPO',
-                background: 'Product leader who built enterprise software used by millions at scale'
+               name: 'Emily Zhang',
+               role: 'Chief Product Officer',
+               background: 'Veteran product leader from top enterprise software companies, instrumental in scaling platforms to millions of users globally'
               }
             ].map((leader, index) => (
               <motion.div
