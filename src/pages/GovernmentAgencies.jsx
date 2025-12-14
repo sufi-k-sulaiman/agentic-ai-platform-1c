@@ -105,9 +105,11 @@ export default function GovernmentAgencies() {
                         Get started <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                 </Link>
-                <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
-                  Government solutions
-                </Button>
+                <Link to={createPageUrl('SavingsCalculator')}>
+                  <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
+                    Calculate Savings
+                  </Button>
+                </Link>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
@@ -213,11 +215,18 @@ export default function GovernmentAgencies() {
             <p className="text-xl text-gray-600 mb-10">
               Join forward-thinking agencies transforming operations with Agentic Ai
             </p>
-            <Link to={createPageUrl('Onboarding')}>
-              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-                Get started <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to={createPageUrl('Onboarding')}>
+                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                  Get started <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to={createPageUrl('SavingsCalculator')}>
+                <Button variant="outline" className="rounded-full border-gray-300 px-10 h-16 text-lg">
+                  Calculate Savings
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

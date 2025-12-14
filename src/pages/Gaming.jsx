@@ -105,12 +105,16 @@ export default function Gaming() {
                 Power your game with Agentic Ai that optimizes infrastructure, personalizes player experiences, and detects cheats—cutting costs by 35% while boosting engagement.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-                  Request demo <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
-                  Technical docs
-                </Button>
+                <Link to={createPageUrl('Onboarding')}>
+                  <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                    Get started <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link to={createPageUrl('SavingsCalculator')}>
+                  <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
+                    Calculate Savings
+                  </Button>
+                </Link>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
@@ -216,9 +220,18 @@ export default function Gaming() {
             <p className="text-xl text-gray-600 mb-10">
               Join top gaming studios optimizing operations with Agentic Ai
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Get started <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to={createPageUrl('Onboarding')}>
+                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                  Get started <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to={createPageUrl('SavingsCalculator')}>
+                <Button variant="outline" className="rounded-full border-gray-300 px-10 h-16 text-lg">
+                  Calculate Savings
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
