@@ -67,7 +67,7 @@ const navItems = [
       { label: 'Learning Journey', description: 'Structured paths', href: createPageUrl('LearningJourney') },
       { label: 'Certifications', description: 'Get certified', href: createPageUrl('ProfessionalCertifications') },
       { label: 'System Status', description: 'Platform health', href: createPageUrl('Status') },
-      { label: 'Security', description: 'Trust & safety', href: createPageUrl('Cyber') },
+      { label: 'Cyber', description: 'Trust & safety', href: createPageUrl('Cyber') },
     ]
   },
 ];
