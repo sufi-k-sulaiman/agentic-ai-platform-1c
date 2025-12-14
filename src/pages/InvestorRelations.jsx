@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X, Download } from 'lucide-react';
+import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X, Download, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import jsPDF from 'jspdf';
+import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 const investmentSlides = [
   { 
@@ -510,6 +511,502 @@ export default function InvestorRelations() {
                 </div>
                 <div className="pt-4 border-t border-purple-100">
                   <p className="text-lg font-bold text-[#8B2EE5]">{solution.metric}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* User Growth Chart */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Guide of Active Users
+            </h2>
+            <div className="inline-flex items-center gap-3 bg-cyan-400 rounded-full px-8 py-4 mb-8">
+              <div className="text-4xl font-bold text-white">$1.3B</div>
+            </div>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
+              <ResponsiveContainer width="100%" height={400}>
+                <BarChart data={[
+                  { year: '2019', users: 950000, color: '#0891B2' },
+                  { year: '2020', users: 900000, color: '#0891B2' },
+                  { year: '2021', users: 950000, color: '#0891B2' },
+                  { year: '2022', users: 1180000, color: '#6209e6' },
+                  { year: '2023', users: 1250000, color: '#6209e6' }
+                ]}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
+                  <XAxis dataKey="year" stroke="#6B7280" />
+                  <YAxis stroke="#6B7280" />
+                  <Tooltip />
+                  <Bar dataKey="users" radius={[8, 8, 0, 0]}>
+                    {[
+                      { year: '2019', users: 950000, color: '#0891B2' },
+                      { year: '2020', users: 900000, color: '#0891B2' },
+                      { year: '2021', users: 950000, color: '#0891B2' },
+                      { year: '2022', users: 1180000, color: '#6209e6' },
+                      { year: '2023', users: 1250000, color: '#6209e6' }
+                    ].map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+              <div className="flex justify-center gap-4 mt-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-[#0891B2]"></div>
+                  <span className="text-sm text-gray-600">Early Growth</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-[#6209e6]"></div>
+                  <span className="text-sm text-gray-600">AI Era</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Observation</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                User growth accelerated 31% after launching Agentic AI platform in 2022. Retention improved from 82% to 98% as AI automation drove measurable ROI for customers.
+              </p>
+              <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                <div className="text-3xl font-bold text-[#6209e6] mb-2">250%</div>
+                <div className="text-sm text-gray-600">Average customer base growth annually</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Demographics */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Our Community
+            </h2>
+            <p className="text-xl text-gray-600">Decision makers driving transformation</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              { percent: 36, filled: 4, label: 'C-Suite Executives', desc: 'CEOs, CTOs, and COOs making strategic decisions' },
+              { percent: 50, filled: 5, label: 'VP / Directors', desc: 'Department heads implementing AI solutions' },
+              { percent: 14, filled: 2, label: 'Managers', desc: 'Team leaders optimizing operations' }
+            ].map((demo, index) => (
+              <motion.div
+                key={demo.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg"
+              >
+                <div className="text-6xl font-bold text-gray-900 mb-4">{demo.percent}%</div>
+                <div className="flex gap-1 mb-6">
+                  {Array.from({ length: 10 }).map((_, i) => (
+                    <User 
+                      key={i} 
+                      className={`w-6 h-6 ${i < demo.filled ? 'text-[#6209e6] fill-[#6209e6]' : 'text-gray-300 fill-gray-300'}`} 
+                    />
+                  ))}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{demo.label}</h3>
+                <p className="text-gray-600">{demo.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quarterly Profits Chart */}
+      <section className="py-24 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Quarterly Profits
+            </h2>
+          </motion.div>
+
+          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700">
+            <ResponsiveContainer width="100%" height={400}>
+              <BarChart data={[
+                { quarter: 'Q1 2023', profit: 3, color: '#0891B2' },
+                { quarter: 'Q2 2023', profit: 2, color: '#0891B2' },
+                { quarter: 'Q3 2023', profit: 3, color: '#0891B2' },
+                { quarter: 'Q4 2023', profit: 4, color: '#0891B2' },
+                { quarter: 'Q1 2024', profit: 6, color: '#6209e6' },
+                { quarter: 'Q2 2024', profit: 6, color: '#6209e6' },
+                { quarter: 'Q3 2024', profit: 7, color: '#6209e6' },
+                { quarter: 'Q4 2024', profit: 8, color: '#6209e6' }
+              ]}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                <XAxis dataKey="quarter" stroke="#9CA3AF" />
+                <YAxis stroke="#9CA3AF" tickFormatter={(value) => `$${value}m`} />
+                <Tooltip 
+                  contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #374151', borderRadius: '8px' }}
+                  labelStyle={{ color: '#F3F4F6' }}
+                  formatter={(value) => [`$${value}m`, 'Profit']}
+                />
+                <Bar dataKey="profit" radius={[8, 8, 0, 0]}>
+                  {[
+                    { color: '#0891B2' }, { color: '#0891B2' }, { color: '#0891B2' }, { color: '#0891B2' },
+                    { color: '#6209e6' }, { color: '#6209e6' }, { color: '#6209e6' }, { color: '#6209e6' }
+                  ].map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+            <div className="mt-8 grid grid-cols-2 gap-4">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400">+46%</div>
+                <div className="text-sm text-gray-400">Early phase growth</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-400">+124%</div>
+                <div className="text-sm text-gray-400">Post-AI launch acceleration</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Yearly Profit Trajectory */}
+      <section className="py-24 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Yearly Profit
+            </h2>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700">
+              <ResponsiveContainer width="100%" height={400}>
+                <LineChart data={[
+                  { year: '2018', profit: 20 },
+                  { year: '2019', profit: 24 },
+                  { year: '2020', profit: 26 },
+                  { year: '2021', profit: 28 },
+                  { year: '2022', profit: 72 },
+                  { year: '2023', profit: 95 },
+                  { year: '2024', profit: 140 }
+                ]}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                  <XAxis dataKey="year" stroke="#9CA3AF" />
+                  <YAxis stroke="#9CA3AF" tickFormatter={(value) => `${value}k`} />
+                  <Tooltip 
+                    contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #374151', borderRadius: '8px' }}
+                    labelStyle={{ color: '#F3F4F6' }}
+                    formatter={(value) => [`$${value}k`, 'Profit']}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="profit" 
+                    stroke="#6209e6" 
+                    strokeWidth={3}
+                    dot={{ fill: '#6209e6', r: 6, strokeWidth: 2, stroke: '#0891B2' }}
+                    activeDot={{ r: 8 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+
+            <div className="flex flex-col justify-center">
+              <div className="bg-gradient-to-br from-cyan-400 to-cyan-500 text-gray-900 p-8 rounded-2xl mb-6">
+                <div className="text-6xl font-bold mb-2">28%</div>
+                <div className="text-xl font-semibold">KEY METRIC</div>
+                <div className="text-sm mt-2">Average annual profit growth rate</div>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                Profit trajectory shows strong inflection point post-2021 with AI product launch driving exponential growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Penetration Strategy */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl font-bold text-gray-900 mb-6">
+                Market Penetration
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                5-pronged strategy to increase market share and dominate the Agentic AI landscape.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { num: 1, strategy: 'Product-Led Growth', desc: 'Free tier driving viral adoption and conversion' },
+                  { num: 2, strategy: 'Enterprise Sales', desc: 'Direct sales team closing 6-figure deals' },
+                  { num: 3, strategy: 'Strategic Partnerships', desc: 'Channel partners and system integrators' },
+                  { num: 4, strategy: 'Developer Ecosystem', desc: 'API-first platform enabling custom solutions' },
+                  { num: 5, strategy: 'Industry Verticals', desc: 'Specialized solutions for 14 industries' }
+                ].map((item) => (
+                  <div key={item.num} className="flex gap-4">
+                    <div className="w-10 h-10 bg-[#6209e6] text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                      {item.num}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">{item.strategy}</h4>
+                      <p className="text-sm text-gray-600">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center min-h-[500px]"
+            >
+              <svg viewBox="0 0 400 400" className="w-full max-w-md">
+                {/* Center circle */}
+                <circle cx="200" cy="200" r="80" fill="#6209e6" />
+                <text x="200" y="190" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">Increase</text>
+                <text x="200" y="210" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">Market</text>
+                <text x="200" y="230" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">Share</text>
+                
+                {/* Strategy circles */}
+                {[
+                  { x: 200, y: 60, num: 1, angle: -90 },
+                  { x: 310, y: 140, num: 2, angle: -30 },
+                  { x: 310, y: 260, num: 3, angle: 30 },
+                  { x: 200, y: 340, num: 4, angle: 90 },
+                  { x: 90, y: 260, num: 5, angle: 150 }
+                ].map((pos) => (
+                  <g key={pos.num}>
+                    <line x1="200" y1="200" x2={pos.x} y2={pos.y} stroke="#6209e6" strokeWidth="2" strokeDasharray="5,5" />
+                    <circle cx={pos.x} cy={pos.y} r="30" fill="#6209e6" />
+                    <text x={pos.x} y={pos.y + 6} textAnchor="middle" fill="white" fontSize="24" fontWeight="bold">{pos.num}</text>
+                  </g>
+                ))}
+              </svg>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expansion Opportunity - Sector Analysis */}
+      <section className="py-24 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Expansion Opportunity
+            </h2>
+            <p className="text-2xl text-gray-400">Market share by sector with significant growth potential</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              { name: 'Enterprise SaaS', slices: [{ name: 'Our Share', value: 55, color: '#6209e6' }, { name: 'Available', value: 45, color: '#0891B2' }] },
+              { name: 'Healthcare & Finance', slices: [{ name: 'Our Share', value: 61, color: '#6209e6' }, { name: 'Competitor', value: 15, color: '#0891B2' }, { name: 'Available', value: 24, color: '#374151' }] },
+              { name: 'Manufacturing & Retail', slices: [{ name: 'Our Share', value: 37, color: '#6209e6' }, { name: 'Available', value: 40, color: '#0891B2' }, { name: 'Competitor', value: 22, color: '#374151' }, { name: 'Other', value: 1, color: '#6B7280' }] }
+            ].map((sector, index) => (
+              <motion.div
+                key={sector.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10"
+              >
+                <h3 className="text-xl font-bold mb-6 text-center">{sector.name}</h3>
+                <ResponsiveContainer width="100%" height={250}>
+                  <PieChart>
+                    <Pie
+                      data={sector.slices}
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={60}
+                      outerRadius={100}
+                      paddingAngle={2}
+                      dataKey="value"
+                    >
+                      {sector.slices.map((entry, idx) => (
+                        <Cell key={`cell-${idx}`} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Tooltip 
+                      contentStyle={{ backgroundColor: '#1F2937', border: 'none', borderRadius: '8px' }}
+                      formatter={(value) => `${value}%`}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+                <div className="mt-4 space-y-2">
+                  {sector.slices.map((slice, idx) => (
+                    <div key={idx} className="flex items-center justify-between text-sm">
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: slice.color }}></div>
+                        <span className="text-gray-300">{slice.name}</span>
+                      </div>
+                      <span className="font-bold">{slice.value}%</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* International Growth Playbook */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl font-bold text-gray-900 mb-8">
+                International Growth Playbook
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-3 h-3 bg-[#6209e6] rounded-full"></div>
+                    <h3 className="text-xl font-bold text-gray-900">Local Marketing</h3>
+                  </div>
+                  <p className="text-gray-600 ml-6">Generate awareness through localized marketing campaigns, region-specific content, and strategic PR in target markets.</p>
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-3 h-3 bg-[#6209e6] rounded-full"></div>
+                    <h3 className="text-xl font-bold text-gray-900">Partnerships</h3>
+                  </div>
+                  <p className="text-gray-600 ml-6">
+                    Preloaded partnerships with major system integrators and technology vendors provide instant market placement and credibility. 
+                    Collaborations with local service providers ensure attractive pricing and seamless customer experience.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-gradient-to-r from-[#6209e6] to-[#7C3AED] text-white p-12 rounded-2xl">
+                <div className="text-7xl font-bold mb-3">500+</div>
+                <div className="text-2xl font-semibold">International Content Partners</div>
+              </div>
+              <div className="bg-gradient-to-r from-[#6209e6] to-[#7C3AED] text-white p-12 rounded-2xl">
+                <div className="text-7xl font-bold mb-3">10+</div>
+                <div className="text-2xl font-semibold">Countries</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Milestones Timeline */}
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Company Milestones and Innovation
+            </h2>
+            <p className="text-xl text-gray-600">Our journey to becoming the leader in Agentic AI</p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-[#6209e6] transform md:-translate-x-1/2"></div>
+
+            {/* Starting point */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative mb-16"
+            >
+              <div className="flex justify-start md:justify-center mb-8">
+                <div className="w-20 h-20 bg-white border-4 border-[#6209e6] rounded-full flex items-center justify-center z-10">
+                  <span className="text-sm font-bold text-[#6209e6]">Start</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Milestones */}
+            {[
+              { num: 1, title: 'Company Founded', date: 'Jan 2023', desc: 'Launched with vision to democratize enterprise AI' },
+              { num: 2, title: 'Product Launch', date: 'Mar 2023', desc: 'First no-code Agentic AI platform goes live' },
+              { num: 3, title: 'Series A Funding', date: 'Aug 2023', desc: 'Raised $15M led by top VCs' },
+              { num: 4, title: '1,000 Customers', date: 'Feb 2024', desc: 'Crossed 1,000 enterprise customers milestone' },
+              { num: 5, title: 'Global Expansion', date: 'Jun 2024', desc: 'Expanded to 45+ countries worldwide' },
+              { num: 6, title: 'Platform 2.0', date: 'Oct 2024', desc: 'Launched multi-agent orchestration' },
+              { num: 7, title: '10,000 Customers', date: 'Dec 2024', desc: 'Reached 10,000 organizations using platform' }
+            ].map((milestone, index) => (
+              <motion.div
+                key={milestone.num}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`relative mb-12 md:mb-16 ${index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2 md:ml-auto'}`}
+              >
+                <div className={`flex ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} justify-start`}>
+                  <div className="max-w-md">
+                    <div className={`flex items-center gap-4 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                      <div className="w-14 h-14 bg-[#6209e6] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 border-4 border-white shadow-lg relative z-10">
+                        {milestone.num}
+                      </div>
+                      <div className={index % 2 === 0 ? 'md:text-right' : ''}>
+                        <div className="text-lg font-bold text-gray-900">{milestone.title}</div>
+                        <div className="text-sm text-gray-500">{milestone.date}</div>
+                      </div>
+                    </div>
+                    <div className={`mt-3 ${index % 2 === 0 ? 'md:text-right md:mr-18' : 'md:ml-18'} ml-18`}>
+                      <p className="text-gray-600">{milestone.desc}</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
