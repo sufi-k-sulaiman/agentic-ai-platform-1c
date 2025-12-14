@@ -621,7 +621,7 @@ export default function Pricing() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { quote: 'Best value for AI automation we've found', author: 'Sarah Chen', role: 'CTO, TechCorp', savings: '60% cost reduction' },
+              { quote: "Best value for AI automation we've found", author: 'Sarah Chen', role: 'CTO, TechCorp', savings: '60% cost reduction' },
               { quote: 'ROI in just 3 months. Incredible.', author: 'Michael Torres', role: 'VP Ops, RetailCo', savings: '$250K saved/year' },
               { quote: 'Support is outstanding. Migration was seamless.', author: 'Emma Wilson', role: 'CEO, StartupX', savings: '10x productivity' }
             ].map((testimonial, i) => (
