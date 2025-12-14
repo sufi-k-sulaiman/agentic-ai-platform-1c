@@ -122,6 +122,12 @@ import BlogAIAutonomyFuture from './pages/BlogAIAutonomyFuture';
 import SavingsCalculator from './pages/SavingsCalculator';
 import EventRegistrations from './pages/EventRegistrations';
 import NewsletterSignups from './pages/NewsletterSignups';
+import DocInstallation from './pages/DocInstallation';
+import DocFirstAgent from './pages/DocFirstAgent';
+import DocAuthentication from './pages/DocAuthentication';
+import DocAPIReference from './pages/DocAPIReference';
+import DocWorkflowAutomation from './pages/DocWorkflowAutomation';
+import DocDataIntegration from './pages/DocDataIntegration';
 import __Layout from './Layout.jsx';
 
 
@@ -250,6 +256,12 @@ export const PAGES = {
     "SavingsCalculator": SavingsCalculator,
     "EventRegistrations": EventRegistrations,
     "NewsletterSignups": NewsletterSignups,
+    "DocInstallation": DocInstallation,
+    "DocFirstAgent": DocFirstAgent,
+    "DocAuthentication": DocAuthentication,
+    "DocAPIReference": DocAPIReference,
+    "DocWorkflowAutomation": DocWorkflowAutomation,
+    "DocDataIntegration": DocDataIntegration,
 }
 
 export const pagesConfig = {

@@ -4,6 +4,8 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Search, BookOpen, Code, Zap, Terminal, FileText, ArrowRight, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const categories = [
   {
@@ -131,17 +133,36 @@ export default function Documentation() {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
-                      {category.guides.map((guide) => (
-                        <li key={guide}>
-                          <a
-                            href="#"
-                            className="flex items-center gap-2 text-sm text-gray-700 hover:text-[#8B2EE5] transition-colors group"
-                          >
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            {guide}
-                          </a>
-                        </li>
-                      ))}
+                      {category.guides.map((guide) => {
+                        const pageMap = {
+                          'Installation & Setup': 'DocInstallation',
+                          'Your First Agent': 'DocFirstAgent',
+                          'Authentication': 'DocAuthentication',
+                          'REST API Endpoints': 'DocAPIReference',
+                          'Workflow Automation': 'DocWorkflowAutomation',
+                          'Data Integration': 'DocDataIntegration'
+                        };
+                        const pageName = pageMap[guide];
+                        
+                        return (
+                          <li key={guide}>
+                            {pageName ? (
+                              <Link
+                                to={createPageUrl(pageName)}
+                                className="flex items-center gap-2 text-sm text-gray-700 hover:text-[#8B2EE5] transition-colors group"
+                              >
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                {guide}
+                              </Link>
+                            ) : (
+                              <span className="flex items-center gap-2 text-sm text-gray-700">
+                                <ArrowRight className="w-4 h-4" />
+                                {guide}
+                              </span>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </CardContent>
                 </Card>
@@ -159,36 +180,51 @@ export default function Documentation() {
               <h2 className="text-4xl font-bold text-gray-900 mb-2">Popular documentation</h2>
               <p className="text-gray-600">Most viewed guides this month</p>
             </div>
-            <Button variant="outline" className="rounded-full border-gray-300">
-              View all <ExternalLink className="ml-2 w-4 h-4" />
-            </Button>
+            <Link to={createPageUrl('DocAPIReference')}>
+              <Button variant="outline" className="rounded-full border-gray-300">
+                View all <ExternalLink className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
 
           <div className="space-y-4">
-            {popularDocs.map((doc, index) => (
-              <motion.a
-                key={doc.title}
-                href="#"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-center justify-between p-6 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-all group"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <FileText className="w-6 h-6 text-gray-400 group-hover:text-[#8B2EE5] transition-colors" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-[#8B2EE5] transition-colors">
-                      {doc.title}
-                    </h3>
-                    <p className="text-sm text-gray-500">{doc.category} • {doc.views} views</p>
-                  </div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#8B2EE5] group-hover:translate-x-1 transition-all" />
-              </motion.a>
-            ))}
+            {popularDocs.map((doc, index) => {
+              const docPageMap = {
+                'Authentication Guide': 'DocAuthentication',
+                'Creating Your First Agent': 'DocFirstAgent',
+                'REST API Reference': 'DocAPIReference',
+                'Webhook Events': 'DocDataIntegration'
+              };
+              const pageName = docPageMap[doc.title] || 'DocAPIReference';
+              
+              return (
+                <motion.div
+                  key={doc.title}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Link
+                    to={createPageUrl(pageName)}
+                    className="flex items-center justify-between p-6 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-all group"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <FileText className="w-6 h-6 text-gray-400 group-hover:text-[#8B2EE5] transition-colors" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 group-hover:text-[#8B2EE5] transition-colors">
+                          {doc.title}
+                        </h3>
+                        <p className="text-sm text-gray-500">{doc.category} • {doc.views} views</p>
+                      </div>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#8B2EE5] group-hover:translate-x-1 transition-all" />
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -231,9 +267,11 @@ console.log('Agent created:', agent.id);`}</code>
           </div>
 
           <div className="text-center mt-8">
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8">
-              View full guide <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <Link to={createPageUrl('DocFirstAgent')}>
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8">
+                View full guide <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
