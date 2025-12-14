@@ -7,26 +7,206 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 const investmentSlides = [
-  { title: 'Executive Summary', content: 'Transforming Enterprise with Autonomous AI', bg: 'from-purple-600 to-violet-700' },
-  { title: 'Market Opportunity', content: '$500B TAM by 2030', bg: 'from-blue-600 to-cyan-700' },
-  { title: 'The Problem', content: 'Legacy Systems & Manual Processes', bg: 'from-red-600 to-orange-700' },
-  { title: 'Our Solution', content: 'Agentic AI Platform', bg: 'from-green-600 to-emerald-700' },
-  { title: 'Product Suite', content: '4 Core Products, 14 Verticals', bg: 'from-purple-600 to-pink-700' },
-  { title: 'Technology Stack', content: 'Enterprise-Grade Infrastructure', bg: 'from-indigo-600 to-purple-700' },
-  { title: 'Traction', content: '500+ Enterprise Clients', bg: 'from-yellow-600 to-orange-700' },
-  { title: 'Revenue Model', content: 'SaaS with Usage-Based Pricing', bg: 'from-teal-600 to-green-700' },
-  { title: 'Growth Metrics', content: '300% YoY Revenue Growth', bg: 'from-rose-600 to-pink-700' },
-  { title: 'Customer Success', content: '40% Avg. Cost Reduction', bg: 'from-violet-600 to-purple-700' },
-  { title: 'Competitive Landscape', content: 'Differentiated Positioning', bg: 'from-blue-600 to-indigo-700' },
-  { title: 'Go-to-Market', content: 'Enterprise Sales & Partnerships', bg: 'from-emerald-600 to-teal-700' },
-  { title: 'Team', content: '2000+ Talented Professionals', bg: 'from-amber-600 to-orange-700' },
-  { title: 'Roadmap', content: 'Vision for 2025-2027', bg: 'from-purple-600 to-indigo-700' },
-  { title: 'Financials', content: '$2.5B Current Valuation', bg: 'from-green-600 to-teal-700' },
-  { title: 'Use of Funds', content: 'Product, Sales, and Expansion', bg: 'from-red-600 to-rose-700' },
-  { title: 'Partnerships', content: 'Strategic Alliances & Integrations', bg: 'from-cyan-600 to-blue-700' },
-  { title: 'Industry Recognition', content: 'Awards & Certifications', bg: 'from-yellow-600 to-amber-700' },
-  { title: 'Vision', content: 'The Future of Enterprise AI', bg: 'from-violet-600 to-fuchsia-700' },
-  { title: 'Investment Ask', content: 'Join Us in Building the Future', bg: 'from-purple-600 to-pink-700' }
+  { 
+    title: '1C Platform', 
+    subtitle: 'Autonomous AI for Enterprise',
+    metrics: [
+      { value: '500+', label: 'Enterprise Clients' },
+      { value: '$2.5B', label: 'Valuation' },
+      { value: '45+', label: 'Countries' }
+    ],
+    bg: 'from-purple-600 to-violet-700' 
+  },
+  { 
+    title: '$500B', 
+    subtitle: 'Total Addressable Market by 2030',
+    metrics: [
+      { value: '85%', label: 'Enterprises without AI agents' },
+      { value: '120%', label: 'Market CAGR' },
+      { value: '14', label: 'Vertical Markets' }
+    ],
+    bg: 'from-blue-600 to-cyan-700' 
+  },
+  { 
+    title: 'Enterprise Barriers', 
+    subtitle: 'Why Traditional AI Fails',
+    metrics: [
+      { value: '87%', label: 'Struggle with complexity' },
+      { value: '12-18mo', label: 'Time to deploy' },
+      { value: '3x', label: 'Cost to scale' }
+    ],
+    bg: 'from-red-600 to-orange-700' 
+  },
+  { 
+    title: 'No-Code AI Builder', 
+    subtitle: 'Deploy in 5 Minutes',
+    metrics: [
+      { value: '100x', label: 'Faster deployment' },
+      { value: '95%', label: 'Task automation' },
+      { value: '99.99%', label: 'Uptime SLA' }
+    ],
+    bg: 'from-green-600 to-emerald-700' 
+  },
+  { 
+    title: 'Product Portfolio', 
+    subtitle: 'Complete AI Ecosystem',
+    metrics: [
+      { value: '4', label: 'Core Products' },
+      { value: '14', label: 'Industry Verticals' },
+      { value: '1000+', label: 'Integrations' }
+    ],
+    bg: 'from-purple-600 to-pink-700' 
+  },
+  { 
+    title: 'Enterprise Infrastructure', 
+    subtitle: 'Built for Scale',
+    metrics: [
+      { value: 'SOC 2', label: 'Type II Certified' },
+      { value: '50B+', label: 'API calls/month' },
+      { value: '<50ms', label: 'Global latency' }
+    ],
+    bg: 'from-indigo-600 to-purple-700' 
+  },
+  { 
+    title: 'Market Traction', 
+    subtitle: 'Proven Success',
+    metrics: [
+      { value: '10K+', label: 'Organizations' },
+      { value: '98%', label: 'Retention rate' },
+      { value: '140%', label: 'Net revenue retention' }
+    ],
+    bg: 'from-yellow-600 to-orange-700' 
+  },
+  { 
+    title: 'Revenue Streams', 
+    subtitle: 'Multiple High-Margin Sources',
+    metrics: [
+      { value: '65%', label: 'Subscription' },
+      { value: '25%', label: 'Usage-based' },
+      { value: '10%', label: 'Professional services' }
+    ],
+    bg: 'from-teal-600 to-green-700' 
+  },
+  { 
+    title: '300% YoY', 
+    subtitle: 'Revenue Growth',
+    metrics: [
+      { value: '$48M', label: '2025 Projected' },
+      { value: '$285K', label: 'Avg. enterprise deal' },
+      { value: '4.2mo', label: 'Sales cycle' }
+    ],
+    bg: 'from-rose-600 to-pink-700' 
+  },
+  { 
+    title: 'Customer ROI', 
+    subtitle: 'Measurable Impact',
+    metrics: [
+      { value: '45%', label: 'Cost reduction' },
+      { value: '60%', label: 'Productivity gain' },
+      { value: '90 days', label: 'Time to ROI' }
+    ],
+    bg: 'from-violet-600 to-purple-700' 
+  },
+  { 
+    title: 'Unit Economics', 
+    subtitle: 'Best-in-Class Efficiency',
+    metrics: [
+      { value: '10.5:1', label: 'LTV:CAC ratio' },
+      { value: '4 months', label: 'Payback period' },
+      { value: '78%', label: 'Gross margin' }
+    ],
+    bg: 'from-blue-600 to-indigo-700' 
+  },
+  { 
+    title: 'Go-to-Market', 
+    subtitle: 'Multi-Channel Strategy',
+    metrics: [
+      { value: '35%', label: 'Free-to-paid conversion' },
+      { value: '60%', label: 'Referral customers' },
+      { value: '15+', label: 'Strategic partners' }
+    ],
+    bg: 'from-emerald-600 to-teal-700' 
+  },
+  { 
+    title: 'World-Class Team', 
+    subtitle: 'Proven Executives',
+    metrics: [
+      { value: '2000+', label: 'Team members' },
+      { value: '30+ yrs', label: 'Leadership experience' },
+      { value: '45+', label: 'Global offices' }
+    ],
+    bg: 'from-amber-600 to-orange-700' 
+  },
+  { 
+    title: 'Strategic Roadmap', 
+    subtitle: '2025-2030',
+    metrics: [
+      { value: '2026', label: 'Series B ($100M)' },
+      { value: '2027', label: 'Profitability' },
+      { value: '2030', label: 'IPO Ready ($1.2B)' }
+    ],
+    bg: 'from-purple-600 to-indigo-700' 
+  },
+  { 
+    title: 'Financial Projections', 
+    subtitle: 'Hypergrowth Trajectory',
+    metrics: [
+      { value: '$125M', label: '2026 Revenue' },
+      { value: '$520M', label: '2028 Revenue' },
+      { value: '$1.2B', label: '2030 Revenue' }
+    ],
+    bg: 'from-green-600 to-teal-700' 
+  },
+  { 
+    title: 'Investment Use', 
+    subtitle: 'Fuel for Growth',
+    metrics: [
+      { value: '40%', label: 'Product & R&D' },
+      { value: '35%', label: 'Sales & Marketing' },
+      { value: '25%', label: 'Global expansion' }
+    ],
+    bg: 'from-red-600 to-rose-700' 
+  },
+  { 
+    title: 'Strategic Partners', 
+    subtitle: 'Ecosystem Leadership',
+    metrics: [
+      { value: '1000+', label: 'Pre-built integrations' },
+      { value: '50+', label: 'Channel partners' },
+      { value: '20%', label: 'Partner revenue' }
+    ],
+    bg: 'from-cyan-600 to-blue-700' 
+  },
+  { 
+    title: 'Market Leadership', 
+    subtitle: 'Industry Recognition',
+    metrics: [
+      { value: 'SOC 2', label: 'Type II + ISO 27001' },
+      { value: 'GDPR', label: 'Fully compliant' },
+      { value: '4.9/5', label: 'G2 rating' }
+    ],
+    bg: 'from-yellow-600 to-amber-700' 
+  },
+  { 
+    title: 'Our Vision', 
+    subtitle: 'AI Agent in Every Enterprise',
+    metrics: [
+      { value: '500M', label: 'Workers to empower' },
+      { value: '100+', label: 'Countries by 2030' },
+      { value: '#1', label: 'Agentic AI platform' }
+    ],
+    bg: 'from-violet-600 to-fuchsia-700' 
+  },
+  { 
+    title: 'Join Us', 
+    subtitle: 'Building the Future Together',
+    metrics: [
+      { value: 'Series B', label: 'Investment round' },
+      { value: '$100M', label: 'Target raise' },
+      { value: 'Now', label: 'Perfect timing' }
+    ],
+    bg: 'from-purple-600 to-pink-700' 
+  }
 ];
 
 export default function InvestorRelations() {
@@ -1010,17 +1190,37 @@ export default function InvestorRelations() {
                 key={currentSlide}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-center px-8 md:px-16"
+                className="text-center px-8 md:px-16 w-full max-w-5xl"
               >
-                <div className="text-sm md:text-base font-semibold mb-4 opacity-80">
+                <div className="text-sm md:text-base font-semibold mb-8 opacity-80">
                   Slide {currentSlide + 1} of {investmentSlides.length}
                 </div>
-                <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+                <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4">
                   {investmentSlides[currentSlide].title}
                 </h2>
-                <p className="text-xl md:text-3xl opacity-90">
-                  {investmentSlides[currentSlide].content}
+                <p className="text-2xl md:text-4xl opacity-80 mb-12">
+                  {investmentSlides[currentSlide].subtitle}
                 </p>
+                
+                {/* Metrics Grid */}
+                <div className="grid grid-cols-3 gap-6 md:gap-12 mt-12">
+                  {investmentSlides[currentSlide].metrics.map((metric, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.2 + idx * 0.1 }}
+                      className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20"
+                    >
+                      <div className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3">
+                        {metric.value}
+                      </div>
+                      <div className="text-sm md:text-lg opacity-90">
+                        {metric.label}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
 
               {/* Navigation Arrows */}
