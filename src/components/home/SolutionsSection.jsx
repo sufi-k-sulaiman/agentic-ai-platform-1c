@@ -1,15 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Building2, Truck, HeartPulse, Landmark, ShoppingBag, Factory } from 'lucide-react';
+import { ArrowRight, Building2, Truck, HeartPulse, Landmark, ShoppingBag, Server, Home, Train, TrafficCone, Zap, GraduationCap, Gamepad2, Shield, Plane, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const industries = [
-  { icon: Building2, name: 'Financial Services', href: '#' },
-  { icon: HeartPulse, name: 'Healthcare', href: '#' },
-  { icon: ShoppingBag, name: 'Retail', href: '#' },
-  { icon: Factory, name: 'Manufacturing', href: '#' },
-  { icon: Truck, name: 'Logistics', href: '#' },
-  { icon: Landmark, name: 'Government', href: '#' },
+  { icon: Building2, name: 'Property Management', href: createPageUrl('PropertyManagement') },
+  { icon: Server, name: 'Data Centers', href: createPageUrl('DataCenters') },
+  { icon: Landmark, name: 'Financial Services', href: createPageUrl('FinancialInstitutions') },
+  { icon: HeartPulse, name: 'Healthcare', href: createPageUrl('Healthcare') },
+  { icon: Home, name: 'Corporate Campuses', href: createPageUrl('CorporateCampuses') },
+  { icon: Train, name: 'Public Transit', href: createPageUrl('Transit') },
+  { icon: TrafficCone, name: 'Traffic Management', href: createPageUrl('Traffic') },
+  { icon: Zap, name: 'Energy & Utilities', href: createPageUrl('EnergyUtilities') },
+  { icon: ShoppingBag, name: 'Retail', href: createPageUrl('Retail') },
+  { icon: GraduationCap, name: 'Education', href: createPageUrl('Education') },
+  { icon: Gamepad2, name: 'Gaming', href: createPageUrl('Gaming') },
+  { icon: Shield, name: 'Government', href: createPageUrl('GovernmentAgencies') },
+  { icon: Plane, name: 'Airports', href: createPageUrl('Airports') },
+  { icon: Users, name: 'Sports & Entertainment', href: createPageUrl('SportsEntertainment') },
 ];
 
 const stats = [
@@ -61,14 +71,14 @@ export default function SolutionsSection() {
               className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10"
             >
               {industries.map((industry) => (
-                <a
+                <Link
                   key={industry.name}
-                  href={industry.href}
+                  to={industry.href}
                   className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 hover:bg-purple-50 hover:border-[#6209e6]/20 border border-transparent transition-all group"
                 >
                   <industry.icon className="w-5 h-5 text-gray-400 group-hover:text-[#6209e6]" />
                   <span className="text-sm font-medium text-gray-700 group-hover:text-[#6209e6]">{industry.name}</span>
-                </a>
+                </Link>
               ))}
             </motion.div>
 

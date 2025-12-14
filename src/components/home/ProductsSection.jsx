@@ -165,9 +165,11 @@ export default function ProductsSection() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <Button variant="outline" className="rounded-full border-gray-300 hover:border-[#6209e6] hover:text-[#6209e6]">
-              View all products <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <Link to={createPageUrl('AgenticAI')}>
+              <Button variant="outline" className="rounded-full border-gray-300 hover:border-[#6209e6] hover:text-[#6209e6]">
+                View all products <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
 
