@@ -21,7 +21,6 @@ export default function SavingsCalculator() {
   const [hybrid, setHybrid] = useState(40);
   const [avgSalary, setAvgSalary] = useState(75000);
   const [avgLaborCost, setAvgLaborCost] = useState(85000);
-  const [hoursPerWeek, setHoursPerWeek] = useState(10);
   const [dailyTasks, setDailyTasks] = useState(15);
   const [softwareTypes, setSoftwareTypes] = useState(['Salesforce', 'Microsoft 365', 'Slack']);
   const [automationRate, setAutomationRate] = useState(70);
@@ -43,7 +42,8 @@ export default function SavingsCalculator() {
 
   // Calculations
   const annualLaborCost = totalFTEs * avgLaborCost;
-  const hoursSavedPerYear = totalFTEs * hoursPerWeek * 52 * (automationRate / 100);
+  const hoursPerTaskEstimate = 0.5; // Average hours per task
+  const hoursSavedPerYear = dailyTasks * totalFTEs * 252 * hoursPerTaskEstimate * (automationRate / 100); // 252 work days
   const costPerHour = avgLaborCost / 2080; // Standard work year hours
   const annualSavings = hoursSavedPerYear * costPerHour;
   const threeYearSavings = annualSavings * 3;
@@ -240,24 +240,6 @@ export default function SavingsCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                      <Label className="text-base">Manual Hours Per Week (per employee)</Label>
-                      <Input
-                        type="number"
-                        value={hoursPerWeek}
-                        onChange={(e) => setHoursPerWeek(Math.max(0, parseInt(e.target.value) || 0))}
-                        className="h-12 text-lg"
-                      />
-                      <Slider
-                        value={[hoursPerWeek]}
-                        onValueChange={([value]) => setHoursPerWeek(value)}
-                        min={1}
-                        max={40}
-                        step={1}
-                        className="mt-2"
-                      />
-                    </div>
-
-                    <div className="space-y-3">
                       <Label className="text-base">Expected Automation Rate (%)</Label>
                       <div className="flex items-center gap-3">
                         <Input
@@ -282,7 +264,7 @@ export default function SavingsCalculator() {
                   <div className="space-y-3 col-span-2">
                     <Label className="text-base">Software Types Used</Label>
                     <div className="border rounded-lg p-4 max-h-64 overflow-y-auto bg-gray-50">
-                      <div className="grid grid-cols-3 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {availableSoftware.map((software) => (
                           <div key={software} className="flex items-center space-x-2">
                             <Checkbox
