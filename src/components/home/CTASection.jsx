@@ -5,7 +5,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
 
 export default function CTASection() {
   return (
-    <section className="py-24 bg-gray-900 relative overflow-hidden" id="consulting">
+    <section className="py-24 bg-[#04050b] relative overflow-hidden" id="consulting">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.1)_1px,transparent_1px)] bg-[size:40px_40px]" />
       
@@ -53,8 +53,7 @@ export default function CTASection() {
             </Button>
             <Button 
               size="lg" 
-              variant="outline" 
-              className="border-gray-600 text-white hover:bg-white/10 rounded-full px-8 h-14 text-base"
+              className="bg-[#8B2EE5] text-white hover:bg-[#7325C4] rounded-full px-8 h-14 text-base"
             >
               <MessageSquare className="mr-2 w-5 h-5" />
               Talk to sales
