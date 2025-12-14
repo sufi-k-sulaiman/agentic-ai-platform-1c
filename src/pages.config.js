@@ -119,6 +119,7 @@ import BlogAIAutonomyVsOversight from './pages/BlogAIAutonomyVsOversight';
 import BlogAutonomousAIApplications from './pages/BlogAutonomousAIApplications';
 import BlogAIAutonomyChallenges from './pages/BlogAIAutonomyChallenges';
 import BlogAIAutonomyFuture from './pages/BlogAIAutonomyFuture';
+import SavingsCalculator from './pages/SavingsCalculator';
 import __Layout from './Layout.jsx';
 
 
@@ -244,6 +245,7 @@ export const PAGES = {
     "BlogAutonomousAIApplications": BlogAutonomousAIApplications,
     "BlogAIAutonomyChallenges": BlogAIAutonomyChallenges,
     "BlogAIAutonomyFuture": BlogAIAutonomyFuture,
+    "SavingsCalculator": SavingsCalculator,
 }
 
 export const pagesConfig = {
