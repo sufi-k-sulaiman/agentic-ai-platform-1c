@@ -8,7 +8,7 @@ const features = [
   {
     icon: Brain,
     title: 'Cognitive Reasoning',
-    description: 'Agents that understand context, analyze situations, and make intelligent decisions autonomously.'
+    description: 'Agentic Ai that understands context, analyzes situations, and makes intelligent decisions autonomously.'
   },
   {
     icon: Zap,
@@ -23,7 +23,7 @@ const features = [
   {
     icon: Network,
     title: 'Multi-Agent Orchestration',
-    description: 'Coordinate multiple specialized agents working together to solve complex problems.'
+    description: 'Coordinate multiple specialized Agentic Ai working together to solve complex problems.'
   },
   {
     icon: Shield,
@@ -88,7 +88,7 @@ export default function AgenticAI() {
                 </span>
               </h1>
               <p className="text-2xl text-gray-600 leading-relaxed mb-10">
-                Deploy autonomous agents that handle complex tasks end-to-end. No human intervention required.
+                Deploy autonomous Agentic Ai that handles complex tasks end-to-end. No human intervention required.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base">
