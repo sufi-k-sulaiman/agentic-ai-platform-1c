@@ -41,11 +41,9 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link to={createPageUrl('Home')} className="flex items-center gap-3 mb-6">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                alt="1C Platform" 
-                className="h-10 w-10"
-              />
+              <div className="h-10 w-10 rounded-lg bg-[#8B2EE5] flex items-center justify-center">
+                <span className="text-white font-bold text-lg">1C</span>
+              </div>
               <span className="font-semibold text-xl text-white">1c</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
