@@ -71,6 +71,7 @@ import VideoTutorialsGuide from './pages/VideoTutorialsGuide';
 import Contact from './pages/Contact';
 import CourseCategory from './pages/CourseCategory';
 import CourseDetail from './pages/CourseDetail';
+import LearningTrack from './pages/LearningTrack';
 import __Layout from './Layout.jsx';
 
 
@@ -148,6 +149,7 @@ export const PAGES = {
     "Contact": Contact,
     "CourseCategory": CourseCategory,
     "CourseDetail": CourseDetail,
+    "LearningTrack": LearningTrack,
 }
 
 export const pagesConfig = {

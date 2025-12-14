@@ -4,46 +4,160 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Map, CheckCircle, ArrowRight, Target, TrendingUp, Award, BookOpen, Code, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 const journeyPaths = [
   {
+    id: 'beginner-to-professional',
     title: 'AI Beginner to Professional',
     duration: '6 months',
     courses: 12,
     level: 'Beginner to Advanced',
     description: 'Complete learning path from fundamentals to building production AI systems',
     milestones: [
-      { title: 'Foundations', courses: 3, weeks: 4 },
-      { title: 'Core Concepts', courses: 4, weeks: 8 },
-      { title: 'Advanced Topics', courses: 3, weeks: 10 },
-      { title: 'Capstone Project', courses: 2, weeks: 4 }
+      { 
+        title: 'Foundations', 
+        courses: 3, 
+        weeks: 4,
+        courseList: [
+          { id: 'intro-agentic-ai', title: 'Introduction to Agentic AI' },
+          { id: 'agent-decision-making', title: 'Agent Decision Making' },
+          { id: 'agent-architecture', title: 'Agent Architecture Basics' }
+        ]
+      },
+      { 
+        title: 'Core Concepts', 
+        courses: 4, 
+        weeks: 8,
+        courseList: [
+          { id: 'building-production-ai', title: 'Building Production AI Systems' },
+          { id: 'platform-architecture', title: 'Platform Architecture' },
+          { id: 'api-integration', title: 'API Integration for AI' },
+          { id: 'event-driven-ai', title: 'Event-Driven AI Architecture' }
+        ]
+      },
+      { 
+        title: 'Advanced Topics', 
+        courses: 3, 
+        weeks: 10,
+        courseList: [
+          { id: 'advanced-agent-orchestration', title: 'Advanced Agent Orchestration' },
+          { id: 'enterprise-security-ai', title: 'Enterprise Security for AI' },
+          { id: 'advanced-model-training', title: 'Advanced Model Training' }
+        ]
+      },
+      { 
+        title: 'Capstone Project', 
+        courses: 2, 
+        weeks: 4,
+        courseList: [
+          { id: 'enterprise-ai-design', title: 'Enterprise AI Design Patterns' },
+          { id: 'final-capstone', title: 'Capstone: Build Your AI Platform' }
+        ]
+      }
     ]
   },
   {
+    id: 'enterprise-architect',
     title: 'Enterprise Architect Track',
     duration: '4 months',
     courses: 10,
     level: 'Intermediate to Expert',
     description: 'Specialized path for designing and implementing enterprise AI architecture',
     milestones: [
-      { title: 'Architecture Principles', courses: 3, weeks: 4 },
-      { title: 'System Design', courses: 3, weeks: 6 },
-      { title: 'Security & Scale', courses: 2, weeks: 6 },
-      { title: 'Real-world Projects', courses: 2, weeks: 4 }
+      { 
+        title: 'Architecture Principles', 
+        courses: 3, 
+        weeks: 4,
+        courseList: [
+          { id: 'enterprise-ai-design', title: 'Enterprise AI Design Patterns' },
+          { id: 'distributed-ai-systems', title: 'Distributed AI Systems' },
+          { id: 'platform-architecture', title: 'Platform Architecture' }
+        ]
+      },
+      { 
+        title: 'System Design', 
+        courses: 3, 
+        weeks: 6,
+        courseList: [
+          { id: 'advanced-agent-orchestration', title: 'Advanced Agent Orchestration' },
+          { id: 'building-production-ai', title: 'Building Production AI Systems' },
+          { id: 'model-optimization', title: 'Model Optimization' }
+        ]
+      },
+      { 
+        title: 'Security & Scale', 
+        courses: 2, 
+        weeks: 6,
+        courseList: [
+          { id: 'enterprise-security-ai', title: 'Enterprise Security for AI' },
+          { id: 'ai-compliance', title: 'AI Compliance & Governance' }
+        ]
+      },
+      { 
+        title: 'Real-world Projects', 
+        courses: 2, 
+        weeks: 4,
+        courseList: [
+          { id: 'architect-capstone', title: 'Architect Capstone Project' },
+          { id: 'case-studies', title: 'Enterprise Case Studies' }
+        ]
+      }
     ]
   },
   {
+    id: 'developer-specialization',
     title: 'Developer Specialization',
     duration: '5 months',
     courses: 15,
     level: 'Intermediate',
     description: 'Hands-on path focused on building AI applications and integrations',
     milestones: [
-      { title: 'Development Basics', courses: 4, weeks: 5 },
-      { title: 'API Integration', courses: 4, weeks: 6 },
-      { title: 'Production Deploy', courses: 4, weeks: 6 },
-      { title: 'Portfolio Build', courses: 3, weeks: 4 }
+      { 
+        title: 'Development Basics', 
+        courses: 4, 
+        weeks: 5,
+        courseList: [
+          { id: 'intro-agentic-ai', title: 'Introduction to Agentic AI' },
+          { id: 'agent-architecture', title: 'Agent Architecture Basics' },
+          { id: 'agent-decision-making', title: 'Agent Decision Making' },
+          { id: 'platform-architecture', title: 'Platform Architecture' }
+        ]
+      },
+      { 
+        title: 'API Integration', 
+        courses: 4, 
+        weeks: 6,
+        courseList: [
+          { id: 'api-integration', title: 'API Integration for AI' },
+          { id: 'event-driven-ai', title: 'Event-Driven AI Architecture' },
+          { id: 'building-production-ai', title: 'Building Production AI Systems' },
+          { id: 'advanced-agent-orchestration', title: 'Advanced Agent Orchestration' }
+        ]
+      },
+      { 
+        title: 'Production Deploy', 
+        courses: 4, 
+        weeks: 6,
+        courseList: [
+          { id: 'enterprise-security-ai', title: 'Enterprise Security for AI' },
+          { id: 'model-optimization', title: 'Model Optimization' },
+          { id: 'distributed-ai-systems', title: 'Distributed AI Systems' },
+          { id: 'ai-compliance', title: 'AI Compliance & Governance' }
+        ]
+      },
+      { 
+        title: 'Portfolio Build', 
+        courses: 3, 
+        weeks: 4,
+        courseList: [
+          { id: 'developer-portfolio', title: 'Building Your AI Portfolio' },
+          { id: 'developer-capstone', title: 'Developer Capstone Project' },
+          { id: 'career-prep', title: 'Career Preparation' }
+        ]
+      }
     ]
   }
 ];
@@ -252,9 +366,11 @@ export default function LearningJourney() {
                         </div>
                       ))}
                     </div>
-                    <Button className="w-full mt-6 bg-[#8B2EE5] hover:bg-[#7325C4]">
-                      Start this path <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
+                    <Link to={createPageUrl('LearningTrack') + `?id=${path.id}`}>
+                      <Button className="w-full mt-6 bg-[#8B2EE5] hover:bg-[#7325C4]">
+                        Start this path <ArrowRight className="ml-2 w-4 h-4" />
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>
