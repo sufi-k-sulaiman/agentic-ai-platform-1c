@@ -80,9 +80,12 @@ export default function InvestorRelations() {
               </Button>
               <Link to={createPageUrl('Contact')}>
                 <Button size="lg" variant="outline" className="rounded-full border-gray-300 px-10 h-14 text-lg">
-                  Contact investor relations
+                  Contact us
                 </Button>
               </Link>
+              <div className="mt-4 text-gray-600 text-sm">
+                Or email us at <a href="mailto:investor@1cplatform.com" className="text-[#8B2EE5] font-semibold hover:underline">investor@1cplatform.com</a>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -959,9 +962,12 @@ export default function InvestorRelations() {
               </Button>
               <Link to={createPageUrl('Contact')}>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-10 h-14 text-lg">
-                  Contact investor relations
+                  Contact us
                 </Button>
               </Link>
+              <div className="mt-4 text-purple-200 text-sm">
+                Or email us at <a href="mailto:investor@1cplatform.com" className="text-white font-semibold hover:underline">investor@1cplatform.com</a>
+              </div>
             </div>
             <div className="mt-12 pt-8 border-t border-white/20">
               <Link to={createPageUrl('Contact')}>
