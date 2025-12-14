@@ -7,50 +7,42 @@ const leaders = [
   {
     name: 'Sarah Chen',
     title: 'Chief Executive Officer',
-    bio: 'Former VP of Engineering at Google. PhD in Computer Science from MIT. 15+ years building scalable systems.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400'
+    bio: 'Former VP of Engineering at Google. PhD in Computer Science from MIT. 15+ years building scalable systems.'
   },
   {
     name: 'Michael Rodriguez',
     title: 'Chief Technology Officer',
-    bio: 'Ex-Amazon Principal Engineer. Led development of AWS AI services. Expert in distributed systems.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400'
+    bio: 'Ex-Amazon Principal Engineer. Led development of AWS AI services. Expert in distributed systems.'
   },
   {
     name: 'Emily Zhang',
     title: 'Chief Product Officer',
-    bio: 'Previously Head of Product at Salesforce. Stanford MBA. Built products used by millions.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400'
+    bio: 'Previously Head of Product at Salesforce. Stanford MBA. Built products used by millions.'
   },
   {
     name: 'David Kim',
     title: 'Chief Financial Officer',
-    bio: 'Former CFO at Snowflake. Led multiple successful IPOs. 20 years in enterprise tech finance.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400'
+    bio: 'Former CFO at Snowflake. Led multiple successful IPOs. 20 years in enterprise tech finance.'
   },
   {
     name: 'Priya Patel',
     title: 'Chief Marketing Officer',
-    bio: 'Ex-CMO at HubSpot. Built billion-dollar brands from the ground up. Growth marketing expert.',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400'
+    bio: 'Ex-CMO at HubSpot. Built billion-dollar brands from the ground up. Growth marketing expert.'
   },
   {
     name: 'James Wilson',
     title: 'Chief Revenue Officer',
-    bio: 'Previously SVP Sales at Oracle. Consistently exceeded $100M+ quotas. Enterprise sales veteran.',
-    image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400'
+    bio: 'Previously SVP Sales at Oracle. Consistently exceeded $100M+ quotas. Enterprise sales veteran.'
   },
   {
     name: 'Lisa Anderson',
     title: 'Chief People Officer',
-    bio: 'Former Head of HR at Netflix. Built high-performance cultures at scale. Stanford Psychology PhD.',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400'
+    bio: 'Former Head of HR at Netflix. Built high-performance cultures at scale. Stanford Psychology PhD.'
   },
   {
     name: 'Robert Taylor',
     title: 'Chief Legal Officer',
-    bio: 'Ex-General Counsel at Microsoft. 25 years navigating complex legal landscapes in tech.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400'
+    bio: 'Ex-General Counsel at Microsoft. 25 years navigating complex legal landscapes in tech.'
   }
 ];
 
@@ -98,13 +90,12 @@ export default function Leadership() {
                 transition={{ delay: index * 0.1 }}
                 className="group"
               >
-                <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square">
-                  <img
-                    src={leader.image}
-                    alt={leader.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square bg-gradient-to-br from-purple-50 to-violet-50 flex items-center justify-center">
+                  <svg className="w-32 h-32 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                    <circle cx="12" cy="8" r="5" />
+                    <path d="M3 21v-2a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v2" />
+                  </svg>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#8B2EE5]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 flex gap-3">
                       <a
                         href="#"

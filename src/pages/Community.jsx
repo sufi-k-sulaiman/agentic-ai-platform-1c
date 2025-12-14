@@ -44,26 +44,22 @@ const contributors = [
   {
     name: 'Sarah Chen',
     role: 'Top Contributor',
-    contributions: '500+ answers',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100'
+    contributions: '500+ answers'
   },
   {
     name: 'Michael Rodriguez',
     role: 'Community Hero',
-    contributions: '450+ answers',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100'
+    contributions: '450+ answers'
   },
   {
     name: 'Emily Zhang',
     role: 'Rising Star',
-    contributions: '300+ answers',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100'
+    contributions: '300+ answers'
   },
   {
     name: 'David Kim',
     role: 'Expert',
-    contributions: '280+ answers',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100'
+    contributions: '280+ answers'
   }
 ];
 
@@ -214,11 +210,12 @@ export default function Community() {
                 className="text-center"
               >
                 <div className="relative inline-block mb-4">
-                  <img
-                    src={contributor.avatar}
-                    alt={contributor.name}
-                    className="w-24 h-24 rounded-full object-cover"
-                  />
+                  <div className="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <circle cx="12" cy="8" r="4" />
+                      <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+                    </svg>
+                  </div>
                   <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#8B2EE5] rounded-full flex items-center justify-center border-4 border-gray-50">
                     <Award className="w-4 h-4 text-white" />
                   </div>
