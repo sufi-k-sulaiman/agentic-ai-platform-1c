@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Infinity, CheckCircle, ArrowRight, BookOpen, Video, FileText, Users, Award, Zap } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const plans = [
   {
@@ -100,6 +101,12 @@ const stats = [
 export default function DigitalLearningSubscriptions() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Digital Learning Subscriptions"
+        description="Unlimited access to 100+ AI courses. One subscription, endless possibilities. 14-day free trial available."
+        url="/digital-learning-subscriptions"
+        keywords={['AI subscription', 'unlimited learning', 'online courses', 'digital learning', 'AI training platform']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

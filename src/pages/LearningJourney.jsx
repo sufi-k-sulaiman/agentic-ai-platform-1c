@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Map, CheckCircle, ArrowRight, Target, TrendingUp, Award, BookOpen, Code, Rocket } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const journeyPaths = [
   {
@@ -114,6 +115,12 @@ const stages = [
 export default function LearningJourney() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Learning Journey"
+        description="Structured learning paths from beginner to AI expert. Personalized guidance, milestone certificates, and career support."
+        url="/learning-journey"
+        keywords={['AI learning path', 'structured training', 'AI career', 'learning roadmap', 'AI mastery']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

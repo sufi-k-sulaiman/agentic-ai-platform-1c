@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Clock, Users, Star, CheckCircle, ArrowRight, Play } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const categories = [
   { name: 'Agentic Ai Fundamentals', count: 12, level: 'Beginner' },
@@ -69,6 +70,12 @@ const benefits = [
 export default function Courses() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Professional Courses"
+        description="Master Agentic AI with expert-led courses. 100+ courses, hands-on labs, and certificates of completion."
+        url="/courses"
+        keywords={['AI courses', 'Agentic AI training', 'professional development', 'AI certification', 'online learning']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

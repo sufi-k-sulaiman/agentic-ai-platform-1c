@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Award, CheckCircle, ArrowRight, Star, Users, Clock, FileCheck, Briefcase, TrendingUp } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const certifications = [
   {
@@ -147,6 +148,12 @@ const process = [
 export default function ProfessionalCertifications() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Professional Certifications"
+        description="Industry-recognized AI certifications that validate your expertise. Get certified, get ahead. 15K+ certified professionals."
+        url="/professional-certifications"
+        keywords={['AI certification', 'professional certification', 'certified AI developer', 'AI architect certification', 'career advancement']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

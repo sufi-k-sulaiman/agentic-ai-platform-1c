@@ -62,7 +62,10 @@ const navItems = [
     label: 'Support',
     submenu: [
       { label: 'Help Center', description: 'Get help', href: createPageUrl('HelpCenter') },
-      { label: 'Contact Us', description: 'Reach out', href: createPageUrl('ContactUs') },
+      { label: 'Courses', description: 'Professional courses', href: createPageUrl('Courses') },
+      { label: 'Digital Learning', description: 'Unlimited subscriptions', href: createPageUrl('DigitalLearningSubscriptions') },
+      { label: 'Learning Journey', description: 'Structured paths', href: createPageUrl('LearningJourney') },
+      { label: 'Certifications', description: 'Get certified', href: createPageUrl('ProfessionalCertifications') },
       { label: 'System Status', description: 'Platform health', href: createPageUrl('Status') },
       { label: 'Security', description: 'Trust & safety', href: createPageUrl('Security') },
     ]
