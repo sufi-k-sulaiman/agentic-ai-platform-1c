@@ -36,8 +36,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#04050b] text-gray-300">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link to={createPageUrl('Home')} className="flex items-center gap-3 mb-6">
@@ -110,19 +110,19 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
             <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} 1cPlatform. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <Link to={createPageUrl('Terms')} className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
+            <div className="flex items-center gap-4 sm:gap-6">
+              <Link to={createPageUrl('Terms')} className="text-xs sm:text-sm text-gray-500 hover:text-gray-300 transition-colors">
                 Terms
               </Link>
-              <Link to={createPageUrl('Privacy')} className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
+              <Link to={createPageUrl('Privacy')} className="text-xs sm:text-sm text-gray-500 hover:text-gray-300 transition-colors">
                 Privacy
               </Link>
-              <Link to={createPageUrl('Cookies')} className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
+              <Link to={createPageUrl('Cookies')} className="text-xs sm:text-sm text-gray-500 hover:text-gray-300 transition-colors">
                 Cookies
               </Link>
             </div>

@@ -383,29 +383,29 @@ export default function Blog() {
         keywords={['AI blog', 'Agentic AI articles', 'enterprise AI insights', 'AI tutorials', 'autonomous agents']}
       />
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
               The
               <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
                 1cPlatform Blog
               </span>
             </h1>
-            <p className="text-2xl text-gray-600 leading-relaxed mb-10">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-6 sm:mb-10">
               Insights, tutorials, and stories from the forefront of enterprise AI
             </p>
             
             {/* Search */}
             <div className="relative max-w-2xl mx-auto">
-              <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" />
+              <Search className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-gray-400" />
               <Input
                 placeholder="Search articles..."
-                className="pl-16 pr-6 h-16 text-lg rounded-full border-gray-300 bg-white shadow-sm"
+                className="pl-12 sm:pl-16 pr-4 sm:pr-6 h-12 sm:h-16 text-base sm:text-lg rounded-full border-gray-300 bg-white shadow-sm"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -415,17 +415,17 @@ export default function Blog() {
       </section>
 
       {/* Filter Tabs */}
-      <section className="py-8 border-b border-gray-200 sticky top-16 bg-white z-10">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-4 sm:py-8 border-b border-gray-200 sticky top-16 bg-white z-10 overflow-x-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Tabs value={activeCategory} onValueChange={setActiveCategory}>
-            <TabsList className="bg-gray-100">
-              <TabsTrigger value="all">All Posts</TabsTrigger>
-              <TabsTrigger value="ai-governance">AI Governance</TabsTrigger>
-              <TabsTrigger value="generative-ai">Generative AI</TabsTrigger>
-              <TabsTrigger value="ai-insights">AI Insights</TabsTrigger>
-              <TabsTrigger value="tutorials">Tutorials</TabsTrigger>
-              <TabsTrigger value="case-studies">Case Studies</TabsTrigger>
-              <TabsTrigger value="product">Product</TabsTrigger>
+            <TabsList className="bg-gray-100 flex-wrap sm:flex-nowrap h-auto sm:h-10 p-1 gap-1">
+              <TabsTrigger value="all" className="text-xs sm:text-sm px-3 sm:px-4">All Posts</TabsTrigger>
+              <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">AI Governance</TabsTrigger>
+              <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">Generative AI</TabsTrigger>
+              <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">AI Insights</TabsTrigger>
+              <TabsTrigger value="tutorials" className="text-xs sm:text-sm px-3 sm:px-4">Tutorials</TabsTrigger>
+              <TabsTrigger value="case-studies" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">Case Studies</TabsTrigger>
+              <TabsTrigger value="product" className="text-xs sm:text-sm px-3 sm:px-4">Product</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
@@ -433,50 +433,50 @@ export default function Blog() {
 
       {/* Featured Post */}
       {featuredPost && activeCategory === 'all' && (
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-6">
+        <section className="py-12 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <motion.article
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="grid lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-3xl overflow-hidden p-8 lg:p-12"
             >
-              <div className="relative aspect-video lg:aspect-square rounded-2xl overflow-hidden">
+              <div className="relative aspect-video lg:aspect-square rounded-xl sm:rounded-2xl overflow-hidden">
                 <img
                   src={featuredPost.image}
                   alt={featuredPost.title}
                   className="w-full h-full object-cover"
                 />
-                <Badge className="absolute top-4 left-4 bg-[#8B2EE5] text-white">
+                <Badge className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-[#8B2EE5] text-white text-xs sm:text-sm">
                   Featured
                 </Badge>
               </div>
               <div>
-                <Badge variant="secondary" className="mb-4">{featuredPost.category}</Badge>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <Badge variant="secondary" className="mb-3 sm:mb-4 text-xs sm:text-sm">{featuredPost.category}</Badge>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
                   {featuredPost.title}
                 </h2>
-                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                   {featuredPost.excerpt}
                 </p>
-                <div className="flex items-center gap-6 text-gray-500 mb-8">
-                  <span className="flex items-center gap-2">
-                    <User className="w-5 h-5" />
-                    {featuredPost.author}
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6 text-gray-500 mb-6 sm:mb-8 text-xs sm:text-sm">
+                  <span className="flex items-center gap-1.5 sm:gap-2">
+                    <User className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <span className="hidden sm:inline">{featuredPost.author}</span>
                   </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5" />
+                  <span className="flex items-center gap-1.5 sm:gap-2">
+                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                     {featuredPost.date}
                   </span>
-                  <span className="flex items-center gap-2">
-                    <Clock className="w-5 h-5" />
+                  <span className="flex items-center gap-1.5 sm:gap-2">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
                     {featuredPost.readTime}
-                    </span>
-                    </div>
-                    <Link to={createPageUrl(featuredPost.page)}>
-                    <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full">
+                  </span>
+                </div>
+                <Link to={createPageUrl(featuredPost.page)}>
+                  <Button className="w-full sm:w-auto bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full">
                     Read article <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
-                    </Link>
+                  </Button>
+                </Link>
                     </div>
             </motion.article>
           </div>
@@ -484,9 +484,9 @@ export default function Blog() {
       )}
 
       {/* Blog Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {regularPosts.map((post, index) => (
               <Link to={createPageUrl(post.page)} key={post.title}>
                 <motion.article
@@ -496,19 +496,19 @@ export default function Blog() {
                   transition={{ delay: index * 0.1 }}
                   className="group cursor-pointer"
                 >
-                <div className="relative aspect-video rounded-2xl overflow-hidden mb-6">
+                <div className="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6">
                   <img
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <Badge variant="secondary" className="mb-3">{post.category}</Badge>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#8B2EE5] transition-colors">
+                <Badge variant="secondary" className="mb-2 sm:mb-3 text-xs sm:text-sm">{post.category}</Badge>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-[#8B2EE5] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
-                <div className="flex items-center gap-4 text-sm text-gray-500">
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed line-clamp-2">{post.excerpt}</p>
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm text-gray-500">
                   <span>{post.author}</span>
                   <span>•</span>
                   <span>{post.date}</span>
@@ -521,8 +521,8 @@ export default function Blog() {
           </div>
 
           {/* Load More */}
-          <div className="text-center mt-12">
-            <Button variant="outline" className="rounded-full border-gray-300 px-8">
+          <div className="text-center mt-8 sm:mt-12">
+            <Button variant="outline" className="w-full sm:w-auto rounded-full border-gray-300 px-6 sm:px-8">
               Load more articles
             </Button>
           </div>
@@ -530,25 +530,25 @@ export default function Blog() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-24 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Never miss an update
             </h2>
-            <p className="text-xl text-gray-400 mb-10">
+            <p className="text-lg sm:text-xl text-gray-400 mb-6 sm:mb-10">
               Get the latest insights delivered to your inbox every week
             </p>
-            <div className="flex gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
               <Input
                 placeholder="Enter your email"
                 className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               />
-              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] h-12 px-6">
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] h-12 px-6 w-full sm:w-auto">
                 Subscribe
               </Button>
             </div>

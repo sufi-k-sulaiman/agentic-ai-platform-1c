@@ -36,10 +36,10 @@ const products = [
 
 export default function ProductsSection() {
   return (
-    <section className="py-24 bg-gray-50" id="products">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gray-50" id="products">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12 sm:mb-16">
           <div className="max-w-2xl mb-8 lg:mb-0">
             <motion.p
               initial={{ opacity: 0 }}
@@ -79,7 +79,7 @@ export default function ProductsSection() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
           {products.map((product, index) => (
             <motion.div
               key={product.name}
@@ -89,14 +89,14 @@ export default function ProductsSection() {
               transition={{ delay: index * 0.1 }}
               className="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 border border-gray-100"
             >
-              <div className="flex items-start justify-between mb-6">
-                <product.icon className="w-14 h-14 text-[#8B2EE5]" />
+              <div className="flex items-start justify-between mb-4 sm:mb-6">
+                <product.icon className="w-12 h-12 sm:w-14 sm:h-14 text-[#8B2EE5]" />
                 <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-[#8B2EE5] group-hover:translate-x-1 transition-all" />
               </div>
               
               <p className="text-sm text-[#8B2EE5] font-medium mb-2">{product.tagline}</p>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{product.name}</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">{product.description}</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">{product.name}</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">{product.description}</p>
               
               <div className="flex flex-wrap gap-2">
                 {product.features.map((feature) => (

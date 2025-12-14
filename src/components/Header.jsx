@@ -134,13 +134,21 @@ export default function Header() {
             <Search className="w-5 h-5 text-gray-600" />
           </button>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-gray-600"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="p-2 text-gray-600 hover:text-[#8B2EE5]"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            <button
+              className="p-2 text-gray-600"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Search Ribbon */}
@@ -148,24 +156,24 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-100">
+          <div className="lg:hidden py-4 border-t border-gray-100 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <nav className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <div key={item.label}>
-                  <div className="px-4 py-3 text-gray-900 font-semibold text-sm">{item.label}</div>
+                  <div className="px-4 py-3 text-gray-900 font-semibold text-base">{item.label}</div>
                   {item.submenu?.map((subitem) => (
                     <Link
                       key={subitem.label}
                       to={subitem.href}
-                      className="px-4 py-2 ml-4 text-gray-700 hover:bg-purple-50 hover:text-[#8B2EE5] rounded-lg text-sm flex"
+                      className="block px-4 py-2.5 ml-4 text-gray-700 hover:bg-purple-50 hover:text-[#8B2EE5] rounded-lg text-sm"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      {subitem.label}
+                      <div className="font-medium">{subitem.label}</div>
+                      <div className="text-xs text-gray-500 mt-0.5">{subitem.description}</div>
                     </Link>
                   ))}
                 </div>
               ))}
-
             </nav>
           </div>
         )}

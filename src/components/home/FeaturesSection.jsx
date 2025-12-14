@@ -50,10 +50,10 @@ const itemVariants = {
 
 export default function FeaturesSection() {
   return (
-    <section className="py-24 bg-white" id="agentic-ai">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white" id="agentic-ai">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -66,7 +66,7 @@ export default function FeaturesSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6"
           >
             Built for the AI era
           </motion.h2>
@@ -75,7 +75,7 @@ export default function FeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-gray-600"
+            className="text-lg sm:text-xl text-gray-600"
           >
             Everything you need to build, deploy, and scale intelligent automation across your enterprise.
           </motion.p>
@@ -95,13 +95,13 @@ export default function FeaturesSection() {
               variants={itemVariants}
               className="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300"
             >
-              <div className="mb-6 group-hover:scale-110 transition-transform">
-                <feature.icon className="w-14 h-14 text-[#8B2EE5]" />
+              <div className="mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                <feature.icon className="w-12 h-12 sm:w-14 sm:h-14 text-[#8B2EE5]" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

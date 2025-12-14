@@ -21,9 +21,9 @@ const stats = [
 
 export default function SolutionsSection() {
   return (
-    <section className="py-24 bg-white" id="solutions">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white" id="solutions">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div>
             <motion.p
@@ -91,17 +91,17 @@ export default function SolutionsSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-[#8B2EE5] to-[#6B21A8] rounded-3xl p-10 text-white">
-              <h3 className="text-2xl font-bold mb-2">Proven at scale</h3>
-              <p className="text-purple-200 mb-10">
+            <div className="bg-gradient-to-br from-[#8B2EE5] to-[#6B21A8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white">
+              <h3 className="text-xl sm:text-2xl font-bold mb-2">Proven at scale</h3>
+              <p className="text-sm sm:text-base text-purple-200 mb-6 sm:mb-10">
                 Trusted by leading enterprises worldwide to power their most critical operations.
               </p>
               
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                 {stats.map((stat, index) => (
                   <div key={index}>
-                    <div className="text-4xl font-bold mb-1">{stat.value}</div>
-                    <div className="text-purple-200 text-sm">{stat.label}</div>
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
+                    <div className="text-purple-200 text-xs sm:text-sm">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -115,17 +115,17 @@ export default function SolutionsSection() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5"
+              className="hidden sm:block absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 sm:p-5"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">SOC 2 Type II</div>
-                  <div className="text-sm text-gray-500">Certified</div>
+                  <div className="text-sm sm:text-base font-semibold text-gray-900">SOC 2 Type II</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Certified</div>
                 </div>
               </div>
             </motion.div>

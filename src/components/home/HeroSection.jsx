@@ -34,8 +34,8 @@ export default function HeroSection() {
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -47,7 +47,7 @@ export default function HeroSection() {
               Introducing Agentic Ai
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
               The future of
               <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
                 enterprise Ai
@@ -55,16 +55,16 @@ export default function HeroSection() {
               is here
             </h1>
             
-            <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-xl">
+            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 sm:mb-10 max-w-xl">
               Transform your business with autonomous Agentic Ai that understands, decides, and acts. 
               1cPlatform delivers intelligent automation at enterprise scale.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <Link to={createPageUrl('Onboarding')}>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+              <Link to={createPageUrl('Onboarding')} className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
-                  className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white font-semibold rounded-full px-8 h-14 text-base group"
+                  className="w-full sm:w-auto bg-[#8B2EE5] hover:bg-[#7325C4] text-white font-semibold rounded-full px-8 h-12 sm:h-14 text-base group"
                 >
                   Get started
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -73,13 +73,13 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Badges */}
-            <div className="mt-16 pt-8 border-t border-gray-200">
+            <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
               <p className="text-sm text-gray-500 mb-4">Trusted by industry leaders</p>
-              <div className="flex items-center gap-8 opacity-60">
-                <div className="text-xl font-bold text-gray-400">NVIDIA</div>
-                <div className="text-xl font-bold text-gray-400">SAP</div>
-                <div className="text-xl font-bold text-gray-400">Deloitte</div>
-                <div className="text-xl font-bold text-gray-400 hidden md:block">Accenture</div>
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 opacity-60">
+                <div className="text-lg sm:text-xl font-bold text-gray-400">NVIDIA</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">SAP</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">Deloitte</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">Accenture</div>
               </div>
             </div>
           </motion.div>
