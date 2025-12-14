@@ -74,12 +74,20 @@ export default function HeroSection() {
 
             {/* Trust Badges */}
             <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
-              <p className="text-sm text-gray-500 mb-4">Trusted by industry leaders</p>
+              <p className="text-sm text-gray-500 mb-4">Integrates with</p>
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 opacity-60">
-                <div className="text-lg sm:text-xl font-bold text-gray-400">NVIDIA</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">Salesforce</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">Microsoft 365</div>
                 <div className="text-lg sm:text-xl font-bold text-gray-400">SAP</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">Deloitte</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">Accenture</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">Oracle</div>
+                                <div className="text-lg sm:text-xl font-bold text-gray-400">Workday</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">SAP</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">Jira</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">HubSpot</div>
+                                <div className="text-lg sm:text-xl font-bold text-gray-400">Zendesk</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">Tableau</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">NetSuite</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-400">Monday.com</div>
               </div>
             </div>
           </motion.div>
