@@ -85,70 +85,158 @@ export default function EnterpriseSuite() {
         keywords={['enterprise suite', 'ERP', 'CRM', 'business management', 'financial management', 'HR payroll', 'supply chain']}
       />
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+      <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-black" />
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl" />
+        </div>
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-center px-6 max-w-5xl mx-auto"
+        >
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ delay: 0.3 }}
+            className="text-lg md:text-xl text-purple-300 mb-4"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-[#8B2EE5] text-sm font-medium mb-8">
-              <Globe className="w-4 h-4" />
-              Enterprise Suite
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-              One platform for
-              <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
-                your entire business
-              </span>
-            </h1>
-            <p className="text-2xl text-gray-600 leading-relaxed mb-10">
-              Integrated ERP, CRM, and business management tools powered by Agentic Ai. Everything you need to run and grow your enterprise efficiently, profitably, and at scale. Our comprehensive suite eliminates the complexity of managing multiple disconnected systems, reduces IT costs by up to 60%, and provides a single source of truth for all your business data. Whether you're managing a growing mid-market company or a complex global enterprise with thousands of employees across multiple countries, our platform scales seamlessly to meet your needs while maintaining the performance, security, and reliability that mission-critical business operations demand.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base">
-                Request demo <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14 text-base">
-                View pricing
-              </Button>
-            </div>
+            Enterprise Suite
+          </motion.p>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1]"
+          >
+            One platform.
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Infinite possibilities.
+            </span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
+          >
+            The complete business operating system. ERP, CRM, and AI-powered automation unified in one beautiful platform.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-10 h-16 text-lg font-medium">
+              Request demo
+            </Button>
+            <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-10 h-16 text-lg font-medium">
+              Watch video
+            </Button>
           </motion.div>
+        </motion.div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
+            <div className="w-1 h-3 bg-white/50 rounded-full" />
+          </div>
         </div>
       </section>
 
-      {/* Benefits Bar */}
-      <section className="py-16 bg-gray-900 text-white">
+      {/* Stats Section */}
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Performance that speaks for itself
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Join thousands of companies transforming their operations with measurable results
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
+                <div className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
                   {benefit.stat}
                 </div>
-                <div className="text-gray-400">{benefit.label}</div>
+                <div className="text-lg font-medium text-gray-900 mb-2">{benefit.label}</div>
+                <div className="text-sm text-gray-500">vs traditional systems</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Full-width Feature */}
+      <section className="bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                See everything.
+                <br />
+                <span className="text-[#8B2EE5]">Understand more.</span>
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                Real-time dashboards give you instant visibility into every aspect of your business. From revenue and expenses to team performance and customer satisfaction, all your critical metrics are at your fingertips.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our AI analyzes patterns across millions of data points, surfacing insights and anomalies before they become problems. Make confident decisions backed by data, not guesswork.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl bg-white p-8">
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" 
+                  alt="Dashboard" 
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Performance Metrics */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Real-time performance tracking
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Live performance metrics
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Monitor key business metrics across all departments with live dashboards and instant insights that help you make better decisions faster.
+              Monitor your business in real-time with AI-powered analytics
             </p>
           </div>
           
@@ -225,45 +313,51 @@ export default function EnterpriseSuite() {
       </section>
 
       {/* Modules */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-32 bg-black text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Complete business modules
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Every tool your enterprise needs, seamlessly integrated in one unified platform. No more juggling between disconnected systems, dealing with data inconsistencies, or paying for redundant software licenses. Our modular architecture allows you to deploy exactly the capabilities you need today while maintaining the flexibility to add more as your business evolves.
+          <div className="text-center mb-20">
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-5xl md:text-6xl font-bold mb-6"
+            >
+              Six powerful modules.
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                One unified platform.
+              </span>
+            </motion.h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Everything you need to run your business, beautifully integrated
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {modules.map((module, index) => (
               <motion.div
                 key={module.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
+                className="group"
               >
-                <Card className="h-full hover:shadow-xl transition-all">
-                  <CardHeader>
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] rounded-xl flex items-center justify-center mb-4">
-                      <module.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <CardTitle className="text-2xl">{module.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{module.description}</p>
-                    <div className="space-y-2.5">
-                      {module.features.map((feature) => (
-                        <div key={feature} className="flex items-start gap-2.5 text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 h-full">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                    <module.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{module.name}</h3>
+                  <p className="text-gray-400 leading-relaxed mb-6 line-clamp-3">{module.description.slice(0, 180)}...</p>
+                  <div className="space-y-2">
+                    {module.features.slice(0, 4).map((feature) => (
+                      <div key={feature} className="flex items-start gap-2 text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -271,15 +365,25 @@ export default function EnterpriseSuite() {
       </section>
 
       {/* Integration Section */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Integrates with your existing tools
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+                Works with
+                <br />
+                <span className="text-[#8B2EE5]">everything you use</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Connect seamlessly with 1,000+ business applications through our pre-built integration marketplace and open API framework. Our platform acts as the central nervous system for your entire technology stack, automatically syncing data between systems, eliminating duplicate data entry, and ensuring every team works from the same source of truth. Whether you're using best-of-breed point solutions or legacy enterprise systems, our integration engine handles the complexity of keeping everything in sync with bi-directional data flows, conflict resolution, and real-time updates. No data silos, no friction, no manual exports and imports—just one unified system that connects your entire business ecosystem.
+                Connect seamlessly with 1,000+ applications. From Salesforce to QuickBooks, Slack to AWS—everything syncs automatically.
+              </p>
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+                No more data silos. No manual exports. No friction. Just one unified system that connects your entire business ecosystem.
               </p>
               <div className="space-y-4">
                 {[
@@ -346,24 +450,51 @@ export default function EnterpriseSuite() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              See it in action
-            </h2>
-            <p className="text-xl text-gray-600 mb-10">
-              Schedule a personalized demo with our team and discover how Enterprise Suite transforms your operations, eliminates inefficiency, and drives measurable ROI. Our solution architects will work with you to understand your specific business challenges, current technology landscape, and growth objectives, then design a customized implementation roadmap that delivers quick wins while building toward your long-term vision. See firsthand how leading enterprises are achieving 60% faster processes, 45% cost reduction, and 10x return on investment within the first year of deployment.
-            </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Request a demo <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </motion.div>
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-400 rounded-full blur-3xl" />
         </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-center px-6 max-w-5xl mx-auto"
+        >
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            Ready to transform
+            <br />
+            your business?
+          </h2>
+          <p className="text-xl md:text-2xl text-purple-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+            See how Enterprise Suite can revolutionize your operations. Schedule a personalized demo with our team.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button className="bg-white text-purple-900 hover:bg-gray-100 rounded-full px-12 h-16 text-lg font-medium">
+              Request demo <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-12 h-16 text-lg font-medium">
+              Contact sales
+            </Button>
+          </div>
+          
+          <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div>
+              <div className="text-4xl font-bold mb-2">10K+</div>
+              <div className="text-purple-200">Active companies</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">99.99%</div>
+              <div className="text-purple-200">Uptime SLA</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">24/7</div>
+              <div className="text-purple-200">Expert support</div>
+            </div>
+          </div>
+        </motion.div>
       </section>
     </div>
   );
