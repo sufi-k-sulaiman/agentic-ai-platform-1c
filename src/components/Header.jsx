@@ -81,9 +81,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to={createPageUrl('Home')} className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-lg bg-[#8B2EE5] flex items-center justify-center">
-              <span className="text-white font-bold text-lg">1C</span>
-            </div>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/334042dc2_1C-logocopy.png" 
+              alt="1C Platform" 
+              className="h-9 w-9"
+            />
             <span className="font-semibold text-xl text-gray-900 tracking-tight">1cPlatform</span>
           </Link>
 
