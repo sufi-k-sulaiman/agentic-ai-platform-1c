@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Search, MessageCircle, Book, Video, FileQuestion, ArrowRight, HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const categories = [
   {
@@ -61,11 +63,16 @@ const faqs = [
 ];
 
 const popularArticles = [
-  { title: 'Creating your first AI agent', views: '50K' },
-  { title: 'API authentication guide', views: '45K' },
-  { title: 'Understanding rate limits', views: '38K' },
-  { title: 'Troubleshooting common errors', views: '35K' },
-  { title: 'Best practices for production', views: '30K' }
+  { title: 'Creating your first AI agent', views: '50K', page: 'SupportArticle1' },
+  { title: 'API authentication guide', views: '45K', page: 'SupportArticle2' },
+  { title: 'Understanding rate limits', views: '38K', page: 'SupportArticle3' },
+  { title: 'Troubleshooting common errors', views: '35K', page: 'SupportArticle4' },
+  { title: 'Best practices for production', views: '30K', page: 'SupportArticle5' },
+  { title: 'Integrating with third-party services', views: '28K', page: 'SupportArticle6' },
+  { title: 'Monitoring agent performance', views: '25K', page: 'SupportArticle7' },
+  { title: 'Managing your subscription', views: '22K', page: 'SupportArticle8' },
+  { title: 'Team management and permissions', views: '20K', page: 'SupportArticle9' },
+  { title: 'Data security and compliance', views: '18K', page: 'SupportArticle10' }
 ];
 
 export default function HelpCenter() {
@@ -152,28 +159,28 @@ export default function HelpCenter() {
 
           <div className="space-y-4">
             {popularArticles.map((article, index) => (
-              <motion.a
-                key={article.title}
-                href="#"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-center justify-between p-6 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-[#8B2EE5]/30 transition-all group"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <Book className="w-6 h-6 text-gray-400 group-hover:text-[#8B2EE5] transition-colors" />
+              <Link key={article.title} to={createPageUrl(article.page)}>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-center justify-between p-6 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-[#8B2EE5]/30 transition-all group cursor-pointer"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                      <Book className="w-6 h-6 text-gray-400 group-hover:text-[#8B2EE5] transition-colors" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 group-hover:text-[#8B2EE5] transition-colors">
+                        {article.title}
+                      </h3>
+                      <p className="text-sm text-gray-500">{article.views} views</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-[#8B2EE5] transition-colors">
-                      {article.title}
-                    </h3>
-                    <p className="text-sm text-gray-500">{article.views} views</p>
-                  </div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#8B2EE5] group-hover:translate-x-1 transition-all" />
-              </motion.a>
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#8B2EE5] group-hover:translate-x-1 transition-all" />
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>

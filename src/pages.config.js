@@ -54,6 +54,16 @@ import JobApplication from './pages/JobApplication';
 import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
 import SearchResults from './pages/SearchResults';
+import SupportArticle1 from './pages/SupportArticle1';
+import SupportArticle2 from './pages/SupportArticle2';
+import SupportArticle3 from './pages/SupportArticle3';
+import SupportArticle4 from './pages/SupportArticle4';
+import SupportArticle5 from './pages/SupportArticle5';
+import SupportArticle6 from './pages/SupportArticle6';
+import SupportArticle7 from './pages/SupportArticle7';
+import SupportArticle8 from './pages/SupportArticle8';
+import SupportArticle9 from './pages/SupportArticle9';
+import SupportArticle10 from './pages/SupportArticle10';
 import __Layout from './Layout.jsx';
 
 
@@ -114,6 +124,16 @@ export const PAGES = {
     "Terms": Terms,
     "Cookies": Cookies,
     "SearchResults": SearchResults,
+    "SupportArticle1": SupportArticle1,
+    "SupportArticle2": SupportArticle2,
+    "SupportArticle3": SupportArticle3,
+    "SupportArticle4": SupportArticle4,
+    "SupportArticle5": SupportArticle5,
+    "SupportArticle6": SupportArticle6,
+    "SupportArticle7": SupportArticle7,
+    "SupportArticle8": SupportArticle8,
+    "SupportArticle9": SupportArticle9,
+    "SupportArticle10": SupportArticle10,
 }
 
 export const pagesConfig = {
