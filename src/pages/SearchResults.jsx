@@ -1,285 +1,314 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, Loader2, Sparkles, ArrowRight } from 'lucide-react';
+import { Search, Loader2, FileText, ArrowRight, Sparkles } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { base44 } from '@/api/base44Client';
-import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import { base44 } from '@/api/base44Client';
 import PageMeta from '@/components/PageMeta';
 
-const aiTopics = [
-  { name: 'AI', keywords: ['artificial intelligence', 'ai', 'intelligent systems'] },
-  { name: 'Agentic AI', keywords: ['agentic ai', 'autonomous agents', 'ai agents', 'intelligent agents'] },
-  { name: 'Generative AI', keywords: ['generative ai', 'gen ai', 'content generation', 'llm', 'gpt'] },
-  { name: 'Machine Learning', keywords: ['machine learning', 'ml', 'supervised learning', 'unsupervised learning'] },
-  { name: 'Deep Learning', keywords: ['deep learning', 'neural networks', 'deep neural networks'] },
-  { name: 'Natural Language Processing', keywords: ['nlp', 'natural language', 'text processing', 'language models'] },
-  { name: 'Computer Vision', keywords: ['computer vision', 'image recognition', 'visual ai', 'image processing'] },
-  { name: 'Robotics', keywords: ['robotics', 'robots', 'automation', 'robotic process automation'] },
-  { name: 'AI Ethics', keywords: ['ai ethics', 'responsible ai', 'ai bias', 'fairness'] },
-  { name: 'AI in Healthcare', keywords: ['ai healthcare', 'medical ai', 'health ai', 'clinical ai'] },
-  { name: 'AI in Finance', keywords: ['ai finance', 'fintech ai', 'financial ai', 'algorithmic trading'] },
-  { name: 'AI Governance', keywords: ['ai governance', 'ai policy', 'ai regulation', 'ai compliance'] }
+// All available pages
+const allPages = [
+  { name: 'Home', path: 'Home', description: 'Main landing page' },
+  { name: 'Agentic AI', path: 'AgenticAI', description: 'Autonomous AI agents platform' },
+  { name: 'Enterprise Suite', path: 'EnterpriseSuite', description: 'Complete business management' },
+  { name: 'Cloud Platform', path: 'CloudPlatform', description: 'Scalable infrastructure' },
+  { name: 'Developer Tools', path: 'DeveloperTools', description: 'APIs and SDKs' },
+  { name: 'Pricing', path: 'Pricing', description: 'Transparent pricing plans' },
+  { name: 'Property Management', path: 'PropertyManagement', description: 'Smart building solutions' },
+  { name: 'Data Centers', path: 'DataCenters', description: 'Infrastructure automation' },
+  { name: 'Financial Institutions', path: 'FinancialInstitutions', description: 'Banking & fintech solutions' },
+  { name: 'Corporate Campuses', path: 'CorporateCampuses', description: 'Workplace management' },
+  { name: 'Healthcare', path: 'Healthcare', description: 'Patient care optimization' },
+  { name: 'Transit', path: 'Transit', description: 'Public transportation solutions' },
+  { name: 'Traffic', path: 'Traffic', description: 'Traffic optimization' },
+  { name: 'Government Agencies', path: 'GovernmentAgencies', description: 'Public services automation' },
+  { name: 'Energy & Utilities', path: 'EnergyUtilities', description: 'Smart grid management' },
+  { name: 'Sports & Entertainment', path: 'SportsEntertainment', description: 'Fan experiences' },
+  { name: 'Gaming', path: 'Gaming', description: 'Gaming infrastructure' },
+  { name: 'Public Safety', path: 'PublicSafety', description: 'Emergency response systems' },
+  { name: 'Cities', path: 'Cities', description: 'Smart city solutions' },
+  { name: 'Airports', path: 'Airports', description: 'Airport operations' },
+  { name: 'Retail', path: 'Retail', description: 'Customer experience optimization' },
+  { name: 'Education', path: 'Education', description: 'Learning management systems' },
+  { name: 'Documentation', path: 'Documentation', description: 'Complete guides and documentation' },
+  { name: 'API Reference', path: 'APIReference', description: 'API endpoints documentation' },
+  { name: 'Community', path: 'Community', description: 'Join our developer community' },
+  { name: 'Blog', path: 'Blog', description: 'Insights and updates' },
+  { name: 'Events', path: 'Events', description: 'Upcoming events and webinars' },
+  { name: 'About Us', path: 'AboutUs', description: 'Our company story' },
+  { name: 'Careers', path: 'Careers', description: 'Join our team' },
+  { name: 'Newsroom', path: 'Newsroom', description: 'Latest news and press releases' },
+  { name: 'Leadership', path: 'Leadership', description: 'Meet our leadership team' },
+  { name: 'Investor Relations', path: 'InvestorRelations', description: 'Information for investors' },
+  { name: 'Help Center', path: 'HelpCenter', description: 'Get help and support' },
+  { name: 'Courses', path: 'Courses', description: 'Professional training courses' },
+  { name: 'Digital Learning', path: 'DigitalLearningSubscriptions', description: 'Learning subscriptions' },
+  { name: 'Learning Journey', path: 'LearningJourney', description: 'Structured learning paths' },
+  { name: 'Certifications', path: 'ProfessionalCertifications', description: 'Professional certifications' },
+  { name: 'System Status', path: 'Status', description: 'Platform health status' },
+  { name: 'Cyber Security', path: 'Cyber', description: 'Trust and security information' }
 ];
 
-const pageIndex = [
-  { title: 'Agentic AI Platform', path: 'AgenticAI', description: 'Build autonomous AI agents that think, decide, and act', topics: ['Agentic AI', 'AI', 'Machine Learning'] },
-  { title: 'Enterprise Suite', path: 'EnterpriseSuite', description: 'Complete business management solution', topics: ['AI', 'Machine Learning'] },
-  { title: 'Cloud Platform', path: 'CloudPlatform', description: 'Scalable AI infrastructure built for performance', topics: ['AI', 'Machine Learning'] },
-  { title: 'Developer Tools', path: 'DeveloperTools', description: 'APIs and SDKs for AI integration', topics: ['AI', 'Machine Learning', 'Natural Language Processing'] },
-  { title: 'Healthcare Solutions', path: 'Healthcare', description: 'AI-powered healthcare automation', topics: ['AI in Healthcare', 'AI', 'Computer Vision'] },
-  { title: 'Financial Services', path: 'FinancialInstitutions', description: 'AI for banking and fintech', topics: ['AI in Finance', 'AI', 'Machine Learning'] },
-  { title: 'Blog: Agentic AI Enterprise', path: 'BlogAgenticAIEnterprise', description: 'How autonomous AI agents transform enterprise operations', topics: ['Agentic AI', 'AI', 'AI Ethics'] },
-  { title: 'Blog: AI Security', path: 'BlogAgenticAISecurity', description: 'Ensuring trust and security in AI deployments', topics: ['AI Ethics', 'AI Governance', 'AI'] },
-  { title: 'Blog: AI ROI', path: 'BlogAgenticAIROI', description: 'Measuring the ROI of your AI investment', topics: ['AI', 'AI Governance'] },
-  { title: 'Documentation', path: 'Documentation', description: 'Complete guides for AI implementation', topics: ['AI', 'Machine Learning', 'Natural Language Processing'] },
-  { title: 'AI Ethics & Governance', path: 'Cyber', description: 'Trust, safety, and responsible AI', topics: ['AI Ethics', 'AI Governance', 'AI'] }
+// AI topics to filter
+const aiTopics = [
+  'AI', 'Agentic AI', 'Generative AI', 'Machine Learning', 'Deep Learning',
+  'Natural Language Processing', 'Computer Vision', 'Robotics',
+  'AI Ethics', 'AI in Healthcare', 'AI in Finance', 'AI Governance'
 ];
 
 export default function SearchResults() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [query, setQuery] = useState('');
+  const [searching, setSearching] = useState(false);
   const [results, setResults] = useState([]);
   const [aiAnalysis, setAiAnalysis] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [selectedTopics, setSelectedTopics] = useState([]);
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const q = urlParams.get('q');
+    const params = new URLSearchParams(location.search);
+    const q = params.get('q') || '';
+    setQuery(q);
     if (q) {
-      setQuery(q);
       performSearch(q);
     }
-  }, []);
+  }, [location.search]);
 
   const performSearch = async (searchQuery) => {
-    setLoading(true);
-    
-    // Instant local search
-    const localResults = pageIndex.filter(page => 
-      page.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      page.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      page.topics.some(topic => topic.toLowerCase().includes(searchQuery.toLowerCase()))
-    );
-    
-    setResults(localResults);
+    if (!searchQuery.trim()) return;
 
-    // Detect AI topics
-    const detectedTopics = aiTopics.filter(topic =>
-      topic.keywords.some(kw => searchQuery.toLowerCase().includes(kw.toLowerCase()))
-    ).map(t => t.name);
-    
-    setSelectedTopics(detectedTopics);
+    setSearching(true);
+    setResults([]);
+    setAiAnalysis(null);
 
-    // AI-powered analysis for better results
     try {
-      const response = await base44.integrations.Core.InvokeLLM({
-        prompt: `Given the search query "${searchQuery}", analyze which of these AI topics are most relevant:
-${aiTopics.map(t => t.name).join(', ')}
+      // Use LLM to analyze query and match to AI topics
+      const aiResponse = await base44.integrations.Core.InvokeLLM({
+        prompt: `You are a search assistant for an AI/Agentic AI platform.
+        
+User search query: "${searchQuery}"
 
-Also suggest 3 most relevant pages from this list that would help answer the user's query:
-${pageIndex.map(p => `${p.title}: ${p.description}`).join('\n')}
+Available AI topics: ${aiTopics.join(', ')}
 
-Return ONLY a JSON object with:
-{
-  "topics": ["topic1", "topic2"],
-  "recommendedPages": ["title1", "title2", "title3"],
-  "summary": "brief explanation of what user is looking for"
-}`,
+Available pages: ${allPages.map(p => `${p.name} (${p.description})`).join(', ')}
+
+Task:
+1. Identify which AI topics (if any) are most relevant to the user's query
+2. Identify which pages are most relevant to the user's query
+3. Provide a brief explanation of why these matches are relevant
+
+Return ONLY these relevant topics and pages, ranked by relevance.`,
         response_json_schema: {
           type: 'object',
           properties: {
-            topics: { type: 'array', items: { type: 'string' } },
-            recommendedPages: { type: 'array', items: { type: 'string' } },
-            summary: { type: 'string' }
+            matched_topics: {
+              type: 'array',
+              items: { type: 'string' },
+              description: 'Relevant AI topics from the predefined list'
+            },
+            matched_pages: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  name: { type: 'string' },
+                  relevance: { type: 'string', description: 'Why this page is relevant' }
+                }
+              }
+            },
+            explanation: {
+              type: 'string',
+              description: 'Brief explanation of the search results'
+            }
           }
         }
       });
 
-      setAiAnalysis(response);
-      
-      // Merge AI recommendations with local results
-      if (response.recommendedPages) {
-        const aiResults = pageIndex.filter(page => 
-          response.recommendedPages.some(rec => 
-            page.title.toLowerCase().includes(rec.toLowerCase())
-          )
-        );
-        
-        // Combine and deduplicate
-        const combined = [...new Map([...aiResults, ...localResults].map(item => [item.path, item])).values()];
-        setResults(combined.slice(0, 10));
-      }
+      // Map AI results to actual pages
+      const matchedPages = aiResponse.matched_pages
+        .map(match => {
+          const page = allPages.find(p => p.name.toLowerCase() === match.name.toLowerCase());
+          return page ? { ...page, relevance: match.relevance } : null;
+        })
+        .filter(Boolean);
 
-      if (response.topics) {
-        setSelectedTopics(prev => [...new Set([...prev, ...response.topics])]);
-      }
+      setResults(matchedPages);
+      setAiAnalysis({
+        topics: aiResponse.matched_topics || [],
+        explanation: aiResponse.explanation
+      });
     } catch (error) {
-      console.error('AI search failed:', error);
+      console.error('Search error:', error);
+      // Fallback to basic search
+      const basicResults = allPages.filter(page =>
+        page.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        page.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setResults(basicResults);
+    } finally {
+      setSearching(false);
     }
-    
-    setLoading(false);
   };
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      performSearch(query);
-      window.history.pushState({}, '', createPageUrl('SearchResults') + `?q=${encodeURIComponent(query)}`);
+      navigate(`${createPageUrl('SearchResults')}?q=${encodeURIComponent(query)}`);
     }
   };
 
-  const filterByTopic = (topic) => {
-    const filtered = pageIndex.filter(page => 
-      page.topics.includes(topic)
-    );
-    setResults(filtered);
-    setSelectedTopics([topic]);
+  const handleNavigate = (path) => {
+    navigate(createPageUrl(path));
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <PageMeta 
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <PageMeta
         title="Search Results"
-        description="Search our AI platform for topics, products, and resources"
+        description="Search results powered by AI"
         url="/search"
-        keywords={['search', 'ai search', 'find']}
       />
 
-      {/* Search Header */}
-      <div className="bg-white border-b border-gray-200 sticky top-16 z-10">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <form onSubmit={handleSearch} className="max-w-3xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <Input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search for AI topics, products, or resources..."
-                className="pl-12 pr-4 h-14 text-lg rounded-full border-2 border-gray-200 focus:border-[#8B2EE5]"
-              />
-            </div>
+      <div className="max-w-5xl mx-auto px-6 py-16">
+        {/* Search Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-12"
+        >
+          <h1 className="text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <Sparkles className="w-8 h-8 text-[#8B2EE5]" />
+            AI-Powered Search
+          </h1>
+          
+          <form onSubmit={handleSearch} className="relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search for AI topics, pages, features..."
+              className="pl-12 pr-32 h-14 text-lg border-gray-300 rounded-full"
+            />
+            <Button
+              type="submit"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full"
+            >
+              Search
+            </Button>
           </form>
-        </div>
-      </div>
+        </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid lg:grid-cols-4 gap-8">
-          {/* Sidebar - Topics */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-32">
-              <h3 className="font-semibold text-gray-900 mb-4">AI Topics</h3>
-              <div className="space-y-2">
-                {aiTopics.map((topic) => (
-                  <button
-                    key={topic.name}
-                    onClick={() => filterByTopic(topic.name)}
-                    className={`w-full text-left px-4 py-2 rounded-lg text-sm transition-colors ${
-                      selectedTopics.includes(topic.name)
-                        ? 'bg-[#8B2EE5] text-white'
-                        : 'hover:bg-gray-100 text-gray-700'
-                    }`}
-                  >
-                    {topic.name}
-                  </button>
-                ))}
-              </div>
+        {/* Loading State */}
+        {searching && (
+          <div className="flex items-center justify-center py-20">
+            <div className="text-center">
+              <Loader2 className="w-12 h-12 text-[#8B2EE5] animate-spin mx-auto mb-4" />
+              <p className="text-gray-600">Analyzing your search with AI...</p>
             </div>
           </div>
+        )}
 
-          {/* Main Results */}
-          <div className="lg:col-span-3">
-            {/* AI Analysis Banner */}
-            {aiAnalysis && (
-              <motion.div
+        {/* AI Analysis */}
+        {!searching && aiAnalysis && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8"
+          >
+            {aiAnalysis.topics.length > 0 && (
+              <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6 mb-6">
+                <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-[#8B2EE5]" />
+                  Related AI Topics
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {aiAnalysis.topics.map((topic, idx) => (
+                    <Badge key={idx} variant="secondary" className="bg-white text-[#8B2EE5] border-purple-200">
+                      {topic}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {aiAnalysis.explanation && (
+              <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
+                <p className="text-gray-700 leading-relaxed">{aiAnalysis.explanation}</p>
+              </div>
+            )}
+          </motion.div>
+        )}
+
+        {/* Results */}
+        {!searching && results.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="space-y-4"
+          >
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              {results.length} {results.length === 1 ? 'Result' : 'Results'} Found
+            </h2>
+
+            {results.map((result, idx) => (
+              <motion.button
+                key={result.path}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 mb-8 border border-purple-100"
+                transition={{ delay: idx * 0.1 }}
+                onClick={() => handleNavigate(result.path)}
+                className="w-full bg-white rounded-xl p-6 border border-gray-200 hover:border-[#8B2EE5] hover:shadow-lg transition-all text-left group"
               >
-                <div className="flex items-start gap-3">
-                  <Sparkles className="w-6 h-6 text-[#8B2EE5] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">AI Insights</h3>
-                    <p className="text-gray-700">{aiAnalysis.summary}</p>
-                    {aiAnalysis.topics && aiAnalysis.topics.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {aiAnalysis.topics.map((topic, idx) => (
-                          <Badge key={idx} className="bg-[#8B2EE5] text-white">
-                            {topic}
-                          </Badge>
-                        ))}
-                      </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-6 h-6 text-[#8B2EE5]" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#8B2EE5] transition-colors">
+                      {result.name}
+                    </h3>
+                    <p className="text-gray-600 mb-3">{result.description}</p>
+                    {result.relevance && (
+                      <p className="text-sm text-gray-500 italic">{result.relevance}</p>
                     )}
                   </div>
+                  <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-[#8B2EE5] transition-colors flex-shrink-0" />
                 </div>
-              </motion.div>
-            )}
+              </motion.button>
+            ))}
+          </motion.div>
+        )}
 
-            {/* Loading */}
-            {loading && (
-              <div className="flex items-center justify-center py-12">
-                <Loader2 className="w-8 h-8 animate-spin text-[#8B2EE5]" />
-              </div>
-            )}
-
-            {/* Results Count */}
-            {!loading && results.length > 0 && (
-              <div className="mb-6">
-                <p className="text-gray-600">
-                  Found <span className="font-semibold text-gray-900">{results.length}</span> result{results.length !== 1 ? 's' : ''} for "{query}"
-                </p>
-              </div>
-            )}
-
-            {/* Results List */}
-            <div className="space-y-6">
-              {results.map((result, idx) => (
-                <motion.div
-                  key={result.path}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.05 }}
+        {/* No Results */}
+        {!searching && results.length === 0 && query && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-20"
+          >
+            <div className="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
+              <Search className="w-10 h-10 text-gray-400" />
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">No results found</h3>
+            <p className="text-gray-600 mb-6">Try adjusting your search or browse our topics</p>
+            <div className="flex flex-wrap gap-2 justify-center max-w-2xl mx-auto">
+              {aiTopics.map((topic, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setQuery(topic);
+                    navigate(`${createPageUrl('SearchResults')}?q=${encodeURIComponent(topic)}`);
+                  }}
+                  className="px-4 py-2 bg-gray-100 hover:bg-purple-100 rounded-full text-sm font-medium text-gray-700 hover:text-[#8B2EE5] transition-colors"
                 >
-                  <Link
-                    to={createPageUrl(result.path)}
-                    className="block bg-white rounded-xl p-6 border border-gray-200 hover:border-[#8B2EE5] hover:shadow-lg transition-all group"
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#8B2EE5] transition-colors">
-                          {result.title}
-                        </h3>
-                        <p className="text-gray-600 mb-4">{result.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {result.topics.map((topic, topicIdx) => (
-                            <Badge key={topicIdx} variant="secondary" className="text-xs">
-                              {topic}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#8B2EE5] group-hover:translate-x-1 transition-all flex-shrink-0" />
-                    </div>
-                  </Link>
-                </motion.div>
+                  {topic}
+                </button>
               ))}
             </div>
-
-            {/* No Results */}
-            {!loading && results.length === 0 && query && (
-              <div className="text-center py-12">
-                <Search className="w-16 h-16 mx-auto mb-4 text-gray-300" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No results found</h3>
-                <p className="text-gray-600 mb-6">Try searching with different keywords or explore our AI topics</p>
-                <Button onClick={() => setQuery('')} variant="outline">
-                  Clear search
-                </Button>
-              </div>
-            )}
-          </div>
-        </div>
+          </motion.div>
+        )}
       </div>
     </div>
   );

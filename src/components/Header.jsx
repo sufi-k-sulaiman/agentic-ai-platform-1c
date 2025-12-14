@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cn } from "@/lib/utils";
-import SearchModal from './SearchModal';
+import GlobalSearch from '@/components/GlobalSearch';
 
 const navItems = [
   { 
@@ -126,32 +126,19 @@ export default function Header() {
             </NavigationMenuPrimitive.Root>
           </nav>
 
-          {/* Search Button */}
-          <button
-            onClick={() => setSearchOpen(true)}
-            className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600 hover:text-gray-900"
-          >
-            <Search className="w-4 h-4" />
-            <span className="text-sm">Search</span>
-            <kbd className="hidden xl:inline-block px-2 py-0.5 text-xs bg-white rounded border border-gray-300">⌘K</kbd>
-          </button>
 
-          {/* Mobile Buttons */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <button
-              onClick={() => setSearchOpen(true)}
-              className="p-2 text-gray-600 hover:text-[#8B2EE5]"
-            >
-              <Search className="w-6 h-6" />
-            </button>
-            <button
-              className="p-2 text-gray-600"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 text-gray-600"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Global Search */}
+        <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
@@ -177,9 +164,6 @@ export default function Header() {
           </div>
         )}
       </div>
-
-      {/* Search Modal */}
-      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 }
