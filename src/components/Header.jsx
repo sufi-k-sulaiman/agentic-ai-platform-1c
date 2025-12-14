@@ -103,7 +103,7 @@ export default function Header() {
                         <NavigationMenuTrigger className="text-gray-600 hover:text-[#8B2EE5] bg-transparent hover:bg-transparent data-[state=open]:bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5">
                           {item.label}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent className="left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52">
+                        <NavigationMenuContent>
                           <ul className={`grid gap-1 p-4 ${item.label === 'Verticals' ? 'w-[500px] grid-cols-2' : 'w-[400px]'}`}>
                             {item.submenu.map((subitem) => (
                               <li key={subitem.label}>
