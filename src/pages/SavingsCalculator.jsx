@@ -132,7 +132,7 @@ export default function SavingsCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                      <Label className="text-base">Total FTEs (Full-Time Employees)</Label>
+                      <Label className="text-base">Full-Time Employees(FTE)</Label>
                       <Input
                         type="number"
                         value={totalFTEs}
