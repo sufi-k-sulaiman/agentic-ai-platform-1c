@@ -7,6 +7,8 @@ import { Calendar, ArrowRight, Award, TrendingUp, Users, Zap } from 'lucide-reac
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import { base44 } from '@/api/base44Client';
+import { toast } from 'sonner';
 
 const news = [
   {
@@ -208,10 +210,31 @@ const news = [
 
 export default function Newsroom() {
   const [activeTab, setActiveTab] = useState('all');
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const filteredNews = activeTab === 'all' 
     ? news 
     : news.filter(item => item.category.toLowerCase().replace(' ', '-') === activeTab);
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    try {
+      await base44.entities.NewsletterSignup.create({
+        email,
+        source: 'Newsroom'
+      });
+      toast.success('Successfully subscribed to newsletter!');
+      setEmail('');
+    } catch (error) {
+      toast.error('Failed to subscribe. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="bg-white">
@@ -239,16 +262,23 @@ export default function Newsroom() {
             <p className="text-2xl text-gray-600 leading-relaxed mb-10">
               Stay informed about product launches, company milestones, and industry insights.
             </p>
-            <div className="flex gap-3 max-w-md">
+            <form onSubmit={handleSubscribe} className="flex gap-3 max-w-md">
               <input
                 type="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="flex-1 h-12 px-6 rounded-full border-2 border-[#8B2EE5]/20 focus:border-[#8B2EE5] focus:outline-none transition-colors"
               />
-              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-12">
-                Subscribe
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-12"
+              >
+                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </Button>
-            </div>
+            </form>
           </motion.div>
         </div>
       </section>
