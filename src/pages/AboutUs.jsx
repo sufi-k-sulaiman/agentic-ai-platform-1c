@@ -28,12 +28,12 @@ const values = [
 ];
 
 const timeline = [
-  { year: '2015', title: 'Founded', description: 'Started with a vision to democratize enterprise AI' },
-  { year: '2017', title: 'Series A', description: 'Raised $50M to expand our platform capabilities' },
-  { year: '2019', title: 'Global Expansion', description: 'Opened offices in London, Singapore, and Sydney' },
-  { year: '2021', title: 'IPO', description: 'Went public, valued at $2.5B' },
-  { year: '2023', title: 'AI Revolution', description: 'Launched Agentic AI platform for autonomous systems' },
-  { year: '2024', title: 'Today', description: '500+ enterprise clients, 2000+ employees worldwide' }
+  { year: 'Dec 2024', title: 'Founded', description: 'Started with a vision to democratize enterprise AI' },
+  { year: 'Dec 2024', title: 'Beta Customers', description: 'Launched beta program with early adopters' },
+  { year: '2025', title: 'Series A', description: 'Secured Series A funding to accelerate growth' },
+  { year: '2025', title: 'Series B', description: 'Raised Series B to expand platform capabilities' },
+  { year: '2026', title: 'USA & Canada', description: 'Established presence across North America' },
+  { year: '2027', title: 'Global Expansion', description: 'Scaling operations worldwide' }
 ];
 
 export default function AboutUs() {
