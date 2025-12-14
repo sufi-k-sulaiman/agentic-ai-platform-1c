@@ -839,27 +839,49 @@ export default function InvestorRelations() {
               className="relative"
             >
               <div className="relative bg-gradient-to-br from-purple-100 to-violet-100 rounded-3xl p-12 min-h-[500px] flex items-center justify-center">
-                {/* Floating decorative squares */}
+                {/* Floating integration boxes */}
                 <motion.div
                   animate={{ y: [0, -20, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-12 left-12 w-20 h-20 bg-white rounded-xl shadow-lg"
-                />
+                  className="absolute top-12 left-12 bg-white rounded-xl shadow-lg p-4 flex items-center justify-center"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Salesforce</span>
+                </motion.div>
                 <motion.div
                   animate={{ y: [0, 20, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="absolute top-24 right-16 w-16 h-16 bg-white rounded-xl shadow-lg"
-                />
+                  className="absolute top-24 right-16 bg-white rounded-xl shadow-lg p-4 flex items-center justify-center"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Slack</span>
+                </motion.div>
                 <motion.div
                   animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute bottom-32 left-20 w-12 h-12 bg-white rounded-lg shadow-lg"
-                />
+                  className="absolute bottom-32 left-20 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">AWS</span>
+                </motion.div>
                 <motion.div
                   animate={{ y: [0, 25, 0] }}
                   transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                  className="absolute bottom-20 right-24 w-14 h-14 bg-white rounded-lg shadow-lg"
-                />
+                  className="absolute bottom-20 right-24 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">QuickBooks</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 15, 0] }}
+                  transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+                  className="absolute top-40 left-32 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">HubSpot</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, -18, 0] }}
+                  transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+                  className="absolute bottom-40 right-32 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Azure</span>
+                </motion.div>
                 
                 {/* Center logo */}
                 <motion.div
@@ -868,7 +890,11 @@ export default function InvestorRelations() {
                   className="relative w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center z-10"
                 >
                   <div className="w-20 h-20 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] rounded-full flex items-center justify-center">
-                    <Zap className="w-10 h-10 text-white" />
+                    <img 
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                      alt="1C Platform" 
+                      className="w-12 h-12"
+                    />
                   </div>
                 </motion.div>
               </div>
