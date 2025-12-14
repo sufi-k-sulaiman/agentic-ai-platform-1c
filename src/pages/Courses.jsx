@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Clock, Users, Star, CheckCircle, ArrowRight, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 const categories = [
@@ -158,20 +160,22 @@ export default function Courses() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="hover:shadow-xl transition-all cursor-pointer">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                        <BookOpen className="w-6 h-6 text-[#8B2EE5]" />
+                <Link to={`${createPageUrl('CourseCategory')}?category=${category.name.toLowerCase().replace(/ /g, '-').replace(/&/g, '')}`}>
+                  <Card className="hover:shadow-xl transition-all cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                          <BookOpen className="w-6 h-6 text-[#8B2EE5]" />
+                        </div>
+                        <Badge className="bg-purple-100 text-[#8B2EE5] hover:bg-purple-200">
+                          {category.level}
+                        </Badge>
                       </div>
-                      <Badge className="bg-purple-100 text-[#8B2EE5] hover:bg-purple-200">
-                        {category.level}
-                      </Badge>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{category.name}</h3>
-                    <p className="text-gray-600">{category.count} courses</p>
-                  </CardContent>
-                </Card>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{category.name}</h3>
+                      <p className="text-gray-600">{category.count} courses</p>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -199,42 +203,44 @@ export default function Courses() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all overflow-hidden">
-                  <div className="relative h-48">
-                    <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <Badge className="absolute top-4 right-4 bg-purple-600 text-white">
-                      {course.level}
-                    </Badge>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center gap-4 text-white text-sm">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {course.duration}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <BookOpen className="w-4 h-4" />
-                          {course.modules} modules
+                <Link to={`${createPageUrl('CourseDetail')}?id=${course.title.toLowerCase().replace(/ /g, '-')}`}>
+                  <Card className="h-full hover:shadow-xl transition-all overflow-hidden cursor-pointer">
+                    <div className="relative h-48">
+                      <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <Badge className="absolute top-4 right-4 bg-purple-600 text-white">
+                        {course.level}
+                      </Badge>
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="flex items-center gap-4 text-white text-sm">
+                          <div className="flex items-center gap-1">
+                            <Clock className="w-4 h-4" />
+                            {course.duration}
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <BookOpen className="w-4 h-4" />
+                            {course.modules} modules
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{course.title}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{course.description}</p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <Star className="w-5 h-5 text-yellow-500 fill-current" />
-                        <span className="font-semibold">{course.rating}</span>
-                        <span className="text-gray-500 text-sm">({course.students.toLocaleString()} students)</span>
+                    <CardContent className="p-6">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{course.title}</h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed">{course.description}</p>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2">
+                          <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                          <span className="font-semibold">{course.rating}</span>
+                          <span className="text-gray-500 text-sm">({course.students.toLocaleString()} students)</span>
+                        </div>
                       </div>
-                    </div>
-                    <Button className="w-full bg-[#8B2EE5] hover:bg-[#7325C4]">
-                      <Play className="w-4 h-4 mr-2" />
-                      Start learning
-                    </Button>
-                  </CardContent>
-                </Card>
+                      <Button className="w-full bg-[#8B2EE5] hover:bg-[#7325C4]">
+                        <Play className="w-4 h-4 mr-2" />
+                        Start learning
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </div>

@@ -69,6 +69,8 @@ import AccountBillingGuide from './pages/AccountBillingGuide';
 import TechnicalSupportGuide from './pages/TechnicalSupportGuide';
 import VideoTutorialsGuide from './pages/VideoTutorialsGuide';
 import Contact from './pages/Contact';
+import CourseCategory from './pages/CourseCategory';
+import CourseDetail from './pages/CourseDetail';
 import __Layout from './Layout.jsx';
 
 
@@ -144,6 +146,8 @@ export const PAGES = {
     "TechnicalSupportGuide": TechnicalSupportGuide,
     "VideoTutorialsGuide": VideoTutorialsGuide,
     "Contact": Contact,
+    "CourseCategory": CourseCategory,
+    "CourseDetail": CourseDetail,
 }
 
 export const pagesConfig = {
