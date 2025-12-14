@@ -8,26 +8,26 @@ const challenges = [
   {
     icon: Shield,
     title: 'Compliance & Risk',
-    problem: 'Manual KYC/AML checks, audit trails, regulatory reporting—massive overhead and human error',
-    solution: 'AI automates compliance workflows, monitors transactions 24/7, and generates audit-ready reports instantly'
+    problem: 'Manual KYC/AML checks take 2-3 days per customer and require extensive documentation review. Audit trail maintenance across dozens of systems is labor-intensive and error-prone, with compliance officers spending 70% of their time on manual documentation. Regulatory reporting for Basel III, Dodd-Frank, and local requirements involves aggregating data from disparate sources, often taking weeks to compile. False-positive alerts on suspicious activities overwhelm investigators, with 95% being legitimate transactions.',
+    solution: 'AI automates KYC/AML workflows by instantly verifying identities against global databases, analyzing document authenticity, and screening against sanctions lists in under 2 minutes. Continuous transaction monitoring uses behavioral AI to detect actual suspicious patterns with 99% accuracy, reducing false positives by 90%. Automated compliance engines maintain complete audit trails, automatically generate regulatory reports, and ensure all controls are functioning correctly. This reduces compliance costs by 60% while improving regulatory standing and audit success rates.'
   },
   {
     icon: Database,
     title: 'Siloed Data',
-    problem: 'Customer data scattered across core banking, CRM, payments—no unified view',
-    solution: 'Agentic AI integrates all systems, creates 360° customer profiles, and enables real-time insights'
+    problem: 'Customer data fragmented across core banking systems, CRM platforms, payment processors, loan origination systems, and branch management software prevents holistic customer understanding. Marketing teams lack visibility into actual product usage patterns. Risk assessments are based on incomplete information, leading to higher default rates. Cross-selling opportunities are missed because no system has a complete view of customer needs and behaviors.',
+    solution: 'Agentic AI integrates all systems in real-time, creating comprehensive 360° customer profiles that include transaction history, product usage, communication preferences, life events, and predicted needs. Advanced analytics automatically identify opportunities for personalized offers, detect at-risk customers before they churn, and optimize pricing based on profitability and retention likelihood. Real-time insights enable relationship managers to have more valuable conversations, while automated systems deliver perfectly timed, personalized recommendations.'
   },
   {
     icon: Users,
     title: 'Customer Experience',
-    problem: 'Long wait times, manual onboarding, fragmented service across channels',
-    solution: 'AI-powered virtual assistants handle 80% of queries instantly while personalizing every interaction'
+    problem: 'Average wait times of 15-45 minutes for phone support create frustration and lead to 30% of calls being abandoned. Manual onboarding processes take 7-10 days with multiple branch visits required. Fragmented service across channels means customers must repeat information when switching between mobile, web, phone, and in-person interactions. Generic product recommendations miss customer needs, resulting in low conversion rates and customer dissatisfaction.',
+    solution: 'AI-powered virtual assistants handle 80% of customer inquiries instantly across all channels—chat, phone, email, and messaging apps. Natural language understanding enables conversational interactions that feel personal and helpful. Digital onboarding with automated identity verification and document processing completes account opening in under 10 minutes without branch visits. Contextual AI ensures seamless handoffs between channels, remembering customer history and preferences. Personalization engines analyze behavior to recommend relevant products at optimal moments, increasing conversion by 45% while improving satisfaction scores by 60 points.'
   },
   {
     icon: DollarSign,
     title: 'Operating Costs',
-    problem: 'High labor costs for routine tasks, slow loan processing, inefficient fraud detection',
-    solution: 'Autonomous agents process loans in minutes, detect fraud in real-time, cutting operational costs by 45%'
+    problem: 'High labor costs for routine tasks like data entry, document processing, and basic customer service consume 60% of operational budgets. Slow loan processing with manual underwriting takes 5-7 days and requires multiple reviews, limiting volume capacity. Inefficient fraud detection systems miss 15% of actual fraud while flagging 40% of legitimate transactions, creating losses and customer friction. Back-office operations remain largely manual, preventing scalability.',
+    solution: 'Autonomous agents process loan applications in minutes using AI underwriting that analyzes hundreds of data points including credit history, cash flow patterns, employment stability, and behavioral signals. Real-time fraud detection uses advanced machine learning to identify suspicious patterns with 99% accuracy, blocking fraud before money moves while approving legitimate transactions instantly. Automated document processing extracts and validates information from any format, eliminating manual data entry. This cuts operational costs by 45%, increases loan origination capacity by 300%, and reduces fraud losses by 85%.'
   }
 ];
 
@@ -35,37 +35,45 @@ const solutions = [
   {
     category: 'Customer Banking',
     items: [
-      '24/7 AI banking assistant for account inquiries',
-      'Automated loan applications with instant approvals',
-      'Personalized financial advice and product recommendations',
-      'Intelligent fraud detection and prevention'
+      '24/7 AI banking assistant for account inquiries, transactions, and personalized advice',
+      'Automated loan applications with instant credit decisions and dynamic pricing',
+      'Personalized financial planning tools with AI-powered recommendations and goal tracking',
+      'Intelligent fraud detection and prevention with real-time transaction monitoring',
+      'Digital wealth management with automated rebalancing and tax-loss harvesting',
+      'Conversational banking enabling voice and chat-based account management'
     ]
   },
   {
     category: 'Compliance & Risk',
     items: [
-      'Automated KYC/AML screening and verification',
-      'Real-time transaction monitoring for suspicious activity',
-      'Regulatory reporting automation (Basel III, Dodd-Frank)',
-      'Risk assessment and credit scoring with ML models'
+      'Automated KYC/AML screening with continuous monitoring and instant verification',
+      'Real-time transaction monitoring detecting suspicious activity with 99% accuracy',
+      'Automated regulatory reporting for Basel III, Dodd-Frank, GDPR, and local requirements',
+      'AI-powered risk assessment and credit scoring using alternative data sources',
+      'Automated audit trail maintenance with intelligent documentation and evidence collection',
+      'Stress testing and scenario analysis for capital adequacy planning'
     ]
   },
   {
     category: 'Sales & Marketing',
     items: [
-      'AI-driven lead scoring and opportunity identification',
-      'Personalized product campaigns based on customer behavior',
-      'Churn prediction and retention automation',
-      'Cross-sell/upsell recommendations at optimal moments'
+      'AI-driven lead scoring identifying high-value prospects with conversion likelihood',
+      'Personalized product campaigns triggered by life events and behavioral signals',
+      'Churn prediction and automated retention campaigns with personalized incentives',
+      'Next-best-action recommendations delivered at optimal moments across channels',
+      'Dynamic pricing optimization balancing profitability and customer value',
+      'Customer lifetime value prediction guiding acquisition and retention investments'
     ]
   },
   {
     category: 'Finance Operations',
     items: [
-      'Automated reconciliation across all accounts',
-      'Predictive cash flow management and forecasting',
-      'Intelligent expense categorization and reporting',
-      'Real-time P&L dashboards with anomaly detection'
+      'Automated reconciliation across all accounts with exception handling and resolution',
+      'Predictive cash flow management and liquidity forecasting with scenario planning',
+      'Intelligent expense categorization and automated general ledger coding',
+      'Real-time P&L dashboards with AI-powered anomaly detection and variance analysis',
+      'Automated financial close processes reducing time from weeks to days',
+      'Regulatory capital calculation and optimization with what-if scenario modeling'
     ]
   }
 ];
@@ -96,7 +104,7 @@ export default function FinancialInstitutions() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform banking operations with autonomous AI agents that handle compliance, customer service, and risk management—reducing costs by 45% while improving customer satisfaction.
+                Transform banking operations with autonomous AI agents that handle compliance verification, customer service interactions, and sophisticated risk management—reducing operational costs by 45% while dramatically improving customer satisfaction and regulatory compliance. Deliver the personalized, instant service that modern customers expect.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
@@ -137,7 +145,7 @@ export default function FinancialInstitutions() {
               Banking challenges, AI solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms financial services operations
+              How Agentic AI transforms financial services operations, from compliance automation to intelligent customer engagement. See how forward-thinking institutions are gaining competitive advantage.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -177,7 +185,7 @@ export default function FinancialInstitutions() {
               Complete banking automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI agents working across every banking function
+              AI agents working across every banking function, from front-office customer service to back-office operations and compliance.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -212,7 +220,7 @@ export default function FinancialInstitutions() {
               Ready for AI-powered banking?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join leading financial institutions transforming operations with Agentic AI
+              Join leading financial institutions transforming operations with Agentic AI. Deliver exceptional customer experiences while reducing costs and maintaining perfect compliance.
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />
