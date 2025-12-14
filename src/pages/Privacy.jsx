@@ -1,208 +1,136 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Eye, Lock, FileText, Users, Globe } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
-
-const principles = [
-  {
-    icon: Eye,
-    title: 'Transparency',
-    description: 'We are clear about what data we collect and how we use it.'
-  },
-  {
-    icon: Lock,
-    title: 'Control',
-    description: 'You have full control over your data, including the right to export and delete it.'
-  },
-  {
-    icon: Shield,
-    title: 'Security',
-    description: 'Your data is protected with enterprise-grade security measures.'
-  },
-  {
-    icon: FileText,
-    title: 'Compliance',
-    description: 'We comply with GDPR, CCPA, and other privacy regulations globally.'
-  }
-];
 
 export default function Privacy() {
   return (
     <div className="bg-white">
       <PageMeta 
         title="Privacy Policy"
-        description="Our commitment to protecting your privacy. Transparent data practices, full control over your data, and compliance with global privacy regulations."
+        description="Privacy Policy for 1C Platform. Learn how we collect, use, and protect your personal information."
         url="/privacy"
-        keywords={['privacy policy', 'data privacy', 'GDPR compliance', 'data protection', 'user rights']}
+        keywords={['privacy policy', 'data protection', 'GDPR', 'data privacy', 'personal information']}
       />
+
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
+        <div className="max-w-4xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center"
           >
-            <div className="w-16 h-16 bg-[#8B2EE5] rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Shield className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Privacy Policy
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Last updated: March 15, 2024
+            <p className="text-lg text-gray-600">
+              Last updated: December 14, 2025
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Principles */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our privacy principles
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We believe in protecting your privacy and giving you control over your data
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {principles.map((principle, index) => (
-              <motion.div
-                key={principle.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <principle.icon className="w-8 h-8 text-[#8B2EE5]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{principle.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{principle.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Policy Content */}
-      <section className="py-24 bg-gray-50">
+      {/* Content */}
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="space-y-12"
-            >
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  We collect information you provide directly to us, including:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                  <li>Account information (name, email, company details)</li>
-                  <li>Usage data (API calls, feature usage, performance metrics)</li>
-                  <li>Payment information (processed by third-party payment processors)</li>
-                  <li>Communications with our support team</li>
-                </ul>
-              </div>
+            <h2>1. Introduction</h2>
+            <p>
+              At 1C Platform, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Service.
+            </p>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">2. How We Use Your Information</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  We use the information we collect to:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                  <li>Provide, maintain, and improve our services</li>
-                  <li>Process transactions and send related information</li>
-                  <li>Send technical notices, updates, and support messages</li>
-                  <li>Respond to your comments and questions</li>
-                  <li>Monitor and analyze trends, usage, and activities</li>
-                  <li>Detect, prevent, and address technical issues</li>
-                </ul>
-              </div>
+            <h2>2. Information We Collect</h2>
+            
+            <h3>Personal Information</h3>
+            <p>We may collect personal information that you provide to us, including:</p>
+            <ul>
+              <li>Name and contact information (email, phone number)</li>
+              <li>Account credentials</li>
+              <li>Company information</li>
+              <li>Payment and billing information</li>
+              <li>Communication preferences</li>
+            </ul>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">3. Data Sharing and Disclosure</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  We do not sell your personal information. We may share your information only in the following circumstances:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                  <li>With your consent or at your direction</li>
-                  <li>With service providers who perform services on our behalf</li>
-                  <li>To comply with legal obligations</li>
-                  <li>To protect the rights and safety of our users and the public</li>
-                  <li>In connection with a merger, acquisition, or sale of assets</li>
-                </ul>
-              </div>
+            <h3>Usage Data</h3>
+            <p>We automatically collect certain information when you use our Service:</p>
+            <ul>
+              <li>IP address and device information</li>
+              <li>Browser type and version</li>
+              <li>Pages visited and time spent</li>
+              <li>API usage and performance metrics</li>
+              <li>Log data and error reports</li>
+            </ul>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">4. Data Security</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include encryption, access controls, and regular security assessments.
-                </p>
-              </div>
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+              <li>Provide, maintain, and improve our Service</li>
+              <li>Process transactions and send related information</li>
+              <li>Send technical notices and support messages</li>
+              <li>Respond to your comments and questions</li>
+              <li>Detect, prevent, and address technical issues</li>
+              <li>Monitor and analyze usage trends</li>
+              <li>Comply with legal obligations</li>
+            </ul>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">5. Data Retention</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  We retain your information for as long as necessary to provide our services and fulfill the purposes outlined in this policy. You may request deletion of your data at any time, subject to legal obligations.
-                </p>
-              </div>
+            <h2>4. Data Storage and Security</h2>
+            <p>
+              We implement industry-standard security measures to protect your information. Your data is encrypted in transit and at rest. We are SOC 2 Type II certified and comply with GDPR, HIPAA, and other relevant regulations.
+            </p>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">6. Your Rights</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Depending on your location, you may have the following rights:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                  <li>Access and receive a copy of your personal information</li>
-                  <li>Correct inaccurate or incomplete information</li>
-                  <li>Delete your personal information</li>
-                  <li>Object to or restrict processing of your information</li>
-                  <li>Data portability</li>
-                  <li>Withdraw consent at any time</li>
-                </ul>
-              </div>
+            <h2>5. Data Sharing and Disclosure</h2>
+            <p>We may share your information with:</p>
+            <ul>
+              <li><strong>Service Providers:</strong> Third-party vendors who perform services on our behalf</li>
+              <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
+              <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+            </ul>
+            <p>We do not sell your personal information to third parties.</p>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">7. International Data Transfers</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place for such transfers in compliance with applicable laws.
-                </p>
-              </div>
+            <h2>6. Your Rights and Choices</h2>
+            <p>You have the right to:</p>
+            <ul>
+              <li>Access and review your personal information</li>
+              <li>Request correction of inaccurate data</li>
+              <li>Request deletion of your data</li>
+              <li>Object to processing of your data</li>
+              <li>Export your data in a portable format</li>
+              <li>Opt-out of marketing communications</li>
+            </ul>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">8. Children's Privacy</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  Our services are not directed to individuals under 16. We do not knowingly collect personal information from children under 16.
-                </p>
-              </div>
+            <h2>7. Cookies and Tracking Technologies</h2>
+            <p>
+              We use cookies and similar tracking technologies to track activity on our Service. You can control cookies through your browser settings. For more information, see our Cookie Policy.
+            </p>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">9. Changes to This Policy</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date.
-                </p>
-              </div>
+            <h2>8. International Data Transfers</h2>
+            <p>
+              Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place for such transfers.
+            </p>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">10. Contact Us</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  If you have any questions about this privacy policy or our data practices, please contact us:
-                </p>
-                <div className="bg-white p-6 rounded-xl border border-gray-200">
-                  <p className="text-gray-600 mb-2">Email: privacy@1cplatform.com</p>
-                  <p className="text-gray-600 mb-2">Address: 123 Market Street, Suite 500, San Francisco, CA 94103</p>
-                  <p className="text-gray-600">Data Protection Officer: dpo@1cplatform.com</p>
-                </div>
-              </div>
-            </motion.div>
+            <h2>9. Data Retention</h2>
+            <p>
+              We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law.
+            </p>
+
+            <h2>10. Children's Privacy</h2>
+            <p>
+              Our Service is not intended for children under 16. We do not knowingly collect personal information from children under 16.
+            </p>
+
+            <h2>11. Changes to This Privacy Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+            </p>
+
+            <h2>12. Contact Us</h2>
+            <p>
+              If you have questions about this Privacy Policy, please contact us at:
+              <br />
+              Email: privacy@1cplatform.com
+              <br />
+              Data Protection Officer: dpo@1cplatform.com
+            </p>
           </div>
         </div>
       </section>

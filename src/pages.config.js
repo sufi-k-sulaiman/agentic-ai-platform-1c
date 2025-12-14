@@ -51,6 +51,8 @@ import BlogAgenticAIEthics from './pages/BlogAgenticAIEthics';
 import BlogAgenticAIScaling from './pages/BlogAgenticAIScaling';
 import Cyber from './pages/Cyber';
 import JobApplication from './pages/JobApplication';
+import Terms from './pages/Terms';
+import Cookies from './pages/Cookies';
 import __Layout from './Layout.jsx';
 
 
@@ -108,6 +110,8 @@ export const PAGES = {
     "BlogAgenticAIScaling": BlogAgenticAIScaling,
     "Cyber": Cyber,
     "JobApplication": JobApplication,
+    "Terms": Terms,
+    "Cookies": Cookies,
 }
 
 export const pagesConfig = {
