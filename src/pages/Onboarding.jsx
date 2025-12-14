@@ -574,10 +574,14 @@ export default function Onboarding() {
     }
 
     if (step === 2 && selectedVertical) {
+      const today = new Date();
+      const formattedDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">{selectedVertical.name} Insight</h2>
           <p className="text-purple-100 text-lg mb-8">{selectedVertical.insight}</p>
+          <div className="text-sm text-purple-200 mb-6">{formattedDate}</div>
 
           <div className="grid grid-cols-2 gap-4 mb-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
@@ -595,8 +599,9 @@ export default function Onboarding() {
 
     if (step === 7) {
       const selectedChallenges = formData.painPoints;
+      const today = new Date();
+      const formattedDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
-      // Map challenges to relevant metrics and charts
       const getChallengeData = () => {
         if (selectedChallenges.length === 0) {
           return {
@@ -607,30 +612,36 @@ export default function Onboarding() {
               { pain: 'High costs', percent: 72 },
               { pain: 'Data silos', percent: 65 },
               { pain: 'Poor CX', percent: 58 }
-            ]
+            ],
+            chart: [45, 55, 70, 85, 95]
           };
         }
 
-        // Categorize selected challenges and show relevant data
         const hasOperationalChallenge = selectedChallenges.some(c => 
-          c.includes('process') || c.includes('operational') || c.includes('efficiency') || c.includes('workflow')
+          c.includes('process') || c.includes('operational') || c.includes('efficiency') || c.includes('workflow') || c.includes('Inefficient')
         );
         const hasFinancialChallenge = selectedChallenges.some(c => 
-          c.includes('cost') || c.includes('budget') || c.includes('Cash flow') || c.includes('financial')
+          c.includes('cost') || c.includes('budget') || c.includes('Cash flow') || c.includes('financial') || c.includes('Rising')
         );
         const hasCustomerChallenge = selectedChallenges.some(c => 
-          c.includes('customer') || c.includes('satisfaction') || c.includes('conversion') || c.includes('churn')
+          c.includes('customer') || c.includes('satisfaction') || c.includes('conversion') || c.includes('churn') || c.includes('CX')
+        );
+        const hasTalentChallenge = selectedChallenges.some(c => 
+          c.includes('talent') || c.includes('Recruiting') || c.includes('Retaining') || c.includes('employees')
         );
 
         return {
           title: 'Impact on Your Challenges',
           subtitle: `${selectedChallenges.length} challenge${selectedChallenges.length > 1 ? 's' : ''} selected`,
           metrics: [
-            hasOperationalChallenge && { pain: 'Process efficiency gain', percent: 85, color: 'from-blue-400 to-cyan-300' },
+            hasOperationalChallenge && { pain: 'Process efficiency', percent: 85, color: 'from-blue-400 to-cyan-300' },
             hasFinancialChallenge && { pain: 'Cost reduction', percent: 72, color: 'from-green-400 to-emerald-300' },
             hasCustomerChallenge && { pain: 'Customer satisfaction', percent: 65, color: 'from-purple-400 to-pink-300' },
-            { pain: 'Time saved', percent: 78, color: 'from-yellow-400 to-orange-300' }
-          ].filter(Boolean)
+            hasTalentChallenge && { pain: 'Talent retention', percent: 58, color: 'from-pink-400 to-red-300' }
+          ].filter(Boolean),
+          chart: hasOperationalChallenge ? [40, 60, 75, 88, 95] :
+                 hasFinancialChallenge ? [35, 50, 68, 82, 90] :
+                 hasCustomerChallenge ? [30, 48, 65, 80, 92] : [45, 55, 70, 85, 95]
         };
       };
 
@@ -639,20 +650,41 @@ export default function Onboarding() {
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">{challengeData.title}</h2>
-          <p className="text-purple-100 text-lg mb-8">{challengeData.subtitle}</p>
+          <p className="text-purple-100 text-lg mb-4">{challengeData.subtitle}</p>
+          <div className="text-sm text-purple-200 mb-6">{formattedDate}</div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
-            <h3 className="font-semibold mb-4">Potential Impact</h3>
-            <div className="space-y-3">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
+            <h3 className="font-semibold mb-4">Projected Improvement</h3>
+            <div className="h-32 flex items-end gap-2 mb-4">
+              {challengeData.chart.map((value, idx) => (
+                <motion.div
+                  key={idx}
+                  className="flex-1 bg-gradient-to-t from-white to-white/60 rounded-t"
+                  initial={{ height: 0 }}
+                  animate={{ height: `${value}%` }}
+                  transition={{ duration: 0.8, delay: idx * 0.1 }}
+                />
+              ))}
+            </div>
+            <div className="flex justify-between text-xs text-purple-200">
+              <span>Month 1</span>
+              <span>Month 3</span>
+              <span>Month 6</span>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
+            <h3 className="font-semibold mb-3 text-sm">Key Metrics</h3>
+            <div className="space-y-2">
               {challengeData.metrics.map((item, idx) => (
                 <div key={idx}>
-                  <div className="flex justify-between text-sm mb-1">
+                  <div className="flex justify-between text-xs mb-1">
                     <span>{item.pain}</span>
                     <span>{item.percent}%</span>
                   </div>
-                  <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
                     <motion.div 
-                      className={`h-full bg-gradient-to-r ${item.color || 'from-red-400 to-yellow-300'}`}
+                      className={`h-full bg-gradient-to-r ${item.color}`}
                       initial={{ width: 0 }}
                       animate={{ width: `${item.percent}%` }}
                       transition={{ duration: 1, delay: idx * 0.1 }}
@@ -664,9 +696,9 @@ export default function Onboarding() {
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-            <Target className="w-8 h-8 mb-2" />
-            <div className="text-2xl font-bold mb-1">92%</div>
-            <div className="text-sm text-purple-100">Report significant improvement in their top 3 pain points within 90 days</div>
+            <Target className="w-6 h-6 mb-2" />
+            <div className="text-xl font-bold mb-1">92%</div>
+            <div className="text-xs text-purple-100">See improvement within 90 days</div>
           </div>
         </div>
       );
@@ -1020,7 +1052,7 @@ export default function Onboarding() {
                       className="w-full"
                     />
                   </div>
-                  <div className="grid gap-2 overflow-y-auto pr-2 flex-1">
+                  <div className="grid gap-2 overflow-y-auto pr-2 max-h-[400px]">
                     {painPoints.filter(point => point.toLowerCase().includes(painPointSearch.toLowerCase())).map((point) => (
                       <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${formData.painPoints.includes(point) ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {point}

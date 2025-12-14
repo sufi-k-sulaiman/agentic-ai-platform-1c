@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cn } from "@/lib/utils";
-import GlobalSearch from '@/components/GlobalSearch';
+import SearchRibbon from '@/components/SearchRibbon';
 
 const navItems = [
   { 
@@ -143,8 +143,8 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Global Search */}
-        <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+        {/* Search Ribbon */}
+        <SearchRibbon isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
