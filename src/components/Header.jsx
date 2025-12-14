@@ -126,7 +126,13 @@ export default function Header() {
             </NavigationMenuPrimitive.Root>
           </nav>
 
-
+          {/* Search Button */}
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+          >
+            <Search className="w-5 h-5 text-gray-600" />
+          </button>
 
           {/* Mobile Menu Button */}
           <button
