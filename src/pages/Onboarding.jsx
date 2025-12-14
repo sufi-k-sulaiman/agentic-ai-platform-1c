@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2, TrendingUp, Clock, DollarSign, Target } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2, TrendingUp, Clock, DollarSign, Target, Search } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 
 const verticals = [
@@ -331,6 +331,7 @@ export default function Onboarding() {
     const [formData, setFormData] = useState({
     vertical: '',
     companyName: '',
+    companyWebsite: '',
     role: '',
     teamSize: '',
     companySize: '',
@@ -340,9 +341,51 @@ export default function Onboarding() {
     agentPurpose: '',
     email: ''
   });
+  const [painPointSearch, setPainPointSearch] = useState('');
 
   const totalSteps = 9;
   const selectedVertical = verticals.find(v => v.id === formData.vertical);
+  const filteredPainPoints = painPoints.filter(point => 
+    point.toLowerCase().includes(painPointSearch.toLowerCase())
+  );
+  
+  const getChartDataForPainPoint = (painPoint) => {
+    // Generate relevant chart data based on pain point category
+    const categories = {
+      cost: { title: 'Cost Impact Analysis', data: [
+        { month: 'Jan', current: 85000, optimized: 50000 },
+        { month: 'Feb', current: 92000, optimized: 55000 },
+        { month: 'Mar', current: 88000, optimized: 53000 },
+        { month: 'Apr', current: 95000, optimized: 57000 }
+      ]},
+      time: { title: 'Time Savings Projection', data: [
+        { metric: 'Current', hours: 160 },
+        { metric: 'With AI', hours: 48 },
+        { metric: 'Saved', hours: 112 }
+      ]},
+      efficiency: { title: 'Efficiency Gains', data: [
+        { category: 'Manual', value: 35 },
+        { category: 'Semi-Auto', value: 65 },
+        { category: 'Fully Auto', value: 95 }
+      ]},
+      quality: { title: 'Quality Improvement', data: [
+        { metric: 'Accuracy', before: 78, after: 98 },
+        { metric: 'Satisfaction', before: 72, after: 94 },
+        { metric: 'Retention', before: 65, after: 89 }
+      ]}
+    };
+    
+    // Determine category based on pain point keywords
+    if (painPoint.toLowerCase().includes('cost') || painPoint.toLowerCase().includes('price') || painPoint.toLowerCase().includes('budget')) {
+      return categories.cost;
+    } else if (painPoint.toLowerCase().includes('time') || painPoint.toLowerCase().includes('slow') || painPoint.toLowerCase().includes('fast')) {
+      return categories.time;
+    } else if (painPoint.toLowerCase().includes('quality') || painPoint.toLowerCase().includes('accuracy') || painPoint.toLowerCase().includes('satisfaction')) {
+      return categories.quality;
+    } else {
+      return categories.efficiency;
+    }
+  };
 
   const nextStep = () => setStep(Math.min(step + 1, totalSteps));
   const prevStep = () => setStep(Math.max(step - 1, 1));
@@ -571,12 +614,63 @@ export default function Onboarding() {
       );
     }
 
+    if (step === 6 && formData.painPoints.length > 0) {
+      const chartData = getChartDataForPainPoint(formData.painPoints[0]);
+      return (
+        <div className="text-white">
+          <h2 className="text-3xl font-bold mb-4">Impact Analysis</h2>
+          <p className="text-purple-100 text-lg mb-6">Based on your selected challenges</p>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
+            <h3 className="font-semibold mb-4">{chartData.title}</h3>
+            <div className="bg-white/5 rounded-lg p-4">
+              {chartData.data.map((item, idx) => (
+                <div key={idx} className="mb-3 last:mb-0">
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>{Object.values(item)[0]}</span>
+                    <span className="font-bold">{Object.values(item)[1]}{typeof Object.values(item)[1] === 'number' && Object.values(item)[1] > 100 ? '' : '%'}</span>
+                  </div>
+                  {typeof Object.values(item)[1] === 'number' && (
+                    <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+                      <motion.div 
+                        className="h-full bg-gradient-to-r from-green-400 to-emerald-300"
+                        initial={{ width: 0 }}
+                        animate={{ width: `${Math.min(Object.values(item)[1], 100)}%` }}
+                        transition={{ duration: 1, delay: idx * 0.1 }}
+                      />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <h3 className="font-semibold mb-3">Your Selected Challenges ({formData.painPoints.length})</h3>
+            <div className="space-y-2 max-h-48 overflow-y-auto">
+              {formData.painPoints.map((point, idx) => (
+                <div key={idx} className="text-sm bg-white/5 rounded px-3 py-2">
+                  {point}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mt-4">
+            <Target className="w-8 h-8 mb-2" />
+            <div className="text-2xl font-bold mb-1">92%</div>
+            <div className="text-sm text-purple-100">Report significant improvement in their top 3 pain points within 90 days</div>
+          </div>
+        </div>
+      );
+    }
+
     if (step === 6) {
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">Common Pain Points</h2>
           <p className="text-purple-100 text-lg mb-8">What challenges are you facing?</p>
-          
+
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
             <h3 className="font-semibold mb-4">Most Selected Challenges</h3>
             <div className="space-y-3">
@@ -819,16 +913,22 @@ export default function Onboarding() {
                       </div>
                     </div>
                   </div>
-                  <div>
-                    <Label htmlFor="company">Company Name</Label>
-                    <Input id="company" placeholder="Your company name" value={formData.companyName} onChange={(e) => setFormData({ ...formData, companyName: e.target.value })} className="mt-2" />
+                  <div className="space-y-6">
+                    <div>
+                      <Label htmlFor="company">Company Name</Label>
+                      <Input id="company" placeholder="Your company name" value={formData.companyName} onChange={(e) => setFormData({ ...formData, companyName: e.target.value })} className="mt-2" />
+                    </div>
+                    <div>
+                      <Label htmlFor="website">Company Website</Label>
+                      <Input id="website" placeholder="https://yourcompany.com" value={formData.companyWebsite} onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })} className="mt-2" />
+                    </div>
                   </div>
                 </div>
                 <div className="flex gap-3 mt-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.companyName} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.companyName || !formData.companyWebsite} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -913,14 +1013,22 @@ export default function Onboarding() {
             {/* Step 6: Pain Points */}
             {step === 6 && (
               <motion.div key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
-                <div className="flex-1">
+                <div className="flex-1 flex flex-col">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What challenges are you facing?</h1>
                   <p className="text-gray-600 mb-4">Select all that apply</p>
-                  <div className="text-sm text-gray-500 mb-4">
-                    {formData.painPoints.length} selected
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-sm text-gray-500">
+                      {formData.painPoints.length} selected
+                    </div>
+                    <Input
+                      placeholder="Search challenges..."
+                      value={painPointSearch}
+                      onChange={(e) => setPainPointSearch(e.target.value)}
+                      className="w-64 h-9"
+                    />
                   </div>
-                  <div className="grid gap-2 max-h-[450px] overflow-y-auto pr-2">
-                    {painPoints.map((point) => (
+                  <div className="grid gap-2 flex-1 overflow-y-auto pr-2">
+                    {filteredPainPoints.map((point) => (
                       <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${formData.painPoints.includes(point) ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {point}
                       </button>
@@ -1006,6 +1114,7 @@ export default function Onboarding() {
                     <div className="space-y-2 text-sm text-gray-700">
                       <div><span className="font-medium">Industry:</span> {selectedVertical.name}</div>
                       <div><span className="font-medium">Company:</span> {formData.companyName}</div>
+                      <div><span className="font-medium">Website:</span> {formData.companyWebsite}</div>
                       <div><span className="font-medium">Role:</span> {formData.role}</div>
                       <div><span className="font-medium">Team:</span> {formData.teamSize}</div>
                       <div><span className="font-medium">Agentic Ai:</span> {formData.agentName}</div>
