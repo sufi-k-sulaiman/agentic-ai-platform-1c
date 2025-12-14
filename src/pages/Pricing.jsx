@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight, Zap, Shield, TrendingUp, Users } from 'lucide-react';
+import { Check, ArrowRight, Zap, Shield, TrendingUp, Users, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
