@@ -83,6 +83,14 @@ import BlogGenerativeAIEthics from './pages/BlogGenerativeAIEthics';
 import BlogGenerativeAIBusiness from './pages/BlogGenerativeAIBusiness';
 import BlogGenerativeAIFineTuning from './pages/BlogGenerativeAIFineTuning';
 import BlogGenerativeAIFuture from './pages/BlogGenerativeAIFuture';
+import BlogAgenticAIGovernanceIntro from './pages/BlogAgenticAIGovernanceIntro';
+import BlogAIComplianceRegulations from './pages/BlogAIComplianceRegulations';
+import BlogAIRiskManagement from './pages/BlogAIRiskManagement';
+import BlogAIDataGovernance from './pages/BlogAIDataGovernance';
+import BlogAIAuditFrameworks from './pages/BlogAIAuditFrameworks';
+import BlogAIGovernancePolicies from './pages/BlogAIGovernancePolicies';
+import BlogAIAccountability from './pages/BlogAIAccountability';
+import BlogAISecurityGovernance from './pages/BlogAISecurityGovernance';
 import __Layout from './Layout.jsx';
 
 
@@ -172,6 +180,14 @@ export const PAGES = {
     "BlogGenerativeAIBusiness": BlogGenerativeAIBusiness,
     "BlogGenerativeAIFineTuning": BlogGenerativeAIFineTuning,
     "BlogGenerativeAIFuture": BlogGenerativeAIFuture,
+    "BlogAgenticAIGovernanceIntro": BlogAgenticAIGovernanceIntro,
+    "BlogAIComplianceRegulations": BlogAIComplianceRegulations,
+    "BlogAIRiskManagement": BlogAIRiskManagement,
+    "BlogAIDataGovernance": BlogAIDataGovernance,
+    "BlogAIAuditFrameworks": BlogAIAuditFrameworks,
+    "BlogAIGovernancePolicies": BlogAIGovernancePolicies,
+    "BlogAIAccountability": BlogAIAccountability,
+    "BlogAISecurityGovernance": BlogAISecurityGovernance,
 }
 
 export const pagesConfig = {
