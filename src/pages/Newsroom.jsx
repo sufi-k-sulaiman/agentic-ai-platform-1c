@@ -11,6 +11,38 @@ import PageMeta from '@/components/PageMeta';
 const news = [
   {
     category: 'Press Release',
+    title: '1cPublishing Launches Agentic Ai to Solve the "12-App Problem"',
+    excerpt: 'New Agentic AI platform consolidates workflows, data visualization, real-time market intelligence, geospatial analysis, and AI podcast generation into a unified solution.',
+    date: 'January 15, 2025',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+    icon: Zap
+  },
+  {
+    category: 'Press Release',
+    title: 'Agentic Ai Slashes Operating Expenses While Streamlining Workflows for B2B Companies',
+    excerpt: '1C Publishing has developed an Agentic Ai platform designed to unify workflows within a single intelligent ecosystem, reducing operational complexity and costs.',
+    date: 'January 10, 2025',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    icon: TrendingUp
+  },
+  {
+    category: 'Product Launch',
+    title: '1cPublishing Unveils Agentic Ai: Next-Generation Platform to Transform Data',
+    excerpt: 'Platform powered by Agentic Ai that reviews stock markets and boosts productivity through powerful knowledge visualization and exploration.',
+    date: 'December 20, 2024',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    icon: Zap
+  },
+  {
+    category: 'Product Launch',
+    title: '1C Publishing Rolls Out RoutineOps and Neural Mindmap on iOS',
+    excerpt: 'Built on neural-inspired mapping technology to optimize daily workflows and ignite new ideas. Allows users to capture thoughts in real time and organize complex projects.',
+    date: 'December 15, 2024',
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800',
+    icon: Zap
+  },
+  {
+    category: 'Press Release',
     title: '1cPlatform Raises $200M Series D at $2.5B Valuation',
     excerpt: 'Funding to accelerate development of autonomous AI agents and global expansion.',
     date: 'March 15, 2024',
