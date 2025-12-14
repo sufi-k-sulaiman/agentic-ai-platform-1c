@@ -662,7 +662,7 @@ export default function Onboarding() {
     if (step === 8) {
       return (
         <div className="text-white">
-          <h2 className="text-3xl font-bold mb-4">Your AI Agent</h2>
+          <h2 className="text-3xl font-bold mb-4">Your Agentic Ai</h2>
           <p className="text-purple-100 text-lg mb-8">Customized for your needs</p>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
@@ -959,15 +959,15 @@ export default function Onboarding() {
             {step === 8 && (
               <motion.div key="step8" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Design your AI agent</h1>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Design your Agentic Ai</h1>
                   <p className="text-gray-600 mb-8">Customize your assistant</p>
                   <div className="space-y-6">
                     <div>
-                      <Label htmlFor="agentName">Agent Name</Label>
+                      <Label htmlFor="agentName">Agentic Ai Name</Label>
                       <Input id="agentName" placeholder="e.g., Operations Assistant" value={formData.agentName} onChange={(e) => setFormData({ ...formData, agentName: e.target.value })} className="mt-2" />
                     </div>
                     <div>
-                      <Label htmlFor="agentPurpose">What will this agent do?</Label>
+                      <Label htmlFor="agentPurpose">What will this Agentic Ai do?</Label>
                       <Textarea id="agentPurpose" placeholder="Describe the tasks and responsibilities..." value={formData.agentPurpose} onChange={(e) => setFormData({ ...formData, agentPurpose: e.target.value })} className="mt-2 h-32" />
                     </div>
                   </div>
@@ -1000,7 +1000,7 @@ export default function Onboarding() {
                       <div><span className="font-medium">Company:</span> {formData.companyName}</div>
                       <div><span className="font-medium">Role:</span> {formData.role}</div>
                       <div><span className="font-medium">Team:</span> {formData.teamSize}</div>
-                      <div><span className="font-medium">Agent:</span> {formData.agentName}</div>
+                      <div><span className="font-medium">Agentic Ai:</span> {formData.agentName}</div>
                     </div>
                   </div>
                 </div>
@@ -1009,7 +1009,7 @@ export default function Onboarding() {
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
                   <Button onClick={handleSubmit} disabled={!formData.email} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
-                    Create My Agent <CheckCircle2 className="ml-2 w-5 h-5" />
+                    Create My Agentic Ai <CheckCircle2 className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </motion.div>
