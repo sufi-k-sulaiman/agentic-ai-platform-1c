@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2, TrendingUp, Clock, DollarSign, Target } from 'lucide-react';
 
 const verticals = [
   { 
@@ -13,119 +12,590 @@ const verticals = [
     name: 'Property Management', 
     icon: Building2,
     automations: ['Tenant onboarding', 'Maintenance scheduling', 'Rent collection', 'Lease renewals'],
-    insight: 'Reduce operational costs by 40% with AI-powered property management'
+    insight: 'Reduce operational costs by 40%',
+    stats: { cost: '40%', efficiency: '60%', satisfaction: '45%' }
   },
   { 
     id: 'datacenter', 
     name: 'Data Centers', 
     icon: Server,
     automations: ['Energy optimization', 'Predictive maintenance', 'Capacity planning', 'Security monitoring'],
-    insight: 'Achieve 99.999% uptime with predictive maintenance and real-time monitoring'
+    insight: 'Achieve 99.999% uptime',
+    stats: { cost: '35%', uptime: '99.999%', energy: '30%' }
   },
   { 
     id: 'finance', 
     name: 'Financial Services', 
     icon: Landmark,
     automations: ['KYC/AML automation', 'Loan processing', 'Fraud detection', 'Customer support'],
-    insight: 'Process loans in under 3 minutes with 95% fraud detection accuracy'
+    insight: 'Process loans in under 3 minutes',
+    stats: { speed: '95%', fraud: '95%', cost: '45%' }
   },
   { 
     id: 'healthcare', 
     name: 'Healthcare', 
     icon: Heart,
     automations: ['Patient scheduling', 'Medical coding', 'Claims processing', 'Clinical documentation'],
-    insight: 'Save 70% administrative time while ensuring HIPAA compliance'
+    insight: 'Save 70% administrative time',
+    stats: { time: '70%', accuracy: '95%', compliance: '100%' }
   },
   { 
     id: 'corporate', 
     name: 'Corporate Campuses', 
     icon: Building,
     automations: ['Space management', 'Visitor coordination', 'Energy optimization', 'Employee services'],
-    insight: 'Optimize space utilization by 40% and reduce facility costs by 30%'
+    insight: 'Optimize space utilization by 40%',
+    stats: { space: '40%', cost: '30%', satisfaction: '60%' }
   },
   { 
     id: 'transit', 
     name: 'Public Transit', 
     icon: Train,
     automations: ['Route optimization', 'Passenger information', 'Fleet maintenance', 'Fare collection'],
-    insight: 'Improve on-time performance by 35% and passenger satisfaction by 50%'
+    insight: 'Improve on-time performance by 35%',
+    stats: { ontime: '35%', satisfaction: '50%', cost: '25%' }
   },
   { 
     id: 'traffic', 
     name: 'Traffic Management', 
     icon: TrafficCone,
     automations: ['Signal optimization', 'Incident detection', 'Congestion prediction', 'Emergency response'],
-    insight: 'Reduce traffic congestion by 30% and emergency response time by 60%'
+    insight: 'Reduce traffic congestion by 30%',
+    stats: { congestion: '30%', response: '60%', cost: '40%' }
   },
   { 
     id: 'energy', 
     name: 'Energy & Utilities', 
     icon: Zap,
     automations: ['Grid optimization', 'Outage prediction', 'Customer service', 'Renewable integration'],
-    insight: 'Prevent 90% of outages and integrate renewables seamlessly'
+    insight: 'Prevent 90% of outages',
+    stats: { outages: '90%', efficiency: '25%', satisfaction: '45%' }
   },
   { 
     id: 'retail', 
     name: 'Retail', 
     icon: ShoppingBag,
     automations: ['Inventory optimization', 'Customer personalization', 'Dynamic pricing', 'Supply chain'],
-    insight: 'Boost conversion by 35% and improve margins by 25%'
+    insight: 'Boost conversion by 35%',
+    stats: { conversion: '35%', margin: '25%', retention: '40%' }
   },
   { 
     id: 'education', 
     name: 'Education', 
     icon: GraduationCap,
     automations: ['Student engagement', 'Automated grading', 'Administrative tasks', 'Learning analytics'],
-    insight: 'Increase engagement by 60% and save 50% on administrative time'
+    insight: 'Increase engagement by 60%',
+    stats: { engagement: '60%', time: '50%', outcomes: '30%' }
   },
   { 
     id: 'gaming', 
     name: 'Gaming', 
     icon: Gamepad2,
     automations: ['Player matchmaking', 'Cheat detection', 'Infrastructure scaling', 'LiveOps automation'],
-    insight: 'Reduce infrastructure costs by 40% with 99% cheat detection'
+    insight: 'Reduce infrastructure costs by 40%',
+    stats: { cost: '40%', detection: '99%', uptime: '99.9%' }
   },
   { 
     id: 'government', 
     name: 'Government', 
     icon: Shield,
     automations: ['Citizen services', 'Document processing', 'Compliance reporting', 'Budget optimization'],
-    insight: 'Improve citizen satisfaction by 55% while reducing costs by 35%'
+    insight: 'Improve citizen satisfaction by 55%',
+    stats: { satisfaction: '55%', cost: '35%', efficiency: '50%' }
   },
   { 
     id: 'airports', 
     name: 'Airports', 
     icon: Plane,
     automations: ['Passenger flow', 'Security screening', 'Baggage handling', 'Operations coordination'],
-    insight: 'Improve on-time performance by 25% and passenger satisfaction by 40%'
+    insight: 'Improve on-time performance by 25%',
+    stats: { ontime: '25%', satisfaction: '40%', cost: '30%' }
   },
   { 
     id: 'sports', 
     name: 'Sports & Entertainment', 
     icon: Users,
     automations: ['Fan engagement', 'Ticketing optimization', 'Venue operations', 'Revenue management'],
-    insight: 'Increase revenue per fan by 30% and operational efficiency by 45%'
+    insight: 'Increase revenue per fan by 30%',
+    stats: { revenue: '30%', efficiency: '45%', satisfaction: '50%' }
   }
+];
+
+const roles = [
+  'CEO / Founder',
+  'CTO / VP Engineering',
+  'Head of Operations',
+  'Product Manager',
+  'IT Manager',
+  'Business Analyst',
+  'Other'
+];
+
+const teamSizes = [
+  'Just me',
+  '2-10 people',
+  '11-50 people',
+  '51-200 people',
+  '201-1000 people',
+  '1000+ people'
+];
+
+const companySizes = [
+  '1-10 employees',
+  '11-50 employees',
+  '51-200 employees',
+  '201-500 employees',
+  '501-1000 employees',
+  '1000+ employees'
+];
+
+const painPoints = [
+  'High operational costs',
+  'Manual repetitive tasks',
+  'Poor customer experience',
+  'Data silos and fragmentation',
+  'Slow response times',
+  'Compliance challenges',
+  'Scaling difficulties',
+  'Limited insights from data'
+];
+
+const hearAboutUs = [
+  'Search engine (Google, Bing)',
+  'Social media',
+  'Referral from colleague',
+  'Industry event',
+  'Blog or article',
+  'Advertisement',
+  'Other'
 ];
 
 export default function Onboarding() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    companyName: '',
     vertical: '',
+    companyName: '',
+    role: '',
+    teamSize: '',
+    companySize: '',
+    painPoints: [],
+    hearAbout: '',
     agentName: '',
     agentPurpose: '',
     email: ''
   });
 
-  const totalSteps = 4;
+  const totalSteps = 9;
   const selectedVertical = verticals.find(v => v.id === formData.vertical);
 
   const nextStep = () => setStep(Math.min(step + 1, totalSteps));
   const prevStep = () => setStep(Math.max(step - 1, 1));
 
+  const handlePainPointToggle = (point) => {
+    setFormData(prev => ({
+      ...prev,
+      painPoints: prev.painPoints.includes(point)
+        ? prev.painPoints.filter(p => p !== point)
+        : [...prev.painPoints, point]
+    }));
+  };
+
   const handleSubmit = () => {
     console.log('Onboarding complete:', formData);
+  };
+
+  const renderRightSide = () => {
+    if (step === 1) {
+      return (
+        <div className="text-white text-center">
+          <div className="w-32 h-32 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
+            <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center">
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                alt="1C" 
+                className="w-12 h-12"
+              />
+            </div>
+          </div>
+          <h2 className="text-3xl font-bold mb-4">14 Industries, Infinite Possibilities</h2>
+          <p className="text-purple-100 text-lg mb-8">Join 10,000+ companies already transforming with AI</p>
+          <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-3xl font-bold">40%</div>
+              <div className="text-sm text-purple-100">Avg Cost Reduction</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-3xl font-bold">10K+</div>
+              <div className="text-sm text-purple-100">Active Users</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-3xl font-bold">99%</div>
+              <div className="text-sm text-purple-100">Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === 2 && selectedVertical) {
+      return (
+        <div className="text-white">
+          <h2 className="text-3xl font-bold mb-4">{selectedVertical.name} Impact</h2>
+          <p className="text-purple-100 text-lg mb-8">{selectedVertical.insight}</p>
+          
+          <div className="space-y-4 mb-8">
+            {Object.entries(selectedVertical.stats).map(([key, value], idx) => (
+              <div key={key} className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm text-purple-100 capitalize">{key} Improvement</span>
+                  <span className="text-2xl font-bold">{value}</span>
+                </div>
+                <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+                  <motion.div 
+                    className="h-full bg-white"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${parseInt(value) || 100}%` }}
+                    transition={{ duration: 1, delay: idx * 0.2 }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <h3 className="font-semibold mb-3">Key Automations</h3>
+            <div className="space-y-2">
+              {selectedVertical.automations.map((auto, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-sm">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>{auto}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === 3) {
+      return (
+        <div className="text-white">
+          <h2 className="text-3xl font-bold mb-4">Decision Makers Choose Us</h2>
+          <p className="text-purple-100 text-lg mb-8">85% of our users are in leadership roles</p>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
+            <h3 className="font-semibold mb-4">Role Distribution</h3>
+            <div className="space-y-3">
+              {[
+                { role: 'C-Level', percent: 35 },
+                { role: 'VP / Director', percent: 30 },
+                { role: 'Manager', percent: 25 },
+                { role: 'Individual', percent: 10 }
+              ].map((item, idx) => (
+                <div key={idx}>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>{item.role}</span>
+                    <span>{item.percent}%</span>
+                  </div>
+                  <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+                    <motion.div 
+                      className="h-full bg-white"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${item.percent}%` }}
+                      transition={{ duration: 1, delay: idx * 0.1 }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <TrendingUp className="w-8 h-8 mx-auto mb-2" />
+              <div className="text-2xl font-bold">3.2x</div>
+              <div className="text-sm text-purple-100">ROI in 6 months</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <Clock className="w-8 h-8 mx-auto mb-2" />
+              <div className="text-2xl font-bold">4 weeks</div>
+              <div className="text-sm text-purple-100">To full deployment</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === 4) {
+      return (
+        <div className="text-white">
+          <h2 className="text-3xl font-bold mb-4">Team Size Matters</h2>
+          <p className="text-purple-100 text-lg mb-8">Scaling efficiency across teams of all sizes</p>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
+            <h3 className="font-semibold mb-4">Average Time Saved by Team Size</h3>
+            <div className="space-y-4">
+              {[
+                { size: '2-10', hours: 20 },
+                { size: '11-50', hours: 120 },
+                { size: '51-200', hours: 480 },
+                { size: '201+', hours: 2000 }
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-4">
+                  <div className="w-20 text-sm">{item.size} people</div>
+                  <div className="flex-1">
+                    <div className="h-8 bg-white/20 rounded-lg overflow-hidden">
+                      <motion.div 
+                        className="h-full bg-gradient-to-r from-purple-300 to-white flex items-center justify-end pr-3 text-sm font-semibold"
+                        initial={{ width: 0 }}
+                        animate={{ width: `${(item.hours / 2000) * 100}%` }}
+                        transition={{ duration: 1, delay: idx * 0.1 }}
+                      >
+                        {item.hours}h/mo
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+            <DollarSign className="w-8 h-8 mx-auto mb-2" />
+            <div className="text-2xl font-bold">$150K+</div>
+            <div className="text-sm text-purple-100">Average annual savings per team</div>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === 5) {
+      return (
+        <div className="text-white">
+          <h2 className="text-3xl font-bold mb-4">Company Growth</h2>
+          <p className="text-purple-100 text-lg mb-8">Trusted by enterprises worldwide</p>
+          
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div className="text-3xl font-bold">500+</div>
+              <div className="text-sm text-purple-100">Enterprise Clients</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div className="text-3xl font-bold">50K+</div>
+              <div className="text-sm text-purple-100">Active Users</div>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <h3 className="font-semibold mb-4">Deployment by Company Size</h3>
+            <div className="space-y-3">
+              {[
+                { size: 'SMB (1-50)', count: 2500 },
+                { size: 'Mid-Market (51-500)', count: 3200 },
+                { size: 'Enterprise (500+)', count: 4300 }
+              ].map((item, idx) => (
+                <div key={idx}>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>{item.size}</span>
+                    <span>{item.count} companies</span>
+                  </div>
+                  <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+                    <motion.div 
+                      className="h-full bg-white"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(item.count / 4300) * 100}%` }}
+                      transition={{ duration: 1, delay: idx * 0.2 }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === 6) {
+      return (
+        <div className="text-white">
+          <h2 className="text-3xl font-bold mb-4">Common Pain Points</h2>
+          <p className="text-purple-100 text-lg mb-8">What challenges are you facing?</p>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
+            <h3 className="font-semibold mb-4">Most Selected Challenges</h3>
+            <div className="space-y-3">
+              {[
+                { pain: 'Manual tasks', percent: 78 },
+                { pain: 'High costs', percent: 72 },
+                { pain: 'Data silos', percent: 65 },
+                { pain: 'Poor CX', percent: 58 }
+              ].map((item, idx) => (
+                <div key={idx}>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>{item.pain}</span>
+                    <span>{item.percent}% select this</span>
+                  </div>
+                  <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+                    <motion.div 
+                      className="h-full bg-gradient-to-r from-red-400 to-yellow-300"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${item.percent}%` }}
+                      transition={{ duration: 1, delay: idx * 0.1 }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <Target className="w-8 h-8 mb-2" />
+            <div className="text-2xl font-bold mb-1">92%</div>
+            <div className="text-sm text-purple-100">Report significant improvement in their top 3 pain points within 90 days</div>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === 7) {
+      return (
+        <div className="text-white">
+          <h2 className="text-3xl font-bold mb-4">How Others Found Us</h2>
+          <p className="text-purple-100 text-lg mb-8">Growing through word of mouth</p>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
+            <h3 className="font-semibold mb-4">Acquisition Channels</h3>
+            <div className="space-y-4">
+              {[
+                { channel: 'Referral', percent: 42, color: 'from-green-400 to-emerald-300' },
+                { channel: 'Search', percent: 28, color: 'from-blue-400 to-cyan-300' },
+                { channel: 'Events', percent: 18, color: 'from-purple-400 to-pink-300' },
+                { channel: 'Content', percent: 12, color: 'from-yellow-400 to-orange-300' }
+              ].map((item, idx) => (
+                <div key={idx}>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>{item.channel}</span>
+                    <span>{item.percent}%</span>
+                  </div>
+                  <div className="h-3 bg-white/20 rounded-full overflow-hidden">
+                    <motion.div 
+                      className={`h-full bg-gradient-to-r ${item.color}`}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${item.percent}%` }}
+                      transition={{ duration: 1, delay: idx * 0.1 }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold">4.9/5</div>
+              <div className="text-sm text-purple-100">G2 Rating</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold">98%</div>
+              <div className="text-sm text-purple-100">Would Recommend</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === 8) {
+      return (
+        <div className="text-white">
+          <h2 className="text-3xl font-bold mb-4">Your AI Agent</h2>
+          <p className="text-purple-100 text-lg mb-8">Customized for your needs</p>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
+            <h3 className="font-semibold mb-4">Implementation Timeline</h3>
+            <div className="space-y-4">
+              {[
+                { phase: 'Setup & Configuration', weeks: '1 week' },
+                { phase: 'Training & Testing', weeks: '2 weeks' },
+                { phase: 'Deployment', weeks: '1 week' },
+                { phase: 'Full Production', weeks: '4 weeks' }
+              ].map((item, idx) => (
+                <motion.div 
+                  key={idx}
+                  className="flex items-center gap-3"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.2 }}
+                >
+                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold">
+                    {idx + 1}
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium">{item.phase}</div>
+                    <div className="text-sm text-purple-100">{item.weeks}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+            <CheckCircle2 className="w-8 h-8 mx-auto mb-2" />
+            <div className="text-2xl font-bold">24/7 Support</div>
+            <div className="text-sm text-purple-100">Dedicated success manager included</div>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === 9) {
+      return (
+        <div className="text-white text-center">
+          <div className="w-32 h-32 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
+            <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center">
+              <CheckCircle2 className="w-12 h-12 text-[#8B2EE5]" />
+            </div>
+          </div>
+          <h2 className="text-3xl font-bold mb-4">You're All Set!</h2>
+          <p className="text-purple-100 text-lg mb-8">Ready to transform your operations</p>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
+            <h3 className="font-semibold mb-4">What Happens Next</h3>
+            <div className="space-y-3 text-left">
+              {[
+                'Email confirmation sent',
+                'Personalized demo scheduled',
+                'Account setup initiated',
+                'Success manager assigned'
+              ].map((item, idx) => (
+                <motion.div 
+                  key={idx}
+                  className="flex items-center gap-2"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.1 }}
+                >
+                  <CheckCircle2 className="w-5 h-5" />
+                  <span>{item}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-2xl font-bold">$0</div>
+              <div className="text-sm text-purple-100">Setup fee</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-2xl font-bold">30 days</div>
+              <div className="text-sm text-purple-100">Free trial</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return null;
   };
 
   return (
@@ -150,233 +620,237 @@ export default function Onboarding() {
           </div>
 
           <AnimatePresence mode="wait">
+            {/* Step 1: Vertical */}
             {step === 1 && (
-              <motion.div
-                key="step1"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="flex-1 flex flex-col"
-              >
+              <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                    Hey there, what brings you here today?
-                  </h1>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Hey there, what brings you here today?</h1>
                   <p className="text-gray-600 mb-8">Select your industry to get started</p>
-
                   <div className="grid grid-cols-2 gap-3">
                     {verticals.map((vertical) => (
-                      <button
-                        key={vertical.id}
-                        onClick={() => setFormData({ ...formData, vertical: vertical.id })}
-                        className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all text-left ${
-                          formData.vertical === vertical.id
-                            ? 'border-[#8B2EE5] bg-purple-50'
-                            : 'border-gray-200 hover:border-gray-300'
-                        }`}
-                      >
+                      <button key={vertical.id} onClick={() => setFormData({ ...formData, vertical: vertical.id })} className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all text-left ${formData.vertical === vertical.id ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         <vertical.icon className="w-5 h-5 text-[#8B2EE5] flex-shrink-0" />
                         <span className="font-medium text-sm">{vertical.name}</span>
                       </button>
                     ))}
                   </div>
                 </div>
-
-                <Button
-                  onClick={nextStep}
-                  disabled={!formData.vertical}
-                  className="w-full bg-[#8B2EE5] hover:bg-[#7325C4] h-12 mt-8"
-                >
+                <Button onClick={nextStep} disabled={!formData.vertical} className="w-full bg-[#8B2EE5] hover:bg-[#7325C4] h-12 mt-8">
                   Continue <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </motion.div>
             )}
 
+            {/* Step 2: Company Name */}
             {step === 2 && selectedVertical && (
-              <motion.div
-                key="step2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="flex-1 flex flex-col"
-              >
+              <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                    Perfect! Let's customize for {selectedVertical.name}
-                  </h1>
-                  <p className="text-gray-600 mb-6">Here's what we can automate for you</p>
-
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Perfect! Let's customize for {selectedVertical.name}</h1>
+                  <p className="text-gray-600 mb-6">Tell us about your company</p>
                   <div className="mb-6 p-4 rounded-xl bg-purple-50 border border-purple-200">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-[#8B2EE5] flex items-center justify-center flex-shrink-0">
-                        <selectedVertical.icon className="w-5 h-5 text-white" />
-                      </div>
+                      <selectedVertical.icon className="w-6 h-6 text-[#8B2EE5] flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">Industry Insight</h3>
                         <p className="text-sm text-gray-700">{selectedVertical.insight}</p>
                       </div>
                     </div>
                   </div>
-
-                  <div className="mb-6">
-                    <h3 className="font-semibold text-gray-900 mb-3">Key Automations</h3>
-                    <div className="space-y-2">
-                      {selectedVertical.automations.map((automation, idx) => (
-                        <div key={idx} className="flex items-center gap-2 p-3 rounded-lg bg-gray-50">
-                          <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{automation}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
                   <div>
                     <Label htmlFor="company">Company Name</Label>
-                    <Input
-                      id="company"
-                      placeholder="Your company name"
-                      value={formData.companyName}
-                      onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                      className="mt-2"
-                    />
+                    <Input id="company" placeholder="Your company name" value={formData.companyName} onChange={(e) => setFormData({ ...formData, companyName: e.target.value })} className="mt-2" />
                   </div>
                 </div>
-
                 <div className="flex gap-3 mt-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button
-                    onClick={nextStep}
-                    disabled={!formData.companyName}
-                    className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12"
-                  >
+                  <Button onClick={nextStep} disabled={!formData.companyName} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </motion.div>
             )}
 
+            {/* Step 3: Role */}
             {step === 3 && (
-              <motion.div
-                key="step3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="flex-1 flex flex-col"
-              >
+              <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                    Design your AI agent
-                  </h1>
-                  <p className="text-gray-600 mb-8">Give your agent a name and purpose</p>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What's your role?</h1>
+                  <p className="text-gray-600 mb-8">Help us understand your position</p>
+                  <div className="grid gap-3">
+                    {roles.map((role) => (
+                      <button key={role} onClick={() => setFormData({ ...formData, role })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.role === role ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                        {role}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.role} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
+            )}
 
+            {/* Step 4: Team Size */}
+            {step === 4 && (
+              <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex-1">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How many people are on your team?</h1>
+                  <p className="text-gray-600 mb-8">The team that will use this platform</p>
+                  <div className="grid gap-3">
+                    {teamSizes.map((size) => (
+                      <button key={size} onClick={() => setFormData({ ...formData, teamSize: size })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.teamSize === size ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                        {size}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.teamSize} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Step 5: Company Size */}
+            {step === 5 && (
+              <motion.div key="step5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex-1">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How large is your organization?</h1>
+                  <p className="text-gray-600 mb-8">Total number of employees</p>
+                  <div className="grid gap-3">
+                    {companySizes.map((size) => (
+                      <button key={size} onClick={() => setFormData({ ...formData, companySize: size })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.companySize === size ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                        {size}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.companySize} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Step 6: Pain Points */}
+            {step === 6 && (
+              <motion.div key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex-1">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What challenges are you facing?</h1>
+                  <p className="text-gray-600 mb-8">Select all that apply</p>
+                  <div className="grid gap-3">
+                    {painPoints.map((point) => (
+                      <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.painPoints.includes(point) ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                        {point}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={formData.painPoints.length === 0} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Step 7: How did you hear */}
+            {step === 7 && (
+              <motion.div key="step7" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex-1">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How did you hear about us?</h1>
+                  <p className="text-gray-600 mb-8">Help us understand our reach</p>
+                  <div className="grid gap-3">
+                    {hearAboutUs.map((source) => (
+                      <button key={source} onClick={() => setFormData({ ...formData, hearAbout: source })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.hearAbout === source ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                        {source}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.hearAbout} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Step 8: Agent Design */}
+            {step === 8 && (
+              <motion.div key="step8" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex-1">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Design your AI agent</h1>
+                  <p className="text-gray-600 mb-8">Customize your assistant</p>
                   <div className="space-y-6">
                     <div>
                       <Label htmlFor="agentName">Agent Name</Label>
-                      <Input
-                        id="agentName"
-                        placeholder="e.g., Customer Support Assistant"
-                        value={formData.agentName}
-                        onChange={(e) => setFormData({ ...formData, agentName: e.target.value })}
-                        className="mt-2"
-                      />
+                      <Input id="agentName" placeholder="e.g., Operations Assistant" value={formData.agentName} onChange={(e) => setFormData({ ...formData, agentName: e.target.value })} className="mt-2" />
                     </div>
-
                     <div>
                       <Label htmlFor="agentPurpose">What will this agent do?</Label>
-                      <Textarea
-                        id="agentPurpose"
-                        placeholder="Describe the tasks and responsibilities..."
-                        value={formData.agentPurpose}
-                        onChange={(e) => setFormData({ ...formData, agentPurpose: e.target.value })}
-                        className="mt-2 h-32"
-                      />
+                      <Textarea id="agentPurpose" placeholder="Describe the tasks and responsibilities..." value={formData.agentPurpose} onChange={(e) => setFormData({ ...formData, agentPurpose: e.target.value })} className="mt-2 h-32" />
                     </div>
                   </div>
                 </div>
-
                 <div className="flex gap-3 mt-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button
-                    onClick={nextStep}
-                    disabled={!formData.agentName || !formData.agentPurpose}
-                    className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12"
-                  >
+                  <Button onClick={nextStep} disabled={!formData.agentName || !formData.agentPurpose} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </motion.div>
             )}
 
-            {step === 4 && selectedVertical && (
-              <motion.div
-                key="step4"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="flex-1 flex flex-col"
-              >
+            {/* Step 9: Final */}
+            {step === 9 && selectedVertical && (
+              <motion.div key="step9" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                    Almost there!
-                  </h1>
-                  <p className="text-gray-600 mb-8">Enter your email to create your agent</p>
-
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Almost there!</h1>
+                  <p className="text-gray-600 mb-8">Enter your email to get started</p>
                   <div className="mb-8">
                     <Label htmlFor="email">Work Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="you@company.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="mt-2"
-                    />
+                    <Input id="email" type="email" placeholder="you@company.com" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="mt-2" />
                   </div>
-
                   <div className="p-6 rounded-xl bg-gray-50 border border-gray-200">
-                    <h4 className="font-semibold text-gray-900 mb-4">Your AI Agent Summary</h4>
-                    <div className="space-y-3 text-sm">
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="font-medium">Company:</span> {formData.companyName}
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="font-medium">Industry:</span> {selectedVertical.name}
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="font-medium">Agent:</span> {formData.agentName}
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="font-medium">Purpose:</span> {formData.agentPurpose}
-                        </div>
-                      </div>
+                    <h4 className="font-semibold text-gray-900 mb-4">Summary</h4>
+                    <div className="space-y-2 text-sm text-gray-700">
+                      <div><span className="font-medium">Industry:</span> {selectedVertical.name}</div>
+                      <div><span className="font-medium">Company:</span> {formData.companyName}</div>
+                      <div><span className="font-medium">Role:</span> {formData.role}</div>
+                      <div><span className="font-medium">Team:</span> {formData.teamSize}</div>
+                      <div><span className="font-medium">Agent:</span> {formData.agentName}</div>
                     </div>
                   </div>
                 </div>
-
                 <div className="flex gap-3 mt-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button
-                    onClick={handleSubmit}
-                    disabled={!formData.email}
-                    className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12"
-                  >
+                  <Button onClick={handleSubmit} disabled={!formData.email} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
                     Create My Agent <CheckCircle2 className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -386,74 +860,19 @@ export default function Onboarding() {
         </div>
       </div>
 
-      {/* Right Side - Purple Illustration */}
+      {/* Right Side - Purple Background with Dynamic Content */}
       <div className="hidden lg:flex lg:w-1/2 bg-[#7C3AED] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#8B2EE5] to-[#6D28D9]" />
         
-        {/* Decorative elements */}
         <div className="absolute inset-0">
-          <motion.div
-            className="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3]
-            }}
-            transition={{ duration: 8, repeat: Infinity }}
-          />
-          <motion.div
-            className="absolute bottom-20 left-20 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"
-            animate={{ 
-              scale: [1.2, 1, 1.2],
-              opacity: [0.3, 0.5, 0.3]
-            }}
-            transition={{ duration: 10, repeat: Infinity }}
-          />
+          <motion.div className="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }} transition={{ duration: 8, repeat: Infinity }} />
+          <motion.div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl" animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }} transition={{ duration: 10, repeat: Infinity }} />
         </div>
 
-        {/* Illustration content */}
         <div className="relative z-10 flex items-center justify-center w-full p-16">
-          <div className="text-white text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="w-32 h-32 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
-                <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center">
-                  <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                    alt="1C" 
-                    className="w-12 h-12"
-                  />
-                </div>
-              </div>
-              
-              <h2 className="text-3xl font-bold mb-4">
-                {step === 1 && "Choose Your Industry"}
-                {step === 2 && "Discover AI Automations"}
-                {step === 3 && "Configure Your Agent"}
-                {step === 4 && "Launch Your AI Agent"}
-              </h2>
-              
-              <p className="text-purple-100 text-lg max-w-md mx-auto">
-                {step === 1 && "Select from 14 industries to get personalized AI solutions"}
-                {step === 2 && "See how AI can transform your specific operations"}
-                {step === 3 && "Customize your intelligent assistant"}
-                {step === 4 && "You're ready to revolutionize your workflows"}
-              </p>
-
-              <div className="mt-12 flex justify-center gap-2">
-                {[1, 2, 3, 4].map((s) => (
-                  <div
-                    key={s}
-                    className={`h-2 rounded-full transition-all ${
-                      s === step ? 'w-8 bg-white' : 'w-2 bg-white/30'
-                    }`}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </div>
+          <motion.div key={step} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="w-full max-w-md">
+            {renderRightSide()}
+          </motion.div>
         </div>
       </div>
     </div>
