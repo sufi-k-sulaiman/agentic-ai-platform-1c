@@ -185,7 +185,7 @@ export default function Pricing() {
               </div>
               <Link to={createPageUrl('Onboarding')}>
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-lg">
-                  Start trial
+                  Start
                 </Button>
               </Link>
             </motion.div>
