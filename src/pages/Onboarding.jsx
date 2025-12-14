@@ -828,7 +828,7 @@ export default function Onboarding() {
         <div className="text-white text-center">
           <div className="w-32 h-32 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
             <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center">
-              <CheckCircle2 className="w-12 h-12 text-[#8B2EE5]" />
+              <CheckCircle2 className="w-12 h-12 text-[#6209e6]" />
             </div>
           </div>
           <h2 className="text-3xl font-bold mb-4">You're All Set!</h2>
@@ -903,7 +903,7 @@ export default function Onboarding() {
           keywords={['get started', 'AI onboarding', 'custom AI', 'industry solutions', 'AI setup']}
         />
         <motion.div 
-          className="min-h-screen bg-gradient-to-br from-[#8B2EE5] to-[#6D28D9] flex items-center justify-center p-8"
+          className="min-h-screen bg-gradient-to-br from-[#6209e6] to-[#6D28D9] flex items-center justify-center p-8"
           initial={{ scale: 0.5 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -980,7 +980,7 @@ export default function Onboarding() {
                 </Button>
                 <Button
                   onClick={() => window.location.href = createPageUrl('Contact')}
-                  className="bg-white text-[#8B2EE5] hover:bg-white/90 h-14 px-8 text-lg font-semibold"
+                  className="bg-white text-[#6209e6] hover:bg-white/90 h-14 px-8 text-lg font-semibold"
                 >
                   Contact Us
                 </Button>
@@ -1008,11 +1008,11 @@ export default function Onboarding() {
           <div className="mb-8">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
-              <span className="text-sm font-medium text-[#8B2EE5]">{Math.round((step / totalSteps) * 100)}%</span>
+              <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
             </div>
             <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-[#8B2EE5]"
+                className="h-full bg-[#6209e6]"
                 initial={{ width: 0 }}
                 animate={{ width: `${(step / totalSteps) * 100}%` }}
                 transition={{ duration: 0.3 }}
@@ -1029,14 +1029,14 @@ export default function Onboarding() {
                   <p className="text-gray-600 mb-8">Select your industry to get started</p>
                   <div className="grid grid-cols-2 gap-3">
                     {verticals.map((vertical) => (
-                      <button key={vertical.id} onClick={() => setFormData({ ...formData, vertical: vertical.id })} className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all text-left ${formData.vertical === vertical.id ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
-                        <vertical.icon className="w-5 h-5 text-[#8B2EE5] flex-shrink-0" />
+                      <button key={vertical.id} onClick={() => setFormData({ ...formData, vertical: vertical.id })} className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all text-left ${formData.vertical === vertical.id ? 'border-[#6209e6] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                        <vertical.icon className="w-5 h-5 text-[#6209e6] flex-shrink-0" />
                         <span className="font-medium text-sm">{vertical.name}</span>
                       </button>
                     ))}
                   </div>
                 </div>
-                <Button onClick={nextStep} disabled={!formData.vertical} className="w-full bg-[#8B2EE5] hover:bg-[#7325C4] h-12 mt-8">
+                <Button onClick={nextStep} disabled={!formData.vertical} className="w-full bg-[#6209e6] hover:bg-[#5008c5] h-12 mt-8">
                   Continue <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </motion.div>
@@ -1063,7 +1063,7 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.companyName || !formData.companyWebsite} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.companyName || !formData.companyWebsite} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1095,7 +1095,7 @@ export default function Onboarding() {
                         }}
                         className={`w-full p-4 rounded-xl border-2 transition-all text-left ${
                           (formData.deploymentStrategy || []).includes(option.value) 
-                            ? 'border-[#8B2EE5] bg-purple-50' 
+                            ? 'border-[#6209e6] bg-purple-50' 
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -1109,7 +1109,7 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.deploymentStrategy || formData.deploymentStrategy.length === 0} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.deploymentStrategy || formData.deploymentStrategy.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1124,7 +1124,7 @@ export default function Onboarding() {
                   <p className="text-gray-600 mb-8">Help us understand your position</p>
                   <div className="grid gap-3 max-h-[500px] overflow-y-auto pr-2">
                     {(rolesByIndustry[formData.vertical] || rolesByIndustry.corporate).map((role) => (
-                      <button key={role} onClick={() => setFormData({ ...formData, role })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.role === role ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                      <button key={role} onClick={() => setFormData({ ...formData, role })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.role === role ? 'border-[#6209e6] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {role}
                       </button>
                     ))}
@@ -1134,7 +1134,7 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.role} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.role} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1149,7 +1149,7 @@ export default function Onboarding() {
                   <p className="text-gray-600 mb-8">The team that will use this platform</p>
                   <div className="grid gap-3">
                     {teamSizes.map((size) => (
-                      <button key={size} onClick={() => setFormData({ ...formData, teamSize: size })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.teamSize === size ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                      <button key={size} onClick={() => setFormData({ ...formData, teamSize: size })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.teamSize === size ? 'border-[#6209e6] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {size}
                       </button>
                     ))}
@@ -1159,7 +1159,7 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.teamSize} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.teamSize} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1174,7 +1174,7 @@ export default function Onboarding() {
                   <p className="text-gray-600 mb-8">Total number of employees</p>
                   <div className="grid gap-3">
                     {companySizes.map((size) => (
-                      <button key={size} onClick={() => setFormData({ ...formData, companySize: size })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.companySize === size ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                      <button key={size} onClick={() => setFormData({ ...formData, companySize: size })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.companySize === size ? 'border-[#6209e6] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {size}
                       </button>
                     ))}
@@ -1184,7 +1184,7 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.companySize} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.companySize} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1210,7 +1210,7 @@ export default function Onboarding() {
                   </div>
                   <div className="grid gap-2 overflow-y-auto pr-2 max-h-[400px]">
                     {painPoints.filter(point => point.toLowerCase().includes(painPointSearch.toLowerCase())).map((point) => (
-                      <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${formData.painPoints.includes(point) ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                      <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${formData.painPoints.includes(point) ? 'border-[#6209e6] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {point}
                       </button>
                     ))}
@@ -1220,7 +1220,7 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={formData.painPoints.length === 0} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={formData.painPoints.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1235,7 +1235,7 @@ export default function Onboarding() {
                   <p className="text-gray-600 mb-8">Help us understand our reach</p>
                   <div className="grid gap-3">
                     {hearAboutUs.map((source) => (
-                      <button key={source} onClick={() => setFormData({ ...formData, hearAbout: source })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.hearAbout === source ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                      <button key={source} onClick={() => setFormData({ ...formData, hearAbout: source })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.hearAbout === source ? 'border-[#6209e6] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {source}
                       </button>
                     ))}
@@ -1245,7 +1245,7 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.hearAbout} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.hearAbout} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1287,7 +1287,7 @@ export default function Onboarding() {
                         }}
                         className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${
                           (formData.objectives || []).includes(item.objective) 
-                            ? 'border-[#8B2EE5] bg-purple-50' 
+                            ? 'border-[#6209e6] bg-purple-50' 
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -1300,7 +1300,7 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.objectives || formData.objectives.length === 0} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.objectives || formData.objectives.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Finish <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1340,7 +1340,7 @@ export default function Onboarding() {
                     </div>
                     <div className="p-4 rounded-xl bg-purple-50 border border-purple-200 mt-6">
                       <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-[#8B2EE5]" />
+                        <CheckCircle2 className="w-5 h-5 text-[#6209e6]" />
                         Your Configuration Summary
                       </h4>
                       <div className="space-y-1 text-sm text-gray-700 mt-3">
@@ -1359,7 +1359,7 @@ export default function Onboarding() {
                   <Button 
                     onClick={handleSubmit} 
                     disabled={!formData.email || !formData.phone || isSubmitting}
-                    className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12"
+                    className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12"
                   >
                     {isSubmitting ? 'Saving...' : 'Complete Setup'} <CheckCircle2 className="ml-2 w-5 h-5" />
                   </Button>
@@ -1372,7 +1372,7 @@ export default function Onboarding() {
 
       {/* Right Side - Purple Background with Dynamic Content */}
       <div className="hidden lg:flex lg:w-1/2 bg-[#7C3AED] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8B2EE5] to-[#6D28D9]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#6209e6] to-[#6D28D9]" />
         
         <div className="absolute inset-0">
           <motion.div className="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }} transition={{ duration: 8, repeat: Infinity }} />

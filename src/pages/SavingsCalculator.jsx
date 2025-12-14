@@ -89,7 +89,7 @@ export default function SavingsCalculator() {
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Calculate Your
-              <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">
                 Savings
               </span>
             </h1>
@@ -263,7 +263,7 @@ export default function SavingsCalculator() {
                     <div className="space-y-4 col-span-2">
                       <div className="flex items-center justify-between">
                         <Label className="text-lg font-semibold">Expected Automation Rate</Label>
-                        <span className="text-3xl font-bold text-[#8B2EE5]">{automationRate}%</span>
+                        <span className="text-3xl font-bold text-[#6209e6]">{automationRate}%</span>
                       </div>
                       <div className="space-y-2">
                         <Slider
@@ -272,7 +272,7 @@ export default function SavingsCalculator() {
                           min={0}
                           max={100}
                           step={1}
-                          className="mt-3 [&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-[#8B2EE5] [&_[role=slider]]:border-4 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg [&>span]:h-3 [&>span]:bg-[#8B2EE5]"
+                          className="mt-3 [&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-[#6209e6] [&_[role=slider]]:border-4 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg [&>span]:h-3 [&>span]:bg-[#6209e6]"
                         />
                         <div className="flex justify-between text-sm text-gray-600 font-medium">
                           <span>0%</span>
@@ -331,7 +331,7 @@ export default function SavingsCalculator() {
               animate={{ opacity: 1, x: 0 }}
               className="space-y-6"
             >
-              <Card className="bg-gradient-to-br from-[#8B2EE5] to-[#7C3AED] text-white">
+              <Card className="bg-gradient-to-br from-[#6209e6] to-[#7C3AED] text-white">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-2">
                     <TrendingUp className="w-6 h-6" />
@@ -371,7 +371,7 @@ export default function SavingsCalculator() {
               <div className="grid grid-cols-2 gap-4">
                 <Card>
                   <CardHeader className="pb-3">
-                    <Clock className="w-8 h-8 text-[#8B2EE5] mb-2" />
+                    <Clock className="w-8 h-8 text-[#6209e6] mb-2" />
                     <CardTitle className="text-lg">Time Saved</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -384,7 +384,7 @@ export default function SavingsCalculator() {
 
                 <Card>
                   <CardHeader className="pb-3">
-                    <Users className="w-8 h-8 text-[#8B2EE5] mb-2" />
+                    <Users className="w-8 h-8 text-[#6209e6] mb-2" />
                     <CardTitle className="text-lg">Per Employee</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -397,7 +397,7 @@ export default function SavingsCalculator() {
 
                 <Card>
                   <CardHeader className="pb-3">
-                    <DollarSign className="w-8 h-8 text-[#8B2EE5] mb-2" />
+                    <DollarSign className="w-8 h-8 text-[#6209e6] mb-2" />
                     <CardTitle className="text-lg">Departments</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -410,7 +410,7 @@ export default function SavingsCalculator() {
 
                 <Card>
                   <CardHeader className="pb-3">
-                    <TrendingUp className="w-8 h-8 text-[#8B2EE5] mb-2" />
+                    <TrendingUp className="w-8 h-8 text-[#6209e6] mb-2" />
                     <CardTitle className="text-lg">Software</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -425,7 +425,7 @@ export default function SavingsCalculator() {
               <Card className="bg-purple-50 border-purple-200">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-3 mb-4">
-                    <DollarSign className="w-6 h-6 text-[#8B2EE5] flex-shrink-0 mt-1" />
+                    <DollarSign className="w-6 h-6 text-[#6209e6] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">ROI Breakdown</h3>
                       <ul className="space-y-2 text-sm text-gray-700">
@@ -461,7 +461,7 @@ export default function SavingsCalculator() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to={createPageUrl('Onboarding')}>
-                <Button size="lg" className="bg-[#8B2EE5] hover:bg-[#7325C4] h-14 px-8 text-lg">
+                <Button size="lg" className="bg-[#6209e6] hover:bg-[#5008c5] h-14 px-8 text-lg">
                   Get Started <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>

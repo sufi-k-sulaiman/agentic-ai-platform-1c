@@ -25,7 +25,7 @@ const performanceMetrics = [
 ];
 
 const departmentData = [
-  { name: 'Finance', value: 28, color: '#8B2EE5' },
+  { name: 'Finance', value: 28, color: '#6209e6' },
   { name: 'HR', value: 22, color: '#A855F7' },
   { name: 'Operations', value: 35, color: '#C084FC' },
   { name: 'Sales', value: 15, color: '#E9D5FF' }
@@ -104,7 +104,7 @@ export default function EnterpriseSuite() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-lg md:text-xl text-[#8B2EE5] mb-4"
+            className="text-lg md:text-xl text-[#6209e6] mb-4"
           >
             Enterprise Suite
           </motion.p>
@@ -179,7 +179,7 @@ export default function EnterpriseSuite() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="text-center"
               >
-                <div className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
+                <div className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-br from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">
                   {benefit.stat}
                 </div>
                 <div className="text-lg font-medium text-gray-900 mb-2">{benefit.label}</div>
@@ -203,7 +203,7 @@ export default function EnterpriseSuite() {
               <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 See everything.
                 <br />
-                <span className="text-[#8B2EE5]">Understand more.</span>
+                <span className="text-[#6209e6]">Understand more.</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 Real-time dashboards give you instant visibility into every aspect of your business. From revenue and expenses to team performance and customer satisfaction, all your critical metrics are at your fingertips.
@@ -279,7 +279,7 @@ export default function EnterpriseSuite() {
                     <XAxis dataKey="month" />
                     <YAxis />
                     <Tooltip />
-                    <Bar dataKey="revenue" fill="#8B2EE5" />
+                    <Bar dataKey="revenue" fill="#6209e6" />
                     <Bar dataKey="profit" fill="#A855F7" />
                   </RechartsBar>
                 </ResponsiveContainer>
@@ -381,7 +381,7 @@ export default function EnterpriseSuite() {
               <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
                 Works with
                 <br />
-                <span className="text-[#8B2EE5]">everything you use</span>
+                <span className="text-[#6209e6]">everything you use</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Connect seamlessly with 1,000+ applications. From Salesforce to QuickBooks, Slack to AWS—everything syncs automatically.
@@ -418,7 +418,7 @@ export default function EnterpriseSuite() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative aspect-square bg-gradient-to-br from-[#8B2EE5]/10 to-[#A855F7]/10 rounded-3xl p-12"
+              className="relative aspect-square bg-gradient-to-br from-[#6209e6]/10 to-[#A855F7]/10 rounded-3xl p-12"
             >
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center">

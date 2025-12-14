@@ -42,14 +42,14 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 text-[#8B2EE5] text-sm font-medium mb-8">
-              <span className="w-2 h-2 bg-[#8B2EE5] rounded-full animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 text-[#6209e6] text-sm font-medium mb-8">
+              <span className="w-2 h-2 bg-[#6209e6] rounded-full animate-pulse" />
               Introducing Agentic Ai
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
               The future of
-              <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">
                 enterprise Ai
               </span>
               is here
@@ -64,7 +64,7 @@ export default function HeroSection() {
               <Link to={createPageUrl('Onboarding')} className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-[#8B2EE5] hover:bg-[#7325C4] text-white font-semibold rounded-full px-8 h-12 sm:h-14 text-base group"
+                  className="w-full sm:w-auto bg-[#6209e6] hover:bg-[#5008c5] text-white font-semibold rounded-full px-8 h-12 sm:h-14 text-base group"
                 >
                   Get started
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -101,7 +101,7 @@ export default function HeroSection() {
           >
             <div className="relative aspect-square">
               {/* Main Visual Container */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#8B2EE5]/10 to-[#A855F7]/10 rounded-3xl backdrop-blur-sm border border-purple-200/50" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#6209e6]/10 to-[#A855F7]/10 rounded-3xl backdrop-blur-sm border border-purple-200/50" />
               
               {/* Floating Cards */}
               <motion.div 
@@ -109,7 +109,7 @@ export default function HeroSection() {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
-                <div className="w-10 h-10 bg-[#8B2EE5] rounded-xl flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-[#6209e6] rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
@@ -117,7 +117,7 @@ export default function HeroSection() {
                 <h3 className="font-semibold text-gray-900 mb-1">AI Processing</h3>
                 <p className="text-sm text-gray-500">Real-time analysis complete</p>
                 <div className="mt-3 w-full bg-gray-100 rounded-full h-2">
-                  <div className="bg-[#8B2EE5] h-2 rounded-full w-3/4" />
+                  <div className="bg-[#6209e6] h-2 rounded-full w-3/4" />
                 </div>
               </motion.div>
 
