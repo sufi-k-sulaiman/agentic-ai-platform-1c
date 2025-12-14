@@ -4,10 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Award, CheckCircle, ArrowRight, Star, Users, Clock, FileCheck, Briefcase, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 const certifications = [
   {
+    id: 'ai-developer',
     title: 'Certified Agentic AI Developer',
     level: 'Professional',
     duration: '40 hours',
@@ -31,6 +34,7 @@ const certifications = [
     popular: true
   },
   {
+    id: 'ai-architect',
     title: 'Certified AI Architect',
     level: 'Expert',
     duration: '60 hours',
@@ -55,6 +59,7 @@ const certifications = [
     popular: false
   },
   {
+    id: 'ai-specialist',
     title: 'Certified AI Specialist',
     level: 'Associate',
     duration: '25 hours',
@@ -321,9 +326,11 @@ export default function ProfessionalCertifications() {
                         </div>
                       </div>
                     </div>
-                    <Button className="w-full mt-6 bg-[#8B2EE5] hover:bg-[#7325C4]">
-                      Start preparation <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
+                    <Link to={createPageUrl('CertificationDetail') + `?id=${cert.id}`}>
+                      <Button className="w-full mt-6 bg-[#8B2EE5] hover:bg-[#7325C4]">
+                        View details <ArrowRight className="ml-2 w-4 h-4" />
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>

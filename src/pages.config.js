@@ -72,6 +72,7 @@ import Contact from './pages/Contact';
 import CourseCategory from './pages/CourseCategory';
 import CourseDetail from './pages/CourseDetail';
 import LearningTrack from './pages/LearningTrack';
+import CertificationDetail from './pages/CertificationDetail';
 import __Layout from './Layout.jsx';
 
 
@@ -150,6 +151,7 @@ export const PAGES = {
     "CourseCategory": CourseCategory,
     "CourseDetail": CourseDetail,
     "LearningTrack": LearningTrack,
+    "CertificationDetail": CertificationDetail,
 }
 
 export const pagesConfig = {
