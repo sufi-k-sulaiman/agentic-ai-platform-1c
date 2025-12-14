@@ -64,10 +64,6 @@ import SupportArticle7 from './pages/SupportArticle7';
 import SupportArticle8 from './pages/SupportArticle8';
 import SupportArticle9 from './pages/SupportArticle9';
 import SupportArticle10 from './pages/SupportArticle10';
-import GettingStartedGuide from './pages/GettingStartedGuide';
-import AccountBillingGuide from './pages/AccountBillingGuide';
-import TechnicalSupportGuide from './pages/TechnicalSupportGuide';
-import VideoTutorialsGuide from './pages/VideoTutorialsGuide';
 import __Layout from './Layout.jsx';
 
 
@@ -138,10 +134,6 @@ export const PAGES = {
     "SupportArticle8": SupportArticle8,
     "SupportArticle9": SupportArticle9,
     "SupportArticle10": SupportArticle10,
-    "GettingStartedGuide": GettingStartedGuide,
-    "AccountBillingGuide": AccountBillingGuide,
-    "TechnicalSupportGuide": TechnicalSupportGuide,
-    "VideoTutorialsGuide": VideoTutorialsGuide,
 }
 
 export const pagesConfig = {
