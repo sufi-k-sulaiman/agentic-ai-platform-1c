@@ -123,7 +123,7 @@ export default function AgenticAI() {
               className="order-2 lg:order-1 relative aspect-square"
             >
               <img 
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800" 
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" 
                 alt="Real-time Processing" 
                 className="w-full h-full object-cover rounded-3xl shadow-2xl"
               />
