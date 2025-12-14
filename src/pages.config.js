@@ -12,6 +12,8 @@ import Pricing from './pages/Pricing';
 import Documentation from './pages/Documentation';
 import APIReference from './pages/APIReference';
 import Community from './pages/Community';
+import Blog from './pages/Blog';
+import Events from './pages/Events';
 import __Layout from './Layout.jsx';
 
 
@@ -30,6 +32,8 @@ export const PAGES = {
     "Documentation": Documentation,
     "APIReference": APIReference,
     "Community": Community,
+    "Blog": Blog,
+    "Events": Events,
 }
 
 export const pagesConfig = {
