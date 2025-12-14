@@ -1,69 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, Bot, Brain, Zap, Shield, RefreshCw, Network } from 'lucide-react';
+import { Bot, Brain, Zap, Shield, RefreshCw, Network, ArrowRight, CheckCircle, TrendingUp, Clock, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
-
-const features = [
-  {
-    icon: Brain,
-    title: 'Cognitive Reasoning',
-    description: 'Agentic Ai that understands context, analyzes situations, and makes intelligent decisions autonomously.'
-  },
-  {
-    icon: Zap,
-    title: 'Real-time Action',
-    description: 'Execute complex workflows instantly with sub-second response times across your systems.'
-  },
-  {
-    icon: RefreshCw,
-    title: 'Continuous Learning',
-    description: 'AI that improves over time, adapting to your business patterns and optimizing outcomes.'
-  },
-  {
-    icon: Network,
-    title: 'Multi-Agent Orchestration',
-    description: 'Coordinate multiple specialized Agentic Ai working together to solve complex problems.'
-  },
-  {
-    icon: Shield,
-    title: 'Secure & Compliant',
-    description: 'Enterprise-grade security with full audit trails and compliance with global regulations.'
-  },
-  {
-    icon: Bot,
-    title: 'No-Code Builder',
-    description: 'Create and deploy custom Agentic Ai without writing a single line of code.'
-  }
-];
-
-const useCases = [
-  {
-    title: 'Customer Support',
-    description: 'Agentic Ai that handles inquiries, resolves issues, and escalates when needed—24/7.',
-    impact: '70% reduction in response time',
-    gradient: 'from-violet-500 to-purple-500'
-  },
-  {
-    title: 'Sales Automation',
-    description: 'Qualify leads, schedule meetings, and nurture prospects automatically.',
-    impact: '3x increase in qualified leads',
-    gradient: 'from-purple-500 to-pink-500'
-  },
-  {
-    title: 'Operations',
-    description: 'Automate procurement, inventory management, and supply chain optimization.',
-    impact: '40% cost reduction',
-    gradient: 'from-blue-500 to-indigo-500'
-  },
-  {
-    title: 'Finance & Analytics',
-    description: 'Real-time reporting, anomaly detection, and predictive forecasting.',
-    impact: '5x faster insights',
-    gradient: 'from-emerald-500 to-teal-500'
-  }
-];
 
 export default function AgenticAI() {
   return (
@@ -74,178 +15,412 @@ export default function AgenticAI() {
         url="/agentic-ai"
         keywords={['Agentic AI', 'autonomous agents', 'AI automation', 'intelligent agents', 'no-code AI', 'multi-agent systems']}
       />
-      {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+
+      {/* Hero - Fold 1 */}
+      <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/30 to-black" />
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
         
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-center px-6 max-w-6xl mx-auto"
+        >
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[1.05]"
+          >
+            Agentic AI.
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+              Think. Decide. Act.
+            </span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+          >
+            Autonomous AI agents that work independently. No supervision required.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+          >
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-12 h-16 text-lg font-medium">
+                Get started
+              </Button>
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
+            <div className="w-1 h-3 bg-white/50 rounded-full" />
+          </div>
+        </div>
+      </section>
+
+      {/* Cognitive Power - Fold 2 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-[#8B2EE5] text-sm font-medium mb-8">
-                <span className="w-2 h-2 bg-[#8B2EE5] rounded-full animate-pulse" />
-                Agentic Ai Platform
-              </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-[1.1]">
-                AI that thinks,
-                <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
-                  decides, and acts
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                True cognitive
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                  reasoning
                 </span>
-              </h1>
-              <p className="text-2xl text-gray-600 leading-relaxed mb-10">
-                Deploy autonomous Agentic Ai that handles complex tasks end-to-end. No human intervention required.
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                Not just automation. Real intelligence that understands context, analyzes patterns, and makes decisions.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base">
-                  Start free trial <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14 text-base">
-                  Watch demo
-                </Button>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Our agents process information like humans do—considering multiple factors, weighing options, and choosing the best path forward.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative aspect-square"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-3xl" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Brain className="w-48 h-48 text-indigo-600" />
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-time Action - Fold 3 */}
+      <section className="min-h-screen flex items-center bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1 relative aspect-square"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800" 
+                alt="Real-time Processing" 
+                className="w-full h-full object-cover rounded-3xl shadow-2xl"
+              />
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="relative"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
             >
-              <div className="relative aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8B2EE5]/10 to-[#A855F7]/10 rounded-3xl" />
-                
-                {/* Animated AI Nodes */}
-                {[...Array(6)].map((_, i) => (
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Lightning fast
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                  execution
+                </span>
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <div className="text-5xl font-bold text-indigo-600 mb-2">&lt;100ms</div>
+                  <div className="text-xl text-gray-600">Average response time</div>
+                </div>
+                <div>
+                  <div className="text-5xl font-bold text-indigo-600 mb-2">10M+</div>
+                  <div className="text-xl text-gray-600">Actions per day</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Multi-Agent - Fold 4 */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-indigo-900 to-purple-900 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-6xl md:text-7xl font-bold mb-8">
+              Multi-agent
+              <br />
+              orchestration
+            </h2>
+            <p className="text-2xl text-indigo-200 max-w-3xl mx-auto leading-relaxed">
+              Deploy teams of specialized agents that work together to solve complex problems
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: Bot, title: 'Customer Service', agents: '12 agents', tasks: '50K tasks/day' },
+              { icon: Brain, title: 'Data Analysis', agents: '8 agents', tasks: '25K tasks/day' },
+              { icon: Zap, title: 'Sales Automation', agents: '15 agents', tasks: '75K tasks/day' }
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8"
+              >
+                <item.icon className="w-16 h-16 text-indigo-300 mb-6" />
+                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <div className="space-y-2 text-indigo-200">
+                  <div>{item.agents}</div>
+                  <div>{item.tasks}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Continuous Learning - Fold 5 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Learns and
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                  improves
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-12">
+                Every interaction makes your agents smarter. Patterns emerge. Performance optimizes automatically.
+              </p>
+              <div className="space-y-4">
+                {[
+                  'Self-optimizing workflows',
+                  'Pattern recognition',
+                  'Predictive analytics',
+                  'Adaptive responses'
+                ].map((item, i) => (
                   <motion.div
-                    key={i}
-                    className="absolute w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center"
-                    style={{
-                      top: `${15 + Math.sin(i * Math.PI / 3) * 35}%`,
-                      left: `${15 + Math.cos(i * Math.PI / 3) * 35}%`,
-                    }}
-                    animate={{
-                      y: [0, -15, 0],
-                      rotate: [0, 5, 0]
-                    }}
-                    transition={{
-                      duration: 3 + i * 0.5,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-3 text-xl text-gray-700"
                   >
-                    <Bot className="w-8 h-8 text-[#8B2EE5]" />
+                    <CheckCircle className="w-6 h-6 text-green-600" />
+                    {item}
                   </motion.div>
                 ))}
-
-                {/* Center Logo */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-[#8B2EE5] rounded-full shadow-2xl flex items-center justify-center">
-                    <Brain className="w-16 h-16 text-white" />
-                  </div>
-                </div>
               </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" 
+                alt="Analytics" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Autonomous intelligence at scale
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to build, deploy, and manage Agentic Ai that works for you 24/7.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all group"
-              >
-                <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-7 h-7 text-[#8B2EE5]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Transform every department
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Agentic Ai that delivers measurable results across your entire organization.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full hover:shadow-xl transition-shadow overflow-hidden">
-                  <div className={`h-2 bg-gradient-to-r ${useCase.gradient}`} />
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{useCase.title}</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{useCase.description}</p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                        <ArrowRight className="w-6 h-6 text-green-600" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-gray-500">Impact</div>
-                        <div className="font-bold text-gray-900">{useCase.impact}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      {/* Enterprise Security - Fold 6 */}
+      <section className="min-h-screen flex items-center bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ready to deploy your first Agentic Ai?
+            <Shield className="w-32 h-32 text-indigo-400 mx-auto mb-12" />
+            <h2 className="text-6xl md:text-7xl font-bold mb-8">
+              Enterprise-grade
+              <br />
+              security
             </h2>
-            <p className="text-xl text-gray-600 mb-10">
-              Start building in minutes with our no-code platform. No credit card required.
+            <p className="text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+              SOC 2 Type II certified. GDPR compliant. Your data is encrypted and protected at every layer.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Get started free <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {[
+                { value: '256-bit', label: 'Encryption' },
+                { value: '99.99%', label: 'Uptime SLA' },
+                { value: '24/7', label: 'Monitoring' },
+                { value: 'Zero', label: 'Data retention' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className="text-5xl font-bold text-indigo-400 mb-2">{stat.value}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
+      </section>
+
+      {/* No-Code Builder - Fold 7 */}
+      <section className="min-h-screen flex items-center bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Build agents.
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                No code needed.
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+              Visual builder with drag-and-drop simplicity. Deploy production-ready agents in minutes.
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200" 
+              alt="No-code builder" 
+              className="w-full rounded-3xl shadow-2xl"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Real Results - Fold 8 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Real results.
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                Real impact.
+              </span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              { icon: TrendingUp, value: '70%', label: 'Faster response times', color: 'text-green-600' },
+              { icon: Clock, value: '24/7', label: 'Always available', color: 'text-blue-600' },
+              { icon: Target, value: '95%', label: 'Accuracy rate', color: 'text-purple-600' }
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2 }}
+                className="text-center"
+              >
+                <item.icon className={`w-20 h-20 ${item.color} mx-auto mb-6`} />
+                <div className="text-6xl font-bold text-gray-900 mb-4">{item.value}</div>
+                <div className="text-2xl text-gray-600">{item.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA - Fold 9 */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-400 rounded-full blur-3xl" />
+        </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-center px-6 max-w-5xl mx-auto"
+        >
+          <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+            Ready to deploy
+            <br />
+            your first agent?
+          </h2>
+          <p className="text-2xl md:text-3xl text-purple-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Join 10,000+ companies automating with AI
+          </p>
+          <Link to={createPageUrl('Onboarding')}>
+            <Button className="bg-white text-purple-900 hover:bg-gray-100 rounded-full px-12 h-16 text-lg font-medium">
+              Get started free
+            </Button>
+          </Link>
+          
+          <div className="mt-20 grid grid-cols-3 gap-12 max-w-3xl mx-auto">
+            <div>
+              <div className="text-5xl font-bold mb-2">Free</div>
+              <div className="text-purple-200">to start</div>
+            </div>
+            <div>
+              <div className="text-5xl font-bold mb-2">5 min</div>
+              <div className="text-purple-200">to deploy</div>
+            </div>
+            <div>
+              <div className="text-5xl font-bold mb-2">24/7</div>
+              <div className="text-purple-200">support</div>
+            </div>
+          </div>
+        </motion.div>
       </section>
     </div>
   );
