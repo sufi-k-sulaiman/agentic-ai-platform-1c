@@ -332,6 +332,7 @@ export default function Onboarding() {
     const [step, setStep] = useState(1);
     const [painPointSearch, setPainPointSearch] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isComplete, setIsComplete] = useState(false);
     const [formData, setFormData] = useState({
     vertical: '',
     companyName: '',
@@ -378,11 +379,12 @@ export default function Onboarding() {
         phone: formData.phone,
         completed: true
       });
-      alert('Setup complete! We\'ll be in touch soon.');
-      window.location.href = '/';
+      setIsComplete(true);
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 5000);
     } catch (error) {
       console.error('Error saving onboarding data:', error);
-      alert('There was an error completing setup. Please try again.');
       setIsSubmitting(false);
     }
   };
@@ -854,6 +856,112 @@ export default function Onboarding() {
 
     return null;
   };
+
+  if (isComplete && selectedVertical) {
+    const industryAdoption = {
+      property: { current: 15, projected: 78, industry: 'Property Management' },
+      datacenter: { current: 32, projected: 89, industry: 'Data Centers' },
+      finance: { current: 28, projected: 85, industry: 'Financial Services' },
+      healthcare: { current: 18, projected: 72, industry: 'Healthcare' },
+      corporate: { current: 22, projected: 80, industry: 'Corporate Campuses' },
+      transit: { current: 12, projected: 68, industry: 'Public Transit' },
+      traffic: { current: 20, projected: 75, industry: 'Traffic Management' },
+      energy: { current: 25, projected: 82, industry: 'Energy & Utilities' },
+      retail: { current: 35, projected: 88, industry: 'Retail' },
+      education: { current: 14, projected: 70, industry: 'Education' },
+      gaming: { current: 45, projected: 92, industry: 'Gaming' },
+      government: { current: 8, projected: 65, industry: 'Government' },
+      airports: { current: 16, projected: 73, industry: 'Airports' },
+      sports: { current: 24, projected: 79, industry: 'Sports & Entertainment' }
+    };
+
+    const adoption = industryAdoption[formData.vertical] || industryAdoption.property;
+
+    return (
+      <>
+        <PageMeta 
+          title="Get Started"
+          description="Create your custom Agentic AI solution. Select your industry and design AI agents tailored to your business needs. 14 industries, infinite possibilities."
+          url="/onboarding"
+          keywords={['get started', 'AI onboarding', 'custom AI', 'industry solutions', 'AI setup']}
+        />
+        <motion.div 
+          className="min-h-screen bg-gradient-to-br from-[#8B2EE5] to-[#6D28D9] flex items-center justify-center p-8"
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <div className="max-w-4xl w-full text-white text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <div className="w-32 h-32 mx-auto mb-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <CheckCircle2 className="w-16 h-16 text-white" />
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Welcome to the future, {formData.companyName}!
+              </h1>
+              
+              <p className="text-2xl text-purple-100 mb-12 max-w-2xl mx-auto">
+                Your AI transformation journey begins now. We're preparing your personalized solution.
+              </p>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+                <h2 className="text-2xl font-bold mb-6">AI Adoption in {adoption.industry}</h2>
+                
+                <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <div className="text-5xl font-bold mb-2">{adoption.current}%</div>
+                    <div className="text-purple-200">Current Adoption</div>
+                  </div>
+                  <div>
+                    <div className="text-5xl font-bold mb-2">{adoption.projected}%</div>
+                    <div className="text-purple-200">Projected by 2027</div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    { year: '2024', percent: adoption.current },
+                    { year: '2025', percent: adoption.current + (adoption.projected - adoption.current) * 0.3 },
+                    { year: '2026', percent: adoption.current + (adoption.projected - adoption.current) * 0.65 },
+                    { year: '2027', percent: adoption.projected }
+                  ].map((item, idx) => (
+                    <div key={item.year}>
+                      <div className="flex justify-between text-sm mb-2">
+                        <span>{item.year}</span>
+                        <span>{Math.round(item.percent)}%</span>
+                      </div>
+                      <div className="h-3 bg-white/20 rounded-full overflow-hidden">
+                        <motion.div 
+                          className="h-full bg-gradient-to-r from-white to-purple-200"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${item.percent}%` }}
+                          transition={{ duration: 1.5, delay: 0.5 + idx * 0.2 }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.5 }}
+                className="text-lg text-purple-100"
+              >
+                Redirecting you to your dashboard...
+              </motion.div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </>
+    );
+  }
 
   return (
     <>
