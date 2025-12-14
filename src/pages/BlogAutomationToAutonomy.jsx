@@ -1,222 +1,235 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, User, Share2, Bookmark } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import BreadcrumbNav from '@/components/BreadcrumbNav';
+import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import { Button } from '@/components/ui/button';
 
 export default function BlogAutomationToAutonomy() {
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen">
       <PageMeta 
         title="From Automation to Autonomy: The Evolution of AI in Business"
-        description="Trace the journey from simple automation to autonomous AI systems. Understand the technological leaps and what they mean for enterprise strategy."
+        description="Trace the journey from simple automation to autonomous AI systems and understand the technological leaps driving business transformation."
         url="/blog/automation-to-autonomy"
-        keywords={['AI evolution', 'automation history', 'autonomous systems', 'AI maturity', 'digital transformation journey']}
+        keywords={['AI evolution', 'automation', 'autonomous AI', 'AI history', 'business technology']}
       />
-      
-      <article className="pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <BreadcrumbNav items={[
-            { label: 'Blog', page: 'Blog' },
-            { label: 'From Automation to Autonomy' }
-          ]} />
+
+      <article className="max-w-4xl mx-auto px-6 py-32">
+        <BreadcrumbNav items={[
+          { label: 'Blog', page: 'Blog' },
+          { label: 'Automation to Autonomy' }
+        ]} />
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-12"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            From Automation to Autonomy: The Evolution of AI in Business
+          </h1>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              From Automation to Autonomy: The Evolution of AI in Business
-            </h1>
-            
-            <div className="flex items-center gap-6 text-gray-600 mb-8 pb-8 border-b border-gray-200">
-              <span className="flex items-center gap-2">
-                <User className="w-5 h-5" />
-                Dr. Marcus Chen
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-5 h-5" />
-                November 15, 2024
-              </span>
-              <span className="flex items-center gap-2">
-                <Clock className="w-5 h-5" />
-                14 min read
-              </span>
+          <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-8">
+            <div className="flex items-center gap-2">
+              <User className="w-5 h-5" />
+              <span>Dr. Marcus Chen</span>
             </div>
+            <div className="flex items-center gap-2">
+              <Calendar className="w-5 h-5" />
+              <span>November 15, 2024</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5" />
+              <span>14 min read</span>
+            </div>
+          </div>
 
-            <div className="flex gap-3 mb-12">
-              <Button variant="outline" size="sm" className="gap-2">
-                <Share2 className="w-4 h-4" />
-                Share
+          <img 
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200" 
+            alt="AI Evolution" 
+            className="w-full h-96 object-cover rounded-2xl mb-12"
+          />
+        </motion.div>
+
+        <div className="prose prose-lg max-w-none">
+          <p className="text-xl text-gray-700 leading-relaxed mb-8">
+            The journey from basic automation to autonomous AI represents one of the most significant technological evolutions in business history. Understanding this progression illuminates where we are—and where we're headed.
+          </p>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Stage 1: Rule-Based Automation (1950s-2000s)</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            The earliest automation followed explicit rules programmed by humans. If-then logic powered:
+          </p>
+          <ul className="space-y-2 text-gray-700 mb-6">
+            <li>• Assembly line robots performing repetitive motions</li>
+            <li>• Accounting systems calculating totals and balances</li>
+            <li>• Email filters routing messages by keywords</li>
+            <li>• Spreadsheet macros executing recorded steps</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            <strong>Limitation:</strong> Required humans to anticipate every scenario. Brittle when faced with exceptions.
+          </p>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Stage 2: Machine Learning Systems (2000s-2015)</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            ML algorithms learned patterns from data rather than following hand-coded rules:
+          </p>
+          <ul className="space-y-2 text-gray-700 mb-6">
+            <li>• Recommendation engines predicting customer preferences</li>
+            <li>• Fraud detection identifying suspicious transactions</li>
+            <li>• Image recognition classifying visual content</li>
+            <li>• Predictive maintenance forecasting equipment failures</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            <strong>Advancement:</strong> Systems adapted to new patterns without reprogramming.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            <strong>Limitation:</strong> Still required human-designed features and supervision for each task.
+          </p>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Stage 3: Deep Learning Revolution (2015-2020)</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Neural networks discovered complex representations automatically:
+          </p>
+          <ul className="space-y-2 text-gray-700 mb-6">
+            <li>• Computer vision rivaling human perception</li>
+            <li>• Natural language understanding parsing context and intent</li>
+            <li>• Speech recognition achieving near-perfect accuracy</li>
+            <li>• Game-playing AI surpassing world champions</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            <strong>Advancement:</strong> End-to-end learning from raw data to decisions.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            <strong>Limitation:</strong> Narrow AI—systems excelled at specific tasks but couldn't generalize or reason.
+          </p>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Stage 4: Agentic AI (2020-Present)</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            The breakthrough to autonomy combined multiple capabilities:
+          </p>
+
+          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Goal-Directed Behavior</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Unlike earlier systems that executed predefined tasks, agentic AI understands objectives and determines optimal strategies to achieve them. Give an agent the goal "maximize customer satisfaction" and it figures out how—whether through faster response times, personalized recommendations, or proactive issue resolution.
+          </p>
+
+          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Multi-Step Reasoning</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Agents break complex problems into sub-problems, solve each component, and synthesize solutions. A procurement agent might: analyze spending patterns, identify consolidation opportunities, negotiate with vendors, and implement new contracts—all autonomously.
+          </p>
+
+          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Tool Use and Integration</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Modern agents access and orchestrate external tools: databases, APIs, calculators, search engines. They determine which tools to use, when, and how—creating powerful composite capabilities.
+          </p>
+
+          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Learning from Experience</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Agents improve through feedback loops. Each interaction refines their understanding, making them progressively more effective. Unlike static automation, they adapt to changing business conditions.
+          </p>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Key Technological Breakthroughs</h2>
+          
+          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Large Language Models</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Transformer architectures enabled AI to understand and generate human-like text, providing the natural language interface crucial for agent interaction.
+          </p>
+
+          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Reinforcement Learning</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Trial-and-error learning allowed agents to discover optimal strategies through experience rather than explicit programming.
+          </p>
+
+          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Retrieval-Augmented Generation</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Combining parametric knowledge with dynamic information retrieval gave agents access to current, domain-specific data.
+          </p>
+
+          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Chain-of-Thought Reasoning</h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Techniques for breaking down complex reasoning into explicit steps dramatically improved agent reliability and interpretability.
+          </p>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Business Impact Across Stages</h2>
+          
+          <div className="overflow-x-auto mb-8">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="text-left py-3 px-4 font-bold">Stage</th>
+                  <th className="text-left py-3 px-4 font-bold">Efficiency Gain</th>
+                  <th className="text-left py-3 px-4 font-bold">Human Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100">
+                  <td className="py-3 px-4">Rule-Based</td>
+                  <td className="py-3 px-4">2-3x</td>
+                  <td className="py-3 px-4">Define rules</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-3 px-4">Machine Learning</td>
+                  <td className="py-3 px-4">5-10x</td>
+                  <td className="py-3 px-4">Label data</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-3 px-4">Deep Learning</td>
+                  <td className="py-3 px-4">10-50x</td>
+                  <td className="py-3 px-4">Provide examples</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-semibold">Agentic AI</td>
+                  <td className="py-3 px-4 font-semibold">50-100x+</td>
+                  <td className="py-3 px-4 font-semibold">Set goals</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Stage 5: What's Next? (2025-2030)</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            The next evolution points toward:
+          </p>
+          <ul className="space-y-3 text-gray-700 mb-8">
+            <li><strong>Multi-modal agents:</strong> Seamlessly processing text, images, video, and audio</li>
+            <li><strong>Collaborative intelligence:</strong> Teams of specialized agents working in concert</li>
+            <li><strong>Continual learning:</strong> Agents that improve indefinitely without retraining</li>
+            <li><strong>Causal reasoning:</strong> Understanding not just correlations but cause-and-effect</li>
+            <li><strong>General-purpose agents:</strong> Systems that transfer knowledge across domains</li>
+          </ul>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Strategic Imperative</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Each evolutionary stage didn't just improve efficiency—it fundamentally changed what was possible. Organizations that embraced earlier transitions gained lasting advantages. The shift to agentic AI represents an equally pivotal moment.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            The question isn't whether to adopt autonomous AI, but how quickly you can master it before competitors do. The future belongs to organizations that move decisively from automation to autonomy.
+          </p>
+
+          <div className="bg-gradient-to-r from-violet-50 to-purple-50 rounded-2xl p-8 mt-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Join the Autonomy Revolution</h3>
+            <p className="text-gray-700 mb-6">
+              Evolve beyond basic automation. Deploy intelligent agents that think, learn, and act.
+            </p>
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white">
+                Get Started
               </Button>
-              <Button variant="outline" size="sm" className="gap-2">
-                <Bookmark className="w-4 h-4" />
-                Save
-              </Button>
-            </div>
+            </Link>
+          </div>
+        </div>
 
-            <img 
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200" 
-              alt="AI evolution"
-              className="w-full aspect-video object-cover rounded-2xl mb-12"
-            />
-
-            <div className="prose prose-lg prose-gray max-w-none">
-              <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                We've journeyed from punch cards to autonomous AI agents in just 70 years. Understanding this evolution helps us appreciate where we are—and anticipate where we're heading.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Era 1: Manual Processes (Pre-1950s)</h2>
-              <p>
-                Business ran on paper, people, and procedures. Every task required human execution. Bottlenecks were everywhere. Scaling meant hiring more people.
-              </p>
-              <ul className="space-y-2 my-6">
-                <li><strong>Characteristics:</strong> Labor-intensive, error-prone, limited scalability</li>
-                <li><strong>Constraints:</strong> Geography, time zones, human capacity</li>
-                <li><strong>Innovation:</strong> Process standardization, division of labor</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Era 2: Early Automation (1950s-1990s)</h2>
-              <p>
-                Computers automated calculations and data storage. Mainframes processed payroll, inventory, and accounting.
-              </p>
-              <ul className="space-y-2 my-6">
-                <li><strong>Capabilities:</strong> Fast computation, reliable storage, batch processing</li>
-                <li><strong>Limitations:</strong> Rigid programs, brittle to change, required technical expertise</li>
-                <li><strong>Impact:</strong> 10x productivity in computational tasks</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Era 3: Workflow Automation (1990s-2010s)</h2>
-              <p>
-                Software automated business processes end-to-end. ERP, CRM, and workflow engines connected departments.
-              </p>
-              <ul className="space-y-2 my-6">
-                <li><strong>Innovation:</strong> Process orchestration, system integration, real-time data</li>
-                <li><strong>Achievement:</strong> Eliminated manual handoffs, improved visibility</li>
-                <li><strong>Limitation:</strong> Still required rule definition, brittle to exceptions</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Era 4: Intelligent Automation (2010s-2020)</h2>
-              <p>
-                Machine learning added adaptability. Systems learned patterns, made predictions, handled variations.
-              </p>
-              <ul className="space-y-2 my-6">
-                <li><strong>Breakthroughs:</strong> Pattern recognition, predictive analytics, natural language processing</li>
-                <li><strong>Applications:</strong> Fraud detection, recommendation engines, chatbots</li>
-                <li><strong>Constraint:</strong> Still required human decision-making, narrow task focus</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Era 5: Agentic AI (2020-Present)</h2>
-              <p>
-                True autonomy emerges. AI agents perceive, decide, and act independently within defined goals.
-              </p>
-              
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Key Enabling Technologies</h3>
-              <ul className="space-y-2 my-6">
-                <li><strong>Large Language Models:</strong> Understanding and generation at human level</li>
-                <li><strong>Reinforcement Learning:</strong> Agents learn optimal strategies through trial</li>
-                <li><strong>Advanced Planning:</strong> Multi-step reasoning and strategy</li>
-                <li><strong>Tool Use:</strong> Agents can use APIs, databases, and applications</li>
-              </ul>
-
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Changed</h3>
-              <p>
-                The difference between intelligent automation and agentic AI is profound:
-              </p>
-              
-              <div className="overflow-x-auto my-8">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-4 py-3 text-left">Aspect</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left">Intelligent Automation</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left">Agentic AI</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">Decision-making</td>
-                      <td className="border border-gray-300 px-4 py-3">Rule-based, predefined</td>
-                      <td className="border border-gray-300 px-4 py-3">Dynamic, context-aware</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">Learning</td>
-                      <td className="border border-gray-300 px-4 py-3">Static, requires retraining</td>
-                      <td className="border border-gray-300 px-4 py-3">Continuous, self-improving</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">Scope</td>
-                      <td className="border border-gray-300 px-4 py-3">Single task or process</td>
-                      <td className="border border-gray-300 px-4 py-3">Multi-task, goal-oriented</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-3 font-semibold">Oversight</td>
-                      <td className="border border-gray-300 px-4 py-3">Human review required</td>
-                      <td className="border border-gray-300 px-4 py-3">Autonomous with guardrails</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Looking Forward: Era 6</h2>
-              <p>
-                What comes after agentic AI? Early signals point to:
-              </p>
-
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Self-Organizing Systems</h3>
-              <p>
-                AI agents that form spontaneous teams to tackle emerging challenges. No human orchestration needed—agents negotiate roles and coordinate autonomously.
-              </p>
-
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Cross-Enterprise Agents</h3>
-              <p>
-                Agents representing different organizations negotiating contracts, optimizing supply chains, and coordinating projects across company boundaries.
-              </p>
-
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Artificial General Intelligence (AGI)</h3>
-              <p>
-                Systems with human-level intelligence across all domains. Still theoretical, but research accelerates.
-              </p>
-
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Quantum-Enhanced AI</h3>
-              <p>
-                Quantum computing could enable optimization and simulation at scales impossible today, unlocking new agent capabilities.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Strategic Implications for Enterprises</h2>
-              
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Competitive Dynamics Shift</h3>
-              <p>
-                Companies with mature agentic AI operate at fundamentally different cost structures and speeds. The gap between leaders and laggards widens exponentially.
-              </p>
-
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Talent Requirements Change</h3>
-              <p>
-                Recruiting shifts from task executors to strategic thinkers. Compensation reflects value creation, not hours worked.
-              </p>
-
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Innovation Accelerates</h3>
-              <p>
-                When deployment cycles compress from months to days, experimentation explodes. Organizations iterate toward product-market fit faster than ever.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Your Journey: Practical Next Steps</h2>
-              <ol className="space-y-2 my-6">
-                <li><strong>Assess current state:</strong> Where are you on the automation-to-autonomy spectrum?</li>
-                <li><strong>Identify quick wins:</strong> High-volume, low-complexity processes for initial agents</li>
-                <li><strong>Build capability:</strong> Train teams on no-code agent platforms</li>
-                <li><strong>Start small:</strong> Deploy 2-3 pilot agents in controlled environments</li>
-                <li><strong>Measure everything:</strong> Establish ROI tracking from day one</li>
-                <li><strong>Scale successes:</strong> Replicate winning patterns across organization</li>
-                <li><strong>Iterate continuously:</strong> Improve based on data, not assumptions</li>
-              </ol>
-
-              <p className="text-xl text-gray-700 mt-12 p-6 bg-yellow-50 rounded-xl border-l-4 border-yellow-600">
-                We're witnessing a once-in-a-century technological shift. The move from automation to autonomy is as significant as the move from manual to automated. Organizations that understand this aren't just adopting new technology—they're fundamentally reimagining how work gets done. The future is autonomous. The question is: will you lead it or follow it?
-              </p>
-            </div>
-          </motion.div>
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <Link to={createPageUrl('Blog')}>
+            <Button variant="ghost" className="gap-2">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
+            </Button>
+          </Link>
         </div>
       </article>
     </div>
