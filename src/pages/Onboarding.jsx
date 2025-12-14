@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2, TrendingUp, Clock, DollarSign, Target, Search } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2, TrendingUp, Clock, DollarSign, Target } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 
 const verticals = [
@@ -328,6 +328,7 @@ const hearAboutUs = [
 
 export default function Onboarding() {
     const [step, setStep] = useState(1);
+    const [painPointSearch, setPainPointSearch] = useState('');
     const [formData, setFormData] = useState({
     vertical: '',
     companyName: '',
@@ -341,51 +342,9 @@ export default function Onboarding() {
     agentPurpose: '',
     email: ''
   });
-  const [painPointSearch, setPainPointSearch] = useState('');
 
-  const totalSteps = 9;
+  const totalSteps = 10;
   const selectedVertical = verticals.find(v => v.id === formData.vertical);
-  const filteredPainPoints = painPoints.filter(point => 
-    point.toLowerCase().includes(painPointSearch.toLowerCase())
-  );
-  
-  const getChartDataForPainPoint = (painPoint) => {
-    // Generate relevant chart data based on pain point category
-    const categories = {
-      cost: { title: 'Cost Impact Analysis', data: [
-        { month: 'Jan', current: 85000, optimized: 50000 },
-        { month: 'Feb', current: 92000, optimized: 55000 },
-        { month: 'Mar', current: 88000, optimized: 53000 },
-        { month: 'Apr', current: 95000, optimized: 57000 }
-      ]},
-      time: { title: 'Time Savings Projection', data: [
-        { metric: 'Current', hours: 160 },
-        { metric: 'With AI', hours: 48 },
-        { metric: 'Saved', hours: 112 }
-      ]},
-      efficiency: { title: 'Efficiency Gains', data: [
-        { category: 'Manual', value: 35 },
-        { category: 'Semi-Auto', value: 65 },
-        { category: 'Fully Auto', value: 95 }
-      ]},
-      quality: { title: 'Quality Improvement', data: [
-        { metric: 'Accuracy', before: 78, after: 98 },
-        { metric: 'Satisfaction', before: 72, after: 94 },
-        { metric: 'Retention', before: 65, after: 89 }
-      ]}
-    };
-    
-    // Determine category based on pain point keywords
-    if (painPoint.toLowerCase().includes('cost') || painPoint.toLowerCase().includes('price') || painPoint.toLowerCase().includes('budget')) {
-      return categories.cost;
-    } else if (painPoint.toLowerCase().includes('time') || painPoint.toLowerCase().includes('slow') || painPoint.toLowerCase().includes('fast')) {
-      return categories.time;
-    } else if (painPoint.toLowerCase().includes('quality') || painPoint.toLowerCase().includes('accuracy') || painPoint.toLowerCase().includes('satisfaction')) {
-      return categories.quality;
-    } else {
-      return categories.efficiency;
-    }
-  };
 
   const nextStep = () => setStep(Math.min(step + 1, totalSteps));
   const prevStep = () => setStep(Math.max(step - 1, 1));
@@ -436,12 +395,12 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 2 && selectedVertical) {
+    if (step === 3) {
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">{selectedVertical.name} Impact</h2>
           <p className="text-purple-100 text-lg mb-8">{selectedVertical.insight}</p>
-          
+
           <div className="space-y-4 mb-8">
             {Object.entries(selectedVertical.stats).map(([key, value], idx) => (
               <div key={key} className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -476,7 +435,7 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 3) {
+    if (step === 4) {
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">Decision Makers Choose Us</h2>
@@ -525,7 +484,7 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 4) {
+    if (step === 5) {
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">Team Size Matters</h2>
@@ -568,7 +527,7 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 5) {
+    if (step === 6) {
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">Company Growth</h2>
@@ -614,80 +573,86 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 6 && formData.painPoints.length > 0) {
-      const chartData = getChartDataForPainPoint(formData.painPoints[0]);
+    if (step === 2 && selectedVertical) {
       return (
         <div className="text-white">
-          <h2 className="text-3xl font-bold mb-4">Impact Analysis</h2>
-          <p className="text-purple-100 text-lg mb-6">Based on your selected challenges</p>
+          <h2 className="text-3xl font-bold mb-4">{selectedVertical.name} Insight</h2>
+          <p className="text-purple-100 text-lg mb-8">{selectedVertical.insight}</p>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
-            <h3 className="font-semibold mb-4">{chartData.title}</h3>
-            <div className="bg-white/5 rounded-lg p-4">
-              {chartData.data.map((item, idx) => (
-                <div key={idx} className="mb-3 last:mb-0">
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>{Object.values(item)[0]}</span>
-                    <span className="font-bold">{Object.values(item)[1]}{typeof Object.values(item)[1] === 'number' && Object.values(item)[1] > 100 ? '' : '%'}</span>
-                  </div>
-                  {typeof Object.values(item)[1] === 'number' && (
-                    <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                      <motion.div 
-                        className="h-full bg-gradient-to-r from-green-400 to-emerald-300"
-                        initial={{ width: 0 }}
-                        animate={{ width: `${Math.min(Object.values(item)[1], 100)}%` }}
-                        transition={{ duration: 1, delay: idx * 0.1 }}
-                      />
-                    </div>
-                  )}
-                </div>
-              ))}
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold">$0</div>
+              <div className="text-sm text-purple-100">Setup fee</div>
             </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-            <h3 className="font-semibold mb-3">Your Selected Challenges ({formData.painPoints.length})</h3>
-            <div className="space-y-2 max-h-48 overflow-y-auto">
-              {formData.painPoints.map((point, idx) => (
-                <div key={idx} className="text-sm bg-white/5 rounded px-3 py-2">
-                  {point}
-                </div>
-              ))}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold">30 days</div>
+              <div className="text-sm text-purple-100">Free trial</div>
             </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mt-4">
-            <Target className="w-8 h-8 mb-2" />
-            <div className="text-2xl font-bold mb-1">92%</div>
-            <div className="text-sm text-purple-100">Report significant improvement in their top 3 pain points within 90 days</div>
           </div>
         </div>
       );
     }
 
-    if (step === 6) {
+    if (step === 7) {
+      const selectedChallenges = formData.painPoints;
+
+      // Map challenges to relevant metrics and charts
+      const getChallengeData = () => {
+        if (selectedChallenges.length === 0) {
+          return {
+            title: 'Common Pain Points',
+            subtitle: 'What challenges are you facing?',
+            metrics: [
+              { pain: 'Manual tasks', percent: 78 },
+              { pain: 'High costs', percent: 72 },
+              { pain: 'Data silos', percent: 65 },
+              { pain: 'Poor CX', percent: 58 }
+            ]
+          };
+        }
+
+        // Categorize selected challenges and show relevant data
+        const hasOperationalChallenge = selectedChallenges.some(c => 
+          c.includes('process') || c.includes('operational') || c.includes('efficiency') || c.includes('workflow')
+        );
+        const hasFinancialChallenge = selectedChallenges.some(c => 
+          c.includes('cost') || c.includes('budget') || c.includes('Cash flow') || c.includes('financial')
+        );
+        const hasCustomerChallenge = selectedChallenges.some(c => 
+          c.includes('customer') || c.includes('satisfaction') || c.includes('conversion') || c.includes('churn')
+        );
+
+        return {
+          title: 'Impact on Your Challenges',
+          subtitle: `${selectedChallenges.length} challenge${selectedChallenges.length > 1 ? 's' : ''} selected`,
+          metrics: [
+            hasOperationalChallenge && { pain: 'Process efficiency gain', percent: 85, color: 'from-blue-400 to-cyan-300' },
+            hasFinancialChallenge && { pain: 'Cost reduction', percent: 72, color: 'from-green-400 to-emerald-300' },
+            hasCustomerChallenge && { pain: 'Customer satisfaction', percent: 65, color: 'from-purple-400 to-pink-300' },
+            { pain: 'Time saved', percent: 78, color: 'from-yellow-400 to-orange-300' }
+          ].filter(Boolean)
+        };
+      };
+
+      const challengeData = getChallengeData();
+
       return (
         <div className="text-white">
-          <h2 className="text-3xl font-bold mb-4">Common Pain Points</h2>
-          <p className="text-purple-100 text-lg mb-8">What challenges are you facing?</p>
+          <h2 className="text-3xl font-bold mb-4">{challengeData.title}</h2>
+          <p className="text-purple-100 text-lg mb-8">{challengeData.subtitle}</p>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
-            <h3 className="font-semibold mb-4">Most Selected Challenges</h3>
+            <h3 className="font-semibold mb-4">Potential Impact</h3>
             <div className="space-y-3">
-              {[
-                { pain: 'Manual tasks', percent: 78 },
-                { pain: 'High costs', percent: 72 },
-                { pain: 'Data silos', percent: 65 },
-                { pain: 'Poor CX', percent: 58 }
-              ].map((item, idx) => (
+              {challengeData.metrics.map((item, idx) => (
                 <div key={idx}>
                   <div className="flex justify-between text-sm mb-1">
                     <span>{item.pain}</span>
-                    <span>{item.percent}% select this</span>
+                    <span>{item.percent}%</span>
                   </div>
                   <div className="h-2 bg-white/20 rounded-full overflow-hidden">
                     <motion.div 
-                      className="h-full bg-gradient-to-r from-red-400 to-yellow-300"
+                      className={`h-full bg-gradient-to-r ${item.color || 'from-red-400 to-yellow-300'}`}
                       initial={{ width: 0 }}
                       animate={{ width: `${item.percent}%` }}
                       transition={{ duration: 1, delay: idx * 0.1 }}
@@ -707,7 +672,7 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 7) {
+    if (step === 8) {
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">How Others Found Us</h2>
@@ -754,7 +719,7 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 8) {
+    if (step === 9) {
       return (
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">Your Agentic Ai</h2>
@@ -797,7 +762,7 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 9) {
+    if (step === 10) {
       return (
         <div className="text-white text-center">
           <div className="w-32 h-32 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
@@ -898,9 +863,37 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 2: Company Name */}
+            {/* Step 2: Vertical Impact */}
             {step === 2 && selectedVertical && (
               <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex-1">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Perfect! Tell us about your company</h1>
+                  <p className="text-gray-600 mb-6">We'll customize your experience</p>
+                  <div className="space-y-6">
+                    <div>
+                      <Label htmlFor="company">Company Name</Label>
+                      <Input id="company" placeholder="Your company name" value={formData.companyName} onChange={(e) => setFormData({ ...formData, companyName: e.target.value })} className="mt-2" />
+                    </div>
+                    <div>
+                      <Label htmlFor="website">Company Website</Label>
+                      <Input id="website" type="url" placeholder="https://yourcompany.com" value={formData.companyWebsite} onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })} className="mt-2" />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.companyName || !formData.companyWebsite} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
+              )}
+
+            {/* Step 3: Company Info */}
+            {step === 3 && selectedVertical && (
+              <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Perfect! Let's customize for {selectedVertical.name}</h1>
                   <p className="text-gray-600 mb-6">Tell us about your company</p>
@@ -920,7 +913,7 @@ export default function Onboarding() {
                     </div>
                     <div>
                       <Label htmlFor="website">Company Website</Label>
-                      <Input id="website" placeholder="https://yourcompany.com" value={formData.companyWebsite} onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })} className="mt-2" />
+                      <Input id="website" type="url" placeholder="https://yourcompany.com" value={formData.companyWebsite} onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })} className="mt-2" />
                     </div>
                   </div>
                 </div>
@@ -935,9 +928,9 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 3: Role */}
-            {step === 3 && (
-              <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+            {/* Step 4: Role */}
+            {step === 4 && (
+              <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What's your role?</h1>
                   <p className="text-gray-600 mb-8">Help us understand your position</p>
@@ -960,9 +953,9 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 4: Team Size */}
-            {step === 4 && (
-              <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+            {/* Step 5: Team Size */}
+            {step === 5 && (
+              <motion.div key="step5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How many people are on your team?</h1>
                   <p className="text-gray-600 mb-8">The team that will use this platform</p>
@@ -985,9 +978,9 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 5: Company Size */}
-            {step === 5 && (
-              <motion.div key="step5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+            {/* Step 6: Company Size */}
+            {step === 6 && (
+              <motion.div key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How large is your organization?</h1>
                   <p className="text-gray-600 mb-8">Total number of employees</p>
@@ -1010,25 +1003,25 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 6: Pain Points */}
-            {step === 6 && (
-              <motion.div key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+            {/* Step 7: Pain Points */}
+            {step === 7 && (
+              <motion.div key="step7" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1 flex flex-col">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What challenges are you facing?</h1>
                   <p className="text-gray-600 mb-4">Select all that apply</p>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-sm text-gray-500">
-                      {formData.painPoints.length} selected
-                    </div>
-                    <Input
-                      placeholder="Search challenges..."
+                  <div className="text-sm text-gray-500 mb-4">
+                    {formData.painPoints.length} selected
+                  </div>
+                  <div className="mb-4">
+                    <Input 
+                      placeholder="Search challenges..." 
                       value={painPointSearch}
                       onChange={(e) => setPainPointSearch(e.target.value)}
-                      className="w-64 h-9"
+                      className="w-full"
                     />
                   </div>
-                  <div className="grid gap-2 flex-1 overflow-y-auto pr-2">
-                    {filteredPainPoints.map((point) => (
+                  <div className="grid gap-2 overflow-y-auto pr-2 flex-1">
+                    {painPoints.filter(point => point.toLowerCase().includes(painPointSearch.toLowerCase())).map((point) => (
                       <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${formData.painPoints.includes(point) ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {point}
                       </button>
@@ -1046,9 +1039,9 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 7: How did you hear */}
-            {step === 7 && (
-              <motion.div key="step7" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+            {/* Step 8: How did you hear */}
+            {step === 8 && (
+              <motion.div key="step8" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How did you hear about us?</h1>
                   <p className="text-gray-600 mb-8">Help us understand our reach</p>
@@ -1071,9 +1064,9 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 8: Agent Design */}
-            {step === 8 && (
-              <motion.div key="step8" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+            {/* Step 9: Agent Design */}
+            {step === 9 && (
+              <motion.div key="step9" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Design your Agentic Ai</h1>
                   <p className="text-gray-600 mb-8">Customize your assistant</p>
@@ -1099,8 +1092,8 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 9: Final */}
-            {step === 9 && selectedVertical && (
+            {/* Step 9: Agent Design */}
+            {step === 9 && (
               <motion.div key="step9" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Almost there!</h1>
@@ -1114,7 +1107,6 @@ export default function Onboarding() {
                     <div className="space-y-2 text-sm text-gray-700">
                       <div><span className="font-medium">Industry:</span> {selectedVertical.name}</div>
                       <div><span className="font-medium">Company:</span> {formData.companyName}</div>
-                      <div><span className="font-medium">Website:</span> {formData.companyWebsite}</div>
                       <div><span className="font-medium">Role:</span> {formData.role}</div>
                       <div><span className="font-medium">Team:</span> {formData.teamSize}</div>
                       <div><span className="font-medium">Agentic Ai:</span> {formData.agentName}</div>

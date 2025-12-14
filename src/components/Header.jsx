@@ -124,7 +124,7 @@ export default function Header() {
             </NavigationMenuPrimitive.Root>
           </nav>
 
-          {/* CTA Buttons - Removed */}
+
 
           {/* Mobile Menu Button */}
           <button
@@ -154,7 +154,7 @@ export default function Header() {
                   ))}
                 </div>
               ))}
-              {/* Mobile CTA - Removed */}
+
             </nav>
           </div>
         )}
