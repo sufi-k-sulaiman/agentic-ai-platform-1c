@@ -8,6 +8,7 @@ import { Calendar, MapPin, Users, Clock, Video, ArrowRight } from 'lucide-react'
 import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
 import RegistrationForm from '@/components/events/RegistrationForm';
+import { toast } from 'sonner';
 
 const events = [
   {
@@ -83,6 +84,8 @@ export default function Events() {
   const [activeTab, setActiveTab] = useState('all');
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showRegistration, setShowRegistration] = useState(false);
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { data: dbEvents = [], refetch } = useQuery({
     queryKey: ['events'],
@@ -105,6 +108,25 @@ export default function Events() {
 
   const handleRegistrationSuccess = () => {
     refetch();
+  };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    try {
+      await base44.entities.NewsletterSignup.create({
+        email,
+        source: 'Events'
+      });
+      toast.success('Successfully subscribed to event updates!');
+      setEmail('');
+    } catch (error) {
+      toast.error('Failed to subscribe. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -286,23 +308,40 @@ export default function Events() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-gray-50">
+      {/* Newsletter Signup */}
+      <section className="py-24 bg-gradient-to-br from-[#8B2EE5] to-[#7C3AED]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Host your own event
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Never miss an event
             </h2>
-            <p className="text-xl text-gray-600 mb-10">
-              Interested in organizing a community meetup or workshop? We'll support you!
+            <p className="text-xl text-purple-100 mb-10">
+              Subscribe to get notified about upcoming workshops, webinars, and conferences
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-14">
-              Contact us <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <form onSubmit={handleSubscribe} className="flex gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="flex-1 h-14 px-6 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40 transition-colors"
+              />
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="h-14 px-8 rounded-full bg-white text-[#8B2EE5] hover:bg-white/90 font-semibold"
+              >
+                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+              </Button>
+            </form>
+            <p className="text-purple-200 text-sm mt-4">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
           </motion.div>
         </div>
       </section>
