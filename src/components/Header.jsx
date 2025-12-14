@@ -4,7 +4,6 @@ import { createPageUrl } from '@/utils';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
-import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 const navItems = [
