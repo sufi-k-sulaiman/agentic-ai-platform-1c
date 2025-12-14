@@ -20,6 +20,10 @@ import Status from './pages/Status';
 import Security from './pages/Security';
 import Privacy from './pages/Privacy';
 import PropertyManagement from './pages/PropertyManagement';
+import DataCenters from './pages/DataCenters';
+import FinancialInstitutions from './pages/FinancialInstitutions';
+import CorporateCampuses from './pages/CorporateCampuses';
+import Healthcare from './pages/Healthcare';
 import __Layout from './Layout.jsx';
 
 
@@ -46,6 +50,10 @@ export const PAGES = {
     "Security": Security,
     "Privacy": Privacy,
     "PropertyManagement": PropertyManagement,
+    "DataCenters": DataCenters,
+    "FinancialInstitutions": FinancialInstitutions,
+    "CorporateCampuses": CorporateCampuses,
+    "Healthcare": Healthcare,
 }
 
 export const pagesConfig = {
