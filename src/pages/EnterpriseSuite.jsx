@@ -104,7 +104,7 @@ export default function EnterpriseSuite() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-lg md:text-xl text-purple-300 mb-4"
+            className="text-lg md:text-xl text-[#8B2EE5] mb-4"
           >
             Enterprise Suite
           </motion.p>
