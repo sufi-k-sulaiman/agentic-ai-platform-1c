@@ -24,6 +24,17 @@ import DataCenters from './pages/DataCenters';
 import FinancialInstitutions from './pages/FinancialInstitutions';
 import CorporateCampuses from './pages/CorporateCampuses';
 import Healthcare from './pages/Healthcare';
+import Transit from './pages/Transit';
+import Traffic from './pages/Traffic';
+import GovernmentAgencies from './pages/GovernmentAgencies';
+import EnergyUtilities from './pages/EnergyUtilities';
+import SportsEntertainment from './pages/SportsEntertainment';
+import Gaming from './pages/Gaming';
+import PublicSafety from './pages/PublicSafety';
+import Cities from './pages/Cities';
+import Airports from './pages/Airports';
+import Retail from './pages/Retail';
+import Education from './pages/Education';
 import __Layout from './Layout.jsx';
 
 
@@ -54,6 +65,17 @@ export const PAGES = {
     "FinancialInstitutions": FinancialInstitutions,
     "CorporateCampuses": CorporateCampuses,
     "Healthcare": Healthcare,
+    "Transit": Transit,
+    "Traffic": Traffic,
+    "GovernmentAgencies": GovernmentAgencies,
+    "EnergyUtilities": EnergyUtilities,
+    "SportsEntertainment": SportsEntertainment,
+    "Gaming": Gaming,
+    "PublicSafety": PublicSafety,
+    "Cities": Cities,
+    "Airports": Airports,
+    "Retail": Retail,
+    "Education": Education,
 }
 
 export const pagesConfig = {
