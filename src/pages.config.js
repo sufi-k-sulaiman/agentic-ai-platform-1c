@@ -43,6 +43,13 @@ import BlogAgenticAIEnterprise from './pages/BlogAgenticAIEnterprise';
 import BlogAutonomousAgents from './pages/BlogAutonomousAgents';
 import BlogMultiAgentSystems from './pages/BlogMultiAgentSystems';
 import BlogNoCodeAgenticAI from './pages/BlogNoCodeAgenticAI';
+import BlogAgenticAISecurity from './pages/BlogAgenticAISecurity';
+import BlogAgenticAIROI from './pages/BlogAgenticAIROI';
+import BlogHumanAICollaboration from './pages/BlogHumanAICollaboration';
+import BlogAutomationToAutonomy from './pages/BlogAutomationToAutonomy';
+import BlogAgenticAIUseCases from './pages/BlogAgenticAIUseCases';
+import BlogAgenticAIEthics from './pages/BlogAgenticAIEthics';
+import BlogAgenticAIScaling from './pages/BlogAgenticAIScaling';
 import __Layout from './Layout.jsx';
 
 
@@ -92,6 +99,13 @@ export const PAGES = {
     "BlogAutonomousAgents": BlogAutonomousAgents,
     "BlogMultiAgentSystems": BlogMultiAgentSystems,
     "BlogNoCodeAgenticAI": BlogNoCodeAgenticAI,
+    "BlogAgenticAISecurity": BlogAgenticAISecurity,
+    "BlogAgenticAIROI": BlogAgenticAIROI,
+    "BlogHumanAICollaboration": BlogHumanAICollaboration,
+    "BlogAutomationToAutonomy": BlogAutomationToAutonomy,
+    "BlogAgenticAIUseCases": BlogAgenticAIUseCases,
+    "BlogAgenticAIEthics": BlogAgenticAIEthics,
+    "BlogAgenticAIScaling": BlogAgenticAIScaling,
 }
 
 export const pagesConfig = {
