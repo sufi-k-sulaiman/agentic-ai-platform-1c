@@ -57,7 +57,7 @@ const solutions = [
     items: [
       'Automated meter reading and billing',
       'Dynamic pricing based on demand patterns',
-      '24/7 AI customer service assistant',
+      '24/7 Agentic Ai customer service assistant',
       'Energy usage insights and recommendations'
     ]
   },
@@ -97,7 +97,7 @@ export default function EnergyUtilities() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform energy operations with AI that optimizes grids, predicts failures, and integrates renewables—reducing waste by 20% and outages by 40%.
+                Transform energy operations with Agentic Ai that optimizes grids, predicts failures, and integrates renewables—reducing waste by 20% and outages by 40%.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to={createPageUrl('Onboarding')}>
@@ -138,7 +138,7 @@ export default function EnergyUtilities() {
               Energy challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms energy and utility operations
+              How Agentic Ai transforms energy and utility operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -177,7 +177,7 @@ export default function EnergyUtilities() {
               Complete grid automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI managing every aspect of energy operations
+              Agentic Ai managing every aspect of energy operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -211,7 +211,7 @@ export default function EnergyUtilities() {
               Ready for smart grid operations?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join leading utilities reducing costs and outages with Agentic AI
+              Join leading utilities reducing costs and outages with Agentic Ai
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">

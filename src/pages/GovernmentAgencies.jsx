@@ -37,7 +37,7 @@ const solutions = [
   {
     category: 'Citizen Services',
     items: [
-      '24/7 AI assistant for government services',
+      '24/7 Agentic Ai assistant for government services',
       'Automated permit and license processing',
       'Self-service portal for common requests',
       'Multi-language support for diverse populations'
@@ -97,7 +97,7 @@ export default function GovernmentAgencies() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform public services with secure Agentic AI that automates workflows, improves citizen experience, and reduces costs by 40%—while maintaining full compliance.
+                Transform public services with secure Agentic Ai that automates workflows, improves citizen experience, and reduces costs by 40%—while maintaining full compliance.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to={createPageUrl('Onboarding')}>
@@ -138,7 +138,7 @@ export default function GovernmentAgencies() {
               Government challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI modernizes public sector operations
+              How Agentic Ai modernizes public sector operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -177,7 +177,7 @@ export default function GovernmentAgencies() {
               Complete government automation
             </h2>
             <p className="text-xl text-gray-600">
-              Secure AI for every department and service
+              Secure Agentic Ai for every department and service
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -211,7 +211,7 @@ export default function GovernmentAgencies() {
               Ready to modernize public services?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join forward-thinking agencies transforming operations with Agentic AI
+              Join forward-thinking agencies transforming operations with Agentic Ai
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
