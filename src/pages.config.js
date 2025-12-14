@@ -84,13 +84,13 @@ import BlogGenerativeAIBusiness from './pages/BlogGenerativeAIBusiness';
 import BlogGenerativeAIFineTuning from './pages/BlogGenerativeAIFineTuning';
 import BlogGenerativeAIFuture from './pages/BlogGenerativeAIFuture';
 import BlogAgenticAIGovernanceIntro from './pages/BlogAgenticAIGovernanceIntro';
-import BlogAIComplianceRegulations from './pages/BlogAIComplianceRegulations';
-import BlogAIRiskManagement from './pages/BlogAIRiskManagement';
-import BlogAIDataGovernance from './pages/BlogAIDataGovernance';
-import BlogAIAuditFrameworks from './pages/BlogAIAuditFrameworks';
-import BlogAIGovernancePolicies from './pages/BlogAIGovernancePolicies';
-import BlogAIAccountability from './pages/BlogAIAccountability';
-import BlogAISecurityGovernance from './pages/BlogAISecurityGovernance';
+import BlogAgenticAICompliance from './pages/BlogAgenticAICompliance';
+import BlogAgenticAIRiskManagement from './pages/BlogAgenticAIRiskManagement';
+import BlogAgenticAISecurityPrivacy from './pages/BlogAgenticAISecurityPrivacy';
+import BlogAgenticAIEthicalFrameworks from './pages/BlogAgenticAIEthicalFrameworks';
+import BlogAgenticAIAccountability from './pages/BlogAgenticAIAccountability';
+import BlogAgenticAIDataGovernance from './pages/BlogAgenticAIDataGovernance';
+import BlogAgenticAIMonitoring from './pages/BlogAgenticAIMonitoring';
 import __Layout from './Layout.jsx';
 
 
@@ -181,13 +181,13 @@ export const PAGES = {
     "BlogGenerativeAIFineTuning": BlogGenerativeAIFineTuning,
     "BlogGenerativeAIFuture": BlogGenerativeAIFuture,
     "BlogAgenticAIGovernanceIntro": BlogAgenticAIGovernanceIntro,
-    "BlogAIComplianceRegulations": BlogAIComplianceRegulations,
-    "BlogAIRiskManagement": BlogAIRiskManagement,
-    "BlogAIDataGovernance": BlogAIDataGovernance,
-    "BlogAIAuditFrameworks": BlogAIAuditFrameworks,
-    "BlogAIGovernancePolicies": BlogAIGovernancePolicies,
-    "BlogAIAccountability": BlogAIAccountability,
-    "BlogAISecurityGovernance": BlogAISecurityGovernance,
+    "BlogAgenticAICompliance": BlogAgenticAICompliance,
+    "BlogAgenticAIRiskManagement": BlogAgenticAIRiskManagement,
+    "BlogAgenticAISecurityPrivacy": BlogAgenticAISecurityPrivacy,
+    "BlogAgenticAIEthicalFrameworks": BlogAgenticAIEthicalFrameworks,
+    "BlogAgenticAIAccountability": BlogAgenticAIAccountability,
+    "BlogAgenticAIDataGovernance": BlogAgenticAIDataGovernance,
+    "BlogAgenticAIMonitoring": BlogAgenticAIMonitoring,
 }
 
 export const pagesConfig = {
