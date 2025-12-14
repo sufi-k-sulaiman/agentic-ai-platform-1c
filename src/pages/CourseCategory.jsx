@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Clock, Users, Star, Filter, ArrowLeft, Play } from 'lucide-react';
+import { BookOpen, Clock, Star, Play, ArrowLeft, Filter } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import PageMeta from '@/components/PageMeta';
 
 const categoryData = {
   'agentic-ai-fundamentals': {
     name: 'Agentic AI Fundamentals',
-    description: 'Master the core concepts of autonomous AI agents and build a strong foundation for advanced topics.',
     level: 'Beginner',
+    description: 'Master the foundational concepts of autonomous AI agents and learn how to build intelligent systems that can make decisions independently.',
     courses: [
       {
         id: 'intro-agentic-ai',
@@ -26,33 +26,33 @@ const categoryData = {
         image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop'
       },
       {
-        id: 'ai-agent-basics',
-        title: 'AI Agent Basics',
-        description: 'Understanding core concepts of agent architecture, perception, and decision-making.',
-        duration: '4 hours',
-        students: 8900,
-        rating: 4.7,
-        level: 'Beginner',
-        modules: 6,
-        image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop'
-      },
-      {
-        id: 'agent-communication',
-        title: 'Agent Communication Protocols',
-        description: 'Learn how AI agents communicate and coordinate with each other and external systems.',
+        id: 'agent-decision-making',
+        title: 'Agent Decision Making',
+        description: 'Understand how AI agents evaluate options, make choices, and execute actions in complex environments.',
         duration: '5 hours',
-        students: 7200,
+        students: 8900,
         rating: 4.8,
         level: 'Beginner',
         modules: 7,
-        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop'
+        image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=250&fit=crop'
+      },
+      {
+        id: 'agent-architecture',
+        title: 'Agent Architecture Basics',
+        description: 'Explore different architectural patterns for building scalable and efficient AI agents.',
+        duration: '7 hours',
+        students: 7200,
+        rating: 4.7,
+        level: 'Beginner',
+        modules: 9,
+        image: 'https://images.unsplash.com/photo-1551033406-611cf9a28f67?w=400&h=250&fit=crop'
       }
     ]
   },
   'platform-development': {
     name: 'Platform Development',
-    description: 'Build and deploy scalable AI platforms with best practices for production environments.',
     level: 'Intermediate',
+    description: 'Build robust AI platforms with best practices for deployment, scaling, and maintenance of production systems.',
     courses: [
       {
         id: 'building-production-ai',
@@ -67,53 +67,53 @@ const categoryData = {
       },
       {
         id: 'platform-architecture',
-        title: 'Platform Architecture Design',
-        description: 'Design robust, scalable architectures for AI platforms serving millions of users.',
-        duration: '8 hours',
+        title: 'Platform Architecture',
+        description: 'Design scalable architectures for AI platforms that can handle millions of requests.',
+        duration: '9 hours',
         students: 6400,
-        rating: 4.7,
+        rating: 4.8,
         level: 'Intermediate',
-        modules: 10,
+        modules: 11,
         image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop'
       }
     ]
   },
   'enterprise-architecture': {
     name: 'Enterprise Architecture',
-    description: 'Design and implement enterprise-grade AI solutions at scale.',
     level: 'Advanced',
+    description: 'Design and implement enterprise-grade AI architectures that scale to support global operations.',
     courses: [
       {
-        id: 'advanced-orchestration',
-        title: 'Advanced Agent Orchestration',
-        description: 'Master complex multi-agent systems and learn to coordinate AI agents working together to solve enterprise challenges.',
-        duration: '12 hours',
-        students: 8200,
-        rating: 4.8,
-        level: 'Advanced',
-        modules: 15,
-        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop'
-      },
-      {
-        id: 'enterprise-scaling',
-        title: 'Enterprise AI Scaling',
-        description: 'Scale AI systems to handle millions of requests with reliability and performance.',
-        duration: '9 hours',
-        students: 5600,
+        id: 'enterprise-ai-design',
+        title: 'Enterprise AI Design Patterns',
+        description: 'Learn proven design patterns for building enterprise AI systems that scale globally.',
+        duration: '14 hours',
+        students: 5200,
         rating: 4.9,
         level: 'Advanced',
-        modules: 11,
-        image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=250&fit=crop'
+        modules: 16,
+        image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop'
+      },
+      {
+        id: 'distributed-ai-systems',
+        title: 'Distributed AI Systems',
+        description: 'Build distributed AI architectures that work across multiple data centers and cloud providers.',
+        duration: '12 hours',
+        students: 4100,
+        rating: 4.8,
+        level: 'Advanced',
+        modules: 14,
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop'
       }
     ]
   },
   'security-compliance': {
     name: 'Security & Compliance',
-    description: 'Implement comprehensive security and compliance frameworks for AI systems.',
     level: 'Intermediate',
+    description: 'Implement comprehensive security controls and ensure regulatory compliance for AI systems.',
     courses: [
       {
-        id: 'enterprise-security',
+        id: 'enterprise-security-ai',
         title: 'Enterprise Security for AI',
         description: 'Implement comprehensive security controls, compliance frameworks, and risk management for AI systems.',
         duration: '8 hours',
@@ -122,92 +122,146 @@ const categoryData = {
         level: 'Advanced',
         modules: 10,
         image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop'
+      },
+      {
+        id: 'ai-compliance',
+        title: 'AI Compliance & Governance',
+        description: 'Navigate regulatory requirements and implement governance frameworks for AI systems.',
+        duration: '7 hours',
+        students: 5800,
+        rating: 4.6,
+        level: 'Intermediate',
+        modules: 9,
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop'
+      }
+    ]
+  },
+  'ai-model-training': {
+    name: 'AI Model Training',
+    level: 'Advanced',
+    description: 'Train, fine-tune, and optimize AI models for production use cases with state-of-the-art techniques.',
+    courses: [
+      {
+        id: 'advanced-model-training',
+        title: 'Advanced Model Training',
+        description: 'Master cutting-edge techniques for training large-scale AI models efficiently.',
+        duration: '15 hours',
+        students: 4900,
+        rating: 4.9,
+        level: 'Advanced',
+        modules: 18,
+        image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop'
+      },
+      {
+        id: 'model-optimization',
+        title: 'Model Optimization',
+        description: 'Optimize AI models for performance, accuracy, and resource efficiency.',
+        duration: '11 hours',
+        students: 3700,
+        rating: 4.8,
+        level: 'Advanced',
+        modules: 13,
+        image: 'https://images.unsplash.com/photo-1527474305487-b87b222841cc?w=400&h=250&fit=crop'
+      }
+    ]
+  },
+  'integration-patterns': {
+    name: 'Integration Patterns',
+    level: 'Intermediate',
+    description: 'Connect AI agents with existing systems using proven integration patterns and best practices.',
+    courses: [
+      {
+        id: 'api-integration',
+        title: 'API Integration for AI',
+        description: 'Build robust API integrations to connect AI agents with enterprise systems.',
+        duration: '8 hours',
+        students: 7100,
+        rating: 4.7,
+        level: 'Intermediate',
+        modules: 10,
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop'
+      },
+      {
+        id: 'event-driven-ai',
+        title: 'Event-Driven AI Architecture',
+        description: 'Implement event-driven patterns for real-time AI agent communication.',
+        duration: '9 hours',
+        students: 5600,
+        rating: 4.8,
+        level: 'Intermediate',
+        modules: 11,
+        image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=250&fit=crop'
       }
     ]
   }
 };
 
 export default function CourseCategory() {
-  const [filter, setFilter] = useState('all');
-  const categorySlug = new URLSearchParams(window.location.search).get('category') || 'agentic-ai-fundamentals';
-  const category = categoryData[categorySlug] || categoryData['agentic-ai-fundamentals'];
-
-  const filteredCourses = filter === 'all' ? category.courses : category.courses.filter(c => c.level === filter);
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryId = urlParams.get('id') || 'agentic-ai-fundamentals';
+  
+  const category = useMemo(() => categoryData[categoryId] || categoryData['agentic-ai-fundamentals'], [categoryId]);
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white">
       <PageMeta 
         title={`${category.name} Courses`}
         description={category.description}
-        url={`/course-category?category=${categorySlug}`}
-        keywords={['AI courses', category.name, 'online learning', 'certification']}
+        url={`/course-category?id=${categoryId}`}
+        keywords={[category.name, 'AI courses', 'professional training', category.level]}
       />
-
-      {/* Hero */}
+      
+      {/* Header */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <Link to={createPageUrl('Courses')}>
-            <Button variant="ghost" className="mb-8 -ml-4">
+            <Button variant="ghost" className="mb-6 hover:bg-purple-100">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to all courses
             </Button>
           </Link>
+          
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
           >
-            <Badge className="bg-purple-100 text-[#8B2EE5] mb-4">
-              {category.level} Level
+            <Badge className="bg-purple-100 text-[#8B2EE5] mb-6">
+              {category.level}
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {category.name}
             </h1>
-            <p className="text-2xl text-gray-600 max-w-3xl">
+            <p className="text-2xl text-gray-600 leading-relaxed mb-8">
               {category.description}
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Filters */}
-      <section className="py-8 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-4">
-            <Filter className="w-5 h-5 text-gray-500" />
-            <div className="flex gap-2">
-              {['all', 'Beginner', 'Intermediate', 'Advanced'].map((level) => (
-                <Button
-                  key={level}
-                  variant={filter === level ? 'default' : 'outline'}
-                  className={filter === level ? 'bg-[#8B2EE5]' : ''}
-                  onClick={() => setFilter(level)}
-                  size="sm"
-                >
-                  {level === 'all' ? 'All Levels' : level}
-                </Button>
-              ))}
+            <div className="flex items-center gap-6 text-gray-600">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-[#8B2EE5]" />
+                <span>{category.courses.length} courses</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <span>4.8 avg rating</span>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Courses Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">
-              {filteredCourses.length} {filteredCourses.length === 1 ? 'course' : 'courses'}
-            </h2>
-          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCourses.map((course, index) => (
+            {category.courses.map((course, index) => (
               <motion.div
                 key={course.id}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Link to={`${createPageUrl('CourseDetail')}?id=${course.id}`}>
+                <Link to={createPageUrl('CourseDetail') + `?id=${course.id}`}>
                   <Card className="h-full hover:shadow-xl transition-all overflow-hidden cursor-pointer">
                     <div className="relative h-48">
                       <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
@@ -229,16 +283,18 @@ export default function CourseCategory() {
                       </div>
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{course.title}</h3>
-                      <p className="text-gray-600 mb-4 line-clamp-2">{course.description}</p>
-                      <div className="flex items-center gap-2 mb-4">
-                        <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                        <span className="font-semibold">{course.rating}</span>
-                        <span className="text-gray-500 text-sm">({course.students.toLocaleString()})</span>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">{course.title}</h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">{course.description}</p>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2">
+                          <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                          <span className="font-semibold text-sm">{course.rating}</span>
+                          <span className="text-gray-500 text-sm">({course.students.toLocaleString()})</span>
+                        </div>
                       </div>
-                      <Button className="w-full bg-[#8B2EE5] hover:bg-[#7325C4]">
+                      <Button className="w-full bg-[#8B2EE5] hover:bg-[#7325C4]" size="sm">
                         <Play className="w-4 h-4 mr-2" />
-                        Start learning
+                        View course
                       </Button>
                     </CardContent>
                   </Card>

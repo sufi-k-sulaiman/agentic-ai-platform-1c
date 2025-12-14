@@ -4,22 +4,23 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Clock, Users, Star, CheckCircle, ArrowRight, Play } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import PageMeta from '@/components/PageMeta';
 
 const categories = [
-  { name: 'Agentic Ai Fundamentals', count: 12, level: 'Beginner' },
-  { name: 'Platform Development', count: 18, level: 'Intermediate' },
-  { name: 'Enterprise Architecture', count: 15, level: 'Advanced' },
-  { name: 'Security & Compliance', count: 10, level: 'Intermediate' },
-  { name: 'AI Model Training', count: 14, level: 'Advanced' },
-  { name: 'Integration Patterns', count: 9, level: 'Intermediate' }
+  { id: 'agentic-ai-fundamentals', name: 'Agentic AI Fundamentals', count: 12, level: 'Beginner' },
+  { id: 'platform-development', name: 'Platform Development', count: 18, level: 'Intermediate' },
+  { id: 'enterprise-architecture', name: 'Enterprise Architecture', count: 15, level: 'Advanced' },
+  { id: 'security-compliance', name: 'Security & Compliance', count: 10, level: 'Intermediate' },
+  { id: 'ai-model-training', name: 'AI Model Training', count: 14, level: 'Advanced' },
+  { id: 'integration-patterns', name: 'Integration Patterns', count: 9, level: 'Intermediate' }
 ];
 
 const featuredCourses = [
   {
-    title: 'Introduction to Agentic Ai',
+    id: 'intro-agentic-ai',
+    title: 'Introduction to Agentic AI',
     description: 'Learn the fundamentals of building autonomous AI agents that can make decisions and take actions independently.',
     duration: '6 hours',
     students: 12500,
@@ -29,6 +30,7 @@ const featuredCourses = [
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop'
   },
   {
+    id: 'advanced-agent-orchestration',
     title: 'Advanced Agent Orchestration',
     description: 'Master complex multi-agent systems and learn to coordinate AI agents working together to solve enterprise challenges.',
     duration: '12 hours',
@@ -39,6 +41,7 @@ const featuredCourses = [
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop'
   },
   {
+    id: 'building-production-ai',
     title: 'Building Production AI Systems',
     description: 'Deploy scalable, reliable AI agents in production environments with best practices for monitoring and optimization.',
     duration: '10 hours',
@@ -49,6 +52,7 @@ const featuredCourses = [
     image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop'
   },
   {
+    id: 'enterprise-security-ai',
     title: 'Enterprise Security for AI',
     description: 'Implement comprehensive security controls, compliance frameworks, and risk management for AI systems.',
     duration: '8 hours',
@@ -160,8 +164,8 @@ export default function Courses() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Link to={`${createPageUrl('CourseCategory')}?category=${category.name.toLowerCase().replace(/ /g, '-').replace(/&/g, '')}`}>
-                  <Card className="hover:shadow-xl transition-all cursor-pointer">
+                <Link to={createPageUrl('CourseCategory') + `?id=${category.id}`}>
+                  <Card className="hover:shadow-xl transition-all cursor-pointer h-full">
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
@@ -203,7 +207,7 @@ export default function Courses() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Link to={`${createPageUrl('CourseDetail')}?id=${course.title.toLowerCase().replace(/ /g, '-')}`}>
+                <Link to={createPageUrl('CourseDetail') + `?id=${course.id}`}>
                   <Card className="h-full hover:shadow-xl transition-all overflow-hidden cursor-pointer">
                     <div className="relative h-48">
                       <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
@@ -236,7 +240,7 @@ export default function Courses() {
                       </div>
                       <Button className="w-full bg-[#8B2EE5] hover:bg-[#7325C4]">
                         <Play className="w-4 h-4 mr-2" />
-                        Start learning
+                        View course
                       </Button>
                     </CardContent>
                   </Card>
