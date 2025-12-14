@@ -5,7 +5,9 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
-import { ArrowRight, TrendingUp, DollarSign, Clock, Users } from 'lucide-react';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Badge } from '@/components/ui/badge';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Users, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
@@ -21,9 +23,23 @@ export default function SavingsCalculator() {
   const [avgLaborCost, setAvgLaborCost] = useState(85000);
   const [hoursPerWeek, setHoursPerWeek] = useState(10);
   const [dailyTasks, setDailyTasks] = useState(15);
-  const [numSystems, setNumSystems] = useState(8);
-  const [softwareTypes, setSoftwareTypes] = useState('CRM, ERP, Email, Slack');
+  const [softwareTypes, setSoftwareTypes] = useState(['Salesforce', 'Microsoft 365', 'Slack']);
   const [automationRate, setAutomationRate] = useState(70);
+
+  const availableSoftware = [
+    'Salesforce', 'Microsoft 365', 'Google Workspace', 'Slack', 'Zoom',
+    'SAP', 'Oracle', 'Workday', 'ServiceNow', 'Jira', 'Confluence',
+    'HubSpot', 'Zendesk', 'Adobe Creative Cloud', 'Tableau', 'Power BI',
+    'QuickBooks', 'NetSuite', 'Shopify', 'Asana', 'Monday.com', 'Trello'
+  ];
+
+  const toggleSoftware = (software) => {
+    setSoftwareTypes(prev => 
+      prev.includes(software) 
+        ? prev.filter(s => s !== software)
+        : [...prev, software]
+    );
+  };
 
   // Calculations
   const annualLaborCost = totalFTEs * avgLaborCost;
@@ -33,7 +49,6 @@ export default function SavingsCalculator() {
   const threeYearSavings = annualSavings * 3;
   const productivityGain = (hoursSavedPerYear / (totalFTEs * 2080)) * 100;
   const tasksAutomatedDaily = dailyTasks * (automationRate / 100) * totalFTEs;
-  const systemsIntegrationValue = numSystems * 5000; // Estimated value per system integration
 
   return (
     <div className="bg-white">
@@ -117,60 +132,64 @@ export default function SavingsCalculator() {
                     />
                   </div>
 
-                  <div className="space-y-3">
-                    <Label className="text-base">Remote Employees (%)</Label>
-                    <Input
-                      type="number"
-                      value={remote}
-                      onChange={(e) => setRemote(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
-                      className="h-12 text-lg"
-                    />
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      <Label className="text-base">Remote Employees (%)</Label>
+                      <Input
+                        type="number"
+                        value={remote}
+                        onChange={(e) => setRemote(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
+                        className="h-12 text-lg"
+                      />
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label className="text-base">Hybrid Employees (%)</Label>
+                      <Input
+                        type="number"
+                        value={hybrid}
+                        onChange={(e) => setHybrid(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
+                        className="h-12 text-lg"
+                      />
+                    </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <Label className="text-base">Hybrid Employees (%)</Label>
-                    <Input
-                      type="number"
-                      value={hybrid}
-                      onChange={(e) => setHybrid(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
-                      className="h-12 text-lg"
-                    />
-                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      <Label className="text-base">Average Salary ($)</Label>
+                      <Input
+                        type="number"
+                        value={avgSalary}
+                        onChange={(e) => setAvgSalary(Math.max(0, parseInt(e.target.value) || 0))}
+                        className="h-12 text-lg"
+                      />
+                      <Slider
+                        value={[avgSalary]}
+                        onValueChange={([value]) => setAvgSalary(value)}
+                        min={30000}
+                        max={200000}
+                        step={5000}
+                        className="mt-2"
+                      />
+                    </div>
 
-                  <div className="space-y-3">
-                    <Label className="text-base">Average Salary ($)</Label>
-                    <Input
-                      type="number"
-                      value={avgSalary}
-                      onChange={(e) => setAvgSalary(Math.max(0, parseInt(e.target.value) || 0))}
-                      className="h-12 text-lg"
-                    />
-                    <Slider
-                      value={[avgSalary]}
-                      onValueChange={([value]) => setAvgSalary(value)}
-                      min={30000}
-                      max={200000}
-                      step={5000}
-                      className="mt-2"
-                    />
-                  </div>
-
-                  <div className="space-y-3">
-                    <Label className="text-base">Average Labour Cost ($)</Label>
-                    <Input
-                      type="number"
-                      value={avgLaborCost}
-                      onChange={(e) => setAvgLaborCost(Math.max(0, parseInt(e.target.value) || 0))}
-                      className="h-12 text-lg"
-                    />
-                    <Slider
-                      value={[avgLaborCost]}
-                      onValueChange={([value]) => setAvgLaborCost(value)}
-                      min={40000}
-                      max={250000}
-                      step={5000}
-                      className="mt-2"
-                    />
+                    <div className="space-y-3">
+                      <Label className="text-base">Average Labour Cost ($)</Label>
+                      <Input
+                        type="number"
+                        value={avgLaborCost}
+                        onChange={(e) => setAvgLaborCost(Math.max(0, parseInt(e.target.value) || 0))}
+                        className="h-12 text-lg"
+                      />
+                      <Slider
+                        value={[avgLaborCost]}
+                        onValueChange={([value]) => setAvgLaborCost(value)}
+                        min={40000}
+                        max={250000}
+                        step={5000}
+                        className="mt-2"
+                      />
+                    </div>
                   </div>
 
                   <div className="space-y-3">
@@ -202,24 +221,39 @@ export default function SavingsCalculator() {
                   </div>
 
                   <div className="space-y-3">
-                    <Label className="text-base">Number of Systems Used</Label>
-                    <Input
-                      type="number"
-                      value={numSystems}
-                      onChange={(e) => setNumSystems(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="h-12 text-lg"
-                    />
-                  </div>
-
-                  <div className="space-y-3">
                     <Label className="text-base">Software Types Used</Label>
-                    <Input
-                      type="text"
-                      value={softwareTypes}
-                      onChange={(e) => setSoftwareTypes(e.target.value)}
-                      placeholder="e.g., CRM, ERP, Email, Slack"
-                      className="h-12 text-lg"
-                    />
+                    <div className="border rounded-lg p-4 max-h-64 overflow-y-auto bg-gray-50">
+                      <div className="grid grid-cols-2 gap-3">
+                        {availableSoftware.map((software) => (
+                          <div key={software} className="flex items-center space-x-2">
+                            <Checkbox
+                              id={software}
+                              checked={softwareTypes.includes(software)}
+                              onCheckedChange={() => toggleSoftware(software)}
+                            />
+                            <label
+                              htmlFor={software}
+                              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                            >
+                              {software}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {softwareTypes.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {softwareTypes.map((software) => (
+                          <Badge key={software} variant="secondary" className="flex items-center gap-1">
+                            {software}
+                            <X 
+                              className="w-3 h-3 cursor-pointer" 
+                              onClick={() => toggleSoftware(software)}
+                            />
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   <div className="space-y-3">
@@ -332,13 +366,13 @@ export default function SavingsCalculator() {
                 <Card>
                   <CardHeader className="pb-3">
                     <TrendingUp className="w-8 h-8 text-[#8B2EE5] mb-2" />
-                    <CardTitle className="text-lg">Systems</CardTitle>
+                    <CardTitle className="text-lg">Software</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-3xl font-bold text-gray-900">
-                      {numSystems}
+                      {softwareTypes.length}
                     </p>
-                    <p className="text-sm text-gray-600">integrated</p>
+                    <p className="text-sm text-gray-600">tools integrated</p>
                   </CardContent>
                 </Card>
               </div>
@@ -354,7 +388,7 @@ export default function SavingsCalculator() {
                         <li>• Annual labor cost: ${Math.round(annualLaborCost).toLocaleString()}</li>
                         <li>• Hours automated: {Math.round(hoursSavedPerYear).toLocaleString()} hrs/year</li>
                         <li>• Daily tasks automated: {Math.round(tasksAutomatedDaily).toLocaleString()}</li>
-                        <li>• Systems integrated: {numSystems} ({softwareTypes})</li>
+                        <li>• Software integrated: {softwareTypes.length} tools ({softwareTypes.slice(0, 3).join(', ')}{softwareTypes.length > 3 ? '...' : ''})</li>
                         <li>• Expected ROI: {((annualSavings / annualLaborCost) * 100).toFixed(1)}%</li>
                       </ul>
                     </div>
