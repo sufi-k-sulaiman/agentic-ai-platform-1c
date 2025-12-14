@@ -11,14 +11,114 @@ import PageMeta from '@/components/PageMeta';
 
 const posts = [
   {
+    title: 'Introduction to Generative AI: A Complete Guide',
+    excerpt: 'Discover what generative AI is, how it works, and why it\'s transforming industries. Learn about the technology behind ChatGPT, DALL-E, and more.',
+    author: 'Sarah Chen',
+    date: 'December 10, 2024',
+    readTime: '10 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+    featured: true,
+    page: 'BlogGenerativeAIIntro'
+  },
+  {
+    title: 'Generative AI vs Traditional AI: Key Differences Explained',
+    excerpt: 'Understand the fundamental differences between generative and traditional AI, their use cases, and which one is right for your business needs.',
+    author: 'Michael Rodriguez',
+    date: 'December 9, 2024',
+    readTime: '12 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    page: 'BlogGenerativeAIvsTraditional'
+  },
+  {
+    title: 'Understanding Large Language Models: GPT, Claude, and Beyond',
+    excerpt: 'A comprehensive guide to large language models, how they work, and how businesses are using them to transform operations.',
+    author: 'Dr. Emily Wang',
+    date: 'December 8, 2024',
+    readTime: '15 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
+    page: 'BlogLLMGuide'
+  },
+  {
+    title: 'Generative AI for Content Creation: A Practical Guide',
+    excerpt: 'Learn how to leverage generative AI for creating high-quality content at scale. Tips, tools, and best practices for marketers and creators.',
+    author: 'Jessica Martinez',
+    date: 'December 7, 2024',
+    readTime: '11 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
+    page: 'BlogGenerativeAIContent'
+  },
+  {
+    title: 'AI-Powered Code Generation: Accelerating Software Development',
+    excerpt: 'Learn how AI code assistants like GitHub Copilot are transforming software development. Best practices, limitations, and real-world examples.',
+    author: 'Alex Thompson',
+    date: 'December 6, 2024',
+    readTime: '13 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800',
+    page: 'BlogGenerativeAICode'
+  },
+  {
+    title: 'AI Image Generation: From DALL-E to Midjourney',
+    excerpt: 'Explore how AI image generators are revolutionizing design. Learn about the technology, tools, and best practices for creating stunning visuals.',
+    author: 'Rachel Kim',
+    date: 'December 5, 2024',
+    readTime: '14 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1706885093476-b1e54f26d597?w=800',
+    page: 'BlogGenerativeAIImages'
+  },
+  {
+    title: 'Ethics and Bias in Generative AI: A Responsible AI Guide',
+    excerpt: 'Navigate the ethical challenges of generative AI. Learn about bias, fairness, transparency, and building responsible AI systems.',
+    author: 'Dr. James Carter',
+    date: 'December 4, 2024',
+    readTime: '16 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
+    page: 'BlogGenerativeAIEthics'
+  },
+  {
+    title: 'Generative AI for Business Automation: ROI and Use Cases',
+    excerpt: 'Discover how enterprises are using generative AI to automate processes, reduce costs, and drive growth. Real use cases and ROI metrics.',
+    author: 'David Park',
+    date: 'December 3, 2024',
+    readTime: '14 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+    page: 'BlogGenerativeAIBusiness'
+  },
+  {
+    title: 'Fine-Tuning Generative AI Models: A Practical Guide',
+    excerpt: 'Learn how to customize generative AI models for your specific needs through fine-tuning. Techniques, best practices, and real-world examples.',
+    author: 'Dr. Lisa Anderson',
+    date: 'December 2, 2024',
+    readTime: '17 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    page: 'BlogGenerativeAIFineTuning'
+  },
+  {
+    title: 'The Future of Generative AI: Trends and Predictions for 2025-2030',
+    excerpt: 'Explore where generative AI is heading. From multimodal models to autonomous agents, discover the trends shaping the next 5 years.',
+    author: 'Dr. Sarah Chen',
+    date: 'December 1, 2024',
+    readTime: '18 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
+    page: 'BlogGenerativeAIFuture'
+  },
+  {
     title: 'The Rise of Agentic AI: A Game Changer for Enterprises',
     excerpt: 'Discover how autonomous AI agents are transforming enterprise operations and enabling intelligent decision-making.',
     author: 'Sarah Chen',
-    date: 'December 10, 2024',
+    date: 'November 10, 2024',
     readTime: '12 min read',
     category: 'AI Insights',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
-    featured: true,
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
     page: 'BlogAgenticAIEnterprise'
   },
   {
@@ -180,10 +280,10 @@ export default function Blog() {
           <Tabs value={activeCategory} onValueChange={setActiveCategory}>
             <TabsList className="bg-gray-100">
               <TabsTrigger value="all">All Posts</TabsTrigger>
+              <TabsTrigger value="generative-ai">Generative AI</TabsTrigger>
               <TabsTrigger value="ai-insights">AI Insights</TabsTrigger>
               <TabsTrigger value="tutorials">Tutorials</TabsTrigger>
               <TabsTrigger value="case-studies">Case Studies</TabsTrigger>
-              <TabsTrigger value="engineering">Engineering</TabsTrigger>
               <TabsTrigger value="product">Product</TabsTrigger>
             </TabsList>
           </Tabs>
