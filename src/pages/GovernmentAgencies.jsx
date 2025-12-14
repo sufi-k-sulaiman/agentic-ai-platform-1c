@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2, TrendingDown, Database, Workflow, DollarSign, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const challenges = [
   {
@@ -98,9 +100,11 @@ export default function GovernmentAgencies() {
                 Transform public services with secure Agentic AI that automates workflows, improves citizen experience, and reduces costs by 40%—while maintaining full compliance.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-                  Request demo <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                <Link to={createPageUrl('Onboarding')}>
+                    <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                        Get started <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                </Link>
                 <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
                   Government solutions
                 </Button>
@@ -209,9 +213,11 @@ export default function GovernmentAgencies() {
             <p className="text-xl text-gray-600 mb-10">
               Join forward-thinking agencies transforming operations with Agentic AI
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                Get started <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
