@@ -5,44 +5,40 @@ import PageMeta from '@/components/PageMeta';
 
 const leaders = [
   {
-    name: 'Sarah Chen',
+    name: 'Niroshi Nadarajah',
     title: 'Chief Executive Officer',
-    bio: 'Former VP of Engineering at Google. PhD in Computer Science from MIT. 15+ years building scalable systems.'
+    bio: 'Visionary leader with 20+ years driving AI innovation and enterprise transformation. Former VP at leading tech companies.',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4918bd092_CEO.png'
   },
   {
-    name: 'Michael Rodriguez',
+    name: 'Suf K Sulaiman',
     title: 'Chief Technology Officer',
-    bio: 'Ex-Amazon Principal Engineer. Led development of AWS AI services. Expert in distributed systems.'
+    bio: 'Technology pioneer and architect of scalable AI systems. Expert in distributed computing and machine learning infrastructure.',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e26495cc8_CTO.png'
   },
   {
     name: 'Emily Zhang',
     title: 'Chief Product Officer',
-    bio: 'Previously Head of Product at Salesforce. Stanford MBA. Built products used by millions.'
+    bio: 'Previously Head of Product at Salesforce. Stanford MBA. Built products used by millions.',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/06e4281e3_CPO.png'
   },
   {
     name: 'David Kim',
     title: 'Chief Financial Officer',
-    bio: 'Former CFO at Snowflake. Led multiple successful IPOs. 20 years in enterprise tech finance.'
+    bio: 'Former CFO at Snowflake. Led multiple successful IPOs. 20 years in enterprise tech finance.',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/b9fad4d11_CFO.png'
   },
   {
     name: 'Priya Patel',
     title: 'Chief Marketing Officer',
-    bio: 'Ex-CMO at HubSpot. Built billion-dollar brands from the ground up. Growth marketing expert.'
+    bio: 'Ex-CMO at HubSpot. Built billion-dollar brands from the ground up. Growth marketing expert.',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a80c07556_CMO.png'
   },
   {
     name: 'James Wilson',
-    title: 'Chief Revenue Officer',
-    bio: 'Previously SVP Sales at Oracle. Consistently exceeded $100M+ quotas. Enterprise sales veteran.'
-  },
-  {
-    name: 'Lisa Anderson',
-    title: 'Chief People Officer',
-    bio: 'Former Head of HR at Netflix. Built high-performance cultures at scale. Stanford Psychology PhD.'
-  },
-  {
-    name: 'Robert Taylor',
-    title: 'Chief Legal Officer',
-    bio: 'Ex-General Counsel at Microsoft. 25 years navigating complex legal landscapes in tech.'
+    title: 'Chief Operating Officer',
+    bio: 'Operations excellence leader. Previously at Oracle and IBM. Expert in scaling global enterprise operations.',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a40c8fe07_COO.png'
   }
 ];
 
@@ -90,12 +86,13 @@ export default function Leadership() {
                 transition={{ delay: index * 0.1 }}
                 className="group"
               >
-                <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square bg-gradient-to-br from-purple-50 to-violet-50 flex items-center justify-center">
-                  <svg className="w-32 h-32 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                    <circle cx="12" cy="8" r="5" />
-                    <path d="M3 21v-2a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v2" />
-                  </svg>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#8B2EE5]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square">
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 flex gap-3">
                       <a
                         href="#"
