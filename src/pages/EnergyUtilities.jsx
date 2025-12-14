@@ -158,7 +158,7 @@ export default function EnergyUtilities() {
                         <p className="text-gray-600">{challenge.problem}</p>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-green-600 mb-2">✓ AI Solution</div>
+                        <div className="text-sm font-semibold text-green-600 mb-2">✓ Agentic Ai Solution</div>
                         <p className="text-gray-900 font-medium">{challenge.solution}</p>
                       </div>
                     </div>
