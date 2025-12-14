@@ -114,6 +114,7 @@ import BlogAgenticAISecurityComparison from './pages/BlogAgenticAISecurityCompar
 import BlogAIAutonomyIntro from './pages/BlogAIAutonomyIntro';
 import BlogAIAutonomyLevels from './pages/BlogAIAutonomyLevels';
 import BlogAutonomousDecisionMaking from './pages/BlogAutonomousDecisionMaking';
+import BlogBuildingAutonomousAI from './pages/BlogBuildingAutonomousAI';
 import __Layout from './Layout.jsx';
 
 
@@ -234,6 +235,7 @@ export const PAGES = {
     "BlogAIAutonomyIntro": BlogAIAutonomyIntro,
     "BlogAIAutonomyLevels": BlogAIAutonomyLevels,
     "BlogAutonomousDecisionMaking": BlogAutonomousDecisionMaking,
+    "BlogBuildingAutonomousAI": BlogBuildingAutonomousAI,
 }
 
 export const pagesConfig = {

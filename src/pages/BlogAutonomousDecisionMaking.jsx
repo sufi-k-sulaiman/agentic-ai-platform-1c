@@ -1,384 +1,311 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 export default function BlogAutonomousDecisionMaking() {
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen">
       <PageMeta 
         title="Autonomous Decision-Making: How AI Systems Think and Act Independently"
         description="Deep dive into how autonomous AI systems make decisions without human intervention. Frameworks, algorithms, and real-world examples."
         url="/blog/autonomous-decision-making"
       />
 
-      {/* Header */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
           <Link to={createPageUrl('Blog')}>
-            <Button variant="ghost" className="mb-8 -ml-4">
+            <Button variant="ghost" className="mb-6">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Button>
           </Link>
 
-          <Badge className="mb-6 bg-[#8B2EE5]">AI Insights</Badge>
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
-          >
-            Autonomous Decision-Making: How AI Systems Think and Act Independently
-          </motion.h1>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="px-4 py-1 bg-purple-100 text-[#8B2EE5] rounded-full text-sm font-medium">
+                AI Insights
+              </span>
+              <span className="text-gray-500">•</span>
+              <span className="text-gray-600">17 min read</span>
+            </div>
 
-          <div className="flex items-center gap-6 text-gray-600 mb-8">
-            <span className="flex items-center gap-2">
-              <User className="w-5 h-5" />
-              Dr. Sarah Kim
-            </span>
-            <span className="flex items-center gap-2">
-              <Calendar className="w-5 h-5" />
-              January 18, 2025
-            </span>
-            <span className="flex items-center gap-2">
-              <Clock className="w-5 h-5" />
-              17 min read
-            </span>
-          </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Autonomous Decision-Making: How AI Systems Think and Act Independently
+            </h1>
 
-          <img 
-            src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=1200" 
-            alt="Autonomous Decision Making" 
-            className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
-          />
+            <div className="flex items-center gap-6 text-gray-600 mb-8">
+              <div className="flex items-center gap-2">
+                <User className="w-4 h-4" />
+                <span>Dr. Sarah Kim</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                <span>Jan 18, 2025</span>
+              </div>
+            </div>
+
+            <img 
+              src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=1200&h=600&fit=crop"
+              alt="Autonomous Decision Making"
+              className="w-full h-[400px] object-cover rounded-2xl mb-12"
+            />
+          </motion.div>
         </div>
       </section>
 
-      {/* Content */}
       <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              The magic—and the challenge—of autonomous AI lies in its ability to make decisions independently. But how exactly do these systems "think"? What frameworks enable them to evaluate options, assess risks, and choose actions without constant human guidance? Let's dive deep into the mechanics of autonomous decision-making.
+              Autonomous AI doesn't just respond to inputs—it reasons, plans, and chooses actions to achieve goals. Understanding how these decision-making systems work is essential for deploying them safely and effectively.
             </p>
 
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Decision-Making Stack</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Decision-Making Loop</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Autonomous AI decision-making operates across multiple layers, each building on the one below:
+              Autonomous systems follow a continuous cycle:
             </p>
-
-            <div className="space-y-6 mb-12">
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Layer 1: Perception & Context</h3>
-                <p className="text-gray-700 mb-2">Understanding the current situation</p>
-                <p className="text-sm text-gray-600">Data ingestion, pattern recognition, state assessment</p>
-              </div>
-
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Layer 2: Option Generation</h3>
-                <p className="text-gray-700 mb-2">Identifying possible actions</p>
-                <p className="text-sm text-gray-600">Search algorithms, constraint satisfaction, creative exploration</p>
-              </div>
-
-              <div className="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Layer 3: Evaluation & Prediction</h3>
-                <p className="text-gray-700 mb-2">Assessing outcomes of each option</p>
-                <p className="text-sm text-gray-600">Utility calculation, risk assessment, outcome modeling</p>
-              </div>
-
-              <div className="bg-gradient-to-r from-teal-50 to-green-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Layer 4: Selection & Commitment</h3>
-                <p className="text-gray-700 mb-2">Choosing the best action</p>
-                <p className="text-sm text-gray-600">Decision rules, multi-criteria optimization, confidence thresholds</p>
-              </div>
-
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Layer 5: Execution & Learning</h3>
-                <p className="text-gray-700 mb-2">Acting and improving</p>
-                <p className="text-sm text-gray-600">Action implementation, outcome monitoring, model updates</p>
-              </div>
+            
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 mb-8">
+              <ol className="list-decimal pl-6 text-gray-700 space-y-3">
+                <li><strong>Perceive:</strong> Gather information about the current state</li>
+                <li><strong>Interpret:</strong> Understand what the information means</li>
+                <li><strong>Reason:</strong> Evaluate options and predict outcomes</li>
+                <li><strong>Decide:</strong> Choose the best course of action</li>
+                <li><strong>Act:</strong> Execute the decision</li>
+                <li><strong>Learn:</strong> Update knowledge based on results</li>
+              </ol>
             </div>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Core Decision-Making Frameworks</h2>
-            
-            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Rule-Based Systems (The Foundation)</h3>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Rule-Based Decision Making</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The simplest form of decision-making: IF condition THEN action. While limited, rule-based systems still play a crucial role:
+              The simplest form: if-then logic defined by humans.
             </p>
             <div className="bg-gray-50 rounded-xl p-6 mb-6">
-              <p className="font-mono text-sm text-gray-800 mb-4">
-                IF customer_value {'>'} $10,000 AND issue_type = "critical"<br/>
-                THEN escalate_to_senior_support<br/>
-                ELSE route_to_standard_queue
-              </p>
-              <p className="text-sm text-gray-600">
-                <strong>Strengths:</strong> Fast, transparent, predictable<br/>
-                <strong>Weaknesses:</strong> Brittle, doesn't scale to complexity, no learning
-              </p>
+              <h4 className="font-semibold text-gray-900 mb-2">Example Rule Set</h4>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                <li>IF customer sentiment is negative AND issue is unresolved → Escalate to human</li>
+                <li>IF transaction amount &gt; $10,000 → Require additional verification</li>
+                <li>IF inventory level &lt; reorder point → Place order automatically</li>
+              </ul>
             </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Probabilistic Reasoning</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Instead of black-and-white rules, probabilistic systems work with uncertainty and likelihood:
+            <p className="text-gray-700 text-sm mb-6">
+              <strong>Strengths:</strong> Predictable, explainable, fast<br/>
+              <strong>Weaknesses:</strong> Brittle, can't handle edge cases, requires exhaustive rule definition
             </p>
-            <div className="bg-blue-50 rounded-xl p-6 mb-6">
-              <p className="text-gray-800 mb-3">
-                "Given these symptoms, there's an 85% probability of fraud, 12% probability of user error, and 3% probability of system glitch."
-              </p>
-              <p className="text-sm text-gray-600 mb-3">
-                <strong>Techniques:</strong> Bayesian networks, Markov decision processes, hidden Markov models
-              </p>
-              <p className="text-sm text-gray-600">
-                <strong>Use Cases:</strong> Fraud detection, medical diagnosis, risk assessment
-              </p>
-            </div>
 
-            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Utility Maximization</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">2. Reinforcement Learning</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Autonomous systems assign values (utility) to different outcomes and choose actions that maximize expected utility:
-            </p>
-            <div className="bg-green-50 rounded-xl p-6 mb-6">
-              <p className="text-gray-800 mb-3">
-                <strong>Example: Dynamic Pricing</strong>
-              </p>
-              <p className="text-sm text-gray-700 mb-3">
-                • Price at $99: Expected revenue = 0.7 × $99 = $69.30<br/>
-                • Price at $79: Expected revenue = 0.9 × $79 = $71.10 ← Choose this<br/>
-                • Price at $59: Expected revenue = 0.95 × $59 = $56.05
-              </p>
-              <p className="text-sm text-gray-600">
-                System automatically selects $79 as it maximizes expected revenue
-              </p>
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Reinforcement Learning</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Perhaps the most powerful framework for autonomous decision-making: learn through trial and error, reward and penalty.
+              AI learns optimal decisions through trial and error with rewards.
             </p>
             <div className="bg-purple-50 rounded-xl p-6 mb-6">
-              <p className="text-gray-800 mb-3">
-                <strong>How It Works:</strong>
-              </p>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-700 mb-3">
-                <li>Agent observes current state</li>
-                <li>Agent takes action based on policy</li>
-                <li>Environment provides reward (positive or negative)</li>
-                <li>Agent updates policy to maximize future rewards</li>
-                <li>Repeat millions of times</li>
+              <h4 className="font-semibold text-gray-900 mb-2">How it Works</h4>
+              <ol className="list-decimal pl-6 text-gray-700 space-y-2 text-sm">
+                <li>AI tries different actions in various states</li>
+                <li>Receives positive rewards for good outcomes, negative for bad</li>
+                <li>Learns a policy: mapping from states to optimal actions</li>
+                <li>Continuously improves through more experience</li>
               </ol>
-              <p className="text-sm text-gray-600">
-                <strong>Famous Examples:</strong> AlphaGo, ChatGPT (RLHF), autonomous trading systems
-              </p>
             </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Multi-Agent Coordination</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              When multiple AI agents must make decisions together, coordination mechanisms become critical:
+            <p className="text-gray-700 text-sm mb-6">
+              <strong>Use cases:</strong> Dynamic pricing, resource allocation, game playing, robotics<br/>
+              <strong>Challenges:</strong> Requires significant training data, can be unpredictable
             </p>
-            <div className="bg-orange-50 rounded-xl p-6 mb-6">
-              <p className="text-gray-800 mb-3">
-                <strong>Coordination Strategies:</strong>
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li><strong>Centralized:</strong> One agent makes decisions for all</li>
-                <li><strong>Decentralized:</strong> Each agent decides independently with communication</li>
-                <li><strong>Market-Based:</strong> Agents bid/negotiate for resources and actions</li>
-                <li><strong>Hierarchical:</strong> Agents at different levels handle different scopes</li>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">3. Planning-Based Decision Making</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              AI constructs multi-step plans to achieve objectives.
+            </p>
+            <div className="bg-blue-50 rounded-xl p-6 mb-6">
+              <h4 className="font-semibold text-gray-900 mb-2">Planning Process</h4>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                <li>Define goal state</li>
+                <li>Model current state and available actions</li>
+                <li>Search through possible action sequences</li>
+                <li>Evaluate expected outcomes</li>
+                <li>Select plan with highest expected value</li>
+                <li>Execute plan, re-plan if conditions change</li>
+              </ul>
+            </div>
+            <p className="text-gray-700 text-sm mb-6">
+              <strong>Use cases:</strong> Task automation, supply chain optimization, scheduling<br/>
+              <strong>Example:</strong> AI agent planning customer onboarding workflow
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">4. LLM-Based Reasoning</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Large language models reason through problems using learned patterns.
+            </p>
+            <div className="bg-violet-50 rounded-xl p-6 mb-6">
+              <h4 className="font-semibold text-gray-900 mb-2">Capabilities</h4>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                <li>Common-sense reasoning about situations</li>
+                <li>Chain-of-thought: breaking down complex problems</li>
+                <li>Analogical reasoning: applying lessons from similar cases</li>
+                <li>Contextual understanding: interpreting nuance and intent</li>
+              </ul>
+            </div>
+            <p className="text-gray-700 text-sm mb-6">
+              <strong>Modern agentic AI:</strong> Combines LLM reasoning with tools and planning
+            </p>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Key Decision-Making Components</h2>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Goal Management</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              How AI maintains and prioritizes objectives:
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Goal hierarchy:</strong> Breaking high-level goals into sub-goals</li>
+              <li><strong>Priority management:</strong> Which goals matter most?</li>
+              <li><strong>Goal conflicts:</strong> Resolving competing objectives</li>
+              <li><strong>Dynamic goals:</strong> Adapting objectives based on context</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">State Representation</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              AI must maintain an internal model of the world:
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Current state:</strong> What's happening now?</li>
+              <li><strong>State history:</strong> What happened before?</li>
+              <li><strong>Predicted states:</strong> What might happen next?</li>
+              <li><strong>Uncertainty modeling:</strong> How confident are we?</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Action Selection</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Methods for choosing among possible actions:
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Utility maximization:</strong> Pick action with highest expected value</li>
+              <li><strong>Satisficing:</strong> Choose first action that meets threshold</li>
+              <li><strong>Risk management:</strong> Balance expected value vs. variance</li>
+              <li><strong>Constraint satisfaction:</strong> Ensure hard limits aren't violated</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Decision-Making Under Uncertainty</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Real-world decisions involve incomplete information:
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Types of Uncertainty</h3>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Stochastic uncertainty:</strong> Randomness in the environment</li>
+              <li><strong>Epistemic uncertainty:</strong> Incomplete knowledge</li>
+              <li><strong>Model uncertainty:</strong> AI's model may be wrong</li>
+              <li><strong>Adversarial uncertainty:</strong> Other agents acting strategically</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Handling Uncertainty</h3>
+            <div className="bg-gray-50 rounded-xl p-6 mb-6">
+              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                <li><strong>Probabilistic reasoning:</strong> Assign probabilities to outcomes</li>
+                <li><strong>Information gathering:</strong> Take actions to reduce uncertainty</li>
+                <li><strong>Robust decisions:</strong> Choose actions that work across scenarios</li>
+                <li><strong>Escalation:</strong> Defer to humans when uncertainty is too high</li>
               </ul>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Handling Uncertainty and Risk</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Multi-Agent Decision Making</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Real-world decision-making is messy. Autonomous systems must handle incomplete information, uncertain outcomes, and calculated risks.
+              When multiple AI agents interact, decision-making becomes more complex:
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Coordination:</strong> Agents working toward shared goals</li>
+              <li><strong>Negotiation:</strong> Agents with different preferences finding compromise</li>
+              <li><strong>Competition:</strong> Game theory when agents have conflicting goals</li>
+              <li><strong>Communication:</strong> Sharing information between agents</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Ethical Decision Making</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Encoding values and ethics into AI systems:
             </p>
 
-            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Strategies for Managing Uncertainty</h3>
-            <div className="space-y-4 mb-8">
-              <div className="border-l-4 border-blue-500 pl-6">
-                <h4 className="font-bold text-gray-900 mb-2">1. Exploration vs Exploitation</h4>
-                <p className="text-gray-700">
-                  Should the system try something new (explore) or stick with what works (exploit)? Sophisticated systems balance both using algorithms like epsilon-greedy, Upper Confidence Bound, or Thompson Sampling.
-                </p>
-              </div>
+            <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Approaches</h3>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Rule-based ethics:</strong> Hard-coded principles (don't harm, respect privacy)</li>
+              <li><strong>Consequentialist AI:</strong> Optimize for overall welfare/utility</li>
+              <li><strong>Virtue ethics:</strong> Train AI to embody virtuous behavior patterns</li>
+              <li><strong>Human alignment:</strong> Learn human preferences through feedback</li>
+            </ul>
 
-              <div className="border-l-4 border-green-500 pl-6">
-                <h4 className="font-bold text-gray-900 mb-2">2. Confidence Thresholds</h4>
-                <p className="text-gray-700">
-                  Systems can be programmed to escalate decisions when confidence is below a threshold. "I'm 95% sure this is fraud—block it. I'm only 60% sure—flag for human review."
-                </p>
-              </div>
-
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h4 className="font-bold text-gray-900 mb-2">3. Ensemble Methods</h4>
-                <p className="text-gray-700">
-                  Combine multiple models and decision strategies. If all agree, act with confidence. If they disagree, investigate further or escalate.
-                </p>
-              </div>
-
-              <div className="border-l-4 border-orange-500 pl-6">
-                <h4 className="font-bold text-gray-900 mb-2">4. Robust Decision-Making</h4>
-                <p className="text-gray-700">
-                  Choose actions that perform well across a range of possible scenarios, not just the most likely one. Minimize worst-case outcomes.
-                </p>
-              </div>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Real-World Example: Customer Service Agent</h2>
+            
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 mb-8">
+              <h4 className="font-semibold text-gray-900 mb-3">Decision-Making Flow</h4>
+              <ol className="list-decimal pl-6 text-gray-700 space-y-3">
+                <li>
+                  <strong>Perceive:</strong> Customer says "My order hasn't arrived and I need it urgently"
+                </li>
+                <li>
+                  <strong>Interpret:</strong> Sentiment = frustrated, Issue = late delivery, Urgency = high
+                </li>
+                <li>
+                  <strong>Reason:</strong>
+                  <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                    <li>Check order status in system → Order shipped 5 days ago</li>
+                    <li>Check delivery time → Expected delivery was 3 days ago</li>
+                    <li>Check customer history → VIP customer, multiple past orders</li>
+                    <li>Evaluate options: refund, reship, escalate, investigate with carrier</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Decide:</strong> Reship with expedited delivery + issue refund for original
+                </li>
+                <li>
+                  <strong>Act:</strong>
+                  <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                    <li>Create new order with next-day shipping</li>
+                    <li>Process refund in payment system</li>
+                    <li>Update CRM with notes</li>
+                    <li>Send confirmation email to customer</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Learn:</strong> Track if customer is satisfied, update policy if needed
+                </li>
+              </ol>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Real-World Example: Autonomous Supply Chain</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Challenges and Limitations</h2>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Explainability:</strong> Hard to explain LLM-based reasoning</li>
+              <li><strong>Consistency:</strong> Decisions may vary given same inputs</li>
+              <li><strong>Safety:</strong> Ensuring AI doesn't make harmful choices</li>
+              <li><strong>Bias:</strong> Encoded biases from training data</li>
+              <li><strong>Robustness:</strong> Handling adversarial inputs or edge cases</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Best Practices</h2>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Clear objectives:</strong> Well-defined goals and constraints</li>
+              <li><strong>Confidence thresholds:</strong> Escalate low-confidence decisions</li>
+              <li><strong>Audit trails:</strong> Log all decisions and reasoning</li>
+              <li><strong>Human oversight:</strong> Review high-stakes decisions</li>
+              <li><strong>Continuous evaluation:</strong> Monitor decision quality over time</li>
+              <li><strong>Iterative improvement:</strong> Refine decision logic based on outcomes</li>
+            </ul>
+
             <p className="text-gray-700 leading-relaxed mb-6">
-              Let's walk through how an autonomous AI system manages inventory and logistics:
-            </p>
-
-            <div className="bg-gray-900 text-gray-100 rounded-xl p-8 mb-8">
-              <h3 className="text-xl font-bold mb-4">Decision Cycle: Inventory Replenishment</h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <p className="font-bold text-green-400 mb-2">1. PERCEIVE</p>
-                  <p className="text-sm">
-                    • Current inventory: 1,200 units<br/>
-                    • Daily sales rate: 150 units (trending up)<br/>
-                    • Lead time from supplier: 5 days<br/>
-                    • Supplier reliability: 92%<br/>
-                    • Competitor out of stock (opportunity!)
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-bold text-blue-400 mb-2">2. GENERATE OPTIONS</p>
-                  <p className="text-sm">
-                    • Option A: Order 1,000 units (standard)<br/>
-                    • Option B: Order 2,500 units (capitalize on competitor gap)<br/>
-                    • Option C: Order 500 units (conservative, given lead time uncertainty)<br/>
-                    • Option D: Order from backup supplier (faster but pricier)
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-bold text-yellow-400 mb-2">3. EVALUATE</p>
-                  <p className="text-sm">
-                    • Option A: Expected profit $8,500, Risk of stockout: 15%<br/>
-                    • Option B: Expected profit $12,000, Risk of overstock: 25%<br/>
-                    • Option C: Expected profit $6,000, Risk of stockout: 35%<br/>
-                    • Option D: Expected profit $7,200, Risk of stockout: 5%
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-bold text-purple-400 mb-2">4. DECIDE</p>
-                  <p className="text-sm">
-                    System weighs profit vs. risk based on company's risk tolerance.<br/>
-                    Decision: Order 2,000 units (hybrid of A and B)<br/>
-                    Confidence: 78%
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-bold text-red-400 mb-2">5. EXECUTE & MONITOR</p>
-                  <p className="text-sm">
-                    • Place order with supplier<br/>
-                    • Track shipment status<br/>
-                    • Monitor sales velocity<br/>
-                    • Update model with actual outcomes<br/>
-                    • If delivery delayed, trigger backup supplier
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Guardrails and Constraints</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Autonomous doesn't mean uncontrolled. Effective systems operate within carefully designed guardrails:
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded">
-                <h4 className="font-bold text-gray-900 mb-2">Hard Constraints</h4>
-                <p className="text-gray-700">
-                  Non-negotiable limits that must never be violated (e.g., "Never offer a discount greater than 30%" or "Never process a transaction above $50,000 without approval")
-                </p>
-              </div>
-
-              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded">
-                <h4 className="font-bold text-gray-900 mb-2">Soft Constraints</h4>
-                <p className="text-gray-700">
-                  Guidelines that should be followed unless there's a strong reason not to (e.g., "Prefer response time under 2 seconds" or "Target 95% customer satisfaction")
-                </p>
-              </div>
-
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
-                <h4 className="font-bold text-gray-900 mb-2">Budget Constraints</h4>
-                <p className="text-gray-700">
-                  Limits on resources the system can commit (e.g., "Maximum marketing spend: $10,000/day" or "Maximum API calls: 1M/month")
-                </p>
-              </div>
-
-              <div className="bg-purple-50 border-l-4 border-purple-500 p-6 rounded">
-                <h4 className="font-bold text-gray-900 mb-2">Ethical Constraints</h4>
-                <p className="text-gray-700">
-                  Prevent discriminatory or harmful decisions (e.g., "Decisions must not discriminate based on protected characteristics" or "Always prioritize user safety over engagement")
-                </p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Future: More Sophisticated Reasoning</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Next-generation autonomous systems are moving beyond reactive decision-making toward true reasoning:
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-2">Causal Reasoning</h4>
-                <p className="text-gray-700">
-                  Understanding cause and effect: "What will happen if I do X?" rather than just "What usually happens when we see pattern Y?"
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-2">Counterfactual Thinking</h4>
-                <p className="text-gray-700">
-                  Reasoning about alternative scenarios: "What would have happened if I had chosen differently?" enables better learning from mistakes.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-2">Abstract Planning</h4>
-                <p className="text-gray-700">
-                  Breaking down complex goals into sub-goals and multi-step plans, then executing them adaptively as conditions change.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-r from-teal-50 to-green-50 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-2">Meta-Learning</h4>
-                <p className="text-gray-700">
-                  Learning how to learn: systems that can quickly adapt to entirely new domains by leveraging past learning experiences.
-                </p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Conclusion</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Autonomous decision-making is the heart of agentic AI. It combines perception, reasoning, prediction, and action into systems that can truly operate independently—within guardrails we define. As these systems mature, they're moving from simple rule-following to sophisticated reasoning that rivals human decision-making in many domains.
-            </p>
-
-            <p className="text-gray-700 leading-relaxed">
-              The key to success isn't building systems that always make perfect decisions—it's building systems that make good decisions most of the time, learn from mistakes, and operate transparently within well-defined boundaries. That's the future of enterprise AI.
+              Autonomous decision-making is the heart of agentic AI. Understanding these systems enables organizations to deploy them safely while maximizing their transformative potential.
             </p>
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-gradient-to-br from-[#8B2EE5] to-[#6D28D9] rounded-2xl text-white">
-            <h3 className="text-2xl font-bold mb-4">Build Smarter AI Decision-Making</h3>
-            <p className="text-purple-100 mb-6">
-              Discover how 1cPlatform enables sophisticated autonomous decision-making in your enterprise.
+          <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Build Safe, Effective Autonomous Systems</h3>
+            <p className="text-gray-600 mb-6">
+              1cPlatform provides decision monitoring, audit trails, and safety guardrails for autonomous AI.
             </p>
             <Link to={createPageUrl('Contact')}>
-              <Button className="bg-white text-[#8B2EE5] hover:bg-gray-100">
-                Get Started
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4]">
+                Learn More
               </Button>
             </Link>
           </div>
