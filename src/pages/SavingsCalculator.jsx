@@ -75,7 +75,7 @@ export default function SavingsCalculator() {
     <div className="bg-white">
       <PageMeta 
         title="ROI & Savings Calculator"
-        description="Calculate your potential savings and ROI with AI automation. See how much time and money your organization can save."
+        description="Calculate your potential savings and ROI with Agentic Ai automation. See how much time and money your organization can save."
         url="/savings-calculator"
       />
 
