@@ -116,15 +116,15 @@ export default function Footer() {
               © {new Date().getFullYear()} 1cPlatform. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a href="#terms" className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
+              <Link to={createPageUrl('Terms')} className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
                 Terms
-              </a>
-              <a href="#privacy" className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
+              </Link>
+              <Link to={createPageUrl('Privacy')} className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
                 Privacy
-              </a>
-              <a href="#cookies" className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
+              </Link>
+              <Link to={createPageUrl('Cookies')} className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
                 Cookies
-              </a>
+              </Link>
             </div>
           </div>
         </div>
