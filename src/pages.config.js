@@ -74,15 +74,15 @@ import CourseDetail from './pages/CourseDetail';
 import LearningTrack from './pages/LearningTrack';
 import CertificationDetail from './pages/CertificationDetail';
 import BlogGenerativeAIIntro from './pages/BlogGenerativeAIIntro';
+import BlogGenerativeAIvsTraditional from './pages/BlogGenerativeAIvsTraditional';
+import BlogLLMGuide from './pages/BlogLLMGuide';
 import BlogGenerativeAIContent from './pages/BlogGenerativeAIContent';
-import BlogGenerativeAIBusiness from './pages/BlogGenerativeAIBusiness';
-import BlogChatGPTLLMs from './pages/BlogChatGPTLLMs';
-import BlogImageGeneration from './pages/BlogImageGeneration';
+import BlogGenerativeAICode from './pages/BlogGenerativeAICode';
+import BlogGenerativeAIImages from './pages/BlogGenerativeAIImages';
 import BlogGenerativeAIEthics from './pages/BlogGenerativeAIEthics';
-import BlogFineTuningAI from './pages/BlogFineTuningAI';
-import BlogGenerativeVsTraditional from './pages/BlogGenerativeVsTraditional';
-import BlogBuildingWithAPIs from './pages/BlogBuildingWithAPIs';
-import BlogFutureGenerativeAI from './pages/BlogFutureGenerativeAI';
+import BlogGenerativeAIBusiness from './pages/BlogGenerativeAIBusiness';
+import BlogGenerativeAIFineTuning from './pages/BlogGenerativeAIFineTuning';
+import BlogGenerativeAIFuture from './pages/BlogGenerativeAIFuture';
 import __Layout from './Layout.jsx';
 
 
@@ -163,15 +163,15 @@ export const PAGES = {
     "LearningTrack": LearningTrack,
     "CertificationDetail": CertificationDetail,
     "BlogGenerativeAIIntro": BlogGenerativeAIIntro,
+    "BlogGenerativeAIvsTraditional": BlogGenerativeAIvsTraditional,
+    "BlogLLMGuide": BlogLLMGuide,
     "BlogGenerativeAIContent": BlogGenerativeAIContent,
-    "BlogGenerativeAIBusiness": BlogGenerativeAIBusiness,
-    "BlogChatGPTLLMs": BlogChatGPTLLMs,
-    "BlogImageGeneration": BlogImageGeneration,
+    "BlogGenerativeAICode": BlogGenerativeAICode,
+    "BlogGenerativeAIImages": BlogGenerativeAIImages,
     "BlogGenerativeAIEthics": BlogGenerativeAIEthics,
-    "BlogFineTuningAI": BlogFineTuningAI,
-    "BlogGenerativeVsTraditional": BlogGenerativeVsTraditional,
-    "BlogBuildingWithAPIs": BlogBuildingWithAPIs,
-    "BlogFutureGenerativeAI": BlogFutureGenerativeAI,
+    "BlogGenerativeAIBusiness": BlogGenerativeAIBusiness,
+    "BlogGenerativeAIFineTuning": BlogGenerativeAIFineTuning,
+    "BlogGenerativeAIFuture": BlogGenerativeAIFuture,
 }
 
 export const pagesConfig = {
