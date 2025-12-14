@@ -44,7 +44,7 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 text-[#8B2EE5] text-sm font-medium mb-8">
               <span className="w-2 h-2 bg-[#8B2EE5] rounded-full animate-pulse" />
-              Introducing Agentic AI
+              Introducing Agentic Ai
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
@@ -56,7 +56,7 @@ export default function HeroSection() {
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-xl">
-              Transform your business with autonomous AI agents that understand, decide, and act. 
+              Transform your business with autonomous Agentic Ai that understands, decides, and acts. 
               1cPlatform delivers intelligent automation at enterprise scale.
             </p>
 

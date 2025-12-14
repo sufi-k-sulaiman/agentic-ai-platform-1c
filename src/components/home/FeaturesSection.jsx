@@ -6,7 +6,7 @@ const features = [
   {
     icon: Bot,
     title: 'Autonomous Agents',
-    description: 'Deploy AI agents that independently handle complex tasks, make decisions, and adapt to changing conditions.',
+    description: 'Deploy Agentic Ai that independently handles complex tasks, makes decisions, and adapts to changing conditions.',
     color: 'bg-purple-100 text-[#8B2EE5]'
   },
   {

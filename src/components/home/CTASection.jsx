@@ -25,7 +25,7 @@ export default function CTASection() {
           >
             Ready to transform your
             <span className="block bg-gradient-to-r from-[#A855F7] to-[#C084FC] bg-clip-text text-transparent">
-              business with AI?
+              business with Agentic Ai?
             </span>
           </motion.h2>
           

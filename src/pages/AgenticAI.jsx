@@ -33,14 +33,14 @@ const features = [
   {
     icon: Bot,
     title: 'No-Code Builder',
-    description: 'Create and deploy custom AI agents without writing a single line of code.'
+    description: 'Create and deploy custom Agentic Ai without writing a single line of code.'
   }
 ];
 
 const useCases = [
   {
     title: 'Customer Support',
-    description: 'AI agents that handle inquiries, resolve issues, and escalate when needed—24/7.',
+    description: 'Agentic Ai that handles inquiries, resolves issues, and escalates when needed—24/7.',
     impact: '70% reduction in response time',
     gradient: 'from-violet-500 to-purple-500'
   },
@@ -79,7 +79,7 @@ export default function AgenticAI() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-[#8B2EE5] text-sm font-medium mb-8">
                 <span className="w-2 h-2 bg-[#8B2EE5] rounded-full animate-pulse" />
-                Agentic AI Platform
+                Agentic Ai Platform
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-[1.1]">
                 AI that thinks,
@@ -152,7 +152,7 @@ export default function AgenticAI() {
               Autonomous intelligence at scale
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to build, deploy, and manage AI agents that work for you 24/7.
+              Everything you need to build, deploy, and manage Agentic Ai that works for you 24/7.
             </p>
           </div>
 
@@ -185,7 +185,7 @@ export default function AgenticAI() {
               Transform every department
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              AI agents that deliver measurable results across your entire organization.
+              Agentic Ai that delivers measurable results across your entire organization.
             </p>
           </div>
 
@@ -229,7 +229,7 @@ export default function AgenticAI() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ready to deploy your first AI agent?
+              Ready to deploy your first Agentic Ai?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
               Start building in minutes with our no-code platform. No credit card required.
