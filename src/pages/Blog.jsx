@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Search, Calendar, Clock, ArrowRight, User } from 'lucide-react';
+import { Search, Calendar, Clock, ArrowRight, User, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
@@ -581,16 +581,111 @@ const posts = [
     category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
     page: 'BlogAIAutonomyFuture'
+  },
+  {
+    title: 'Advanced Generative AI Techniques: RAG, Fine-tuning, and Prompt Engineering',
+    excerpt: 'Master advanced techniques for optimizing generative AI models. Learn RAG implementation, fine-tuning strategies, and prompt engineering best practices.',
+    author: 'Dr. Kevin Park',
+    date: 'December 15, 2024',
+    readTime: '19 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    page: 'BlogGenerativeAIFuture'
+  },
+  {
+    title: 'AI Governance in Healthcare: Compliance and Patient Safety',
+    excerpt: 'Navigate healthcare-specific AI governance requirements. HIPAA compliance, patient safety protocols, and clinical decision support guidelines.',
+    author: 'Dr. Michelle Torres',
+    date: 'January 20, 2025',
+    readTime: '18 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
+    page: 'BlogAgenticAIGovernanceIntro'
+  },
+  {
+    title: 'Autonomous AI in Financial Services: Risk and Reward Analysis',
+    excerpt: 'Explore autonomous AI applications in banking and finance. Trading algorithms, fraud detection, risk assessment, and regulatory considerations.',
+    author: 'James Wellington',
+    date: 'January 21, 2025',
+    readTime: '16 min read',
+    category: 'AI Autonomy',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800',
+    page: 'BlogAIAutonomyIntro'
+  },
+  {
+    title: 'Comparing AI Agent Architectures: ReAct vs Chain-of-Thought',
+    excerpt: 'Technical comparison of leading AI agent architectures. Understand ReAct, Chain-of-Thought, and other reasoning frameworks for autonomous agents.',
+    author: 'Dr. Alex Thompson',
+    date: 'December 22, 2024',
+    readTime: '20 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800',
+    page: 'BlogAgenticVsTraditionalAI'
+  },
+  {
+    title: 'Real-Time AI Insights: Building Streaming Analytics with Agents',
+    excerpt: 'Implement real-time analytics using AI agents. Stream processing, event-driven architectures, and continuous intelligence systems.',
+    author: 'Sarah Mitchell',
+    date: 'November 30, 2024',
+    readTime: '15 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+    page: 'BlogAgenticAIEnterprise'
+  },
+  {
+    title: 'Generative AI Content Moderation: Balancing Safety and Innovation',
+    excerpt: 'Build robust content moderation systems for generative AI. Safety layers, toxicity detection, brand safety, and user protection strategies.',
+    author: 'Rachel Foster',
+    date: 'December 25, 2024',
+    readTime: '14 min read',
+    category: 'Generative AI',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
+    page: 'BlogGenerativeAIEthics'
   }
 ];
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
+  const [displayedPosts, setDisplayedPosts] = useState(12);
+  const [isLoading, setIsLoading] = useState(false);
+  const loaderRef = useRef(null);
 
   const filteredPosts = activeCategory === 'all'
     ? posts
     : posts.filter(post => post.category.toLowerCase().replace(/\s+/g, '-') === activeCategory);
+
+  const postsToShow = filteredPosts.slice(0, displayedPosts);
+  const hasMore = displayedPosts < filteredPosts.length;
+
+  useEffect(() => {
+    setDisplayedPosts(12);
+  }, [activeCategory]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore && !isLoading) {
+          loadMore();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (loaderRef.current) {
+      observer.observe(loaderRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasMore, isLoading, displayedPosts]);
+
+  const loadMore = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setDisplayedPosts(prev => prev + 9);
+      setIsLoading(false);
+    }, 800);
+  };
 
   return (
     <div className="bg-white">
@@ -654,13 +749,13 @@ export default function Blog() {
       <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredPosts.map((post, index) => (
+            {postsToShow.map((post, index) => (
               <Link to={createPageUrl(post.page)} key={post.title}>
                 <motion.article
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: (index % 12) * 0.05 }}
                   className="group cursor-pointer"
                 >
                 <div className="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6">
@@ -687,12 +782,31 @@ export default function Blog() {
             ))}
           </div>
 
-          {/* Load More */}
-          <div className="text-center mt-8 sm:mt-12">
-            <Button variant="outline" className="w-full sm:w-auto rounded-full border-gray-300 px-6 sm:px-8">
-              Load more articles
-            </Button>
-          </div>
+          {/* Progressive Loader */}
+          {hasMore && (
+            <div ref={loaderRef} className="text-center mt-8 sm:mt-12">
+              {isLoading ? (
+                <div className="flex items-center justify-center gap-2 text-gray-600">
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                  <span>Loading more articles...</span>
+                </div>
+              ) : (
+                <Button 
+                  onClick={loadMore}
+                  variant="outline" 
+                  className="w-full sm:w-auto rounded-full border-gray-300 px-6 sm:px-8"
+                >
+                  Load more articles
+                </Button>
+              )}
+            </div>
+          )}
+
+          {!hasMore && filteredPosts.length > 12 && (
+            <div className="text-center mt-8 sm:mt-12 text-gray-500">
+              You've reached the end of the articles
+            </div>
+          )}
         </div>
       </section>
 
