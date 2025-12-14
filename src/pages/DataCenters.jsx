@@ -150,6 +150,26 @@ export default function DataCenters() {
         </div>
       </section>
 
+      {/* Industry Overview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Modern data centers are the backbone of our digital economy, yet they face extraordinary challenges in maintaining uptime, managing energy consumption, and scaling infrastructure to meet exponential growth in computing demand. With energy costs representing 40-60% of total operating expenses and downtime costing thousands of dollars per minute, even minor inefficiencies or system failures can have catastrophic financial impacts. Traditional management approaches that rely on manual monitoring, reactive maintenance, and rule-based automation are simply inadequate for the complexity and scale of contemporary data center operations.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Data centers generate millions of data points every second—from temperature sensors and power meters to server logs and network traffic patterns. This overwhelming volume of real-time data creates both opportunity and challenge: while the insights needed for optimal operations exist within the data, extracting actionable intelligence requires sophisticated analysis that exceeds human capacity. Infrastructure teams struggle to correlate patterns across cooling systems, power distribution, server utilization, and network performance, often discovering issues only after they've impacted service delivery.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms data center operations by deploying autonomous agents that continuously monitor, analyze, and optimize every aspect of the facility. These intelligent systems don't just collect data—they understand the complex relationships between power consumption, thermal dynamics, workload distribution, and equipment health. By processing millions of variables simultaneously, AI agents can predict failures before they occur, automatically adjust cooling and power systems for maximum efficiency, and orchestrate workload placement to optimize both performance and cost.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Leading data centers leveraging Agentic AI are achieving unprecedented operational excellence: 30% reduction in energy costs through intelligent cooling and power optimization, 99.999% uptime through predictive maintenance that prevents failures, and 50% faster issue resolution with autonomous troubleshooting and remediation. These systems operate 24/7 with superhuman precision, making microsecond decisions that collectively transform data center economics while ensuring the reliability that modern digital services demand.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Challenges */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">

@@ -150,6 +150,26 @@ export default function PropertyManagement() {
         </div>
       </section>
 
+      {/* Industry Overview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              The property management industry faces unprecedented challenges in today's competitive real estate market. Rising operational costs, tenant expectations for instant service, and the complexity of managing multiple properties across different locations create a perfect storm for property managers and owners. Traditional management approaches that rely on manual processes, disconnected systems, and reactive maintenance strategies are no longer viable in an environment where efficiency and tenant satisfaction directly impact profitability and portfolio growth.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Property management operations generate massive amounts of data daily—from maintenance requests and lease agreements to payment records and property inspections. However, this valuable data often sits trapped in disparate systems: accounting software, maintenance platforms, tenant portals, and email threads. Without intelligent automation, property managers spend countless hours on routine tasks like rent collection follow-ups, maintenance scheduling, and lease renewals, leaving little time for strategic activities that drive property value and tenant satisfaction.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI represents a fundamental shift in how property management operations function. Unlike traditional software that requires constant human oversight, autonomous AI agents can independently handle complex workflows—from processing maintenance requests and coordinating vendor schedules to analyzing market trends and optimizing rental pricing. These intelligent systems learn from every interaction, continuously improving their decision-making and adapting to the unique needs of each property portfolio.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              By implementing Agentic AI, property management companies are achieving remarkable results: 40% reduction in operating costs through automation, 25% increase in tenant satisfaction from instant 24/7 support, and 15% improvement in occupancy rates through data-driven pricing and proactive tenant retention. These systems don't just automate tasks—they transform how properties are managed, creating operational efficiency while delivering superior experiences that keep tenants happy and portfolios profitable.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Challenges */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">

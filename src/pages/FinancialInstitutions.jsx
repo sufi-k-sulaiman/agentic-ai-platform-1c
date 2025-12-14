@@ -143,6 +143,26 @@ export default function FinancialInstitutions() {
         </div>
       </section>
 
+      {/* Industry Overview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Financial institutions operate in an increasingly complex environment where regulatory compliance, fraud prevention, and customer experience must be balanced against operational efficiency and profitability. Banks process millions of transactions daily while navigating evolving regulations like KYC, AML, and GDPR—each requiring meticulous documentation and oversight. Traditional banking operations, built on legacy systems and manual processes, struggle to meet modern customer expectations for instant service while maintaining the security and compliance standards that banking demands.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              The financial services industry sits on vast repositories of customer data, transaction histories, and market information, yet much of this valuable data remains siloed across departments and systems. Loan applications that should take minutes stretch into days as documents move through manual review processes. Customer service teams field repetitive queries while complex issues languish in queue. Fraud detection systems generate thousands of false positives, overwhelming analysts and allowing sophisticated attacks to slip through. The cost of these inefficiencies is staggering—both in direct expenses and lost business opportunities.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI revolutionizes banking operations by deploying intelligent agents that automate complex workflows while maintaining the rigorous standards financial services demand. These autonomous systems can instantly verify customer identities, analyze creditworthiness using hundreds of data points, detect fraudulent patterns in real-time, and provide personalized financial advice—all while ensuring complete regulatory compliance. Unlike traditional automation that follows rigid rules, AI agents adapt to new fraud patterns, learn from customer interactions, and make nuanced decisions that previously required human judgment.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Forward-thinking financial institutions implementing Agentic AI are transforming their operations: processing loan applications in under 3 minutes instead of 3 days, detecting fraud with 95% accuracy while reducing false positives by 80%, and automating 75% of customer inquiries while delivering superior service quality. These improvements translate directly to bottom-line results—reducing operational costs by 45%, increasing customer satisfaction by 60%, and enabling banks to scale services without proportionally increasing headcount, all while maintaining the security and compliance that banking requires.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Challenges */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
