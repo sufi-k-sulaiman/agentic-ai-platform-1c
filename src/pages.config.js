@@ -49,7 +49,7 @@ import BlogAutomationToAutonomy from './pages/BlogAutomationToAutonomy';
 import BlogAgenticAIUseCases from './pages/BlogAgenticAIUseCases';
 import BlogAgenticAIEthics from './pages/BlogAgenticAIEthics';
 import BlogAgenticAIScaling from './pages/BlogAgenticAIScaling';
-import Rewards from './pages/Rewards';
+import Cyber from './pages/Cyber';
 import __Layout from './Layout.jsx';
 
 
@@ -105,7 +105,7 @@ export const PAGES = {
     "BlogAgenticAIUseCases": BlogAgenticAIUseCases,
     "BlogAgenticAIEthics": BlogAgenticAIEthics,
     "BlogAgenticAIScaling": BlogAgenticAIScaling,
-    "Rewards": Rewards,
+    "Cyber": Cyber,
 }
 
 export const pagesConfig = {
