@@ -88,7 +88,9 @@ export default function Header() {
               alt="1C Platform" 
               className="h-9 w-9"
             />
-            <span className="font-semibold text-xl text-gray-900 tracking-tight">1cPlatform</span>
+            <span className="font-semibold text-xl tracking-tight">
+              <span className="text-[#8B2EE5]">1c</span><span className="text-gray-900">Platform</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
