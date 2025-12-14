@@ -73,6 +73,11 @@ import CourseCategory from './pages/CourseCategory';
 import CourseDetail from './pages/CourseDetail';
 import LearningTrack from './pages/LearningTrack';
 import CertificationDetail from './pages/CertificationDetail';
+import BlogGenerativeAIIntro from './pages/BlogGenerativeAIIntro';
+import BlogGenerativeAIContent from './pages/BlogGenerativeAIContent';
+import BlogGenerativeAIBusiness from './pages/BlogGenerativeAIBusiness';
+import BlogChatGPTLLMs from './pages/BlogChatGPTLLMs';
+import BlogImageGeneration from './pages/BlogImageGeneration';
 import __Layout from './Layout.jsx';
 
 
@@ -152,6 +157,11 @@ export const PAGES = {
     "CourseDetail": CourseDetail,
     "LearningTrack": LearningTrack,
     "CertificationDetail": CertificationDetail,
+    "BlogGenerativeAIIntro": BlogGenerativeAIIntro,
+    "BlogGenerativeAIContent": BlogGenerativeAIContent,
+    "BlogGenerativeAIBusiness": BlogGenerativeAIBusiness,
+    "BlogChatGPTLLMs": BlogChatGPTLLMs,
+    "BlogImageGeneration": BlogImageGeneration,
 }
 
 export const pagesConfig = {
