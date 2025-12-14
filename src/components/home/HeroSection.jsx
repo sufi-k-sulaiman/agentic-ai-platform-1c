@@ -50,7 +50,7 @@ export default function HeroSection() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
               The future of
               <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
-                enterprise AI
+                enterprise Ai
               </span>
               is here
             </h1>
