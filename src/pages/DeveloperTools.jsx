@@ -57,7 +57,7 @@ export default function DeveloperTools() {
           >
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-12 h-16 text-lg font-medium">
-                Get API key
+                Get started
               </Button>
             </Link>
           </motion.div>
