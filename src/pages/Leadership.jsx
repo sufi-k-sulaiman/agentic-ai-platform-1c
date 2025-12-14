@@ -86,11 +86,11 @@ export default function Leadership() {
                 transition={{ delay: index * 0.1 }}
                 className="group"
               >
-                <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square">
+                <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square bg-white">
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 flex gap-3">
