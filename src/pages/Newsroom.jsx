@@ -11,9 +11,9 @@ import PageMeta from '@/components/PageMeta';
 const news = [
   {
     category: 'Press Release',
-    title: '1cPublishing Launches Agentic Ai to Solve the "12-App Problem"',
-    excerpt: 'New Agentic AI platform consolidates workflows, data visualization, real-time market intelligence, geospatial analysis, and AI podcast generation into a unified solution.',
-    date: 'January 15, 2025',
+    title: '1cPublishing Launches Agentic Ai to Solve the "12-App Problem" for Professionals',
+    excerpt: 'New Agentic AI platform consolidates workflows, data visualization, real-time market intelligence, geospatial analysis, and AI podcast generation into a unified solution for professionals.',
+    date: 'December 10, 2024',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
     icon: Zap
   },
