@@ -1059,9 +1059,6 @@ await suite.crm.updateLead({...});`}
                 Get started <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-12 h-16 text-lg font-medium" onClick={() => window.openChat?.()}>
-              Contact sales
-            </Button>
           </div>
           
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
