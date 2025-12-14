@@ -786,6 +786,97 @@ export default function InvestorRelations() {
         </div>
       </section>
 
+      {/* Works With Everything */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                Works with{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B2EE5] to-[#A855F7]">
+                  everything you use
+                </span>
+              </h2>
+              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                Connect seamlessly with 1,000+ applications. From Salesforce to QuickBooks, Slack to AWS—everything syncs automatically.
+              </p>
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+                No more data silos. No manual exports. No friction. Just one unified system that connects your entire business ecosystem.
+              </p>
+              
+              <div className="space-y-4">
+                {[
+                  'Salesforce, HubSpot, Dynamics 365',
+                  'Slack, Microsoft Teams, Zoom',
+                  'AWS, Azure, Google Cloud',
+                  'QuickBooks, Xero, NetSuite'
+                ].map((integration, index) => (
+                  <motion.div
+                    key={integration}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-4 bg-green-50 border border-green-200 rounded-xl p-4"
+                  >
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="text-lg font-medium text-gray-900">{integration}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative bg-gradient-to-br from-purple-100 to-violet-100 rounded-3xl p-12 min-h-[500px] flex items-center justify-center">
+                {/* Floating decorative squares */}
+                <motion.div
+                  animate={{ y: [0, -20, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-12 left-12 w-20 h-20 bg-white rounded-xl shadow-lg"
+                />
+                <motion.div
+                  animate={{ y: [0, 20, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  className="absolute top-24 right-16 w-16 h-16 bg-white rounded-xl shadow-lg"
+                />
+                <motion.div
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute bottom-32 left-20 w-12 h-12 bg-white rounded-lg shadow-lg"
+                />
+                <motion.div
+                  animate={{ y: [0, 25, 0] }}
+                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                  className="absolute bottom-20 right-24 w-14 h-14 bg-white rounded-lg shadow-lg"
+                />
+                
+                {/* Center logo */}
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="relative w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center z-10"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] rounded-full flex items-center justify-center">
+                    <Zap className="w-10 h-10 text-white" />
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Competitive Advantages */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
