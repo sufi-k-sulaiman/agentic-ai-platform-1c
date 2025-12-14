@@ -90,7 +90,7 @@ export default function Header() {
                   <NavigationMenuItem key={item.label}>
                     {item.submenu ? (
                       <>
-                        <NavigationMenuTrigger className="text-gray-600 hover:text-[#8B2EE5] bg-transparent hover:bg-transparent data-[state=open]:bg-transparent font-medium text-sm">
+                        <NavigationMenuTrigger className="text-gray-600 hover:text-[#8B2EE5] bg-transparent hover:bg-transparent data-[state=open]:bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5">
                           {item.label}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -120,10 +120,10 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" className="text-gray-600 hover:text-[#8B2EE5] font-medium">
+            <Button variant="ghost" className="text-gray-600 hover:text-[#8B2EE5] font-medium transition-all duration-200 hover:-translate-y-0.5">
               Log in
             </Button>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white font-medium rounded-full px-6">
+            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white font-medium rounded-full px-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
               Get started
             </Button>
           </div>
