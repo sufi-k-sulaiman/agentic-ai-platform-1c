@@ -59,44 +59,58 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="text-center text-white"
+              className="text-center text-white max-w-4xl mx-auto"
             >
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, type: "spring" }}
-                className="w-24 h-24 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center"
+                className="w-32 h-32 mx-auto mb-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-4 border-white/20"
               >
-                <MessageSquare className="w-12 h-12" />
+                <MessageSquare className="w-16 h-16 stroke-[2]" />
               </motion.div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8"
+              >
                 Still need help?
-              </h1>
-              <p className="text-xl md:text-2xl text-purple-100 mb-16 max-w-2xl mx-auto">
+              </motion.h1>
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="text-xl md:text-2xl text-white/90 mb-12"
+              >
                 Our support team is available 24/7 to assist you
-              </p>
+              </motion.p>
 
-              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                {options.map((option, index) => (
-                  <motion.button
-                    key={option.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                    onClick={() => setSelectedOption(option.id)}
-                    className="group"
-                  >
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 hover:scale-105 transition-all duration-300">
-                      <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${option.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                        <option.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-3">{option.title}</h3>
-                      <p className="text-purple-100">{option.description}</p>
-                    </div>
-                  </motion.button>
-                ))}
-              </div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="flex flex-wrap justify-center gap-4"
+              >
+                <Button
+                  onClick={() => setSelectedOption('ticket')}
+                  size="lg"
+                  className="bg-white text-[#8B2EE5] hover:bg-white/90 rounded-full px-8 h-14 text-lg font-semibold"
+                >
+                  Contact support
+                  <ArrowLeft className="ml-2 w-5 h-5 rotate-180" />
+                </Button>
+                <Button
+                  onClick={() => setSelectedOption('call')}
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white/10 rounded-full px-8 h-14 text-lg font-semibold"
+                >
+                  Schedule a call
+                </Button>
+              </motion.div>
             </motion.div>
           )}
 
