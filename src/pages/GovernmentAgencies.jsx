@@ -86,13 +86,13 @@ export default function GovernmentAgencies() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-[#8B2EE5] text-sm font-medium mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-[#6209e6] text-sm font-medium mb-8">
                 <Building2 className="w-4 h-4" />
                 Government Agencies
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Modern government
-                <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">
                   powered by AI
                 </span>
               </h1>
@@ -101,7 +101,7 @@ export default function GovernmentAgencies() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to={createPageUrl('Onboarding')}>
-                    <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                    <Button className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-8 h-14">
                         Get started <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                 </Link>
@@ -170,7 +170,7 @@ export default function GovernmentAgencies() {
                 <Card className="h-full hover:shadow-xl transition-shadow">
                   <CardHeader>
                     <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                      <challenge.icon className="w-7 h-7 text-[#8B2EE5]" />
+                      <challenge.icon className="w-7 h-7 text-[#6209e6]" />
                     </div>
                     <CardTitle className="text-2xl">{challenge.title}</CardTitle>
                   </CardHeader>
@@ -208,7 +208,7 @@ export default function GovernmentAgencies() {
               <motion.div key={section.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}>
                 <Card className="h-full">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-[#8B2EE5]">{section.category}</CardTitle>
+                    <CardTitle className="text-2xl text-[#6209e6]">{section.category}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -238,7 +238,7 @@ export default function GovernmentAgencies() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to={createPageUrl('Onboarding')}>
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                <Button className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-10 h-16 text-lg">
                   Get started <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
