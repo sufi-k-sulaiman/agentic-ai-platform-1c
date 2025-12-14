@@ -90,6 +90,7 @@ export default function ChatBot({ isOpen, onClose }) {
 
     try {
       const conversationHistory = messages
+        .slice(-6)
         .map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`)
         .join('\n');
 
@@ -100,7 +101,7 @@ ${conversationHistory}
 
 User: ${userMessage.content}
 
-Provide a helpful, accurate response about 1C Platform. Be specific about products, features, pricing, and industries. Keep responses under 150 words unless more detail is needed.`;
+Provide a helpful, concise response about 1C Platform. If the question is about a specific product, vertical, or page, provide relevant information and suggest exploring that page.`;
 
       const response = await base44.integrations.Core.InvokeLLM({
         prompt: prompt,
@@ -109,7 +110,7 @@ Provide a helpful, accurate response about 1C Platform. Be specific about produc
 
       const botMessage = {
         role: 'assistant',
-        content: response.response || response,
+        content: response,
         timestamp: new Date()
       };
 
@@ -118,7 +119,7 @@ Provide a helpful, accurate response about 1C Platform. Be specific about produc
       console.error('Chat error:', error);
       const errorMessage = {
         role: 'assistant',
-        content: 'I apologize, but I\'m having trouble responding right now. Please try again or contact our sales team directly.',
+        content: 'I apologize, but I\'m having trouble connecting right now. A member of our sales team will get back to you shortly. In the meantime, feel free to explore our documentation or schedule a demo.',
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMessage]);
@@ -132,6 +133,11 @@ Provide a helpful, accurate response about 1C Platform. Be specific about produc
       e.preventDefault();
       handleSend();
     }
+  };
+
+  const handleQuickAction = (message) => {
+    setInputValue(message);
+    setTimeout(() => handleSend(), 100);
   };
 
   if (!isOpen) return null;
@@ -186,7 +192,7 @@ Provide a helpful, accurate response about 1C Platform. Be specific about produc
                   : 'bg-gray-100 text-gray-900'
               }`}
             >
-              <p className="text-sm leading-relaxed whitespace-pre-line">{message.content}</p>
+              <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
               <p className={`text-xs mt-1 ${message.role === 'user' ? 'text-purple-200' : 'text-gray-500'}`}>
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </p>
@@ -199,8 +205,8 @@ Provide a helpful, accurate response about 1C Platform. Be specific about produc
             animate={{ opacity: 1, y: 0 }}
             className="flex justify-start"
           >
-            <div className="bg-gray-100 rounded-2xl px-4 py-3">
-              <Loader2 className="w-5 h-5 text-[#8B2EE5] animate-spin" />
+            <div className="max-w-[80%] rounded-2xl px-4 py-3 bg-gray-100">
+              <Loader2 className="w-5 h-5 text-gray-500 animate-spin" />
             </div>
           </motion.div>
         )}
@@ -211,29 +217,23 @@ Provide a helpful, accurate response about 1C Platform. Be specific about produc
       <div className="px-4 py-2 border-t border-gray-100">
         <div className="flex flex-wrap gap-2">
           <button
-            onClick={() => {
-              setInputValue('I want to schedule a demo');
-              setTimeout(handleSend, 100);
-            }}
-            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors"
+            onClick={() => handleQuickAction('I want to schedule a demo')}
+            disabled={isLoading}
+            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50"
           >
             Schedule Demo
           </button>
           <button
-            onClick={() => {
-              setInputValue('Tell me about pricing');
-              setTimeout(handleSend, 100);
-            }}
-            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors"
+            onClick={() => handleQuickAction('Tell me about pricing')}
+            disabled={isLoading}
+            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50"
           >
             Pricing Info
           </button>
           <button
-            onClick={() => {
-              setInputValue('How does it work?');
-              setTimeout(handleSend, 100);
-            }}
-            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors"
+            onClick={() => handleQuickAction('How does it work?')}
+            disabled={isLoading}
+            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50"
           >
             How it works
           </button>
@@ -249,13 +249,18 @@ Provide a helpful, accurate response about 1C Platform. Be specific about produc
             onKeyPress={handleKeyPress}
             placeholder="Type your message..."
             className="flex-1"
+            disabled={isLoading}
           />
           <Button
             onClick={handleSend}
-            disabled={isLoading}
-            className="bg-[#8B2EE5] hover:bg-[#7325C4] px-4 disabled:opacity-50"
+            disabled={isLoading || !inputValue.trim()}
+            className="bg-[#8B2EE5] hover:bg-[#7325C4] px-4"
           >
-            {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+            {isLoading ? (
+              <Loader2 className="w-4 h-4 animate-spin" />
+            ) : (
+              <Send className="w-4 h-4" />
+            )}
           </Button>
         </div>
       </div>
