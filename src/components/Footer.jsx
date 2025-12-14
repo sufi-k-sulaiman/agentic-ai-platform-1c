@@ -5,32 +5,32 @@ import { Twitter, Linkedin, Youtube, Github } from 'lucide-react';
 
 const footerLinks = {
   company: [
-    { label: 'About 1C', href: '#about' },
-    { label: 'Careers', href: '#careers' },
-    { label: 'Investor Relations', href: '#investors' },
-    { label: 'Leadership', href: '#leadership' },
-    { label: 'Newsroom', href: '#news' },
+    { label: 'About 1C', href: createPageUrl('AboutUs') },
+    { label: 'Careers', href: createPageUrl('Careers') },
+    { label: 'Investor Relations', href: createPageUrl('InvestorRelations') },
+    { label: 'Leadership', href: createPageUrl('Leadership') },
+    { label: 'Newsroom', href: createPageUrl('Newsroom') },
   ],
   products: [
-    { label: 'Agentic AI', href: '#agentic-ai' },
-    { label: 'Enterprise Suite', href: '#enterprise' },
-    { label: 'Cloud Platform', href: '#cloud' },
-    { label: 'Developer Tools', href: '#devtools' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Agentic AI', href: createPageUrl('AgenticAI') },
+    { label: 'Enterprise Suite', href: createPageUrl('EnterpriseSuite') },
+    { label: 'Cloud Platform', href: createPageUrl('CloudPlatform') },
+    { label: 'Developer Tools', href: createPageUrl('DeveloperTools') },
+    { label: 'Pricing', href: createPageUrl('Pricing') },
   ],
   resources: [
-    { label: 'Documentation', href: '#docs' },
-    { label: 'API Reference', href: '#api' },
-    { label: 'Community', href: '#community' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'Events', href: '#events' },
+    { label: 'Documentation', href: createPageUrl('Documentation') },
+    { label: 'API Reference', href: createPageUrl('APIReference') },
+    { label: 'Community', href: createPageUrl('Community') },
+    { label: 'Blog', href: createPageUrl('Blog') },
+    { label: 'Events', href: createPageUrl('Events') },
   ],
   support: [
-    { label: 'Help Center', href: '#help' },
-    { label: 'Contact Us', href: '#contact' },
-    { label: 'Status', href: '#status' },
-    { label: 'Security', href: '#security' },
-    { label: 'Privacy', href: '#privacy' },
+    { label: 'Help Center', href: createPageUrl('HelpCenter') },
+    { label: 'Contact Us', href: createPageUrl('ContactUs') },
+    { label: 'Status', href: createPageUrl('Status') },
+    { label: 'Security', href: createPageUrl('Security') },
+    { label: 'Privacy', href: createPageUrl('Privacy') },
   ],
 };
 
@@ -80,9 +80,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm hover:text-[#A855F7] transition-colors">
+                  <Link to={link.href} className="text-sm hover:text-[#A855F7] transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -93,9 +93,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm hover:text-[#A855F7] transition-colors">
+                  <Link to={link.href} className="text-sm hover:text-[#A855F7] transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -106,9 +106,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm hover:text-[#A855F7] transition-colors">
+                  <Link to={link.href} className="text-sm hover:text-[#A855F7] transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -119,9 +119,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm hover:text-[#A855F7] transition-colors">
+                  <Link to={link.href} className="text-sm hover:text-[#A855F7] transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

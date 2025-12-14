@@ -14,34 +14,55 @@ import {
 
 const navItems = [
   { 
-    label: 'Agentic AI', 
-    href: '#agentic-ai',
-    submenu: [
-      { label: 'AI Agents', description: 'Autonomous AI systems that work for you' },
-      { label: 'AI Workflows', description: 'Automated business processes' },
-      { label: 'AI Studio', description: 'Build custom AI solutions' },
-    ]
-  },
-  { 
     label: 'Products', 
-    href: '#products',
     submenu: [
-      { label: 'Enterprise Suite', description: 'Complete business management' },
-      { label: 'Cloud Platform', description: 'Scalable infrastructure' },
-      { label: 'Developer Tools', description: 'APIs and SDKs' },
+      { label: 'Agentic AI', description: 'Autonomous AI agents', href: createPageUrl('AgenticAI') },
+      { label: 'Enterprise Suite', description: 'Complete business management', href: createPageUrl('EnterpriseSuite') },
+      { label: 'Cloud Platform', description: 'Scalable infrastructure', href: createPageUrl('CloudPlatform') },
+      { label: 'Developer Tools', description: 'APIs and SDKs', href: createPageUrl('DeveloperTools') },
+      { label: 'Pricing', description: 'Transparent pricing plans', href: createPageUrl('Pricing') },
     ]
   },
   { 
-    label: 'Solutions', 
-    href: '#solutions',
+    label: 'Verticals',
     submenu: [
-      { label: 'By Industry', description: 'Tailored for your sector' },
-      { label: 'By Use Case', description: 'Solve specific challenges' },
-      { label: 'Success Stories', description: 'Customer transformations' },
+      { label: 'Property Management', description: 'Smart building solutions', href: createPageUrl('PropertyManagement') },
+      { label: 'Data Centers', description: 'Infrastructure automation', href: createPageUrl('DataCenters') },
+      { label: 'Financial Institutions', description: 'Banking & fintech', href: createPageUrl('FinancialInstitutions') },
+      { label: 'Healthcare', description: 'Patient care optimization', href: createPageUrl('Healthcare') },
+      { label: 'Retail', description: 'Customer experience', href: createPageUrl('Retail') },
+      { label: 'Education', description: 'Learning management', href: createPageUrl('Education') },
     ]
   },
-  { label: 'Consulting', href: '#consulting' },
-  { label: 'Support', href: '#support' },
+  { 
+    label: 'Resources', 
+    submenu: [
+      { label: 'Documentation', description: 'Complete guides', href: createPageUrl('Documentation') },
+      { label: 'API Reference', description: 'API endpoints', href: createPageUrl('APIReference') },
+      { label: 'Community', description: 'Join developers', href: createPageUrl('Community') },
+      { label: 'Blog', description: 'Insights & updates', href: createPageUrl('Blog') },
+      { label: 'Events', description: 'Upcoming events', href: createPageUrl('Events') },
+    ]
+  },
+  { 
+    label: 'Company',
+    submenu: [
+      { label: 'About Us', description: 'Our story', href: createPageUrl('AboutUs') },
+      { label: 'Careers', description: 'Join our team', href: createPageUrl('Careers') },
+      { label: 'Newsroom', description: 'Latest news', href: createPageUrl('Newsroom') },
+      { label: 'Leadership', description: 'Meet the team', href: createPageUrl('Leadership') },
+      { label: 'Investor Relations', description: 'For investors', href: createPageUrl('InvestorRelations') },
+    ]
+  },
+  { 
+    label: 'Support',
+    submenu: [
+      { label: 'Help Center', description: 'Get help', href: createPageUrl('HelpCenter') },
+      { label: 'Contact Us', description: 'Reach out', href: createPageUrl('ContactUs') },
+      { label: 'System Status', description: 'Platform health', href: createPageUrl('Status') },
+      { label: 'Security', description: 'Trust & safety', href: createPageUrl('Security') },
+    ]
+  },
 ];
 
 export default function Header() {
@@ -77,27 +98,20 @@ export default function Header() {
                             {item.submenu.map((subitem) => (
                               <li key={subitem.label}>
                                 <NavigationMenuLink asChild>
-                                  <a
-                                    href={item.href}
+                                  <Link
+                                    to={subitem.href}
                                     className="block select-none rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50"
                                   >
                                     <div className="text-sm font-medium text-gray-900">{subitem.label}</div>
                                     <p className="text-sm text-gray-500 mt-1">{subitem.description}</p>
-                                  </a>
+                                  </Link>
                                 </NavigationMenuLink>
                               </li>
                             ))}
                           </ul>
                         </NavigationMenuContent>
                       </>
-                    ) : (
-                      <a 
-                        href={item.href}
-                        className="text-gray-600 hover:text-[#8B2EE5] font-medium text-sm px-4 py-2 transition-colors"
-                      >
-                        {item.label}
-                      </a>
-                    )}
+                    ) : null}
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
@@ -128,14 +142,19 @@ export default function Header() {
           <div className="lg:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col gap-1">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-[#8B2EE5] rounded-lg font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                <div key={item.label}>
+                  <div className="px-4 py-3 text-gray-900 font-semibold text-sm">{item.label}</div>
+                  {item.submenu?.map((subitem) => (
+                    <Link
+                      key={subitem.label}
+                      to={subitem.href}
+                      className="px-4 py-2 ml-4 text-gray-700 hover:bg-purple-50 hover:text-[#8B2EE5] rounded-lg text-sm flex"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {subitem.label}
+                    </Link>
+                  ))}
+                </div>
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
                 <Button variant="outline" className="w-full justify-center">Log in</Button>
