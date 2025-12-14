@@ -239,25 +239,35 @@ export default function SavingsCalculator() {
                       />
                     </div>
 
-                    <div className="space-y-3">
-                      <Label className="text-base">Expected Automation Rate (%)</Label>
-                      <div className="flex items-center gap-3">
+                    <div className="space-y-4 col-span-2">
+                      <Label className="text-lg font-semibold">Expected Automation Rate (%)</Label>
+                      <div className="flex items-center gap-4">
                         <Input
                           type="number"
                           value={automationRate}
                           onChange={(e) => setAutomationRate(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
-                          className="h-12 text-lg flex-1"
+                          className="h-14 text-xl w-32"
                         />
-                        <span className="text-xl font-bold text-[#8B2EE5]">{automationRate}%</span>
+                        <span className="text-3xl font-bold text-[#8B2EE5]">{automationRate}%</span>
                       </div>
-                      <Slider
-                        value={[automationRate]}
-                        onValueChange={([value]) => setAutomationRate(value)}
-                        min={0}
-                        max={100}
-                        step={5}
-                        className="mt-2"
-                      />
+                      <div className="space-y-2">
+                        <Slider
+                          value={[automationRate]}
+                          onValueChange={([value]) => setAutomationRate(value)}
+                          min={0}
+                          max={100}
+                          step={20}
+                          className="mt-3 [&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-[#8B2EE5] [&_[role=slider]]:border-4 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg [&>span]:h-3 [&>span]:bg-[#8B2EE5]"
+                        />
+                        <div className="flex justify-between text-sm text-gray-600 font-medium">
+                          <span>0%</span>
+                          <span>20%</span>
+                          <span>40%</span>
+                          <span>60%</span>
+                          <span>80%</span>
+                          <span>100%</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
