@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MessageSquare } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 export default function CTASection() {
   return (
@@ -44,13 +46,15 @@ export default function CTASection() {
             transition={{ delay: 0.2 }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <Button 
-              size="lg" 
-              className="bg-white text-[#8B2EE5] hover:bg-gray-100 font-semibold rounded-full px-8 h-14 text-base group"
-            >
-              Start free trial
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to={createPageUrl('Onboarding')}>
+              <Button 
+                size="lg" 
+                className="bg-white text-[#8B2EE5] hover:bg-gray-100 font-semibold rounded-full px-8 h-14 text-base group"
+              >
+                Get started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             <Button 
               size="lg" 
               className="bg-[#8B2EE5] text-white hover:bg-[#7325C4] rounded-full px-8 h-14 text-base"
