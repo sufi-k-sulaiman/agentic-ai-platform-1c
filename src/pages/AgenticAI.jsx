@@ -640,7 +640,7 @@ export default function AgenticAI() {
             <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
               See how much you could save with AI automation
             </p>
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
               {[
                 { value: '$150K', label: 'Avg annual savings' },
                 { value: '1,200', label: 'Hours saved/month' },
@@ -659,6 +659,11 @@ export default function AgenticAI() {
                 </motion.div>
               ))}
             </div>
+            <Link to={createPageUrl('SavingsCalculator')}>
+              <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 rounded-full px-10 h-14 text-lg">
+                Calculate your savings <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

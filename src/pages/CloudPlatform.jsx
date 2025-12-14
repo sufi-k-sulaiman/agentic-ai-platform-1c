@@ -493,6 +493,51 @@ export default function CloudPlatform() {
         </div>
       </section>
 
+      {/* ROI Calculator Section */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Calculate Your{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
+                Infrastructure Savings
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              See how much you'll save on cloud infrastructure costs
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+              {[
+                { value: '$180K', label: 'Avg infrastructure savings/year' },
+                { value: '65%', label: 'Cost reduction vs AWS/Azure' },
+                { value: '3 months', label: 'Average payback period' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100"
+                >
+                  <div className="text-5xl font-bold text-blue-600 mb-3">{stat.value}</div>
+                  <div className="text-xl text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+            <Link to={createPageUrl('SavingsCalculator')}>
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 rounded-full px-10 h-14 text-lg">
+                Calculate Your Savings <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA - Fold 12 */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">

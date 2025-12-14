@@ -576,7 +576,7 @@ export default function Pricing() {
             <p className="text-2xl text-emerald-100 mb-16 max-w-3xl mx-auto leading-relaxed">
               See how much you'll save with AI automation
             </p>
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
               {[
                 { value: '$200K', label: 'Avg annual savings' },
                 { value: '6 months', label: 'Payback period' },
@@ -595,6 +595,11 @@ export default function Pricing() {
                 </motion.div>
               ))}
             </div>
+            <Link to={createPageUrl('SavingsCalculator')}>
+              <Button size="lg" className="bg-white text-emerald-900 hover:bg-gray-100 rounded-full px-10 h-14 text-lg">
+                Calculate Your Savings <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
