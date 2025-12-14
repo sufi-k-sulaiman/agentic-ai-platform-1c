@@ -331,6 +331,7 @@ const hearAboutUs = [
 export default function Onboarding() {
     const [step, setStep] = useState(1);
     const [painPointSearch, setPainPointSearch] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
     vertical: '',
     companyName: '',
@@ -362,6 +363,7 @@ export default function Onboarding() {
   };
 
   const handleSubmit = async () => {
+    setIsSubmitting(true);
     try {
       await base44.entities.OnboardingData.create({
         vertical: formData.vertical,
@@ -377,9 +379,11 @@ export default function Onboarding() {
         completed: true
       });
       alert('Setup complete! We\'ll be in touch soon.');
+      window.location.href = '/';
     } catch (error) {
       console.error('Error saving onboarding data:', error);
       alert('There was an error completing setup. Please try again.');
+      setIsSubmitting(false);
     }
   };
 
@@ -1217,10 +1221,10 @@ export default function Onboarding() {
                   </Button>
                   <Button 
                     onClick={handleSubmit} 
-                    disabled={!formData.email || !formData.phone}
+                    disabled={!formData.email || !formData.phone || isSubmitting}
                     className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12"
                   >
-                    Complete Setup <CheckCircle2 className="ml-2 w-5 h-5" />
+                    {isSubmitting ? 'Saving...' : 'Complete Setup'} <CheckCircle2 className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </motion.div>
