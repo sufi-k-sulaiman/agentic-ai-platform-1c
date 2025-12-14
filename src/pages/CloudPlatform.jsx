@@ -2,38 +2,58 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Cloud, Server, Lock, Zap, Globe, TrendingUp, Shield, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight, Cloud, Server, Lock, Zap, Globe, TrendingUp, Shield, Database, CheckCircle, Activity } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
+
+const performanceData = [
+  { time: '00:00', requests: 12000, latency: 45 },
+  { time: '04:00', requests: 8500, latency: 42 },
+  { time: '08:00', requests: 28000, latency: 48 },
+  { time: '12:00', requests: 45000, latency: 52 },
+  { time: '16:00', requests: 52000, latency: 49 },
+  { time: '20:00', requests: 38000, latency: 46 }
+];
+
+const uptimeData = [
+  { month: 'Jul', uptime: 99.99 },
+  { month: 'Aug', uptime: 99.98 },
+  { month: 'Sep', uptime: 100 },
+  { month: 'Oct', uptime: 99.99 },
+  { month: 'Nov', uptime: 99.99 },
+  { month: 'Dec', uptime: 100 }
+];
 
 const features = [
   {
     icon: Zap,
     title: 'Auto-scaling',
-    description: 'Automatically scale from zero to millions of users without manual intervention.'
+    description: 'Automatically scale from zero to millions of users without manual intervention. Our intelligent auto-scaling system monitors your application performance in real-time and dynamically adjusts compute resources to match demand, ensuring optimal performance during traffic spikes while minimizing costs during quiet periods. The platform uses machine learning to predict traffic patterns based on historical data, enabling proactive scaling that prevents performance degradation before it impacts users. Scale horizontally across thousands of instances or vertically to larger instance types, with seamless transitions that happen in milliseconds without any downtime or manual configuration.'
   },
   {
     icon: Globe,
     title: 'Global Edge Network',
-    description: 'Deploy across 150+ data centers worldwide for ultra-low latency everywhere.'
+    description: 'Deploy your applications across our worldwide network of 150+ strategically located edge data centers spanning every continent and major metropolitan area, ensuring your users experience ultra-low latency regardless of their geographic location. Our intelligent routing system automatically directs each request to the nearest available edge location with sufficient capacity, while our anycast DNS ensures optimal performance even during regional outages or network congestion. The edge network supports dynamic content delivery, serverless function execution at the edge for sub-10ms response times, distributed caching with intelligent invalidation, DDoS protection and web application firewall capabilities, and automatic failover between regions to maintain availability even during catastrophic failures.'
   },
   {
     icon: Shield,
     title: 'Enterprise Security',
-    description: 'SOC 2, ISO 27001, GDPR compliant with end-to-end encryption.'
+    description: 'Bank-grade security infrastructure that protects your data and applications with multiple layers of defense including SOC 2 Type II certification, ISO 27001 compliance, GDPR and CCPA privacy compliance, HIPAA eligibility for healthcare applications, and PCI DSS compliance for payment processing. All data is encrypted at rest using AES-256 encryption and in transit using TLS 1.3, with automatic key rotation and hardware security module (HSM) protection for encryption keys. Our zero-trust architecture requires authentication and authorization for every request, supports SSO integration with SAML and OAuth providers, provides granular role-based access control, maintains comprehensive audit logs of all system access and changes, includes intrusion detection and prevention systems, conducts regular penetration testing and security audits, and offers private networking with VPC peering for isolated environments.'
   },
   {
     icon: Server,
     title: 'Kubernetes-native',
-    description: 'Built on Kubernetes for portability, reliability, and cloud-agnostic deployment.'
+    description: 'Built on enterprise-grade Kubernetes infrastructure providing unmatched portability, reliability, and operational flexibility. Our managed Kubernetes service handles all the complexity of cluster management, automatic upgrades, security patching, and infrastructure maintenance while giving you full control over your application deployment strategies. Deploy using standard Kubernetes manifests, Helm charts, or our simplified configuration format. The platform supports advanced deployment patterns including blue-green deployments for zero-downtime releases, canary deployments for gradual rollouts with automatic rollback on error detection, A/B testing with traffic splitting, and rolling updates with health checks. Cloud-agnostic architecture means you can deploy to any cloud provider or on-premises data center, migrate between providers without vendor lock-in, and run multi-cloud deployments for resilience.'
   },
   {
     icon: Database,
     title: 'Managed Databases',
-    description: 'PostgreSQL, MongoDB, Redis—fully managed with automatic backups and scaling.'
+    description: 'Fully managed database services supporting PostgreSQL for relational data with ACID compliance, MongoDB for flexible document storage, Redis for high-performance caching and real-time features, and Elasticsearch for advanced search capabilities. All databases include automated daily backups with point-in-time recovery up to 35 days, automatic scaling of storage and compute resources based on usage patterns, high availability with synchronous replication across multiple zones, automated failover in under 30 seconds with zero data loss, performance monitoring with query analysis and optimization recommendations, connection pooling and read replicas for improved performance, and encryption at rest and in transit. Our database platform handles all operational tasks including software patching, version upgrades, backup management, and monitoring, allowing your team to focus on application development instead of infrastructure management.'
   },
   {
     icon: TrendingUp,
     title: '99.99% Uptime SLA',
-    description: 'Mission-critical reliability with multi-region failover and disaster recovery.'
+    description: 'Mission-critical reliability backed by our industry-leading 99.99% uptime service level agreement with financial credits for any downtime. Our architecture is designed for resilience at every layer with redundant infrastructure across multiple availability zones within each region, automatic health checking and traffic routing away from unhealthy instances, multi-region deployment capabilities with automatic cross-region failover, distributed denial of service (DDoS) protection handling attacks up to 10 Tbps, comprehensive disaster recovery with geographically dispersed backup storage, and real-time status monitoring with instant incident notifications. Our platform has maintained 99.995% actual uptime over the past 12 months, significantly exceeding our SLA commitment. Each region operates independently so issues in one location never cascade to others, and our global load balancing instantly redirects traffic during regional incidents.'
   }
 ];
 
@@ -70,7 +90,7 @@ export default function CloudPlatform() {
               </span>
             </h1>
             <p className="text-2xl text-gray-600 leading-relaxed mb-10">
-              Deploy and scale AI applications globally with enterprise-grade infrastructure that's optimized for performance, security, and reliability.
+              Deploy and scale Agentic Ai applications globally with enterprise-grade infrastructure that's specifically optimized for the unique demands of AI workloads including GPU acceleration, high-throughput data pipelines, model serving with sub-100ms latency, and massive parallel processing capabilities. Our cloud platform combines the raw compute power needed for training and inference with the operational simplicity of a fully managed service, allowing your data science and engineering teams to focus on building innovative AI solutions instead of managing infrastructure complexity. From startups deploying their first model to Fortune 500 enterprises running thousands of AI workloads serving millions of predictions daily, our platform delivers the performance, security, compliance, and reliability that AI applications demand.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base">
@@ -94,6 +114,58 @@ export default function CloudPlatform() {
         </div>
       </section>
 
+      {/* Performance Charts */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Real-time platform performance
+            </h2>
+            <p className="text-xl text-gray-600">
+              Live metrics from our global infrastructure showing the reliability and speed you can depend on.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>Request Volume & Latency</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart data={performanceData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="time" />
+                    <YAxis yAxisId="left" />
+                    <YAxis yAxisId="right" orientation="right" />
+                    <Tooltip />
+                    <Line yAxisId="left" type="monotone" dataKey="requests" stroke="#8B2EE5" strokeWidth={2} name="Requests/sec" />
+                    <Line yAxisId="right" type="monotone" dataKey="latency" stroke="#A855F7" strokeWidth={2} name="Latency (ms)" />
+                  </LineChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>6-Month Uptime History</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <AreaChart data={uptimeData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="month" />
+                    <YAxis domain={[99.9, 100]} />
+                    <Tooltip />
+                    <Area type="monotone" dataKey="uptime" stroke="#8B2EE5" fill="#E9D5FF" name="Uptime %" />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
@@ -102,11 +174,11 @@ export default function CloudPlatform() {
               Built for scale and performance
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to run production AI workloads at global scale.
+              Everything you need to run production Agentic Ai workloads at global scale with confidence. Our infrastructure is battle-tested by thousands of enterprises processing billions of AI requests daily, from real-time customer service chatbots to complex data analysis pipelines. We handle the heavy lifting of infrastructure management, monitoring, scaling, and optimization so your team can focus on building exceptional AI-powered products that delight users and drive business value.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -114,13 +186,18 @@ export default function CloudPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all"
               >
-                <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-7 h-7 text-[#8B2EE5]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <Card className="h-full hover:shadow-xl transition-all">
+                  <CardHeader>
+                    <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                      <feature.icon className="w-7 h-7 text-[#8B2EE5]" />
+                    </div>
+                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
@@ -166,7 +243,7 @@ export default function CloudPlatform() {
                 Deploy anywhere, instantly
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Our global network ensures your applications are fast and reliable for users everywhere. Deploy to multiple regions with a single command.
+                Our global network ensures your applications are fast and reliable for users everywhere, with the ability to deploy to multiple regions with a single command. Each region is a fully independent deployment zone with its own compute, storage, networking, and database resources, connected via our high-speed private backbone network that spans the globe. Deploy your application to a single region for simplicity or distribute across multiple regions for maximum resilience and performance, with intelligent routing ensuring each user connects to their nearest region automatically. Our platform handles the complexity of multi-region deployments including data replication, consistency management, and failover orchestration, while you maintain full control over which regions to use and how to distribute traffic between them.
               </p>
               <div className="space-y-6">
                 {[
@@ -255,7 +332,7 @@ export default function CloudPlatform() {
               Start building today
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Deploy your first application in minutes. No credit card required for free tier.
+              Deploy your first Agentic Ai application in minutes with our generous free tier that includes everything you need to build, test, and launch production-ready applications without entering a credit card. Get 100GB of bandwidth, 10GB of storage, 100,000 function invocations, and access to our global edge network completely free every month. Scale to paid plans only when you're ready to grow, with transparent, predictable pricing that scales linearly with your usage and no surprise bills or hidden fees. Join thousands of developers and enterprises who have chosen our platform for its unmatched combination of power, simplicity, and reliability.
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Get started free <ArrowRight className="ml-2 w-5 h-5" />
