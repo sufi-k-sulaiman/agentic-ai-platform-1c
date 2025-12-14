@@ -334,13 +334,13 @@ export default function Onboarding() {
     vertical: '',
     companyName: '',
     companyWebsite: '',
+    deploymentStrategy: [],
     role: '',
     teamSize: '',
     companySize: '',
     painPoints: [],
     hearAbout: '',
-    agentName: '',
-    agentPurpose: '',
+    objectives: [],
     email: ''
   });
 
@@ -397,39 +397,51 @@ export default function Onboarding() {
     }
 
     if (step === 3) {
+      const today = new Date();
+      const formattedDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      const deploymentOptions = formData.deploymentStrategy || [];
+      
       return (
         <div className="text-white">
-          <h2 className="text-3xl font-bold mb-4">{selectedVertical.name} Impact</h2>
-          <p className="text-purple-100 text-lg mb-8">{selectedVertical.insight}</p>
+          <h2 className="text-3xl font-bold mb-4">Deployment Architecture</h2>
+          <p className="text-purple-100 text-lg mb-2">{deploymentOptions.length} option{deploymentOptions.length !== 1 ? 's' : ''} selected</p>
+          <div className="text-sm text-purple-200 mb-6">{formattedDate}</div>
 
-          <div className="space-y-4 mb-8">
-            {Object.entries(selectedVertical.stats).map(([key, value], idx) => (
-              <div key={key} className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-purple-100 capitalize">{key} Improvement</span>
-                  <span className="text-2xl font-bold">{value}</span>
-                </div>
-                <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                  <motion.div 
-                    className="h-full bg-white"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${parseInt(value) || 100}%` }}
-                    transition={{ duration: 1, delay: idx * 0.2 }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-            <h3 className="font-semibold mb-3">Key Automations</h3>
-            <div className="space-y-2">
-              {selectedVertical.automations.map((auto, idx) => (
-                <div key={idx} className="flex items-center gap-2 text-sm">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>{auto}</span>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
+            <h3 className="font-semibold mb-4">Infrastructure Impact</h3>
+            <div className="space-y-3">
+              {[
+                { label: 'Deployment speed', percent: 88, color: 'from-blue-400 to-cyan-300' },
+                { label: 'Scalability', percent: 92, color: 'from-green-400 to-emerald-300' },
+                { label: 'Cost efficiency', percent: 76, color: 'from-purple-400 to-pink-300' },
+                { label: 'Reliability', percent: 95, color: 'from-yellow-400 to-orange-300' }
+              ].map((item, idx) => (
+                <div key={idx}>
+                  <div className="flex justify-between text-xs mb-1">
+                    <span>{item.label}</span>
+                    <span>{item.percent}%</span>
+                  </div>
+                  <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
+                    <motion.div 
+                      className={`h-full bg-gradient-to-r ${item.color}`}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${item.percent}%` }}
+                      transition={{ duration: 1, delay: idx * 0.1 }}
+                    />
+                  </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold">99.99%</div>
+              <div className="text-xs text-purple-100">Uptime SLA</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold">&lt;50ms</div>
+              <div className="text-xs text-purple-100">Global latency</div>
             </div>
           </div>
         </div>
@@ -710,43 +722,59 @@ export default function Onboarding() {
     }
 
     if (step === 9) {
+      const today = new Date();
+      const formattedDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      const selectedObjectives = formData.objectives || [];
+      
       return (
         <div className="text-white">
-          <h2 className="text-3xl font-bold mb-4">Your Agentic Ai</h2>
-          <p className="text-purple-100 text-lg mb-8">Customized for your needs</p>
+          <h2 className="text-3xl font-bold mb-4">Your AI Objectives</h2>
+          <p className="text-purple-100 text-lg mb-2">{selectedObjectives.length} objective{selectedObjectives.length !== 1 ? 's' : ''} selected</p>
+          <div className="text-sm text-purple-200 mb-6">{formattedDate}</div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
-            <h3 className="font-semibold mb-4">Implementation Timeline</h3>
-            <div className="space-y-4">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
+            <h3 className="font-semibold mb-4">Expected Outcomes</h3>
+            <div className="space-y-3">
               {[
-                { phase: 'Setup & Configuration', weeks: '1 week' },
-                { phase: 'Training & Testing', weeks: '2 weeks' },
-                { phase: 'Deployment', weeks: '1 week' },
-                { phase: 'Full Production', weeks: '4 weeks' }
+                { outcome: 'Efficiency boost', percent: 85, color: 'from-blue-400 to-cyan-300' },
+                { outcome: 'Cost reduction', percent: 72, color: 'from-green-400 to-emerald-300' },
+                { outcome: 'Quality improvement', percent: 78, color: 'from-purple-400 to-pink-300' },
+                { outcome: 'Time savings', percent: 68, color: 'from-yellow-400 to-orange-300' }
               ].map((item, idx) => (
-                <motion.div 
-                  key={idx}
-                  className="flex items-center gap-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.2 }}
-                >
-                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold">
-                    {idx + 1}
+                <div key={idx}>
+                  <div className="flex justify-between text-xs mb-1">
+                    <span>{item.outcome}</span>
+                    <span>{item.percent}%</span>
                   </div>
-                  <div className="flex-1">
-                    <div className="font-medium">{item.phase}</div>
-                    <div className="text-sm text-purple-100">{item.weeks}</div>
+                  <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
+                    <motion.div 
+                      className={`h-full bg-gradient-to-r ${item.color}`}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${item.percent}%` }}
+                      transition={{ duration: 1, delay: idx * 0.1 }}
+                    />
                   </div>
-                </motion.div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
+            <h3 className="font-semibold mb-3 text-sm">Key Goals</h3>
+            <div className="space-y-2 text-xs">
+              {selectedObjectives.slice(0, 4).map((obj, idx) => (
+                <div key={idx} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <span>{obj}</span>
+                </div>
               ))}
             </div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
-            <CheckCircle2 className="w-8 h-8 mx-auto mb-2" />
-            <div className="text-2xl font-bold">24/7 Support</div>
-            <div className="text-sm text-purple-100">Dedicated success manager included</div>
+            <TrendingUp className="w-6 h-6 mx-auto mb-2" />
+            <div className="text-xl font-bold mb-1">4-6 weeks</div>
+            <div className="text-xs text-purple-100">To measurable results</div>
           </div>
         </div>
       );
@@ -881,37 +909,46 @@ export default function Onboarding() {
               </motion.div>
               )}
 
-            {/* Step 3: Company Info */}
+            {/* Step 3: Deployment Strategy */}
             {step === 3 && selectedVertical && (
               <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Perfect! Let's customize for {selectedVertical.name}</h1>
-                  <p className="text-gray-600 mb-6">Tell us about your company</p>
-                  <div className="mb-6 p-4 rounded-xl bg-purple-50 border border-purple-200">
-                    <div className="flex items-start gap-3">
-                      <selectedVertical.icon className="w-6 h-6 text-[#8B2EE5] flex-shrink-0 mt-1" />
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Industry Insight</h3>
-                        <p className="text-sm text-gray-700">{selectedVertical.insight}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-6">
-                    <div>
-                      <Label htmlFor="company">Company Name</Label>
-                      <Input id="company" placeholder="Your company name" value={formData.companyName} onChange={(e) => setFormData({ ...formData, companyName: e.target.value })} className="mt-2" />
-                    </div>
-                    <div>
-                      <Label htmlFor="website">Company Website</Label>
-                      <Input id="website" type="url" placeholder="https://yourcompany.com" value={formData.companyWebsite} onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })} className="mt-2" />
-                    </div>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What's your deployment strategy?</h1>
+                  <p className="text-gray-600 mb-8">Select all that apply</p>
+                  <div className="space-y-3">
+                    {[
+                      { value: 'cloud', label: 'Cloud', desc: 'Public cloud infrastructure' },
+                      { value: 'onprem', label: 'On-Premises', desc: 'Your own data centers' },
+                      { value: 'hybrid', label: 'Hybrid', desc: 'Mix of cloud and on-prem' },
+                      { value: 'dr', label: 'Disaster Recovery', desc: 'DR site requirements' },
+                      { value: 'multiregion', label: 'Multi-Region Clusters', desc: 'Global distribution' }
+                    ].map((option) => (
+                      <button 
+                        key={option.value}
+                        onClick={() => {
+                          const current = formData.deploymentStrategy || [];
+                          const updated = current.includes(option.value)
+                            ? current.filter(v => v !== option.value)
+                            : [...current, option.value];
+                          setFormData({ ...formData, deploymentStrategy: updated });
+                        }}
+                        className={`w-full p-4 rounded-xl border-2 transition-all text-left ${
+                          (formData.deploymentStrategy || []).includes(option.value) 
+                            ? 'border-[#8B2EE5] bg-purple-50' 
+                            : 'border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        <div className="font-semibold text-gray-900">{option.label}</div>
+                        <div className="text-sm text-gray-600 mt-1">{option.desc}</div>
+                      </button>
+                    ))}
                   </div>
                 </div>
                 <div className="flex gap-3 mt-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.companyName || !formData.companyWebsite} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button onClick={nextStep} disabled={!formData.deploymentStrategy || formData.deploymentStrategy.length === 0} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
                     Continue <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
@@ -1054,29 +1091,56 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 9: Agent Design */}
+            {/* Step 9: Agent Objectives */}
             {step === 9 && (
               <motion.div key="step9" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
-                <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Design your Agentic Ai</h1>
-                  <p className="text-gray-600 mb-8">Customize your assistant</p>
-                  <div className="space-y-6">
-                    <div>
-                      <Label htmlFor="agentName">Agentic Ai Name</Label>
-                      <Input id="agentName" placeholder="e.g., Operations Assistant" value={formData.agentName} onChange={(e) => setFormData({ ...formData, agentName: e.target.value })} className="mt-2" />
-                    </div>
-                    <div>
-                      <Label htmlFor="agentPurpose">What will this Agentic Ai do?</Label>
-                      <Textarea id="agentPurpose" placeholder="Describe the tasks and responsibilities..." value={formData.agentPurpose} onChange={(e) => setFormData({ ...formData, agentPurpose: e.target.value })} className="mt-2 h-32" />
-                    </div>
+                <div className="flex-1 flex flex-col">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Define your Agentic Ai objectives</h1>
+                  <p className="text-gray-600 mb-6">Based on your challenges, select what your AI should focus on</p>
+                  
+                  <div className="grid gap-2 overflow-y-auto pr-2 max-h-[500px]">
+                    {formData.painPoints.flatMap(challenge => {
+                      const objectives = {
+                        'Inefficient processes': ['Automate repetitive tasks', 'Streamline workflows', 'Reduce manual errors'],
+                        'Rising operational costs': ['Optimize resource allocation', 'Monitor spending patterns', 'Identify cost-saving opportunities'],
+                        'Customer churn': ['Predict at-risk customers', 'Personalize retention campaigns', 'Analyze feedback patterns'],
+                        'Recruiting qualified talent': ['Screen candidates faster', 'Match skills to roles', 'Schedule interviews automatically'],
+                        'Retaining employees': ['Monitor engagement levels', 'Identify flight risks', 'Suggest retention strategies'],
+                        'Cash flow instability': ['Forecast cash needs', 'Optimize payment schedules', 'Alert on anomalies'],
+                        'High support ticket volume': ['Auto-respond to common queries', 'Route tickets intelligently', 'Suggest KB articles'],
+                        'Slow response times': ['Prioritize urgent tickets', 'Auto-escalate issues', 'Track SLA compliance'],
+                        'Supply chain disruptions': ['Monitor supplier health', 'Predict delays', 'Suggest alternatives'],
+                        'Low conversion rates': ['Analyze user journeys', 'Optimize pricing', 'Personalize offers'],
+                        'default': ['Analyze data patterns', 'Automate routine tasks', 'Generate insights']
+                      };
+                      return (objectives[challenge] || objectives['default']).map(obj => ({ challenge, objective: obj }));
+                    }).filter((item, idx, arr) => arr.findIndex(t => t.objective === item.objective) === idx).map((item) => (
+                      <button 
+                        key={item.objective}
+                        onClick={() => {
+                          const current = formData.objectives || [];
+                          const updated = current.includes(item.objective)
+                            ? current.filter(o => o !== item.objective)
+                            : [...current, item.objective];
+                          setFormData({ ...formData, objectives: updated });
+                        }}
+                        className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${
+                          (formData.objectives || []).includes(item.objective) 
+                            ? 'border-[#8B2EE5] bg-purple-50' 
+                            : 'border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        {item.objective}
+                      </button>
+                    ))}
                   </div>
                 </div>
-                <div className="flex gap-3 mt-8">
+                <div className="flex gap-3 mt-6">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} disabled={!formData.agentName || !formData.agentPurpose} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  <Button onClick={nextStep} disabled={!formData.objectives || formData.objectives.length === 0} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                    Finish <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </motion.div>
@@ -1086,29 +1150,45 @@ export default function Onboarding() {
             {step === 10 && selectedVertical && (
               <motion.div key="step10" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Almost there!</h1>
-                  <p className="text-gray-600 mb-8">Enter your email to get started</p>
-                  <div className="mb-8">
-                    <Label htmlFor="email">Work Email</Label>
-                    <Input id="email" type="email" placeholder="you@company.com" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="mt-2" />
-                  </div>
-                  <div className="p-6 rounded-xl bg-gray-50 border border-gray-200">
-                    <h4 className="font-semibold text-gray-900 mb-4">Summary</h4>
-                    <div className="space-y-2 text-sm text-gray-700">
-                      <div><span className="font-medium">Industry:</span> {selectedVertical.name}</div>
-                      <div><span className="font-medium">Company:</span> {formData.companyName}</div>
-                      <div><span className="font-medium">Role:</span> {formData.role}</div>
-                      <div><span className="font-medium">Team:</span> {formData.teamSize}</div>
-                      <div><span className="font-medium">Agentic Ai:</span> {formData.agentName}</div>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Review & Complete</h1>
+                  <p className="text-gray-600 mb-6">Your AI configuration summary</p>
+                  <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-3">Organization</h4>
+                      <div className="space-y-2 text-sm text-gray-700">
+                        <div><span className="font-medium">Industry:</span> {selectedVertical.name}</div>
+                        <div><span className="font-medium">Company:</span> {formData.companyName}</div>
+                        <div><span className="font-medium">Website:</span> {formData.companyWebsite}</div>
+                        <div><span className="font-medium">Deployment:</span> {(formData.deploymentStrategy || []).join(', ')}</div>
+                      </div>
+                    </div>
+                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-3">Team Details</h4>
+                      <div className="space-y-2 text-sm text-gray-700">
+                        <div><span className="font-medium">Role:</span> {formData.role}</div>
+                        <div><span className="font-medium">Team Size:</span> {formData.teamSize}</div>
+                        <div><span className="font-medium">Company Size:</span> {formData.companySize}</div>
+                      </div>
+                    </div>
+                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-3">AI Objectives</h4>
+                      <div className="space-y-1 text-sm text-gray-700">
+                        {(formData.objectives || []).slice(0, 5).map((obj, idx) => (
+                          <div key={idx} className="flex items-start gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-[#8B2EE5] mt-0.5 flex-shrink-0" />
+                            <span>{obj}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-3 mt-8">
+                <div className="flex gap-3 mt-6">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={handleSubmit} disabled={!formData.email} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
-                    Create My Agentic Ai <CheckCircle2 className="ml-2 w-5 h-5" />
+                  <Button onClick={handleSubmit} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                    Complete Setup <CheckCircle2 className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </motion.div>
