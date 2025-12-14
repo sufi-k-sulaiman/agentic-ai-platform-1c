@@ -185,7 +185,7 @@ export default function CorporateCampuses() {
               Complete campus automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI agents managing every aspect of your workplace, from space utilization to employee services, creating a seamlessly integrated campus experience.
+              Agentic Ai managing every aspect of your workplace, from space utilization to employee services, creating a seamlessly integrated campus experience.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -219,7 +219,7 @@ export default function CorporateCampuses() {
               Ready to transform your campus?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join Fortune 500 companies creating world-class workplace experiences while optimizing costs with Agentic AI. Transform your corporate campus into an intelligent, efficient, employee-centric environment.
+              Join Fortune 500 companies creating world-class workplace experiences while optimizing costs with Agentic Ai. Transform your corporate campus into an intelligent, efficient, employee-centric environment.
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
