@@ -154,6 +154,27 @@ export default function Traffic() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">The Traffic Congestion Crisis</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Traffic congestion costs the U.S. economy $166 billion annually—$1,200 per commuter in wasted time and fuel—while traditional traffic management watches helplessly. Traffic signals operate on pre-programmed timing sequences created decades ago, running the same patterns whether it's 3 AM with empty roads or 5 PM gridlock. Intersection timing is optimized in isolation without coordination, causing inefficient "stop and go" patterns where drivers hit red lights consecutively. When accidents occur, detection relies on drivers calling 911 or traffic cameras that human operators may not be monitoring at that moment—meaning precious minutes elapse before emergency responders are dispatched and traffic can be rerouted. Construction zones and special events create predictable congestion, yet traffic management cannot dynamically adjust signal timing to compensate.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Infrastructure monitoring faces impossible scale challenges: traffic management centers have walls of camera feeds showing hundreds of intersections, far more than operators can watch simultaneously. Road sensors detect traffic volumes and speeds, but this data sits in dashboards rather than driving automatic optimization. When problems develop—accidents, breakdowns, congestion forming—detection is slow and response is manual: operators must identify the issue, assess severity, decide on interventions, manually adjust signals, and update message boards. Emergency vehicles get stuck in traffic because signal systems can't detect approaching ambulances or fire trucks. Maintenance of traffic signals, cameras, and sensors happens on fixed schedules, causing both premature service and unexpected failures. Long-term planning relies on annual traffic studies rather than continuous analysis of actual patterns, meaning infrastructure improvements address yesterday's problems rather than tomorrow's needs.
+            </p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">AI-Powered Traffic Optimization</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms traffic management through autonomous agents that continuously optimize signal timing across entire networks in real-time. Traffic flow AI analyzes live data from thousands of sensors, cameras, and connected vehicles to understand current conditions and predict near-term demand, adjusting signal sequences millisecond by millisecond to maximize throughput. Multi-intersection coordination creates "green waves" where drivers catch consecutive green lights along major corridors during rush hour, while adaptive timing prevents congestion formation by giving more green time to backed-up directions. Emergency vehicle preemption agents detect approaching ambulances and fire trucks through GPS and automatically create "green corridors" by adjusting signals ahead of their path, reducing emergency response times by 40%. Incident detection AI analyzes camera feeds continuously using computer vision to identify accidents, disabled vehicles, or debris within 15 seconds of occurrence—automatically alerting responders and initiating traffic management responses.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              The transformation extends beyond intersections: work zone management AI automatically adjusts signal timing around construction, reducing bottlenecks by 35%. Special event agents predict traffic impacts and preemptively adjust signal patterns citywide. Predictive analytics identify infrastructure needs, guiding investments toward locations where improvements will have maximum impact. Real-time traffic data feeds navigation apps, helping drivers avoid congestion before it forms. The results are transformative: 30% overall congestion reduction saves commuters 15 hours annually while reducing fuel waste and emissions. Commute times decrease 25% through coordinated optimization. Emergency response improves 40% through instant detection and automated traffic prioritization. Infrastructure maintenance costs drop 35% through predictive service scheduling. Cities gain responsive, intelligent transportation networks that adapt to conditions continuously, making urban areas more livable, sustainable, and economically productive while handling growing populations without proportional infrastructure expansion.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

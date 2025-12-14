@@ -161,6 +161,27 @@ export default function Education() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Education's Personalization Problem</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Traditional education's one-size-fits-all approach fails the majority of students: teachers present material at a single pace and style, leaving struggling students confused and falling further behind while advanced students sit bored waiting for classmates to catch up. A student who misses the foundational concept in week 2 struggles through week 3 material that builds on it, with gaps compounding until they're failing and have lost confidence in their ability. Teachers want to provide individual support but face impossible ratios—one teacher managing 30 students across six class periods means 180 students, making personalized instruction mathematically impossible. Grading consumes evenings and weekends: routine assignments require hours to grade and return, delaying feedback when it would be most valuable for learning.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Administrative burden crushes educator effectiveness: teachers spend 50% of work time on non-instructional tasks—taking attendance, entering grades, planning lessons, creating assessments, communicating with parents, completing compliance paperwork. Special education requires extensive documentation of accommodations and progress, consuming hours weekly. At-risk students fall through cracks because by the time quarterly grades reveal problems, they've missed months of foundational learning. School administrators manually create schedules balancing hundreds of constraints—course requirements, teacher certifications, room capacities, equipment availability—a puzzle taking weeks that still produces conflicts and inefficiencies. Data exists across student information systems, learning platforms, and assessment tools but remains siloed, preventing holistic understanding of student needs and learning patterns that could inform better teaching strategies.
+            </p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Personalized Learning Automation</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI revolutionizes education by providing every student with a personalized AI tutor that adapts to their learning style, pace, and needs. These intelligent agents assess understanding through conversations and exercises, identify exactly where knowledge gaps exist, and provide targeted explanations and practice until concepts are mastered—whether a student needs three different approaches to understand fractions or is ready to accelerate into advanced topics. Grading automation instantly evaluates routine assignments, providing immediate feedback while teachers focus on complex projects requiring human assessment. Adaptive learning platforms adjust difficulty and content based on student performance, ensuring everyone is challenged appropriately. Early warning AI flags at-risk students weeks before they fail by analyzing engagement patterns, assessment scores, and participation—triggering interventions while there's still time to help.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Administrative automation liberates teacher time: attendance, grade entry, progress reporting, and parent communication happen automatically. Lesson planning AI suggests resources, activities, and assessments aligned with standards and student needs. Scheduling optimization creates efficient schedules in hours rather than weeks, maximizing facility utilization while minimizing conflicts. Special education AI maintains required documentation automatically, tracking accommodations and progress without manual paperwork. Teachers finally spend time on what matters: one-on-one instruction, mentoring, and inspiring students. Outcomes improve dramatically: 60% higher student engagement from personalized learning that meets them where they are, 30% better learning outcomes from early intervention and adaptive instruction, 40% higher retention as struggling students get support before giving up, and 50% less teacher burnout from eliminated administrative burden. Education fulfills its promise of helping every student reach their potential while making teaching careers sustainable and rewarding.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

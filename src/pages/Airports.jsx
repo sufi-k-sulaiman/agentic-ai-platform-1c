@@ -161,6 +161,27 @@ export default function Airports() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Airport Operations Chaos</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Airport operations are dominated by cascading delays where one late arrival disrupts dozens of downstream flights: aircraft sit at gates waiting for delayed passengers from connections, pushing back departure times that affect gate availability for arriving flights. Gate assignments happen manually by coordinators juggling dozens of constraints—aircraft size, passenger connections, customs requirements, ground crew availability—making suboptimal decisions that increase taxi times and missed connections. Baggage handling relies on manual tracking where misconnections happen invisibly until passengers report missing bags at destination, requiring expensive recovery operations. Security checkpoint wait times fluctuate wildly: 5 minutes during quiet periods but 45+ minutes during peak banks of international departures, with staffing levels based on historical averages rather than predicted flows.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Passenger experience suffers from poor coordination and communication: travelers don't know whether to grab coffee or rush to their gate because predicted departure times don't account for current airport conditions. Flight delays get announced at the last minute, leaving passengers stranded without options for rebooking or notifications to people picking them up. Wayfinding through unfamiliar terminals causes stress and missed flights. Retail and dining revenue opportunities are lost because stores don't know when passenger flows will arrive—staffing for peak times based on schedules rather than predicted actual flows including delays. Ground operations coordination happens via radio and manual tracking: fueling, catering, cleaning, baggage loading, and maintenance all require human dispatch and monitoring. Each delay investigation requires manually correlating data across systems operated by airlines, ground handlers, air traffic control, and airport operations—taking hours while passengers sit on delayed aircraft.
+            </p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Intelligent Airport Orchestration</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI creates seamlessly coordinated airport operations through autonomous agents that optimize every process. Gate assignment AI continuously optimizes assignments based on real-time conditions: predicting delays before they're officially announced, reassigning gates to minimize taxi times, prioritizing quick turns to maximize aircraft utilization, and ensuring international passengers have customs-capable gates with optimal connection paths. Baggage tracking agents monitor every bag's journey through RFID and computer vision, predicting misconnections 30 minutes before they occur and automatically rerouting bags to make flights—reducing lost baggage by 90%. Passenger flow prediction analyzes incoming flights, historical patterns, and current conditions to forecast security checkpoint demand, enabling dynamic staffing that eliminates long waits while controlling labor costs. Ground operations AI coordinates all service vehicles automatically, ensuring aircraft get fueling, catering, and cleaning in optimal sequence without delays.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Passenger experience transforms through personalized AI assistance: mobile apps provide accurate security wait time predictions, suggest optimal times to head to the gate, recommend dining based on dietary preferences and time available, and proactively notify passengers of gate changes or delays with rebooking options. Indoor wayfinding AI guides passengers through terminals with turn-by-turn directions accounting for current crowds and construction. When delays occur, notification agents instantly inform affected passengers and people picking them up, along with rebooking suggestions. Revenue optimization AI predicts passenger flows to retail and dining locations, enabling dynamic staffing and inventory management that increases per-passenger spending 20%. Operations dashboards give airport managers complete real-time visibility across all systems, enabling data-driven decisions. The results are transformative: 25% on-time improvement, 40% faster passenger processing, 30% operational cost reduction, 90% baggage accuracy, and 50% higher satisfaction—airports handle growing traffic without terminal expansion while delivering experiences that make air travel pleasant rather than stressful.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

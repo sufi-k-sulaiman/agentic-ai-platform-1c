@@ -136,25 +136,6 @@ export default function GovernmentAgencies() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Government agencies face unique challenges in delivering public services: constrained budgets, aging infrastructure, legacy systems that don't communicate, and citizen expectations for the same seamless digital experiences they receive from private sector services. Agencies process millions of permits, licenses, benefits applications, and citizen requests annually, yet many still rely on paper-based processes and manual workflows that create weeks-long delays. As governments strive to modernize, they must balance innovation with security, accessibility with compliance, and efficiency with public accountability—all while serving diverse populations with varying technological capabilities.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Public sector data is often trapped in departmental silos, scattered across incompatible systems purchased over decades. A simple business license application might touch five different departments, requiring citizens to submit the same information multiple times while staff manually transfer data between systems. This fragmentation wastes taxpayer resources, frustrates citizens, and prevents agencies from gaining insights that could improve policy and service delivery. Meanwhile, government workers spend countless hours on routine tasks—fielding phone calls, processing forms, scheduling appointments—when they could be focusing on complex cases and community engagement that genuinely require human expertise.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Agentic AI offers government agencies a path to modernization that works within existing constraints. Intelligent autonomous agents can integrate with legacy systems without requiring expensive replacements, creating a unified digital layer that connects disparate databases and automates workflows across departments. These AI systems can handle routine citizen inquiries 24/7 in multiple languages, automatically process standard permit applications, route complex cases to appropriate staff, and ensure compliance with regulations at every step. Unlike traditional automation that follows rigid rules, AI agents understand context, handle exceptions, and learn from every interaction to improve service delivery.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Forward-thinking government agencies implementing Agentic AI are achieving transformative results while maintaining the security and accountability public service demands: 40% reduction in operational costs through automated workflows, 75% faster permit and license processing, 50% improvement in citizen satisfaction through instant 24/7 service, and 100% audit compliance through comprehensive logging of all automated decisions. These improvements free government workers to focus on complex cases and community engagement while ensuring that every citizen—regardless of technical proficiency—can access the services they need quickly and easily.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Government's Digital Divide</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Government agencies operate with technology infrastructure decades behind the private sector: permits that should take hours require weeks as paper applications move between departments for manual review and approval signatures. Citizens wait 45 minutes on hold to ask simple questions about forms or check application status, then get transferred three times before reaching someone who can help. Building permits involve visiting multiple offices, filling out redundant forms, and waiting for inspections that get scheduled manually weeks out. Business licenses require in-person visits, notarized documents, and payment by check because online systems don't exist or don't integrate with payment processing. Meanwhile, departments operate in silos: the tax assessor's office has different citizen information than the planning department, which uses different systems than public works.

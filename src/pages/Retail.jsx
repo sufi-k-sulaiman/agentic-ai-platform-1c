@@ -161,6 +161,27 @@ export default function Retail() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Retail's Margin Squeeze</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Retailers operate on razor-thin 2-4% net margins where inventory mistakes are devastating: ordering too much requires markdowns that destroy profitability, yet stockouts lose sales to competitors who never return. Traditional buying decisions rely on historical sales and buyer intuition, missing signals from weather patterns, social media trends, local events, and competitor actions that drive actual demand. Pricing decisions happen weekly or monthly based on cost-plus formulas that ignore competitor prices and customer price sensitivity—leaving money on the table during high-demand periods while failing to move inventory during slow periods. The result: 30-40% of inventory ultimately sells at markdown, erasing margins, while popular items stock out, sending customers to competitors who may win them permanently.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Customer experience suffers from lack of personalization: every shopper sees the same promotions regardless of their preferences, purchase history, or price sensitivity, making marketing feel spammy rather than helpful. Customer service operates reactively—addressing issues after complaints rather than identifying and preventing problems. Online and in-store systems don't communicate: shoppers can't check if items are in stock at nearby stores, buy online and pickup in-store experiences are clunky, and customer service reps lack visibility into complete customer journeys. Loyalty programs offer generic rewards rather than personalized benefits aligned with individual preferences. Cart abandonment rates hit 70% online as shoppers comparison shop and wait for better deals, yet retailers lack tools to win them back with timely, personalized incentives. Employee productivity suffers from poor systems that require manual inventory checks, price changes, and reporting—tasks that consume time better spent helping customers.
+            </p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Intelligent Retail Automation</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms retail through autonomous agents that optimize every aspect of operations in real-time. Demand forecasting AI predicts sales at SKU-location-day level using machine learning models trained on historical sales, weather patterns, local events, social media trends, and economic indicators, automatically adjusting orders to maintain 95%+ in-stock rates while minimizing inventory carrying costs. Dynamic pricing agents continuously adjust prices based on competitor monitoring, inventory levels, demand velocity, and individual customer price sensitivity—raising prices on hot-selling items to maximize margin while marking down slow movers before they become obsolete. Personalization AI analyzes every customer's browsing, purchases, and preferences to deliver individualized product recommendations, targeted promotions, and customized shopping experiences across all channels that feel helpful rather than creepy.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Customer experience improves through comprehensive automation: chatbot AI provides instant support 24/7, answering product questions, checking inventory across locations, processing returns, and escalating complex issues to humans with complete context. Cart abandonment agents detect when customers leave items in online carts and automatically send personalized incentives—free shipping, small discounts, or product alternatives—timed to convert without training customers to always wait for deals. Inventory visibility agents enable buy-online-pickup-in-store and ship-from-store, treating all inventory as available regardless of location. Customer service agents proactively identify issues—order delays, quality problems, delivery failures—and resolve them before customers complain. Marketing optimization AI continuously tests offers, channels, and creative elements, automatically scaling what works and killing what doesn't. Retailers achieve 35% conversion rate increases, 25% margin improvement from dynamic pricing and reduced markdowns, 40% inventory cost reduction while maintaining availability, and 60% higher customer lifetime value through personalization that drives loyalty in an industry where every basis point of margin affects survival.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
