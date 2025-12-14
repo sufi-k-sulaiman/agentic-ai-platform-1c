@@ -111,24 +111,7 @@ export default function SolutionsSection() {
               <div className="absolute bottom-10 right-10 w-32 h-32 border border-white/10 rounded-full" />
             </div>
 
-            {/* Floating Badge */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="hidden sm:block absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 sm:p-5"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-sm sm:text-base font-semibold text-gray-900">SOC 2 Type II</div>
-                  <div className="text-xs sm:text-sm text-gray-500">Certified</div>
-                </div>
-              </div>
-            </motion.div>
+
           </motion.div>
         </div>
       </div>
