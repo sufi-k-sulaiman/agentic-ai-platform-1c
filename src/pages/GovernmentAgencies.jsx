@@ -164,10 +164,7 @@ export default function GovernmentAgencies() {
         </div>
       </section>
 
-      <section className="py-20 bg-white d-none">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="prose prose-lg max-w-none">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">The Traffic Congestion Crisis</h3>
+      <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
