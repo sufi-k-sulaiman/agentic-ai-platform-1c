@@ -100,6 +100,33 @@ ${conversationHistory}
 
 User: ${userMessage.content}
 
+Provide a helpful, accurate response about 1C Platform. Be specific about products, features, pricing, and industries. Keep responses under 150 words unless more detail is needed.`;
+
+      const response = await base44.integrations.Core.InvokeLLM({
+        prompt: prompt,
+        add_context_from_internet: false
+      });
+
+      const botMessage = {
+        role: 'assistant',
+        content: response.response || response,
+        timestamp: new Date()
+      };
+
+      setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      console.error('Chat error:', error);
+      const errorMessage = {
+        role: 'assistant',
+        content: 'I apologize, but I\'m having trouble responding right now. Please try again or contact our sales team directly.',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -159,13 +186,24 @@ User: ${userMessage.content}
                   : 'bg-gray-100 text-gray-900'
               }`}
             >
-              <p className="text-sm leading-relaxed">{message.content}</p>
+              <p className="text-sm leading-relaxed whitespace-pre-line">{message.content}</p>
               <p className={`text-xs mt-1 ${message.role === 'user' ? 'text-purple-200' : 'text-gray-500'}`}>
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </p>
             </div>
           </motion.div>
         ))}
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex justify-start"
+          >
+            <div className="bg-gray-100 rounded-2xl px-4 py-3">
+              <Loader2 className="w-5 h-5 text-[#8B2EE5] animate-spin" />
+            </div>
+          </motion.div>
+        )}
         <div ref={messagesEndRef} />
       </div>
 
@@ -214,9 +252,10 @@ User: ${userMessage.content}
           />
           <Button
             onClick={handleSend}
-            className="bg-[#8B2EE5] hover:bg-[#7325C4] px-4"
+            disabled={isLoading}
+            className="bg-[#8B2EE5] hover:bg-[#7325C4] px-4 disabled:opacity-50"
           >
-            <Send className="w-4 h-4" />
+            {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
           </Button>
         </div>
       </div>
