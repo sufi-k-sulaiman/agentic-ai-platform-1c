@@ -81,8 +81,8 @@ export default function Pricing() {
               </p>
               <div className="space-y-4 mb-12">
                 {[
-                  '5 AI agents',
-                  '10,000 API calls/month',
+                  '1 Ai agents',
+                  '600 API calls/month',
                   '1GB storage',
                   'Community support',
                   'Basic analytics'
@@ -162,8 +162,8 @@ export default function Pricing() {
               </p>
               <div className="space-y-4 mb-12">
                 {[
-                  '50 AI agents',
-                  '1M API calls/month',
+                  '5 AI agents',
+                  '10000 API calls/month',
                   '100GB storage',
                   'Priority email support',
                   'Advanced analytics',
