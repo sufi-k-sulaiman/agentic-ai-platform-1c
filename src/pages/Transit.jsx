@@ -46,7 +46,7 @@ const solutions = [
   {
     category: 'Passenger Services',
     items: [
-      '24/7 AI assistant for trip planning and inquiries',
+      '24/7 Agentic Ai assistant for trip planning and inquiries',
       'Real-time delay predictions and alternative routing',
       'Personalized notifications and journey updates',
       'Automated ticketing and fare optimization'
@@ -177,7 +177,7 @@ export default function Transit() {
               Complete transit automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI agents managing every aspect of public transportation
+              Agentic Ai managing every aspect of public transportation
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">

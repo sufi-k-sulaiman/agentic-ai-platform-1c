@@ -37,7 +37,7 @@ const solutions = [
   {
     category: 'Patient Care',
     items: [
-      '24/7 AI triage and symptom assessment with emergency detection and routing',
+      '24/7 Agentic Ai triage and symptom assessment with emergency detection and routing',
       'Automated appointment scheduling with intelligent slot optimization and no-show prediction',
       'Post-discharge follow-up and care coordination with risk stratification',
       'Personalized health recommendations based on complete medical history and genomics',

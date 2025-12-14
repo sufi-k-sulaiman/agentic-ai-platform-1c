@@ -35,7 +35,7 @@ const solutions = [
   {
     category: 'Player Experience',
     items: [
-      '24/7 AI support for player inquiries and issues',
+      '24/7 Agentic Ai support for player inquiries and issues',
       'Intelligent matchmaking based on skill and behavior',
       'Personalized content recommendations',
       'Dynamic difficulty adjustment for engagement'
@@ -89,13 +89,13 @@ export default function Gaming() {
                 Gaming
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Agentic AI for
+                Agentic Ai for
                 <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
                   gaming at scale
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Power your game with AI that optimizes infrastructure, personalizes player experiences, and detects cheats—cutting costs by 35% while boosting engagement.
+                Power your game with Agentic Ai that optimizes infrastructure, personalizes player experiences, and detects cheats—cutting costs by 35% while boosting engagement.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
@@ -134,7 +134,7 @@ export default function Gaming() {
               Gaming challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms game operations
+              How Agentic Ai transforms game operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -170,7 +170,7 @@ export default function Gaming() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Complete gaming AI platform
+              Complete gaming Agentic Ai platform
             </h2>
             <p className="text-xl text-gray-600">
               End-to-end automation for game operations
@@ -207,7 +207,7 @@ export default function Gaming() {
               Ready to scale your game?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join top gaming studios optimizing operations with Agentic AI
+              Join top gaming studios optimizing operations with Agentic Ai
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Get started <ArrowRight className="ml-2 w-5 h-5" />
