@@ -8,6 +8,7 @@ import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Tr
 import { base44 } from '@/api/base44Client';
 import PageMeta from '@/components/PageMeta';
 import { getAggregatedChallengeData } from '@/components/ChallengeDataCards';
+import { createPageUrl } from '@/utils';
 
 const verticals = [
   { 
@@ -380,13 +381,29 @@ export default function Onboarding() {
         completed: true
       });
       setIsComplete(true);
-      setTimeout(() => {
-        window.location.href = '/';
-      }, 5000);
     } catch (error) {
       console.error('Error saving onboarding data:', error);
       setIsSubmitting(false);
     }
+  };
+
+  const handleStartAgain = () => {
+    setIsComplete(false);
+    setStep(1);
+    setFormData({
+      vertical: '',
+      companyName: '',
+      companyWebsite: '',
+      deploymentStrategy: [],
+      role: '',
+      teamSize: '',
+      companySize: '',
+      painPoints: [],
+      hearAbout: '',
+      objectives: [],
+      email: '',
+      phone: ''
+    });
   };
 
   const renderRightSide = () => {
@@ -949,12 +966,24 @@ export default function Onboarding() {
               </div>
 
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.5 }}
-                className="text-lg text-purple-100"
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
               >
-                Redirecting you to your dashboard...
+                <Button
+                  onClick={handleStartAgain}
+                  variant="outline"
+                  className="bg-white/10 border-white/30 text-white hover:bg-white/20 h-14 px-8 text-lg backdrop-blur-sm"
+                >
+                  Start Again
+                </Button>
+                <Button
+                  onClick={() => window.location.href = createPageUrl('Contact')}
+                  className="bg-white text-[#8B2EE5] hover:bg-white/90 h-14 px-8 text-lg font-semibold"
+                >
+                  Contact Us
+                </Button>
               </motion.div>
             </motion.div>
           </div>
