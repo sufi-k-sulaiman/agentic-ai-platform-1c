@@ -141,17 +141,28 @@ export default function CorporateCampuses() {
         </div>
       </section>
 
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Corporate Campus Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Corporate campuses have become operational nightmares in the hybrid work era: conference rooms sit empty while employees scramble to find meeting space, yet companies still pay full rent and utilities for these underutilized facilities. Facilities teams manually schedule maintenance across dozens of buildings, often performing preventive service on fixed calendars rather than actual equipment condition—resulting in both wasteful premature maintenance and unexpected failures. HVAC systems run 24/7 heating or cooling empty floors, wasting 30% of energy costs, yet adjusting schedules manually for fluctuating occupancy patterns is impractical. Security requires badge readers, camera monitoring, and visitor check-ins coordinated across fragmented systems, creating both security gaps and friction for employees and guests.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Employee experience suffers from operational fragmentation: workers can't easily book desks or conference rooms, submit maintenance requests through email or phone calls that often get lost, and navigate campuses without wayfinding tools or parking guidance. Visitor management involves manual check-ins, printing badges, and calling hosts—creating poor first impressions while consuming reception staff time. Facilities data exists in separate building management systems, space reservation platforms, badge access databases, and maintenance ticketing systems that don't communicate—preventing facilities managers from understanding actual space utilization, energy consumption patterns, or equipment health. Strategic decisions about real estate optimization, sustainability initiatives, and workplace experience improvements happen based on gut feel rather than data-driven insights.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Corporate Campus Complexity</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Corporate campuses have become operational nightmares in the hybrid work era: conference rooms sit empty while employees scramble to find meeting space, yet companies still pay full rent and utilities for these underutilized facilities. Facilities teams manually schedule maintenance across dozens of buildings, often performing preventive service on fixed calendars rather than actual equipment condition—resulting in both wasteful premature maintenance and unexpected failures. HVAC systems run 24/7 heating or cooling empty floors, wasting 30% of energy costs, yet adjusting schedules manually for fluctuating occupancy patterns is impractical. Security requires badge readers, camera monitoring, and visitor check-ins coordinated across fragmented systems, creating both security gaps and friction for employees and guests.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Employee experience suffers from operational fragmentation: workers can't easily book desks or conference rooms, submit maintenance requests through email or phone calls that often get lost, and navigate campuses without wayfinding tools or parking guidance. Visitor management involves manual check-ins, printing badges, and calling hosts—creating poor first impressions while consuming reception staff time. Facilities data exists in separate building management systems, space reservation platforms, badge access databases, and maintenance ticketing systems that don't communicate—preventing facilities managers from understanding actual space utilization, energy consumption patterns, or equipment health. Strategic decisions about real estate optimization, sustainability initiatives, and workplace experience improvements happen based on gut feel rather than data-driven insights.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Smart Workplace Automation</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Agentic AI creates truly intelligent campuses where autonomous agents orchestrate every aspect of the workplace experience. Occupancy AI analyzes badge swipes, calendar data, and historical patterns to predict space needs and automatically adjust building systems: HVAC, lighting, and ventilation activate only for occupied areas, following employees throughout the day. Space optimization agents analyze actual room utilization to identify underused conference rooms and suggest reconfigurations, enabling 40% reductions in real estate footprint. Predictive maintenance AI monitors equipment health through IoT sensors, scheduling service before failures occur and eliminating 85% of reactive repairs. Visitor management agents handle registration, badge printing, host notifications, and wayfinding automatically—creating seamless experiences while maintaining security.
             </p>

@@ -133,17 +133,28 @@ export default function GovernmentAgencies() {
         </div>
       </section>
 
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Government Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Government agencies operate with technology infrastructure decades behind the private sector: permits that should take hours require weeks as paper applications move between departments for manual review and approval signatures. Citizens wait 45 minutes on hold to ask simple questions about forms or check application status, then get transferred three times before reaching someone who can help. Building permits involve visiting multiple offices, filling out redundant forms, and waiting for inspections that get scheduled manually weeks out. Business licenses require in-person visits, notarized documents, and payment by check because online systems don't exist or don't integrate with payment processing. Meanwhile, departments operate in silos: the tax assessor's office has different citizen information than the planning department, which uses different systems than public works.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Budget constraints exacerbate operational challenges: agencies cannot afford modern software or the consultants needed to integrate legacy systems, so they continue manual processes that waste taxpayer money. Compliance and transparency requirements demand extensive documentation, but tracking and reporting happens through spreadsheets and manual compilation taking weeks of staff time. Public records requests require employees to manually search file cabinets and databases across departments. Service quality suffers as experienced staff retire, taking institutional knowledge with them while new hires face inadequate training and outdated tools. Citizens increasingly expect government services to work like Amazon or their banking app—instant, online, 24/7—yet most agencies still require phone calls, office visits, and paper forms, creating frustration that erodes public trust in government effectiveness.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Government's Digital Divide</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Government agencies operate with technology infrastructure decades behind the private sector: permits that should take hours require weeks as paper applications move between departments for manual review and approval signatures. Citizens wait 45 minutes on hold to ask simple questions about forms or check application status, then get transferred three times before reaching someone who can help. Building permits involve visiting multiple offices, filling out redundant forms, and waiting for inspections that get scheduled manually weeks out. Business licenses require in-person visits, notarized documents, and payment by check because online systems don't exist or don't integrate with payment processing. Meanwhile, departments operate in silos: the tax assessor's office has different citizen information than the planning department, which uses different systems than public works.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Budget constraints exacerbate operational challenges: agencies cannot afford modern software or the consultants needed to integrate legacy systems, so they continue manual processes that waste taxpayer money. Compliance and transparency requirements demand extensive documentation, but tracking and reporting happens through spreadsheets and manual compilation taking weeks of staff time. Public records requests require employees to manually search file cabinets and databases across departments. Service quality suffers as experienced staff retire, taking institutional knowledge with them while new hires face inadequate training and outdated tools. Citizens increasingly expect government services to work like Amazon or their banking app—instant, online, 24/7—yet most agencies still require phone calls, office visits, and paper forms, creating frustration that erodes public trust in government effectiveness.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Digital Government Automation</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Agentic AI modernizes government services by deploying intelligent agents that work within existing constraints, integrating with legacy systems without requiring expensive replacements. Citizen service AI provides 24/7 assistance through chat, phone, and SMS in multiple languages, answering questions about forms, checking application status, and guiding citizens through processes step-by-step. Workflow automation agents handle complete permit and license processes: accepting online applications, automatically checking completeness and eligibility, routing approvals to appropriate staff, scheduling required inspections, processing payments, and issuing digital permits—all without manual intervention. Document processing AI extracts information from any format—PDFs, scanned images, handwritten forms—eliminating manual data entry while maintaining accuracy. Integration agents connect siloed systems, creating unified citizen profiles accessible across departments.
             </p>

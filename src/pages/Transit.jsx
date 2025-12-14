@@ -133,22 +133,19 @@ export default function Transit() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="prose prose-lg max-w-none">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Transit's Reliability Crisis</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Transit Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Public transit agencies struggle with the fundamental tension between service quality and cost efficiency: buses run on fixed schedules regardless of actual demand, meaning vehicles travel empty during off-peak hours (wasting fuel and driver time) while passengers are packed like sardines during rush hour. Vehicle breakdowns happen unexpectedly because maintenance follows calendar schedules rather than actual equipment condition—a bus transmission fails mid-route, stranding passengers and cascading delays across the network. Transit operators manually adjust to disruptions: when accidents block routes, dispatchers spend precious minutes on radio communications rerouting buses and notifying passengers through outdated announcement systems. The result is unreliable service that frustrates passengers and drives them to personal vehicles, creating a death spiral of declining ridership, reduced revenue, and service cuts.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Operational inefficiency compounds these challenges: crew scheduling happens manually with spreadsheets, leading to shift gaps, overtime costs, and unfair distribution of desirable routes. Fare collection systems detect revenue leakage but identifying specific loss points requires manual analysis rarely performed. Route planning happens annually based on historical data rather than real-time demand patterns—meaning service allocations that made sense last year persist despite changing employment centers and residential patterns. Passengers lack real-time information, standing at stops unsure whether the bus left 2 minutes ago or will arrive in 20 minutes. Customer service teams field thousands of calls about schedules and delays but can't provide accurate answers because they lack visibility into actual vehicle locations and conditions. Budget pressures force impossible choices: cut service frequency, defer vehicle replacement, or raise fares—each option further degrading the rider experience and accelerating ridership decline.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Intelligent Transit Operations</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Agentic AI revolutionizes transit operations through autonomous agents that optimize every aspect of service delivery in real-time. Dynamic routing AI analyzes ridership patterns, traffic conditions, weather forecasts, and special events to continuously adjust service: increasing frequency on high-demand routes, deploying smaller vehicles during off-peak hours, and rerouting around congestion—all automatically. Predictive maintenance agents monitor every vehicle through hundreds of sensors, identifying issues weeks before failure and automatically scheduling service during optimal windows to minimize service disruptions. When breakdowns do occur, AI instantly identifies the closest replacement vehicle, reroutes passengers, updates arrival predictions, and notifies affected riders through their preferred channels. Crew scheduling optimization ensures fair shift distribution while minimizing overtime and maintaining regulatory compliance.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Passenger experience transforms through real-time intelligence: mobile apps powered by AI provide accurate arrival predictions within 30 seconds, suggest optimal routes considering delays and connections, and proactively notify riders of service disruptions with alternative options. Fare optimization agents dynamically adjust pricing to incentivize off-peak travel and maximize revenue while keeping transit affordable. Operations dashboards give transit managers complete visibility into fleet health, service performance, and passenger satisfaction metrics, enabling data-driven decisions about route planning, infrastructure investments, and service improvements. The results are remarkable: 95% on-time performance as AI predicts and prevents delays, 25% operational cost reduction through optimized routing and predictive maintenance, 30% reduction in vehicle downtime, and 35% ridership growth as reliable service attracts passengers back from personal vehicles. Transit becomes a viable, attractive choice that reduces congestion and emissions while operating sustainably.
             </p>
           </div>
         </div>

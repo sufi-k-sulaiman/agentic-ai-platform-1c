@@ -151,17 +151,28 @@ export default function DataCenters() {
       </section>
 
       {/* Industry Overview */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Data Center Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Data center operators face an impossible balancing act: maintaining 99.999% uptime while managing explosive growth in computing demand, all within tight energy budgets and increasingly strict sustainability mandates. Power and cooling costs consume 60% of operating expenses, with every percentage point of PUE (Power Usage Effectiveness) improvement translating to millions in annual savings. Yet traditional HVAC management relies on static setpoints that waste energy or create hot spots leading to equipment failure. Infrastructure teams monitor thousands of servers, storage arrays, network switches, and environmental systems through disparate management consoles, making it nearly impossible to identify issues before they cascade into outages that cost $9,000 per minute on average.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The complexity multiplies with scale: thermal dynamics across server rows, workload patterns affecting power consumption, equipment aging curves, and network topology all interact in ways that exceed human comprehension. Maintenance happens on fixed schedules rather than actual equipment condition, leading to both premature service (wasting resources) and unexpected failures (causing downtime). Capacity planning relies on historical trends rather than predictive modeling, resulting in expensive over-provisioning to avoid capacity crunches. Meanwhile, every second of downtime damages customer trust and SLA commitments, yet troubleshooting complex issues can take hours as teams manually correlate logs, metrics, and events across systems trying to identify root causes.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">The Data Center Operations Challenge</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Data center operators face an impossible balancing act: maintaining 99.999% uptime while managing explosive growth in computing demand, all within tight energy budgets and increasingly strict sustainability mandates. Power and cooling costs consume 60% of operating expenses, with every percentage point of PUE (Power Usage Effectiveness) improvement translating to millions in annual savings. Yet traditional HVAC management relies on static setpoints that waste energy or create hot spots leading to equipment failure. Infrastructure teams monitor thousands of servers, storage arrays, network switches, and environmental systems through disparate management consoles, making it nearly impossible to identify issues before they cascade into outages that cost $9,000 per minute on average.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The complexity multiplies with scale: thermal dynamics across server rows, workload patterns affecting power consumption, equipment aging curves, and network topology all interact in ways that exceed human comprehension. Maintenance happens on fixed schedules rather than actual equipment condition, leading to both premature service (wasting resources) and unexpected failures (causing downtime). Capacity planning relies on historical trends rather than predictive modeling, resulting in expensive over-provisioning to avoid capacity crunches. Meanwhile, every second of downtime damages customer trust and SLA commitments, yet troubleshooting complex issues can take hours as teams manually correlate logs, metrics, and events across systems trying to identify root causes.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Autonomous Data Center Operations</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Agentic AI creates truly autonomous data center operations where intelligent agents continuously optimize every aspect of the facility in real-time. AI analyzes thermal maps from thousands of sensors alongside workload distributions, weather forecasts, and electricity rates to dynamically adjust CRAC units, airflow, and temperature setpoints millisecond by millisecond—maintaining optimal cooling while minimizing energy consumption. Predictive algorithms monitor vibration patterns, temperature anomalies, and performance metrics from every piece of equipment to identify failures weeks before they occur, automatically scheduling maintenance during optimal windows and ordering replacement parts before technicians even know there's an issue. Workload orchestration AI continuously optimizes server placement based on thermal conditions, power availability, network topology, and application requirements, ensuring maximum efficiency and performance.
             </p>

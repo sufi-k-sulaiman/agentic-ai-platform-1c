@@ -140,17 +140,28 @@ export default function SportsEntertainment() {
         </div>
       </section>
 
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Venue Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Sports and entertainment venues face intense pressure to maximize revenue per event while delivering experiences that justify premium ticket prices: concession stands have long lines causing fans to miss parts of games, yet staffing for peak rushes means idle workers during gameplay. Parking creates bottlenecks before and after events, with manual payment and exit processes causing 45-minute delays that sour the entire experience. Ticket pricing is static—set weeks before events based on historical averages—missing opportunities to maximize revenue on high-demand games while leaving seats empty for less popular matchups. Merchandise sales rely on limited physical inventory at the venue, causing stockouts of popular items while overstocking others. Fan engagement happens through generic mass communications rather than personalized experiences, missing opportunities to build loyalty and drive repeat attendance.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Operational inefficiency compounds these revenue challenges: staffing decisions happen manually based on expected attendance, often resulting in understaffing (degrading service) or overstaffing (wasting money). Event setup and breakdown require coordination across security, concessions, cleaning, and technical teams through radio communications and manual checklists. Sponsorship ROI is difficult to measure: sponsors want proof their activations drive engagement, but venues lack data connecting sponsor visibility to fan behavior. Maintenance happens reactively—HVAC systems, lighting, seating, and equipment are repaired after failures rather than before, causing disruptions and emergency costs. Customer data exists across ticketing, concessions, parking, and merchandise systems that don't communicate, preventing venues from understanding fan preferences and spending patterns that could inform better services and marketing.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Venue Revenue & Experience Crisis</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Sports and entertainment venues face intense pressure to maximize revenue per event while delivering experiences that justify premium ticket prices: concession stands have long lines causing fans to miss parts of games, yet staffing for peak rushes means idle workers during gameplay. Parking creates bottlenecks before and after events, with manual payment and exit processes causing 45-minute delays that sour the entire experience. Ticket pricing is static—set weeks before events based on historical averages—missing opportunities to maximize revenue on high-demand games while leaving seats empty for less popular matchups. Merchandise sales rely on limited physical inventory at the venue, causing stockouts of popular items while overstocking others. Fan engagement happens through generic mass communications rather than personalized experiences, missing opportunities to build loyalty and drive repeat attendance.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Operational inefficiency compounds these revenue challenges: staffing decisions happen manually based on expected attendance, often resulting in understaffing (degrading service) or overstaffing (wasting money). Event setup and breakdown require coordination across security, concessions, cleaning, and technical teams through radio communications and manual checklists. Sponsorship ROI is difficult to measure: sponsors want proof their activations drive engagement, but venues lack data connecting sponsor visibility to fan behavior. Maintenance happens reactively—HVAC systems, lighting, seating, and equipment are repaired after failures rather than before, causing disruptions and emergency costs. Customer data exists across ticketing, concessions, parking, and merchandise systems that don't communicate, preventing venues from understanding fan preferences and spending patterns that could inform better services and marketing.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Personalized Fan Experience Automation</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Agentic AI revolutionizes venue operations through autonomous agents that personalize every fan touchpoint. Dynamic pricing AI continuously adjusts ticket prices based on demand signals—team performance, opponent quality, weather, day of week, and remaining inventory—maximizing revenue by charging premium prices for high-demand games while filling seats for less popular events with attractive pricing. Mobile ordering agents let fans order food and drinks from their seats, predicting wait times and automatically routing orders to optimal concession locations to minimize congestion. Parking optimization AI guides fans to available spaces in real-time while processing payments automatically through license plate recognition, eliminating exit bottlenecks. Personalization engines analyze each fan's attendance history, merchandise purchases, and engagement to deliver customized content, offers, and experiences through mobile apps.
             </p>

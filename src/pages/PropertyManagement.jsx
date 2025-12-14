@@ -151,17 +151,28 @@ export default function PropertyManagement() {
       </section>
 
       {/* Industry Overview */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Property Management Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Property managers face a relentless daily grind of maintenance emergencies, tenant complaints, rent collection follow-ups, and vendor coordination—all while trying to maintain profitability across diverse portfolios. HVAC systems fail at 2 AM, requiring immediate response. Leases expire without timely renewal notices, leading to unexpected vacancies. Maintenance requests pile up in email inboxes and phone messages, with no systematic way to prioritize urgent issues over routine tasks. Meanwhile, property managers manually track hundreds of lease agreements, payment schedules, and maintenance contracts across spreadsheets and disconnected software systems, creating opportunities for costly errors and missed deadlines.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The financial impact of inefficient operations compounds rapidly: reactive maintenance costs 3-5x more than preventive service, yet without predictive tools, managers only respond after equipment fails. Late rent collection drains cash flow, but manual follow-up processes are time-consuming and inconsistent. Vacant units represent pure revenue loss, yet marketing and showing coordination often happens through phone tag and manual scheduling. Property managers spend 60-70% of their time on administrative tasks rather than strategic initiatives that improve property value and tenant satisfaction. This operational inefficiency directly reduces NOI (Net Operating Income) and makes scaling portfolios extremely difficult without proportionally increasing staff.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">The Property Management Challenge</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Property managers face a relentless daily grind of maintenance emergencies, tenant complaints, rent collection follow-ups, and vendor coordination—all while trying to maintain profitability across diverse portfolios. HVAC systems fail at 2 AM, requiring immediate response. Leases expire without timely renewal notices, leading to unexpected vacancies. Maintenance requests pile up in email inboxes and phone messages, with no systematic way to prioritize urgent issues over routine tasks. Meanwhile, property managers manually track hundreds of lease agreements, payment schedules, and maintenance contracts across spreadsheets and disconnected software systems, creating opportunities for costly errors and missed deadlines.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The financial impact of inefficient operations compounds rapidly: reactive maintenance costs 3-5x more than preventive service, yet without predictive tools, managers only respond after equipment fails. Late rent collection drains cash flow, but manual follow-up processes are time-consuming and inconsistent. Vacant units represent pure revenue loss, yet marketing and showing coordination often happens through phone tag and manual scheduling. Property managers spend 60-70% of their time on administrative tasks rather than strategic initiatives that improve property value and tenant satisfaction. This operational inefficiency directly reduces NOI (Net Operating Income) and makes scaling portfolios extremely difficult without proportionally increasing staff.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Agentic AI Transformation</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Agentic AI transforms property management by deploying autonomous agents that handle entire workflows from start to finish without human intervention. When a tenant submits a maintenance request, AI agents automatically categorize the issue, assess urgency, check warranty status, select and dispatch the optimal vendor based on availability and past performance, and schedule access—all within minutes. The system monitors completion, processes invoices, and updates records automatically. For rent collection, AI agents send personalized payment reminders based on tenant history, process payments instantly, and escalate delinquencies according to customized workflows. Lease renewals become proactive rather than reactive, with AI analyzing market conditions, tenant payment history, and comparable properties to generate personalized renewal offers 90 days before expiration.
             </p>

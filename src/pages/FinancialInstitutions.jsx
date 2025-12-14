@@ -144,17 +144,28 @@ export default function FinancialInstitutions() {
       </section>
 
       {/* Industry Overview */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Banking Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Banks drown in regulatory complexity: every loan application requires KYC verification, AML screening, credit analysis, and risk assessment—processes that consume 5-7 days and multiple department handoffs. Compliance officers spend 70% of their time manually compiling audit trails, generating regulatory reports, and documenting controls for Basel III, Dodd-Frank, GDPR, and countless jurisdiction-specific requirements. Meanwhile, fraud detection systems overwhelm analysts with false positives—flagging 40% of legitimate transactions as suspicious while sophisticated attacks exploiting subtle behavioral patterns slip through undetected. Customer service teams field thousands of repetitive calls daily about account balances, transaction history, and password resets—simple queries that waste expensive human talent while customers wait on hold for 15-45 minutes.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The cost of operational inefficiency is staggering: manual loan underwriting limits volume capacity and creates inconsistent decisions based on individual underwriter judgment. Customer onboarding takes 7-10 days with multiple branch visits, during which prospects often choose faster competitors. Data fragmentation across core banking systems, CRM platforms, payment processors, and loan origination systems prevents personalized service—relationship managers can't see complete customer profiles, cross-selling opportunities are missed, and at-risk customers churn without warning. Back-office operations remain stubbornly manual: document processing, reconciliation, exception handling, and reporting consume armies of staff performing repetitive tasks that are both expensive and error-prone. Traditional automation helps but requires constant maintenance of rigid rule sets that break whenever processes change.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Banking's Operational Burden</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Banks drown in regulatory complexity: every loan application requires KYC verification, AML screening, credit analysis, and risk assessment—processes that consume 5-7 days and multiple department handoffs. Compliance officers spend 70% of their time manually compiling audit trails, generating regulatory reports, and documenting controls for Basel III, Dodd-Frank, GDPR, and countless jurisdiction-specific requirements. Meanwhile, fraud detection systems overwhelm analysts with false positives—flagging 40% of legitimate transactions as suspicious while sophisticated attacks exploiting subtle behavioral patterns slip through undetected. Customer service teams field thousands of repetitive calls daily about account balances, transaction history, and password resets—simple queries that waste expensive human talent while customers wait on hold for 15-45 minutes.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The cost of operational inefficiency is staggering: manual loan underwriting limits volume capacity and creates inconsistent decisions based on individual underwriter judgment. Customer onboarding takes 7-10 days with multiple branch visits, during which prospects often choose faster competitors. Data fragmentation across core banking systems, CRM platforms, payment processors, and loan origination systems prevents personalized service—relationship managers can't see complete customer profiles, cross-selling opportunities are missed, and at-risk customers churn without warning. Back-office operations remain stubbornly manual: document processing, reconciliation, exception handling, and reporting consume armies of staff performing repetitive tasks that are both expensive and error-prone. Traditional automation helps but requires constant maintenance of rigid rule sets that break whenever processes change.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Intelligent Banking Automation</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Agentic AI transforms banking by deploying autonomous agents that handle complete workflows from initiation to resolution. For loan applications, AI agents instantly verify identity by checking documents against global databases, analyze creditworthiness using hundreds of data points including traditional credit history plus alternative data like cash flow patterns and employment stability, assess risk using sophisticated models, and generate approval decisions in under 3 minutes—all while maintaining perfect documentation for regulatory compliance. Customer service AI handles 80% of inquiries instantly across any channel—understanding natural language questions, accessing unified customer data to provide personalized responses, executing transactions, and seamlessly escalating complex issues to humans with complete context. Fraud detection AI analyzes every transaction in real-time using behavioral models that learn normal patterns for each customer and merchant, identifying suspicious activity with 99% accuracy while reducing false positives by 90%.
             </p>

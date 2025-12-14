@@ -140,17 +140,28 @@ export default function PublicSafety() {
         </div>
       </section>
 
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Public Safety Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Every second matters in emergency response, yet 911 systems introduce critical delays: dispatchers manually transcribe caller information while people describe emergencies in stressed, unclear language. Determining the appropriate response requires asking clarifying questions and consulting reference guides—"Is the person conscious? Breathing? Bleeding?"—precious seconds lost while victims need help. Dispatching optimal units involves manually checking availability, locations, and capabilities across multiple systems, then coordinating via radio. The entire process from call to dispatch averages 90-180 seconds—an eternity when someone is having a heart attack or a fire is spreading. During major incidents requiring multiple units, coordination complexity multiplies, with dispatchers juggling radio channels and manual tracking boards to manage resources.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Crime prevention remains reactive rather than proactive: officers patrol areas based on intuition and historical "hot spots" from last year, missing patterns in current crime data that would predict where incidents are likely to occur today. Investigations proceed slowly as detectives manually review surveillance footage frame by frame, search for connections between cases across different database systems, and compile evidence timelines. Body camera footage accumulates in storage unwatched except when specific incidents require review, meaning patterns and training opportunities are missed. Officer reporting consumes 30-40% of shift time as detailed incident reports are typed manually. Information sharing between agencies requires phone calls and faxed documents rather than instant digital exchange. The data needed to predict, prevent, and solve crimes exists but remains siloed and unanalyzed.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Emergency Response Delays</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Every second matters in emergency response, yet 911 systems introduce critical delays: dispatchers manually transcribe caller information while people describe emergencies in stressed, unclear language. Determining the appropriate response requires asking clarifying questions and consulting reference guides—"Is the person conscious? Breathing? Bleeding?"—precious seconds lost while victims need help. Dispatching optimal units involves manually checking availability, locations, and capabilities across multiple systems, then coordinating via radio. The entire process from call to dispatch averages 90-180 seconds—an eternity when someone is having a heart attack or a fire is spreading. During major incidents requiring multiple units, coordination complexity multiplies, with dispatchers juggling radio channels and manual tracking boards to manage resources.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Crime prevention remains reactive rather than proactive: officers patrol areas based on intuition and historical "hot spots" from last year, missing patterns in current crime data that would predict where incidents are likely to occur today. Investigations proceed slowly as detectives manually review surveillance footage frame by frame, search for connections between cases across different database systems, and compile evidence timelines. Body camera footage accumulates in storage unwatched except when specific incidents require review, meaning patterns and training opportunities are missed. Officer reporting consumes 30-40% of shift time as detailed incident reports are typed manually. Information sharing between agencies requires phone calls and faxed documents rather than instant digital exchange. The data needed to predict, prevent, and solve crimes exists but remains siloed and unanalyzed.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">AI-Powered Public Safety</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Agentic AI transforms emergency response through intelligent agents that analyze 911 calls in real-time: speech recognition instantly transcribes conversations while natural language processing extracts critical details—location, emergency type, victim condition, threats present. Medical assessment AI asks targeted questions based on symptoms, provides first aid instructions to callers, and determines required response level. Dispatch optimization automatically identifies optimal responders based on location, availability, equipment, training, and current incidents, issuing dispatch instructions in 15 seconds versus 90-180 seconds manually. Traffic management AI creates "green corridors" by adjusting signals ahead of emergency vehicles, reducing response times by 40%. Real-time coordination AI manages multi-unit responses, tracking resources and automatically requesting additional support when incident severity escalates.
             </p>
