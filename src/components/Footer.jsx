@@ -46,7 +46,7 @@ export default function Footer() {
                 alt="1C Platform" 
                 className="h-10 w-10"
               />
-              <span className="font-semibold text-xl text-white">1cPlatform</span>
+              <span className="font-semibold text-xl text-white">1C</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
               Empowering enterprises with intelligent automation and Agentic Ai solutions.
