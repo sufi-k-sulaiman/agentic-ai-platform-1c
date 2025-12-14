@@ -88,9 +88,6 @@ export default function SolutionsSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <Button className="bg-[#6209e6] hover:bg-[#5008c5] text-white rounded-full px-8">
-                Explore solutions <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
             </motion.div>
           </div>
 
