@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2, TrendingUp, Clock, DollarSign, Target } from 'lucide-react';
+import { base44 } from '@/api/base44Client';
 import PageMeta from '@/components/PageMeta';
 import { getAggregatedChallengeData } from '@/components/ChallengeDataCards';
 
@@ -341,7 +342,8 @@ export default function Onboarding() {
     painPoints: [],
     hearAbout: '',
     objectives: [],
-    email: ''
+    email: '',
+    phone: ''
   });
 
   const totalSteps = 10;
@@ -359,8 +361,26 @@ export default function Onboarding() {
     }));
   };
 
-  const handleSubmit = () => {
-    console.log('Onboarding complete:', formData);
+  const handleSubmit = async () => {
+    try {
+      await base44.entities.OnboardingData.create({
+        vertical: formData.vertical,
+        company_name: formData.companyName,
+        role: formData.role,
+        team_size: formData.teamSize,
+        company_size: formData.companySize,
+        pain_points: formData.painPoints,
+        objectives: formData.objectives,
+        hear_about_us: formData.hearAbout,
+        email: formData.email,
+        phone: formData.phone,
+        completed: true
+      });
+      alert('Setup complete! We\'ll be in touch soon.');
+    } catch (error) {
+      console.error('Error saving onboarding data:', error);
+      alert('There was an error completing setup. Please try again.');
+    }
   };
 
   const renderRightSide = () => {
@@ -1150,35 +1170,43 @@ export default function Onboarding() {
             {step === 10 && selectedVertical && (
               <motion.div key="step10" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Review & Complete</h1>
-                  <p className="text-gray-600 mb-6">Your AI configuration summary</p>
-                  <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
-                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
-                      <h4 className="font-semibold text-gray-900 mb-3">Organization</h4>
-                      <div className="space-y-2 text-sm text-gray-700">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Almost there!</h1>
+                  <p className="text-gray-600 mb-6">Enter your contact details to complete setup</p>
+                  <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="your@email.com" 
+                        value={formData.email} 
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
+                        className="mt-2" 
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input 
+                        id="phone" 
+                        type="tel" 
+                        placeholder="+1 (555) 000-0000" 
+                        value={formData.phone} 
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
+                        className="mt-2"
+                        required
+                      />
+                    </div>
+                    <div className="p-4 rounded-xl bg-purple-50 border border-purple-200 mt-6">
+                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-[#8B2EE5]" />
+                        Your Configuration Summary
+                      </h4>
+                      <div className="space-y-1 text-sm text-gray-700 mt-3">
                         <div><span className="font-medium">Industry:</span> {selectedVertical.name}</div>
                         <div><span className="font-medium">Company:</span> {formData.companyName}</div>
-                        <div><span className="font-medium">Website:</span> {formData.companyWebsite}</div>
-                        <div><span className="font-medium">Deployment:</span> {(formData.deploymentStrategy || []).join(', ')}</div>
-                      </div>
-                    </div>
-                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
-                      <h4 className="font-semibold text-gray-900 mb-3">Team Details</h4>
-                      <div className="space-y-2 text-sm text-gray-700">
-                        <div><span className="font-medium">Role:</span> {formData.role}</div>
                         <div><span className="font-medium">Team Size:</span> {formData.teamSize}</div>
-                        <div><span className="font-medium">Company Size:</span> {formData.companySize}</div>
-                      </div>
-                    </div>
-                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
-                      <h4 className="font-semibold text-gray-900 mb-3">AI Objectives</h4>
-                      <div className="space-y-1 text-sm text-gray-700">
-                        {(formData.objectives || []).slice(0, 5).map((obj, idx) => (
-                          <div key={idx} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-[#8B2EE5] mt-0.5 flex-shrink-0" />
-                            <span>{obj}</span>
-                          </div>
-                        ))}
+                        <div><span className="font-medium">Objectives:</span> {(formData.objectives || []).length} selected</div>
                       </div>
                     </div>
                   </div>
@@ -1187,7 +1215,11 @@ export default function Onboarding() {
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={handleSubmit} className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button 
+                    onClick={handleSubmit} 
+                    disabled={!formData.email || !formData.phone}
+                    className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4] h-12"
+                  >
                     Complete Setup <CheckCircle2 className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
