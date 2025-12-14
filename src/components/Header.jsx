@@ -97,13 +97,13 @@ export default function Header() {
             <NavigationMenu>
               <NavigationMenuList className="gap-1">
                 {navItems.map((item) => (
-                  <NavigationMenuItem key={item.label} className="relative">
+                  <NavigationMenuItem key={item.label}>
                     {item.submenu ? (
                       <>
                         <NavigationMenuTrigger className="text-gray-600 hover:text-[#8B2EE5] bg-transparent hover:bg-transparent data-[state=open]:bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5">
                           {item.label}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent className="absolute left-1/2 -translate-x-1/2 top-full mt-2">
+                        <NavigationMenuContent>
                           <ul className={`grid gap-1 p-4 ${item.label === 'Verticals' ? 'w-[500px] grid-cols-2' : 'w-[400px]'}`}>
                             {item.submenu.map((subitem) => (
                               <li key={subitem.label}>
