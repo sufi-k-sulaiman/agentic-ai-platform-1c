@@ -30,7 +30,7 @@ export default function SolutionsSection() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-[#8B2EE5] font-semibold mb-4"
+              className="text-[#6209e6] font-semibold mb-4"
             >
               SOLUTIONS
             </motion.p>
@@ -64,10 +64,10 @@ export default function SolutionsSection() {
                 <a
                   key={industry.name}
                   href={industry.href}
-                  className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 hover:bg-purple-50 hover:border-[#8B2EE5]/20 border border-transparent transition-all group"
+                  className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 hover:bg-purple-50 hover:border-[#6209e6]/20 border border-transparent transition-all group"
                 >
-                  <industry.icon className="w-5 h-5 text-gray-400 group-hover:text-[#8B2EE5]" />
-                  <span className="text-sm font-medium text-gray-700 group-hover:text-[#8B2EE5]">{industry.name}</span>
+                  <industry.icon className="w-5 h-5 text-gray-400 group-hover:text-[#6209e6]" />
+                  <span className="text-sm font-medium text-gray-700 group-hover:text-[#6209e6]">{industry.name}</span>
                 </a>
               ))}
             </motion.div>
@@ -78,7 +78,7 @@ export default function SolutionsSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white rounded-full px-8">
+              <Button className="bg-[#6209e6] hover:bg-[#5008c5] text-white rounded-full px-8">
                 Explore solutions <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </motion.div>
@@ -91,7 +91,7 @@ export default function SolutionsSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-[#8B2EE5] to-[#6B21A8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white">
+            <div className="bg-gradient-to-br from-[#6209e6] to-[#6B21A8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white">
               <h3 className="text-xl sm:text-2xl font-bold mb-2">Proven at scale</h3>
               <p className="text-sm sm:text-base text-purple-200 mb-6 sm:mb-10">
                 Trusted by leading enterprises worldwide to power their most critical operations.

@@ -136,7 +136,7 @@ export default function ProductsSection() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-[#8B2EE5] font-semibold mb-4"
+              className="text-[#6209e6] font-semibold mb-4"
             >
               PRODUCTS
             </motion.p>
@@ -163,7 +163,7 @@ export default function ProductsSection() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <Button variant="outline" className="rounded-full border-gray-300 hover:border-[#8B2EE5] hover:text-[#8B2EE5]">
+            <Button variant="outline" className="rounded-full border-gray-300 hover:border-[#6209e6] hover:text-[#6209e6]">
               View all products <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </motion.div>
@@ -182,11 +182,11 @@ export default function ProductsSection() {
               className="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 border border-gray-100 cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4 sm:mb-6">
-                <product.icon className="w-12 h-12 sm:w-14 sm:h-14 text-[#8B2EE5]" />
-                <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-[#8B2EE5] group-hover:translate-x-1 transition-all" />
+                <product.icon className="w-12 h-12 sm:w-14 sm:h-14 text-[#6209e6]" />
+                <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-[#6209e6] group-hover:translate-x-1 transition-all" />
               </div>
               
-              <p className="text-sm text-[#8B2EE5] font-medium mb-2">{product.tagline}</p>
+              <p className="text-sm text-[#6209e6] font-medium mb-2">{product.tagline}</p>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">{product.name}</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">{product.description}</p>
               
@@ -212,10 +212,10 @@ export default function ProductsSection() {
               <DialogHeader className="p-6 sm:p-8 border-b">
                 <div className="flex items-start gap-4">
                   <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <selectedProduct.icon className="w-8 h-8 text-[#8B2EE5]" />
+                    <selectedProduct.icon className="w-8 h-8 text-[#6209e6]" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm text-[#8B2EE5] font-medium mb-2">{selectedProduct.tagline}</p>
+                    <p className="text-sm text-[#6209e6] font-medium mb-2">{selectedProduct.tagline}</p>
                     <DialogTitle className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
                       {selectedProduct.name}
                     </DialogTitle>
@@ -258,7 +258,7 @@ export default function ProductsSection() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     {selectedProduct.details.benefits.map((benefit, i) => (
                       <div key={i} className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-lg p-6 text-center">
-                        <div className="text-3xl font-bold text-[#8B2EE5] mb-2">{benefit.metric}</div>
+                        <div className="text-3xl font-bold text-[#6209e6] mb-2">{benefit.metric}</div>
                         <div className="text-sm text-gray-700">{benefit.text}</div>
                       </div>
                     ))}
@@ -266,7 +266,7 @@ export default function ProductsSection() {
                 </div>
 
                 <div className="pt-6 border-t">
-                  <Button className="w-full bg-[#8B2EE5] hover:bg-[#7325C4] h-12">
+                  <Button className="w-full bg-[#6209e6] hover:bg-[#5008c5] h-12">
                     Learn More <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>

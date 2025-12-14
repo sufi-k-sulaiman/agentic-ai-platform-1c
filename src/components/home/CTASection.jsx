@@ -12,7 +12,7 @@ export default function CTASection() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.1)_1px,transparent_1px)] bg-[size:40px_40px]" />
       
       {/* Gradient Orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#8B2EE5]/20 rounded-full blur-[120px]" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6209e6]/20 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-[120px]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
@@ -49,7 +49,7 @@ export default function CTASection() {
             <Link to={createPageUrl('Onboarding')}>
               <Button 
                 size="lg" 
-                className="bg-white text-[#8B2EE5] hover:bg-gray-100 font-semibold rounded-full px-8 h-14 text-base group"
+                className="bg-white text-[#6209e6] hover:bg-gray-100 font-semibold rounded-full px-8 h-14 text-base group"
               >
                 Get started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -58,7 +58,7 @@ export default function CTASection() {
             <Button 
               size="lg" 
               onClick={() => window.openChat?.()}
-              className="bg-[#8B2EE5] text-white hover:bg-[#7325C4] rounded-full px-8 h-14 text-base"
+              className="bg-[#6209e6] text-white hover:bg-[#5008c5] rounded-full px-8 h-14 text-base"
             >
               <MessageSquare className="mr-2 w-5 h-5" />
               Talk to sales

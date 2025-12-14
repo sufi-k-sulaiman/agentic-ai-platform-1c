@@ -44,7 +44,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#7C3AED] via-[#8B2EE5] to-[#6B21A8]">
+    <div className="min-h-screen bg-gradient-to-br from-[#7C3AED] via-[#6209e6] to-[#6B21A8]">
       <PageMeta 
         title="Contact Support"
         description="Get help from our 24/7 support team. Create a ticket, schedule a call, or send us an email."
