@@ -512,9 +512,6 @@ export default function Blog() {
     ? posts
     : posts.filter(post => post.category.toLowerCase().replace(/\s+/g, '-') === activeCategory);
 
-  const featuredPost = posts.find(post => post.featured);
-  const regularPosts = posts.filter(post => !post.featured);
-
   return (
     <div className="bg-white">
       <PageMeta 
@@ -560,79 +557,23 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="overflow-x-auto pb-2 -mb-2 scrollbar-hide">
             <Tabs value={activeCategory} onValueChange={setActiveCategory}>
-              <TabsList className="bg-gray-100 inline-flex w-auto h-auto p-1 gap-1">
-                <TabsTrigger value="all" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">All</TabsTrigger>
-                <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Comparison</TabsTrigger>
-                <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Governance</TabsTrigger>
-                <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Generative</TabsTrigger>
-                <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Insights</TabsTrigger>
-                <TabsTrigger value="tutorials" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Tutorials</TabsTrigger>
-                <TabsTrigger value="case-studies" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Cases</TabsTrigger>
-                <TabsTrigger value="security" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Security</TabsTrigger>
-                <TabsTrigger value="product" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Product</TabsTrigger>
+              <TabsList className="bg-gray-100 rounded-full inline-flex w-auto h-auto p-1.5 gap-1">
+                <TabsTrigger value="all" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">All</TabsTrigger>
+                <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Comparison</TabsTrigger>
+                <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Governance</TabsTrigger>
+                <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Generative AI</TabsTrigger>
+                <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Insights</TabsTrigger>
               </TabsList>
             </Tabs>
           </div>
         </div>
       </section>
 
-      {/* Featured Post */}
-      {featuredPost && activeCategory === 'all' && (
-        <section className="py-12 sm:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="grid lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-3xl overflow-hidden p-8 lg:p-12"
-            >
-              <div className="relative aspect-video lg:aspect-square rounded-xl sm:rounded-2xl overflow-hidden">
-                <img
-                  src={featuredPost.image}
-                  alt={featuredPost.title}
-                  className="w-full h-full object-cover"
-                />
-                <Badge className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-[#8B2EE5] text-white text-xs sm:text-sm">
-                  Featured
-                </Badge>
-              </div>
-              <div>
-                <Badge variant="secondary" className="mb-3 sm:mb-4 text-xs sm:text-sm">{featuredPost.category}</Badge>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
-                  {featuredPost.title}
-                </h2>
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-                  {featuredPost.excerpt}
-                </p>
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6 text-gray-500 mb-6 sm:mb-8 text-xs sm:text-sm">
-                  <span className="flex items-center gap-1.5 sm:gap-2">
-                    <User className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span className="hidden sm:inline">{featuredPost.author}</span>
-                  </span>
-                  <span className="flex items-center gap-1.5 sm:gap-2">
-                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
-                    {featuredPost.date}
-                  </span>
-                  <span className="flex items-center gap-1.5 sm:gap-2">
-                    <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
-                    {featuredPost.readTime}
-                  </span>
-                </div>
-                <Link to={createPageUrl(featuredPost.page)}>
-                  <Button className="w-full sm:w-auto bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full">
-                    Read article <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </Link>
-                    </div>
-            </motion.article>
-          </div>
-        </section>
-      )}
-
       {/* Blog Grid */}
       <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {regularPosts.map((post, index) => (
+            {filteredPosts.map((post, index) => (
               <Link to={createPageUrl(post.page)} key={post.title}>
                 <motion.article
                   initial={{ opacity: 0, y: 20 }}
