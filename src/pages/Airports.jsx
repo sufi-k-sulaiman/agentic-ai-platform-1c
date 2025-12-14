@@ -140,6 +140,25 @@ export default function Airports() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Airports are among the most complex operational environments in the world, orchestrating thousands of flights, millions of passengers, and countless ground operations daily—all while maintaining strict safety standards and delivering positive passenger experiences. Every delay cascades through the system, affecting aircraft positioning, crew schedules, gate assignments, and passenger connections. Traditional airport operations rely heavily on manual coordination and reactive problem-solving, leading to inefficiencies that cost airlines billions in delays while frustrating passengers with long lines, confusing wayfinding, and poor communication during disruptions. As air travel demand continues growing, airports must find ways to increase capacity and improve experiences without massive infrastructure expansion.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Modern airports generate immense volumes of operational data: flight schedules and actual performance, passenger flow through terminals, baggage handling status, security checkpoint wait times, retail transactions, parking occupancy, weather conditions, and aircraft movements. This data should enable remarkable operational efficiency, yet information silos prevent different departments—operations, security, retail, ground handlers—from coordinating effectively. Gate assignments get made without considering passenger connection times, staffing levels don't adjust to predicted passenger flows, and retail opportunities are missed because stores don't know when crowds will arrive. The insights needed to optimize airport operations exist within the data, but without AI integration, they remain trapped in separate systems.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms airport operations by deploying autonomous agents that continuously optimize every aspect of the passenger and operational experience. These intelligent systems predict flight delays before they occur and proactively adjust gate assignments, ground crew schedules, and passenger notifications to minimize disruption. AI agents track every bag from check-in to aircraft, automatically alerting staff to potential misconnections and rerouting luggage to ensure on-time delivery. For passengers, AI powers personalized journey apps that provide real-time guidance through the airport, notify them of security checkpoint wait times, and offer dining recommendations based on their preferences and available time before boarding.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Airports implementing Agentic AI are achieving breakthrough operational performance: 25% improvement in on-time departures through predictive operations management, 40% reduction in passenger processing time through optimized security and check-in flows, 30% decrease in operational costs from automated coordination and resource optimization, and 50% increase in passenger satisfaction through personalized service and proactive communication. These improvements increase airport capacity without expanding terminals, generate additional revenue through better passenger experiences, and create competitive advantages that attract both airlines and passengers in an increasingly competitive aviation marketplace.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

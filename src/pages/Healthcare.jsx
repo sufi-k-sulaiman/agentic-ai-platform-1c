@@ -141,6 +141,25 @@ export default function Healthcare() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Healthcare organizations face an unprecedented crisis of administrative burden that diverts resources from patient care. Physicians spend nearly two hours on documentation for every hour with patients, while administrative costs consume 25-30% of total healthcare spending in the United States alone. Insurance verification, prior authorizations, appointment scheduling, and billing inquiries—all critical but repetitive tasks—overwhelm staff and create bottlenecks that delay care. Meanwhile, patients expect the same instant, personalized service they receive from other industries, creating a widening gap between healthcare delivery and patient expectations.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Healthcare data exists in fragmented systems: electronic health records, billing platforms, scheduling software, insurance databases, and diagnostic systems rarely communicate effectively. This fragmentation creates dangerous gaps—critical patient information may be unavailable when needed, duplicate tests waste resources and expose patients to unnecessary risks, and care coordination across providers breaks down. Clinical staff waste valuable time searching for information across multiple systems, while patients struggle to navigate complex processes for simple tasks like prescription refills or appointment changes.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms healthcare operations by deploying intelligent agents that automate administrative workflows while maintaining the compliance and precision healthcare demands. These autonomous systems can verify insurance eligibility instantly, route patients to appropriate care based on symptoms and history, automate medical coding from clinical notes, and handle routine patient inquiries 24/7. AI agents don't replace healthcare professionals—they amplify them, eliminating the administrative tasks that prevent clinicians from focusing on what matters most: patient care and clinical decision-making.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Leading healthcare organizations implementing Agentic AI are achieving transformative results: 70% reduction in administrative time for clinical staff, enabling them to see more patients or spend more quality time with each one. Patient satisfaction increases by 45% through instant responses and seamless scheduling. Billing accuracy improves by 95% with AI-powered coding, reducing claim denials and accelerating revenue cycles. Most importantly, these improvements free healthcare professionals to practice at the top of their license, delivering better outcomes while making healthcare more accessible and affordable for everyone.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

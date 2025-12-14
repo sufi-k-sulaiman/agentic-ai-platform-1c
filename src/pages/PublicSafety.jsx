@@ -140,6 +140,25 @@ export default function PublicSafety() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Public safety agencies operate in life-or-death scenarios where every second counts, yet they struggle with systemic challenges that delay response and reduce effectiveness. Emergency call centers receive thousands of 911 calls daily, with dispatchers manually transcribing information, determining appropriate responses, and coordinating multiple units across radio systems—introducing critical delays when minutes matter. Police departments patrol vast areas reactively, responding to crimes after they occur rather than preventing them, while detectives drown in case backlogs because evidence analysis and investigation coordination consume countless manual hours. Meanwhile, budget constraints force agencies to do more with less, creating a crisis of both efficiency and efficacy.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Public safety agencies sit on massive repositories of data—911 call histories, crime reports, arrest records, surveillance footage, dispatch logs, and incident reports—yet this information remains largely untapped for predictive insights or operational optimization. Patterns that could predict where crimes are likely to occur go unnoticed. Connections between cases that could solve investigations remain hidden in different databases. Resources get deployed based on intuition and historical precedent rather than data-driven analysis of current conditions. The information needed to transform public safety outcomes exists, but without AI-powered analysis, it remains inaccessible to the officers and dispatchers who need it most.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI revolutionizes public safety operations by deploying autonomous agents that accelerate response while enabling proactive policing. These intelligent systems instantly analyze 911 calls, extract critical information, identify optimal responders, and dispatch units while providing real-time guidance—reducing response times from minutes to seconds. AI agents analyze crime patterns to predict where incidents are likely to occur, enabling preventive patrols that stop crimes before they happen. For investigations, AI automatically catalogs and analyzes evidence from body cameras and surveillance systems, identifies patterns across cases, and surfaces connections that human investigators might miss, accelerating case resolution while maintaining complete chain-of-custody documentation.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Public safety agencies implementing Agentic AI are achieving transformative results: 60% faster emergency response through automated 911 analysis and intelligent dispatch, 35% reduction in crime rates through predictive policing that enables preventive intervention, 50% faster case resolution through AI-assisted investigations, and 40% operational cost savings through optimized resource deployment. These improvements save lives, prevent crimes, and free officers to focus on community engagement rather than paperwork—creating safer communities while making public safety careers more rewarding and sustainable for the professionals who serve them.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

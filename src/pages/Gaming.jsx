@@ -140,6 +140,25 @@ export default function Gaming() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              The gaming industry operates at unprecedented scale and speed, where infrastructure costs can make or break profitability, and player experience determines success in an intensely competitive market. Modern games serve millions of concurrent players across global infrastructure that must scale instantly during launches and events while remaining cost-effective during quieter periods. Game studios face constant pressure to deliver engaging content, respond to community feedback, combat sophisticated cheaters, and maintain server performance—all while managing development teams and live operations across time zones. Traditional approaches to game operations, relying on manual scaling, reactive support, and rule-based anti-cheat systems, cannot meet the demands of today's always-on gaming ecosystem.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Gaming generates exponential volumes of telemetry data: player actions, server performance metrics, matchmaking patterns, in-game economy transactions, chat logs, and gameplay analytics. This data contains invaluable insights about player behavior, emerging exploits, infrastructure bottlenecks, and content performance, yet studios struggle to transform raw data into actionable intelligence quickly enough to matter. By the time human analysts identify a balance issue or cheating trend, thousands of players may have already experienced degraded gameplay. Player support teams drown in repetitive tickets while complex issues languish, and infrastructure engineers react to capacity problems rather than anticipating them.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms game operations by deploying autonomous agents that manage infrastructure, player experience, and live operations with superhuman speed and precision. These intelligent systems automatically scale server capacity based on predicted demand, instantly detect and ban cheaters using sophisticated behavioral analysis that adapts to new exploits, and provide players with immediate support through AI assistants that resolve common issues and escalate complex cases with full context. AI agents monitor game balance in real-time, alert designers to emerging meta issues, and optimize matchmaking to ensure competitive, fair games that keep players engaged. Behind the scenes, AI orchestrates continuous integration and deployment, manages feature flags, and predicts the impact of updates before they go live.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Game studios implementing Agentic AI are achieving game-changing results: 40% reduction in infrastructure costs through intelligent auto-scaling and resource optimization, 90% automation of player support inquiries while maintaining superior satisfaction levels, 99%+ accuracy in cheat detection with near-zero false positives, and 99.9% server uptime even during peak events. These improvements free development teams to focus on creating compelling content rather than firefighting operational issues, while ensuring players enjoy smooth, fair experiences that drive engagement, retention, and revenue. In an industry where player loyalty is earned through consistent quality and responsive service, AI-powered operations create sustainable competitive advantages.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

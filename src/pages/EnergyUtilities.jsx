@@ -133,6 +133,25 @@ export default function EnergyUtilities() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              The energy and utilities sector stands at a critical inflection point, balancing increasing electricity demand with the urgent need for sustainability and grid reliability. Traditional power grids were designed for one-way power flow from large centralized plants to consumers, but the rapid adoption of solar panels, wind farms, and electric vehicles is creating a fundamentally different energy landscape. Utilities must now manage bidirectional power flows, integrate intermittent renewable sources, store energy during peak production for use during peak demand, and maintain grid stability across increasingly complex networks—all while keeping costs affordable for consumers and meeting stringent environmental regulations.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Modern energy infrastructure generates unprecedented volumes of data: smart meters report consumption every 15 minutes, sensors monitor equipment health across thousands of miles of transmission lines, weather systems predict renewable energy output, and market signals drive dynamic pricing. This data explosion should enable remarkable operational efficiency, yet utilities struggle to extract value from it. Grid operators make decisions based on historical patterns rather than real-time optimization, equipment failures catch maintenance teams by surprise despite warning signs in the data, and renewable energy gets curtailed because utilities can't predict or manage its variability effectively.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI fundamentally transforms how energy systems operate by deploying autonomous agents that continuously optimize generation, transmission, distribution, and consumption in real-time. These intelligent systems analyze weather patterns, energy markets, equipment health, and consumption trends simultaneously to make split-second decisions that balance supply and demand while minimizing costs and environmental impact. AI agents predict equipment failures weeks in advance based on subtle patterns in sensor data, automatically route power around grid issues before customers experience outages, and orchestrate distributed energy resources—rooftop solar, battery storage, and smart appliances—to create virtual power plants that stabilize the grid.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Energy companies implementing Agentic AI are achieving breakthrough results: 20% reduction in energy waste through real-time optimization of generation and consumption, 40% fewer outages through predictive maintenance and automated fault management, 30% lower operational costs from reduced fuel consumption and maintenance expenses, and 99.99% grid reliability even with high penetration of intermittent renewables. These improvements make clean energy more viable and affordable while ensuring the reliable power delivery that modern society depends on, creating a sustainable energy future that's both environmentally responsible and economically sound.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

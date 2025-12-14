@@ -416,6 +416,25 @@ export default function Cities() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Cities are the engines of economic growth and innovation, yet they struggle with fundamental challenges that impact quality of life: traffic congestion wastes billions in productivity, aging infrastructure requires massive investment, public services strain under budget constraints, and climate goals seem unattainable given current resource consumption. Traditional city management relies on departmental silos where transportation, utilities, public safety, and social services operate independently with minimal coordination. As urban populations grow and citizen expectations rise, cities must find ways to deliver better services with constrained budgets while addressing urgent sustainability challenges—a seemingly impossible task with conventional approaches.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Modern cities deploy thousands of sensors, cameras, and connected systems that generate terabytes of data daily from traffic signals, utility meters, public transit, environmental monitors, and citizen interactions. This data should enable intelligent city management, but fragmented systems and limited analytical capability prevent cities from leveraging it effectively. Traffic management doesn't coordinate with transit scheduling, utility usage patterns don't inform energy planning, and 311 complaints don't trigger proactive infrastructure maintenance. The insights needed to optimize urban operations exist within the data, but without AI integration, they remain trapped in separate departmental databases while city managers make decisions based on incomplete information.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms city operations by creating an intelligent urban operating system where autonomous agents optimize and coordinate services across departments. These systems don't just monitor city infrastructure—they orchestrate it, continuously analyzing data from every sensor and system to make real-time decisions that improve efficiency and livability. AI agents optimize traffic signals to reduce congestion while prioritizing emergency vehicles and public transit, predict infrastructure failures before they occur and schedule preventive maintenance, coordinate waste collection with actual bin fill levels rather than fixed schedules, and provide citizens with intelligent assistants that can report issues, access services, and receive personalized information about city programs.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Cities implementing Agentic AI are achieving remarkable outcomes: 40% reduction in traffic congestion through coordinated signal optimization and dynamic routing, 35% decrease in energy consumption from smart building controls and efficient street lighting, 50% faster emergency response through intelligent dispatch and traffic prioritization, and 60% improvement in citizen satisfaction with city services. These improvements create sustainable urban environments where resources are used efficiently, services are delivered effectively, and citizens enjoy high quality of life—proving that technology can help cities meet the twin challenges of growth and sustainability while making urban living better for everyone.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

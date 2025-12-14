@@ -140,6 +140,25 @@ export default function Retail() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Retail operates in an era of razor-thin margins and extraordinary customer expectations, where competition comes from both traditional competitors and digital-native brands that never maintain physical inventory. Retailers face relentless pressure to optimize every aspect of operations: merchandise must be in stock but not overstocked, pricing must be competitive but profitable, marketing must be personalized but cost-effective, and customer service must be exceptional but efficient. Traditional retail operations rely on periodic analysis and manual decision-making—adjusting prices weekly, reviewing inventory monthly, and planning assortments seasonally—creating lag times that miss opportunities and waste resources in today's fast-moving market.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Retail generates enormous transaction data: every sale, return, and abandoned cart; every customer interaction across channels; every inventory movement and supplier delivery; every marketing campaign and promotion result. This data contains the insights needed to optimize operations and maximize profitability, yet most retailers struggle to extract actionable intelligence quickly enough to matter. By the time analysts identify a trend, the opportunity has passed or the problem has worsened. Inventory decisions get made on historical patterns rather than predicted demand, prices are set based on cost-plus formulas rather than dynamic willingness to pay, and customer service teams address issues reactively rather than anticipating needs.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms retail operations by deploying autonomous agents that optimize inventory, pricing, marketing, and customer experience in real-time across all channels. These intelligent systems analyze purchasing patterns, seasonal trends, weather forecasts, and local events to predict demand at the SKU level for each location, automatically adjusting orders to prevent both stockouts and overstock. AI agents dynamically adjust pricing based on competitor prices, inventory levels, and individual customer price sensitivity to maximize both revenue and margin. For customers, AI powers personalized shopping experiences that recommend products based on preferences and behavior, provide instant support through intelligent chat, and create seamless omnichannel journeys from browse to purchase to fulfillment.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Retailers implementing Agentic AI are achieving transformative business results: 35% increase in conversion rates through personalized experiences and optimized merchandising, 25% improvement in gross margins from dynamic pricing and reduced markdowns, 40% reduction in inventory costs while maintaining 95%+ in-stock rates, and 60% higher customer lifetime value through enhanced experiences and targeted retention. These improvements compound over time—better inventory means fewer stockouts and less waste, dynamic pricing captures value while remaining competitive, and personalized experiences drive loyalty that reduces customer acquisition costs—creating sustainable competitive advantages in an industry where margins determine survival.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

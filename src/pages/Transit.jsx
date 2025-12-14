@@ -133,6 +133,25 @@ export default function Transit() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Public transit systems are the circulatory system of modern cities, moving millions of people daily while struggling with chronic challenges of reliability, efficiency, and passenger satisfaction. Transit agencies operate on constrained budgets while managing complex fleets, coordinating schedules across multiple routes and modes, and responding to dynamic conditions like weather, traffic, and special events. Traditional transit operations rely on fixed schedules and reactive management, leading to inefficiencies when buses run empty while passengers wait in long queues at other stops, or when minor delays cascade into system-wide disruptions.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Modern transit systems generate enormous volumes of real-time data: GPS locations of every vehicle, passenger counts at stations, fare transactions, maintenance sensors, and traffic conditions. However, transit operators struggle to transform this data deluge into actionable insights. Schedule adjustments that could optimize routes based on actual ridership patterns aren't made because analyzing the data manually is impossible. Maintenance is performed on fixed intervals rather than actual need, leading to both unexpected failures and wasteful premature service. Passengers receive little real-time information, left wondering if the next bus will arrive in two minutes or twenty.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI revolutionizes transit operations by deploying autonomous agents that continuously optimize every aspect of public transportation. These intelligent systems analyze ridership patterns to dynamically adjust routes and frequencies, predict vehicle maintenance needs before failures occur, and provide passengers with accurate real-time information and personalized journey planning. AI agents can automatically reroute buses around traffic incidents, coordinate transfers between different transit modes, and balance service across the network to minimize both wait times and operational costs.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Transit agencies implementing Agentic AI are transforming urban mobility: achieving 95% on-time performance through predictive operations management, reducing operational costs by 25% through optimized routing and predictive maintenance, and increasing ridership by 35% through reliable service and superior passenger experience. These improvements create a virtuous cycle—better service attracts more riders, generating more revenue that can fund additional improvements, while reduced car dependence decreases traffic congestion and environmental impact across the entire city.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

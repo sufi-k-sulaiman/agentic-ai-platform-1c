@@ -133,6 +133,25 @@ export default function Traffic() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Traffic congestion costs the U.S. economy over $166 billion annually in lost productivity, wasted fuel, and increased emissions, while frustrating commuters lose an average of 54 hours per year sitting in traffic. Traditional traffic management relies on pre-programmed signal timing and manual monitoring, creating a system that cannot adapt to real-time conditions. Rush hour patterns that existed decades ago drive today's signal sequences, even as work patterns have evolved and traffic flows have shifted. The result is a transportation infrastructure that's perpetually fighting yesterday's problems while today's commuters sit idle at red lights watching empty intersections.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Modern cities deploy thousands of traffic cameras, road sensors, and connected vehicle systems that generate terabytes of data every day. This wealth of information should enable intelligent traffic management, but the sheer volume overwhelms human operators. Traffic management centers monitor hundreds of camera feeds simultaneously, making it impossible to spot developing problems until they've cascaded into major incidents. When accidents occur, detection and response are delayed by minutes or hours, during which time traffic backs up for miles. The data exists to optimize traffic flow and prevent congestion, but without AI, it remains largely untapped potential.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms traffic management by deploying autonomous agents that continuously monitor every intersection, analyze real-time traffic patterns, and optimize signal timing to maximize flow. These intelligent systems don't just react to congestion—they predict it before it forms and take preventive action. AI agents can detect accidents within seconds through video analysis, automatically alert emergency responders, and reroute traffic around incidents. The system coordinates signal timing across multiple intersections to create "green waves" that move traffic efficiently, while giving priority to emergency vehicles and public transit.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Cities implementing Agentic AI for traffic management are achieving remarkable improvements: 30% reduction in overall congestion, 25% shorter commute times for residents, and 40% faster emergency response through automatic incident detection and traffic prioritization. These systems operate 24/7, continuously learning from traffic patterns and adapting to changing conditions—whether handling morning rush hour, special events, or severe weather. The result is a smarter, more responsive transportation network that reduces frustration, improves safety, and makes cities more livable while cutting infrastructure costs through predictive maintenance and optimized operations.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

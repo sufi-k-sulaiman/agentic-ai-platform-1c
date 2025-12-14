@@ -140,6 +140,25 @@ export default function Education() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Educational institutions face mounting pressure to improve outcomes while managing limited budgets, diverse student populations, and the challenge of preparing students for a rapidly evolving world. Teachers spend countless hours on administrative tasks—grading assignments, taking attendance, communicating with parents, planning lessons—leaving insufficient time for the personalized instruction that struggling students need. Meanwhile, students progress through standardized curricula regardless of their individual learning pace, with gaps in understanding compounding over time until they fall irretrievably behind. Traditional one-size-fits-all education fails to serve either advanced students who need enrichment or struggling learners who need additional support, creating systemic inequities in educational outcomes.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Educational data exists in fragmented systems—student information systems, learning management platforms, assessment tools, attendance tracking, and gradebooks—that rarely communicate effectively. This fragmentation prevents educators from identifying at-risk students early, understanding learning gaps in real-time, or adapting instruction based on student needs. By the time quarterly grades reveal a problem, students may have missed critical foundational concepts. Administrative systems require manual data entry that wastes time and introduces errors. Scheduling, enrollment, and resource allocation decisions get made based on limited information rather than comprehensive analysis of student needs, facility constraints, and staffing availability.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI revolutionizes education by deploying intelligent agents that personalize learning while automating administrative burdens. These autonomous systems provide every student with an AI tutor that adapts to their learning style, identifies knowledge gaps, and offers targeted support exactly when needed—whether they're struggling with fractions or ready for advanced calculus. AI agents automatically grade routine assignments and provide instant feedback, freeing teachers to focus on complex assessments and one-on-one instruction. Behind the scenes, AI optimizes scheduling to maximize facility utilization and minimize conflicts, flags at-risk students based on engagement patterns and performance trends, and generates insights that help educators continuously improve instruction.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Educational institutions implementing Agentic AI are transforming student outcomes: 60% increase in student engagement through personalized learning experiences, 50% reduction in administrative time for teachers enabling more instructional focus, 30% improvement in learning outcomes through early intervention and adaptive instruction, and 40% higher student retention from proactive support systems that identify and assist struggling learners. These improvements create virtuous cycles—engaged students learn more, reduced administrative burden attracts and retains quality teachers, better outcomes justify continued investment, and data-driven insights enable continuous improvement—ultimately fulfilling education's promise of helping every student reach their full potential.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

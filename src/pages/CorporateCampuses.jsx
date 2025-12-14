@@ -141,6 +141,25 @@ export default function CorporateCampuses() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Corporate campuses are evolving into complex ecosystems where physical infrastructure, digital services, and employee experience converge. Managing these environments requires orchestrating countless moving parts: from HVAC systems and access control to space utilization and visitor management. With the rise of hybrid work, companies face the additional challenge of optimizing real estate that may be underutilized while ensuring seamless experiences for employees whether they're on-site or remote. Traditional facilities management, relying on static schedules and reactive maintenance, cannot deliver the agility and efficiency modern workplace environments demand.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Corporate campuses generate vast amounts of operational data—badge swipes, room bookings, energy consumption, maintenance tickets, and environmental sensors—yet this data typically exists in isolated systems that don't communicate. Facilities teams struggle to answer basic questions: Which conference rooms are actually being used? When will the HVAC system need maintenance? How can we reduce energy costs without impacting comfort? Without AI-powered analysis, valuable insights remain buried in data silos while facilities managers make decisions based on incomplete information, leading to wasted space, inefficient energy use, and suboptimal employee experiences.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Agentic AI transforms corporate campus operations by deploying autonomous agents that continuously monitor, analyze, and optimize every aspect of the workplace. These intelligent systems don't just track occupancy—they predict space needs based on calendar data and historical patterns, automatically adjusting lighting and temperature for occupied areas while conserving energy in unused spaces. AI agents coordinate maintenance schedules to minimize disruption, manage visitor check-ins without human intervention, and provide employees with intelligent assistants that can book rooms, report issues, and access campus services instantly.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Organizations implementing Agentic AI for campus management are achieving remarkable outcomes: 40% reduction in real estate costs through optimized space utilization, 30% decrease in energy consumption through intelligent building controls, and 60% improvement in employee satisfaction with workplace services. These systems create dynamic, responsive environments that adapt to changing needs in real-time—automatically adjusting to meeting patterns, weather conditions, and occupancy levels—while freeing facilities teams to focus on strategic improvements rather than routine operations.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
