@@ -11,7 +11,7 @@ import PageMeta from '@/components/PageMeta';
 const news = [
   {
     category: 'Product Launch',
-    title: 'SearchPods Now Available on iOS App Store',
+    title: 'SearchPods Debuts on iOS: Revolutionary AI-Powered Podcast Platform Transforms Complex Data into Engaging Audio Intelligence for Professionals on the Go',
     excerpt: 'Transform how you consume intelligence with SearchPods - the AI-powered podcast generator that turns complex data into engaging audio insights on demand.',
     date: 'December 14, 2024',
     image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800',
@@ -20,7 +20,7 @@ const news = [
   },
   {
     category: 'Product Launch',
-    title: 'Neural Mindmap Launches on iOS - Visualize Your Ideas',
+    title: 'Neural Mindmap Arrives on iOS: Brain-Inspired Visualization Technology Helps Teams Organize Complex Ideas and Unlock Creative Problem-Solving Through AI',
     excerpt: 'Neural Mindmap brings AI-powered mind mapping to iOS, helping you organize thoughts, connect ideas, and unlock creative insights with neural-inspired visualization.',
     date: 'December 14, 2024',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
@@ -29,7 +29,7 @@ const news = [
   },
   {
     category: 'Product Launch',
-    title: 'RoutineOps iOS App - Automate Your Daily Workflows',
+    title: 'RoutineOps Launches on iOS: Intelligent Workflow Automation Platform Eliminates Repetitive Tasks and Saves Professionals Hours Every Week with Smart AI',
     excerpt: 'RoutineOps arrives on iOS to help professionals streamline daily tasks, automate repetitive workflows, and boost productivity with intelligent automation.',
     date: 'December 14, 2024',
     image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800',
@@ -38,7 +38,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: 'How 1cPublishing is Redefining Market Intelligence Through Agentic AI',
+    title: '1cPublishing\'s Agentic AI Platform Revolutionizes Market Intelligence: Real-Time Analytics, Predictive Insights, and Unified Data Streams Power Next-Gen Strategic Decisions',
     excerpt: 'Discover how Agentic AI is transforming market intelligence by providing real-time insights, predictive analytics, and unified data streams for strategic decision-making.',
     date: 'December 12, 2024',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
@@ -46,7 +46,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: 'Agentic AI from 1cPublishing: A New Era of Integrated Intelligence',
+    title: '1cPublishing Unveils Agentic AI: Integrated Intelligence Platform Consolidates Multiple Data Streams and Business Tools into Single Unified Ecosystem',
     excerpt: 'Explore how 1cPublishing\'s Agentic AI ushers in a new era of integrated intelligence by consolidating multiple data streams and tools into one cohesive platform.',
     date: 'December 10, 2024',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
@@ -54,7 +54,7 @@ const news = [
   },
   {
     category: 'Product Launch',
-    title: '1cPublishing Launches Agentic Ai to Solve the "12-App Problem" for Professionals',
+    title: 'Breaking the "12-App Trap": 1cPublishing\'s Agentic AI Unifies Workflows, Data Visualization, Market Intelligence, Geospatial Analysis, and AI Podcasts in One Platform',
     excerpt: 'New Agentic AI platform consolidates workflows, data visualization, real-time market intelligence, geospatial analysis, and AI podcast generation into a unified solution for professionals.',
     date: 'December 10, 2024',
     image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
@@ -62,7 +62,7 @@ const news = [
   },
   {
     category: 'Product Launch',
-    title: 'How SearchPods by 1cPublishing is Transforming Professional Intelligence Consumption',
+    title: 'SearchPods by 1cPublishing Disrupts Intelligence Consumption: AI-Generated Audio Podcasts Deliver Complex Market Insights in Engaging, Digestible Format',
     excerpt: 'SearchPods revolutionizes how professionals consume intelligence through AI-generated podcasts that deliver on-demand insights in an engaging audio format.',
     date: 'December 11, 2024',
     image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800',
@@ -70,7 +70,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: 'Why Search Pods is Emerging as the Smartest Way to Access On-Demand Intelligence',
+    title: 'Industry Analysis: Search Pods Emerges as Leading On-Demand Intelligence Solution, Converting Complex Data into Actionable Audio Insights for Mobile Professionals',
     excerpt: 'Search Pods transforms complex data into digestible audio intelligence, making it easier for busy professionals to stay informed on-the-go.',
     date: 'December 11, 2024',
     image: 'https://images.unsplash.com/photo-1590602846989-e99596d2a6ee?w=800',
@@ -78,7 +78,7 @@ const news = [
   },
   {
     category: 'Product Launch',
-    title: 'Agentic AI from 1cPublishing Redefines Geospatial Intelligence',
+    title: 'Geospatial Intelligence Breakthrough: 1cPublishing\'s Agentic AI Platform Delivers Advanced Location-Based Analytics and Real-Time Spatial Data Visualization',
     excerpt: 'Discover how 1cPublishing\'s Agentic AI brings powerful geospatial intelligence capabilities, enabling location-based insights and spatial data analysis.',
     date: 'December 9, 2024',
     image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800',
@@ -86,7 +86,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: '1cPublishing\'s Agentic AI Brings Fresh Clarity to Geospatial Intelligence',
+    title: 'Enterprise Geospatial Intelligence Gets Major Upgrade: 1cPublishing\'s Agentic AI Delivers Unprecedented Clarity in Location-Based Data Analysis and Strategic Mapping',
     excerpt: 'New geospatial intelligence features provide unprecedented clarity in location-based data analysis and visualization for enterprise decision-makers.',
     date: 'December 9, 2024',
     image: 'https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=800',
@@ -94,7 +94,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: 'Mind Mapping is Becoming the Heart of Modern Data Strategy',
+    title: 'Data Strategy Transformation: Neural-Inspired Mind Mapping Becomes Essential Tool for Knowledge Workers, Revolutionizing How Teams Process Complex Information',
     excerpt: 'Explore how neural-inspired mind mapping technology is transforming modern data strategy and becoming essential for knowledge workers and data teams.',
     date: 'December 8, 2024',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
@@ -102,7 +102,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: 'How 1cPublishing is Redefining Data Intelligence Through Learning',
+    title: 'Continuous Learning AI: 1cPublishing\'s Adaptive Intelligence Platform Democratizes Data Access Through Self-Improving Algorithms That Learn from User Behavior',
     excerpt: 'AI-powered learning capabilities enable continuous improvement and adaptation, making data intelligence more accessible and actionable for all users.',
     date: 'December 8, 2024',
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800',
@@ -110,7 +110,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: 'AI is Redefining Digital Intelligence',
+    title: 'The Digital Intelligence Revolution: How AI-Powered Platforms Are Fundamentally Reshaping Enterprise Data Processing, Analysis, and Decision-Making Workflows',
     excerpt: 'The future of digital intelligence is here. Discover how AI-powered platforms are fundamentally changing how organizations process, analyze, and act on information.',
     date: 'December 7, 2024',
     image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
@@ -118,7 +118,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: 'Agentic Ai Slashes Operating Expenses While Streamlining Workflows for B2B Companies',
+    title: 'B2B Cost Revolution: 1C Publishing\'s Agentic AI Platform Cuts Operating Expenses by 40% While Unifying Disparate Workflows into Single Intelligent Ecosystem',
     excerpt: '1C Publishing has developed an Agentic Ai platform designed to unify workflows within a single intelligent ecosystem, reducing operational complexity and costs.',
     date: 'January 10, 2025',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
@@ -126,7 +126,7 @@ const news = [
   },
   {
     category: 'Product Launch',
-    title: '1cPublishing Unveils Agentic Ai: Next-Generation Platform to Transform Data',
+    title: 'Market Intelligence Meets AI: 1cPublishing Unveils Agentic Platform That Analyzes Stock Markets in Real-Time and Amplifies Productivity Through Advanced Knowledge Visualization',
     excerpt: 'Platform powered by Agentic Ai that reviews stock markets and boosts productivity through powerful knowledge visualization and exploration.',
     date: 'December 20, 2024',
     image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800',
@@ -134,7 +134,7 @@ const news = [
   },
   {
     category: 'Product Launch',
-    title: 'How Agentic AI Transforms Data Intelligence Through Next-Generation Mind Mapping',
+    title: 'Next-Gen Mind Mapping Technology: 1cPublishing\'s Agentic AI Transforms Data Intelligence and Workflow Automation Through Brain-Inspired Network Visualization',
     excerpt: 'Exploring how 1cPublishing\'s innovative approach to mind mapping and AI-powered data intelligence is revolutionizing workflow automation and business insights.',
     date: 'January 8, 2025',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
@@ -142,7 +142,7 @@ const news = [
   },
   {
     category: 'Press Release',
-    title: 'Exploring How 1cPublishing is Shaping the Next Era of Intelligent Workflows',
+    title: 'Future of Work Arrives: Deep Dive into How 1cPublishing\'s Agentic AI Platform Is Pioneering Intelligent Workflow Integration and Autonomous Task Management',
     excerpt: 'In-depth look at how 1cPublishing\'s Agentic AI platform is transforming the future of work through intelligent automation and seamless workflow integration.',
     date: 'January 5, 2025',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
@@ -150,7 +150,7 @@ const news = [
   },
   {
     category: 'Product Launch',
-    title: '1C Publishing Rolls Out RoutineOps and Neural Mindmap on iOS',
+    title: 'Dual iOS Launch: 1C Publishing Releases RoutineOps Workflow Optimizer and Neural Mindmap Visualization Tool Built on Brain-Inspired Technology for Creative Teams',
     excerpt: 'Built on neural-inspired mapping technology to optimize daily workflows and ignite new ideas. Allows users to capture thoughts in real time and organize complex projects.',
     date: 'December 15, 2024',
     image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800',
