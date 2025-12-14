@@ -35,6 +35,22 @@ const news = [
   },
   {
     category: 'Product Launch',
+    title: 'How Agentic AI Transforms Data Intelligence Through Next-Generation Mind Mapping',
+    excerpt: 'Exploring how 1cPublishing\'s innovative approach to mind mapping and AI-powered data intelligence is revolutionizing workflow automation and business insights.',
+    date: 'January 8, 2025',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    icon: Zap
+  },
+  {
+    category: 'Press Release',
+    title: 'Exploring How 1cPublishing is Shaping the Next Era of Intelligent Workflows',
+    excerpt: 'In-depth look at how 1cPublishing\'s Agentic AI platform is transforming the future of work through intelligent automation and seamless workflow integration.',
+    date: 'January 5, 2025',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
+    icon: TrendingUp
+  },
+  {
+    category: 'Product Launch',
     title: '1C Publishing Rolls Out RoutineOps and Neural Mindmap on iOS',
     excerpt: 'Built on neural-inspired mapping technology to optimize daily workflows and ignite new ideas. Allows users to capture thoughts in real time and organize complex projects.',
     date: 'December 15, 2024',
