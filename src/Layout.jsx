@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { AnimatePresence } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -16,6 +16,9 @@ export default function Layout({ children }) {
 
   return (
     <HelmetProvider>
+      <Helmet>
+        <link rel="icon" type="image/png" href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" />
+      </Helmet>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-white">
         <Header />
