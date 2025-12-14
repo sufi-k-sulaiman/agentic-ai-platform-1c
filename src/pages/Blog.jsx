@@ -508,7 +508,7 @@ const posts = [
     author: 'Dr. Rachel Thompson',
     date: 'January 20, 2025',
     readTime: '16 min read',
-    category: 'AI Insights',
+    category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
     page: 'BlogAIAutonomyIntro'
   },
@@ -518,7 +518,7 @@ const posts = [
     author: 'Michael Stevens',
     date: 'January 19, 2025',
     readTime: '14 min read',
-    category: 'AI Insights',
+    category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
     page: 'BlogAIAutonomyLevels'
   },
@@ -528,7 +528,7 @@ const posts = [
     author: 'Dr. Sarah Kim',
     date: 'January 18, 2025',
     readTime: '17 min read',
-    category: 'AI Insights',
+    category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
     page: 'BlogAutonomousDecisionMaking'
   },
@@ -538,7 +538,7 @@ const posts = [
     author: 'Kevin Zhang',
     date: 'January 17, 2025',
     readTime: '18 min read',
-    category: 'AI Insights',
+    category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
     page: 'BlogBuildingAutonomousAI'
   },
@@ -548,7 +548,7 @@ const posts = [
     author: 'Jennifer Martinez',
     date: 'January 16, 2025',
     readTime: '15 min read',
-    category: 'AI Insights',
+    category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
     page: 'BlogAIAutonomyVsOversight'
   },
@@ -558,7 +558,7 @@ const posts = [
     author: 'Robert Chen',
     date: 'January 15, 2025',
     readTime: '16 min read',
-    category: 'AI Insights',
+    category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
     page: 'BlogAutonomousAIApplications'
   },
@@ -568,7 +568,7 @@ const posts = [
     author: 'Dr. Marcus Williams',
     date: 'January 14, 2025',
     readTime: '15 min read',
-    category: 'AI Insights',
+    category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800',
     page: 'BlogAIAutonomyChallenges'
   },
@@ -578,7 +578,7 @@ const posts = [
     author: 'Dr. Emily Carter',
     date: 'January 13, 2025',
     readTime: '17 min read',
-    category: 'AI Insights',
+    category: 'AI Autonomy',
     image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
     page: 'BlogAIAutonomyFuture'
   }
@@ -639,6 +639,7 @@ export default function Blog() {
             <Tabs value={activeCategory} onValueChange={setActiveCategory}>
               <TabsList className="bg-gray-100 rounded-full inline-flex w-auto h-auto p-1.5 gap-1">
                 <TabsTrigger value="all" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">All</TabsTrigger>
+                <TabsTrigger value="ai-autonomy" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">AI Autonomy</TabsTrigger>
                 <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Comparison</TabsTrigger>
                 <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Governance</TabsTrigger>
                 <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Generative AI</TabsTrigger>
