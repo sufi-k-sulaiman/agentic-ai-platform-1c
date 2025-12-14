@@ -128,7 +128,7 @@ export default function BlogAgenticAIEnterprise() {
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white">
-                Get Started Free
+                Get started
               </Button>
             </Link>
           </div>
