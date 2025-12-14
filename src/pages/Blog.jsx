@@ -501,6 +501,86 @@ const posts = [
     category: 'Product',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
     page: 'BlogAgenticAIScaling'
+  },
+  {
+    title: 'Understanding AI Autonomy: From Basic Automation to True Intelligence',
+    excerpt: 'Explore the spectrum of AI autonomy, from simple automation to fully autonomous systems. Learn what true AI autonomy means and why it matters.',
+    author: 'Dr. Rachel Thompson',
+    date: 'January 20, 2025',
+    readTime: '16 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+    page: 'BlogAIAutonomyIntro'
+  },
+  {
+    title: 'The 6 Levels of AI Autonomy: A Complete Framework',
+    excerpt: 'Understand the six levels of AI autonomy from assisted to full autonomy. Learn where your AI systems fit and how to advance them.',
+    author: 'Michael Stevens',
+    date: 'January 19, 2025',
+    readTime: '14 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    page: 'BlogAIAutonomyLevels'
+  },
+  {
+    title: 'Autonomous Decision-Making: How AI Systems Think and Act Independently',
+    excerpt: 'Deep dive into how autonomous AI systems make decisions without human intervention. Frameworks, algorithms, and real-world examples.',
+    author: 'Dr. Sarah Kim',
+    date: 'January 18, 2025',
+    readTime: '17 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
+    page: 'BlogAutonomousDecisionMaking'
+  },
+  {
+    title: 'Building Truly Autonomous AI Systems: Architecture and Design Patterns',
+    excerpt: 'Practical guide to designing and building autonomous AI systems. Architecture patterns, key components, and implementation strategies.',
+    author: 'Kevin Zhang',
+    date: 'January 17, 2025',
+    readTime: '18 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    page: 'BlogBuildingAutonomousAI'
+  },
+  {
+    title: 'AI Autonomy vs Human Oversight: Finding the Right Balance',
+    excerpt: 'When should AI act autonomously and when do humans need to intervene? Framework for balancing autonomy with oversight and control.',
+    author: 'Jennifer Martinez',
+    date: 'January 16, 2025',
+    readTime: '15 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    page: 'BlogAIAutonomyVsOversight'
+  },
+  {
+    title: 'Autonomous AI in Action: 10 Real-World Enterprise Applications',
+    excerpt: 'Explore real-world deployments of autonomous AI across industries. Use cases, results, and lessons learned from leading organizations.',
+    author: 'Robert Chen',
+    date: 'January 15, 2025',
+    readTime: '16 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
+    page: 'BlogAutonomousAIApplications'
+  },
+  {
+    title: 'Overcoming Challenges in AI Autonomy: Risk, Trust, and Control',
+    excerpt: 'Navigate the key challenges of deploying autonomous AI. Risk management, building trust, maintaining control, and ensuring safety.',
+    author: 'Dr. Marcus Williams',
+    date: 'January 14, 2025',
+    readTime: '15 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800',
+    page: 'BlogAIAutonomyChallenges'
+  },
+  {
+    title: 'The Future of AI Autonomy: Predictions and Emerging Trends for 2025-2030',
+    excerpt: 'Look ahead at the future of autonomous AI. Emerging capabilities, market trends, regulatory landscape, and what it means for your business.',
+    author: 'Dr. Emily Carter',
+    date: 'January 13, 2025',
+    readTime: '17 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
+    page: 'BlogAIAutonomyFuture'
   }
 ];
 
