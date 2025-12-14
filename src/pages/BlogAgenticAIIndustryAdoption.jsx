@@ -211,9 +211,9 @@ export default function BlogAgenticAIIndustryAdoption() {
             <p className="text-gray-600 mb-6">
               Explore how leading companies in your industry use both AI approaches.
             </p>
-            <Link to={createPageUrl('Contact')}>
+            <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4]">
-                Explore Solutions
+                Get started
               </Button>
             </Link>
           </div>
