@@ -129,8 +129,8 @@ export default function Header() {
             <Button variant="ghost" className="text-gray-600 hover:text-[#8B2EE5] font-medium transition-all duration-200 hover:-translate-y-0.5">
               Log in
             </Button>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white font-medium rounded-full px-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
-              Get started
+            <Button onClick={() => window.openChat?.()} className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white font-medium rounded-full px-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+              Talk to sales
             </Button>
           </div>
 
@@ -164,7 +164,7 @@ export default function Header() {
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
                 <Button variant="outline" className="w-full justify-center">Log in</Button>
-                <Button className="w-full justify-center bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full">Get started</Button>
+                <Button onClick={() => { window.openChat?.(); setMobileMenuOpen(false); }} className="w-full justify-center bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full">Talk to sales</Button>
               </div>
             </nav>
           </div>
