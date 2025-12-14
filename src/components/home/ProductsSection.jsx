@@ -3,13 +3,15 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { ArrowRight, Layers, Cloud, Code, Database, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const products = [
   {
     icon: Layers,
-    name: 'Enterprise Suite',
+    name: 'Enterprise Suite - Unified Business Operations Platform',
     tagline: 'Complete business management',
-    description: 'An integrated platform combining ERP, CRM, and AI capabilities for end-to-end business operations.',
+    description: 'An integrated platform combining ERP, CRM, and AI capabilities for end-to-end business operations with real-time analytics and automation.',
     features: ['Financial Management', 'Supply Chain', 'HR & Payroll', 'Analytics'],
     details: {
       overview: 'Our Enterprise Suite brings together all core business systems into a unified platform powered by AI, eliminating data silos and enabling seamless operations.',
@@ -36,9 +38,9 @@ const products = [
   },
   {
     icon: Cloud,
-    name: 'Cloud Platform',
+    name: 'Cloud Platform - Enterprise-Grade AI Infrastructure',
     tagline: 'Scalable infrastructure',
-    description: 'Deploy, scale, and manage AI workloads with enterprise-grade cloud infrastructure built for performance.',
+    description: 'Deploy, scale, and manage AI workloads with enterprise-grade cloud infrastructure built for performance, security, and global availability.',
     features: ['Auto-scaling', 'Multi-region', 'Edge Computing', '99.99% SLA'],
     details: {
       overview: 'Our cloud platform provides the infrastructure foundation for AI workloads, offering enterprise-grade performance, security, and scalability out of the box.',
@@ -65,9 +67,9 @@ const products = [
   },
   {
     icon: Code,
-    name: 'Developer Tools',
+    name: 'Developer Tools - Complete AI Development Suite',
     tagline: 'Build with AI',
-    description: 'Comprehensive SDKs, APIs, and frameworks to integrate AI capabilities into your applications.',
+    description: 'Comprehensive SDKs, APIs, and frameworks to integrate AI capabilities into your applications with extensive documentation and community support.',
     features: ['REST & GraphQL APIs', 'SDKs', 'Webhooks', 'CLI Tools'],
     details: {
       overview: 'Build AI-powered applications with our comprehensive developer toolkit, featuring SDKs in multiple languages, REST APIs, GraphQL, and extensive documentation.',
@@ -94,9 +96,9 @@ const products = [
   },
   {
     icon: Database,
-    name: 'Data Platform',
+    name: 'Data Platform - AI-Powered Data Intelligence',
     tagline: 'Intelligence at scale',
-    description: 'Unified data management with built-in AI for insights, predictions, and automated decision-making.',
+    description: 'Unified data management with built-in AI for insights, predictions, and automated decision-making across your entire organization.',
     features: ['Data Lake', 'ML Pipeline', 'Real-time ETL', 'Governance'],
     details: {
       overview: 'Our data platform unifies data from across your organization, providing a single source of truth with AI-powered insights, predictions, and automated decision-making.',
@@ -266,9 +268,11 @@ export default function ProductsSection() {
                 </div>
 
                 <div className="pt-6 border-t">
-                  <Button className="w-full bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Learn More <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
+                  <Link to={createPageUrl('Onboarding')}>
+                    <Button className="w-full bg-[#6209e6] hover:bg-[#5008c5] h-12">
+                      Get started <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
