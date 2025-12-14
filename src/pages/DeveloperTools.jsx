@@ -327,7 +327,7 @@ $ 1c deploy
               Edge functions
             </h2>
             <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
-              Deploy code to 150+ locations. Run closer to users with <10ms latency.
+              Deploy code to 150+ locations. Run closer to users with {'<'}10ms latency.
             </p>
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {[
