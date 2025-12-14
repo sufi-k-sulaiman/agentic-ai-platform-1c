@@ -222,27 +222,28 @@ export default function HelpCenter() {
       </section>
 
       {/* Contact Support CTA */}
-      <section className="py-24 bg-gradient-to-br from-[#8B2EE5] to-[#6B21A8] text-white">
+      <section className="py-24 bg-gradient-to-br from-[#7C3AED] via-[#8B2EE5] to-[#6B21A8] text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <MessageCircle className="w-16 h-16 mx-auto mb-6" />
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="w-24 h-24 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-4 border-white/20">
+              <MessageCircle className="w-12 h-12 stroke-[2]" />
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
               Still need help?
             </h2>
-            <p className="text-xl text-purple-100 mb-10">
+            <p className="text-xl text-white/90 mb-10">
               Our support team is available 24/7 to assist you
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-8">
-                Contact support <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-8">
-                Schedule a call
-              </Button>
+              <Link to={createPageUrl('Contact')}>
+                <Button size="lg" className="bg-white text-[#8B2EE5] hover:bg-white/90 rounded-full px-8 h-14 text-lg font-semibold">
+                  Contact support <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
