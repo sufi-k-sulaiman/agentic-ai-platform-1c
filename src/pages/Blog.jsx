@@ -11,6 +11,147 @@ import PageMeta from '@/components/PageMeta';
 
 const posts = [
   {
+    title: 'Agentic AI vs Traditional AI: Complete Comparison Guide',
+    excerpt: 'Comprehensive comparison of agentic AI and traditional AI systems. Understand key differences, capabilities, limitations, and when to use each approach.',
+    author: 'Dr. Sarah Mitchell',
+    date: 'December 20, 2024',
+    readTime: '18 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+    page: 'BlogAgenticVsTraditionalAI',
+    featured: true
+  },
+  {
+    title: 'When to Use Agentic AI vs Traditional AI: Decision Framework',
+    excerpt: 'Practical guide to choosing between agentic and traditional AI. Decision trees, use case examples, and ROI considerations.',
+    author: 'James Patterson',
+    date: 'December 19, 2024',
+    readTime: '15 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    page: 'BlogWhenUseAgenticAI'
+  },
+  {
+    title: 'Agentic AI vs Rule-Based Systems: Why Intelligence Beats Rules',
+    excerpt: 'Compare agentic AI with traditional rule-based systems. Understand limitations of rules and advantages of autonomous intelligence.',
+    author: 'Laura Martinez',
+    date: 'December 18, 2024',
+    readTime: '14 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    page: 'BlogAgenticVsRuleBased'
+  },
+  {
+    title: 'Cost Comparison: Agentic AI vs Traditional AI Systems',
+    excerpt: 'Detailed cost analysis of agentic vs traditional AI. Development costs, operational expenses, ROI timelines, and total cost of ownership.',
+    author: 'David Chang, CFO',
+    date: 'December 17, 2024',
+    readTime: '16 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    page: 'BlogAgenticAICostAnalysis'
+  },
+  {
+    title: 'Performance Analysis: Agentic AI vs Traditional AI Benchmarks',
+    excerpt: 'Compare performance metrics between agentic and traditional AI. Speed, accuracy, reliability, and scalability benchmarks.',
+    author: 'Dr. Alex Kumar',
+    date: 'December 16, 2024',
+    readTime: '17 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+    page: 'BlogAgenticAIPerformance'
+  },
+  {
+    title: 'Architecture Differences: Agentic AI vs Traditional AI Systems',
+    excerpt: 'Deep dive into architectural patterns for agentic and traditional AI. Components, data flow, and infrastructure requirements.',
+    author: 'Kevin Zhang, Solutions Architect',
+    date: 'December 15, 2024',
+    readTime: '16 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    page: 'BlogAgenticAIArchitecture'
+  },
+  {
+    title: 'Use Cases: Where Agentic AI and Traditional AI Each Excel',
+    excerpt: 'Real-world use cases comparing agentic and traditional AI approaches. See which technology fits your specific business need.',
+    author: 'Rachel Thompson',
+    date: 'December 14, 2024',
+    readTime: '15 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
+    page: 'BlogAgenticAIUseCaseComparison'
+  },
+  {
+    title: 'Migration Guide: From Traditional AI to Agentic AI Systems',
+    excerpt: 'Step-by-step guide to migrating from traditional AI to agentic systems. Strategies, timelines, and risk mitigation.',
+    author: 'Michael Rodriguez',
+    date: 'December 13, 2024',
+    readTime: '14 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    page: 'BlogMigratingToAgenticAI'
+  },
+  {
+    title: 'ROI Comparison: Agentic AI vs Traditional AI Business Value',
+    excerpt: 'Compare return on investment for agentic and traditional AI. Real metrics, payback periods, and long-term value creation.',
+    author: 'Jennifer Lee, Business Analyst',
+    date: 'December 12, 2024',
+    readTime: '13 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    page: 'BlogAgenticAIROIComparison'
+  },
+  {
+    title: 'Future-Proofing with Agentic AI: Why Autonomous Systems Win Long-Term',
+    excerpt: 'Why agentic AI is the future. Technology trends, market predictions, and strategic advantages of autonomous systems.',
+    author: 'Dr. Emily Carter',
+    date: 'December 11, 2024',
+    readTime: '16 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
+    page: 'BlogAgenticAIFutureProof'
+  },
+  {
+    title: 'Limitations of Agentic AI: When Traditional AI is Still Better',
+    excerpt: 'Honest assessment of where agentic AI falls short. Understand constraints and when to stick with traditional approaches.',
+    author: 'Mark Stevens',
+    date: 'December 10, 2024',
+    readTime: '12 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
+    page: 'BlogAgenticAILimitations'
+  },
+  {
+    title: 'Skills Transition: From Traditional AI to Agentic AI Development',
+    excerpt: 'How ML engineers and data scientists can transition to agentic AI. New skills needed, learning paths, and career implications.',
+    author: 'Lisa Anderson',
+    date: 'December 9, 2024',
+    readTime: '14 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800',
+    page: 'BlogAgenticAISkillsTransition'
+  },
+  {
+    title: 'Industry Adoption: Agentic AI vs Traditional AI Across Sectors',
+    excerpt: 'Compare adoption rates of agentic and traditional AI across industries. Trends, drivers, and predictions for each sector.',
+    author: 'Robert Kim',
+    date: 'December 8, 2024',
+    readTime: '15 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+    page: 'BlogAgenticAIIndustryAdoption'
+  },
+  {
+    title: 'Security Comparison: Agentic AI vs Traditional AI Risk Profiles',
+    excerpt: 'Compare security risks and mitigations for agentic and traditional AI. Threat models, vulnerabilities, and best practices.',
+    author: 'Marcus Johnson, CISO',
+    date: 'December 7, 2024',
+    readTime: '17 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800',
+    page: 'BlogAgenticAISecurityComparison'
+  },
+  {
     title: 'Introduction to Generative AI: A Complete Guide',
     excerpt: 'Discover what generative AI is, how it works, and why it\'s transforming industries. Learn about the technology behind ChatGPT, DALL-E, and more.',
     author: 'Sarah Chen',
@@ -420,6 +561,7 @@ export default function Blog() {
           <Tabs value={activeCategory} onValueChange={setActiveCategory}>
             <TabsList className="bg-gray-100 flex-wrap sm:flex-nowrap h-auto sm:h-10 p-1 gap-1">
               <TabsTrigger value="all" className="text-xs sm:text-sm px-3 sm:px-4">All Posts</TabsTrigger>
+              <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">AI Comparison</TabsTrigger>
               <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">AI Governance</TabsTrigger>
               <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">Generative AI</TabsTrigger>
               <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">AI Insights</TabsTrigger>
