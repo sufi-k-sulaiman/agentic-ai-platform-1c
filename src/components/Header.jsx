@@ -29,7 +29,17 @@ const navItems = [
       { label: 'Property Management', description: 'Smart building solutions', href: createPageUrl('PropertyManagement') },
       { label: 'Data Centers', description: 'Infrastructure automation', href: createPageUrl('DataCenters') },
       { label: 'Financial Institutions', description: 'Banking & fintech', href: createPageUrl('FinancialInstitutions') },
+      { label: 'Corporate Campuses', description: 'Workplace management', href: createPageUrl('CorporateCampuses') },
       { label: 'Healthcare', description: 'Patient care optimization', href: createPageUrl('Healthcare') },
+      { label: 'Transit', description: 'Public transportation', href: createPageUrl('Transit') },
+      { label: 'Traffic', description: 'Traffic optimization', href: createPageUrl('Traffic') },
+      { label: 'Government Agencies', description: 'Public services', href: createPageUrl('GovernmentAgencies') },
+      { label: 'Energy & Utilities', description: 'Smart grid management', href: createPageUrl('EnergyUtilities') },
+      { label: 'Sports & Entertainment', description: 'Fan experiences', href: createPageUrl('SportsEntertainment') },
+      { label: 'Gaming', description: 'Gaming infrastructure', href: createPageUrl('Gaming') },
+      { label: 'Public Safety', description: 'Emergency response', href: createPageUrl('PublicSafety') },
+      { label: 'Cities', description: 'Smart city solutions', href: createPageUrl('Cities') },
+      { label: 'Airports', description: 'Airport operations', href: createPageUrl('Airports') },
       { label: 'Retail', description: 'Customer experience', href: createPageUrl('Retail') },
       { label: 'Education', description: 'Learning management', href: createPageUrl('Education') },
     ]
@@ -85,7 +95,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
             <NavigationMenu>
-              <NavigationMenuList className="gap-1">
+              <NavigationMenuList className="gap-1 relative">
                 {navItems.map((item) => (
                   <NavigationMenuItem key={item.label}>
                     {item.submenu ? (
@@ -93,8 +103,8 @@ export default function Header() {
                         <NavigationMenuTrigger className="text-gray-600 hover:text-[#8B2EE5] bg-transparent hover:bg-transparent data-[state=open]:bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5">
                           {item.label}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <ul className="grid w-[400px] gap-1 p-4">
+                        <NavigationMenuContent className="data-[motion=from-start]:animate-in data-[motion=from-end]:animate-in data-[motion=to-start]:animate-out data-[motion=to-end]:animate-out fade-in-0 fade-out-0 zoom-in-95 zoom-out-95 slide-in-from-left-1 slide-in-from-right-1">
+                          <ul className={`grid gap-1 p-4 ${item.label === 'Verticals' ? 'w-[500px] grid-cols-2' : 'w-[400px]'}`}>
                             {item.submenu.map((subitem) => (
                               <li key={subitem.label}>
                                 <NavigationMenuLink asChild>
