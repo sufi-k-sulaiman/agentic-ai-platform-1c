@@ -106,7 +106,7 @@ export default function FinancialInstitutions() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform banking operations with autonomous AI agents that handle compliance verification, customer service interactions, and sophisticated risk management—reducing operational costs by 45% while dramatically improving customer satisfaction and regulatory compliance. Deliver the personalized, instant service that modern customers expect.
+                Transform banking operations with autonomous Agentic Ai that handles compliance verification, customer service interactions, and sophisticated risk management—reducing operational costs by 45% while dramatically improving customer satisfaction and regulatory compliance. Deliver the personalized, instant service that modern customers expect.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to={createPageUrl('Onboarding')}>
@@ -149,7 +149,7 @@ export default function FinancialInstitutions() {
               Banking challenges, AI solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms financial services operations, from compliance automation to intelligent customer engagement. See how forward-thinking institutions are gaining competitive advantage.
+              How Agentic Ai transforms financial services operations, from compliance automation to intelligent customer engagement. See how forward-thinking institutions are gaining competitive advantage.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -169,7 +169,7 @@ export default function FinancialInstitutions() {
                         <p className="text-gray-600">{challenge.problem}</p>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-green-600 mb-2">✓ AI Solution</div>
+                        <div className="text-sm font-semibold text-green-600 mb-2">✓ Agentic Ai Solution</div>
                         <p className="text-gray-900 font-medium">{challenge.solution}</p>
                       </div>
                     </div>
@@ -189,7 +189,7 @@ export default function FinancialInstitutions() {
               Complete banking automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI agents working across every banking function, from front-office customer service to back-office operations and compliance.
+              Agentic Ai working across every banking function, from front-office customer service to back-office operations and compliance.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -224,7 +224,7 @@ export default function FinancialInstitutions() {
               Ready for AI-powered banking?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join leading financial institutions transforming operations with Agentic AI. Deliver exceptional customer experiences while reducing costs and maintaining perfect compliance.
+              Join leading financial institutions transforming operations with Agentic Ai. Deliver exceptional customer experiences while reducing costs and maintaining perfect compliance.
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">

@@ -105,7 +105,7 @@ export default function CorporateCampuses() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform corporate campuses with Agentic AI that intelligently manages space, enhances security, automates services, and optimizes operations—cutting facility costs by 30% while creating exceptional employee experiences that boost productivity and satisfaction.
+                Transform corporate campuses with Agentic Ai that intelligently manages space, enhances security, automates services, and optimizes operations—cutting facility costs by 30% while creating exceptional employee experiences that boost productivity and satisfaction.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to={createPageUrl('Onboarding')}>
@@ -146,7 +146,7 @@ export default function CorporateCampuses() {
               Campus challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms corporate campus operations, from space optimization to employee experience. Discover how Fortune 500 companies are revolutionizing workplace management.
+              How Agentic Ai transforms corporate campus operations, from space optimization to employee experience. Discover how Fortune 500 companies are revolutionizing workplace management.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -166,7 +166,7 @@ export default function CorporateCampuses() {
                         <p className="text-gray-600">{challenge.problem}</p>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-green-600 mb-2">✓ AI Solution</div>
+                        <div className="text-sm font-semibold text-green-600 mb-2">✓ Agentic Ai Solution</div>
                         <p className="text-gray-900 font-medium">{challenge.solution}</p>
                       </div>
                     </div>

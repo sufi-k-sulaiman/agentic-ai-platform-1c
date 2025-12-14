@@ -100,13 +100,13 @@ export default function PropertyManagement() {
                 Property Management
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Agentic AI for
+                Agentic Ai for
                 <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
                   smarter properties
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Deploy autonomous AI agents that manage maintenance, tenant services, finances, and operations—cutting costs by 40% while improving tenant satisfaction. Transform your property management with intelligent automation that works 24/7, predicts problems before they occur, and delivers exceptional experiences at scale.
+                Deploy autonomous Agentic Ai that manages maintenance, tenant services, finances, and operations—cutting costs by 40% while improving tenant satisfaction. Transform your property management with intelligent automation that works 24/7, predicts problems before they occur, and delivers exceptional experiences at scale.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to={createPageUrl('Onboarding')}>
@@ -149,7 +149,7 @@ export default function PropertyManagement() {
               From challenges to solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Agentic AI transforms property management pain points into competitive advantages. See how leading property managers are leveraging AI to reduce costs, improve efficiency, and deliver exceptional tenant experiences.
+              Agentic Ai transforms property management pain points into competitive advantages. See how leading property managers are leveraging AI to reduce costs, improve efficiency, and deliver exceptional tenant experiences.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -169,7 +169,7 @@ export default function PropertyManagement() {
                         <p className="text-gray-600">{challenge.problem}</p>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-green-600 mb-2">✓ AI Solution</div>
+                        <div className="text-sm font-semibold text-green-600 mb-2">✓ Agentic Ai Solution</div>
                         <p className="text-gray-900 font-medium">{challenge.solution}</p>
                       </div>
                     </div>
@@ -189,7 +189,7 @@ export default function PropertyManagement() {
               Complete AI-powered automation
             </h2>
             <p className="text-xl text-gray-600">
-              Autonomous agents working 24/7 across every aspect of property management. Our comprehensive platform integrates seamlessly with your existing systems while adding powerful AI capabilities that transform operations.
+              Autonomous Agentic Ai working 24/7 across every aspect of property management. Our comprehensive platform integrates seamlessly with your existing systems while adding powerful AI capabilities that transform operations.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -224,7 +224,7 @@ export default function PropertyManagement() {
               Ready to transform your properties?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join 500+ property managers reducing costs and delighting tenants with Agentic AI. See why leading property management companies trust our platform to handle thousands of units efficiently and profitably.
+              Join 500+ property managers reducing costs and delighting tenants with Agentic Ai. See why leading property management companies trust our platform to handle thousands of units efficiently and profitably.
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">

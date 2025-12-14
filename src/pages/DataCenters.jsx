@@ -106,7 +106,7 @@ export default function DataCenters() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Deploy self-managing AI agents that optimize power consumption, predict equipment failures before they occur, and maintain 99.999% uptime while reducing energy costs by 35%. Transform your data center into an intelligent, self-healing infrastructure that operates at peak efficiency 24/7 with minimal human intervention.
+                Deploy self-managing Agentic Ai that optimizes power consumption, predicts equipment failures before they occur, and maintains 99.999% uptime while reducing energy costs by 35%. Transform your data center into an intelligent, self-healing infrastructure that operates at peak efficiency 24/7 with minimal human intervention.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to={createPageUrl('Onboarding')}>
@@ -149,7 +149,7 @@ export default function DataCenters() {
               Solving critical data center challenges
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Agentic AI addresses the biggest pain points in data center operations, from energy efficiency to predictive maintenance. Discover how leading facilities are achieving unprecedented reliability and efficiency.
+              Agentic Ai addresses the biggest pain points in data center operations, from energy efficiency to predictive maintenance. Discover how leading facilities are achieving unprecedented reliability and efficiency.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -169,7 +169,7 @@ export default function DataCenters() {
                         <p className="text-gray-600">{challenge.problem}</p>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-green-600 mb-2">✓ AI Solution</div>
+                        <div className="text-sm font-semibold text-green-600 mb-2">✓ Agentic Ai Solution</div>
                         <p className="text-gray-900 font-medium">{challenge.solution}</p>
                       </div>
                     </div>
@@ -189,7 +189,7 @@ export default function DataCenters() {
               End-to-end AI automation
             </h2>
             <p className="text-xl text-gray-600">
-              Autonomous agents managing every aspect of your data center with comprehensive monitoring, predictive analytics, and automated remediation.
+              Autonomous Agentic Ai managing every aspect of your data center with comprehensive monitoring, predictive analytics, and automated remediation.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -224,7 +224,7 @@ export default function DataCenters() {
               Ready for autonomous operations?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join leading data centers worldwide saving millions annually with AI-powered infrastructure management. Transform your facility into a self-optimizing, predictive operation.
+              Join leading data centers worldwide saving millions annually with Agentic Ai-powered infrastructure management. Transform your facility into a self-optimizing, predictive operation.
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
