@@ -472,7 +472,288 @@ $ 1c deploy
         </div>
       </section>
 
-      {/* CTA - Fold 11 */}
+      {/* Error Handling - Fold 12 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Errors that
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  help you debug
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                Detailed error messages. Stack traces. Logs. Everything you need to fix issues fast.
+              </p>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Our errors actually tell you what went wrong and how to fix it.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800" 
+                alt="Error debugging" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rate Limiting - Fold 13 */}
+      <section className="min-h-screen flex items-center bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Generous
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                rate limits
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              Build without worrying about hitting limits
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {[
+                { value: '10K', label: 'Requests/minute' },
+                { value: 'Unlimited', label: 'Endpoints' },
+                { value: 'Real-time', label: 'Usage stats' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white rounded-2xl shadow-lg p-8"
+                >
+                  <div className="text-5xl font-bold text-purple-600 mb-3">{stat.value}</div>
+                  <div className="text-xl text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Versioning - Fold 14 */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-purple-900 to-pink-900 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+                API versioning.
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">
+                  Done right.
+                </span>
+              </h2>
+              <p className="text-2xl text-purple-100 leading-relaxed mb-8">
+                Multiple API versions supported simultaneously. Migrate at your own pace.
+              </p>
+              <p className="text-xl text-purple-200 leading-relaxed">
+                Breaking changes? Never without warning. Full deprecation timelines.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <pre className="text-green-400 text-base">
+{`// Use any API version
+const v1 = client.v1.agents.list()
+const v2 = client.v2.agents.list()
+
+// Automatic migration tools
+$ 1c migrate v1 v2
+✓ Code updated
+✓ Tests passing`}
+              </pre>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testing - Fold 15 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Test in
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                production
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              Sandbox environments. Test mode for all APIs. No risk.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {[
+                { value: 'Unlimited', label: 'Test requests' },
+                { value: 'Instant', label: 'Reset' },
+                { value: 'Full', label: 'Feature parity' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-gray-50 rounded-2xl shadow-lg p-8"
+                >
+                  <div className="text-5xl font-bold text-purple-600 mb-3">{stat.value}</div>
+                  <div className="text-xl text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Analytics - Fold 16 */}
+      <section className="min-h-screen flex items-center bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" 
+                alt="Analytics" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Analytics
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  built-in
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                Track every API call. Monitor usage. Optimize performance.
+              </p>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Real-time dashboards show exactly how developers use your APIs.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Migration Tools - Fold 17 */}
+      <section className="min-h-screen flex items-center bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold mb-8">
+              Migrate from
+              <br />
+              anywhere
+            </h2>
+            <p className="text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+              Automated migration tools for AWS, Azure, Google Cloud, and more
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+              {['AWS', 'Azure', 'GCP', 'Heroku', 'DigitalOcean', 'Vercel', 'Netlify', 'Railway'].map((platform, i) => (
+                <motion.div
+                  key={platform}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center font-semibold"
+                >
+                  {platform}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Trust - Fold 18 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-16">
+              Trusted worldwide
+            </h2>
+            <div className="grid md:grid-cols-4 gap-12 max-w-5xl mx-auto">
+              {[
+                { value: '500K+', label: 'Active developers' },
+                { value: '2.5B', label: 'API calls/day' },
+                { value: '180+', label: 'Countries' },
+                { value: '99.99%', label: 'Reliability' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className="text-5xl font-bold text-purple-600 mb-2">{stat.value}</div>
+                  <div className="text-xl text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA - Fold 19 */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />

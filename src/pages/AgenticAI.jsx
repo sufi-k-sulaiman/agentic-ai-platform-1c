@@ -378,7 +378,368 @@ export default function AgenticAI() {
         </div>
       </section>
 
-      {/* CTA - Fold 9 */}
+      {/* Customer Support - Fold 10 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Transform
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                  customer support
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                AI agents that handle 90% of customer inquiries instantly. 24/7 availability.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-4xl font-bold text-indigo-600 mb-2">90%</div>
+                  <div className="text-gray-600">Auto-resolved</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-indigo-600 mb-2">{'<'}30s</div>
+                  <div className="text-gray-600">Response time</div>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800" 
+                alt="Customer Support" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sales Automation - Fold 11 */}
+      <section className="min-h-screen flex items-center bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" 
+                alt="Sales Dashboard" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Automate
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                  your sales
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                Qualify leads, schedule meetings, send follow-ups. All automated.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-4xl font-bold text-indigo-600 mb-2">3x</div>
+                  <div className="text-gray-600">More leads</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-indigo-600 mb-2">50%</div>
+                  <div className="text-gray-600">Higher conversion</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Analysis - Fold 12 */}
+      <section className="min-h-screen flex items-center bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold mb-8">
+              Intelligent
+              <br />
+              data analysis
+            </h2>
+            <p className="text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+              AI that finds insights humans miss. Automatic anomaly detection and predictive analytics.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {[
+                { value: '1M+', label: 'Data points/sec' },
+                { value: '99.9%', label: 'Accuracy' },
+                { value: 'Real-time', label: 'Insights' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+                >
+                  <div className="text-5xl font-bold text-indigo-400 mb-3">{stat.value}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Workflow Automation - Fold 13 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Complex workflows.
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                Simple execution.
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+              Chain multiple agents together. Handle complex multi-step processes automatically.
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200" 
+              alt="Workflow automation" 
+              className="w-full rounded-3xl shadow-2xl"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Integration - Fold 14 */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Connects with
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                everything
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              1,000+ pre-built integrations. Or build your own in minutes.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+              {['Salesforce', 'Slack', 'HubSpot', 'Zendesk', 'Shopify', 'Stripe', 'Gmail', 'Notion'].map((app, i) => (
+                <motion.div
+                  key={app}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  className="bg-white rounded-2xl shadow-md p-6 text-center font-semibold text-gray-900"
+                >
+                  {app}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Compliance - Fold 15 */}
+      <section className="min-h-screen flex items-center bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Shield className="w-32 h-32 text-indigo-400 mx-auto mb-12" />
+            <h2 className="text-6xl md:text-7xl font-bold mb-8">
+              Compliance
+              <br />
+              built-in
+            </h2>
+            <p className="text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+              SOC 2, GDPR, HIPAA, CCPA. We handle the complexity.
+            </p>
+            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {['SOC 2 Type II', 'ISO 27001', 'GDPR', 'HIPAA'].map((cert, i) => (
+                <motion.div
+                  key={cert}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
+                >
+                  <div className="text-xl font-bold">{cert}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ROI Calculator - Fold 16 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Calculate your
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                ROI
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              See how much you could save with AI automation
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {[
+                { value: '$150K', label: 'Avg annual savings' },
+                { value: '1,200', label: 'Hours saved/month' },
+                { value: '6 months', label: 'Avg payback period' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-gray-50 rounded-2xl shadow-lg p-8"
+                >
+                  <div className="text-5xl font-bold text-indigo-600 mb-3">{stat.value}</div>
+                  <div className="text-xl text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Case Studies - Fold 17 */}
+      <section className="min-h-screen flex items-center bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Real companies.
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                Real results.
+              </span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { company: 'TechCorp', stat: '85%', metric: 'Cost reduction', industry: 'SaaS' },
+              { company: 'RetailCo', stat: '3x', metric: 'Sales increase', industry: 'E-commerce' },
+              { company: 'HealthPlus', stat: '95%', metric: 'Patient satisfaction', industry: 'Healthcare' }
+            ].map((item, i) => (
+              <motion.div
+                key={item.company}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white rounded-3xl shadow-lg p-8"
+              >
+                <div className="text-sm text-indigo-600 font-semibold mb-4">{item.industry}</div>
+                <div className="text-5xl font-bold text-gray-900 mb-2">{item.stat}</div>
+                <div className="text-xl text-gray-600 mb-6">{item.metric}</div>
+                <div className="text-2xl font-bold text-gray-900">{item.company}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust - Fold 18 */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-indigo-900 to-purple-900 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold mb-16">
+              Trusted by leaders
+            </h2>
+            <div className="grid md:grid-cols-4 gap-12 max-w-5xl mx-auto">
+              {[
+                { value: '10K+', label: 'Companies' },
+                { value: '50M+', label: 'Tasks automated' },
+                { value: '150', label: 'Countries' },
+                { value: '99.9%', label: 'Satisfaction' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className="text-5xl font-bold mb-2">{stat.value}</div>
+                  <div className="text-indigo-200">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA - Fold 19 */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />

@@ -449,6 +449,577 @@ export default function EnterpriseSuite() {
         </div>
       </section>
 
+      {/* Financial Management - Fold 6 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Financial
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  mastery
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                Complete financial management. Real-time reporting. Automated reconciliation.
+              </p>
+              <div className="space-y-4">
+                {[
+                  'General ledger',
+                  'AP/AR automation',
+                  'Multi-currency support',
+                  'Cash flow forecasting'
+                ].map((item, i) => (
+                  <motion.div
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-3 text-xl text-gray-700"
+                  >
+                    <CheckCircle className="w-6 h-6 text-green-600" />
+                    {item}
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800" 
+                alt="Financial Dashboard" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* HR & Payroll - Fold 7 */}
+      <section className="min-h-screen flex items-center bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800" 
+                alt="Team collaboration" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                HR made
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  effortless
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                From recruiting to payroll. Everything automated.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">80%</div>
+                  <div className="text-gray-600">Time saved</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
+                  <div className="text-gray-600">Accuracy</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Supply Chain - Fold 8 */}
+      <section className="min-h-screen flex items-center bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold mb-8">
+              Supply chain
+              <br />
+              optimization
+            </h2>
+            <p className="text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+              AI-powered demand forecasting. Automated procurement. Real-time tracking.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {[
+                { value: '95%', label: 'Forecast accuracy' },
+                { value: '40%', label: 'Cost reduction' },
+                { value: '99%', label: 'Fill rate' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+                >
+                  <div className="text-5xl font-bold text-purple-400 mb-3">{stat.value}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CRM - Fold 9 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                CRM that
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  sells for you
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                AI-powered lead scoring. Automated follow-ups. Predictive analytics.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">5x</div>
+                  <div className="text-gray-600">Lead conversion</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
+                  <div className="text-gray-600">More pipeline</div>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" 
+                alt="CRM Dashboard" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Intelligence - Fold 10 */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Insights that
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                drive decisions
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              Advanced analytics with natural language querying. Ask questions, get answers instantly.
+            </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200" 
+                alt="BI Dashboard" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Document Management - Fold 11 */}
+      <section className="min-h-screen flex items-center bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+                Documents.
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                  Organized.
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-300 leading-relaxed mb-8">
+                AI-powered classification. E-signature integration. Full compliance.
+              </p>
+              <div className="space-y-4">
+                {[
+                  'Automatic tagging',
+                  'Version control',
+                  'Audit trails',
+                  'Secure sharing'
+                ].map((item, i) => (
+                  <motion.div
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-3 text-xl"
+                  >
+                    <CheckCircle className="w-6 h-6 text-green-500" />
+                    {item}
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800" 
+                alt="Document Management" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile Apps - Fold 12 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800" 
+                alt="Mobile apps" 
+                className="w-full rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Work from
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  anywhere
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                Native iOS and Android apps. Full offline support.
+              </p>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Access everything on the go. Sync automatically when online.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Collaboration - Fold 13 */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Built for
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                collaboration
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              Real-time co-editing. Comments. Mentions. Everything your team needs.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {[
+                { value: 'Real-time', label: 'Co-editing' },
+                { value: 'Unlimited', label: 'Team members' },
+                { value: 'Instant', label: 'Sync' }
+              ].map((item, i) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white rounded-2xl shadow-lg p-8"
+                >
+                  <div className="text-5xl font-bold text-purple-600 mb-3">{item.value}</div>
+                  <div className="text-xl text-gray-600">{item.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Security - Fold 14 */}
+      <section className="min-h-screen flex items-center bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Shield className="w-32 h-32 text-purple-400 mx-auto mb-12" />
+            <h2 className="text-6xl md:text-7xl font-bold mb-8">
+              Bank-grade
+              <br />
+              security
+            </h2>
+            <p className="text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+              Enterprise security that protects your most valuable asset—your data.
+            </p>
+            <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {[
+                { value: 'AES-256', label: 'Encryption' },
+                { value: 'SOC 2', label: 'Certified' },
+                { value: '2FA', label: 'Authentication' },
+                { value: '24/7', label: 'Monitoring' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
+                >
+                  <div className="text-4xl font-bold mb-2">{stat.value}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* API Access - Fold 15 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Full API access
+            </h2>
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+              Extend and customize with comprehensive APIs
+            </p>
+          </motion.div>
+          
+          <div className="bg-gray-900 rounded-3xl p-8 max-w-4xl mx-auto">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-3 h-3 bg-red-500 rounded-full" />
+              <div className="w-3 h-3 bg-yellow-500 rounded-full" />
+              <div className="w-3 h-3 bg-green-500 rounded-full" />
+            </div>
+            <pre className="text-green-400 text-sm">
+{`import { EnterpriseSuite } from '@1c/sdk';
+
+const suite = new EnterpriseSuite();
+
+// Access all modules via API
+await suite.finance.createInvoice({...});
+await suite.hr.processPayroll({...});
+await suite.crm.updateLead({...});`}
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      {/* Custom Branding - Fold 16 */}
+      <section className="min-h-screen flex items-center bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Your brand.
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  Your platform.
+                </span>
+              </h2>
+              <p className="text-2xl text-gray-600 leading-relaxed mb-8">
+                Full white-label options. Custom domains. Your logo everywhere.
+              </p>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Make it yours with complete branding control.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative aspect-square"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <BarChart className="w-48 h-48 text-purple-600" />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Migration - Fold 17 */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-gray-900 to-black text-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold mb-8">
+              Migration made
+              <br />
+              simple
+            </h2>
+            <p className="text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+              We handle the heavy lifting. Zero downtime. Full data integrity.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {[
+                { value: '4 weeks', label: 'Avg migration time' },
+                { value: '100%', label: 'Data accuracy' },
+                { value: 'Zero', label: 'Downtime' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+                >
+                  <div className="text-5xl font-bold text-purple-400 mb-3">{stat.value}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Support - Fold 18 */}
+      <section className="min-h-screen flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Support that
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                actually helps
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              24/7 expert support. Dedicated success manager. Training included.
+            </p>
+            <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {[
+                { value: '{'<'}5min', label: 'Response time' },
+                { value: '98%', label: 'Satisfaction' },
+                { value: '24/7', label: 'Availability' },
+                { value: '100%', label: 'Resolution' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-gray-50 rounded-2xl shadow-lg p-8"
+                >
+                  <div className="text-5xl font-bold text-purple-600 mb-3">{stat.value}</div>
+                  <div className="text-xl text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
