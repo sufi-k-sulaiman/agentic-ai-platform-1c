@@ -1,8 +1,59 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, MessageCircle, Minimize2 } from 'lucide-react';
+import { X, Send, MessageCircle, Minimize2, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { base44 } from '@/api/base44Client';
+
+const PLATFORM_CONTEXT = `
+You are an AI assistant for 1C Platform, an enterprise Agentic AI platform.
+
+## Products:
+- **Agentic AI**: Autonomous AI agents that think, decide, and act. Features cognitive reasoning, real-time execution, multi-agent orchestration, continuous learning, and no-code builder.
+- **Enterprise Suite**: All-in-one business management with Financial Management, HR & Payroll, Supply Chain, CRM, Business Intelligence, and Document Management.
+- **Cloud Platform**: Enterprise cloud infrastructure optimized for AI workloads with auto-scaling, global network, Kubernetes, managed databases, and 99.99% uptime.
+- **Developer Tools**: Comprehensive developer platform with REST/GraphQL APIs, SDKs for 8+ languages, CLI, webhooks, edge functions, and real-time analytics.
+
+## Industries/Verticals:
+- Property Management - Tenant onboarding, maintenance, rent collection, lease renewals
+- Data Centers - Energy optimization, predictive maintenance, capacity planning
+- Financial Services - KYC/AML, loan processing, fraud detection
+- Healthcare - Patient scheduling, medical coding, claims processing
+- Corporate Campuses - Space management, visitor coordination, energy optimization
+- Public Transit - Route optimization, passenger info, fleet maintenance
+- Traffic Management - Signal optimization, incident detection, congestion prediction
+- Energy & Utilities - Grid optimization, outage prediction, renewable integration
+- Retail - Inventory optimization, customer personalization, dynamic pricing
+- Education - Student engagement, automated grading, learning analytics
+- Gaming - Player matchmaking, cheat detection, LiveOps automation
+- Government - Citizen services, document processing, compliance reporting
+- Airports - Passenger flow, security screening, baggage handling
+- Sports & Entertainment - Fan engagement, ticketing, venue operations
+
+## Key Pages:
+- Home - Main platform overview
+- Pricing - Starter ($0), Professional ($99/mo), Enterprise (custom)
+- AgenticAI - Autonomous AI agents
+- EnterpriseSuite - Business management platform
+- CloudPlatform - Infrastructure platform
+- DeveloperTools - APIs and developer resources
+- Documentation - Technical documentation
+- About Us - Company information
+- Careers - Job opportunities
+- Community - User community and events
+- Blog - Industry insights and tutorials
+- Cyber - Security and compliance
+- Help Center - Support resources
+
+## Instructions:
+- Be helpful, concise, and informative
+- Recommend relevant products and industries based on user questions
+- Suggest specific pages when appropriate
+- For sales inquiries, offer to schedule a demo or connect with the sales team
+- For technical questions, direct to Documentation or DeveloperTools
+- For pricing questions, reference the Pricing page with specific tiers
+- Keep responses under 150 words unless more detail is needed
+`;
 
 export default function ChatBot({ isOpen, onClose }) {
   const [messages, setMessages] = useState([
@@ -13,6 +64,7 @@ export default function ChatBot({ isOpen, onClose }) {
     }
   ]);
   const [inputValue, setInputValue] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -23,8 +75,8 @@ export default function ChatBot({ isOpen, onClose }) {
     scrollToBottom();
   }, [messages]);
 
-  const handleSend = () => {
-    if (!inputValue.trim()) return;
+  const handleSend = async () => {
+    if (!inputValue.trim() || isLoading) return;
 
     const userMessage = {
       role: 'user',
@@ -34,25 +86,19 @@ export default function ChatBot({ isOpen, onClose }) {
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
+    setIsLoading(true);
 
-    // Simulate bot response
-    setTimeout(() => {
-      const responses = [
-        'Thanks for your question! A member of our sales team will get back to you shortly. In the meantime, feel free to explore our documentation or schedule a demo.',
-        'Great question! Our platform offers comprehensive solutions for that. Would you like to schedule a demo to see it in action?',
-        'I\'d be happy to help! Let me connect you with a specialist who can provide detailed information. What\'s the best way to reach you?',
-        'That\'s a popular question! Our enterprise plan includes full support for that feature. Would you like to speak with someone from our team?'
-      ];
+    try {
+      const conversationHistory = messages
+        .map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`)
+        .join('\n');
 
-      const botMessage = {
-        role: 'assistant',
-        content: responses[Math.floor(Math.random() * responses.length)],
-        timestamp: new Date()
-      };
+      const prompt = `${PLATFORM_CONTEXT}
 
-      setMessages(prev => [...prev, botMessage]);
-    }, 1000);
-  };
+Conversation history:
+${conversationHistory}
+
+User: ${userMessage.content}
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
