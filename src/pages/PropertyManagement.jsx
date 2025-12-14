@@ -8,26 +8,26 @@ const challenges = [
   {
     icon: DollarSign,
     title: 'Operating Expenses',
-    problem: 'Manual maintenance scheduling, energy waste, inefficient staffing',
-    solution: 'AI predicts equipment failures, optimizes energy usage, automates scheduling—reducing costs by 40%'
+    problem: 'Manual maintenance scheduling leads to reactive repairs that cost 3-5x more than preventive maintenance. Energy waste from inefficient HVAC systems and lighting can account for 30% of operating expenses. Inefficient staffing patterns result in overtime costs and service gaps during peak demand periods. Property managers spend 60% of their time on administrative tasks instead of strategic planning and tenant relationships.',
+    solution: 'AI predicts equipment failures weeks in advance by analyzing sensor data, reducing emergency repairs by 85%. Smart algorithms optimize energy usage across all building systems, automatically adjusting HVAC, lighting, and other utilities based on occupancy patterns and weather forecasts. Machine learning models forecast maintenance needs and automatically schedule preventive service, reducing overall operational costs by 40% while extending equipment lifespan by 25%.'
   },
   {
     icon: Database,
     title: 'Data Silos',
-    problem: 'Fragmented tenant data, maintenance logs, and financial records',
-    solution: 'Unified AI platform aggregates data from all systems for real-time insights and automated reporting'
+    problem: 'Tenant information scattered across multiple platforms including CRM, accounting software, and maintenance systems creates incomplete visibility. Financial records exist in separate systems from operational data, making accurate forecasting impossible. Maintenance logs are often paper-based or in disconnected digital systems, preventing pattern analysis. This fragmentation leads to duplicate data entry, errors, and missed opportunities for optimization.',
+    solution: 'Unified AI platform aggregates data from all systems in real-time, creating a single source of truth accessible from any device. Advanced analytics automatically identify trends, anomalies, and opportunities across operations, finance, and tenant management. Automated reporting eliminates manual data compilation, generating comprehensive insights into property performance, tenant satisfaction, and financial health. Integration with IoT sensors provides live building performance metrics.'
   },
   {
     icon: Workflow,
     title: 'Manual Workflows',
-    problem: 'Time-consuming lease processing, work order management, tenant onboarding',
-    solution: 'Agentic AI handles entire workflows autonomously—from lease renewals to maintenance dispatch'
+    problem: 'Lease processing takes 3-7 days with multiple manual review steps, creating bottlenecks during busy seasons. Work order management involves phone calls, emails, and manual dispatching, leading to delayed responses and tenant frustration. Tenant onboarding requires extensive paperwork and multiple in-person meetings, consuming staff time and creating poor first impressions. Rent collection follows manual processes with individual follow-ups for late payments.',
+    solution: 'Agentic AI handles entire workflows autonomously—from lease document generation and approval routing to automatic tenant screening and digital signature collection. Smart work order systems automatically categorize requests, assess urgency, dispatch the right vendor, and track completion without human intervention. Automated lease renewals proactively engage tenants 90 days before expiration with personalized offers based on payment history and market conditions, increasing retention by 35%.'
   },
   {
     icon: TrendingUp,
     title: 'Marketing & Sales',
-    problem: 'Low occupancy rates, ineffective lead management, manual touring',
-    solution: 'AI qualifies leads, schedules virtual tours, personalizes marketing campaigns—increasing occupancy by 25%'
+    problem: 'Low occupancy rates during seasonal downturns impact revenue by 15-20%. Ineffective lead management means 40% of inquiries never receive follow-up. Manual touring schedules limit availability to business hours only, missing 60% of potential renters who prefer evenings or weekends. Generic marketing campaigns fail to target ideal tenant profiles, wasting 70% of advertising spend.',
+    solution: 'AI qualifies leads instantly using predictive scoring based on credit, income, and behavioral patterns, prioritizing high-probability prospects. Automated virtual tour scheduling and self-guided tours with smart lock access enable 24/7 viewing availability, increasing tour-to-lease conversion by 40%. Personalized marketing campaigns leverage machine learning to target specific demographics across social media, email, and listing sites, reducing cost-per-lease by 50% while increasing occupancy by 25%.'
   }
 ];
 
@@ -35,37 +35,45 @@ const solutions = [
   {
     category: 'Finance & Operations',
     items: [
-      'Automated rent collection with smart payment reminders',
-      'Predictive budgeting based on historical data patterns',
-      'Real-time P&L statements and cash flow forecasting',
-      'Dynamic pricing optimization for vacant units'
+      'Automated rent collection with smart payment reminders and flexible payment plans',
+      'Predictive budgeting based on historical data patterns and market trends',
+      'Real-time P&L statements and cash flow forecasting with variance alerts',
+      'Dynamic pricing optimization for vacant units based on market conditions and demand',
+      'Automated expense categorization and vendor payment processing',
+      'Lease accounting automation ensuring compliance with ASC 842 standards'
     ]
   },
   {
     category: 'Maintenance & Workflows',
     items: [
-      'AI-powered preventive maintenance scheduling',
-      'Automated work order creation and vendor dispatch',
-      'Equipment failure prediction with IoT integration',
-      'Smart energy management reducing utility costs'
+      'AI-powered preventive maintenance scheduling using predictive analytics',
+      'Automated work order creation and vendor dispatch with priority routing',
+      'Equipment failure prediction with IoT integration for critical systems',
+      'Smart energy management reducing utility costs through demand optimization',
+      'Inventory management for maintenance supplies with automatic reordering',
+      'Contractor performance tracking and automated quality scoring'
     ]
   },
   {
     category: 'Tenant Experience',
     items: [
-      '24/7 AI concierge for tenant inquiries and requests',
-      'Automated lease renewals with personalized offers',
-      'Self-service tenant portal with instant support',
-      'Proactive issue resolution before complaints arise'
+      '24/7 AI concierge for tenant inquiries and requests via chat, SMS, or voice',
+      'Automated lease renewals with personalized offers and one-click acceptance',
+      'Self-service tenant portal with instant support and community features',
+      'Proactive issue resolution before complaints arise using sentiment analysis',
+      'Digital payments with multiple options and automated receipt generation',
+      'Move-in/move-out automation with inspection scheduling and security deposit processing'
     ]
   },
   {
     category: 'Sales & Marketing',
     items: [
-      'Intelligent lead qualification and nurturing',
-      'Automated virtual tours and scheduling',
-      'Personalized email campaigns based on preferences',
-      'Market analysis for competitive pricing strategies'
+      'Intelligent lead qualification and nurturing with automated follow-up sequences',
+      'Automated virtual tours and scheduling with calendar integration',
+      'Personalized email campaigns based on preferences and browsing behavior',
+      'Market analysis for competitive pricing strategies with real-time adjustments',
+      'Social media management with AI-generated content and response automation',
+      'Reputation management monitoring reviews across all platforms with automated responses'
     ]
   }
 ];
@@ -96,7 +104,7 @@ export default function PropertyManagement() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Deploy autonomous AI agents that manage maintenance, tenant services, finances, and operations—cutting costs by 40% while improving tenant satisfaction.
+                Deploy autonomous AI agents that manage maintenance, tenant services, finances, and operations—cutting costs by 40% while improving tenant satisfaction. Transform your property management with intelligent automation that works 24/7, predicts problems before they occur, and delivers exceptional experiences at scale.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
@@ -137,7 +145,7 @@ export default function PropertyManagement() {
               From challenges to solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Agentic AI transforms property management pain points into competitive advantages
+              Agentic AI transforms property management pain points into competitive advantages. See how leading property managers are leveraging AI to reduce costs, improve efficiency, and deliver exceptional tenant experiences.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -177,7 +185,7 @@ export default function PropertyManagement() {
               Complete AI-powered automation
             </h2>
             <p className="text-xl text-gray-600">
-              Autonomous agents working 24/7 across every aspect of property management
+              Autonomous agents working 24/7 across every aspect of property management. Our comprehensive platform integrates seamlessly with your existing systems while adding powerful AI capabilities that transform operations.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -212,7 +220,7 @@ export default function PropertyManagement() {
               Ready to transform your properties?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join 500+ property managers reducing costs and delighting tenants with Agentic AI
+              Join 500+ property managers reducing costs and delighting tenants with Agentic AI. See why leading property management companies trust our platform to handle thousands of units efficiently and profitably.
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Start free trial <ArrowRight className="ml-2 w-5 h-5" />
