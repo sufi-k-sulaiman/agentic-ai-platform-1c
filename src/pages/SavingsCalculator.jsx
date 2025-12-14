@@ -94,7 +94,7 @@ export default function SavingsCalculator() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Discover how much time and money your organization can save with Agentic Ai automation
+              Discover how much your organization can save with Agentic Ai automation
             </p>
           </motion.div>
         </div>
