@@ -510,7 +510,7 @@ export default function Blog() {
 
   const filteredPosts = activeCategory === 'all'
     ? posts
-    : posts.filter(post => post.category.toLowerCase().replace(' ', '-') === activeCategory);
+    : posts.filter(post => post.category.toLowerCase().replace(/\s+/g, '-') === activeCategory);
 
   const featuredPost = posts.find(post => post.featured);
   const regularPosts = posts.filter(post => !post.featured);
@@ -560,14 +560,15 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Tabs value={activeCategory} onValueChange={setActiveCategory}>
             <TabsList className="bg-gray-100 flex-wrap sm:flex-nowrap h-auto sm:h-10 p-1 gap-1">
-              <TabsTrigger value="all" className="text-xs sm:text-sm px-3 sm:px-4">All Posts</TabsTrigger>
-              <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">AI Comparison</TabsTrigger>
-              <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">AI Governance</TabsTrigger>
-              <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">Generative AI</TabsTrigger>
-              <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">AI Insights</TabsTrigger>
-              <TabsTrigger value="tutorials" className="text-xs sm:text-sm px-3 sm:px-4">Tutorials</TabsTrigger>
-              <TabsTrigger value="case-studies" className="text-xs sm:text-sm px-3 sm:px-4 whitespace-nowrap">Case Studies</TabsTrigger>
-              <TabsTrigger value="product" className="text-xs sm:text-sm px-3 sm:px-4">Product</TabsTrigger>
+              <TabsTrigger value="all" className="text-xs sm:text-sm px-2.5 sm:px-3">All</TabsTrigger>
+              <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Comparison</TabsTrigger>
+              <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Governance</TabsTrigger>
+              <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Generative AI</TabsTrigger>
+              <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Insights</TabsTrigger>
+              <TabsTrigger value="tutorials" className="text-xs sm:text-sm px-2.5 sm:px-3">Tutorials</TabsTrigger>
+              <TabsTrigger value="case-studies" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Case Studies</TabsTrigger>
+              <TabsTrigger value="security" className="text-xs sm:text-sm px-2.5 sm:px-3">Security</TabsTrigger>
+              <TabsTrigger value="product" className="text-xs sm:text-sm px-2.5 sm:px-3">Product</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
