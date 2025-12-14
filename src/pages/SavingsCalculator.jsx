@@ -45,10 +45,11 @@ export default function SavingsCalculator() {
   const hoursPerTaskEstimate = 0.5; // Average hours per task
   const hoursSavedPerYear = dailyTasks * totalFTEs * 252 * hoursPerTaskEstimate * (automationRate / 100); // 252 work days
   const costPerHour = avgLaborCost / 2080; // Standard work year hours
-  const annualSavings = hoursSavedPerYear * costPerHour;
+  const annualSavings = (hoursSavedPerYear * costPerHour) + softwareIntegrationBonus;
   const threeYearSavings = annualSavings * 3;
   const productivityGain = (hoursSavedPerYear / (totalFTEs * 2080)) * 100;
   const tasksAutomatedDaily = dailyTasks * (automationRate / 100) * totalFTEs;
+  const softwareIntegrationBonus = softwareTypes.length * 2500; // Bonus savings per software integrated
 
   return (
     <div className="bg-white">
@@ -240,14 +241,8 @@ export default function SavingsCalculator() {
                     </div>
 
                     <div className="space-y-4 col-span-2">
-                      <Label className="text-lg font-semibold">Expected Automation Rate (%)</Label>
-                      <div className="flex items-center gap-4">
-                        <Input
-                          type="number"
-                          value={automationRate}
-                          onChange={(e) => setAutomationRate(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
-                          className="h-14 text-xl w-32"
-                        />
+                      <div className="flex items-center justify-between">
+                        <Label className="text-lg font-semibold">Expected Automation Rate</Label>
                         <span className="text-3xl font-bold text-[#8B2EE5]">{automationRate}%</span>
                       </div>
                       <div className="space-y-2">
@@ -256,7 +251,7 @@ export default function SavingsCalculator() {
                           onValueChange={([value]) => setAutomationRate(value)}
                           min={0}
                           max={100}
-                          step={20}
+                          step={1}
                           className="mt-3 [&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-[#8B2EE5] [&_[role=slider]]:border-4 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg [&>span]:h-3 [&>span]:bg-[#8B2EE5]"
                         />
                         <div className="flex justify-between text-sm text-gray-600 font-medium">
