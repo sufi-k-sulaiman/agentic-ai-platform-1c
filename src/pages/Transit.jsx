@@ -133,6 +133,37 @@ export default function Transit() {
         </div>
       </section>
 
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Public Transit
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              Public transportation systems form critical urban infrastructure, with U.S. transit agencies alone providing 10 billion trips annually across buses, subways, light rail, and commuter trains. The industry faces a fundamental sustainability crisis: operating revenues from fares typically cover only 30-40% of costs, requiring ongoing subsidies from local, state, and federal governments totaling $50+ billion annually. Transit agencies operate under intense political scrutiny with mandates to provide affordable, reliable service while controlling costs and reducing emissions. The COVID-19 pandemic devastated ridership (down 70% at the trough), creating budget crises as fare revenue collapsed while fixed costs continued. Recovery remains incomplete with ridership at 60-80% of pre-pandemic levels, fundamentally changing transit economics and forcing difficult service adjustments. Successful agencies must do more with less: maintaining service quality and reliability that attracts riders back from personal vehicles, while dramatically improving operational efficiency to remain financially viable with reduced fare revenue and uncertain subsidy levels.
+            </p>
+            <p>
+              Transit business models rely on fare revenue (30-40% of operating budget), government subsidies covering deficits, and auxiliary revenue from advertising, retail concessions, and parking. Operating costs are dominated by labor (operators, mechanics, administrative staff representing 60-70% of expenses), fuel or electricity, vehicle maintenance, and infrastructure upkeep. Capital expenses for vehicle purchases and infrastructure improvements come from federal grants and bond issues. The economics favor high ridership routes with frequent service where revenue approaches costs, while lower-demand routes provide essential coverage but lose money. Transit agencies balance social equity obligations (serving all neighborhoods including low-income areas) with financial reality (focusing service on high-demand corridors). Improving financial sustainability requires increasing ridership through better service reliability and convenience, reducing operational costs through efficiency improvements and technology, and demonstrating value to funding agencies through performance metrics. The death spiral—declining ridership forcing service cuts that further reduce ridership—must be avoided through service improvements that attract riders despite competition from ride-sharing and remote work.
+            </p>
+            <p>
+              Transit technology infrastructure includes automatic vehicle location (AVL) systems tracking real-time bus and train positions via GPS; computer-aided dispatch coordinating vehicle assignments and crew schedules; fare collection systems processing payments via cards, mobile apps, and cash; passenger information systems displaying real-time arrivals at stops and stations; maintenance management platforms tracking vehicle repairs, part inventory, and inspection schedules; and operations control centers monitoring service across entire networks. Modern agencies deploy sensors on vehicles monitoring engine performance, brake wear, and component health; traffic signal priority systems giving buses green lights to improve speed; and mobile apps providing trip planning, real-time tracking, and service alerts. Integration between systems remains limited: passenger apps show predicted arrivals but can't reserve space on crowded routes; maintenance systems track repairs but don't predict failures; AVL data exists but doesn't automatically optimize route timing. Cloud platforms now enable better data sharing, while AI applications analyze ridership patterns for route planning and predict vehicle maintenance needs, though deployment remains limited to pilot programs at leading agencies.
+            </p>
+            <p>
+              Agentic AI revolutionizes transit operations through autonomous agents that optimize every aspect of service delivery in real-time. Dynamic routing agents analyze current ridership demand, traffic conditions, weather forecasts, and special events to continuously adjust service—increasing frequency on crowded routes, deploying smaller vehicles during off-peak hours, and rerouting around congestion automatically. Predictive maintenance agents monitor every vehicle through hundreds of sensors, detecting issues weeks before failure by analyzing vibration patterns, temperature anomalies, and performance degradation, then automatically scheduling service during optimal windows to minimize service disruptions while extending vehicle lifespan. Disruption response agents instantly detect breakdowns or delays and autonomously execute recovery plans: identifying replacement vehicles, rerouting service, updating passenger information, and coordinating crew assignments—all within minutes rather than the current 15-30 minute manual response time. Passenger experience agents provide accurate arrival predictions within 30 seconds, suggest optimal routes considering delays, proactively notify riders of disruptions with alternatives, and optimize fare pricing to incentivize off-peak travel while maximizing revenue. The results transform transit viability: 95% on-time performance as AI predicts and prevents delays, 25% operational cost reduction through optimized scheduling and predictive maintenance, 35% ridership growth as reliable service attracts passengers back, and sustainability improvements from reduced fuel waste and optimized fleet utilization.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">

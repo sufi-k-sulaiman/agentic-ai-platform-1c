@@ -150,6 +150,37 @@ export default function DataCenters() {
         </div>
       </section>
 
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Data Centers
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              Data centers form the critical infrastructure backbone of the digital economy, housing servers, storage systems, and networking equipment that power everything from cloud computing to streaming services. The global data center market exceeds $200 billion annually, driven by explosive growth in cloud services, AI workloads, and edge computing. These facilities consume approximately 1-1.5% of global electricity, with power and cooling costs representing 60-70% of operating expenses. Data centers operate under extreme pressure to maintain 99.999% uptime (less than 5 minutes downtime per year) while managing escalating capacity demands, increasingly strict sustainability regulations, and relentless cost optimization pressure. The industry divides into hyperscale facilities (Amazon, Google, Microsoft) operating at massive scale with proprietary technology, colocation providers renting space to enterprises, and enterprise data centers supporting specific organizational needs.
+            </p>
+            <p>
+              The business model centers on maximizing utilization while minimizing operating costs, particularly energy consumption which scales linearly with compute density. Revenue comes from space rental (per rack or square foot), power consumption (per kilowatt), bandwidth allocation, and managed services including monitoring, security, and compliance support. Profitability depends on achieving optimal PUE (Power Usage Effectiveness) ratios—the industry standard metric comparing total facility power to IT equipment power, with 1.0 being perfect efficiency and typical facilities ranging from 1.4-1.8. Each 0.1 improvement in PUE translates to millions in annual savings for large facilities. Successful operators differentiate through reliability (minimizing downtime through redundant systems and predictive maintenance), efficiency (optimizing power and cooling to reduce operating costs), and service quality (providing superior monitoring, security, and customer support). Capital expenditure cycles are significant—major equipment upgrades, cooling infrastructure, and power capacity expansion require multi-million dollar investments with 5-7 year depreciation schedules.
+            </p>
+            <p>
+              Data center technology infrastructure encompasses multiple interconnected layers: IT equipment (servers, storage, networking), power systems (UPS, generators, PDUs, battery backup), cooling infrastructure (CRAC units, chillers, economizers, hot/cold aisle containment), monitoring systems (DCIM software tracking power, temperature, humidity, airflow), security systems (biometric access, video surveillance, intrusion detection), and building management systems coordinating HVAC, lighting, and fire suppression. Modern facilities deploy extensive sensor networks generating millions of data points daily: temperature sensors throughout server rows, power meters at rack level, humidity monitors, airflow measurements, vibration sensors on mechanical equipment, and performance metrics from every server and network device. DCIM (Data Center Infrastructure Management) platforms aggregate this data but traditionally require human analysts to identify patterns and make optimization decisions. Automation exists at basic levels—HVAC systems maintaining temperature setpoints, UPS systems switching to battery during outages—but complex optimization and predictive capabilities remain largely manual.
+            </p>
+            <p>
+              Agentic AI transforms data centers from monitored facilities into autonomous, self-optimizing ecosystems. AI agents continuously analyze thermal dynamics across entire server halls, correlating workload patterns, weather conditions, and electricity pricing to optimize cooling systems in real-time—dynamically adjusting CRAC units, airflow, and temperature setpoints to maintain optimal conditions while minimizing energy consumption. Predictive maintenance agents monitor equipment health through vibration analysis, temperature patterns, performance degradation, and historical failure data to forecast issues weeks before they occur, automatically scheduling service during maintenance windows and ordering replacement parts proactively. Capacity planning agents analyze growth trends, workload characteristics, and infrastructure utilization to forecast needs 6-12 months ahead, enabling proactive procurement and preventing both overprovisioning waste and emergency capacity crunches. Workload orchestration agents intelligently place computing tasks across the facility based on thermal conditions, power availability, and network topology. The result: facilities operating at PUE ratios of 1.2 or better (compared to industry average 1.6), achieving 99.999% uptime through predictive rather than reactive maintenance, and reducing operational costs by 35% while enabling infrastructure teams to focus on strategic improvements rather than firefighting daily operational issues.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Industry Overview */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">

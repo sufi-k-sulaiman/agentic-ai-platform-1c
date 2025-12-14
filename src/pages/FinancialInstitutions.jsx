@@ -143,6 +143,37 @@ export default function FinancialInstitutions() {
         </div>
       </section>
 
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Financial Institutions
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              Financial institutions form the backbone of the global economy, with the banking sector alone representing over $5 trillion in annual revenue worldwide. Banks, credit unions, investment firms, and insurance companies manage trillions in assets while serving billions of customers through complex networks of branches, ATMs, mobile apps, and digital channels. The industry operates under intense regulatory scrutiny with compliance requirements from Basel III, Dodd-Frank, GDPR, PCI DSS, and countless jurisdiction-specific regulations demanding extensive documentation, reporting, and control frameworks. Financial services compete on three dimensions: customer experience (convenience, speed, personalization), operational efficiency (cost per transaction, processing time), and risk management (credit quality, fraud prevention, regulatory compliance). Traditional competitive advantages—branch networks, established brands—erode as fintech disruptors deliver superior digital experiences, forcing incumbents to modernize operations while managing legacy systems and regulatory constraints that startups avoid.
+            </p>
+            <p>
+              Banking business models rely on net interest margin (the spread between lending rates and deposit costs), fee income from services like account maintenance and transaction processing, and investment revenue from asset management. Retail banking generates steady deposits providing low-cost funding for lending, while investment banking produces high-margin advisory and underwriting fees. However, margins face pressure from multiple directions: near-zero interest rates compress lending spreads, free checking accounts and digital banking reduce fee income, and regulatory capital requirements limit leverage. Success requires balancing volume (more customers, more transactions) with efficiency (lower cost per transaction) and risk (maintaining credit quality, preventing fraud). Digital transformation promises to shift economics by reducing expensive branch operations and manual processing while improving customer acquisition through superior experiences. Banks investing in AI can process loans in minutes rather than days, serve customers 24/7 through intelligent virtual assistants, and prevent fraud with accuracy impossible for human analysts—creating competitive advantages that compound over time.
+            </p>
+            <p>
+              Financial technology infrastructure includes core banking systems processing deposits, withdrawals, and account management; loan origination platforms handling applications, underwriting, and approval workflows; payment processing networks managing card transactions and ACH transfers; customer relationship management systems tracking interactions and opportunities; fraud detection systems monitoring transactions; and regulatory reporting platforms aggregating data for compliance. These systems evolved over decades, with large banks often running core banking software written in COBOL on mainframes alongside modern web applications and mobile apps—creating integration nightmares. APIs enable connections between systems, but data flows remain complex: customer information exists in core banking for accounts, separate CRM for relationship management, different systems for loans, credit cards, and investments. Recent innovations include cloud-based banking platforms, real-time payment networks, biometric authentication, blockchain for settlement, and AI-powered chatbots. However, most AI applications remain narrow—fraud detection analyzing transaction patterns, chatbots handling FAQs—rather than autonomous agents managing complete customer journeys.
+            </p>
+            <p>
+              Agentic AI revolutionizes financial services by deploying intelligent agents that handle entire workflows autonomously while maintaining perfect compliance. Loan processing agents manage applications from submission through approval: instantly verifying identity against global databases, analyzing creditworthiness using hundreds of data points including traditional credit reports plus alternative signals like cash flow patterns and employment stability, assessing risk, generating approval decisions, and maintaining complete audit documentation—all in under 3 minutes versus 5-7 days manually. Customer service agents handle 80% of inquiries instantly across any channel with natural language understanding, accessing unified customer data to provide personalized responses, execute transactions, and seamlessly escalate complex issues to human agents with full context. Compliance agents continuously monitor transactions, maintain audit trails, generate regulatory reports automatically, and ensure all controls function correctly—reducing compliance costs 60% while improving regulatory standing. Fraud detection agents analyze every transaction in real-time using behavioral models that learn individual customer patterns, identifying suspicious activity with 99% accuracy while reducing false positives by 90%. The transformation enables banks to compete with fintech on customer experience while leveraging their asset scale, deliver personalized service rivaling private banking across all customers, and maintain perfect compliance—all while reducing operational costs 45% and scaling services without proportionally increasing headcount.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Industry Overview */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">

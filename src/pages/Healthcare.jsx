@@ -141,6 +141,37 @@ export default function Healthcare() {
         </div>
       </section>
 
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Healthcare
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              Healthcare represents the largest sector of most developed economies—18% of U.S. GDP or $4.3 trillion annually—encompassing hospitals, physician practices, specialty care centers, diagnostic facilities, pharmacies, and long-term care providers. The industry operates under unique constraints: regulatory requirements (HIPAA, meaningful use, quality reporting) demand extensive documentation; reimbursement models from Medicare, Medicaid, and private insurers create complex billing requirements; and patient safety imperatives mean errors have life-or-death consequences. Healthcare economics face existential challenges: costs rise 5-8% annually (double general inflation) driven by aging populations, chronic disease prevalence, expensive treatments, and administrative overhead consuming 25-30% of spending. Providers squeeze between declining reimbursements and rising expenses, with hospital operating margins averaging just 2-3%. The industry desperately needs efficiency improvements, yet adoption of operational technology lags other sectors by a decade due to regulatory constraints, integration complexity, and risk-averse culture prioritizing safety over innovation.
+            </p>
+            <p>
+              Healthcare business models vary by setting but share common economics: fee-for-service models pay providers per procedure or visit, creating incentives for volume over outcomes; capitated models pay fixed amounts per patient regardless of utilization, shifting risk to providers; and value-based care ties reimbursement to quality metrics and outcomes. Hospitals generate revenue from patient care services, ancillary services (lab, imaging, pharmacy), and quality incentive payments, while facing costs for clinical staff (nurses, physicians), support staff, supplies, technology, facilities, and compliance. Physician practices operate on slim 10-15% margins, with revenue from patient visits and procedures offset by staff costs, malpractice insurance, EMR systems, and administrative overhead. Improving profitability requires increasing patient volume (seeing more patients per day), reducing costs (streamlining operations, minimizing waste), improving reimbursement (better coding, reducing denials), or shifting to value-based models capturing savings from better outcomes. AI promises transformation by automating administrative burdens that consume 50% of clinician time, enabling providers to see more patients while improving care quality and satisfaction.
+            </p>
+            <p>
+              Healthcare technology centers on electronic health record (EHR) systems (Epic, Cerner, Meditech) managing patient charts, orders, documentation, and clinical workflows. These integrate with practice management software handling scheduling and billing, laboratory information systems processing test orders and results, radiology PACS storing and managing medical images, pharmacy systems managing medications and drug interactions, and patient portals enabling online access to records and communications. Interoperability remains challenging despite FHIR standards—health information exchanges enable data sharing but implementation varies widely. Clinical decision support systems provide alerts about drug interactions, preventive care gaps, and clinical guidelines, though alert fatigue means providers ignore 90% of notifications. Telehealth platforms expanded dramatically during COVID, enabling remote consultations, while remote patient monitoring devices track vitals for chronic disease management. AI applications include natural language processing to assist documentation, predictive analytics identifying at-risk patients, and image analysis supporting radiology and pathology diagnosis. However, most AI tools require human oversight and operate as assistants rather than autonomous agents.
+            </p>
+            <p>
+              Agentic AI transforms healthcare delivery by deploying autonomous agents that eliminate administrative burden while enhancing clinical care. Documentation agents listen to patient encounters and automatically generate clinical notes, update problem lists, suggest evidence-based orders, and complete quality measure documentation—reducing physician documentation time by 70% while improving note quality and billing accuracy. Medical coding agents analyze clinical documentation to assign accurate codes, identify documentation gaps preventing optimal reimbursement, and flag potential denials before claims submit—improving first-pass acceptance from 65% to 95%. Prior authorization agents automatically compile required clinical information, submit requests electronically, track status, and escalate delays—reducing authorization time from weeks to hours while freeing staff for patient-facing work. Care coordination agents monitor every patient, ensuring discharge summaries reach primary care physicians, lab results trigger appropriate follow-up, medications reconcile across providers, and patients receive proactive outreach about preventive care and chronic disease management. Patient service agents handle routine inquiries instantly about bills, test results, and prescription refills via any channel. Clinical staff finally practice at the top of their license, focusing on complex clinical decisions and patient relationships rather than paperwork, while patients receive more attentive care, faster service, and better outcomes—all while administrative costs drop 40% enabling healthcare organizations to serve more patients sustainably.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">

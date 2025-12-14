@@ -141,6 +141,37 @@ export default function CorporateCampuses() {
         </div>
       </section>
 
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Corporate Campuses
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              Corporate campuses represent significant real estate investments for large organizations, with Fortune 500 companies operating facilities ranging from 100,000 to over 5 million square feet housing thousands of employees. These environments function as mini-cities requiring coordination of facilities management, security, food services, transportation, technology infrastructure, and employee experience programs. The hybrid work revolution fundamentally disrupted campus economics: pre-pandemic occupancy rates of 80-90% plummeted to 30-50%, yet fixed costs for real estate, utilities, and base-level maintenance continue regardless of actual usage. Companies now face difficult decisions about real estate footprints—maintaining excess capacity wastes millions annually, but premature downsizing risks capacity shortages when workers return. Successful campus management balances cost efficiency with employee experience, recognizing that workplace quality directly impacts talent recruitment, retention, and productivity worth far more than facility operating costs.
+            </p>
+            <p>
+              Corporate campus business models treat facilities as cost centers rather than revenue generators, with success measured by cost per square foot, employee satisfaction scores, and space utilization rates. Facilities departments typically operate on budgets of $8-15 per square foot annually covering maintenance, utilities, security, and services—representing $800K-$1.5M per 100,000 square feet. Hybrid work creates opportunities to reduce real estate footprints by 20-40% through hoteling and flexible space arrangements, potentially saving millions while improving space efficiency. However, realizing these savings requires sophisticated space management understanding actual utilization patterns, employee preferences, and collaboration requirements. Leading companies view campuses strategically as employee experience differentiators—investing in amenities, technology, and services that attract talent—while ruthlessly optimizing operational efficiency. The key challenge: maintaining world-class workplace experiences that justify commuting while reducing costs through smarter space allocation, energy management, and service delivery.
+            </p>
+            <p>
+              Modern campus technology stacks integrate building management systems controlling HVAC, lighting, and energy; access control systems managing badges, visitor registration, and security; space reservation platforms for desks, conference rooms, and parking; facilities management software tracking maintenance, work orders, and vendor relationships; employee experience apps aggregating services from food ordering to transportation; IoT sensor networks monitoring occupancy, environmental conditions, and equipment health; and video surveillance systems providing security monitoring. These systems typically operate independently with limited integration: badge access data doesn't inform HVAC scheduling, conference room bookings don't optimize cleaning schedules, and facilities teams lack unified dashboards showing real-time campus operations. Recent innovations include occupancy sensors providing utilization analytics, smart lighting and HVAC adjusting to actual presence, touchless access and services reducing friction, indoor navigation helping people find destinations, and predictive maintenance monitoring equipment health. Cloud-based integration platforms now enable data sharing between previously siloed systems, creating foundations for intelligent automation.
+            </p>
+            <p>
+              Agentic AI creates truly intelligent campuses where autonomous agents orchestrate every aspect of workplace operations seamlessly. Occupancy agents analyze badge data, calendar bookings, and historical patterns to predict space needs and automatically optimize building operations—activating HVAC, lighting, and services only for occupied areas while maintaining comfort. Space optimization agents continuously analyze utilization patterns to recommend reconfigurations maximizing efficiency, identifying underused conference rooms for conversion to collaboration spaces or suggesting floor consolidations reducing real estate costs 30-40%. Predictive maintenance agents monitor all equipment—elevators, HVAC, electrical, plumbing—through IoT sensors, detecting anomalies weeks before failures and automatically scheduling service during optimal windows to prevent disruptions. Employee experience agents provide 24/7 support via chat or voice for any campus need—booking resources, reporting issues, requesting services, finding locations—with AI handling complexity behind a simple interface. Visitor management agents handle registration, badge printing, host notifications, and wayfinding automatically. Energy optimization agents reduce consumption 30% by continuously adjusting systems based on actual occupancy, weather, and utility rates. The result: campuses that delight employees with seamless, personalized experiences while operating at unprecedented efficiency, freeing facilities teams to focus on strategic initiatives rather than daily operational firefighting.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">

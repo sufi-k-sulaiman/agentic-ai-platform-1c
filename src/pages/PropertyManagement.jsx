@@ -150,6 +150,37 @@ export default function PropertyManagement() {
         </div>
       </section>
 
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Property Management
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              The property management industry represents a $90 billion market in the United States alone, encompassing residential, commercial, and mixed-use properties. Property managers oversee everything from single-family homes to massive multi-unit complexes, acting as intermediaries between property owners and tenants while handling maintenance, financial management, and regulatory compliance. The industry operates on tight margins—typically 8-12% management fees on rental income—meaning efficiency directly impacts profitability. Successful property management requires balancing tenant satisfaction with cost control, maintaining properties to preserve asset value while maximizing net operating income (NOI) for owners. As portfolios grow, complexity increases exponentially: a manager with 500 units must track 500 leases, coordinate thousands of maintenance requests annually, process rent from hundreds of tenants, and maintain relationships with dozens of vendors.
+            </p>
+            <p>
+              Business models in property management center on recurring revenue from management fees, typically charged as a percentage of collected rent (8-12%) plus additional fees for leasing new tenants (50-100% of first month's rent), maintenance coordination, and specialized services. Larger property management companies achieve economies of scale by standardizing processes across portfolios, negotiating vendor contracts centrally, and leveraging technology investments across multiple properties. However, profitability remains challenged by high labor costs—property managers, leasing agents, maintenance coordinators, and accounting staff—alongside unpredictable expenses from emergency repairs and tenant turnover. The most successful firms differentiate through superior tenant experiences that reduce churn, operational efficiency that controls costs, and data-driven decision making that optimizes pricing and reduces vacancy periods. Technology adoption has historically lagged other industries due to fragmented operations and thin margins limiting investment, creating enormous opportunity for AI-powered transformation.
+            </p>
+            <p>
+              Modern property management technology stacks typically include property management software (Yardi, AppFolio, Buildium) handling accounting, leasing, and basic operations; customer relationship management systems for tracking prospects and communications; maintenance management platforms coordinating work orders and vendor relationships; and smart building systems with IoT sensors monitoring HVAC, water, energy, and security. However, these systems rarely integrate seamlessly, forcing property managers to manually transfer data between platforms and make decisions based on incomplete information. Recent innovations include AI-powered chatbots for basic tenant inquiries, predictive maintenance algorithms analyzing sensor data to forecast equipment failures, dynamic pricing tools that adjust rents based on market conditions, and automated showing scheduling with smart lock integration. The technology landscape is evolving rapidly from basic digitization toward intelligent automation, with AI now capable of handling complex workflows that previously required human judgment.
+            </p>
+            <p>
+              Agentic AI represents a paradigm shift for property management by deploying autonomous agents that manage complete workflows end-to-end without human intervention. Unlike traditional software requiring manual input and decision-making, AI agents understand context, make intelligent decisions, and coordinate across systems automatically. For property management, this means agents that handle tenant maintenance requests from submission through vendor dispatch, completion verification, and payment processing—learning from each interaction to improve vendor selection and response times. Predictive maintenance agents analyze patterns from thousands of properties to forecast failures weeks in advance, automatically scheduling service during optimal windows. Lease renewal agents proactively engage tenants 90 days before expiration, analyze market conditions and tenant payment history, and generate personalized offers that maximize retention while optimizing revenue. The result: property managers transform from administrators buried in operational tasks into strategic advisors focused on portfolio growth, tenant relationships, and property value enhancement, while AI handles the 60-70% of work that is repetitive, data-driven, and rules-based.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Industry Overview */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
