@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
+import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import jsPDF from 'jspdf';
 
 const investmentSlides = [
   { 
@@ -216,6 +217,83 @@ export default function InvestorRelations() {
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % investmentSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + investmentSlides.length) % investmentSlides.length);
+
+  const downloadPDF = () => {
+    const pdf = new jsPDF('landscape', 'mm', [297, 210]);
+    const slideWidth = 297;
+    const slideHeight = 210;
+    
+    investmentSlides.forEach((slide, index) => {
+      if (index > 0) pdf.addPage();
+      
+      // Get gradient colors
+      const gradientMap = {
+        'from-purple-600 to-violet-700': ['#9333EA', '#6D28D9'],
+        'from-blue-600 to-cyan-700': ['#2563EB', '#0E7490'],
+        'from-red-600 to-orange-700': ['#DC2626', '#C2410C'],
+        'from-green-600 to-emerald-700': ['#16A34A', '#047857'],
+        'from-purple-600 to-pink-700': ['#9333EA', '#BE185D'],
+        'from-indigo-600 to-purple-700': ['#4F46E5', '#7E22CE'],
+        'from-yellow-600 to-orange-700': ['#CA8A04', '#C2410C'],
+        'from-teal-600 to-green-700': ['#0D9488', '#15803D'],
+        'from-rose-600 to-pink-700': ['#E11D48', '#BE185D'],
+        'from-violet-600 to-purple-700': ['#7C3AED', '#7E22CE'],
+        'from-blue-600 to-indigo-700': ['#2563EB', '#4338CA'],
+        'from-emerald-600 to-teal-700': ['#059669', '#0F766E'],
+        'from-amber-600 to-orange-700': ['#D97706', '#C2410C'],
+        'from-cyan-600 to-blue-700': ['#0891B2', '#1D4ED8'],
+        'from-violet-600 to-fuchsia-700': ['#7C3AED', '#A21CAF']
+      };
+      
+      const [color1, color2] = gradientMap[slide.bg] || ['#9333EA', '#7E22CE'];
+      
+      // Background gradient
+      pdf.setFillColor(color1);
+      pdf.rect(0, 0, slideWidth, slideHeight, 'F');
+      
+      // Slide number
+      pdf.setTextColor(255, 255, 255);
+      pdf.setFontSize(10);
+      pdf.text(`Slide ${index + 1} of ${investmentSlides.length}`, slideWidth / 2, 20, { align: 'center' });
+      
+      // Title
+      pdf.setFontSize(48);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text(slide.title, slideWidth / 2, 70, { align: 'center', maxWidth: slideWidth - 40 });
+      
+      // Subtitle
+      pdf.setFontSize(24);
+      pdf.setFont('helvetica', 'normal');
+      pdf.text(slide.subtitle, slideWidth / 2, 95, { align: 'center', maxWidth: slideWidth - 40 });
+      
+      // Metrics
+      const metricsStartX = 40;
+      const metricWidth = (slideWidth - 80) / 3;
+      pdf.setFillColor(255, 255, 255, 0.1);
+      
+      slide.metrics.forEach((metric, idx) => {
+        const x = metricsStartX + (idx * metricWidth) + (idx * 10);
+        const y = 130;
+        
+        // Metric box with transparency
+        pdf.setDrawColor(255, 255, 255);
+        pdf.setLineWidth(0.5);
+        pdf.roundedRect(x, y, metricWidth - 10, 50, 3, 3, 'S');
+        
+        // Metric value
+        pdf.setFontSize(32);
+        pdf.setFont('helvetica', 'bold');
+        pdf.text(metric.value, x + (metricWidth - 10) / 2, y + 20, { align: 'center' });
+        
+        // Metric label
+        pdf.setFontSize(12);
+        pdf.setFont('helvetica', 'normal');
+        pdf.text(metric.label, x + (metricWidth - 10) / 2, y + 35, { align: 'center', maxWidth: metricWidth - 20 });
+      });
+    });
+    
+    pdf.save('1C-Platform-Investment-Deck.pdf');
+  };
 
   return (
     <div className="bg-white">
@@ -1139,9 +1217,18 @@ export default function InvestorRelations() {
                 Or email us at <a href="mailto:investor@1cplatform.com" className="text-white font-semibold hover:underline">investor@1cplatform.com</a>
               </div>
             </div>
-            <div className="mt-12 pt-8 border-t border-white/20">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-white/20">
+              <Button 
+                onClick={downloadPDF}
+                size="lg" 
+                variant="outline" 
+                className="bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-full px-10 h-14 text-lg"
+              >
+                <Download className="mr-2 w-5 h-5" />
+                Download deck (PDF)
+              </Button>
               <Link to={createPageUrl('Contact')}>
-                <Button size="lg" variant="outline" className="rounded-full border-gray-300 px-10 h-14 text-lg">
+                <Button size="lg" className="bg-[#8B2EE5] hover:bg-[#7325C4] border-2 border-white rounded-full px-10 h-14 text-lg text-white">
                   Contact us
                 </Button>
               </Link>
