@@ -27,7 +27,7 @@ const footerLinks = {
   support: [
     { label: 'Help Center', href: createPageUrl('HelpCenter') },
     { label: 'Status', href: createPageUrl('Status') },
-    { label: 'Security', href: createPageUrl('Cyber') },
+    { label: 'Cyber', href: createPageUrl('Cyber') },
     { label: 'Privacy', href: createPageUrl('Privacy') },
   ],
 };
