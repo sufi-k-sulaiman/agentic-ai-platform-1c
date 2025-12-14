@@ -35,6 +35,7 @@ import Cities from './pages/Cities';
 import Airports from './pages/Airports';
 import Retail from './pages/Retail';
 import Education from './pages/Education';
+import Onboarding from './pages/Onboarding';
 import __Layout from './Layout.jsx';
 
 
@@ -76,6 +77,7 @@ export const PAGES = {
     "Airports": Airports,
     "Retail": Retail,
     "Education": Education,
+    "Onboarding": Onboarding,
 }
 
 export const pagesConfig = {
