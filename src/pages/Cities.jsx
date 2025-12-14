@@ -44,7 +44,7 @@ const solutions = [
   {
     category: 'Citizen Services',
     items: [
-      '24/7 AI chatbot for city inquiries',
+      '24/7 Agentic Ai chatbot for city inquiries',
       'Automated permit and license processing',
       'Service request tracking and fulfillment',
       'Personalized alerts and notifications'
@@ -134,7 +134,7 @@ export default function Cities() {
               Urban challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI creates smarter, more efficient cities
+              How Agentic Ai creates smarter, more efficient cities
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -173,7 +173,7 @@ export default function Cities() {
               Complete smart city platform
             </h2>
             <p className="text-xl text-gray-600">
-              AI managing every aspect of urban operations
+              Agentic Ai managing every aspect of urban operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ export default function Cities() {
               Ready to build a smart city?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join leading cities worldwide transforming urban operations with Agentic AI
+              Join leading cities worldwide transforming urban operations with Agentic Ai
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />

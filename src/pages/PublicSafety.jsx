@@ -35,7 +35,7 @@ const solutions = [
   {
     category: 'Emergency Response',
     items: [
-      'AI-powered 911 call analysis and triage',
+      'Agentic Ai-powered 911 call analysis and triage',
       'Predictive dispatch and unit allocation',
       'Real-time incident coordination',
       'Automated resource tracking and availability'
@@ -95,7 +95,7 @@ export default function PublicSafety() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform emergency response and law enforcement with Agentic AI that reduces response times by 40%, predicts crime, and cuts costs by 30%.
+                Transform emergency response and law enforcement with Agentic Ai that reduces response times by 40%, predicts crime, and cuts costs by 30%.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
@@ -134,7 +134,7 @@ export default function PublicSafety() {
               Public safety challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms emergency services and law enforcement
+              How Agentic Ai transforms emergency services and law enforcement
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -173,7 +173,7 @@ export default function PublicSafety() {
               Complete safety automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI agents protecting communities 24/7
+              Agentic Ai protecting communities 24/7
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ export default function PublicSafety() {
               Ready for smarter public safety?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join agencies nationwide improving response times and saving lives with AI
+              Join agencies nationwide improving response times and saving lives with Agentic Ai
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />

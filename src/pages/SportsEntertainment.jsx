@@ -35,7 +35,7 @@ const solutions = [
   {
     category: 'Fan Experience',
     items: [
-      'AI concierge for venue navigation and info',
+      'Agentic Ai concierge for venue navigation and info',
       'Personalized content and offers based on behavior',
       'Mobile ordering with predictive queue optimization',
       'Real-time seat upgrades and experiences'
@@ -53,7 +53,7 @@ const solutions = [
   {
     category: 'Operations',
     items: [
-      'AI-powered staffing optimization',
+      'Agentic Ai-powered staffing optimization',
       'Automated inventory management for concessions',
       'Predictive maintenance for venue equipment',
       'Crowd flow analysis and security monitoring'
@@ -95,7 +95,7 @@ export default function SportsEntertainment() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform venue operations and delight fans with Agentic AI that personalizes experiences, optimizes revenue, and cuts costs by 25%.
+                Transform venue operations and delight fans with Agentic Ai that personalizes experiences, optimizes revenue, and cuts costs by 25%.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
@@ -134,7 +134,7 @@ export default function SportsEntertainment() {
               Venue challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms sports and entertainment operations
+              How Agentic Ai transforms sports and entertainment operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -173,7 +173,7 @@ export default function SportsEntertainment() {
               Complete venue automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI agents powering every fan touchpoint
+              Agentic Ai powering every fan touchpoint
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ export default function SportsEntertainment() {
               Ready to elevate fan experiences?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join top venues and teams creating unforgettable experiences with Agentic AI
+              Join top venues and teams creating unforgettable experiences with Agentic Ai
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Get started <ArrowRight className="ml-2 w-5 h-5" />
