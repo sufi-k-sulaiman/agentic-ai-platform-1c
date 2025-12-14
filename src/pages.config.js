@@ -16,6 +16,9 @@ import Blog from './pages/Blog';
 import Events from './pages/Events';
 import HelpCenter from './pages/HelpCenter';
 import ContactUs from './pages/ContactUs';
+import Status from './pages/Status';
+import Security from './pages/Security';
+import Privacy from './pages/Privacy';
 import __Layout from './Layout.jsx';
 
 
@@ -38,6 +41,9 @@ export const PAGES = {
     "Events": Events,
     "HelpCenter": HelpCenter,
     "ContactUs": ContactUs,
+    "Status": Status,
+    "Security": Security,
+    "Privacy": Privacy,
 }
 
 export const pagesConfig = {
