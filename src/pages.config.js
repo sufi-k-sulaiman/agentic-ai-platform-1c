@@ -111,6 +111,8 @@ import BlogAgenticAILimitations from './pages/BlogAgenticAILimitations';
 import BlogAgenticAISkillsTransition from './pages/BlogAgenticAISkillsTransition';
 import BlogAgenticAIIndustryAdoption from './pages/BlogAgenticAIIndustryAdoption';
 import BlogAgenticAISecurityComparison from './pages/BlogAgenticAISecurityComparison';
+import BlogAIAutonomyIntro from './pages/BlogAIAutonomyIntro';
+import BlogAIAutonomyLevels from './pages/BlogAIAutonomyLevels';
 import __Layout from './Layout.jsx';
 
 
@@ -228,6 +230,8 @@ export const PAGES = {
     "BlogAgenticAISkillsTransition": BlogAgenticAISkillsTransition,
     "BlogAgenticAIIndustryAdoption": BlogAgenticAIIndustryAdoption,
     "BlogAgenticAISecurityComparison": BlogAgenticAISecurityComparison,
+    "BlogAIAutonomyIntro": BlogAIAutonomyIntro,
+    "BlogAIAutonomyLevels": BlogAIAutonomyLevels,
 }
 
 export const pagesConfig = {
