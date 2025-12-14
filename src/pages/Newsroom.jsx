@@ -10,6 +10,33 @@ import PageMeta from '@/components/PageMeta';
 
 const news = [
   {
+    category: 'Product Launch',
+    title: 'SearchPods Now Available on iOS App Store',
+    excerpt: 'Transform how you consume intelligence with SearchPods - the AI-powered podcast generator that turns complex data into engaging audio insights on demand.',
+    date: 'December 14, 2024',
+    image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800',
+    icon: Zap,
+    link: 'https://apps.apple.com/us/app/searchpods/id6756348023'
+  },
+  {
+    category: 'Product Launch',
+    title: 'Neural Mindmap Launches on iOS - Visualize Your Ideas',
+    excerpt: 'Neural Mindmap brings AI-powered mind mapping to iOS, helping you organize thoughts, connect ideas, and unlock creative insights with neural-inspired visualization.',
+    date: 'December 14, 2024',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    icon: Zap,
+    link: 'https://apps.apple.com/us/app/neural-mindmap/id6756198559'
+  },
+  {
+    category: 'Product Launch',
+    title: 'RoutineOps iOS App - Automate Your Daily Workflows',
+    excerpt: 'RoutineOps arrives on iOS to help professionals streamline daily tasks, automate repetitive workflows, and boost productivity with intelligent automation.',
+    date: 'December 14, 2024',
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800',
+    icon: Zap,
+    link: 'https://apps.apple.com/us/app/routineops/id6756257586'
+  },
+  {
     category: 'Press Release',
     title: 'How 1cPublishing is Redefining Market Intelligence Through Agentic AI',
     excerpt: 'Discover how Agentic AI is transforming market intelligence by providing real-time insights, predictive analytics, and unified data streams for strategic decision-making.',
