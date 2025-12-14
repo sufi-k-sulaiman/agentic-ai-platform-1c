@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Clock, Briefcase, Search, ArrowRight } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const benefits = [
   { title: 'Competitive Salary', description: 'Top-tier compensation packages' },
@@ -70,6 +71,12 @@ export default function Careers() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Careers"
+        description="Join our team building the future of enterprise AI. Competitive salary, remote-first culture, unlimited PTO, and equity options. Open positions in engineering, product, and more."
+        url="/careers"
+        keywords={['careers', 'jobs', 'AI careers', 'engineering jobs', 'remote work', 'tech careers']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TrendingUp, FileText, Calendar, Download, ExternalLink } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const financialData = [
   { label: 'Stock Price', value: '$128.45', change: '+5.2%', positive: true },
@@ -27,6 +28,12 @@ const events = [
 export default function InvestorRelations() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Investor Relations"
+        description="NYSE: 1CP | $2.5B market cap, $450M revenue (TTM), +45% growth. View financial reports, earnings calls, and shareholder information."
+        url="/investor-relations"
+        keywords={['investor relations', 'financial reports', 'earnings', 'stock price', 'shareholder information', 'NYSE 1CP']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

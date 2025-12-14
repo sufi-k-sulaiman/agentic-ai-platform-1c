@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building, TrendingDown, Database, Workflow, DollarSign, Zap, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -80,6 +81,12 @@ const metrics = [
 export default function Cities() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Smart Cities AI"
+        description="Transform urban operations with AI. 30% cost savings, 50% faster services, 40% higher citizen satisfaction. Smart infrastructure and automated city management."
+        url="/cities"
+        keywords={['smart cities', 'urban AI', 'city infrastructure', 'citizen services', 'traffic management', 'urban planning']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

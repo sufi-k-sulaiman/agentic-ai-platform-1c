@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, TrendingDown, Database, Workflow, DollarSign, AlertTriangle, Clock, ArrowRight, CheckCircle } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -80,6 +81,12 @@ const metrics = [
 export default function PublicSafety() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Public Safety AI"
+        description="AI-powered emergency response and law enforcement. 40% faster response times, 65% crime prevention, 30% cost reduction through predictive policing."
+        url="/public-safety"
+        keywords={['public safety AI', 'emergency response', 'predictive policing', '911 dispatch', 'law enforcement technology']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

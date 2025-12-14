@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const leaders = [
   {
@@ -56,6 +57,12 @@ const leaders = [
 export default function Leadership() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Leadership Team"
+        description="Meet our world-class leadership team. Experienced executives from Google, Amazon, Microsoft, Salesforce, and Netflix driving AI innovation."
+        url="/leadership"
+        keywords={['leadership', 'executive team', 'CEO', 'CTO', 'management team', 'company leaders']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

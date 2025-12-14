@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Gamepad2, TrendingDown, Database, Workflow, DollarSign, Users, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -80,6 +81,12 @@ const metrics = [
 export default function Gaming() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Gaming AI Solutions"
+        description="Scale your game with AI infrastructure optimization. 35% cost savings, 85% automated support, 99% cheat detection. Real-time player analytics and monetization."
+        url="/gaming"
+        keywords={['gaming AI', 'game infrastructure', 'cheat detection', 'player analytics', 'LiveOps automation', 'matchmaking AI']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
