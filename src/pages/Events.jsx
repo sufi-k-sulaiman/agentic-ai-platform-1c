@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Calendar, MapPin, Users, Clock, Video, ArrowRight } from 'lucide-react';
+import { base44 } from '@/api/base44Client';
+import { useQuery } from '@tanstack/react-query';
+import RegistrationForm from '@/components/events/RegistrationForm';
 
 const events = [
   {
@@ -78,12 +81,31 @@ const events = [
 
 export default function Events() {
   const [activeTab, setActiveTab] = useState('all');
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [showRegistration, setShowRegistration] = useState(false);
+
+  const { data: dbEvents = [], refetch } = useQuery({
+    queryKey: ['events'],
+    queryFn: () => base44.entities.Event.list('-created_date'),
+    initialData: []
+  });
+
+  const allEvents = dbEvents.length > 0 ? dbEvents : events;
 
   const filteredEvents = activeTab === 'all'
-    ? events
-    : events.filter(event => event.type === activeTab);
+    ? allEvents
+    : allEvents.filter(event => event.type === activeTab);
 
-  const featuredEvent = events.find(event => event.featured);
+  const featuredEvent = allEvents.find(event => event.featured);
+
+  const handleRegisterClick = (event) => {
+    setSelectedEvent(event);
+    setShowRegistration(true);
+  };
+
+  const handleRegistrationSuccess = () => {
+    refetch();
+  };
 
   return (
     <div className="bg-white">
@@ -190,7 +212,10 @@ export default function Events() {
                       </div>
                     </div>
 
-                    <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full w-full md:w-auto">
+                    <Button 
+                      onClick={() => handleRegisterClick(featuredEvent)}
+                      className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full w-full md:w-auto"
+                    >
                       Register now <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </CardContent>
@@ -247,7 +272,10 @@ export default function Events() {
                       <Users className="w-4 h-4" />
                       {event.attendees} expected
                     </div>
-                    <Button className="w-full mt-4 rounded-full bg-gray-900 hover:bg-gray-800">
+                    <Button 
+                      onClick={() => handleRegisterClick(event)}
+                      className="w-full mt-4 rounded-full bg-gray-900 hover:bg-gray-800"
+                    >
                       Register <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </CardContent>
@@ -278,6 +306,17 @@ export default function Events() {
           </motion.div>
         </div>
       </section>
+
+      {/* Registration Modal */}
+      <AnimatePresence>
+        {showRegistration && selectedEvent && (
+          <RegistrationForm
+            event={selectedEvent}
+            onClose={() => setShowRegistration(false)}
+            onSuccess={handleRegistrationSuccess}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
