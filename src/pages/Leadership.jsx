@@ -6,37 +6,37 @@ const leaders = [
   {
     name: 'Niroshi Nadarajah',
     title: 'Chief Executive Officer',
-    bio: ['With a distinguished background in microbiology and medical research, Niroshi brings a unique scientific perspective to technology leadership. Her journey from medical sciences to AI innovation has shaped her approach to solving complex enterprise challenges.', 'As CEO, she leads 1cPlatform\'s vision to democratize AI across industries, combining deep scientific rigor with practical business acumen. Her passion for running marathons mirrors her leadership style: disciplined, endurance-focused, and always pushing boundaries.'],
+    bio: ['With a distinguished background in microbiology and medical research, Niroshi brings a unique scientific perspective to technology leadership. Her journey from medical sciences to AI innovation has shaped her approach to solving complex enterprise challenges.', 'As CEO of 1cPlatform, she leads the vision to democratize AI across industries, combining deep scientific rigor with practical business acumen. Her passion for running marathons mirrors her leadership style: disciplined, endurance-focused, and always pushing boundaries.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a80c07556_CMO.png'
   },
   {
     name: 'Suf K Sulaiman',
     title: 'Chief Technology Officer',
-    bio: ['A true technology polymath with over 30 years of experience spanning AI, hardware, and software engineering. Suf has been at the forefront of every major technology wave, from early computing systems to today\'s cutting-edge AI architectures.', 'His deep expertise in both hardware and software allows him to architect solutions that are not just innovative but fundamentally sound. At 1cPlatform, he drives the technical vision, ensuring our AI systems are built on rock-solid engineering principles that scale.'],
+    bio: ['A true technology polymath with over 30 years of experience spanning AI, hardware, and software engineering. He has been at the forefront of every major technology wave, from early computing systems to today\'s cutting-edge AI architectures.', 'As CTO of 1cPlatform, his deep expertise in both hardware and software allows him to architect solutions that are not just innovative but fundamentally sound, driving the technical vision and ensuring AI systems are built on rock-solid engineering principles that scale.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e26495cc8_CTO.png'
   },
   {
     name: 'Emily Zhang',
     title: 'Chief Product Officer',
-    bio: ['Previously Head of Product at Salesforce where she led teams building enterprise solutions used by millions. Her Stanford MBA background combines with hands-on product experience to create user-centric AI products.', 'Emily\'s philosophy centers on simplicity and impact. She believes the best AI products are those that feel invisible, seamlessly integrating into workflows while delivering transformative results. Her track record speaks volumes about turning vision into reality.'],
+    bio: ['With extensive experience leading enterprise product teams and building solutions used by millions, Emily brings deep expertise in creating user-centric AI products. Her background combines strategic product leadership with hands-on experience in the enterprise software industry.', 'As CPO of 1cPlatform, her philosophy centers on simplicity and impact. She believes the best AI products are those that feel invisible, seamlessly integrating into workflows while delivering transformative results for enterprises worldwide.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/06e4281e3_CPO.png'
   },
   {
     name: 'David Kim',
     title: 'Chief Financial Officer',
-    bio: ['Former CFO at Snowflake where he led multiple successful IPOs and navigated complex financial landscapes. With 20 years in enterprise tech finance, David brings unparalleled expertise in scaling financial operations.', 'His strategic financial leadership ensures 1cPlatform maintains the fiscal discipline needed for sustainable growth while investing boldly in innovation. David\'s ability to balance growth with profitability has been instrumental in our success.'],
+    bio: ['With 20 years in enterprise technology finance, David brings unparalleled expertise in scaling financial operations. He has successfully navigated complex financial landscapes, led multiple IPOs, and helped technology companies achieve sustainable growth.', 'As CFO of 1cPlatform, his strategic financial leadership ensures the company maintains the fiscal discipline needed for sustainable growth while investing boldly in innovation. His ability to balance growth with profitability drives the company\'s financial success.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/b9fad4d11_CFO.png'
   },
   {
     name: 'Priya Patel',
     title: 'Chief Marketing Officer',
-    bio: ['Ex-CMO at HubSpot where she built billion-dollar brands from the ground up. Priya is a growth marketing expert who understands how to create authentic connections between technology and customers.', 'Her data-driven approach to brand building has transformed how companies think about marketing in the AI age. At 1cPlatform, she leads our go-to-market strategy, ensuring our message resonates with enterprises worldwide.'],
+    bio: ['A growth marketing expert with extensive experience building billion-dollar brands in the technology sector, Priya understands how to create authentic connections between innovative technology and customers. Her expertise spans brand building, demand generation, and go-to-market strategy.', 'As CMO of 1cPlatform, her data-driven approach to brand building transforms how companies think about marketing in the AI age. She leads the go-to-market strategy, ensuring the message resonates with enterprises worldwide.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4918bd092_CEO.png'
   },
   {
     name: 'James Wilson',
     title: 'Chief Operating Officer',
-    bio: ['Operations excellence leader with extensive experience at Oracle and IBM. James has built his career on making complex systems run smoothly at scale, bringing order to chaos in enterprise operations.', 'His expertise in scaling global operations is critical to 1cPlatform\'s growth. James ensures that as we expand, our operations remain efficient, our customers stay delighted, and our team stays aligned with our mission.'],
+    bio: ['An operations excellence leader with extensive experience in enterprise technology, James has built his career on making complex systems run smoothly at scale. His expertise lies in bringing order to chaos and building efficient operational frameworks for global organizations.', 'As COO of 1cPlatform, his expertise in scaling global operations is critical to the company\'s growth. He ensures that as the company expands, operations remain efficient, customers stay delighted, and teams stay aligned with the mission.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a40c8fe07_COO.png'
   }
 ];
@@ -46,7 +46,7 @@ export default function Leadership() {
     <div className="bg-white">
       <PageMeta 
         title="Leadership Team"
-        description="Meet our world-class leadership team. Experienced executives from Google, Amazon, Microsoft, Salesforce, and Netflix driving AI innovation."
+        description="Meet our world-class leadership team. Experienced executives driving AI innovation across enterprise technology."
         url="/leadership"
         keywords={['leadership', 'executive team', 'CEO', 'CTO', 'management team', 'company leaders']}
       />
@@ -114,12 +114,12 @@ export default function Leadership() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { name: 'Jennifer Martinez', role: 'Board Chair, Former CEO of Cisco' },
-              { name: 'Dr. Andrew Lee', role: 'AI Ethics Advisor, Stanford Professor' },
-              { name: 'Rachel Green', role: 'Independent Director, Former CFO IBM' },
-              { name: 'Thomas Brown', role: 'Venture Partner, Sequoia Capital' },
-              { name: 'Dr. Maria Santos', role: 'Technical Advisor, MIT CSAIL' },
-              { name: 'William Chang', role: 'Independent Director, Former CTO SAP' }
+              { name: 'Jennifer Martinez', role: 'Board Chair, Enterprise Technology Executive' },
+              { name: 'Dr. Andrew Lee', role: 'AI Ethics Advisor, Academic Researcher' },
+              { name: 'Rachel Green', role: 'Independent Director, Finance Executive' },
+              { name: 'Thomas Brown', role: 'Venture Partner, Investment Professional' },
+              { name: 'Dr. Maria Santos', role: 'Technical Advisor, Research Scientist' },
+              { name: 'William Chang', role: 'Independent Director, Technology Executive' }
             ].map((member, index) => (
               <motion.div
                 key={member.name}
