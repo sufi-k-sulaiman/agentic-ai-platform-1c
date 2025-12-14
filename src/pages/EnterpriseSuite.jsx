@@ -139,9 +139,6 @@ export default function EnterpriseSuite() {
                 Get started
               </Button>
             </Link>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-10 h-16 text-lg font-medium">
-              Watch video
-            </Button>
           </motion.div>
         </motion.div>
 
