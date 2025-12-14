@@ -208,6 +208,63 @@ const investmentSlides = [
       { value: 'Now', label: 'Perfect timing' }
     ],
     bg: 'from-purple-600 to-pink-700' 
+  },
+  // Data-rich slides
+  { 
+    title: 'User Growth', 
+    subtitle: 'Guide of Active Users',
+    metrics: [],
+    bg: 'from-purple-600 to-indigo-700',
+    type: 'chart'
+  },
+  { 
+    title: 'Demographics', 
+    subtitle: 'Our Community',
+    metrics: [],
+    bg: 'from-blue-600 to-purple-700',
+    type: 'chart'
+  },
+  { 
+    title: 'Quarterly Performance', 
+    subtitle: 'Quarterly Profits',
+    metrics: [],
+    bg: 'from-gray-900 to-gray-800',
+    type: 'chart'
+  },
+  { 
+    title: 'Annual Growth', 
+    subtitle: 'Yearly Profit',
+    metrics: [],
+    bg: 'from-gray-900 to-gray-800',
+    type: 'chart'
+  },
+  { 
+    title: 'Market Strategy', 
+    subtitle: 'Market Penetration',
+    metrics: [],
+    bg: 'from-indigo-600 to-purple-700',
+    type: 'chart'
+  },
+  { 
+    title: 'Global Expansion', 
+    subtitle: 'International Growth Playbook',
+    metrics: [],
+    bg: 'from-purple-600 to-pink-700',
+    type: 'chart'
+  },
+  { 
+    title: 'Sector Analysis', 
+    subtitle: 'Expansion Opportunity',
+    metrics: [],
+    bg: 'from-gray-900 to-gray-800',
+    type: 'chart'
+  },
+  { 
+    title: 'Company Journey', 
+    subtitle: 'Company Milestones and Innovation',
+    metrics: [],
+    bg: 'from-purple-600 to-violet-700',
+    type: 'chart'
   }
 ];
 
@@ -1962,32 +2019,352 @@ export default function InvestorRelations() {
                 <div className="text-sm md:text-base font-semibold mb-8 opacity-80">
                   Slide {currentSlide + 1} of {investmentSlides.length}
                 </div>
-                <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4">
-                  {investmentSlides[currentSlide].title}
-                </h2>
-                <p className="text-2xl md:text-4xl opacity-80 mb-12">
-                  {investmentSlides[currentSlide].subtitle}
-                </p>
-                
-                {/* Metrics Grid */}
-                <div className="grid grid-cols-3 gap-6 md:gap-12 mt-12">
-                  {investmentSlides[currentSlide].metrics.map((metric, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.2 + idx * 0.1 }}
-                      className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20"
-                    >
-                      <div className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3">
-                        {metric.value}
+
+                {/* User Growth Chart - Slide 20 */}
+                {currentSlide === 19 && (
+                  <div className="text-white">
+                    <h2 className="text-5xl md:text-6xl font-bold mb-3">Guide of Active Users</h2>
+                    <div className="inline-flex items-center gap-3 bg-cyan-400 rounded-full px-8 py-4 mb-8">
+                      <div className="text-4xl font-bold text-white">$1.3B</div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl mt-8">
+                      <ResponsiveContainer width="100%" height={300}>
+                        <BarChart data={[
+                          { year: '2019', users: 950000 },
+                          { year: '2020', users: 900000 },
+                          { year: '2021', users: 950000 },
+                          { year: '2022', users: 1180000 },
+                          { year: '2023', users: 1250000 }
+                        ]}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="#ffffff40" />
+                          <XAxis dataKey="year" stroke="#fff" />
+                          <YAxis stroke="#fff" />
+                          <Tooltip contentStyle={{ backgroundColor: '#1F2937', border: 'none' }} />
+                          <Bar dataKey="users" radius={[8, 8, 0, 0]}>
+                            {[0, 1, 2].map((index) => (
+                              <Cell key={`cell-${index}`} fill="#0891B2" />
+                            ))}
+                            {[3, 4].map((index) => (
+                              <Cell key={`cell-${index}`} fill="#6209e6" />
+                            ))}
+                          </Bar>
+                        </BarChart>
+                      </ResponsiveContainer>
+                      <div className="flex justify-center gap-6 mt-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 rounded bg-[#0891B2]"></div>
+                          <span className="text-sm">Other</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 rounded bg-[#6209e6]"></div>
+                          <span className="text-sm">US</span>
+                        </div>
                       </div>
-                      <div className="text-sm md:text-lg opacity-90">
-                        {metric.label}
+                    </div>
+                    <p className="text-lg opacity-90 mt-6">Break down the numbers you put forward.</p>
+                  </div>
+                )}
+
+                {/* Community Demographics - Slide 21 */}
+                {currentSlide === 20 && (
+                  <div className="text-white">
+                    <h2 className="text-5xl md:text-6xl font-bold mb-12">Our Community</h2>
+                    <div className="space-y-8">
+                      {[
+                        { percent: 36, filled: 4, label: 'Add demographic information' },
+                        { percent: 50, filled: 5, label: 'Add demographic information' },
+                        { percent: 14, filled: 2, label: 'Add demographic information' }
+                      ].map((demo, idx) => (
+                        <div key={idx} className="flex items-center gap-8">
+                          <div className="text-7xl font-bold w-32 text-right">{demo.percent}%</div>
+                          <div className="flex gap-1">
+                            {Array.from({ length: 10 }).map((_, i) => (
+                              <User 
+                                key={i} 
+                                className={`w-8 h-8 ${i < demo.filled ? 'fill-white' : 'fill-white/30'}`} 
+                              />
+                            ))}
+                          </div>
+                          <div className="text-left text-lg opacity-90">{demo.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Quarterly Profits - Slide 22 */}
+                {currentSlide === 21 && (
+                  <div className="text-white">
+                    <h2 className="text-5xl md:text-6xl font-bold mb-12">Quarterly Profits</h2>
+                    <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
+                      <ResponsiveContainer width="100%" height={350}>
+                        <BarChart data={[
+                          { quarter: 'Q1 2023', profit: 3 },
+                          { quarter: 'Q2 2023', profit: 2 },
+                          { quarter: 'Q3 2023', profit: 3 },
+                          { quarter: 'Q4 2023', profit: 4 },
+                          { quarter: 'Q1 2024', profit: 6 },
+                          { quarter: 'Q2 2024', profit: 6 },
+                          { quarter: 'Q3 2024', profit: 7 },
+                          { quarter: 'Q4 2024', profit: 8 }
+                        ]}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="#ffffff40" />
+                          <XAxis dataKey="quarter" stroke="#fff" angle={-45} textAnchor="end" height={80} />
+                          <YAxis stroke="#fff" />
+                          <Tooltip contentStyle={{ backgroundColor: '#1F2937', border: 'none' }} />
+                          <Bar dataKey="profit" radius={[8, 8, 0, 0]}>
+                            {[0, 1, 2, 3].map((index) => (
+                              <Cell key={`cell-${index}`} fill="#0891B2" />
+                            ))}
+                            {[4, 5, 6, 7].map((index) => (
+                              <Cell key={`cell-${index}`} fill="#6209e6" />
+                            ))}
+                          </Bar>
+                        </BarChart>
+                      </ResponsiveContainer>
+                      <div className="flex justify-around mt-6">
+                        <div>
+                          <div className="text-3xl font-bold">+46%</div>
+                          <div className="text-sm opacity-80">Early phase growth</div>
+                        </div>
+                        <div>
+                          <div className="text-3xl font-bold">+124%</div>
+                          <div className="text-sm opacity-80">Post-AI launch</div>
+                        </div>
                       </div>
-                    </motion.div>
-                  ))}
-                </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Yearly Profit - Slide 23 */}
+                {currentSlide === 22 && (
+                  <div className="text-white">
+                    <h2 className="text-5xl md:text-6xl font-bold mb-12">Yearly Profit</h2>
+                    <div className="grid grid-cols-3 gap-8">
+                      <div className="col-span-2 bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
+                        <ResponsiveContainer width="100%" height={350}>
+                          <LineChart data={[
+                            { year: '2018', profit: 20 },
+                            { year: '2019', profit: 24 },
+                            { year: '2020', profit: 26 },
+                            { year: '2021', profit: 28 },
+                            { year: '2022', profit: 72 },
+                            { year: '2023', profit: 95 },
+                            { year: '2024', profit: 140 }
+                          ]}>
+                            <CartesianGrid strokeDasharray="3 3" stroke="#ffffff40" />
+                            <XAxis dataKey="year" stroke="#fff" />
+                            <YAxis stroke="#fff" tickFormatter={(value) => `${value}k`} />
+                            <Tooltip 
+                              contentStyle={{ backgroundColor: '#1F2937', border: 'none' }}
+                              formatter={(value) => [`$${value}k`, 'Profit']}
+                            />
+                            <Line 
+                              type="monotone" 
+                              dataKey="profit" 
+                              stroke="#6209e6" 
+                              strokeWidth={4}
+                              dot={{ fill: '#6209e6', r: 8, strokeWidth: 3, stroke: '#0891B2' }}
+                            />
+                          </LineChart>
+                        </ResponsiveContainer>
+                      </div>
+                      <div className="flex flex-col justify-center">
+                        <div className="bg-cyan-400 text-gray-900 p-6 rounded-2xl">
+                          <div className="text-7xl font-bold mb-2">28%</div>
+                          <div className="text-xl font-semibold">KEY METRIC</div>
+                          <div className="text-sm mt-2">Brief description or detail</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Market Penetration - Slide 24 */}
+                {currentSlide === 23 && (
+                  <div className="text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">Market Penetration</h2>
+                    <p className="text-lg opacity-80 mb-12">Describe your market penetration strategy in more detail.</p>
+                    <div className="flex justify-center">
+                      <svg viewBox="0 0 600 400" className="w-full max-w-2xl">
+                        {/* Center circle */}
+                        <circle cx="300" cy="200" r="70" fill="#6209e6" />
+                        <text x="300" y="190" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">Increase</text>
+                        <text x="300" y="210" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">Market Share</text>
+                        
+                        {/* Strategy circles */}
+                        {[
+                          { x: 300, y: 80, num: 1, label: 'Strategy', desc: 'Strategy Description' },
+                          { x: 450, y: 140, num: 2, label: 'Strategy', desc: 'Strategy Description' },
+                          { x: 450, y: 260, num: 3, label: 'Strategy', desc: 'Strategy Description' },
+                          { x: 300, y: 320, num: 4, label: 'Strategy', desc: 'Strategy Description' },
+                          { x: 150, y: 260, num: 5, label: 'Strategy', desc: 'Strategy Description' }
+                        ].map((pos) => (
+                          <g key={pos.num}>
+                            <line x1="300" y1="200" x2={pos.x} y2={pos.y} stroke="#6209e6" strokeWidth="2" strokeDasharray="5,5" />
+                            <circle cx={pos.x} cy={pos.y} r="35" fill="#6209e6" />
+                            <text x={pos.x} y={pos.y + 6} textAnchor="middle" fill="white" fontSize="28" fontWeight="bold">{pos.num}</text>
+                            {pos.num <= 2 && (
+                              <>
+                                <text x={pos.x} y={pos.y - 50} textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">{pos.label}</text>
+                                <text x={pos.x} y={pos.y - 35} textAnchor="middle" fill="white" fontSize="11" opacity="0.8">{pos.desc}</text>
+                              </>
+                            )}
+                            {pos.num > 2 && (
+                              <>
+                                <text x={pos.x} y={pos.y + 55} textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">{pos.label}</text>
+                                <text x={pos.x} y={pos.y + 70} textAnchor="middle" fill="white" fontSize="11" opacity="0.8">{pos.desc}</text>
+                              </>
+                            )}
+                          </g>
+                        ))}
+                      </svg>
+                    </div>
+                  </div>
+                )}
+
+                {/* International Growth Playbook - Slide 25 */}
+                {currentSlide === 24 && (
+                  <div className="text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-8">International Growth Playbook</h2>
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                      <div className="text-left space-y-6">
+                        <div>
+                          <div className="flex items-center gap-2 mb-2">
+                            <div className="w-3 h-3 bg-white rounded-full"></div>
+                            <h3 className="text-xl font-bold">Local Marketing</h3>
+                          </div>
+                          <p className="text-sm opacity-80 ml-5">Generate awareness through local marketing initiatives.</p>
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2 mb-2">
+                            <div className="w-3 h-3 bg-white rounded-full"></div>
+                            <h3 className="text-xl font-bold">Partnerships</h3>
+                          </div>
+                          <p className="text-sm opacity-80 ml-5">Preloaded partnerships with major handset OEMs provide placement and promotion. Partnerships with local telcos ensure attractive data rating and promotion.</p>
+                        </div>
+                      </div>
+                      <div className="space-y-4">
+                        <div className="bg-gradient-to-r from-[#6209e6] to-[#7C3AED] p-8 rounded-2xl">
+                          <div className="text-xl opacity-80 mb-2">International Content Partners</div>
+                          <div className="text-7xl font-bold">500+</div>
+                        </div>
+                        <div className="bg-gradient-to-r from-[#6209e6] to-[#7C3AED] p-8 rounded-2xl">
+                          <div className="text-xl opacity-80 mb-2">Countries</div>
+                          <div className="text-7xl font-bold">10+</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Expansion Opportunity - Slide 26 */}
+                {currentSlide === 25 && (
+                  <div className="text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-12">Expansion Opportunity</h2>
+                    <div className="grid grid-cols-3 gap-8">
+                      {[
+                        { name: 'Sector 1', slices: [{ value: 55, color: '#6209e6', name: 'Slice1' }, { value: 45, color: '#0891B2', name: 'No' }] },
+                        { name: 'Sector 2', slices: [{ value: 61, color: '#6209e6', name: 'Slice1' }, { value: 25, color: '#0891B2', name: 'Slice3' }, { value: 15, color: '#4B5563', name: 'Slice2' }] },
+                        { name: 'Sector 3', slices: [{ value: 37, color: '#6209e6', name: 'Slice1' }, { value: 40, color: '#0891B2', name: 'Slice5' }, { value: 22, color: '#4B5563', name: 'Slice3' }, { value: 1, color: '#6B7280', name: 'Slice2' }] }
+                      ].map((sector, idx) => (
+                        <div key={idx} className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
+                          <h3 className="text-xl font-bold mb-6">{sector.name}</h3>
+                          <ResponsiveContainer width="100%" height={200}>
+                            <PieChart>
+                              <Pie
+                                data={sector.slices}
+                                cx="50%"
+                                cy="50%"
+                                innerRadius={40}
+                                outerRadius={80}
+                                paddingAngle={2}
+                                dataKey="value"
+                              >
+                                {sector.slices.map((entry, index) => (
+                                  <Cell key={`cell-${index}`} fill={entry.color} />
+                                ))}
+                              </Pie>
+                              <Tooltip contentStyle={{ backgroundColor: '#1F2937', border: 'none' }} />
+                            </PieChart>
+                          </ResponsiveContainer>
+                          <div className="space-y-1 mt-4">
+                            {sector.slices.map((slice, i) => (
+                              <div key={i} className="flex items-center justify-between text-sm">
+                                <div className="flex items-center gap-2">
+                                  <div className="w-3 h-3 rounded" style={{ backgroundColor: slice.color }}></div>
+                                  <span>{slice.name}</span>
+                                </div>
+                                <span className="font-bold">{slice.value}%</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Company Milestones - Slide 27 */}
+                {currentSlide === 26 && (
+                  <div className="text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-12">Company Milestones and Innovation</h2>
+                    <div className="relative px-12">
+                      {/* Timeline */}
+                      <div className="relative">
+                        <div className="absolute top-12 left-0 right-0 h-1 bg-white/30"></div>
+                        <div className="flex justify-between relative">
+                          <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-4 border-white">
+                            <span className="text-sm font-bold">Date</span>
+                          </div>
+                          {[1, 2, 3, 4, 5].map((num) => (
+                            <div key={num} className="flex flex-col items-center">
+                              <div className={`w-16 h-16 bg-[#6209e6] rounded-full flex items-center justify-center font-bold text-2xl border-4 border-white mb-3 ${num % 2 === 0 ? 'mt-24' : ''}`}>
+                                {num}
+                              </div>
+                              <div className={num % 2 === 0 ? 'mt-2' : 'mb-24'}>
+                                <div className="text-base font-bold">Milestone</div>
+                                <div className="text-xs opacity-80">Date</div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Default slide content for other slides */}
+                {currentSlide < 19 && (
+                  <>
+                    <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4">
+                      {investmentSlides[currentSlide].title}
+                    </h2>
+                    <p className="text-2xl md:text-4xl opacity-80 mb-12">
+                      {investmentSlides[currentSlide].subtitle}
+                    </p>
+                    
+                    {/* Metrics Grid */}
+                    <div className="grid grid-cols-3 gap-6 md:gap-12 mt-12">
+                      {investmentSlides[currentSlide].metrics.map((metric, idx) => (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.2 + idx * 0.1 }}
+                          className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20"
+                        >
+                          <div className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3">
+                            {metric.value}
+                          </div>
+                          <div className="text-sm md:text-lg opacity-90">
+                            {metric.label}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </>
+                )}
               </motion.div>
 
               {/* Navigation Arrows */}
