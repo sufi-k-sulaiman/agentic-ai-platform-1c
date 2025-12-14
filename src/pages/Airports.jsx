@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plane, TrendingDown, Database, Workflow, DollarSign, Users, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 const challenges = [
@@ -105,12 +107,16 @@ export default function Airports() {
                 Transform airport operations with AI that optimizes gates, predicts delays, and delights passengers—cutting costs by 35% while improving on-time performance by 25%.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-                  Request demo <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
-                  Aviation solutions
-                </Button>
+                <Link to={createPageUrl('Onboarding')}>
+                  <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                    Get started <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link to={createPageUrl('SavingsCalculator')}>
+                  <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
+                    Calculate Savings
+                  </Button>
+                </Link>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
@@ -216,9 +222,18 @@ export default function Airports() {
             <p className="text-xl text-gray-600 mb-10">
               Join leading airports worldwide optimizing operations with Agentic Ai
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to={createPageUrl('Onboarding')}>
+                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                  Get started <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to={createPageUrl('SavingsCalculator')}>
+                <Button variant="outline" className="rounded-full border-gray-300 px-10 h-16 text-lg">
+                  Calculate Savings
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
