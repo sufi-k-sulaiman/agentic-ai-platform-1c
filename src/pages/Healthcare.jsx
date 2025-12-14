@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heart, TrendingDown, Database, Workflow, DollarSign, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const challenges = [
   {
@@ -106,9 +108,11 @@ export default function Healthcare() {
                 Transform patient care with secure Agentic AI that automates administrative work, improves clinical outcomes, and reduces operational costs by 40%—all while maintaining full HIPAA compliance and enterprise-grade security. Free your clinical staff to focus on what matters most: exceptional patient care.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-                  Request demo <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                <Link to={createPageUrl('Onboarding')}>
+                  <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                    Get started <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
                 <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
                   Security whitepaper
                 </Button>
@@ -217,9 +221,11 @@ export default function Healthcare() {
             <p className="text-xl text-gray-600 mb-10">
               Join leading healthcare providers improving patient outcomes, reducing costs, and enhancing clinician satisfaction with secure Agentic AI.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                Get started <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

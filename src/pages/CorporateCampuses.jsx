@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building, TrendingDown, Database, Workflow, DollarSign, Users, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const challenges = [
   {
@@ -106,9 +108,11 @@ export default function CorporateCampuses() {
                 Transform corporate campuses with Agentic AI that intelligently manages space, enhances security, automates services, and optimizes operations—cutting facility costs by 30% while creating exceptional employee experiences that boost productivity and satisfaction.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-                  Schedule demo <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                <Link to={createPageUrl('Onboarding')}>
+                  <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                    Get started <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
                 <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
                   View case studies
                 </Button>
@@ -217,9 +221,11 @@ export default function CorporateCampuses() {
             <p className="text-xl text-gray-600 mb-10">
               Join Fortune 500 companies creating world-class workplace experiences while optimizing costs with Agentic AI. Transform your corporate campus into an intelligent, efficient, employee-centric environment.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Get started <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                Get started <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Landmark, TrendingDown, Database, Workflow, DollarSign, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const challenges = [
   {
@@ -107,9 +109,11 @@ export default function FinancialInstitutions() {
                 Transform banking operations with autonomous AI agents that handle compliance verification, customer service interactions, and sophisticated risk management—reducing operational costs by 45% while dramatically improving customer satisfaction and regulatory compliance. Deliver the personalized, instant service that modern customers expect.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-                  Request demo <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                <Link to={createPageUrl('Onboarding')}>
+                  <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                    Get started <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
                 <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
                   Download whitepaper
                 </Button>
@@ -222,9 +226,11 @@ export default function FinancialInstitutions() {
             <p className="text-xl text-gray-600 mb-10">
               Join leading financial institutions transforming operations with Agentic AI. Deliver exceptional customer experiences while reducing costs and maintaining perfect compliance.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                Get started <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
