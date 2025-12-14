@@ -108,7 +108,7 @@ export default function Cyber() {
               <Shield className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-              Security at
+              Cybersecurity at
               <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
                 our core
               </span>
