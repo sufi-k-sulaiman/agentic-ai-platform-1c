@@ -94,45 +94,79 @@ export default function SavingsCalculator() {
                   <p className="text-gray-600">Enter your details to calculate potential savings</p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="space-y-3">
-                    <Label className="text-base">Number of Departments</Label>
-                    <Input
-                      type="number"
-                      value={departments}
-                      onChange={(e) => setDepartments(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="h-12 text-lg"
-                    />
-                  </div>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <Label className="text-base">Number of Departments</Label>
+                      <Input
+                        type="number"
+                        value={departments}
+                        onChange={(e) => setDepartments(Math.max(1, parseInt(e.target.value) || 1))}
+                        className="h-12 text-lg"
+                      />
+                      <Slider
+                        value={[departments]}
+                        onValueChange={([value]) => setDepartments(value)}
+                        min={1}
+                        max={50}
+                        step={1}
+                        className="mt-2"
+                      />
+                    </div>
 
-                  <div className="space-y-3">
-                    <Label className="text-base">Average Team Size</Label>
-                    <Input
-                      type="number"
-                      value={teamSize}
-                      onChange={(e) => setTeamSize(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="h-12 text-lg"
-                    />
-                  </div>
+                    <div className="space-y-3">
+                      <Label className="text-base">Average Team Size</Label>
+                      <Input
+                        type="number"
+                        value={teamSize}
+                        onChange={(e) => setTeamSize(Math.max(1, parseInt(e.target.value) || 1))}
+                        className="h-12 text-lg"
+                      />
+                      <Slider
+                        value={[teamSize]}
+                        onValueChange={([value]) => setTeamSize(value)}
+                        min={1}
+                        max={200}
+                        step={5}
+                        className="mt-2"
+                      />
+                    </div>
 
-                  <div className="space-y-3">
-                    <Label className="text-base">Total FTEs (Full-Time Employees)</Label>
-                    <Input
-                      type="number"
-                      value={totalFTEs}
-                      onChange={(e) => setTotalFTEs(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="h-12 text-lg"
-                    />
-                    <Slider
-                      value={[totalFTEs]}
-                      onValueChange={([value]) => setTotalFTEs(value)}
-                      min={1}
-                      max={10000}
-                      step={10}
-                      className="mt-2"
-                    />
-                  </div>
+                    <div className="space-y-3">
+                      <Label className="text-base">Total FTEs (Full-Time Employees)</Label>
+                      <Input
+                        type="number"
+                        value={totalFTEs}
+                        onChange={(e) => setTotalFTEs(Math.max(1, parseInt(e.target.value) || 1))}
+                        className="h-12 text-lg"
+                      />
+                      <Slider
+                        value={[totalFTEs]}
+                        onValueChange={([value]) => setTotalFTEs(value)}
+                        min={1}
+                        max={10000}
+                        step={10}
+                        className="mt-2"
+                      />
+                    </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      <Label className="text-base">Daily Tasks Per Employee</Label>
+                      <Input
+                        type="number"
+                        value={dailyTasks}
+                        onChange={(e) => setDailyTasks(Math.max(1, parseInt(e.target.value) || 1))}
+                        className="h-12 text-lg"
+                      />
+                      <Slider
+                        value={[dailyTasks]}
+                        onValueChange={([value]) => setDailyTasks(value)}
+                        min={1}
+                        max={50}
+                        step={1}
+                        className="mt-2"
+                      />
+                    </div>
+
                     <div className="space-y-3">
                       <Label className="text-base">Remote Employees (%)</Label>
                       <Input
@@ -140,6 +174,14 @@ export default function SavingsCalculator() {
                         value={remote}
                         onChange={(e) => setRemote(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
                         className="h-12 text-lg"
+                      />
+                      <Slider
+                        value={[remote]}
+                        onValueChange={([value]) => setRemote(value)}
+                        min={0}
+                        max={100}
+                        step={5}
+                        className="mt-2"
                       />
                     </div>
 
@@ -151,10 +193,16 @@ export default function SavingsCalculator() {
                         onChange={(e) => setHybrid(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
                         className="h-12 text-lg"
                       />
+                      <Slider
+                        value={[hybrid]}
+                        onValueChange={([value]) => setHybrid(value)}
+                        min={0}
+                        max={100}
+                        step={5}
+                        className="mt-2"
+                      />
                     </div>
-                  </div>
 
-                  <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-3">
                       <Label className="text-base">Average Salary ($)</Label>
                       <Input
@@ -190,40 +238,51 @@ export default function SavingsCalculator() {
                         className="mt-2"
                       />
                     </div>
+
+                    <div className="space-y-3">
+                      <Label className="text-base">Manual Hours Per Week (per employee)</Label>
+                      <Input
+                        type="number"
+                        value={hoursPerWeek}
+                        onChange={(e) => setHoursPerWeek(Math.max(0, parseInt(e.target.value) || 0))}
+                        className="h-12 text-lg"
+                      />
+                      <Slider
+                        value={[hoursPerWeek]}
+                        onValueChange={([value]) => setHoursPerWeek(value)}
+                        min={1}
+                        max={40}
+                        step={1}
+                        className="mt-2"
+                      />
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label className="text-base">Expected Automation Rate (%)</Label>
+                      <div className="flex items-center gap-3">
+                        <Input
+                          type="number"
+                          value={automationRate}
+                          onChange={(e) => setAutomationRate(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
+                          className="h-12 text-lg flex-1"
+                        />
+                        <span className="text-xl font-bold text-[#8B2EE5]">{automationRate}%</span>
+                      </div>
+                      <Slider
+                        value={[automationRate]}
+                        onValueChange={([value]) => setAutomationRate(value)}
+                        min={0}
+                        max={100}
+                        step={5}
+                        className="mt-2"
+                      />
+                    </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <Label className="text-base">Manual Hours Per Week (per employee)</Label>
-                    <Input
-                      type="number"
-                      value={hoursPerWeek}
-                      onChange={(e) => setHoursPerWeek(Math.max(0, parseInt(e.target.value) || 0))}
-                      className="h-12 text-lg"
-                    />
-                    <Slider
-                      value={[hoursPerWeek]}
-                      onValueChange={([value]) => setHoursPerWeek(value)}
-                      min={1}
-                      max={40}
-                      step={1}
-                      className="mt-2"
-                    />
-                  </div>
-
-                  <div className="space-y-3">
-                    <Label className="text-base">Daily Tasks Per Employee</Label>
-                    <Input
-                      type="number"
-                      value={dailyTasks}
-                      onChange={(e) => setDailyTasks(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="h-12 text-lg"
-                    />
-                  </div>
-
-                  <div className="space-y-3">
+                  <div className="space-y-3 col-span-2">
                     <Label className="text-base">Software Types Used</Label>
                     <div className="border rounded-lg p-4 max-h-64 overflow-y-auto bg-gray-50">
-                      <div className="grid grid-cols-2 gap-3">
+                      <div className="grid grid-cols-3 gap-3">
                         {availableSoftware.map((software) => (
                           <div key={software} className="flex items-center space-x-2">
                             <Checkbox
@@ -254,27 +313,6 @@ export default function SavingsCalculator() {
                         ))}
                       </div>
                     )}
-                  </div>
-
-                  <div className="space-y-3">
-                    <Label className="text-base">Expected Automation Rate (%)</Label>
-                    <div className="flex items-center gap-3">
-                      <Input
-                        type="number"
-                        value={automationRate}
-                        onChange={(e) => setAutomationRate(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
-                        className="h-12 text-lg"
-                      />
-                      <span className="text-2xl font-bold text-[#8B2EE5]">{automationRate}%</span>
-                    </div>
-                    <Slider
-                      value={[automationRate]}
-                      onValueChange={([value]) => setAutomationRate(value)}
-                      min={0}
-                      max={100}
-                      step={5}
-                      className="mt-2"
-                    />
                   </div>
                 </CardContent>
               </Card>
