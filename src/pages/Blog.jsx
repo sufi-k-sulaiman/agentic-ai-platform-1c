@@ -5,62 +5,121 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Search, Calendar, Clock, ArrowRight, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 const posts = [
   {
-    title: 'The Future of Agentic AI in Enterprise',
-    excerpt: 'How autonomous AI agents are transforming business operations and what it means for your organization.',
+    title: 'The Rise of Agentic AI: A Game Changer for Enterprises',
+    excerpt: 'Discover how autonomous AI agents are transforming enterprise operations and enabling intelligent decision-making.',
     author: 'Sarah Chen',
-    date: 'March 15, 2024',
-    readTime: '8 min read',
+    date: 'December 10, 2024',
+    readTime: '12 min read',
     category: 'AI Insights',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
-    featured: true
+    featured: true,
+    page: 'BlogAgenticAIEnterprise'
   },
   {
-    title: 'Building Your First AI Agent: A Complete Guide',
-    excerpt: 'Step-by-step tutorial on creating, training, and deploying your first autonomous AI agent.',
+    title: 'How Autonomous Agents are Revolutionizing Business Operations',
+    excerpt: 'Explore the transformative power of autonomous AI agents in modern business operations.',
     author: 'Michael Rodriguez',
-    date: 'March 12, 2024',
-    readTime: '12 min read',
-    category: 'Tutorials',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800'
-  },
-  {
-    title: '5 Ways AI is Revolutionizing Customer Support',
-    excerpt: 'Real-world examples of companies using AI agents to deliver exceptional customer experiences.',
-    author: 'Emily Zhang',
-    date: 'March 10, 2024',
-    readTime: '6 min read',
-    category: 'Case Studies',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800'
-  },
-  {
-    title: 'API Best Practices for Enterprise Integration',
-    excerpt: 'Essential patterns and practices for integrating 1cPlatform into your existing infrastructure.',
-    author: 'David Kim',
-    date: 'March 8, 2024',
+    date: 'December 8, 2024',
     readTime: '10 min read',
-    category: 'Engineering',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800'
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800',
+    page: 'BlogAutonomousAgents'
   },
   {
-    title: 'Security in AI: Our Approach to Enterprise Protection',
-    excerpt: 'Deep dive into how we secure your AI workloads and protect sensitive business data.',
-    author: 'Lisa Anderson',
-    date: 'March 5, 2024',
+    title: 'Designing Effective Multi-Agent Systems: A Practical Guide',
+    excerpt: 'Master the art of building multi-agent AI systems with orchestration patterns and best practices.',
+    author: 'Dr. Emily Zhang',
+    date: 'December 5, 2024',
+    readTime: '15 min read',
+    category: 'Tutorials',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    page: 'BlogMultiAgentSystems'
+  },
+  {
+    title: 'No-Code Agentic AI: Empowering Every Business User',
+    excerpt: 'Discover how no-code platforms democratize AI agent development for business users.',
+    author: 'David Kim',
+    date: 'December 3, 2024',
     readTime: '9 min read',
-    category: 'Security',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800'
+    category: 'Tutorials',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    page: 'BlogNoCodeAgenticAI'
   },
   {
-    title: 'Scaling AI: Lessons from 500+ Enterprise Deployments',
-    excerpt: 'What we\'ve learned helping organizations scale AI from pilot to production.',
+    title: 'Ensuring Trust and Security in Agentic AI Deployments',
+    excerpt: 'Comprehensive guide to securing autonomous AI agents in enterprise environments.',
+    author: 'Lisa Anderson',
+    date: 'November 28, 2024',
+    readTime: '11 min read',
+    category: 'Security',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800',
+    page: 'BlogAgenticAISecurity'
+  },
+  {
+    title: 'Measuring the ROI of Your Agentic AI Investment',
+    excerpt: 'Learn how to calculate, track, and maximize returns from autonomous AI agents with proven frameworks.',
     author: 'Robert Taylor',
-    date: 'March 1, 2024',
-    readTime: '7 min read',
+    date: 'November 25, 2024',
+    readTime: '13 min read',
     category: 'Product',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800'
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    page: 'BlogAgenticAIROI'
+  },
+  {
+    title: 'The Future of Work: Human-AI Collaboration with Agentic Systems',
+    excerpt: 'Explore how humans and AI agents will work together in the future workplace.',
+    author: 'Jennifer Martinez',
+    date: 'November 20, 2024',
+    readTime: '10 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800',
+    page: 'BlogHumanAICollaboration'
+  },
+  {
+    title: 'From Automation to Autonomy: The Evolution of AI in Business',
+    excerpt: 'Trace the journey from simple automation to autonomous AI systems and understand the technological leaps.',
+    author: 'Dr. Marcus Chen',
+    date: 'November 15, 2024',
+    readTime: '14 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
+    page: 'BlogAutomationToAutonomy'
+  },
+  {
+    title: '10 Proven Use Cases for Agentic AI in Enterprise Operations',
+    excerpt: 'Explore real-world applications of autonomous AI agents across departments with implementation guides.',
+    author: 'Alexandra Moore',
+    date: 'November 12, 2024',
+    readTime: '16 min read',
+    category: 'Case Studies',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    page: 'BlogAgenticAIUseCases'
+  },
+  {
+    title: 'Ethical Considerations in Deploying Autonomous AI Agents',
+    excerpt: 'Navigate the ethical challenges of agentic AI with frameworks for responsible deployment.',
+    author: 'Dr. Priya Sharma',
+    date: 'November 8, 2024',
+    readTime: '12 min read',
+    category: 'AI Insights',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
+    page: 'BlogAgenticAIEthics'
+  },
+  {
+    title: 'Scaling Agentic AI from Pilot to Production: Lessons Learned',
+    excerpt: 'Learn from 500+ enterprise deployments. Strategies for scaling AI agents and achieving adoption.',
+    author: 'James O\'Connor',
+    date: 'November 1, 2024',
+    readTime: '15 min read',
+    category: 'Product',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
+    page: 'BlogAgenticAIScaling'
   }
 ];
 
@@ -77,6 +136,12 @@ export default function Blog() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Blog"
+        description="Insights, tutorials, and stories from the forefront of enterprise AI. Learn about Agentic AI, autonomous agents, implementation strategies, and digital transformation."
+        url="/blog"
+        keywords={['AI blog', 'Agentic AI articles', 'enterprise AI insights', 'AI tutorials', 'autonomous agents']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -164,12 +229,14 @@ export default function Blog() {
                   <span className="flex items-center gap-2">
                     <Clock className="w-5 h-5" />
                     {featuredPost.readTime}
-                  </span>
-                </div>
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full">
-                  Read article <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </div>
+                    </span>
+                    </div>
+                    <Link to={createPageUrl(featuredPost.page)}>
+                    <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full">
+                    Read article <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                    </Link>
+                    </div>
             </motion.article>
           </div>
         </section>
@@ -180,14 +247,14 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post, index) => (
-              <motion.article
-                key={post.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
+              <Link to={createPageUrl(post.page)} key={post.title}>
+                <motion.article
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group cursor-pointer"
+                >
                 <div className="relative aspect-video rounded-2xl overflow-hidden mb-6">
                   <img
                     src={post.image}
@@ -208,6 +275,7 @@ export default function Blog() {
                   <span>{post.readTime}</span>
                 </div>
               </motion.article>
+              </Link>
             ))}
           </div>
 
