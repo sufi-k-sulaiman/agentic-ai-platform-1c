@@ -235,11 +235,18 @@ export default function DataCenters() {
             <p className="text-xl text-gray-600 mb-10">
               Join leading data centers worldwide saving millions annually with Agentic Ai-powered infrastructure management. Transform your facility into a self-optimizing, predictive operation.
             </p>
-            <Link to={createPageUrl('Onboarding')}>
-              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-                Get started <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to={createPageUrl('Onboarding')}>
+                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                  Get started <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to={createPageUrl('SavingsCalculator')}>
+                <Button variant="outline" className="rounded-full border-gray-300 px-10 h-16 text-lg">
+                  Calculate Savings
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
