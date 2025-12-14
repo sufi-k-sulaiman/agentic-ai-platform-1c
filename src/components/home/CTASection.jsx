@@ -1,39 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { ArrowRight, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { base44 } from '@/api/base44Client';
-import { toast } from 'sonner';
 
 export default function CTASection() {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubscribe = async (e) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
-    try {
-      await base44.entities.ContactMessage.create({
-        email,
-        name: 'Newsletter Subscriber',
-        subject: 'Newsletter Subscription',
-        message: 'Subscribed to newsletter',
-        status: 'New'
-      });
-      toast.success('Successfully subscribed to newsletter!');
-      setEmail('');
-    } catch (error) {
-      toast.error('Failed to subscribe. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section className="py-24 bg-[#04050b] relative overflow-hidden" id="consulting">
       {/* Background Pattern */}
@@ -93,43 +65,13 @@ export default function CTASection() {
             </Button>
           </motion.div>
 
-          {/* Newsletter Subscription */}
+          {/* Support Info */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="mt-16 pt-12 border-t border-gray-800"
-          >
-            <div className="max-w-md mx-auto text-center mb-12">
-              <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-              <p className="text-gray-400 mb-6">Subscribe to our newsletter for the latest AI insights and updates</p>
-              <form onSubmit={handleSubscribe} className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 h-12 rounded-full border-2 border-[#8B2EE5]/30 bg-white/5 text-white placeholder:text-gray-500 focus:border-[#8B2EE5] focus:ring-[#8B2EE5]"
-                  required
-                />
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="bg-[#8B2EE5] text-white hover:bg-[#7325C4] rounded-full px-6 h-12"
-                >
-                  {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-                </Button>
-              </form>
-            </div>
-          </motion.div>
-
-          {/* Support Info */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
             id="support"
           >
             <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
