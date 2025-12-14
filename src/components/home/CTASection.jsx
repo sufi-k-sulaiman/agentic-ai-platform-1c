@@ -57,8 +57,8 @@ export default function CTASection() {
             </Link>
             <Button 
               size="lg" 
-              className="bg-[#8B2EE5] text-white hover:bg-[#7325C4] rounded-full px-8 h-14 text-base"
               onClick={() => window.openChat?.()}
+              className="bg-[#8B2EE5] text-white hover:bg-[#7325C4] rounded-full px-8 h-14 text-base"
             >
               <MessageSquare className="mr-2 w-5 h-5" />
               Talk to sales
