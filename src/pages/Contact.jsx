@@ -59,7 +59,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="text-center text-white max-w-4xl mx-auto"
+              className="text-center text-white max-w-6xl mx-auto"
             >
               <motion.div
                 initial={{ scale: 0 }}
@@ -83,34 +83,29 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-xl md:text-2xl text-white/90 mb-12"
+                className="text-xl md:text-2xl text-white/90 mb-16"
               >
                 Our support team is available 24/7 to assist you
               </motion.p>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="flex flex-wrap justify-center gap-4"
-              >
-                <Button
-                  onClick={() => setSelectedOption('ticket')}
-                  size="lg"
-                  className="bg-white text-[#8B2EE5] hover:bg-white/90 rounded-full px-8 h-14 text-lg font-semibold"
-                >
-                  Contact support
-                  <ArrowLeft className="ml-2 w-5 h-5 rotate-180" />
-                </Button>
-                <Button
-                  onClick={() => setSelectedOption('call')}
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white/10 rounded-full px-8 h-14 text-lg font-semibold"
-                >
-                  Schedule a call
-                </Button>
-              </motion.div>
+              <div className="grid md:grid-cols-3 gap-6">
+                {options.map((option, index) => (
+                  <motion.button
+                    key={option.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                    onClick={() => setSelectedOption(option.id)}
+                    className="group"
+                  >
+                    <div className="bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-3xl p-10 hover:bg-white/20 hover:scale-105 transition-all duration-300">
+                      <option.icon className="w-16 h-16 mx-auto mb-6 text-white stroke-[1.5]" />
+                      <h3 className="text-2xl font-bold mb-3">{option.title}</h3>
+                      <p className="text-white/80">{option.description}</p>
+                    </div>
+                  </motion.button>
+                ))}
+              </div>
             </motion.div>
           )}
 
