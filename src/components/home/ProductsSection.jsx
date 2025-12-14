@@ -9,32 +9,28 @@ const products = [
     name: 'Enterprise Suite',
     tagline: 'Complete business management',
     description: 'An integrated platform combining ERP, CRM, and AI capabilities for end-to-end business operations.',
-    features: ['Financial Management', 'Supply Chain', 'HR & Payroll', 'Analytics'],
-    gradient: 'from-[#8B2EE5] to-[#A855F7]'
+    features: ['Financial Management', 'Supply Chain', 'HR & Payroll', 'Analytics']
   },
   {
     icon: Cloud,
     name: 'Cloud Platform',
     tagline: 'Scalable infrastructure',
     description: 'Deploy, scale, and manage AI workloads with enterprise-grade cloud infrastructure built for performance.',
-    features: ['Auto-scaling', 'Multi-region', 'Edge Computing', '99.99% SLA'],
-    gradient: 'from-violet-500 to-purple-500'
+    features: ['Auto-scaling', 'Multi-region', 'Edge Computing', '99.99% SLA']
   },
   {
     icon: Code,
     name: 'Developer Tools',
     tagline: 'Build with AI',
     description: 'Comprehensive SDKs, APIs, and frameworks to integrate AI capabilities into your applications.',
-    features: ['REST & GraphQL APIs', 'SDKs', 'Webhooks', 'CLI Tools'],
-    gradient: 'from-indigo-500 to-violet-500'
+    features: ['REST & GraphQL APIs', 'SDKs', 'Webhooks', 'CLI Tools']
   },
   {
     icon: Database,
     name: 'Data Platform',
     tagline: 'Intelligence at scale',
     description: 'Unified data management with built-in AI for insights, predictions, and automated decision-making.',
-    features: ['Data Lake', 'ML Pipeline', 'Real-time ETL', 'Governance'],
-    gradient: 'from-purple-600 to-indigo-600'
+    features: ['Data Lake', 'ML Pipeline', 'Real-time ETL', 'Governance']
   }
 ];
 
@@ -94,9 +90,7 @@ export default function ProductsSection() {
               className="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 border border-gray-100"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center`}>
-                  <product.icon className="w-7 h-7 text-white" />
-                </div>
+                <product.icon className="w-14 h-14 text-[#8B2EE5]" />
                 <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-[#8B2EE5] group-hover:translate-x-1 transition-all" />
               </div>
               

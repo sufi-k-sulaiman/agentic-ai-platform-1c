@@ -6,38 +6,32 @@ const features = [
   {
     icon: Bot,
     title: 'Autonomous Agents',
-    description: 'Deploy Agentic Ai that independently handles complex tasks, makes decisions, and adapts to changing conditions.',
-    color: 'bg-purple-100 text-[#8B2EE5]'
+    description: 'Deploy Agentic Ai that independently handles complex tasks, makes decisions, and adapts to changing conditions.'
   },
   {
     icon: Workflow,
     title: 'Intelligent Workflows',
-    description: 'Automate end-to-end business processes with AI that understands context and optimizes in real-time.',
-    color: 'bg-violet-100 text-violet-600'
+    description: 'Automate end-to-end business processes with AI that understands context and optimizes in real-time.'
   },
   {
     icon: Brain,
     title: 'Deep Learning Models',
-    description: 'Access state-of-the-art models trained on enterprise data with built-in security and compliance.',
-    color: 'bg-indigo-100 text-indigo-600'
+    description: 'Access state-of-the-art models trained on enterprise data with built-in security and compliance.'
   },
   {
     icon: Shield,
     title: 'Enterprise Security',
-    description: 'Bank-grade encryption, SOC 2 compliance, and granular access controls protect your data.',
-    color: 'bg-emerald-100 text-emerald-600'
+    description: 'Bank-grade encryption, SOC 2 compliance, and granular access controls protect your data.'
   },
   {
     icon: Zap,
     title: 'Real-time Processing',
-    description: 'Process millions of events per second with sub-millisecond latency for instant insights.',
-    color: 'bg-amber-100 text-amber-600'
+    description: 'Process millions of events per second with sub-millisecond latency for instant insights.'
   },
   {
     icon: Globe,
     title: 'Global Scale',
-    description: 'Deploy across regions with automatic scaling, failover, and 99.99% uptime guarantee.',
-    color: 'bg-sky-100 text-sky-600'
+    description: 'Deploy across regions with automatic scaling, failover, and 99.99% uptime guarantee.'
   }
 ];
 
@@ -101,8 +95,8 @@ export default function FeaturesSection() {
               variants={itemVariants}
               className="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300"
             >
-              <div className={`w-14 h-14 rounded-xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <feature.icon className="w-7 h-7" />
+              <div className="mb-6 group-hover:scale-110 transition-transform">
+                <feature.icon className="w-14 h-14 text-[#8B2EE5]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {feature.title}
