@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cn } from "@/lib/utils";
+import SearchModal from './SearchModal';
 
 const navItems = [
   { 
@@ -74,6 +75,7 @@ const navItems = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
@@ -124,15 +126,31 @@ export default function Header() {
             </NavigationMenuPrimitive.Root>
           </nav>
 
-
-
-          {/* Mobile Menu Button */}
+          {/* Search Button */}
           <button
-            className="lg:hidden p-2 text-gray-600"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => setSearchOpen(true)}
+            className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600 hover:text-gray-900"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <Search className="w-4 h-4" />
+            <span className="text-sm">Search</span>
+            <kbd className="hidden xl:inline-block px-2 py-0.5 text-xs bg-white rounded border border-gray-300">⌘K</kbd>
           </button>
+
+          {/* Mobile Buttons */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="p-2 text-gray-600 hover:text-[#8B2EE5]"
+            >
+              <Search className="w-6 h-6" />
+            </button>
+            <button
+              className="p-2 text-gray-600"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -159,6 +177,9 @@ export default function Header() {
           </div>
         )}
       </div>
+
+      {/* Search Modal */}
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 }
