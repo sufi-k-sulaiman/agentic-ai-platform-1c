@@ -76,7 +76,7 @@ export default function Contact() {
                 transition={{ delay: 0.3 }}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8"
               >
-                Still need help?
+                We love to hear from you
               </motion.h1>
               
               <motion.p 
@@ -85,7 +85,7 @@ export default function Contact() {
                 transition={{ delay: 0.4 }}
                 className="text-xl md:text-2xl text-white/90 mb-16"
               >
-                Our support team is available 24/7 to assist you
+                Our team is available 24/7 to assist you
               </motion.p>
 
               <div className="grid md:grid-cols-3 gap-6">
