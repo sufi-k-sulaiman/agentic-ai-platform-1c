@@ -43,10 +43,30 @@ export default function SavingsCalculator() {
   // Calculations
   const annualLaborCost = totalFTEs * avgLaborCost;
   const hoursPerTaskEstimate = 0.5; // Average hours per task
-  const hoursSavedPerYear = dailyTasks * totalFTEs * 252 * hoursPerTaskEstimate * (automationRate / 100); // 252 work days
+  
+  // Remote/Hybrid productivity multiplier (remote workers benefit more from automation)
+  const remoteMultiplier = (remote / 100) * 1.15;
+  const hybridMultiplier = (hybrid / 100) * 1.08;
+  const officeMultiplier = ((100 - remote - hybrid) / 100) * 1.0;
+  const workStyleMultiplier = remoteMultiplier + hybridMultiplier + officeMultiplier;
+  
+  // Department complexity factor (more departments = more coordination savings)
+  const departmentFactor = 1 + (departments * 0.02);
+  
+  // Team size efficiency (larger teams see more automation benefits)
+  const teamSizeFactor = 1 + Math.log10(teamSize) * 0.1;
+  
+  const hoursSavedPerYear = dailyTasks * totalFTEs * 252 * hoursPerTaskEstimate * (automationRate / 100) * workStyleMultiplier * departmentFactor * teamSizeFactor;
+  
   const costPerHour = avgLaborCost / 2080; // Standard work year hours
-  const softwareIntegrationBonus = softwareTypes.length * 2500; // Bonus savings per software integrated
-  const annualSavings = (hoursSavedPerYear * costPerHour) + softwareIntegrationBonus;
+  
+  // Software integration savings (each tool adds efficiency)
+  const softwareIntegrationBonus = softwareTypes.length * 2500;
+  
+  // Salary vs labor cost delta savings (AI reduces overhead costs)
+  const overheadReduction = (avgLaborCost - avgSalary) * totalFTEs * 0.15;
+  
+  const annualSavings = (hoursSavedPerYear * costPerHour) + softwareIntegrationBonus + overheadReduction;
   const threeYearSavings = annualSavings * 3;
   const productivityGain = (hoursSavedPerYear / (totalFTEs * 2080)) * 100;
   const tasksAutomatedDaily = dailyTasks * (automationRate / 100) * totalFTEs;
