@@ -1031,6 +1031,51 @@ await suite.crm.updateLead({...});`}
         </div>
       </section>
 
+      {/* ROI Calculator Section */}
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-purple-50 to-white">
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+              Calculate Your{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                Enterprise Savings
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+              See exactly how much your organization can save with our unified platform
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+              {[
+                { value: '$250K+', label: 'Average annual savings' },
+                { value: '2,500', label: 'Hours saved per month' },
+                { value: '4 months', label: 'Average payback period' }
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white rounded-2xl shadow-lg p-8 border border-purple-100"
+                >
+                  <div className="text-5xl font-bold text-purple-600 mb-3">{stat.value}</div>
+                  <div className="text-xl text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+            <Link to={createPageUrl('SavingsCalculator')}>
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 rounded-full px-10 h-14 text-lg">
+                Calculate Your Savings <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
