@@ -70,15 +70,16 @@ export default function HeroSection() {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-gray-300 text-gray-700 hover:border-[#8B2EE5] hover:text-[#8B2EE5] rounded-full px-8 h-14 text-base"
-                onClick={() => window.openChat?.()}
-              >
-                <Play className="mr-2 w-5 h-5" />
-                Watch demo
-              </Button>
+              <Link to={createPageUrl('Onboarding')}>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-gray-300 text-gray-700 hover:border-[#8B2EE5] hover:text-[#8B2EE5] rounded-full px-8 h-14 text-base"
+                >
+                  <Play className="mr-2 w-5 h-5" />
+                  Get started
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Badges */}

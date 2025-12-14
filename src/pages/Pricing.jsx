@@ -185,7 +185,7 @@ export default function Pricing() {
               </div>
               <Link to={createPageUrl('Onboarding')}>
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-lg">
-                  Start trial
+                  Get started
                 </Button>
               </Link>
             </motion.div>
@@ -233,12 +233,11 @@ export default function Pricing() {
           </div>
 
           <div className="text-center mt-16">
-            <Button 
-              className="bg-white text-black hover:bg-gray-200 rounded-full px-12 h-16 text-lg"
-              onClick={() => window.openChat?.()}
-            >
-              Contact sales
-            </Button>
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-12 h-16 text-lg">
+                Contact sales
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -775,7 +774,7 @@ export default function Pricing() {
           </p>
           <Link to={createPageUrl('Onboarding')}>
             <Button className="bg-white text-emerald-900 hover:bg-gray-100 rounded-full px-12 h-16 text-lg font-medium">
-              Start free now <ArrowRight className="ml-2 w-5 h-5" />
+              Get started <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
           

@@ -777,7 +777,7 @@ $ 1c migrate v1 v2
           </p>
           <Link to={createPageUrl('Onboarding')}>
             <Button className="bg-white text-purple-900 hover:bg-gray-100 rounded-full px-12 h-16 text-lg font-medium">
-              Get API key free
+              Get started
             </Button>
           </Link>
           

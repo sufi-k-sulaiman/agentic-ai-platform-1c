@@ -132,11 +132,13 @@ export default function EnterpriseSuite() {
             transition={{ delay: 0.9 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-10 h-16 text-lg font-medium">
-              Request demo
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-10 h-16 text-lg font-medium">
-              Watch video
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-10 h-16 text-lg font-medium">
+                Get started
+              </Button>
+            </Link>
+            <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-10 h-16 text-lg font-medium" onClick={() => window.openChat?.()}>
+              Talk to sales
             </Button>
           </motion.div>
         </motion.div>
@@ -1043,11 +1045,13 @@ await suite.crm.updateLead({...});`}
             See how Enterprise Suite can revolutionize your operations. Schedule a personalized demo with our team.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-white text-purple-900 hover:bg-gray-100 rounded-full px-12 h-16 text-lg font-medium">
-              Request demo <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-12 h-16 text-lg font-medium">
-              Contact sales
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-white text-purple-900 hover:bg-gray-100 rounded-full px-12 h-16 text-lg font-medium">
+                Get started <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-12 h-16 text-lg font-medium" onClick={() => window.openChat?.()}>
+              Talk to sales
             </Button>
           </div>
           

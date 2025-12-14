@@ -517,7 +517,7 @@ export default function CloudPlatform() {
           </p>
           <Link to={createPageUrl('Onboarding')}>
             <Button className="bg-white text-blue-900 hover:bg-gray-100 rounded-full px-12 h-16 text-lg font-medium">
-              Get started free
+              Get started
             </Button>
           </Link>
           
