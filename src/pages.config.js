@@ -9,6 +9,9 @@ import EnterpriseSuite from './pages/EnterpriseSuite';
 import CloudPlatform from './pages/CloudPlatform';
 import DeveloperTools from './pages/DeveloperTools';
 import Pricing from './pages/Pricing';
+import Documentation from './pages/Documentation';
+import APIReference from './pages/APIReference';
+import Community from './pages/Community';
 import __Layout from './Layout.jsx';
 
 
@@ -24,6 +27,9 @@ export const PAGES = {
     "CloudPlatform": CloudPlatform,
     "DeveloperTools": DeveloperTools,
     "Pricing": Pricing,
+    "Documentation": Documentation,
+    "APIReference": APIReference,
+    "Community": Community,
 }
 
 export const pagesConfig = {
