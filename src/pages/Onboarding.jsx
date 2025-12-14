@@ -1092,9 +1092,9 @@ export default function Onboarding() {
               </motion.div>
             )}
 
-            {/* Step 9: Agent Design */}
-            {step === 9 && (
-              <motion.div key="step9" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+            {/* Step 10: Final */}
+            {step === 10 && selectedVertical && (
+              <motion.div key="step10" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Almost there!</h1>
                   <p className="text-gray-600 mb-8">Enter your email to get started</p>
