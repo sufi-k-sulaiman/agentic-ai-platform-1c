@@ -4,150 +4,246 @@ import PageMeta from '@/components/PageMeta';
 
 export default function Cookies() {
   return (
-    <div className="bg-white">
+    <>
       <PageMeta 
         title="Cookie Policy"
-        description="Cookie Policy for 1C Platform. Learn about how we use cookies and similar technologies."
+        description="Cookie Policy for 1C Platform. Learn about how we use cookies and similar tracking technologies."
         url="/cookies"
-        keywords={['cookie policy', 'cookies', 'tracking', 'web analytics']}
+        keywords={['cookie policy', 'cookies', 'tracking', 'web analytics', 'privacy']}
       />
-
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Cookie Policy
-            </h1>
-            <p className="text-lg text-gray-600">
-              Last updated: December 14, 2025
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="prose prose-lg max-w-none">
-            <h2>1. What Are Cookies</h2>
-            <p>
-              Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our Service.
-            </p>
-
-            <h2>2. How We Use Cookies</h2>
-            <p>We use cookies for various purposes:</p>
-            <ul>
-              <li><strong>Essential Cookies:</strong> Required for the Service to function properly</li>
-              <li><strong>Performance Cookies:</strong> Help us understand how visitors interact with our Service</li>
-              <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
-              <li><strong>Targeting Cookies:</strong> Used to deliver relevant advertisements</li>
-            </ul>
-
-            <h2>3. Types of Cookies We Use</h2>
-            
-            <h3>Session Cookies</h3>
-            <p>
-              Temporary cookies that expire when you close your browser. These are essential for navigating our Service and using its features.
-            </p>
-
-            <h3>Persistent Cookies</h3>
-            <p>
-              Cookies that remain on your device for a set period or until you delete them. These help us recognize you when you return to our Service.
-            </p>
-
-            <h3>First-Party Cookies</h3>
-            <p>
-              Set directly by 1C Platform to provide core functionality and analyze usage patterns.
-            </p>
-
-            <h3>Third-Party Cookies</h3>
-            <p>
-              Set by our partners and service providers for analytics, advertising, and social media features.
-            </p>
-
-            <h2>4. Specific Cookies We Use</h2>
-            
-            <h3>Authentication Cookies</h3>
-            <p>
-              Purpose: Keep you logged in and maintain your session<br />
-              Duration: Session or up to 30 days<br />
-              Required: Yes
-            </p>
-
-            <h3>Analytics Cookies</h3>
-            <p>
-              Purpose: Understand how users interact with our Service<br />
-              Duration: Up to 2 years<br />
-              Required: No
-            </p>
-
-            <h3>Preference Cookies</h3>
-            <p>
-              Purpose: Remember your settings and preferences<br />
-              Duration: Up to 1 year<br />
-              Required: No
-            </p>
-
-            <h3>Security Cookies</h3>
-            <p>
-              Purpose: Protect against fraudulent activity and enhance security<br />
-              Duration: Session<br />
-              Required: Yes
-            </p>
-
-            <h2>5. Third-Party Services</h2>
-            <p>We use the following third-party services that may set cookies:</p>
-            <ul>
-              <li><strong>Google Analytics:</strong> For website analytics and usage tracking</li>
-              <li><strong>Stripe:</strong> For payment processing</li>
-              <li><strong>Intercom:</strong> For customer support and communication</li>
-            </ul>
-
-            <h2>6. Managing Cookies</h2>
-            
-            <h3>Browser Settings</h3>
-            <p>
-              Most browsers allow you to control cookies through their settings. You can set your browser to refuse cookies or delete existing cookies. However, this may affect your ability to use certain features of our Service.
-            </p>
-
-            <h3>Opt-Out Options</h3>
-            <p>
-              You can opt-out of certain cookies:
-            </p>
-            <ul>
-              <li>Google Analytics: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a></li>
-              <li>Advertising cookies: Visit <a href="http://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">Digital Advertising Alliance</a></li>
-            </ul>
-
-            <h2>7. Do Not Track Signals</h2>
-            <p>
-              Our Service does not respond to Do Not Track (DNT) signals. We continue to work on implementing DNT support in compliance with evolving standards.
-            </p>
-
-            <h2>8. Mobile Devices</h2>
-            <p>
-              If you access our Service through a mobile device, we may collect similar information through mobile SDKs and device identifiers. You can control these through your device settings.
-            </p>
-
-            <h2>9. Updates to This Policy</h2>
-            <p>
-              We may update this Cookie Policy to reflect changes in our practices or applicable laws. We will notify you of significant changes by posting a notice on our website.
-            </p>
-
-            <h2>10. Contact Us</h2>
-            <p>
-              If you have questions about our use of cookies, please contact us at:
-              <br />
-              Email: privacy@1cplatform.com
-            </p>
+      <div className="bg-white">
+        {/* Hero */}
+        <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
+          <div className="max-w-4xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center"
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Cookie Policy
+              </h1>
+              <p className="text-xl text-gray-600">
+                Last updated: December 14, 2025
+              </p>
+            </motion.div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Content */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="prose prose-lg max-w-none"
+            >
+              <div className="space-y-8">
+                <div>
+                  <p className="text-gray-600 leading-relaxed">
+                    This Cookie Policy explains how 1C Platform ("we", "us", or "our") uses cookies and similar tracking technologies when you visit our website and use our Service.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">1. What Are Cookies?</h2>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    Cookies are small text files that are placed on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your device after you close your browser, while session cookies are deleted when you close your browser.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">2. How We Use Cookies</h2>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    We use cookies for the following purposes:
+                  </p>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Essential Cookies</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    These cookies are necessary for the Service to function properly. They enable core functionality such as security, network management, and accessibility. You cannot opt-out of these cookies.
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
+                    <li>Authentication and session management</li>
+                    <li>Security and fraud prevention</li>
+                    <li>Load balancing</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Functionality Cookies</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    These cookies allow us to remember choices you make and provide enhanced, personalized features.
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
+                    <li>Language and region preferences</li>
+                    <li>User interface customization</li>
+                    <li>Form data retention</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Analytics and Performance Cookies</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    These cookies help us understand how visitors interact with our Service by collecting and reporting information anonymously.
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
+                    <li>Page views and navigation patterns</li>
+                    <li>Feature usage statistics</li>
+                    <li>Error tracking and performance monitoring</li>
+                    <li>A/B testing and optimization</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Marketing and Advertising Cookies</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    These cookies track your browsing habits to deliver advertising that is relevant to you and your interests.
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2">
+                    <li>Targeted advertising</li>
+                    <li>Campaign tracking</li>
+                    <li>Social media integration</li>
+                    <li>Retargeting</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">3. Third-Party Cookies</h2>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    We may allow third-party service providers to place cookies on your device for the purposes described above. These third parties include:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2">
+                    <li>Analytics providers (e.g., Google Analytics)</li>
+                    <li>Advertising networks</li>
+                    <li>Social media platforms</li>
+                    <li>Customer support tools</li>
+                    <li>Payment processors</li>
+                  </ul>
+                  <p className="text-gray-600 leading-relaxed mt-4">
+                    These third parties have their own privacy policies and cookie policies. We encourage you to review their policies.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">4. Cookie Duration</h2>
+                  <p className="text-gray-600 leading-relaxed">
+                    The duration of cookies varies depending on their purpose:
+                  </p>
+                  <div className="mt-4 overflow-x-auto">
+                    <table className="min-w-full border border-gray-200">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900 border-b">Cookie Type</th>
+                          <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900 border-b">Duration</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-200">
+                        <tr>
+                          <td className="px-6 py-4 text-sm text-gray-600">Session Cookies</td>
+                          <td className="px-6 py-4 text-sm text-gray-600">Deleted when browser closes</td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 text-sm text-gray-600">Essential Cookies</td>
+                          <td className="px-6 py-4 text-sm text-gray-600">Up to 1 year</td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 text-sm text-gray-600">Functionality Cookies</td>
+                          <td className="px-6 py-4 text-sm text-gray-600">Up to 2 years</td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 text-sm text-gray-600">Analytics Cookies</td>
+                          <td className="px-6 py-4 text-sm text-gray-600">Up to 2 years</td>
+                        </tr>
+                        <tr>
+                          <td className="px-6 py-4 text-sm text-gray-600">Marketing Cookies</td>
+                          <td className="px-6 py-4 text-sm text-gray-600">Up to 2 years</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">5. How to Manage Cookies</h2>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    You have several options to manage cookies:
+                  </p>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Browser Settings</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    Most browsers allow you to control cookies through their settings. You can set your browser to:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
+                    <li>Block all cookies</li>
+                    <li>Accept all cookies</li>
+                    <li>Notify you when a cookie is set</li>
+                    <li>Delete cookies after you leave a website</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Browser-Specific Instructions</h3>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
+                    <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies</li>
+                    <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies</li>
+                    <li><strong>Safari:</strong> Preferences → Privacy → Cookies</li>
+                    <li><strong>Edge:</strong> Settings → Privacy → Cookies</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Opt-Out Tools</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    You can opt out of certain types of cookies using these tools:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2">
+                    <li>Google Analytics: <a href="https://tools.google.com/dlpage/gaoptout" className="text-[#8B2EE5] hover:underline">Google Analytics Opt-out</a></li>
+                    <li>Network Advertising Initiative: <a href="http://www.networkadvertising.org/choices/" className="text-[#8B2EE5] hover:underline">NAI Opt-out</a></li>
+                    <li>Digital Advertising Alliance: <a href="http://www.aboutads.info/choices/" className="text-[#8B2EE5] hover:underline">DAA Opt-out</a></li>
+                  </ul>
+
+                  <p className="text-gray-600 leading-relaxed mt-6">
+                    <strong>Note:</strong> If you disable or refuse cookies, some parts of the Service may become inaccessible or not function properly.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">6. Other Tracking Technologies</h2>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    In addition to cookies, we may use other tracking technologies:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2">
+                    <li><strong>Web Beacons:</strong> Small graphic images (also known as pixel tags) that track website usage</li>
+                    <li><strong>Local Storage:</strong> HTML5 local storage for storing preferences and settings</li>
+                    <li><strong>Session Storage:</strong> Temporary storage that is cleared when you close your browser</li>
+                    <li><strong>ETags:</strong> HTTP entity tags used to track unique users</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">7. Do Not Track</h2>
+                  <p className="text-gray-600 leading-relaxed">
+                    Some browsers include a "Do Not Track" (DNT) feature that signals to websites you visit that you do not want to have your online activity tracked. Currently, there is no industry standard for how to respond to DNT signals. We do not currently respond to DNT signals, but we provide you with options to control cookie usage as described in this policy.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">8. Updates to This Cookie Policy</h2>
+                  <p className="text-gray-600 leading-relaxed">
+                    We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the updated policy on this page with a new "Last updated" date.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">9. Contact Us</h2>
+                  <p className="text-gray-600 leading-relaxed">
+                    If you have any questions about our use of cookies or this Cookie Policy, please contact us:
+                  </p>
+                  <p className="text-gray-600 leading-relaxed mt-4">
+                    Email: privacy@1cplatform.com<br />
+                    Subject: Cookie Policy Inquiry<br />
+                    Address: 1C Platform Privacy Department
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
