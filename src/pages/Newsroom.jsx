@@ -239,9 +239,16 @@ export default function Newsroom() {
             <p className="text-2xl text-gray-600 leading-relaxed mb-10">
               Stay informed about product launches, company milestones, and industry insights.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8">
-              Subscribe to newsletter
-            </Button>
+            <div className="flex gap-3 max-w-md">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 h-12 px-6 rounded-full border-2 border-[#8B2EE5]/20 focus:border-[#8B2EE5] focus:outline-none transition-colors"
+              />
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-12">
+                Subscribe
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
