@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Clock, Briefcase, Search, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 const benefits = [
@@ -16,47 +18,178 @@ const benefits = [
 ];
 
 const openings = [
-  {
-    title: 'Senior AI Engineer',
-    department: 'Engineering',
-    location: 'Remote / San Francisco',
-    type: 'Full-time',
-    description: 'Build next-generation AI systems that power enterprise automation'
-  },
-  {
-    title: 'Product Manager - AI Platform',
-    department: 'Product',
-    location: 'New York / Remote',
-    type: 'Full-time',
-    description: 'Lead product strategy for our Agentic AI platform'
-  },
+  // Sales Roles (6)
   {
     title: 'Enterprise Sales Executive',
     department: 'Sales',
-    location: 'London',
+    location: 'Remote / New York',
     type: 'Full-time',
-    description: 'Drive growth with Fortune 500 companies in EMEA'
+    description: 'Drive enterprise deals with Fortune 500 companies across North America'
   },
   {
-    title: 'UX Designer',
+    title: 'Senior Account Executive - EMEA',
+    department: 'Sales',
+    location: 'London',
+    type: 'Full-time',
+    description: 'Lead sales initiatives and close deals with enterprise clients in EMEA region'
+  },
+  {
+    title: 'Sales Development Representative',
+    department: 'Sales',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Generate qualified leads and book demos for our enterprise AI platform'
+  },
+  {
+    title: 'Solutions Engineer - Sales',
+    department: 'Sales',
+    location: 'San Francisco / Remote',
+    type: 'Full-time',
+    description: 'Partner with sales team to demonstrate technical capabilities and design solutions'
+  },
+  {
+    title: 'Regional Sales Manager - APAC',
+    department: 'Sales',
+    location: 'Singapore',
+    type: 'Full-time',
+    description: 'Build and lead sales team across Asia-Pacific markets'
+  },
+  {
+    title: 'Strategic Account Manager',
+    department: 'Sales',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Manage relationships with key enterprise accounts and drive expansion revenue'
+  },
+
+  // UI/UX Roles (2)
+  {
+    title: 'Senior Product Designer',
     department: 'Design',
     location: 'Remote',
     type: 'Full-time',
-    description: 'Design beautiful, intuitive experiences for enterprise users'
+    description: 'Design intuitive interfaces for complex AI agent workflows and enterprise dashboards'
   },
   {
-    title: 'Data Scientist',
-    department: 'Data Science',
-    location: 'Singapore',
+    title: 'UX Researcher',
+    department: 'Design',
+    location: 'San Francisco / Remote',
     type: 'Full-time',
-    description: 'Extract insights from billions of data points'
+    description: 'Conduct user research to inform product strategy and design decisions'
+  },
+
+  // Agentic AI Developer Roles (16)
+  {
+    title: 'Staff Agentic AI Engineer',
+    department: 'Engineering',
+    location: 'Remote / San Francisco',
+    type: 'Full-time',
+    description: 'Lead development of autonomous agent frameworks and multi-agent orchestration systems'
   },
   {
-    title: 'DevOps Engineer',
+    title: 'Senior AI Agent Developer',
     department: 'Engineering',
     location: 'Remote',
     type: 'Full-time',
-    description: 'Scale infrastructure for millions of users'
+    description: 'Build and optimize AI agents with advanced reasoning and decision-making capabilities'
+  },
+  {
+    title: 'Machine Learning Engineer - Agentic AI',
+    department: 'Engineering',
+    location: 'Remote / New York',
+    type: 'Full-time',
+    description: 'Develop ML models powering autonomous agent behavior and learning systems'
+  },
+  {
+    title: 'AI Agent Platform Engineer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Build scalable infrastructure for deploying and managing thousands of AI agents'
+  },
+  {
+    title: 'LLM Integration Specialist',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Integrate and optimize large language models for agent reasoning and communication'
+  },
+  {
+    title: 'Agent Workflow Architect',
+    department: 'Engineering',
+    location: 'Remote / London',
+    type: 'Full-time',
+    description: 'Design complex multi-agent workflows and coordination patterns'
+  },
+  {
+    title: 'AI Safety Engineer - Agentic Systems',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Ensure agent behavior aligns with safety constraints and ethical guidelines'
+  },
+  {
+    title: 'Reinforcement Learning Engineer',
+    department: 'Engineering',
+    location: 'Remote / San Francisco',
+    type: 'Full-time',
+    description: 'Develop RL algorithms enabling agents to learn from experience and optimize decisions'
+  },
+  {
+    title: 'Natural Language Processing Engineer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Build NLP systems for agent communication and natural language understanding'
+  },
+  {
+    title: 'AI Agent Testing Engineer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Develop testing frameworks and quality assurance processes for AI agents'
+  },
+  {
+    title: 'Knowledge Graph Engineer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Build knowledge representation systems enabling agent reasoning and memory'
+  },
+  {
+    title: 'Agent Performance Optimization Engineer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Optimize agent latency, throughput, and resource utilization at scale'
+  },
+  {
+    title: 'Multi-Agent Coordination Specialist',
+    department: 'Engineering',
+    location: 'Remote / Singapore',
+    type: 'Full-time',
+    description: 'Design protocols for agent-to-agent communication and collaborative problem solving'
+  },
+  {
+    title: 'AI Agent DevOps Engineer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Build CI/CD pipelines and monitoring systems for agent deployment lifecycle'
+  },
+  {
+    title: 'Prompt Engineering Lead',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Develop frameworks and best practices for agent prompt design and optimization'
+  },
+  {
+    title: 'Junior Agentic AI Developer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    description: 'Learn and contribute to building next-generation autonomous AI agent systems'
   }
 ];
 
@@ -173,9 +306,11 @@ export default function Careers() {
                       </span>
                     </div>
                   </div>
-                  <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full group-hover:scale-105 transition-transform">
-                    Apply now <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                  <Link to={createPageUrl('JobApplication')}>
+                    <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full group-hover:scale-105 transition-transform">
+                      Apply now <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             ))}

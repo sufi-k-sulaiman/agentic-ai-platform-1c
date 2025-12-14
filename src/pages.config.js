@@ -50,6 +50,7 @@ import BlogAgenticAIUseCases from './pages/BlogAgenticAIUseCases';
 import BlogAgenticAIEthics from './pages/BlogAgenticAIEthics';
 import BlogAgenticAIScaling from './pages/BlogAgenticAIScaling';
 import Cyber from './pages/Cyber';
+import JobApplication from './pages/JobApplication';
 import __Layout from './Layout.jsx';
 
 
@@ -106,6 +107,7 @@ export const PAGES = {
     "BlogAgenticAIEthics": BlogAgenticAIEthics,
     "BlogAgenticAIScaling": BlogAgenticAIScaling,
     "Cyber": Cyber,
+    "JobApplication": JobApplication,
 }
 
 export const pagesConfig = {
