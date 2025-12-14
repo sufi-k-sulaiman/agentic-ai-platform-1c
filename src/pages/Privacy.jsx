@@ -1,197 +1,337 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
-import BreadcrumbNav from '@/components/BreadcrumbNav';
+
+const sections = [
+  { id: 'overview', title: 'Overview' },
+  { id: 'information-we-collect', title: 'Information We Collect' },
+  { id: 'how-we-use', title: 'How We Use Your Information' },
+  { id: 'sharing', title: 'Information Sharing and Disclosure' },
+  { id: 'security', title: 'Data Security' },
+  { id: 'your-rights', title: 'Your Rights and Choices' },
+  { id: 'retention', title: 'Data Retention' },
+  { id: 'international', title: 'International Data Transfers' },
+  { id: 'children', title: 'Children\'s Privacy' },
+  { id: 'changes', title: 'Changes to This Policy' },
+  { id: 'contact', title: 'Contact Us' }
+];
 
 export default function Privacy() {
+  const [activeSection, setActiveSection] = useState('overview');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 200;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <>
       <PageMeta 
         title="Privacy Policy"
-        description="Privacy Policy for 1C Platform. Learn how we collect, use, and protect your personal information."
+        description="1cPlatform Privacy Policy. Learn how we collect, use, and protect your personal information."
         url="/privacy"
-        keywords={['privacy policy', 'data protection', 'GDPR', 'privacy', 'data security']}
       />
-      <div className="bg-white min-h-screen">
-        {/* Header */}
-        <section className="pt-24 pb-12 border-b border-gray-200">
-          <div className="max-w-4xl mx-auto px-6">
-            <BreadcrumbNav items={[{ label: 'Legal', page: 'Privacy' }, { label: 'Privacy Policy' }]} />
-            <h1 className="text-5xl font-semibold text-gray-900 mb-4">
-              1C Platform Privacy Policy
-            </h1>
-            <p className="text-lg text-gray-600">
-              Last updated December 14, 2025
-            </p>
-          </div>
-        </section>
-
-        {/* Content */}
-        <section className="py-12">
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="space-y-12 text-gray-900 leading-relaxed">
-              <div>
-                <p className="text-xl">
-                  At 1C Platform ("we", "us", or "our"), we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Service.
-                </p>
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-16">
+            {/* Sidebar Navigation */}
+            <aside className="hidden lg:block lg:col-span-3">
+              <div className="sticky top-24">
+                <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-6">
+                  Privacy Policy
+                </h2>
+                <nav className="space-y-1">
+                  {sections.map((section) => (
+                    <button
+                      key={section.id}
+                      onClick={() => scrollToSection(section.id)}
+                      className={`block w-full text-left px-3 py-2 text-sm transition-colors ${
+                        activeSection === section.id
+                          ? 'text-[#8B2EE5] font-medium bg-purple-50 rounded-lg'
+                          : 'text-gray-600 hover:text-gray-900'
+                      }`}
+                    >
+                      {section.title}
+                    </button>
+                  ))}
+                </nav>
               </div>
+            </aside>
 
-              <div>
-                <h2 className="text-3xl font-semibold text-gray-900 mb-6">Information We Collect</h2>
-                <h3 className="text-xl font-medium text-gray-900 mb-3">Personal Information</h3>
-                <p className="text-lg mb-4">
-                    We may collect personal information that you provide to us such as:
-                  </p>
-                  <ul className="space-y-2 text-lg pl-6">
-                    <li>• Name, email address, and contact information</li>
-                    <li>• Company name and job title</li>
-                    <li>• Billing and payment information</li>
-                    <li>• Account credentials</li>
-                    <li>• Any other information you choose to provide</li>
-                  </ul>
+            {/* Main Content */}
+            <main className="lg:col-span-9">
+              <div className="max-w-3xl">
+                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                  Privacy Policy
+                </h1>
+                <p className="text-lg text-gray-600 mb-4">
+                  Effective Date: January 1, 2025
+                </p>
+                <p className="text-lg text-gray-600 mb-16">
+                  Last Updated: January 1, 2025
+                </p>
 
-                  <h3 className="text-xl font-medium text-gray-900 mb-3 mt-8">Automatically Collected Information</h3>
-                  <p className="text-lg mb-4">
-                    When you use our Service, we automatically collect certain information:
-                  </p>
-                  <ul className="space-y-2 text-lg pl-6">
-                    <li>• Log data (IP address, browser type, pages visited)</li>
-                    <li>• Device information (device type, operating system)</li>
-                    <li>• Usage data (features used, time spent on Service)</li>
-                    <li>• Cookies and similar tracking technologies</li>
-                  </ul>
-                </div>
+                {/* Overview */}
+                <section id="overview" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      At 1cPlatform, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      By accessing or using our services, you agree to the terms of this Privacy Policy. If you do not agree with these terms, please do not use our services.
+                    </p>
+                  </div>
+                </section>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">How We Use Your Information</h2>
-                  <p className="text-lg mb-4">
-                    We use the information we collect to:
-                  </p>
-                  <ul className="space-y-2 text-lg pl-6">
-                    <li>• Provide, operate, and maintain our Service</li>
-                    <li>• Improve, personalize, and expand our Service</li>
-                    <li>• Process your transactions and manage your account</li>
-                    <li>• Communicate with you, including customer service and support</li>
-                    <li>• Send you technical notices, updates, and security alerts</li>
-                    <li>• Provide marketing communications (with your consent)</li>
-                    <li>• Monitor and analyze usage and trends</li>
-                    <li>• Detect, prevent, and address technical issues and security threats</li>
-                    <li>• Comply with legal obligations</li>
-                  </ul>
-                </div>
+                {/* Information We Collect */}
+                <section id="information-we-collect" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Information You Provide</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      We collect information that you voluntarily provide when you:
+                    </p>
+                    <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                      <li>Create an account or register for our services</li>
+                      <li>Submit forms or communicate with us</li>
+                      <li>Participate in surveys or feedback requests</li>
+                      <li>Subscribe to newsletters or marketing communications</li>
+                      <li>Use our customer support services</li>
+                    </ul>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">How We Share Your Information</h2>
-                  <p className="text-lg mb-4">
-                    We may share your information in the following situations:
-                  </p>
-                  <ul className="space-y-3 text-lg pl-6">
-                    <li>• <strong>Service Providers:</strong> We may share your information with third-party vendors who perform services on our behalf</li>
-                    <li>• <strong>Business Transfers:</strong> In connection with any merger, sale of company assets, or acquisition</li>
-                    <li>• <strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
-                    <li>• <strong>With Your Consent:</strong> We may share your information with your explicit consent</li>
-                  </ul>
-                  <p className="text-lg mt-4">
-                    We do not sell your personal information to third parties.
-                  </p>
-                </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Information We Collect Automatically</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      When you use our services, we may automatically collect:
+                    </p>
+                    <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                      <li>Device information (IP address, browser type, operating system)</li>
+                      <li>Usage data (pages viewed, features used, time spent)</li>
+                      <li>Log data (access times, error logs, performance data)</li>
+                      <li>Cookies and similar tracking technologies</li>
+                    </ul>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">Data Security</h2>
-                  <p className="text-lg mb-4">
-                    We implement appropriate technical and organizational security measures to protect your information:
-                  </p>
-                  <ul className="space-y-2 text-lg pl-6">
-                    <li>• Encryption of data in transit and at rest</li>
-                    <li>• Regular security assessments and audits</li>
-                    <li>• Access controls and authentication requirements</li>
-                    <li>• Employee training on data protection</li>
-                    <li>• Compliance with industry standards (SOC 2, ISO 27001)</li>
-                  </ul>
-                  <p className="text-lg mt-4">
-                    However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee absolute security.
-                  </p>
-                </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Information from Third Parties</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      We may receive information about you from third-party services, analytics providers, and advertising partners when you interact with our services through their platforms.
+                    </p>
+                  </div>
+                </section>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">Data Retention</h2>
-                  <p className="text-lg">
-                    We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When we no longer need your information, we will securely delete or anonymize it.
-                  </p>
-                </div>
+                {/* How We Use Your Information */}
+                <section id="how-we-use" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      We use the information we collect to:
+                    </p>
+                    <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                      <li>Provide, maintain, and improve our services</li>
+                      <li>Process transactions and send related information</li>
+                      <li>Respond to your comments, questions, and support requests</li>
+                      <li>Send you technical notices, updates, and security alerts</li>
+                      <li>Communicate about products, services, and events</li>
+                      <li>Monitor and analyze trends, usage, and activities</li>
+                      <li>Detect, prevent, and address fraud and security issues</li>
+                      <li>Comply with legal obligations and enforce our terms</li>
+                      <li>Personalize your experience and provide relevant content</li>
+                    </ul>
+                  </div>
+                </section>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">Your Privacy Rights</h2>
-                  <p className="text-lg mb-4">
-                    Depending on your location, you may have the following rights:
-                  </p>
-                  <ul className="space-y-3 text-lg pl-6">
-                    <li>• <strong>Access:</strong> Request access to your personal information</li>
-                    <li>• <strong>Correction:</strong> Request correction of inaccurate information</li>
-                    <li>• <strong>Deletion:</strong> Request deletion of your personal information</li>
-                    <li>• <strong>Portability:</strong> Request transfer of your information</li>
-                    <li>• <strong>Objection:</strong> Object to processing of your information</li>
-                    <li>• <strong>Restriction:</strong> Request restriction of processing</li>
-                    <li>• <strong>Withdraw Consent:</strong> Withdraw consent where processing is based on consent</li>
-                  </ul>
-                  <p className="text-lg mt-4">
-                    To exercise these rights, please contact us at privacy@1cplatform.com.
-                  </p>
-                </div>
+                {/* Information Sharing */}
+                <section id="sharing" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Information Sharing and Disclosure</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      We do not sell your personal information. We may share your information in the following circumstances:
+                    </p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Service Providers</h3>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      We share information with vendors and service providers who perform services on our behalf, such as hosting, data analysis, payment processing, and customer service.
+                    </p>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">Cookies and Tracking</h2>
-                  <p className="text-lg mb-4">
-                    We use cookies and similar tracking technologies to track activity on our Service. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.
-                  </p>
-                  <p className="text-lg">
-                    For more information about our use of cookies, please see our <Link to={createPageUrl('Cookies')} className="text-blue-600 hover:underline">Cookie Policy</Link>.
-                  </p>
-                </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Transfers</h3>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.
+                    </p>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">International Data Transfers</h2>
-                  <p className="text-lg">
-                    Your information may be transferred to and maintained on servers located outside of your country where data protection laws may differ. We take appropriate safeguards to ensure your information receives adequate protection in accordance with this Privacy Policy.
-                  </p>
-                </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Legal Requirements</h3>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      We may disclose information if required by law or in response to valid requests by public authorities.
+                    </p>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">Children's Privacy</h2>
-                  <p className="text-lg">
-                    Our Service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will take steps to delete that information.
-                  </p>
-                </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Protection of Rights</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      We may disclose information when we believe it is necessary to protect our rights, your safety, or the safety of others, investigate fraud, or respond to government requests.
+                    </p>
+                  </div>
+                </section>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">Third-Party Links</h2>
-                  <p className="text-lg">
-                    Our Service may contain links to third-party websites. We are not responsible for the privacy practices of these websites. We encourage you to review the privacy policies of any third-party sites you visit.
-                  </p>
-                </div>
+                {/* Data Security */}
+                <section id="security" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
+                    </p>
+                    <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                      <li>Encryption of data in transit and at rest</li>
+                      <li>Regular security assessments and audits</li>
+                      <li>Access controls and authentication mechanisms</li>
+                      <li>Employee training on data protection</li>
+                      <li>Incident response and breach notification procedures</li>
+                    </ul>
+                    <p className="text-gray-700 leading-relaxed mt-6">
+                      However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.
+                    </p>
+                  </div>
+                </section>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">Changes to This Privacy Policy</h2>
-                  <p className="text-lg">
-                    We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy Policy periodically for any changes.
-                  </p>
-                </div>
+                {/* Your Rights */}
+                <section id="your-rights" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights and Choices</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Depending on your location, you may have the following rights:
+                    </p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Access and Portability</h3>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      You can request access to your personal information and receive a copy in a portable format.
+                    </p>
 
-                <div>
-                  <h2 className="text-3xl font-semibold text-gray-900 mb-6">Contact Us</h2>
-                  <p className="text-lg mb-4">
-                    If you have any questions about this Privacy Policy, please contact us:
-                  </p>
-                  <div className="text-lg space-y-1">
-                    <p>Email: privacy@1cplatform.com</p>
-                    <p>Data Protection Officer: dpo@1cplatform.com</p>
-                    <p>Address: 1C Platform Privacy Department</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Correction</h3>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      You can request that we correct inaccurate or incomplete information.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Deletion</h3>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      You can request deletion of your personal information, subject to certain exceptions.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Opt-Out</h3>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      You can opt out of marketing communications at any time by clicking the unsubscribe link in our emails.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Object to Processing</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      You can object to certain types of processing, including direct marketing and profiling.
+                    </p>
+                  </div>
+                </section>
+
+                {/* Data Retention */}
+                <section id="retention" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Retention</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      When we no longer need your information, we will securely delete or anonymize it.
+                    </p>
+                  </div>
+                </section>
+
+                {/* International Transfers */}
+                <section id="international" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">International Data Transfers</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that differ from those in your country.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      We take appropriate measures to ensure that your information receives an adequate level of protection in the jurisdictions where we process it.
+                    </p>
+                  </div>
+                </section>
+
+                {/* Children's Privacy */}
+                <section id="children" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Children's Privacy</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      If you believe we have collected information from a child under 13, please contact us immediately so we can delete it.
+                    </p>
+                  </div>
+                </section>
+
+                {/* Changes to Policy */}
+                <section id="changes" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Changes to This Policy</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      We may update this Privacy Policy from time to time. When we make changes, we will update the "Last Updated" date at the top of this page.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      We encourage you to review this Privacy Policy periodically. Continued use of our services after changes constitutes acceptance of the updated policy.
+                    </p>
+                  </div>
+                </section>
+
+                {/* Contact */}
+                <section id="contact" className="mb-20">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      If you have questions or concerns about this Privacy Policy or our privacy practices, please contact us:
+                    </p>
+                    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                      <p className="text-gray-700 mb-2"><strong>1cPlatform Privacy Team</strong></p>
+                      <p className="text-gray-700 mb-2">Email: privacy@1cplatform.com</p>
+                      <p className="text-gray-700">Address: 1 Infinite Loop, Cupertino, CA 95014</p>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Footer Links */}
+                <div className="pt-12 border-t border-gray-200">
+                  <div className="flex flex-wrap gap-6 text-sm">
+                    <Link to={createPageUrl('Terms')} className="text-[#8B2EE5] hover:underline">
+                      Terms of Service
+                    </Link>
+                    <Link to={createPageUrl('Cookies')} className="text-[#8B2EE5] hover:underline">
+                      Cookie Policy
+                    </Link>
                   </div>
                 </div>
               </div>
+            </main>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
