@@ -133,10 +133,38 @@ export default function EnergyUtilities() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="prose prose-lg max-w-none">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">The Grid Reliability Challenge</h3>
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Energy & Utilities
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              The energy and utilities sector represents one of the world's largest industries, with global electricity markets exceeding $2 trillion annually and serving virtually every human on earth. Electric utilities manage vast, complex grids delivering power from hundreds of generation sources to millions of endpoints, requiring perfect supply-demand balance every millisecond—excess generation causes frequency spikes damaging equipment, while insufficient supply triggers brownouts or blackouts. The industry faces transformational pressures: renewable energy mandates requiring integration of variable solar and wind power incompatible with traditional baseload planning; aging infrastructure with transformers and transmission lines installed 50+ years ago approaching end of life; climate change increasing extreme weather events causing outages; and customer expectations for 100% reliability despite rising costs. Utilities must simultaneously improve reliability, reduce costs, integrate renewables, and maintain affordable rates for residential customers while competing with distributed generation (rooftop solar) threatening traditional utility business models.
+            </p>
+            <p>
+              Utility business models traditionally centered on regulated monopolies earning returns on infrastructure investments, generating revenue from kilowatt-hour sales and monthly service charges while operating under strict rate regulation preventing excessive profits. This model works well for capital-intensive baseload generation (coal, nuclear, gas plants) with steady output, but renewable energy fundamentally disrupts the economics: solar and wind have near-zero marginal costs once installed but produce power intermittently regardless of demand, creating "duck curve" challenges where utilities must maintain expensive backup generation for evening peaks despite daytime solar abundance. Distributed energy resources (rooftop solar, batteries, electric vehicles) enable customers to generate and store their own power, reducing utility sales while the grid still requires maintenance. Forward-thinking utilities evolve toward platform business models: managing energy networks connecting diverse resources, offering grid services like demand response and virtual power plants, and monetizing data and analytics. Success requires operational efficiency reducing costs per customer, grid modernization enabling renewable integration and distributed resource coordination, and customer engagement programs building loyalty despite competition from independent solar installers.
+            </p>
+            <p>
+              Energy grid technology infrastructure spans generation management systems controlling power plants; SCADA (Supervisory Control and Data Acquisition) monitoring grid conditions and controlling switches and breakers; energy management systems optimizing generation dispatch; outage management systems tracking and coordinating restoration; customer information systems handling billing and service requests; advanced metering infrastructure (smart meters) providing granular consumption data; distribution automation equipment enabling remote fault isolation; and grid analytics platforms processing operational data. Modern smart grids deploy extensive sensor networks measuring voltage, current, power quality, and equipment health at thousands of points. Weather forecasting systems predict renewable generation. Demand response platforms coordinate large customers reducing consumption during peak periods. Battery storage systems provide grid services but require sophisticated control algorithms balancing multiple objectives. SCADA systems enable remote monitoring and control but decisions remain predominantly manual: grid operators watch dashboards and adjust dispatch based on experience and forecasts. Renewable integration exists but often requires curtailing solar/wind output during low-demand periods, wasting clean energy because storage and demand flexibility are insufficiently coordinated.
+            </p>
+            <p>
+              Agentic AI enables truly intelligent grids where autonomous agents manage operations with superhuman capability. Renewable forecasting agents predict solar and wind output hours ahead with 95% accuracy using deep learning models analyzing weather patterns, historical generation, satellite imagery, and atmospheric conditions, enabling proactive grid balancing. Battery optimization agents orchestrate storage across the network, charging when renewable generation exceeds demand and electricity prices are low, discharging during peak demand when prices spike—continuously optimizing economic value while providing grid stability services. Load balancing agents monitor demand across all circuits in real-time, automatically dispatching generation from optimal sources (lowest cost, cleanest emissions, fastest response) while maintaining frequency and voltage within specifications. Predictive maintenance agents analyze thermal imaging, vibration patterns, partial discharge signals, and performance trends from transformers and transmission equipment to identify failures 2-4 weeks early, scheduling service before outages. Distributed resource orchestration agents coordinate millions of smart thermostats, EV chargers, water heaters, and batteries to function as virtual power plants—reducing peak demand, providing frequency regulation services, and enabling renewable integration at scale previously impossible. Customer service AI handles outages, billing inquiries, and energy efficiency recommendations 24/7. The transformation: 20% energy waste reduction, 40% fewer outages, 30% operational cost savings, 50% renewable penetration without reliability sacrifice, making clean energy both sustainable and dependable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-gray-50">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Energy grids face existential challenges as renewable energy transforms power generation: solar and wind provide clean energy but their output varies dramatically with weather, creating instability in grids designed for steady baseload power from coal and gas plants. Utilities must balance supply and demand second-by-second, yet renewable variability makes this exponentially harder—cloudy days cause solar output to plummet, forcing expensive gas "peaker" plants to compensate. Battery storage could smooth this variability, but optimizing when to charge and discharge requires predicting both renewable generation and demand hours ahead—an impossible task for human operators. Meanwhile, equipment failures cause devastating outages: a transformer failure can black out entire neighborhoods, yet utilities maintain assets on fixed schedules rather than actual condition, resulting in both premature maintenance (wasting money) and unexpected failures (causing outages).
             </p>

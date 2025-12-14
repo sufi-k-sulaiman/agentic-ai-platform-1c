@@ -133,7 +133,41 @@ export default function GovernmentAgencies() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Government Agencies
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              Government agencies at local, state, and federal levels serve hundreds of millions of citizens while operating under unique constraints: public accountability demands transparency; budget limitations prevent expensive technology investments; diverse stakeholder requirements create complex, often conflicting priorities; and legacy systems dating back decades resist modernization. The public sector employs over 22 million workers in the U.S. alone, spending $7+ trillion annually on services ranging from motor vehicle registration to business licensing, from building permits to social services delivery. Unlike private sector organizations, government cannot simply deny service to unprofitable customers or focus only on efficient processes—agencies must serve all citizens regardless of complexity, language barriers, or technical literacy. Political cycles create discontinuity, with changing administrations and elected officials shifting priorities, while civil service employment rules limit management flexibility. The result is public services that lag private sector customer experience by a generation, creating citizen frustration and eroding trust in government effectiveness.
+            </p>
+            <p>
+              Government business models are fundamentally different from private sector: agencies operate as service providers rather than profit-maximizing businesses, funded through tax revenue with success measured by citizen satisfaction, service accessibility, cost efficiency, and compliance rather than financial returns. Fee-based services like permits and licenses should cover costs but often don't due to political pressure to keep fees low. Grant programs distribute funding to communities and organizations, requiring extensive application review, compliance monitoring, and impact reporting. Procurement processes must follow complex regulations ensuring fairness and transparency, but these same rules create administrative burden and slow response to changing needs. Performance measurement emphasizes process compliance (were regulations followed?) over outcomes (did citizens get effective service?). Budget cycles create artificial constraints where unspent funds disappear rather than rolling over, incentivizing spending rather than efficiency. Technology investments compete with politically visible projects like infrastructure and public safety for limited funds, making it difficult to modernize systems despite strong business cases showing long-term savings.
+            </p>
+            <p>
+              Government technology infrastructure typically consists of decades-old mainframe systems running critical functions like tax collection and benefit payments; enterprise resource planning systems managing finance, HR, and procurement; department-specific applications for permits, licenses, inspections, and case management; document management systems (increasingly electronic but often disconnected); citizen-facing websites and portals providing information and online services; and constituent relationship management systems tracking communications and requests. Integration between systems is minimal: a citizen applying for a business license may need to separately register with tax authorities, zoning departments, and health inspectors, each requiring redundant information. Data exists in silos preventing comprehensive views of citizen interactions or service delivery efficiency. Modern initiatives include cloud migration to reduce infrastructure costs, mobile-responsive websites improving accessibility, digital payment processing eliminating checks, and chatbots handling basic inquiries. However, AI adoption remains limited to pilot programs due to budget constraints, procurement complexity, risk-averse culture, and lack of technical expertise to implement advanced solutions.
+            </p>
+            <p>
+              Agentic AI transforms government service delivery by working within existing constraints while dramatically improving efficiency and experience. Document processing agents extract information from any format—handwritten forms, scanned PDFs, photos—eliminating manual data entry while maintaining accuracy required for compliance. Workflow automation agents orchestrate complex approval processes: routing applications through required reviewers, checking eligibility automatically, scheduling inspections when needed, processing payments, and issuing digital approvals—all without manual intervention yet maintaining complete audit trails satisfying accountability requirements. Citizen service AI provides 24/7 assistance through chat, phone, and SMS in multiple languages, answering questions, checking application status, and guiding citizens through processes, reducing phone inquiries 75% while improving accessibility. Integration agents connect legacy systems creating unified citizen views accessible across departments, eliminating redundant data requests. Compliance monitoring AI continuously collects required documentation, generates audit-ready reports, and ensures all controls function correctly. The transformation enables government to deliver modern, accessible digital services citizens expect while reducing operational costs 40%, improving processing times from weeks to hours, and maintaining the transparency, security, and accountability public service demands.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white d-none">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">The Traffic Congestion Crisis</h3>
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

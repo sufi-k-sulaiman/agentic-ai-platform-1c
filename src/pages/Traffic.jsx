@@ -133,7 +133,38 @@ export default function Traffic() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Traffic Management
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              Traffic management represents a critical challenge for cities worldwide, with congestion costing the U.S. economy $166 billion annually in lost productivity, wasted fuel, and environmental damage—approximately $1,200 per commuter. Urban areas manage thousands of signalized intersections, highway on-ramps, and arterial roads coordinating millions of vehicle movements daily while balancing competing priorities: minimizing delay, reducing emissions, prioritizing emergency vehicles, and accommodating pedestrians and cyclists. Traditional traffic engineering relies on pre-programmed signal timing plans created through manual observation and optimization, updated perhaps annually, and running the same patterns regardless of actual conditions—a 3 AM traffic signal runs the same cycle as 5 PM rush hour. The result is systematic inefficiency: vehicles idling at red lights when cross-traffic doesn't exist, poor coordination causing stop-and-go waves that waste fuel and create congestion, and emergency vehicles stuck in traffic because signals can't detect approaching ambulances or fire trucks.
+            </p>
+            <p>
+              Traffic management business models are primarily public sector operations funded through transportation budgets, with costs including signal infrastructure installation and maintenance, traffic management center operations, staff salaries for engineers and operators, and technology systems. Some jurisdictions generate revenue through red-light cameras, parking enforcement, and tolling systems, though these are controversial and politically sensitive. The economic case for investment comes not from direct revenue but from economic impact: reducing congestion generates massive value through productivity gains (less time in traffic), fuel savings, emission reductions, and improved quality of life attracting businesses and residents. Infrastructure projects like adding lanes cost $5-15 million per mile and take years, while intelligent traffic management systems costing $50,000-200,000 per intersection deliver immediate improvements without construction. The challenge is justifying upfront technology investments to budget-constrained transportation departments competing with roads, bridges, and public transit for limited funds, despite strong ROI from congestion reduction and efficiency gains.
+            </p>
+            <p>
+              Traffic technology infrastructure consists of adaptive traffic signal controllers at intersections communicating with central management systems; sensors including inductive loops detecting vehicles, radar measuring speeds, and cameras providing visual monitoring; variable message signs displaying real-time information about conditions and delays; traffic management software aggregating data and enabling operator control; and incident detection systems identifying accidents or breakdowns. Modern deployments include connected vehicle technology enabling cars to communicate with infrastructure, traffic prediction models forecasting congestion based on historical patterns and current conditions, and transit signal priority giving buses and trains preferential treatment. Cloud-based platforms now aggregate data from multiple sources—government traffic sensors, GPS data from navigation apps, connected vehicle telemetry—creating comprehensive pictures of traffic conditions. However, most systems remain reactive: operators watch monitors and manually adjust signal timing after congestion develops rather than predicting and preventing it. AI applications emerging include machine learning models predicting congestion and adaptive algorithms adjusting signals based on detected traffic, though deployment is limited to pilot programs in leading cities.
+            </p>
+            <p>
+              Agentic AI creates intelligent traffic management where autonomous agents continuously optimize traffic flow across entire networks in real-time. Signal optimization agents analyze traffic patterns, pedestrian activity, transit schedules, and weather conditions to dynamically adjust timing at every intersection millisecond-by-millisecond—coordinating signal progressions across corridors to create "green waves" minimizing stops, giving priority to high-volume directions during peak periods, and optimizing for throughput, emissions, or other objectives. Incident detection agents analyze camera feeds, sensor data, and connected vehicle reports to identify accidents, breakdowns, or congestion within seconds, automatically triggering response protocols: alerting emergency services with precise locations, adjusting upstream signals to prevent queue spillover, activating message signs warning drivers and suggesting alternate routes, and coordinating with navigation apps to reroute traffic. Predictive agents forecast congestion before it develops using machine learning models trained on years of patterns, weather impacts, and special events, then proactively adjust signal timing and coordinate with transit agencies to add supplemental service. Emergency vehicle priority agents detect approaching ambulances and fire trucks through GPS and sirens, automatically adjusting signals ahead to create clear paths. The transformation is dramatic: 30% reduction in average travel times, 25% decrease in emissions from reduced idling, 60% faster emergency response, and traffic management centers monitoring thousands of intersections efficiently with AI handling moment-to-moment optimization while humans focus on strategy and infrastructure planning.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white d-none">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">The Traffic Congestion Crisis</h3>

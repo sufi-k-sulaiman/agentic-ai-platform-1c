@@ -140,6 +140,37 @@ export default function SportsEntertainment() {
         </div>
       </section>
 
+      {/* Business & Technology Overview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Sports & Entertainment
+            </h2>
+          </motion.div>
+          
+          <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              The sports and entertainment venue industry generates over $30 billion annually in North America alone, operating stadiums, arenas, amphitheaters, and entertainment complexes hosting millions of fans at professional sports events, concerts, conventions, and shows. Venues compete intensely for entertainment dollars and fan loyalty in an experience economy where consumers choose between attending live events, streaming at home, or countless other entertainment options. Revenue comes from multiple streams: ticket sales (40-50%), concessions and merchandise (25-35%), parking and premium experiences (15-20%), and sponsorship activations (10-15%). However, profitability is challenged by high fixed costs—facilities require expensive maintenance regardless of utilization—and event-day operational complexity coordinating security, concessions, cleaning, parking, and guest services for crowds of 20,000-80,000 arriving and departing within narrow windows. Success requires maximizing revenue per fan through pricing optimization, upselling, and superior experiences that justify premium pricing, while controlling costs through operational efficiency and optimized staffing.
+            </p>
+            <p>
+              Venue business models center on creating compelling fan experiences that drive attendance, spending, and repeat visits while efficiently managing event-day operations across dozens of revenue opportunities and operational touchpoints. Revenue optimization happens through dynamic ticket pricing adjusting rates based on demand, opponent quality, and inventory levels; premium seating and hospitality packages offering exclusive experiences at higher margins; and per-capita spending on concessions, merchandise, and parking. Venues with multiple events—hosting both sports and concerts—maximize facility utilization amortizing fixed costs across more revenue opportunities. Sponsorship revenue depends on demonstrating activation effectiveness, requiring data proving impressions, engagement, and sales impact. Successful venues differentiate through superior fan experiences (comfortable seating, great sightlines, short concession lines, easy parking) that justify premium pricing, operational excellence that delivers seamless experiences for tens of thousands, and data-driven marketing that fills seats and drives spending. Technology investments must deliver rapid ROI given that venues operate only during events—systems saving labor or increasing per-capita spending pay back quickly, while overhead not directly improving operations or revenue is difficult to justify.
+            </p>
+            <p>
+              Venue technology infrastructure includes ticketing platforms managing sales, seat allocation, and season ticket accounts; point-of-sale systems processing concessions and merchandise transactions; access control and security systems managing entry, credential verification, and surveillance; parking management systems handling reservations and payments; customer data platforms aggregating fan information across touchpoints; facility management systems coordinating maintenance and operations; digital signage and in-venue apps providing wayfinding and information; and sponsorship analytics tracking activation performance. Modern venues deploy mobile ordering apps enabling fans to order food from seats; WiFi networks supporting tens of thousands of concurrent users; IoT sensors monitoring crowd flow, restroom usage, and equipment health; and CRM systems managing customer communications and loyalty programs. However, systems remain largely disconnected: ticketing data doesn't inform concession staffing forecasts, parking transactions don't integrate with arrival prediction, and customer data across tickets, concessions, and parking exists in separate silos. Recent AI applications include chatbots handling basic fan inquiries and predictive models forecasting attendance, but comprehensive intelligent automation remains rare.
+            </p>
+            <p>
+              Agentic AI creates intelligent venues where autonomous agents optimize every aspect of operations and fan experience. Dynamic pricing agents continuously adjust ticket prices based on real-time demand signals—team performance trends, weather forecasts, opponent quality, inventory levels, and competitive events—maximizing revenue by $8-15 per ticket on average. Fan experience agents deliver personalized journeys: greeting fans by name through mobile apps, suggesting optimal parking and entry based on predicted crowds, recommending concessions and merchandise based on preferences and purchase history, and providing real-time wayfinding to seats, restrooms, and exits. Mobile ordering agents enable food and drink orders from seats, automatically routing to optimal concession stands to minimize wait and delivering just-in-time preparation reducing food waste. Staffing optimization agents forecast attendance and concession demand by location and time, ensuring adequate coverage during peak rushes without overstaffing during gameplay. Predictive maintenance monitors all venue systems scheduling service before failures disrupt events. Sponsorship analytics track every activation touchpoint providing sponsors with detailed ROI including impressions, engagement duration, and sales correlation. Parking agents guide fans to available spaces via mobile app while processing payments automatically through license plate recognition. Customer data unification creates complete fan profiles enabling marketing campaigns targeting likely attendees with personalized offers. Results: 30% revenue per fan increase, 45% satisfaction improvement, 25% cost reduction, 60% marketing ROI boost—venues create memorable experiences driving loyalty while operating profitably at scale.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
