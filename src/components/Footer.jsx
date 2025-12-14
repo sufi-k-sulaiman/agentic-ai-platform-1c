@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Twitter, Linkedin, Youtube, Github } from 'lucide-react';
 
 const footerLinks = {
   company: [
@@ -34,13 +33,6 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Youtube, href: '#', label: 'YouTube' },
-  { icon: Github, href: '#', label: 'GitHub' },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-[#04050b] text-gray-300">
@@ -57,21 +49,9 @@ export default function Footer() {
               />
               <span className="font-semibold text-xl text-white">1cPlatform</span>
             </Link>
-            <p className="text-sm text-gray-400 leading-relaxed mb-6">
+            <p className="text-sm text-gray-400 leading-relaxed">
               Empowering enterprises with intelligent automation and agentic AI solutions.
             </p>
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#8B2EE5] flex items-center justify-center transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Links Columns */}
