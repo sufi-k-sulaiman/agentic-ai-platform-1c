@@ -121,9 +121,11 @@ export default function DataCenters() {
                     Get started <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
-                <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
-                  Calculate savings
-                </Button>
+                <Link to={createPageUrl('SavingsCalculator')}>
+                  <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
+                    Savings calculator
+                  </Button>
+                </Link>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>

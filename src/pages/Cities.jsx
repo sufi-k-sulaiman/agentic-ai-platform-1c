@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Building, TrendingDown, Database, Workflow, DollarSign, Zap, Users, ArrowRight, CheckCircle, Bot, Activity, Brain, Shield, Cloud, Globe, Layers, Code, Server } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 const challenges = [
@@ -381,12 +383,16 @@ export default function Cities() {
                 Transform urban operations with Agentic AI that optimizes infrastructure, improves services, and delights citizens—cutting costs by 30% while building a sustainable future.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-                  Request demo <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
-                  Smart city guide
-                </Button>
+                <Link to={createPageUrl('Onboarding')}>
+                  <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                    Get started <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link to={createPageUrl('SavingsCalculator')}>
+                  <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
+                    Savings calculator
+                  </Button>
+                </Link>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
