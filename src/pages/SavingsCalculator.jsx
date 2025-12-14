@@ -12,17 +12,28 @@ import PageMeta from '@/components/PageMeta';
 
 export default function SavingsCalculator() {
   const [employees, setEmployees] = useState(100);
+  const [departments, setDepartments] = useState(5);
+  const [teamSize, setTeamSize] = useState(20);
+  const [totalFTEs, setTotalFTEs] = useState(100);
+  const [remote, setRemote] = useState(30);
+  const [hybrid, setHybrid] = useState(40);
   const [avgSalary, setAvgSalary] = useState(75000);
+  const [avgLaborCost, setAvgLaborCost] = useState(85000);
   const [hoursPerWeek, setHoursPerWeek] = useState(10);
+  const [dailyTasks, setDailyTasks] = useState(15);
+  const [numSystems, setNumSystems] = useState(8);
+  const [softwareTypes, setSoftwareTypes] = useState('CRM, ERP, Email, Slack');
   const [automationRate, setAutomationRate] = useState(70);
 
   // Calculations
-  const annualLaborCost = employees * avgSalary;
-  const hoursSavedPerYear = employees * hoursPerWeek * 52 * (automationRate / 100);
-  const costPerHour = avgSalary / 2080; // Standard work year hours
+  const annualLaborCost = totalFTEs * avgLaborCost;
+  const hoursSavedPerYear = totalFTEs * hoursPerWeek * 52 * (automationRate / 100);
+  const costPerHour = avgLaborCost / 2080; // Standard work year hours
   const annualSavings = hoursSavedPerYear * costPerHour;
   const threeYearSavings = annualSavings * 3;
-  const productivityGain = (hoursSavedPerYear / (employees * 2080)) * 100;
+  const productivityGain = (hoursSavedPerYear / (totalFTEs * 2080)) * 100;
+  const tasksAutomatedDaily = dailyTasks * (automationRate / 100) * totalFTEs;
+  const systemsIntegrationValue = numSystems * 5000; // Estimated value per system integration
 
   return (
     <div className="bg-white">
@@ -67,22 +78,62 @@ export default function SavingsCalculator() {
                   <CardTitle className="text-2xl">Your Organization</CardTitle>
                   <p className="text-gray-600">Enter your details to calculate potential savings</p>
                 </CardHeader>
-                <CardContent className="space-y-8">
+                <CardContent className="space-y-6">
                   <div className="space-y-3">
-                    <Label className="text-base">Number of Employees</Label>
+                    <Label className="text-base">Number of Departments</Label>
                     <Input
                       type="number"
-                      value={employees}
-                      onChange={(e) => setEmployees(Math.max(1, parseInt(e.target.value) || 1))}
+                      value={departments}
+                      onChange={(e) => setDepartments(Math.max(1, parseInt(e.target.value) || 1))}
+                      className="h-12 text-lg"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label className="text-base">Average Team Size</Label>
+                    <Input
+                      type="number"
+                      value={teamSize}
+                      onChange={(e) => setTeamSize(Math.max(1, parseInt(e.target.value) || 1))}
+                      className="h-12 text-lg"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label className="text-base">Total FTEs (Full-Time Employees)</Label>
+                    <Input
+                      type="number"
+                      value={totalFTEs}
+                      onChange={(e) => setTotalFTEs(Math.max(1, parseInt(e.target.value) || 1))}
                       className="h-12 text-lg"
                     />
                     <Slider
-                      value={[employees]}
-                      onValueChange={([value]) => setEmployees(value)}
+                      value={[totalFTEs]}
+                      onValueChange={([value]) => setTotalFTEs(value)}
                       min={1}
                       max={10000}
                       step={10}
                       className="mt-2"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label className="text-base">Remote Employees (%)</Label>
+                    <Input
+                      type="number"
+                      value={remote}
+                      onChange={(e) => setRemote(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
+                      className="h-12 text-lg"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label className="text-base">Hybrid Employees (%)</Label>
+                    <Input
+                      type="number"
+                      value={hybrid}
+                      onChange={(e) => setHybrid(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
+                      className="h-12 text-lg"
                     />
                   </div>
 
@@ -105,6 +156,24 @@ export default function SavingsCalculator() {
                   </div>
 
                   <div className="space-y-3">
+                    <Label className="text-base">Average Labour Cost ($)</Label>
+                    <Input
+                      type="number"
+                      value={avgLaborCost}
+                      onChange={(e) => setAvgLaborCost(Math.max(0, parseInt(e.target.value) || 0))}
+                      className="h-12 text-lg"
+                    />
+                    <Slider
+                      value={[avgLaborCost]}
+                      onValueChange={([value]) => setAvgLaborCost(value)}
+                      min={40000}
+                      max={250000}
+                      step={5000}
+                      className="mt-2"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
                     <Label className="text-base">Manual Hours Per Week (per employee)</Label>
                     <Input
                       type="number"
@@ -119,6 +188,37 @@ export default function SavingsCalculator() {
                       max={40}
                       step={1}
                       className="mt-2"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label className="text-base">Daily Tasks Per Employee</Label>
+                    <Input
+                      type="number"
+                      value={dailyTasks}
+                      onChange={(e) => setDailyTasks(Math.max(1, parseInt(e.target.value) || 1))}
+                      className="h-12 text-lg"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label className="text-base">Number of Systems Used</Label>
+                    <Input
+                      type="number"
+                      value={numSystems}
+                      onChange={(e) => setNumSystems(Math.max(1, parseInt(e.target.value) || 1))}
+                      className="h-12 text-lg"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label className="text-base">Software Types Used</Label>
+                    <Input
+                      type="text"
+                      value={softwareTypes}
+                      onChange={(e) => setSoftwareTypes(e.target.value)}
+                      placeholder="e.g., CRM, ERP, Email, Slack"
+                      className="h-12 text-lg"
                     />
                   </div>
 
@@ -166,7 +266,7 @@ export default function SavingsCalculator() {
                       ${Math.round(annualSavings).toLocaleString()}
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20">
+                  <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/20">
                     <div>
                       <p className="text-white/80 text-sm mb-1">3-Year Savings</p>
                       <p className="text-2xl font-bold">
@@ -177,6 +277,12 @@ export default function SavingsCalculator() {
                       <p className="text-white/80 text-sm mb-1">Productivity Gain</p>
                       <p className="text-2xl font-bold">
                         {productivityGain.toFixed(1)}%
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-white/80 text-sm mb-1">Tasks/Day</p>
+                      <p className="text-2xl font-bold">
+                        {Math.round(tasksAutomatedDaily).toLocaleString()}
                       </p>
                     </div>
                   </div>
@@ -204,9 +310,35 @@ export default function SavingsCalculator() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-3xl font-bold text-gray-900">
-                      ${Math.round(annualSavings / employees).toLocaleString()}
+                      ${Math.round(annualSavings / totalFTEs).toLocaleString()}
                     </p>
                     <p className="text-sm text-gray-600">annual savings</p>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader className="pb-3">
+                    <DollarSign className="w-8 h-8 text-[#8B2EE5] mb-2" />
+                    <CardTitle className="text-lg">Departments</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-3xl font-bold text-gray-900">
+                      {departments}
+                    </p>
+                    <p className="text-sm text-gray-600">optimized teams</p>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader className="pb-3">
+                    <TrendingUp className="w-8 h-8 text-[#8B2EE5] mb-2" />
+                    <CardTitle className="text-lg">Systems</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-3xl font-bold text-gray-900">
+                      {numSystems}
+                    </p>
+                    <p className="text-sm text-gray-600">integrated</p>
                   </CardContent>
                 </Card>
               </div>
@@ -218,9 +350,11 @@ export default function SavingsCalculator() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">ROI Breakdown</h3>
                       <ul className="space-y-2 text-sm text-gray-700">
-                        <li>• Current annual labor cost: ${Math.round(annualLaborCost).toLocaleString()}</li>
+                        <li>• Total FTEs: {totalFTEs} ({remote}% remote, {hybrid}% hybrid)</li>
+                        <li>• Annual labor cost: ${Math.round(annualLaborCost).toLocaleString()}</li>
                         <li>• Hours automated: {Math.round(hoursSavedPerYear).toLocaleString()} hrs/year</li>
-                        <li>• Cost per hour: ${costPerHour.toFixed(2)}</li>
+                        <li>• Daily tasks automated: {Math.round(tasksAutomatedDaily).toLocaleString()}</li>
+                        <li>• Systems integrated: {numSystems} ({softwareTypes})</li>
                         <li>• Expected ROI: {((annualSavings / annualLaborCost) * 100).toFixed(1)}%</li>
                       </ul>
                     </div>
