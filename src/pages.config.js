@@ -15,7 +15,6 @@ import Community from './pages/Community';
 import Blog from './pages/Blog';
 import Events from './pages/Events';
 import HelpCenter from './pages/HelpCenter';
-import ContactUs from './pages/ContactUs';
 import Status from './pages/Status';
 import Security from './pages/Security';
 import Privacy from './pages/Privacy';
@@ -36,6 +35,10 @@ import Airports from './pages/Airports';
 import Retail from './pages/Retail';
 import Education from './pages/Education';
 import Onboarding from './pages/Onboarding';
+import Courses from './pages/Courses';
+import DigitalLearningSubscriptions from './pages/DigitalLearningSubscriptions';
+import LearningJourney from './pages/LearningJourney';
+import ProfessionalCertifications from './pages/ProfessionalCertifications';
 import __Layout from './Layout.jsx';
 
 
@@ -57,7 +60,6 @@ export const PAGES = {
     "Blog": Blog,
     "Events": Events,
     "HelpCenter": HelpCenter,
-    "ContactUs": ContactUs,
     "Status": Status,
     "Security": Security,
     "Privacy": Privacy,
@@ -78,6 +80,10 @@ export const PAGES = {
     "Retail": Retail,
     "Education": Education,
     "Onboarding": Onboarding,
+    "Courses": Courses,
+    "DigitalLearningSubscriptions": DigitalLearningSubscriptions,
+    "LearningJourney": LearningJourney,
+    "ProfessionalCertifications": ProfessionalCertifications,
 }
 
 export const pagesConfig = {
