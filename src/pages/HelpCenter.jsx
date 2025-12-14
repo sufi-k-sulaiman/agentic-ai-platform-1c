@@ -13,25 +13,29 @@ const categories = [
     icon: Book,
     title: 'Getting Started',
     description: 'New to 1cPlatform? Start here',
-    articles: 12
+    articles: 12,
+    page: 'GettingStartedGuide'
   },
   {
     icon: HelpCircle,
     title: 'Account & Billing',
     description: 'Manage your subscription',
-    articles: 8
+    articles: 8,
+    page: 'AccountBillingGuide'
   },
   {
     icon: FileQuestion,
     title: 'Technical Support',
     description: 'Troubleshooting guides',
-    articles: 15
+    articles: 15,
+    page: 'TechnicalSupportGuide'
   },
   {
     icon: Video,
     title: 'Video Tutorials',
     description: 'Learn by watching',
-    articles: 20
+    articles: 20,
+    page: 'VideoTutorialsGuide'
   }
 ];
 
@@ -121,29 +125,29 @@ export default function HelpCenter() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {categories.map((category, index) => (
-              <motion.a
-                key={category.title}
-                href="#"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full hover:shadow-xl hover:border-[#8B2EE5]/30 transition-all group cursor-pointer">
-                  <CardHeader>
-                    <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <category.icon className="w-7 h-7 text-[#8B2EE5]" />
-                    </div>
-                    <CardTitle className="text-xl mb-2 group-hover:text-[#8B2EE5] transition-colors">
-                      {category.title}
-                    </CardTitle>
-                    <p className="text-sm text-gray-600">{category.description}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-500">{category.articles} articles</p>
-                  </CardContent>
-                </Card>
-              </motion.a>
+              <Link key={category.title} to={createPageUrl(category.page)}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="h-full hover:shadow-xl hover:border-[#8B2EE5]/30 transition-all group cursor-pointer">
+                    <CardHeader>
+                      <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <category.icon className="w-7 h-7 text-[#8B2EE5]" />
+                      </div>
+                      <CardTitle className="text-xl mb-2 group-hover:text-[#8B2EE5] transition-colors">
+                        {category.title}
+                      </CardTitle>
+                      <p className="text-sm text-gray-600">{category.description}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-gray-500">{category.articles} articles</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
