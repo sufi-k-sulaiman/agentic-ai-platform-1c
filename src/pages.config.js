@@ -53,6 +53,7 @@ import Cyber from './pages/Cyber';
 import JobApplication from './pages/JobApplication';
 import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
+import SearchResults from './pages/SearchResults';
 import __Layout from './Layout.jsx';
 
 
@@ -112,6 +113,7 @@ export const PAGES = {
     "JobApplication": JobApplication,
     "Terms": Terms,
     "Cookies": Cookies,
+    "SearchResults": SearchResults,
 }
 
 export const pagesConfig = {
