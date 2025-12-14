@@ -36,7 +36,7 @@ const solutions = [
     category: 'Customer Experience',
     items: [
       'Personalized product recommendations',
-      '24/7 AI shopping assistant',
+      '24/7 Agentic Ai shopping assistant',
       'Virtual try-on and styling advice',
       'Predictive search and discovery'
     ]
@@ -95,7 +95,7 @@ export default function Retail() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform retail operations with Agentic AI that personalizes shopping, optimizes inventory, and cuts costs by 30%—boosting conversion by 35%.
+                Transform retail operations with Agentic Ai that personalizes shopping, optimizes inventory, and cuts costs by 30%—boosting conversion by 35%.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
@@ -134,7 +134,7 @@ export default function Retail() {
               Retail challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms retail operations
+              How Agentic Ai transforms retail operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -154,7 +154,7 @@ export default function Retail() {
                         <p className="text-gray-600">{challenge.problem}</p>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-green-600 mb-2">✓ AI Solution</div>
+                        <div className="text-sm font-semibold text-green-600 mb-2">✓ Agentic Ai Solution</div>
                         <p className="text-gray-900 font-medium">{challenge.solution}</p>
                       </div>
                     </div>
@@ -173,7 +173,7 @@ export default function Retail() {
               Complete retail automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI managing every aspect of retail operations
+              Agentic Ai managing every aspect of retail operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ export default function Retail() {
               Ready to transform retail?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join leading retailers growing revenue with Agentic AI
+              Join leading retailers growing revenue with Agentic Ai
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Get started <ArrowRight className="ml-2 w-5 h-5" />

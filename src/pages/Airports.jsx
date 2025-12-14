@@ -44,7 +44,7 @@ const solutions = [
   {
     category: 'Passenger Services',
     items: [
-      '24/7 AI concierge for flight and airport info',
+      '24/7 Agentic Ai concierge for flight and airport info',
       'Personalized wayfinding and navigation',
       'Queue optimization for security and boarding',
       'Automated rebooking and customer service'
@@ -53,7 +53,7 @@ const solutions = [
   {
     category: 'Safety & Security',
     items: [
-      'AI-powered threat detection and screening',
+      'Agentic Ai-powered threat detection and screening',
       'Predictive maintenance for critical systems',
       'Automated incident response coordination',
       'Compliance monitoring and reporting'
@@ -89,7 +89,7 @@ export default function Airports() {
                 Airports
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Agentic AI for
+                Agentic Ai for
                 <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
                   smarter airports
                 </span>
@@ -134,7 +134,7 @@ export default function Airports() {
               Airport challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms airport operations
+              How Agentic Ai transforms airport operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -154,7 +154,7 @@ export default function Airports() {
                         <p className="text-gray-600">{challenge.problem}</p>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-green-600 mb-2">✓ AI Solution</div>
+                        <div className="text-sm font-semibold text-green-600 mb-2">✓ Agentic Ai Solution</div>
                         <p className="text-gray-900 font-medium">{challenge.solution}</p>
                       </div>
                     </div>
@@ -173,7 +173,7 @@ export default function Airports() {
               Complete airport automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI managing every aspect of airport operations
+              Agentic Ai managing every aspect of airport operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ export default function Airports() {
               Ready to transform your airport?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join leading airports worldwide optimizing operations with Agentic AI
+              Join leading airports worldwide optimizing operations with Agentic Ai
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />

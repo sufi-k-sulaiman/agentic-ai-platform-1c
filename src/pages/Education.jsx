@@ -35,7 +35,7 @@ const solutions = [
   {
     category: 'Student Experience',
     items: [
-      '24/7 AI tutor for personalized learning support',
+      '24/7 Agentic Ai tutor for personalized learning support',
       'Adaptive learning paths based on progress',
       'Intelligent course recommendations',
       'Mental health and wellness monitoring'
@@ -95,7 +95,7 @@ export default function Education() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform education with Agentic AI that personalizes learning, automates admin work, and improves outcomes—boosting engagement by 45% while saving 60% of admin time.
+                Transform education with Agentic Ai that personalizes learning, automates admin work, and improves outcomes—boosting engagement by 45% while saving 60% of admin time.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
@@ -134,7 +134,7 @@ export default function Education() {
               Education challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms educational institutions
+              How Agentic Ai transforms educational institutions
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -154,7 +154,7 @@ export default function Education() {
                         <p className="text-gray-600">{challenge.problem}</p>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-green-600 mb-2">✓ AI Solution</div>
+                        <div className="text-sm font-semibold text-green-600 mb-2">✓ Agentic Ai Solution</div>
                         <p className="text-gray-900 font-medium">{challenge.solution}</p>
                       </div>
                     </div>
@@ -173,7 +173,7 @@ export default function Education() {
               Complete education platform
             </h2>
             <p className="text-xl text-gray-600">
-              AI managing every aspect of educational operations
+              Agentic Ai managing every aspect of educational operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ export default function Education() {
               Ready to transform education?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join leading institutions improving outcomes with Agentic AI
+              Join leading institutions improving outcomes with Agentic Ai
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Schedule consultation <ArrowRight className="ml-2 w-5 h-5" />

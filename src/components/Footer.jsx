@@ -11,7 +11,7 @@ const footerLinks = {
     { label: 'Newsroom', href: createPageUrl('Newsroom') },
   ],
   products: [
-    { label: 'Agentic AI', href: createPageUrl('AgenticAI') },
+    { label: 'Agentic Ai', href: createPageUrl('AgenticAI') },
     { label: 'Enterprise Suite', href: createPageUrl('EnterpriseSuite') },
     { label: 'Cloud Platform', href: createPageUrl('CloudPlatform') },
     { label: 'Developer Tools', href: createPageUrl('DeveloperTools') },
@@ -50,7 +50,7 @@ export default function Footer() {
               <span className="font-semibold text-xl text-white">1cPlatform</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Empowering enterprises with intelligent automation and agentic AI solutions.
+              Empowering enterprises with intelligent automation and Agentic Ai solutions.
             </p>
           </div>
 

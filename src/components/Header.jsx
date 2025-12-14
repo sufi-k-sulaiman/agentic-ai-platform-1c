@@ -10,7 +10,7 @@ const navItems = [
   { 
     label: 'Products', 
     submenu: [
-      { label: 'Agentic AI', description: 'Autonomous AI agents', href: createPageUrl('AgenticAI') },
+      { label: 'Agentic Ai', description: 'Autonomous Agentic Ai', href: createPageUrl('AgenticAI') },
       { label: 'Enterprise Suite', description: 'Complete business management', href: createPageUrl('EnterpriseSuite') },
       { label: 'Cloud Platform', description: 'Scalable infrastructure', href: createPageUrl('CloudPlatform') },
       { label: 'Developer Tools', description: 'APIs and SDKs', href: createPageUrl('DeveloperTools') },
