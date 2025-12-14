@@ -45,11 +45,11 @@ export default function SavingsCalculator() {
   const hoursPerTaskEstimate = 0.5; // Average hours per task
   const hoursSavedPerYear = dailyTasks * totalFTEs * 252 * hoursPerTaskEstimate * (automationRate / 100); // 252 work days
   const costPerHour = avgLaborCost / 2080; // Standard work year hours
+  const softwareIntegrationBonus = softwareTypes.length * 2500; // Bonus savings per software integrated
   const annualSavings = (hoursSavedPerYear * costPerHour) + softwareIntegrationBonus;
   const threeYearSavings = annualSavings * 3;
   const productivityGain = (hoursSavedPerYear / (totalFTEs * 2080)) * 100;
   const tasksAutomatedDaily = dailyTasks * (automationRate / 100) * totalFTEs;
-  const softwareIntegrationBonus = softwareTypes.length * 2500; // Bonus savings per software integrated
 
   return (
     <div className="bg-white">
