@@ -252,10 +252,10 @@ export default function Newsroom() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <p className="text-[#8B2EE5] font-semibold mb-6">NEWSROOM</p>
+            <p className="text-[#6209e6] font-semibold mb-6">NEWSROOM</p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
               Latest news
-              <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">
                 and updates
               </span>
             </h1>
@@ -269,12 +269,12 @@ export default function Newsroom() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="flex-1 h-12 px-6 rounded-full border-2 border-[#8B2EE5]/20 focus:border-[#8B2EE5] focus:outline-none transition-colors"
+                className="flex-1 h-12 px-6 rounded-full border-2 border-[#6209e6]/20 focus:border-[#6209e6] focus:outline-none transition-colors"
               />
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-12"
+                className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-8 h-12"
               >
                 {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </Button>
@@ -308,7 +308,7 @@ export default function Newsroom() {
               className="grid lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-3xl overflow-hidden p-8 lg:p-12"
             >
               <div>
-                <Badge className="bg-[#8B2EE5] text-white mb-4">{filteredNews[0].category}</Badge>
+                <Badge className="bg-[#6209e6] text-white mb-4">{filteredNews[0].category}</Badge>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                   {filteredNews[0].title}
                 </h2>
@@ -319,7 +319,7 @@ export default function Newsroom() {
                   <Calendar className="w-5 h-5" />
                   <span>{filteredNews[0].date}</span>
                 </div>
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full">
+                <Button className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full">
                   Read full story <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>
@@ -361,7 +361,7 @@ export default function Newsroom() {
                   </div>
                 </div>
                 <Badge variant="secondary" className="mb-3">{item.category}</Badge>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#8B2EE5] transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#6209e6] transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{item.excerpt}</p>
@@ -390,7 +390,7 @@ export default function Newsroom() {
           </p>
           <div className="bg-white rounded-2xl p-8 border border-gray-200">
             <Link to={createPageUrl('Contact')}>
-              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-14 text-lg">
+              <Button className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-10 h-14 text-lg">
                 Contact media team <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>

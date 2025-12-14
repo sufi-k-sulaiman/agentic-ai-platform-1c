@@ -139,12 +139,12 @@ export default function Events() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="w-16 h-16 bg-[#8B2EE5] rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-[#6209e6] rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Calendar className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
               Upcoming
-              <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">
                 events
               </span>
             </h1>
@@ -179,7 +179,7 @@ export default function Events() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <Card className="overflow-hidden border-2 border-[#8B2EE5]">
+              <Card className="overflow-hidden border-2 border-[#6209e6]">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="relative aspect-video lg:aspect-auto">
                     <img
@@ -187,7 +187,7 @@ export default function Events() {
                       alt={featuredEvent.title}
                       className="w-full h-full object-cover"
                     />
-                    <Badge className="absolute top-4 left-4 bg-[#8B2EE5] text-white">
+                    <Badge className="absolute top-4 left-4 bg-[#6209e6] text-white">
                       Featured Event
                     </Badge>
                   </div>
@@ -198,7 +198,7 @@ export default function Events() {
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                          <Calendar className="w-5 h-5 text-[#8B2EE5]" />
+                        <Calendar className="w-5 h-5 text-[#6209e6]" />
                         </div>
                         <div>
                           <div className="text-sm text-gray-500">Date</div>
@@ -207,7 +207,7 @@ export default function Events() {
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                          <MapPin className="w-5 h-5 text-[#8B2EE5]" />
+                        <MapPin className="w-5 h-5 text-[#6209e6]" />
                         </div>
                         <div>
                           <div className="text-sm text-gray-500">Location</div>
@@ -216,7 +216,7 @@ export default function Events() {
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                          <Users className="w-5 h-5 text-[#8B2EE5]" />
+                        <Users className="w-5 h-5 text-[#6209e6]" />
                         </div>
                         <div>
                           <div className="text-sm text-gray-500">Attendees</div>
@@ -225,7 +225,7 @@ export default function Events() {
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                          <Video className="w-5 h-5 text-[#8B2EE5]" />
+                        <Video className="w-5 h-5 text-[#6209e6]" />
                         </div>
                         <div>
                           <div className="text-sm text-gray-500">Format</div>
@@ -236,7 +236,7 @@ export default function Events() {
 
                     <Button 
                       onClick={() => handleRegisterClick(featuredEvent)}
-                      className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full w-full md:w-auto"
+                      className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full w-full md:w-auto"
                     >
                       Register now <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -272,7 +272,7 @@ export default function Events() {
                     </Badge>
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-xl mb-2 group-hover:text-[#8B2EE5] transition-colors">
+                    <CardTitle className="text-xl mb-2 group-hover:text-[#6209e6] transition-colors">
                       {event.title}
                     </CardTitle>
                     <p className="text-gray-600 text-sm">{event.description}</p>
@@ -309,7 +309,7 @@ export default function Events() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-24 bg-gradient-to-br from-[#8B2EE5] to-[#7C3AED]">
+      <section className="py-24 bg-gradient-to-br from-[#6209e6] to-[#5008c5]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -334,7 +334,7 @@ export default function Events() {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="h-14 px-8 rounded-full bg-white text-[#8B2EE5] hover:bg-white/90 font-semibold"
+                className="h-14 px-8 rounded-full bg-white text-[#6209e6] hover:bg-white/90 font-semibold"
               >
                 {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </Button>

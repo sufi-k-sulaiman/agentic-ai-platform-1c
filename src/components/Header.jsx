@@ -89,7 +89,7 @@ export default function Header() {
               className="h-9 w-9"
             />
             <span className="font-semibold text-xl tracking-tight">
-              <span className="text-[#8B2EE5]">1c</span><span className="text-gray-900">Platform</span>
+              <span className="text-[#6209e6]">1c</span><span className="text-gray-900">Platform</span>
             </span>
           </Link>
 
@@ -101,7 +101,7 @@ export default function Header() {
                   <NavigationMenuPrimitive.Item key={item.label} className="relative">
                     {item.submenu ? (
                       <>
-                        <NavigationMenuPrimitive.Trigger className="text-gray-600 hover:text-[#8B2EE5] bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5 px-4 py-2 flex items-center gap-1 group">
+                        <NavigationMenuPrimitive.Trigger className="text-gray-600 hover:text-[#6209e6] bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5 px-4 py-2 flex items-center gap-1 group">
                           {item.label}
                           <ChevronDown className="w-3 h-3 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                         </NavigationMenuPrimitive.Trigger>
@@ -140,7 +140,7 @@ export default function Header() {
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => setSearchOpen(true)}
-              className="p-2 text-gray-600 hover:text-[#8B2EE5]"
+              className="p-2 text-gray-600 hover:text-[#6209e6]"
             >
               <Search className="w-5 h-5" />
             </button>
@@ -167,7 +167,7 @@ export default function Header() {
                     <Link
                       key={subitem.label}
                       to={subitem.href}
-                      className="block px-4 py-2.5 ml-4 text-gray-700 hover:bg-purple-50 hover:text-[#8B2EE5] rounded-lg text-sm"
+                      className="block px-4 py-2.5 ml-4 text-gray-700 hover:bg-purple-50 hover:text-[#6209e6] rounded-lg text-sm"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <div className="font-medium">{subitem.label}</div>
