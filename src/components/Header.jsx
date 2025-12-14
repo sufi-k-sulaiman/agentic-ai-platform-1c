@@ -98,7 +98,7 @@ export default function Header() {
                           {item.label}
                           <ChevronDown className="w-3 h-3 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                         </NavigationMenuPrimitive.Trigger>
-                        <NavigationMenuPrimitive.Content className="absolute left-1/2 -translate-x-1/2 top-full mt-2 data-[motion=from-start]:animate-in data-[motion=from-end]:animate-in data-[motion=to-start]:animate-out data-[motion=to-end]:animate-out">
+                        <NavigationMenuPrimitive.Content className="absolute left-1/2 -translate-x-1/2 top-full mt-2 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0 data-[state=open]:zoom-in-95 data-[state=closed]:zoom-out-95 data-[state=closed]:duration-200 data-[state=open]:duration-200">
                           <ul className={`grid gap-1 p-4 bg-white rounded-xl shadow-lg border border-gray-100 ${item.label === 'Verticals' ? 'w-[500px] grid-cols-2' : 'w-[400px]'}`}>
                             {item.submenu.map((subitem) => (
                               <li key={subitem.label}>
