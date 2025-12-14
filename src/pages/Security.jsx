@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const certifications = [
   { name: 'SOC 2 Type II', status: 'Certified', icon: Shield },
@@ -89,6 +90,12 @@ const practices = [
 export default function Security() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Security"
+        description="Enterprise-grade security with SOC 2, ISO 27001, GDPR, and HIPAA compliance. AES-256 encryption, zero-knowledge architecture, and 24/7 threat detection."
+        url="/security"
+        keywords={['security', 'compliance', 'SOC 2', 'ISO 27001', 'GDPR', 'data protection', 'encryption']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

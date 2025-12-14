@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Eye, Lock, FileText, Users, Globe } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const principles = [
   {
@@ -28,6 +29,12 @@ const principles = [
 export default function Privacy() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Privacy Policy"
+        description="Our commitment to protecting your privacy. Transparent data practices, full control over your data, and compliance with global privacy regulations."
+        url="/privacy"
+        keywords={['privacy policy', 'data privacy', 'GDPR compliance', 'data protection', 'user rights']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

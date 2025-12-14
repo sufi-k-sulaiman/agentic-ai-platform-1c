@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check, ArrowRight, Zap } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import PageMeta from '@/components/PageMeta';
 
 const plans = [
   {
@@ -72,6 +73,12 @@ export default function Pricing() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Pricing"
+        description="Simple, transparent pricing for AI automation. Free Starter plan, Professional from $99/mo, Enterprise custom pricing. No hidden fees."
+        url="/pricing"
+        keywords={['AI pricing', 'platform pricing', 'enterprise AI cost', 'subscription plans', 'AI automation pricing']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

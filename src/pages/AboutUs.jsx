@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Target, Users, Globe, Award } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const values = [
   {
@@ -38,6 +39,12 @@ const timeline = [
 export default function AboutUs() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="About Us"
+        description="Building the future of intelligent enterprise. 2000+ team members, 500+ enterprise clients, $2.5B valuation. Our mission is to empower every organization with autonomous AI."
+        url="/about-us"
+        keywords={['about 1C Platform', 'AI company', 'enterprise AI leader', 'company values', 'AI innovation']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
