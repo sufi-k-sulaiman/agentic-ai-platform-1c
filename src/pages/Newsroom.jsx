@@ -11,11 +11,83 @@ import PageMeta from '@/components/PageMeta';
 const news = [
   {
     category: 'Press Release',
-    title: '1cPublishing Launches Agentic Ai to Solve the "12-App Problem" for Professionals',
-    excerpt: 'New Agentic AI platform consolidates workflows, data visualization, real-time market intelligence, geospatial analysis, and AI podcast generation into a unified solution for professionals.',
+    title: 'How 1cPublishing is Redefining Market Intelligence Through Agentic AI',
+    excerpt: 'Discover how Agentic AI is transforming market intelligence by providing real-time insights, predictive analytics, and unified data streams for strategic decision-making.',
+    date: 'December 12, 2024',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+    icon: TrendingUp
+  },
+  {
+    category: 'Press Release',
+    title: 'Agentic AI from 1cPublishing: A New Era of Integrated Intelligence',
+    excerpt: 'Explore how 1cPublishing\'s Agentic AI ushers in a new era of integrated intelligence by consolidating multiple data streams and tools into one cohesive platform.',
     date: 'December 10, 2024',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
     icon: Zap
+  },
+  {
+    category: 'Product Launch',
+    title: '1cPublishing Launches Agentic Ai to Solve the "12-App Problem" for Professionals',
+    excerpt: 'New Agentic AI platform consolidates workflows, data visualization, real-time market intelligence, geospatial analysis, and AI podcast generation into a unified solution for professionals.',
+    date: 'December 10, 2024',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    icon: Zap
+  },
+  {
+    category: 'Product Launch',
+    title: 'How SearchPods by 1cPublishing is Transforming Professional Intelligence Consumption',
+    excerpt: 'SearchPods revolutionizes how professionals consume intelligence through AI-generated podcasts that deliver on-demand insights in an engaging audio format.',
+    date: 'December 11, 2024',
+    image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800',
+    icon: Zap
+  },
+  {
+    category: 'Press Release',
+    title: 'Why Search Pods is Emerging as the Smartest Way to Access On-Demand Intelligence',
+    excerpt: 'Search Pods transforms complex data into digestible audio intelligence, making it easier for busy professionals to stay informed on-the-go.',
+    date: 'December 11, 2024',
+    image: 'https://images.unsplash.com/photo-1590602846989-e99596d2a6ee?w=800',
+    icon: TrendingUp
+  },
+  {
+    category: 'Product Launch',
+    title: 'Agentic AI from 1cPublishing Redefines Geospatial Intelligence',
+    excerpt: 'Discover how 1cPublishing\'s Agentic AI brings powerful geospatial intelligence capabilities, enabling location-based insights and spatial data analysis.',
+    date: 'December 9, 2024',
+    image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800',
+    icon: Zap
+  },
+  {
+    category: 'Press Release',
+    title: '1cPublishing\'s Agentic AI Brings Fresh Clarity to Geospatial Intelligence',
+    excerpt: 'New geospatial intelligence features provide unprecedented clarity in location-based data analysis and visualization for enterprise decision-makers.',
+    date: 'December 9, 2024',
+    image: 'https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=800',
+    icon: TrendingUp
+  },
+  {
+    category: 'Press Release',
+    title: 'Mind Mapping is Becoming the Heart of Modern Data Strategy',
+    excerpt: 'Explore how neural-inspired mind mapping technology is transforming modern data strategy and becoming essential for knowledge workers and data teams.',
+    date: 'December 8, 2024',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    icon: TrendingUp
+  },
+  {
+    category: 'Press Release',
+    title: 'How 1cPublishing is Redefining Data Intelligence Through Learning',
+    excerpt: 'AI-powered learning capabilities enable continuous improvement and adaptation, making data intelligence more accessible and actionable for all users.',
+    date: 'December 8, 2024',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800',
+    icon: TrendingUp
+  },
+  {
+    category: 'Press Release',
+    title: 'AI is Redefining Digital Intelligence',
+    excerpt: 'The future of digital intelligence is here. Discover how AI-powered platforms are fundamentally changing how organizations process, analyze, and act on information.',
+    date: 'December 7, 2024',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    icon: TrendingUp
   },
   {
     category: 'Press Release',
@@ -30,7 +102,7 @@ const news = [
     title: '1cPublishing Unveils Agentic Ai: Next-Generation Platform to Transform Data',
     excerpt: 'Platform powered by Agentic Ai that reviews stock markets and boosts productivity through powerful knowledge visualization and exploration.',
     date: 'December 20, 2024',
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800',
     icon: Zap
   },
   {
