@@ -141,22 +141,19 @@ export default function Healthcare() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="prose prose-lg max-w-none">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Healthcare's Administrative Crisis</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Healthcare Challenge
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Healthcare drowns in administrative burden that steals time from patient care: physicians spend 2 hours documenting for every 1 hour with patients, clicking through EHR screens to satisfy billing requirements rather than focusing on clinical decisions. Nurses spend 25% of their shifts on documentation, medication reconciliation, and care coordination phone calls rather than direct patient care. Prior authorizations for procedures, medications, and imaging require staff to compile clinical notes, submit forms, and spend hours on hold with insurance companies—delaying necessary care by days or weeks. Medical coding requires specialized staff to translate physician notes into billing codes, a process prone to errors that cause claim denials and revenue loss. Patient scheduling involves phone tag, manual calendar management, and insurance verification—creating friction that drives patients to competitors offering online booking.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Care coordination breaks down across fragmented systems: patients discharged from hospitals have follow-up appointments missed because primary care physicians never receive discharge summaries. Lab results and imaging reports sit unread in different systems, requiring duplicate tests that waste money and expose patients to unnecessary radiation. Medication lists become inaccurate as patients see multiple providers who prescribe and discontinue drugs in separate systems. Patient inquiries about bills, test results, and prescription refills overwhelm phone lines and patient portals, requiring staff to manually look up information across multiple databases. The result is dangerous care gaps, frustrated patients and staff, and administrative costs consuming 25-30% of healthcare spending—money that should fund patient care instead of paperwork.
-            </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Clinical Intelligence Automation</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Agentic AI liberates healthcare from administrative burden through intelligent agents that handle complete workflows autonomously. Documentation AI listens to patient encounters, automatically generating clinical notes, updating problem lists, and suggesting orders—reducing physician documentation time by 70% while improving note quality. Medical coding agents analyze clinical notes to assign accurate billing codes, check for documentation requirements, and flag potential denials before claims submit—improving first-pass claim acceptance from 65% to 95%. Prior authorization AI automatically gathers required clinical information, submits requests electronically, follows up on status, and escalates delays—reducing authorization time from weeks to hours while freeing staff for patient-facing work. Scheduling agents handle patient requests 24/7 via chat, phone, or portal, checking insurance eligibility, finding optimal appointment times, sending reminders, and managing cancellations automatically.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Care coordination becomes seamless through AI agents that monitor every patient: discharge summaries automatically route to primary care physicians with recommended follow-up, lab and imaging results trigger notifications to ordering physicians, medication reconciliation happens automatically across all prescribing systems, and patient outreach agents proactively contact patients about needed preventive care or chronic disease management. Patient service AI handles 75% of routine inquiries instantly—answering questions about bills, providing test results with context, processing prescription refills, and scheduling follow-ups. Clinical staff finally practice at the top of their license, spending time on complex clinical decision-making and patient relationships rather than paperwork. Patient satisfaction soars 45% from reduced wait times and instant access to information. Healthcare becomes more accessible and affordable as administrative costs drop 40%, enabling organizations to serve more patients with better outcomes while maintaining the compliance and quality that healthcare demands.
             </p>
           </div>
         </div>
