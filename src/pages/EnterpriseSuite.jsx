@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, DollarSign, Users, Package, BarChart, FileText, Calendar, Briefcase, Globe, TrendingUp, Shield, Zap, CheckCircle } from 'lucide-react';
 import { BarChart as RechartsBar, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import PageMeta from '@/components/PageMeta';
 
 const revenueData = [
   { month: 'Jan', revenue: 45000, expenses: 32000, profit: 13000 },
@@ -77,6 +78,12 @@ const benefits = [
 export default function EnterpriseSuite() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Enterprise Suite"
+        description="Unified ERP, CRM, and business management platform powered by AI. 60% faster processes, 45% cost reduction. Complete business modules for your entire enterprise."
+        url="/enterprise-suite"
+        keywords={['enterprise suite', 'ERP', 'CRM', 'business management', 'financial management', 'HR payroll', 'supply chain']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

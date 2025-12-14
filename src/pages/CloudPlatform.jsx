@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Cloud, Server, Lock, Zap, Globe, TrendingUp, Shield, Database, CheckCircle, Activity } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
+import PageMeta from '@/components/PageMeta';
 
 const performanceData = [
   { time: '00:00', requests: 12000, latency: 45 },
@@ -69,6 +70,12 @@ const specs = [
 export default function CloudPlatform() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Cloud Platform"
+        description="Enterprise cloud infrastructure built for AI workloads. 99.99% uptime SLA, auto-scaling, global edge network. Deploy across 32 regions with Kubernetes-native platform."
+        url="/cloud-platform"
+        keywords={['cloud platform', 'AI infrastructure', 'Kubernetes', 'auto-scaling', 'edge network', 'managed databases']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />

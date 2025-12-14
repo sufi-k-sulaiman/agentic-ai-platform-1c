@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ShoppingBag, TrendingDown, Database, Workflow, DollarSign, Users, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -80,6 +81,12 @@ const metrics = [
 export default function Retail() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Retail AI Solutions"
+        description="Transform retail with AI-powered personalization and inventory optimization. 35% conversion lift, 20% margin growth, 30% cost reduction through automation."
+        url="/retail"
+        keywords={['retail AI', 'inventory optimization', 'personalization', 'dynamic pricing', 'customer experience', 'retail automation']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

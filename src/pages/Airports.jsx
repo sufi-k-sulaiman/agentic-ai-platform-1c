@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plane, TrendingDown, Database, Workflow, DollarSign, Users, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -80,6 +81,12 @@ const metrics = [
 export default function Airports() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Airport AI Solutions"
+        description="AI-powered airport operations optimization. 35% cost reduction, 25% better on-time performance, 40% higher passenger satisfaction through automated operations."
+        url="/airports"
+        keywords={['airport AI', 'airport operations', 'flight delays', 'passenger experience', 'gate optimization', 'aviation technology']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

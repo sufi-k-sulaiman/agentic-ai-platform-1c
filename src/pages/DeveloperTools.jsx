@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Code, Terminal, Book, Boxes, Webhook, Cpu, CheckCircle, Clock, Zap } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import PageMeta from '@/components/PageMeta';
 
 const apiPerformance = [
   { endpoint: 'Auth', avgLatency: 28, requests: 450000 },
@@ -82,6 +83,12 @@ console.log(result.output);`;
 export default function DeveloperTools() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Developer Tools"
+        description="Complete developer platform with REST & GraphQL APIs, SDKs in 8 languages, CLI tools, webhooks, and edge functions. 99.99% API uptime, <50ms response time."
+        url="/developer-tools"
+        keywords={['developer tools', 'API', 'SDK', 'CLI', 'webhooks', 'GraphQL', 'REST API', 'edge functions']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

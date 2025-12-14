@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { GraduationCap, TrendingDown, Database, Workflow, DollarSign, Users, BookOpen, ArrowRight, CheckCircle } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -80,6 +81,12 @@ const metrics = [
 export default function Education() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Education AI Platform"
+        description="AI-powered education platform for personalized learning. 45% higher engagement, 60% admin time saved, 30% better learning outcomes through adaptive technology."
+        url="/education"
+        keywords={['education AI', 'personalized learning', 'adaptive learning', 'automated grading', 'student success', 'learning platform']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
