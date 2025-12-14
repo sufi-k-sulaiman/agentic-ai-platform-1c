@@ -556,21 +556,23 @@ export default function Blog() {
       </section>
 
       {/* Filter Tabs */}
-      <section className="py-4 sm:py-8 border-b border-gray-200 sticky top-16 bg-white z-10 overflow-x-auto">
+      <section className="py-4 sm:py-6 border-b border-gray-200 sticky top-16 bg-white z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <Tabs value={activeCategory} onValueChange={setActiveCategory}>
-            <TabsList className="bg-gray-100 flex-wrap sm:flex-nowrap h-auto sm:h-10 p-1 gap-1">
-              <TabsTrigger value="all" className="text-xs sm:text-sm px-2.5 sm:px-3">All</TabsTrigger>
-              <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Comparison</TabsTrigger>
-              <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Governance</TabsTrigger>
-              <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Generative AI</TabsTrigger>
-              <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Insights</TabsTrigger>
-              <TabsTrigger value="tutorials" className="text-xs sm:text-sm px-2.5 sm:px-3">Tutorials</TabsTrigger>
-              <TabsTrigger value="case-studies" className="text-xs sm:text-sm px-2.5 sm:px-3 whitespace-nowrap">Case Studies</TabsTrigger>
-              <TabsTrigger value="security" className="text-xs sm:text-sm px-2.5 sm:px-3">Security</TabsTrigger>
-              <TabsTrigger value="product" className="text-xs sm:text-sm px-2.5 sm:px-3">Product</TabsTrigger>
-            </TabsList>
-          </Tabs>
+          <div className="overflow-x-auto pb-2 -mb-2 scrollbar-hide">
+            <Tabs value={activeCategory} onValueChange={setActiveCategory}>
+              <TabsList className="bg-gray-100 inline-flex w-auto h-auto p-1 gap-1">
+                <TabsTrigger value="all" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">All</TabsTrigger>
+                <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Comparison</TabsTrigger>
+                <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Governance</TabsTrigger>
+                <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Generative</TabsTrigger>
+                <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Insights</TabsTrigger>
+                <TabsTrigger value="tutorials" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Tutorials</TabsTrigger>
+                <TabsTrigger value="case-studies" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Cases</TabsTrigger>
+                <TabsTrigger value="security" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Security</TabsTrigger>
+                <TabsTrigger value="product" className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 whitespace-nowrap">Product</TabsTrigger>
+              </TabsList>
+            </Tabs>
+          </div>
         </div>
       </section>
 
