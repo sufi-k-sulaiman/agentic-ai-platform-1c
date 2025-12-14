@@ -247,7 +247,7 @@ export default function Security() {
               <Button size="lg" className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-8">
                 Report a vulnerability
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-8">
+              <Button size="lg" className="bg-[#8B2EE5] hover:bg-[#7325C4] border-2 border-white rounded-full px-8">
                 View program details
               </Button>
             </div>
