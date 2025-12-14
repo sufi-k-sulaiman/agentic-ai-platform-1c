@@ -1,43 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Twitter } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 
 const leaders = [
   {
     name: 'Niroshi Nadarajah',
     title: 'Chief Executive Officer',
-    bio: 'Visionary leader with 20+ years driving AI innovation and enterprise transformation. Former VP at leading tech companies.',
+    bio: ['With a distinguished background in microbiology and medical research, Niroshi brings a unique scientific perspective to technology leadership. Her journey from medical sciences to AI innovation has shaped her approach to solving complex enterprise challenges.', 'As CEO, she leads 1cPlatform\'s vision to democratize AI across industries, combining deep scientific rigor with practical business acumen. Her passion for running marathons mirrors her leadership style: disciplined, endurance-focused, and always pushing boundaries.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a80c07556_CMO.png'
   },
   {
     name: 'Suf K Sulaiman',
     title: 'Chief Technology Officer',
-    bio: 'Technology pioneer and architect of scalable AI systems. Expert in distributed computing and machine learning infrastructure.',
+    bio: ['A true technology polymath with over 30 years of experience spanning AI, hardware, and software engineering. Suf has been at the forefront of every major technology wave, from early computing systems to today\'s cutting-edge AI architectures.', 'His deep expertise in both hardware and software allows him to architect solutions that are not just innovative but fundamentally sound. At 1cPlatform, he drives the technical vision, ensuring our AI systems are built on rock-solid engineering principles that scale.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e26495cc8_CTO.png'
   },
   {
     name: 'Emily Zhang',
     title: 'Chief Product Officer',
-    bio: 'Previously Head of Product at Salesforce. Stanford MBA. Built products used by millions.',
+    bio: ['Previously Head of Product at Salesforce where she led teams building enterprise solutions used by millions. Her Stanford MBA background combines with hands-on product experience to create user-centric AI products.', 'Emily\'s philosophy centers on simplicity and impact. She believes the best AI products are those that feel invisible, seamlessly integrating into workflows while delivering transformative results. Her track record speaks volumes about turning vision into reality.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/06e4281e3_CPO.png'
   },
   {
     name: 'David Kim',
     title: 'Chief Financial Officer',
-    bio: 'Former CFO at Snowflake. Led multiple successful IPOs. 20 years in enterprise tech finance.',
+    bio: ['Former CFO at Snowflake where he led multiple successful IPOs and navigated complex financial landscapes. With 20 years in enterprise tech finance, David brings unparalleled expertise in scaling financial operations.', 'His strategic financial leadership ensures 1cPlatform maintains the fiscal discipline needed for sustainable growth while investing boldly in innovation. David\'s ability to balance growth with profitability has been instrumental in our success.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/b9fad4d11_CFO.png'
   },
   {
     name: 'Priya Patel',
     title: 'Chief Marketing Officer',
-    bio: 'Ex-CMO at HubSpot. Built billion-dollar brands from the ground up. Growth marketing expert.',
+    bio: ['Ex-CMO at HubSpot where she built billion-dollar brands from the ground up. Priya is a growth marketing expert who understands how to create authentic connections between technology and customers.', 'Her data-driven approach to brand building has transformed how companies think about marketing in the AI age. At 1cPlatform, she leads our go-to-market strategy, ensuring our message resonates with enterprises worldwide.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4918bd092_CEO.png'
   },
   {
     name: 'James Wilson',
     title: 'Chief Operating Officer',
-    bio: 'Operations excellence leader. Previously at Oracle and IBM. Expert in scaling global enterprise operations.',
+    bio: ['Operations excellence leader with extensive experience at Oracle and IBM. James has built his career on making complex systems run smoothly at scale, bringing order to chaos in enterprise operations.', 'His expertise in scaling global operations is critical to 1cPlatform\'s growth. James ensures that as we expand, our operations remain efficient, our customers stay delighted, and our team stays aligned with our mission.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a40c8fe07_COO.png'
   }
 ];
@@ -76,7 +75,7 @@ export default function Leadership() {
       {/* Leadership Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {leaders.map((leader, index) => (
               <motion.div
                 key={leader.name}
@@ -84,34 +83,20 @@ export default function Leadership() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group"
               >
                 <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square bg-white">
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="absolute bottom-4 left-4 flex gap-3">
-                      <a
-                        href="#"
-                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#8B2EE5] hover:text-white transition-colors"
-                      >
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                      <a
-                        href="#"
-                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-[#8B2EE5] hover:text-white transition-colors"
-                      >
-                        <Twitter className="w-5 h-5" />
-                      </a>
-                    </div>
-                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{leader.name}</h3>
-                <p className="text-[#8B2EE5] font-medium mb-3">{leader.title}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{leader.bio}</p>
+                <p className="text-[#8B2EE5] font-medium mb-4">{leader.title}</p>
+                <div className="space-y-3">
+                  <p className="text-gray-600 text-sm leading-relaxed">{leader.bio[0]}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{leader.bio[1]}</p>
+                </div>
               </motion.div>
             ))}
           </div>
