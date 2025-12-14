@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Server, TrendingDown, Database, Workflow, DollarSign, Zap, Shield, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -90,6 +91,12 @@ const metrics = [
 export default function DataCenters() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Data Center AI"
+        description="Autonomous data center operations with 35% energy savings and 99.999% uptime. Predictive maintenance, real-time optimization, and $2M+ annual savings per facility."
+        url="/data-centers"
+        keywords={['data center automation', 'DCIM', 'predictive maintenance', 'energy optimization', 'infrastructure automation']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trophy, TrendingDown, Database, Workflow, DollarSign, Users, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -80,6 +81,12 @@ const metrics = [
 export default function SportsEntertainment() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Sports & Entertainment AI"
+        description="AI-powered fan experiences increasing revenue by 30%. Personalized journeys, dynamic pricing, and venue automation. 45% higher fan satisfaction."
+        url="/sports-entertainment"
+        keywords={['sports AI', 'venue management', 'fan experience', 'event automation', 'ticketing optimization']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

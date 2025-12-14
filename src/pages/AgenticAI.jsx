@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Bot, Brain, Zap, Shield, RefreshCw, Network } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const features = [
   {
@@ -67,6 +68,12 @@ const useCases = [
 export default function AgenticAI() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Agentic AI"
+        description="Deploy autonomous AI agents that think, decide, and act. No-code builder, multi-agent orchestration, and enterprise-grade security. 70% faster response times."
+        url="/agentic-ai"
+        keywords={['Agentic AI', 'autonomous agents', 'AI automation', 'intelligent agents', 'no-code AI', 'multi-agent systems']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />

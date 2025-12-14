@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2, TrendingUp, Clock, DollarSign, Target } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const verticals = [
   { 
@@ -326,8 +327,8 @@ const hearAboutUs = [
 ];
 
 export default function Onboarding() {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
+    const [step, setStep] = useState(1);
+    const [formData, setFormData] = useState({
     vertical: '',
     companyName: '',
     role: '',
@@ -754,7 +755,14 @@ export default function Onboarding() {
   };
 
   return (
-    <div className="min-h-screen flex">
+    <>
+      <PageMeta 
+        title="Get Started"
+        description="Create your custom Agentic AI solution. Select your industry and design AI agents tailored to your business needs. 14 industries, infinite possibilities."
+        url="/onboarding"
+        keywords={['get started', 'AI onboarding', 'custom AI', 'industry solutions', 'AI setup']}
+      />
+      <div className="min-h-screen flex">
       {/* Left Side - Form */}
       <div className="w-full lg:w-1/2 bg-white p-8 lg:p-16 flex flex-col">
         <div className="max-w-xl mx-auto w-full flex-1 flex flex-col">

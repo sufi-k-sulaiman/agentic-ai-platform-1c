@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2, TrendingDown, Database, Workflow, DollarSign, TrendingUp, Users, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 const challenges = [
   {
@@ -90,6 +91,12 @@ const metrics = [
 export default function PropertyManagement() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Property Management AI"
+        description="AI-powered property management reducing costs by 40%. Automated maintenance, tenant services, and operations. 99.9% response rate, 24/7 availability."
+        url="/property-management"
+        keywords={['property management AI', 'smart buildings', 'automated maintenance', 'tenant management', 'facilities automation']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
