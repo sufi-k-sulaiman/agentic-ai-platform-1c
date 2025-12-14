@@ -117,6 +117,8 @@ import BlogAutonomousDecisionMaking from './pages/BlogAutonomousDecisionMaking';
 import BlogBuildingAutonomousAI from './pages/BlogBuildingAutonomousAI';
 import BlogAIAutonomyVsOversight from './pages/BlogAIAutonomyVsOversight';
 import BlogAutonomousAIApplications from './pages/BlogAutonomousAIApplications';
+import BlogAIAutonomyChallenges from './pages/BlogAIAutonomyChallenges';
+import BlogAIAutonomyFuture from './pages/BlogAIAutonomyFuture';
 import __Layout from './Layout.jsx';
 
 
@@ -240,6 +242,8 @@ export const PAGES = {
     "BlogBuildingAutonomousAI": BlogBuildingAutonomousAI,
     "BlogAIAutonomyVsOversight": BlogAIAutonomyVsOversight,
     "BlogAutonomousAIApplications": BlogAutonomousAIApplications,
+    "BlogAIAutonomyChallenges": BlogAIAutonomyChallenges,
+    "BlogAIAutonomyFuture": BlogAIAutonomyFuture,
 }
 
 export const pagesConfig = {
