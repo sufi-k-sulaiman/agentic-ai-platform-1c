@@ -112,6 +112,156 @@ const posts = [
     page: 'BlogGenerativeAIFuture'
   },
   {
+    title: 'Introduction to Agentic AI Governance: Why It Matters',
+    excerpt: 'Understanding the critical role of governance in deploying autonomous AI agents. Framework, principles, and organizational requirements.',
+    author: 'Dr. Michael Harrison',
+    date: 'December 20, 2024',
+    readTime: '14 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
+    page: 'BlogAgenticAIGovernanceIntro'
+  },
+  {
+    title: 'Navigating AI Regulations: Compliance Guide for Agentic Systems',
+    excerpt: 'Comprehensive overview of global AI regulations including EU AI Act, US guidelines, and industry-specific requirements for autonomous agents.',
+    author: 'Elena Rodriguez, J.D.',
+    date: 'December 19, 2024',
+    readTime: '18 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800',
+    page: 'BlogAIComplianceRegulations'
+  },
+  {
+    title: 'AI Risk Management: Identifying and Mitigating Agentic AI Risks',
+    excerpt: 'Framework for assessing, monitoring, and mitigating risks in autonomous AI agent deployments. Practical strategies for enterprise risk management.',
+    author: 'Robert Chen, CRO',
+    date: 'December 18, 2024',
+    readTime: '16 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800',
+    page: 'BlogAIRiskManagement'
+  },
+  {
+    title: 'Data Governance for Agentic AI: Managing Training Data and Agent Access',
+    excerpt: 'Best practices for governing data used by autonomous AI agents, from training datasets to runtime access controls.',
+    author: 'Patricia Wong',
+    date: 'December 17, 2024',
+    readTime: '15 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    page: 'BlogAIDataGovernance'
+  },
+  {
+    title: 'AI Audit Frameworks: Ensuring Accountability in Autonomous Systems',
+    excerpt: 'How to audit autonomous AI agents for performance, compliance, and ethical behavior. Frameworks, checklists, and automation strategies.',
+    author: 'Dr. Thomas Miller',
+    date: 'December 16, 2024',
+    readTime: '17 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+    page: 'BlogAIAuditFrameworks'
+  },
+  {
+    title: 'Creating AI Governance Policies: Templates and Best Practices',
+    excerpt: 'Step-by-step guide to developing comprehensive AI governance policies for autonomous agents. Includes templates and real-world examples.',
+    author: 'Amanda Foster',
+    date: 'December 15, 2024',
+    readTime: '15 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
+    page: 'BlogAIGovernancePolicies'
+  },
+  {
+    title: 'AI Accountability: Who\'s Responsible When Agents Make Mistakes?',
+    excerpt: 'Exploring accountability frameworks for autonomous AI systems. Legal liability, organizational responsibility, and practical risk allocation.',
+    author: 'Marcus Thompson, J.D.',
+    date: 'December 14, 2024',
+    readTime: '14 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800',
+    page: 'BlogAIAccountability'
+  },
+  {
+    title: 'Security Governance for Agentic AI: Protecting Autonomous Systems',
+    excerpt: 'Comprehensive security governance framework for autonomous AI agents. Threat models, controls, and incident response strategies.',
+    author: 'James Liu, CISO',
+    date: 'December 13, 2024',
+    readTime: '16 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800',
+    page: 'BlogAISecurityGovernance'
+  },
+  {
+    title: 'Privacy Governance for Agentic AI: GDPR, CCPA Compliance',
+    excerpt: 'Navigate privacy regulations for autonomous AI agents. Practical strategies for GDPR, CCPA compliance and privacy-preserving AI systems.',
+    author: 'Maria Santos, Privacy Officer',
+    date: 'December 12, 2024',
+    readTime: '15 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800',
+    page: 'BlogAIPrivacyGovernance'
+  },
+  {
+    title: 'AI Governance Best Practices: Lessons from Leading Organizations',
+    excerpt: 'Learn from organizations successfully governing autonomous AI. Proven strategies, common pitfalls, and practical recommendations.',
+    author: 'Katherine Brooks',
+    date: 'December 11, 2024',
+    readTime: '13 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
+    page: 'BlogAIGovernanceBestPractices'
+  },
+  {
+    title: 'Building AI Governance Teams: Roles, Skills, and Structure',
+    excerpt: 'How to staff and organize your AI governance function. Key roles, required skills, team structures, and hiring strategies.',
+    author: 'Daniel Chen',
+    date: 'December 10, 2024',
+    readTime: '14 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800',
+    page: 'BlogAIGovernanceTeams'
+  },
+  {
+    title: 'AI Governance Metrics: Measuring and Reporting Effectiveness',
+    excerpt: 'Key performance indicators for AI governance. How to measure effectiveness, report to stakeholders, and drive continuous improvement.',
+    author: 'Victoria Park',
+    date: 'December 9, 2024',
+    readTime: '12 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+    page: 'BlogAIGovernanceMetrics'
+  },
+  {
+    title: 'AI Governance Tools and Platforms: Technology Stack Guide',
+    excerpt: 'Comprehensive guide to tools and platforms for AI governance. From monitoring to compliance automation, build your governance technology stack.',
+    author: 'Chris Anderson',
+    date: 'December 8, 2024',
+    readTime: '15 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+    page: 'BlogAIGovernanceTools'
+  },
+  {
+    title: 'AI Incident Response: Handling Autonomous Agent Failures',
+    excerpt: 'Comprehensive guide to managing AI incidents. Detection, response procedures, root cause analysis, and prevention strategies.',
+    author: 'Jennifer Taylor',
+    date: 'December 7, 2024',
+    readTime: '16 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=800',
+    page: 'BlogAIGovernanceIncidents'
+  },
+  {
+    title: 'The Future of AI Governance: Emerging Trends and Predictions',
+    excerpt: 'Where AI governance is heading. Automated governance, regulatory evolution, and preparing for autonomous AI at scale.',
+    author: 'Dr. Rachel Kim',
+    date: 'December 6, 2024',
+    readTime: '14 min read',
+    category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
+    page: 'BlogAIGovernanceFuture'
+  },
+  {
     title: 'The Rise of Agentic AI: A Game Changer for Enterprises',
     excerpt: 'Discover how autonomous AI agents are transforming enterprise operations and enabling intelligent decision-making.',
     author: 'Sarah Chen',
@@ -125,7 +275,7 @@ const posts = [
     title: 'How Autonomous Agents are Revolutionizing Business Operations',
     excerpt: 'Explore the transformative power of autonomous AI agents in modern business operations.',
     author: 'Michael Rodriguez',
-    date: 'December 8, 2024',
+    date: 'November 8, 2024',
     readTime: '10 min read',
     category: 'AI Insights',
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800',
@@ -280,6 +430,7 @@ export default function Blog() {
           <Tabs value={activeCategory} onValueChange={setActiveCategory}>
             <TabsList className="bg-gray-100">
               <TabsTrigger value="all">All Posts</TabsTrigger>
+              <TabsTrigger value="ai-governance">AI Governance</TabsTrigger>
               <TabsTrigger value="generative-ai">Generative AI</TabsTrigger>
               <TabsTrigger value="ai-insights">AI Insights</TabsTrigger>
               <TabsTrigger value="tutorials">Tutorials</TabsTrigger>

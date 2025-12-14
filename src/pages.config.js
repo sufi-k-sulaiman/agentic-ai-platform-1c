@@ -84,19 +84,20 @@ import BlogGenerativeAIBusiness from './pages/BlogGenerativeAIBusiness';
 import BlogGenerativeAIFineTuning from './pages/BlogGenerativeAIFineTuning';
 import BlogGenerativeAIFuture from './pages/BlogGenerativeAIFuture';
 import BlogAgenticAIGovernanceIntro from './pages/BlogAgenticAIGovernanceIntro';
-import BlogAgenticAICompliance from './pages/BlogAgenticAICompliance';
-import BlogAgenticAIRiskManagement from './pages/BlogAgenticAIRiskManagement';
-import BlogAgenticAISecurityPrivacy from './pages/BlogAgenticAISecurityPrivacy';
-import BlogAgenticAIEthicalFrameworks from './pages/BlogAgenticAIEthicalFrameworks';
-import BlogAgenticAIAccountability from './pages/BlogAgenticAIAccountability';
-import BlogAgenticAIDataGovernance from './pages/BlogAgenticAIDataGovernance';
-import BlogAgenticAIMonitoring from './pages/BlogAgenticAIMonitoring';
-import BlogAgenticAIAccessControl from './pages/BlogAgenticAIAccessControl';
-import BlogAgenticAIComplianceFrameworks from './pages/BlogAgenticAIComplianceFrameworks';
-import BlogAgenticAIGovernanceBestPractices from './pages/BlogAgenticAIGovernanceBestPractices';
-import BlogAgenticAIGovernanceCommittee from './pages/BlogAgenticAIGovernanceCommittee';
-import BlogAgenticAIModelGovernance from './pages/BlogAgenticAIModelGovernance';
-import BlogAgenticAIVendorManagement from './pages/BlogAgenticAIVendorManagement';
+import BlogAIComplianceRegulations from './pages/BlogAIComplianceRegulations';
+import BlogAIRiskManagement from './pages/BlogAIRiskManagement';
+import BlogAIDataGovernance from './pages/BlogAIDataGovernance';
+import BlogAIAuditFrameworks from './pages/BlogAIAuditFrameworks';
+import BlogAIGovernancePolicies from './pages/BlogAIGovernancePolicies';
+import BlogAIAccountability from './pages/BlogAIAccountability';
+import BlogAISecurityGovernance from './pages/BlogAISecurityGovernance';
+import BlogAIPrivacyGovernance from './pages/BlogAIPrivacyGovernance';
+import BlogAIGovernanceBestPractices from './pages/BlogAIGovernanceBestPractices';
+import BlogAIGovernanceTeams from './pages/BlogAIGovernanceTeams';
+import BlogAIGovernanceMetrics from './pages/BlogAIGovernanceMetrics';
+import BlogAIGovernanceTools from './pages/BlogAIGovernanceTools';
+import BlogAIGovernanceIncidents from './pages/BlogAIGovernanceIncidents';
+import BlogAIGovernanceFuture from './pages/BlogAIGovernanceFuture';
 import __Layout from './Layout.jsx';
 
 
@@ -187,19 +188,20 @@ export const PAGES = {
     "BlogGenerativeAIFineTuning": BlogGenerativeAIFineTuning,
     "BlogGenerativeAIFuture": BlogGenerativeAIFuture,
     "BlogAgenticAIGovernanceIntro": BlogAgenticAIGovernanceIntro,
-    "BlogAgenticAICompliance": BlogAgenticAICompliance,
-    "BlogAgenticAIRiskManagement": BlogAgenticAIRiskManagement,
-    "BlogAgenticAISecurityPrivacy": BlogAgenticAISecurityPrivacy,
-    "BlogAgenticAIEthicalFrameworks": BlogAgenticAIEthicalFrameworks,
-    "BlogAgenticAIAccountability": BlogAgenticAIAccountability,
-    "BlogAgenticAIDataGovernance": BlogAgenticAIDataGovernance,
-    "BlogAgenticAIMonitoring": BlogAgenticAIMonitoring,
-    "BlogAgenticAIAccessControl": BlogAgenticAIAccessControl,
-    "BlogAgenticAIComplianceFrameworks": BlogAgenticAIComplianceFrameworks,
-    "BlogAgenticAIGovernanceBestPractices": BlogAgenticAIGovernanceBestPractices,
-    "BlogAgenticAIGovernanceCommittee": BlogAgenticAIGovernanceCommittee,
-    "BlogAgenticAIModelGovernance": BlogAgenticAIModelGovernance,
-    "BlogAgenticAIVendorManagement": BlogAgenticAIVendorManagement,
+    "BlogAIComplianceRegulations": BlogAIComplianceRegulations,
+    "BlogAIRiskManagement": BlogAIRiskManagement,
+    "BlogAIDataGovernance": BlogAIDataGovernance,
+    "BlogAIAuditFrameworks": BlogAIAuditFrameworks,
+    "BlogAIGovernancePolicies": BlogAIGovernancePolicies,
+    "BlogAIAccountability": BlogAIAccountability,
+    "BlogAISecurityGovernance": BlogAISecurityGovernance,
+    "BlogAIPrivacyGovernance": BlogAIPrivacyGovernance,
+    "BlogAIGovernanceBestPractices": BlogAIGovernanceBestPractices,
+    "BlogAIGovernanceTeams": BlogAIGovernanceTeams,
+    "BlogAIGovernanceMetrics": BlogAIGovernanceMetrics,
+    "BlogAIGovernanceTools": BlogAIGovernanceTools,
+    "BlogAIGovernanceIncidents": BlogAIGovernanceIncidents,
+    "BlogAIGovernanceFuture": BlogAIGovernanceFuture,
 }
 
 export const pagesConfig = {
