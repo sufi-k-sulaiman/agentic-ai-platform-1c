@@ -8,7 +8,7 @@ const leaders = [
     name: 'Niroshi Nadarajah',
     title: 'Chief Executive Officer',
     bio: 'Visionary leader with 20+ years driving AI innovation and enterprise transformation. Former VP at leading tech companies.',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4918bd092_CEO.png'
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a80c07556_CMO.png'
   },
   {
     name: 'Suf K Sulaiman',
@@ -32,7 +32,7 @@ const leaders = [
     name: 'Priya Patel',
     title: 'Chief Marketing Officer',
     bio: 'Ex-CMO at HubSpot. Built billion-dollar brands from the ground up. Growth marketing expert.',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a80c07556_CMO.png'
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4918bd092_CEO.png'
   },
   {
     name: 'James Wilson',
