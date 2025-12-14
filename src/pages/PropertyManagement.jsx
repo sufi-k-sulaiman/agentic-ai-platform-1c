@@ -155,7 +155,7 @@ export default function PropertyManagement() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              The Property Management Challenge
+              Property Management
             </h2>
           </div>
           <div className="space-y-6">
