@@ -74,6 +74,7 @@ export default function HeroSection() {
                 size="lg" 
                 variant="outline" 
                 className="border-gray-300 text-gray-700 hover:border-[#8B2EE5] hover:text-[#8B2EE5] rounded-full px-8 h-14 text-base"
+                onClick={() => window.openChat?.()}
               >
                 <Play className="mr-2 w-5 h-5" />
                 Watch demo

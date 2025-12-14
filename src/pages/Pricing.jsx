@@ -233,11 +233,12 @@ export default function Pricing() {
           </div>
 
           <div className="text-center mt-16">
-            <Link to={createPageUrl('Onboarding')}>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-12 h-16 text-lg">
-                Contact sales
-              </Button>
-            </Link>
+            <Button 
+              className="bg-white text-black hover:bg-gray-200 rounded-full px-12 h-16 text-lg"
+              onClick={() => window.openChat?.()}
+            >
+              Contact sales
+            </Button>
           </div>
         </div>
       </section>
