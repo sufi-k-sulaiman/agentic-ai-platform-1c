@@ -16,7 +16,6 @@ import Blog from './pages/Blog';
 import Events from './pages/Events';
 import HelpCenter from './pages/HelpCenter';
 import Status from './pages/Status';
-import Security from './pages/Security';
 import Privacy from './pages/Privacy';
 import PropertyManagement from './pages/PropertyManagement';
 import DataCenters from './pages/DataCenters';
@@ -50,6 +49,7 @@ import BlogAutomationToAutonomy from './pages/BlogAutomationToAutonomy';
 import BlogAgenticAIUseCases from './pages/BlogAgenticAIUseCases';
 import BlogAgenticAIEthics from './pages/BlogAgenticAIEthics';
 import BlogAgenticAIScaling from './pages/BlogAgenticAIScaling';
+import Rewards from './pages/Rewards';
 import __Layout from './Layout.jsx';
 
 
@@ -72,7 +72,6 @@ export const PAGES = {
     "Events": Events,
     "HelpCenter": HelpCenter,
     "Status": Status,
-    "Security": Security,
     "Privacy": Privacy,
     "PropertyManagement": PropertyManagement,
     "DataCenters": DataCenters,
@@ -106,6 +105,7 @@ export const PAGES = {
     "BlogAgenticAIUseCases": BlogAgenticAIUseCases,
     "BlogAgenticAIEthics": BlogAgenticAIEthics,
     "BlogAgenticAIScaling": BlogAgenticAIScaling,
+    "Rewards": Rewards,
 }
 
 export const pagesConfig = {
