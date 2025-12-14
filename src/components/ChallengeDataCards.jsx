@@ -1,218 +1,317 @@
-// Data cards for individual challenges
-export const challengeDataCards = {
+// Data mapping for each challenge category
+export const challengeDataMap = {
   // Strategy & Leadership
   'Setting a clear strategy in fast-changing markets': {
-    chart: [35, 52, 68, 81, 92],
     metrics: [
-      { pain: 'Strategic clarity', percent: 88, color: 'from-blue-400 to-cyan-300' },
-      { pain: 'Decision speed', percent: 75, color: 'from-green-400 to-emerald-300' },
-      { pain: 'Market responsiveness', percent: 82, color: 'from-purple-400 to-pink-300' }
-    ]
+      { label: 'Strategic clarity', percent: 88, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Decision speed', percent: 76, color: 'from-purple-400 to-pink-300' },
+      { label: 'Market adaptation', percent: 82, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [35, 52, 68, 82, 91],
+    stat: '88%',
+    statLabel: 'Faster strategic decisions'
   },
   'Balancing short-term results with long-term vision': {
-    chart: [40, 58, 72, 85, 93],
     metrics: [
-      { pain: 'Balance achieved', percent: 81, color: 'from-indigo-400 to-blue-300' },
-      { pain: 'Goal alignment', percent: 76, color: 'from-cyan-400 to-teal-300' },
-      { pain: 'Stakeholder satisfaction', percent: 73, color: 'from-emerald-400 to-green-300' }
-    ]
+      { label: 'Balance achieved', percent: 79, color: 'from-yellow-400 to-orange-300' },
+      { label: 'Long-term planning', percent: 85, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Quarterly targets', percent: 72, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [40, 58, 71, 84, 93],
+    stat: '79%',
+    statLabel: 'Improved planning balance'
   },
   'Managing risk and uncertainty': {
-    chart: [38, 55, 70, 83, 91],
     metrics: [
-      { pain: 'Risk visibility', percent: 86, color: 'from-red-400 to-orange-300' },
-      { pain: 'Mitigation speed', percent: 78, color: 'from-amber-400 to-yellow-300' },
-      { pain: 'Confidence levels', percent: 82, color: 'from-lime-400 to-green-300' }
-    ]
+      { label: 'Risk visibility', percent: 86, color: 'from-red-400 to-orange-300' },
+      { label: 'Mitigation speed', percent: 78, color: 'from-purple-400 to-pink-300' },
+      { label: 'Predictive accuracy', percent: 81, color: 'from-blue-400 to-cyan-300' }
+    ],
+    chart: [38, 55, 72, 85, 94],
+    stat: '86%',
+    statLabel: 'Better risk management'
   },
   'Driving alignment across departments': {
-    chart: [42, 60, 75, 87, 94],
     metrics: [
-      { pain: 'Cross-team collaboration', percent: 89, color: 'from-violet-400 to-purple-300' },
-      { pain: 'Goal alignment', percent: 84, color: 'from-fuchsia-400 to-pink-300' },
-      { pain: 'Communication efficiency', percent: 80, color: 'from-rose-400 to-red-300' }
-    ]
+      { label: 'Cross-team alignment', percent: 84, color: 'from-purple-400 to-pink-300' },
+      { label: 'Communication flow', percent: 77, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Goal consistency', percent: 81, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [42, 60, 75, 87, 95],
+    stat: '84%',
+    statLabel: 'Enhanced departmental alignment'
   },
 
   // Talent & HR
   'Recruiting qualified talent': {
-    chart: [30, 48, 65, 80, 90],
     metrics: [
-      { pain: 'Quality of hire', percent: 85, color: 'from-blue-400 to-cyan-300' },
-      { pain: 'Time to hire', percent: 70, color: 'from-green-400 to-emerald-300' },
-      { pain: 'Candidate experience', percent: 78, color: 'from-purple-400 to-pink-300' }
-    ]
+      { label: 'Time to hire', percent: 68, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Candidate quality', percent: 82, color: 'from-green-400 to-emerald-300' },
+      { label: 'Hiring success rate', percent: 75, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [30, 48, 65, 78, 88],
+    stat: '68%',
+    statLabel: 'Faster recruitment'
   },
   'Retaining employees': {
-    chart: [35, 52, 68, 82, 92],
     metrics: [
-      { pain: 'Retention rate', percent: 88, color: 'from-emerald-400 to-teal-300' },
-      { pain: 'Employee satisfaction', percent: 82, color: 'from-cyan-400 to-blue-300' },
-      { pain: 'Engagement scores', percent: 79, color: 'from-indigo-400 to-purple-300' }
-    ]
+      { label: 'Retention rate', percent: 87, color: 'from-green-400 to-emerald-300' },
+      { label: 'Employee satisfaction', percent: 79, color: 'from-purple-400 to-pink-300' },
+      { label: 'Turnover reduction', percent: 72, color: 'from-blue-400 to-cyan-300' }
+    ],
+    chart: [45, 62, 76, 86, 92],
+    stat: '87%',
+    statLabel: 'Improved retention'
   },
   'Managing hybrid or remote work': {
-    chart: [45, 62, 76, 87, 94],
     metrics: [
-      { pain: 'Productivity maintained', percent: 91, color: 'from-violet-400 to-purple-300' },
-      { pain: 'Collaboration quality', percent: 83, color: 'from-blue-400 to-cyan-300' },
-      { pain: 'Employee wellbeing', percent: 77, color: 'from-green-400 to-emerald-300' }
-    ]
+      { label: 'Productivity', percent: 81, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Team collaboration', percent: 74, color: 'from-purple-400 to-pink-300' },
+      { label: 'Work-life balance', percent: 78, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [40, 58, 72, 84, 90],
+    stat: '81%',
+    statLabel: 'Remote work efficiency'
   },
   'Handling compliance and labor laws': {
-    chart: [40, 58, 73, 85, 93],
     metrics: [
-      { pain: 'Compliance accuracy', percent: 95, color: 'from-red-400 to-orange-300' },
-      { pain: 'Risk reduction', percent: 87, color: 'from-amber-400 to-yellow-300' },
-      { pain: 'Audit readiness', percent: 90, color: 'from-lime-400 to-green-300' }
-    ]
+      { label: 'Compliance accuracy', percent: 95, color: 'from-red-400 to-orange-300' },
+      { label: 'Audit readiness', percent: 88, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Risk reduction', percent: 82, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [50, 68, 82, 91, 96],
+    stat: '95%',
+    statLabel: 'Compliance accuracy'
   },
   'Building strong culture and engagement': {
-    chart: [38, 55, 71, 84, 92],
     metrics: [
-      { pain: 'Culture score', percent: 86, color: 'from-pink-400 to-rose-300' },
-      { pain: 'Engagement levels', percent: 81, color: 'from-purple-400 to-fuchsia-300' },
-      { pain: 'Retention impact', percent: 78, color: 'from-indigo-400 to-violet-300' }
-    ]
+      { label: 'Employee engagement', percent: 83, color: 'from-purple-400 to-pink-300' },
+      { label: 'Cultural alignment', percent: 76, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Team morale', percent: 80, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [42, 59, 73, 85, 91],
+    stat: '83%',
+    statLabel: 'Higher engagement'
   },
 
   // Operations
   'Inefficient processes': {
-    chart: [40, 60, 75, 88, 95],
     metrics: [
-      { pain: 'Process efficiency', percent: 92, color: 'from-blue-400 to-cyan-300' },
-      { pain: 'Time saved', percent: 85, color: 'from-green-400 to-emerald-300' },
-      { pain: 'Error reduction', percent: 88, color: 'from-purple-400 to-pink-300' }
-    ]
+      { label: 'Process efficiency', percent: 85, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Time saved', percent: 78, color: 'from-green-400 to-emerald-300' },
+      { label: 'Error reduction', percent: 72, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [40, 60, 75, 88, 95],
+    stat: '85%',
+    statLabel: 'Process improvement'
   },
   'Supply chain disruptions': {
-    chart: [32, 50, 67, 81, 90],
     metrics: [
-      { pain: 'Supply visibility', percent: 84, color: 'from-cyan-400 to-teal-300' },
-      { pain: 'Risk mitigation', percent: 79, color: 'from-emerald-400 to-green-300' },
-      { pain: 'Recovery speed', percent: 76, color: 'from-lime-400 to-emerald-300' }
-    ]
+      { label: 'Supply reliability', percent: 79, color: 'from-red-400 to-orange-300' },
+      { label: 'Response time', percent: 84, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Risk mitigation', percent: 76, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [38, 56, 71, 83, 89],
+    stat: '79%',
+    statLabel: 'Supply chain stability'
   },
   'Quality control issues': {
-    chart: [38, 56, 72, 85, 93],
     metrics: [
-      { pain: 'Defect reduction', percent: 90, color: 'from-red-400 to-orange-300' },
-      { pain: 'Quality consistency', percent: 86, color: 'from-amber-400 to-yellow-300' },
-      { pain: 'Customer satisfaction', percent: 82, color: 'from-yellow-400 to-lime-300' }
-    ]
+      { label: 'Quality score', percent: 91, color: 'from-green-400 to-emerald-300' },
+      { label: 'Defect reduction', percent: 86, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Inspection speed', percent: 73, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [45, 63, 78, 88, 94],
+    stat: '91%',
+    statLabel: 'Quality improvement'
   },
   'Rising operational costs': {
-    chart: [35, 50, 68, 82, 90],
     metrics: [
-      { pain: 'Cost reduction', percent: 87, color: 'from-green-400 to-emerald-300' },
-      { pain: 'Budget optimization', percent: 80, color: 'from-emerald-400 to-teal-300' },
-      { pain: 'Resource efficiency', percent: 84, color: 'from-cyan-400 to-blue-300' }
-    ]
+      { label: 'Cost reduction', percent: 72, color: 'from-green-400 to-emerald-300' },
+      { label: 'Efficiency gains', percent: 68, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Resource optimization', percent: 75, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [35, 50, 68, 82, 90],
+    stat: '72%',
+    statLabel: 'Cost savings'
   },
   'Scaling production consistently': {
-    chart: [42, 60, 76, 88, 94],
     metrics: [
-      { pain: 'Production capacity', percent: 91, color: 'from-indigo-400 to-blue-300' },
-      { pain: 'Quality maintained', percent: 87, color: 'from-violet-400 to-purple-300' },
-      { pain: 'Cost efficiency', percent: 83, color: 'from-purple-400 to-fuchsia-300' }
-    ]
+      { label: 'Production capacity', percent: 84, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Quality consistency', percent: 79, color: 'from-green-400 to-emerald-300' },
+      { label: 'Scalability', percent: 81, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [40, 58, 74, 86, 92],
+    stat: '84%',
+    statLabel: 'Production scalability'
   },
 
   // Finance
   'Cash flow instability': {
-    chart: [35, 50, 68, 82, 90],
     metrics: [
-      { pain: 'Cash flow predictability', percent: 88, color: 'from-green-400 to-emerald-300' },
-      { pain: 'Working capital', percent: 82, color: 'from-emerald-400 to-teal-300' },
-      { pain: 'Payment cycles', percent: 76, color: 'from-cyan-400 to-blue-300' }
-    ]
+      { label: 'Cash flow predictability', percent: 77, color: 'from-green-400 to-emerald-300' },
+      { label: 'Payment collection', percent: 84, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Financial stability', percent: 70, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [35, 52, 67, 80, 88],
+    stat: '77%',
+    statLabel: 'Cash flow stability'
   },
   'Budget overruns': {
-    chart: [38, 55, 70, 84, 92],
     metrics: [
-      { pain: 'Budget adherence', percent: 89, color: 'from-amber-400 to-yellow-300' },
-      { pain: 'Cost visibility', percent: 85, color: 'from-yellow-400 to-lime-300' },
-      { pain: 'Forecasting accuracy', percent: 80, color: 'from-lime-400 to-green-300' }
-    ]
+      { label: 'Budget adherence', percent: 82, color: 'from-red-400 to-orange-300' },
+      { label: 'Cost tracking', percent: 88, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Variance reduction', percent: 75, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [40, 58, 73, 85, 91],
+    stat: '82%',
+    statLabel: 'Budget control'
   },
   'Forecasting inaccuracies': {
-    chart: [33, 51, 68, 82, 91],
     metrics: [
-      { pain: 'Forecast accuracy', percent: 87, color: 'from-blue-400 to-cyan-300' },
-      { pain: 'Data quality', percent: 83, color: 'from-cyan-400 to-teal-300' },
-      { pain: 'Planning confidence', percent: 79, color: 'from-teal-400 to-emerald-300' }
-    ]
+      { label: 'Forecast accuracy', percent: 86, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Data quality', percent: 79, color: 'from-purple-400 to-pink-300' },
+      { label: 'Predictive power', percent: 82, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [42, 60, 75, 87, 93],
+    stat: '86%',
+    statLabel: 'Forecasting precision'
   },
   'Compliance and audit pressure': {
-    chart: [40, 58, 73, 86, 93],
     metrics: [
-      { pain: 'Audit readiness', percent: 92, color: 'from-red-400 to-orange-300' },
-      { pain: 'Compliance rate', percent: 95, color: 'from-orange-400 to-amber-300' },
-      { pain: 'Risk mitigation', percent: 88, color: 'from-amber-400 to-yellow-300' }
-    ]
+      { label: 'Audit readiness', percent: 92, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Compliance rate', percent: 96, color: 'from-green-400 to-emerald-300' },
+      { label: 'Documentation', percent: 88, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [50, 68, 82, 91, 97],
+    stat: '92%',
+    statLabel: 'Audit preparedness'
   },
   'Rising costs': {
-    chart: [35, 52, 70, 84, 91],
     metrics: [
-      { pain: 'Cost reduction', percent: 86, color: 'from-green-400 to-emerald-300' },
-      { pain: 'Efficiency gains', percent: 81, color: 'from-emerald-400 to-teal-300' },
-      { pain: 'Margin improvement', percent: 77, color: 'from-cyan-400 to-blue-300' }
-    ]
+      { label: 'Cost reduction', percent: 72, color: 'from-green-400 to-emerald-300' },
+      { label: 'Efficiency gains', percent: 68, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Spending control', percent: 75, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [35, 50, 68, 82, 90],
+    stat: '72%',
+    statLabel: 'Cost optimization'
   },
   'Slow financial processes': {
-    chart: [42, 60, 75, 87, 94],
     metrics: [
-      { pain: 'Process speed', percent: 90, color: 'from-indigo-400 to-blue-300' },
-      { pain: 'Automation level', percent: 86, color: 'from-blue-400 to-cyan-300' },
-      { pain: 'Error reduction', percent: 83, color: 'from-cyan-400 to-teal-300' }
-    ]
+      { label: 'Process speed', percent: 83, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Automation rate', percent: 76, color: 'from-purple-400 to-pink-300' },
+      { label: 'Cycle time reduction', percent: 79, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [40, 58, 73, 85, 90],
+    stat: '83%',
+    statLabel: 'Faster processing'
   },
   'Limited visibility into spending': {
-    chart: [38, 56, 72, 85, 92],
     metrics: [
-      { pain: 'Spending visibility', percent: 89, color: 'from-purple-400 to-pink-300' },
-      { pain: 'Real-time insights', percent: 84, color: 'from-fuchsia-400 to-pink-300' },
-      { pain: 'Control measures', percent: 80, color: 'from-pink-400 to-rose-300' }
-    ]
+      { label: 'Spending visibility', percent: 89, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Real-time insights', percent: 82, color: 'from-purple-400 to-pink-300' },
+      { label: 'Cost tracking', percent: 85, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [45, 62, 77, 88, 93],
+    stat: '89%',
+    statLabel: 'Enhanced visibility'
   },
 
-  // Customer Support & Service
-  'High support ticket volume': {
-    chart: [40, 58, 73, 86, 93],
-    metrics: [
-      { pain: 'Ticket reduction', percent: 88, color: 'from-blue-400 to-cyan-300' },
-      { pain: 'Response time', percent: 82, color: 'from-cyan-400 to-teal-300' },
-      { pain: 'Self-service adoption', percent: 79, color: 'from-teal-400 to-emerald-300' }
-    ]
-  },
-  'Slow response times': {
-    chart: [45, 62, 76, 88, 94],
-    metrics: [
-      { pain: 'Response speed', percent: 91, color: 'from-green-400 to-emerald-300' },
-      { pain: 'First contact resolution', percent: 85, color: 'from-emerald-400 to-teal-300' },
-      { pain: 'Customer satisfaction', percent: 87, color: 'from-cyan-400 to-blue-300' }
-    ]
-  },
+  // Customer-related challenges
   'Customer churn': {
-    chart: [32, 50, 68, 82, 91],
     metrics: [
-      { pain: 'Retention rate', percent: 89, color: 'from-red-400 to-orange-300' },
-      { pain: 'Churn reduction', percent: 84, color: 'from-orange-400 to-amber-300' },
-      { pain: 'Lifetime value', percent: 80, color: 'from-amber-400 to-yellow-300' }
-    ]
+      { label: 'Retention rate', percent: 65, color: 'from-green-400 to-emerald-300' },
+      { label: 'Satisfaction', percent: 72, color: 'from-purple-400 to-pink-300' },
+      { label: 'Loyalty', percent: 68, color: 'from-blue-400 to-cyan-300' }
+    ],
+    chart: [30, 48, 65, 80, 92],
+    stat: '65%',
+    statLabel: 'Churn reduction'
+  },
+  'High customer expectations': {
+    metrics: [
+      { label: 'Expectation met', percent: 78, color: 'from-purple-400 to-pink-300' },
+      { label: 'Service quality', percent: 84, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Response time', percent: 71, color: 'from-green-400 to-emerald-300' }
+    ],
+    chart: [38, 56, 71, 83, 89],
+    stat: '78%',
+    statLabel: 'Expectations exceeded'
+  },
+  'Low conversion rates': {
+    metrics: [
+      { label: 'Conversion rate', percent: 68, color: 'from-green-400 to-emerald-300' },
+      { label: 'Lead quality', percent: 73, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Sales efficiency', percent: 65, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [32, 48, 62, 78, 88],
+    stat: '68%',
+    statLabel: 'Conversion boost'
   },
 
-  // Default fallback for any unmatched challenge
+  // Default fallback for unmapped challenges
   'default': {
-    chart: [45, 55, 70, 85, 95],
     metrics: [
-      { pain: 'Efficiency improvement', percent: 82, color: 'from-blue-400 to-cyan-300' },
-      { pain: 'Cost reduction', percent: 75, color: 'from-green-400 to-emerald-300' },
-      { pain: 'User satisfaction', percent: 78, color: 'from-purple-400 to-pink-300' }
-    ]
+      { label: 'Efficiency gain', percent: 75, color: 'from-blue-400 to-cyan-300' },
+      { label: 'Cost reduction', percent: 68, color: 'from-green-400 to-emerald-300' },
+      { label: 'Time saved', percent: 72, color: 'from-purple-400 to-pink-300' }
+    ],
+    chart: [40, 55, 70, 85, 93],
+    stat: '75%',
+    statLabel: 'Overall improvement'
   }
 };
 
-export function getChallengeCard(challengeName) {
-  return challengeDataCards[challengeName] || challengeDataCards['default'];
+// Get data for a specific challenge
+export function getChallengeData(challenge) {
+  return challengeDataMap[challenge] || challengeDataMap['default'];
+}
+
+// Get aggregated data for multiple challenges
+export function getAggregatedChallengeData(challenges) {
+  if (!challenges || challenges.length === 0) {
+    return {
+      title: 'Common Pain Points',
+      subtitle: 'Select challenges to see impact',
+      metrics: [
+        { label: 'Manual tasks', percent: 78, color: 'from-blue-400 to-cyan-300' },
+        { label: 'High costs', percent: 72, color: 'from-green-400 to-emerald-300' },
+        { label: 'Data silos', percent: 65, color: 'from-purple-400 to-pink-300' },
+        { label: 'Poor CX', percent: 58, color: 'from-pink-400 to-red-300' }
+      ],
+      chart: [45, 55, 70, 85, 95],
+      stat: '92%',
+      statLabel: 'See improvement within 90 days'
+    };
+  }
+
+  // Get data for each challenge
+  const challengesData = challenges.map(c => getChallengeData(c));
+  
+  // Aggregate metrics
+  const allMetrics = challengesData.flatMap(d => d.metrics);
+  const topMetrics = allMetrics
+    .sort((a, b) => b.percent - a.percent)
+    .slice(0, 4);
+  
+  // Average chart data
+  const avgChart = [0, 1, 2, 3, 4].map(idx => {
+    const sum = challengesData.reduce((acc, d) => acc + d.chart[idx], 0);
+    return Math.round(sum / challengesData.length);
+  });
+  
+  // Get highest stat
+  const topStat = challengesData.sort((a, b) => 
+    parseInt(b.stat) - parseInt(a.stat)
+  )[0];
+
+  return {
+    title: 'Impact on Your Challenges',
+    subtitle: `${challenges.length} challenge${challenges.length > 1 ? 's' : ''} selected`,
+    metrics: topMetrics,
+    chart: avgChart,
+    stat: topStat.stat,
+    statLabel: topStat.statLabel
+  };
 }
