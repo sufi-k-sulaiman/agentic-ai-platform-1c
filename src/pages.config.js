@@ -39,6 +39,10 @@ import Courses from './pages/Courses';
 import DigitalLearningSubscriptions from './pages/DigitalLearningSubscriptions';
 import LearningJourney from './pages/LearningJourney';
 import ProfessionalCertifications from './pages/ProfessionalCertifications';
+import BlogAgenticAIEnterprise from './pages/BlogAgenticAIEnterprise';
+import BlogAutonomousAgents from './pages/BlogAutonomousAgents';
+import BlogMultiAgentSystems from './pages/BlogMultiAgentSystems';
+import BlogNoCodeAgenticAI from './pages/BlogNoCodeAgenticAI';
 import __Layout from './Layout.jsx';
 
 
@@ -84,6 +88,10 @@ export const PAGES = {
     "DigitalLearningSubscriptions": DigitalLearningSubscriptions,
     "LearningJourney": LearningJourney,
     "ProfessionalCertifications": ProfessionalCertifications,
+    "BlogAgenticAIEnterprise": BlogAgenticAIEnterprise,
+    "BlogAutonomousAgents": BlogAutonomousAgents,
+    "BlogMultiAgentSystems": BlogMultiAgentSystems,
+    "BlogNoCodeAgenticAI": BlogNoCodeAgenticAI,
 }
 
 export const pagesConfig = {
