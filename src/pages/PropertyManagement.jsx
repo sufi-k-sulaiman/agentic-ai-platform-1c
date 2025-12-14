@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2, TrendingDown, Database, Workflow, DollarSign, TrendingUp, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 const challenges = [
   {
@@ -107,9 +109,11 @@ export default function PropertyManagement() {
                 Deploy autonomous AI agents that manage maintenance, tenant services, finances, and operations—cutting costs by 40% while improving tenant satisfaction. Transform your property management with intelligent automation that works 24/7, predicts problems before they occur, and delivers exceptional experiences at scale.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-                  Schedule demo <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                <Link to={createPageUrl('Onboarding')}>
+                  <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
+                    Get started <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
                 <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14">
                   View ROI calculator
                 </Button>
@@ -222,9 +226,11 @@ export default function PropertyManagement() {
             <p className="text-xl text-gray-600 mb-10">
               Join 500+ property managers reducing costs and delighting tenants with Agentic AI. See why leading property management companies trust our platform to handle thousands of units efficiently and profitably.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              Start free trial <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to={createPageUrl('Onboarding')}>
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
+                Get started <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
