@@ -8,26 +8,26 @@ const challenges = [
   {
     icon: DollarSign,
     title: 'Facility Costs',
-    problem: 'Inefficient space utilization, wasted energy, manual facility management driving up costs',
-    solution: 'AI optimizes space allocation, automates HVAC/lighting, and predicts maintenance—reducing facility costs by 30%'
+    problem: 'Inefficient space utilization with 40% of desks unoccupied daily costs thousands per month in wasted real estate. Energy waste from HVAC systems running 24/7 regardless of actual occupancy adds 35% to utility bills. Manual facility management requires extensive staff time for routine tasks like room booking conflicts, visitor coordination, and maintenance tracking. Poor visibility into space usage prevents data-driven decisions about real estate optimization and hybrid work policies.',
+    solution: 'AI optimizes space allocation by analyzing occupancy patterns, automatically suggesting desk and meeting room configurations that maximize utilization. Smart building automation adjusts HVAC, lighting, and other systems based on real-time occupancy and scheduled events, reducing energy consumption by 30%. Predictive maintenance monitors all building equipment—elevators, HVAC, electrical, plumbing—identifying issues before they become costly failures. Automated space planning tools help facilities teams make informed decisions about expansions, consolidations, and renovations, reducing overall facility costs by 30%.'
   },
   {
     icon: Database,
     title: 'Disparate Systems',
-    problem: 'Access control, room booking, visitor management, facilities—all separate systems with no integration',
-    solution: 'Unified AI platform connects all systems, enabling seamless operations and comprehensive analytics'
+    problem: 'Access control, room booking, visitor management, facilities maintenance, parking, catering, and IT support systems all operate independently with no data sharing. Employees must use 5-8 different apps for basic workplace needs, creating frustration and inefficiency. Security teams lack integrated visibility across physical access, video surveillance, and incident reports. Facilities managers cannot correlate maintenance issues with environmental conditions or usage patterns because data lives in separate silos.',
+    solution: 'Unified AI platform connects all workplace systems through a single integration layer, enabling seamless data flow and coordinated operations. Employees access all services through one interface—book rooms, order food, report issues, reserve parking—with AI handling the complexity behind the scenes. Cross-system analytics provide unprecedented insights: correlating meeting room usage with HVAC performance, identifying security patterns across access logs and camera feeds, optimizing cleaning schedules based on actual space utilization. Comprehensive reporting gives leadership complete visibility into campus operations and employee experience metrics.'
   },
   {
     icon: Workflow,
     title: 'Manual Operations',
-    problem: 'Desk reservations, visitor check-ins, maintenance requests—time-consuming manual processes',
-    solution: 'Autonomous agents handle bookings, access control, and service requests without human intervention'
+    problem: 'Desk reservations require manual approval and coordination, creating bottlenecks for hybrid workers. Visitor check-ins involve paper forms, temporary badge printing, and manual host notification—taking 10-15 minutes per visitor. Maintenance requests go through email or phone calls, requiring manual assessment, vendor coordination, and follow-up tracking. Service delivery is reactive rather than proactive, with issues only addressed after complaints arise.',
+    solution: 'Autonomous agents handle all booking workflows automatically—desks, rooms, parking spots—with intelligent conflict resolution and optimization. Visitors pre-register online, receive QR codes for contactless check-in, and badges are automatically printed while hosts get instant notifications. Smart maintenance systems automatically detect issues through IoT sensors, create work orders, dispatch appropriate vendors, and track completion without human intervention. AI predicts service needs before problems occur, scheduling preventive actions during low-traffic periods to minimize disruption.'
   },
   {
     icon: Users,
     title: 'Employee Experience',
-    problem: 'Poor wayfinding, difficult room booking, slow service response times',
-    solution: 'AI concierge provides instant support, smart navigation, and proactive service—boosting satisfaction by 40%'
+    problem: 'Poor wayfinding leaves visitors and new employees lost in large campuses, creating negative first impressions. Difficult room booking processes with unclear availability and competing calendar systems cause meeting disruptions and wasted time. Slow service response times—average 48 hours for facilities requests—frustrate employees and reduce productivity. Lack of personalized services means every employee gets the same generic experience regardless of role, preferences, or needs.',
+    solution: 'AI concierge provides instant support via chat, voice, or mobile app—answering questions, providing directions with indoor navigation, booking resources, and resolving issues 24/7. Smart navigation integrates with building maps and real-time sensor data to guide people efficiently around campus, avoiding crowded areas and suggesting optimal routes. Proactive service anticipates needs: AI detects when meeting rooms need supplies, temperature adjustments, or technical support before attendees realize there\'s a problem. Personalization engines learn individual preferences and proactively suggest services, optimize commute planning, and customize workspace settings, boosting satisfaction by 40%.'
   }
 ];
 
@@ -35,37 +35,45 @@ const solutions = [
   {
     category: 'Space Management',
     items: [
-      'Real-time desk and room availability tracking',
-      'Automated space optimization based on utilization',
-      'Hot-desking and hybrid work coordination',
-      'Meeting room analytics and recommendations'
+      'Real-time desk and room availability tracking with occupancy sensors and booking integration',
+      'Automated space optimization based on utilization patterns and team collaboration needs',
+      'Hot-desking and hybrid work coordination with preference learning and smart assignment',
+      'Meeting room analytics identifying underutilized spaces and recommending consolidation',
+      'Space forecasting predicting future needs based on growth plans and utilization trends',
+      'Automated floor plan optimization suggesting reconfigurations for maximum efficiency'
     ]
   },
   {
     category: 'Operations & Maintenance',
     items: [
-      'Predictive maintenance for HVAC and equipment',
-      'Automated work order creation and routing',
-      'Energy optimization across campus facilities',
-      'Cleaning and janitorial scheduling automation'
+      'Predictive maintenance for HVAC, elevators, electrical, and plumbing systems',
+      'Automated work order creation and vendor dispatch with priority routing and SLA tracking',
+      'Energy optimization across campus facilities through AI-powered building automation',
+      'Cleaning and janitorial scheduling automation based on actual usage patterns',
+      'Inventory management for supplies, equipment, and consumables with automatic reordering',
+      'Contractor performance tracking with automated quality scoring and feedback collection'
     ]
   },
   {
     category: 'Security & Access',
     items: [
-      'Smart badge access with visitor management',
-      'AI-powered security monitoring and alerts',
-      'Automated parking management and allocation',
-      'Emergency response coordination'
+      'Smart badge access with visitor management, temporary credentials, and automatic expiration',
+      'AI-powered security monitoring analyzing video feeds for suspicious behavior and safety hazards',
+      'Automated parking management and allocation with license plate recognition and payment',
+      'Emergency response coordination with automated alerts, evacuation guidance, and roll call',
+      'Access pattern analysis detecting anomalies and potential security risks',
+      'Integrated incident management coordinating security, facilities, and emergency services'
     ]
   },
   {
     category: 'Employee Services',
     items: [
-      '24/7 AI concierge for campus inquiries',
-      'Automated catering and event coordination',
-      'Wayfinding and indoor navigation assistance',
-      'Service request tracking and fulfillment'
+      '24/7 AI concierge for campus inquiries, directions, services, and problem resolution',
+      'Automated catering and event coordination with vendor management and dietary preferences',
+      'Wayfinding and indoor navigation assistance with real-time crowd avoidance',
+      'Service request tracking and fulfillment with automated status updates and satisfaction surveys',
+      'Personalized workspace settings with temperature, lighting, and desk height preferences',
+      'Transportation coordination for shuttles, carpools, and ride-sharing with optimization'
     ]
   }
 ];
@@ -95,7 +103,7 @@ export default function CorporateCampuses() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Transform corporate campuses with Agentic AI that manages space, security, services, and operations—cutting costs by 30% while delighting employees.
+                Transform corporate campuses with Agentic AI that intelligently manages space, enhances security, automates services, and optimizes operations—cutting facility costs by 30% while creating exceptional employee experiences that boost productivity and satisfaction.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
@@ -134,7 +142,7 @@ export default function CorporateCampuses() {
               Campus challenges solved
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How Agentic AI transforms corporate campus operations
+              How Agentic AI transforms corporate campus operations, from space optimization to employee experience. Discover how Fortune 500 companies are revolutionizing workplace management.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -173,7 +181,7 @@ export default function CorporateCampuses() {
               Complete campus automation
             </h2>
             <p className="text-xl text-gray-600">
-              AI agents managing every aspect of your workplace
+              AI agents managing every aspect of your workplace, from space utilization to employee services, creating a seamlessly integrated campus experience.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +215,7 @@ export default function CorporateCampuses() {
               Ready to transform your campus?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Join Fortune 500 companies optimizing their workplaces with Agentic AI
+              Join Fortune 500 companies creating world-class workplace experiences while optimizing costs with Agentic AI. Transform your corporate campus into an intelligent, efficient, employee-centric environment.
             </p>
             <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
               Get started <ArrowRight className="ml-2 w-5 h-5" />
