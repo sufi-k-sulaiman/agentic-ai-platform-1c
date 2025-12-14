@@ -128,16 +128,36 @@ export default function Header() {
             </NavigationMenuPrimitive.Root>
           </nav>
 
-          {/* Search Button */}
-          <button
-            onClick={() => setSearchOpen(true)}
-            className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-          >
-            <Search className="w-5 h-5 text-gray-600" />
-          </button>
+          {/* Demo Button & Search */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a 
+              href="https://1cpublishing.com/home" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-[#6209e6] hover:bg-[#5008c5] text-white rounded-full px-6 h-10 text-sm font-medium">
+                Demo
+              </Button>
+            </a>
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+            >
+              <Search className="w-5 h-5 text-gray-600" />
+            </button>
+          </div>
 
           {/* Mobile Actions */}
           <div className="flex items-center gap-2 lg:hidden">
+            <a 
+              href="https://1cpublishing.com/home" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-[#6209e6] hover:bg-[#5008c5] text-white rounded-full px-5 h-9 text-sm font-medium">
+                Demo
+              </Button>
+            </a>
             <button
               onClick={() => setSearchOpen(true)}
               className="p-2 text-gray-600 hover:text-[#6209e6]"
