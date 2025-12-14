@@ -4,6 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Calendar, ArrowRight, Award, TrendingUp, Users, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 const news = [
   {
@@ -65,6 +68,12 @@ export default function Newsroom() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Newsroom"
+        description="Latest news, product launches, and company updates from 1cPlatform. Stay informed about AI innovation and enterprise transformation."
+        url="/newsroom"
+        keywords={['newsroom', 'press releases', 'company news', 'product updates', 'AI news']}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -196,10 +205,11 @@ export default function Newsroom() {
             For press inquiries or interview requests, please contact our media team
           </p>
           <div className="bg-white rounded-2xl p-8 border border-gray-200">
-            <div className="text-gray-600 mb-2">Email</div>
-            <a href="mailto:press@1cplatform.com" className="text-2xl font-semibold text-[#8B2EE5] hover:underline">
-              press@1cplatform.com
-            </a>
+            <Link to={createPageUrl('Contact')}>
+              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-14 text-lg">
+                Contact media team <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -311,7 +311,11 @@ export default function Privacy() {
                     </p>
                     <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                       <p className="text-gray-700 mb-2"><strong>1cPlatform Privacy Team</strong></p>
-                      <p className="text-gray-700 mb-2">Email: privacy@1cplatform.com</p>
+                      <p className="text-gray-700 mb-2">
+                        <Link to={createPageUrl('Contact')} className="text-[#8B2EE5] hover:underline">
+                          Contact us
+                        </Link>
+                      </p>
                       <p className="text-gray-700">Address: 1 Infinite Loop, Cupertino, CA 95014</p>
                     </div>
                   </div>

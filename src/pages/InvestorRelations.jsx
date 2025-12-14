@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 export default function InvestorRelations() {
@@ -917,10 +919,11 @@ export default function InvestorRelations() {
               </Button>
             </div>
             <div className="mt-12 pt-8 border-t border-white/20">
-              <p className="text-lg text-purple-100 mb-2">Email</p>
-              <a href="mailto:investors@1cplatform.com" className="text-2xl font-semibold hover:underline">
-                investors@1cplatform.com
-              </a>
+              <Link to={createPageUrl('Contact')}>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-10 h-14 text-lg">
+                  Contact us
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
