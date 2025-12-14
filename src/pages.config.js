@@ -97,6 +97,20 @@ import BlogAgenticAIGovernanceBestPractices from './pages/BlogAgenticAIGovernanc
 import BlogAgenticAIGovernanceCommittee from './pages/BlogAgenticAIGovernanceCommittee';
 import BlogAgenticAIModelGovernance from './pages/BlogAgenticAIModelGovernance';
 import BlogAgenticAIVendorManagement from './pages/BlogAgenticAIVendorManagement';
+import BlogAgenticVsTraditionalAI from './pages/BlogAgenticVsTraditionalAI';
+import BlogWhenUseAgenticAI from './pages/BlogWhenUseAgenticAI';
+import BlogAgenticVsRuleBased from './pages/BlogAgenticVsRuleBased';
+import BlogAgenticAICostAnalysis from './pages/BlogAgenticAICostAnalysis';
+import BlogAgenticAIPerformance from './pages/BlogAgenticAIPerformance';
+import BlogAgenticAIArchitecture from './pages/BlogAgenticAIArchitecture';
+import BlogAgenticAIUseCaseComparison from './pages/BlogAgenticAIUseCaseComparison';
+import BlogMigratingToAgenticAI from './pages/BlogMigratingToAgenticAI';
+import BlogAgenticAIROIComparison from './pages/BlogAgenticAIROIComparison';
+import BlogAgenticAIFutureProof from './pages/BlogAgenticAIFutureProof';
+import BlogAgenticAILimitations from './pages/BlogAgenticAILimitations';
+import BlogAgenticAISkillsTransition from './pages/BlogAgenticAISkillsTransition';
+import BlogAgenticAIIndustryAdoption from './pages/BlogAgenticAIIndustryAdoption';
+import BlogAgenticAISecurityComparison from './pages/BlogAgenticAISecurityComparison';
 import __Layout from './Layout.jsx';
 
 
@@ -200,6 +214,20 @@ export const PAGES = {
     "BlogAgenticAIGovernanceCommittee": BlogAgenticAIGovernanceCommittee,
     "BlogAgenticAIModelGovernance": BlogAgenticAIModelGovernance,
     "BlogAgenticAIVendorManagement": BlogAgenticAIVendorManagement,
+    "BlogAgenticVsTraditionalAI": BlogAgenticVsTraditionalAI,
+    "BlogWhenUseAgenticAI": BlogWhenUseAgenticAI,
+    "BlogAgenticVsRuleBased": BlogAgenticVsRuleBased,
+    "BlogAgenticAICostAnalysis": BlogAgenticAICostAnalysis,
+    "BlogAgenticAIPerformance": BlogAgenticAIPerformance,
+    "BlogAgenticAIArchitecture": BlogAgenticAIArchitecture,
+    "BlogAgenticAIUseCaseComparison": BlogAgenticAIUseCaseComparison,
+    "BlogMigratingToAgenticAI": BlogMigratingToAgenticAI,
+    "BlogAgenticAIROIComparison": BlogAgenticAIROIComparison,
+    "BlogAgenticAIFutureProof": BlogAgenticAIFutureProof,
+    "BlogAgenticAILimitations": BlogAgenticAILimitations,
+    "BlogAgenticAISkillsTransition": BlogAgenticAISkillsTransition,
+    "BlogAgenticAIIndustryAdoption": BlogAgenticAIIndustryAdoption,
+    "BlogAgenticAISecurityComparison": BlogAgenticAISecurityComparison,
 }
 
 export const pagesConfig = {
