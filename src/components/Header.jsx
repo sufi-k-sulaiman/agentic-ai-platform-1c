@@ -3,14 +3,9 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
+import { ChevronDown } from 'lucide-react';
+import { cn } from "@/lib/utils";
 
 const navItems = [
   { 
@@ -94,38 +89,37 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <NavigationMenu>
-              <NavigationMenuList className="gap-1">
+            <NavigationMenuPrimitive.Root>
+              <NavigationMenuPrimitive.List className="flex gap-1">
                 {navItems.map((item) => (
-                  <NavigationMenuItem key={item.label}>
+                  <NavigationMenuPrimitive.Item key={item.label} className="relative">
                     {item.submenu ? (
                       <>
-                        <NavigationMenuTrigger className="text-gray-600 hover:text-[#8B2EE5] bg-transparent hover:bg-transparent data-[state=open]:bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5">
+                        <NavigationMenuPrimitive.Trigger className="text-gray-600 hover:text-[#8B2EE5] bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5 px-4 py-2 flex items-center gap-1 group">
                           {item.label}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <ul className={`grid gap-1 p-4 ${item.label === 'Verticals' ? 'w-[500px] grid-cols-2' : 'w-[400px]'}`}>
+                          <ChevronDown className="w-3 h-3 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                        </NavigationMenuPrimitive.Trigger>
+                        <NavigationMenuPrimitive.Content className="absolute left-1/2 -translate-x-1/2 top-full mt-2 data-[motion=from-start]:animate-in data-[motion=from-end]:animate-in data-[motion=to-start]:animate-out data-[motion=to-end]:animate-out">
+                          <ul className={`grid gap-1 p-4 bg-white rounded-xl shadow-lg border border-gray-100 ${item.label === 'Verticals' ? 'w-[500px] grid-cols-2' : 'w-[400px]'}`}>
                             {item.submenu.map((subitem) => (
                               <li key={subitem.label}>
-                                <NavigationMenuLink asChild>
-                                  <Link
-                                    to={subitem.href}
-                                    className="block select-none rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50"
-                                  >
-                                    <div className="text-sm font-medium text-gray-900">{subitem.label}</div>
-                                    <p className="text-sm text-gray-500 mt-1">{subitem.description}</p>
-                                  </Link>
-                                </NavigationMenuLink>
+                                <Link
+                                  to={subitem.href}
+                                  className="block select-none rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50"
+                                >
+                                  <div className="text-sm font-medium text-gray-900">{subitem.label}</div>
+                                  <p className="text-sm text-gray-500 mt-1">{subitem.description}</p>
+                                </Link>
                               </li>
                             ))}
                           </ul>
-                        </NavigationMenuContent>
+                        </NavigationMenuPrimitive.Content>
                       </>
                     ) : null}
-                  </NavigationMenuItem>
+                  </NavigationMenuPrimitive.Item>
                 ))}
-              </NavigationMenuList>
-            </NavigationMenu>
+              </NavigationMenuPrimitive.List>
+            </NavigationMenuPrimitive.Root>
           </nav>
 
           {/* CTA Buttons */}
