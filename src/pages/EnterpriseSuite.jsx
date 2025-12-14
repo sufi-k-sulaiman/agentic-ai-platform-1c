@@ -419,22 +419,30 @@ export default function EnterpriseSuite() {
             >
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center">
-                  <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                    alt="1C" 
-                    className="w-20 h-20"
-                  />
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] rounded-full flex items-center justify-center">
+                    <img 
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                      alt="1C" 
+                      className="w-12 h-12"
+                    />
+                  </div>
                 </div>
               </div>
-              {/* Connection nodes */}
-              {[...Array(8)].map((_, i) => (
+              {/* Integration boxes with names */}
+              {[
+                { name: 'Salesforce', position: { top: '8%', left: '10%' } },
+                { name: 'HubSpot', position: { top: '15%', right: '12%' } },
+                { name: 'Slack', position: { top: '45%', left: '5%' } },
+                { name: 'Teams', position: { top: '50%', right: '8%' } },
+                { name: 'AWS', position: { bottom: '25%', left: '12%' } },
+                { name: 'Azure', position: { bottom: '20%', right: '15%' } },
+                { name: 'QuickBooks', position: { bottom: '8%', left: '28%' } },
+                { name: 'Xero', position: { bottom: '10%', right: '25%' } }
+              ].map((integration, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-16 h-16 bg-white rounded-xl shadow-lg"
-                  style={{
-                    top: `${20 + Math.sin(i * Math.PI / 4) * 40}%`,
-                    left: `${20 + Math.cos(i * Math.PI / 4) * 40}%`,
-                  }}
+                  className="absolute bg-white rounded-xl shadow-lg p-3 flex items-center justify-center"
+                  style={integration.position}
                   animate={{
                     y: [0, -10, 0],
                   }}
@@ -443,7 +451,9 @@ export default function EnterpriseSuite() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                />
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">{integration.name}</span>
+                </motion.div>
               ))}
             </motion.div>
           </div>
