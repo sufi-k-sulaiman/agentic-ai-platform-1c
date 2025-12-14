@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Target, Users, Globe, Award } from 'lucide-react';
+import { ArrowRight, Target, Users, Globe, Award, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 const values = [
@@ -36,7 +38,37 @@ const timeline = [
   { year: '2027', title: 'Global Expansion', description: 'Scaling operations worldwide' }
 ];
 
+const investmentSlides = [
+  { title: 'Executive Summary', content: 'Transforming Enterprise with Autonomous AI', bg: 'from-purple-600 to-violet-700' },
+  { title: 'Market Opportunity', content: '$500B TAM by 2030', bg: 'from-blue-600 to-cyan-700' },
+  { title: 'The Problem', content: 'Legacy Systems & Manual Processes', bg: 'from-red-600 to-orange-700' },
+  { title: 'Our Solution', content: 'Agentic AI Platform', bg: 'from-green-600 to-emerald-700' },
+  { title: 'Product Suite', content: '4 Core Products, 14 Verticals', bg: 'from-purple-600 to-pink-700' },
+  { title: 'Technology Stack', content: 'Enterprise-Grade Infrastructure', bg: 'from-indigo-600 to-purple-700' },
+  { title: 'Traction', content: '500+ Enterprise Clients', bg: 'from-yellow-600 to-orange-700' },
+  { title: 'Revenue Model', content: 'SaaS with Usage-Based Pricing', bg: 'from-teal-600 to-green-700' },
+  { title: 'Growth Metrics', content: '300% YoY Revenue Growth', bg: 'from-rose-600 to-pink-700' },
+  { title: 'Customer Success', content: '40% Avg. Cost Reduction', bg: 'from-violet-600 to-purple-700' },
+  { title: 'Competitive Landscape', content: 'Differentiated Positioning', bg: 'from-blue-600 to-indigo-700' },
+  { title: 'Go-to-Market', content: 'Enterprise Sales & Partnerships', bg: 'from-emerald-600 to-teal-700' },
+  { title: 'Team', content: '2000+ Talented Professionals', bg: 'from-amber-600 to-orange-700' },
+  { title: 'Roadmap', content: 'Vision for 2025-2027', bg: 'from-purple-600 to-indigo-700' },
+  { title: 'Financials', content: '$2.5B Current Valuation', bg: 'from-green-600 to-teal-700' },
+  { title: 'Use of Funds', content: 'Product, Sales, and Expansion', bg: 'from-red-600 to-rose-700' },
+  { title: 'Partnerships', content: 'Strategic Alliances & Integrations', bg: 'from-cyan-600 to-blue-700' },
+  { title: 'Industry Recognition', content: 'Awards & Certifications', bg: 'from-yellow-600 to-amber-700' },
+  { title: 'Vision', content: 'The Future of Enterprise AI', bg: 'from-violet-600 to-fuchsia-700' },
+  { title: 'Investment Ask', content: 'Join Us in Building the Future', bg: 'from-purple-600 to-pink-700' }
+];
+
 export default function AboutUs() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showDeck, setShowDeck] = useState(false);
+
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % investmentSlides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + investmentSlides.length) % investmentSlides.length);
+
   return (
     <div className="bg-white">
       <PageMeta 
@@ -63,9 +95,20 @@ export default function AboutUs() {
             <p className="text-2xl text-gray-600 leading-relaxed mb-10">
               We're on a mission to empower every organization with AI that thinks, learns, and acts autonomously—transforming how businesses operate at scale.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base">
-              Join our team <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Link to={createPageUrl('Careers')}>
+                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base">
+                  Join our team <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Button 
+                onClick={() => setShowDeck(true)}
+                variant="outline" 
+                className="border-[#8B2EE5] text-[#8B2EE5] hover:bg-[#8B2EE5] hover:text-white rounded-full px-8 h-14 text-base"
+              >
+                View investment deck <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -157,6 +200,87 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
+      {/* Investment Deck Modal */}
+      {showDeck && (
+        <div className={`fixed inset-0 z-50 ${isFullscreen ? 'bg-black' : 'bg-black/90'} flex items-center justify-center p-4`}>
+          <div className={`${isFullscreen ? 'w-full h-full' : 'max-w-6xl w-full'} relative`}>
+            {/* Close Button */}
+            <button
+              onClick={() => {
+                setShowDeck(false);
+                setIsFullscreen(false);
+              }}
+              className="absolute top-4 right-4 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Fullscreen Toggle */}
+            <button
+              onClick={() => setIsFullscreen(!isFullscreen)}
+              className="absolute top-4 right-20 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all"
+            >
+              <Maximize2 className="w-6 h-6" />
+            </button>
+
+            {/* Slide Container */}
+            <div className={`${isFullscreen ? 'h-full' : 'aspect-[16/9]'} bg-gradient-to-br ${investmentSlides[currentSlide].bg} rounded-3xl overflow-hidden flex flex-col items-center justify-center text-white relative shadow-2xl`}>
+              {/* Slide Content */}
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center px-8 md:px-16"
+              >
+                <div className="text-sm md:text-base font-semibold mb-4 opacity-80">
+                  Slide {currentSlide + 1} of {investmentSlides.length}
+                </div>
+                <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+                  {investmentSlides[currentSlide].title}
+                </h2>
+                <p className="text-xl md:text-3xl opacity-90">
+                  {investmentSlides[currentSlide].content}
+                </p>
+              </motion.div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all group"
+              >
+                <ChevronLeft className="w-8 h-8 group-hover:scale-110 transition-transform" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all group"
+              >
+                <ChevronRight className="w-8 h-8 group-hover:scale-110 transition-transform" />
+              </button>
+            </div>
+
+            {/* Slide Indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              {investmentSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentSlide 
+                      ? 'w-8 bg-white' 
+                      : 'w-2 bg-white/30 hover:bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Keyboard Navigation Hint */}
+            <div className="text-center mt-4 text-white/60 text-sm">
+              Use arrow keys or swipe to navigate • Press ESC to close
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
