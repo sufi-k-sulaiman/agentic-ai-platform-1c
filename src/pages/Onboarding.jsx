@@ -121,15 +121,22 @@ const verticals = [
   }
 ];
 
-const roles = [
-  'CEO / Founder',
-  'CTO / VP Engineering',
-  'Head of Operations',
-  'Product Manager',
-  'IT Manager',
-  'Business Analyst',
-  'Other'
-];
+const rolesByIndustry = {
+  property: ['CEO / Owner', 'Property Manager', 'Operations Manager', 'Facilities Director', 'Portfolio Manager', 'Leasing Manager', 'Other'],
+  datacenter: ['CEO / Owner', 'CTO', 'Data Center Manager', 'Facilities Director', 'Operations Manager', 'Infrastructure Manager', 'Other'],
+  finance: ['CEO / CFO', 'CTO', 'Head of Operations', 'Compliance Officer', 'Risk Manager', 'Branch Manager', 'Other'],
+  healthcare: ['CEO / Administrator', 'Chief Medical Officer', 'Operations Director', 'IT Manager', 'Practice Manager', 'Compliance Officer', 'Other'],
+  corporate: ['CEO', 'Chief Administrative Officer', 'Facilities Director', 'Workplace Manager', 'Operations Manager', 'HR Director', 'Other'],
+  transit: ['CEO / Director', 'Operations Manager', 'Fleet Manager', 'Service Planning Manager', 'Maintenance Director', 'IT Manager', 'Other'],
+  traffic: ['City Manager', 'Traffic Engineer', 'Operations Director', 'Smart City Coordinator', 'Transportation Planner', 'IT Director', 'Other'],
+  energy: ['CEO / President', 'Chief Operations Officer', 'Grid Manager', 'Asset Manager', 'Engineering Director', 'Reliability Manager', 'Other'],
+  retail: ['CEO / Owner', 'COO', 'Store Manager', 'Merchandising Manager', 'E-commerce Director', 'Operations Manager', 'Other'],
+  education: ['Principal / Dean', 'Superintendent', 'Chief Academic Officer', 'IT Director', 'Operations Manager', 'Department Head', 'Other'],
+  gaming: ['CEO / Founder', 'CTO', 'Head of LiveOps', 'Product Manager', 'Infrastructure Manager', 'Studio Director', 'Other'],
+  government: ['City Manager', 'Department Director', 'Chief Administrative Officer', 'IT Director', 'Operations Manager', 'Program Manager', 'Other'],
+  airports: ['Airport Director', 'COO', 'Terminal Manager', 'Operations Manager', 'Safety Director', 'Customer Experience Manager', 'Other'],
+  sports: ['CEO / General Manager', 'Operations Director', 'Venue Manager', 'Fan Experience Manager', 'Revenue Manager', 'Marketing Director', 'Other']
+};
 
 const teamSizes = [
   'Just me',
@@ -150,14 +157,162 @@ const companySizes = [
 ];
 
 const painPoints = [
-  'High operational costs',
-  'Manual repetitive tasks',
-  'Poor customer experience',
-  'Data silos and fragmentation',
+  // Strategy & Leadership
+  'Setting a clear strategy in fast-changing markets',
+  'Balancing short-term results with long-term vision',
+  'Managing risk and uncertainty',
+  'Driving alignment across departments',
+  // Talent & HR
+  'Recruiting qualified talent',
+  'Retaining employees',
+  'Managing hybrid or remote work',
+  'Handling compliance and labor laws',
+  'Building strong culture and engagement',
+  // Operations
+  'Inefficient processes',
+  'Supply chain disruptions',
+  'Quality control issues',
+  'Rising operational costs',
+  'Scaling production consistently',
+  // Finance
+  'Cash flow instability',
+  'Budget overruns',
+  'Forecasting inaccuracies',
+  'Compliance and audit pressure',
+  'Rising costs',
+  'Slow financial processes',
+  'Limited visibility into spending',
+  // Marketing
+  'Standing out in crowded markets',
+  'Keeping up with digital trends',
+  'Measuring ROI',
+  'Understanding customer behavior',
+  'Maintaining brand reputation',
+  // Sales
+  'Low-quality leads',
+  'Unpredictable pipelines',
+  'Long sales cycles',
+  'Difficulty closing deals',
+  'Customer churn',
+  'Poor CRM usage',
+  'Inaccurate forecasting',
+  // IT & Technology
+  'Cybersecurity threats',
+  'Legacy systems',
+  'Difficulty integrating new tools',
+  'Data privacy pressure',
+  'Supporting remote teams',
+  'High cost of innovation',
+  // Product & Development
+  'Long development cycles',
+  'Protecting intellectual property',
+  'Staying ahead of competitors',
+  // Customer Support
+  'High support ticket volume',
   'Slow response times',
-  'Compliance challenges',
-  'Scaling difficulties',
-  'Limited insights from data'
+  'Lack of automation',
+  'Poor cross-department communication',
+  'Repetitive recurring issues',
+  // Customer Service
+  'High customer expectations',
+  'Long wait times',
+  'Difficult customers',
+  'Inconsistent service quality',
+  'Poor knowledge base',
+  'High turnover in service roles',
+  // Technical Support
+  'Complex technical issues',
+  'Lack of documentation',
+  'Slow bug resolution',
+  'Escalations due to unclear ownership',
+  'Customers using outdated versions',
+  'High pressure for fast fixes',
+  // Vendor Management
+  'Unreliable vendors',
+  'Price fluctuations',
+  'Quality inconsistencies',
+  'Contract disputes',
+  'Poor vendor communication',
+  'Over-dependence on a single vendor',
+  // Customer Experience
+  'Confusing product experience',
+  'Poor onboarding',
+  'Lack of support',
+  'Unmet expectations',
+  'Price sensitivity',
+  'Easy switching to competitors',
+  // Partnerships
+  'Misaligned partner goals',
+  'Poor partner communication',
+  'Revenue-sharing conflicts',
+  'Slow collaboration',
+  'Lack of transparency',
+  'Uneven contribution of effort',
+  // Employee Experience
+  'Poor usability of tools',
+  'Lack of training',
+  'Frustration with bugs',
+  'Resistance to change',
+  'Inconsistent access to information',
+  'Overly complex workflows',
+  // Website Performance
+  'Slow website performance',
+  'Poor mobile experience',
+  'Broken links',
+  'Outdated design',
+  'Confusing navigation',
+  'Weak SEO',
+  // Website Conversion
+  'High bounce rates',
+  'Low conversion rates',
+  'Accessibility issues',
+  'Security vulnerabilities',
+  'Poor hosting performance',
+  // Website Content & UX
+  'Inconsistent branding',
+  'Low-quality content',
+  'Technical errors',
+  'Weak site search',
+  'Missing or unclear CTAs',
+  'Poor analytics setup',
+  'Outdated plugins or CMS',
+  'Lack of personalization',
+  'Slow server response',
+  'Missing trust signals',
+  'Hard-to-use forms',
+  'Poor integration with other systems',
+  // Digital Transformation
+  'Slow digital transformation',
+  'Poor user experience on digital platforms',
+  'Fragmented data',
+  'Difficulty measuring digital ROI',
+  'Low adoption of digital tools',
+  // E-commerce
+  'Slow loading speed (e-commerce)',
+  'High cart abandonment',
+  'Complicated checkout flows',
+  'Payment failures',
+  'Inventory inaccuracies',
+  'Slow shipping',
+  'High return rates',
+  'Poor product descriptions',
+  'Rising ad costs',
+  'Difficulty tracking attribution',
+  'Fraud and chargebacks',
+  'Customer trust issues',
+  'Inconsistent omnichannel experience',
+  'Limited personalization',
+  'Poor search and filtering',
+  'Technical bugs during peak traffic',
+  'Integration issues with ERP/CRM/POS',
+  'Lack of customer reviews',
+  'Customer service overwhelmed by order issues',
+  'Vendor delays affecting stock',
+  'Marketplace competition',
+  'Price wars',
+  'Difficulty scaling internationally',
+  'Compliance with taxes and privacy laws',
+  'Poor post-purchase communication'
 ];
 
 const hearAboutUs = [
@@ -678,8 +833,8 @@ export default function Onboarding() {
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What's your role?</h1>
                   <p className="text-gray-600 mb-8">Help us understand your position</p>
-                  <div className="grid gap-3">
-                    {roles.map((role) => (
+                  <div className="grid gap-3 max-h-[500px] overflow-y-auto pr-2">
+                    {(rolesByIndustry[formData.vertical] || rolesByIndustry.corporate).map((role) => (
                       <button key={role} onClick={() => setFormData({ ...formData, role })} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.role === role ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {role}
                       </button>
@@ -752,16 +907,19 @@ export default function Onboarding() {
               <motion.div key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What challenges are you facing?</h1>
-                  <p className="text-gray-600 mb-8">Select all that apply</p>
-                  <div className="grid gap-3">
+                  <p className="text-gray-600 mb-4">Select all that apply</p>
+                  <div className="text-sm text-gray-500 mb-4">
+                    {formData.painPoints.length} selected
+                  </div>
+                  <div className="grid gap-2 max-h-[450px] overflow-y-auto pr-2">
                     {painPoints.map((point) => (
-                      <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-4 rounded-xl border-2 transition-all text-left font-medium ${formData.painPoints.includes(point) ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                      <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${formData.painPoints.includes(point) ? 'border-[#8B2EE5] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {point}
                       </button>
                     ))}
                   </div>
                 </div>
-                <div className="flex gap-3 mt-8">
+                <div className="flex gap-3 mt-6">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
