@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { ArrowRight, ArrowLeft, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, CheckCircle2, TrendingUp, Clock, DollarSign, Target } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import { getChallengeCard } from '@/components/ChallengeDataCards';
 
 const verticals = [
   { 
@@ -608,99 +609,96 @@ export default function Onboarding() {
             title: 'Common Pain Points',
             subtitle: 'What challenges are you facing?',
             metrics: [
-              { pain: 'Manual tasks', percent: 78 },
-              { pain: 'High costs', percent: 72 },
-              { pain: 'Data silos', percent: 65 },
-              { pain: 'Poor CX', percent: 58 }
+              { pain: 'Manual tasks', percent: 78, color: 'from-gray-400 to-slate-300' },
+              { pain: 'High costs', percent: 72, color: 'from-gray-400 to-slate-300' },
+              { pain: 'Data silos', percent: 65, color: 'from-gray-400 to-slate-300' },
+              { pain: 'Poor CX', percent: 58, color: 'from-gray-400 to-slate-300' }
             ],
             chart: [45, 55, 70, 85, 95]
           };
         }
 
-        const hasOperationalChallenge = selectedChallenges.some(c => 
-          c.includes('process') || c.includes('operational') || c.includes('efficiency') || c.includes('workflow') || c.includes('Inefficient')
-        );
-        const hasFinancialChallenge = selectedChallenges.some(c => 
-          c.includes('cost') || c.includes('budget') || c.includes('Cash flow') || c.includes('financial') || c.includes('Rising')
-        );
-        const hasCustomerChallenge = selectedChallenges.some(c => 
-          c.includes('customer') || c.includes('satisfaction') || c.includes('conversion') || c.includes('churn') || c.includes('CX')
-        );
-        const hasTalentChallenge = selectedChallenges.some(c => 
-          c.includes('talent') || c.includes('Recruiting') || c.includes('Retaining') || c.includes('employees')
-        );
+        // Get the last selected challenge for display
+        const lastChallenge = selectedChallenges[selectedChallenges.length - 1];
+        const cardData = getChallengeCard(lastChallenge);
 
         return {
           title: 'Impact on Your Challenges',
           subtitle: `${selectedChallenges.length} challenge${selectedChallenges.length > 1 ? 's' : ''} selected`,
-          metrics: [
-            hasOperationalChallenge && { pain: 'Process efficiency', percent: 85, color: 'from-blue-400 to-cyan-300' },
-            hasFinancialChallenge && { pain: 'Cost reduction', percent: 72, color: 'from-green-400 to-emerald-300' },
-            hasCustomerChallenge && { pain: 'Customer satisfaction', percent: 65, color: 'from-purple-400 to-pink-300' },
-            hasTalentChallenge && { pain: 'Talent retention', percent: 58, color: 'from-pink-400 to-red-300' }
-          ].filter(Boolean),
-          chart: hasOperationalChallenge ? [40, 60, 75, 88, 95] :
-                 hasFinancialChallenge ? [35, 50, 68, 82, 90] :
-                 hasCustomerChallenge ? [30, 48, 65, 80, 92] : [45, 55, 70, 85, 95]
+          currentChallenge: lastChallenge,
+          metrics: cardData.metrics,
+          chart: cardData.chart
         };
       };
 
       const challengeData = getChallengeData();
 
       return (
-        <div className="text-white">
-          <h2 className="text-3xl font-bold mb-4">{challengeData.title}</h2>
-          <p className="text-purple-100 text-lg mb-4">{challengeData.subtitle}</p>
-          <div className="text-sm text-purple-200 mb-6">{formattedDate}</div>
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={challengeData.currentChallenge || 'default'}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="text-white"
+          >
+            <h2 className="text-3xl font-bold mb-4">{challengeData.title}</h2>
+            <p className="text-purple-100 text-lg mb-2">{challengeData.subtitle}</p>
+            {challengeData.currentChallenge && (
+              <p className="text-sm text-purple-200 mb-4 italic">"{challengeData.currentChallenge}"</p>
+            )}
+            <div className="text-sm text-purple-200 mb-6">{formattedDate}</div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
-            <h3 className="font-semibold mb-4">Projected Improvement</h3>
-            <div className="h-32 flex items-end gap-2 mb-4">
-              {challengeData.chart.map((value, idx) => (
-                <motion.div
-                  key={idx}
-                  className="flex-1 bg-gradient-to-t from-white to-white/60 rounded-t"
-                  initial={{ height: 0 }}
-                  animate={{ height: `${value}%` }}
-                  transition={{ duration: 0.8, delay: idx * 0.1 }}
-                />
-              ))}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
+              <h3 className="font-semibold mb-4">Projected Improvement</h3>
+              <div className="h-32 flex items-end gap-2 mb-4">
+                {challengeData.chart.map((value, idx) => (
+                  <motion.div
+                    key={idx}
+                    className="flex-1 bg-gradient-to-t from-white to-white/60 rounded-t"
+                    initial={{ height: 0 }}
+                    animate={{ height: `${value}%` }}
+                    transition={{ duration: 0.8, delay: idx * 0.1 }}
+                  />
+                ))}
+              </div>
+              <div className="flex justify-between text-xs text-purple-200">
+                <span>Month 1</span>
+                <span>Month 3</span>
+                <span>Month 6</span>
+              </div>
             </div>
-            <div className="flex justify-between text-xs text-purple-200">
-              <span>Month 1</span>
-              <span>Month 3</span>
-              <span>Month 6</span>
-            </div>
-          </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
-            <h3 className="font-semibold mb-3 text-sm">Key Metrics</h3>
-            <div className="space-y-2">
-              {challengeData.metrics.map((item, idx) => (
-                <div key={idx}>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span>{item.pain}</span>
-                    <span>{item.percent}%</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
+              <h3 className="font-semibold mb-3 text-sm">Key Metrics</h3>
+              <div className="space-y-2">
+                {challengeData.metrics.map((item, idx) => (
+                  <div key={idx}>
+                    <div className="flex justify-between text-xs mb-1">
+                      <span>{item.pain}</span>
+                      <span>{item.percent}%</span>
+                    </div>
+                    <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
+                      <motion.div 
+                        className={`h-full bg-gradient-to-r ${item.color}`}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${item.percent}%` }}
+                        transition={{ duration: 1, delay: idx * 0.1 }}
+                      />
+                    </div>
                   </div>
-                  <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
-                    <motion.div 
-                      className={`h-full bg-gradient-to-r ${item.color}`}
-                      initial={{ width: 0 }}
-                      animate={{ width: `${item.percent}%` }}
-                      transition={{ duration: 1, delay: idx * 0.1 }}
-                    />
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-            <Target className="w-6 h-6 mb-2" />
-            <div className="text-xl font-bold mb-1">92%</div>
-            <div className="text-xs text-purple-100">See improvement within 90 days</div>
-          </div>
-        </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+              <Target className="w-6 h-6 mb-2" />
+              <div className="text-xl font-bold mb-1">92%</div>
+              <div className="text-xs text-purple-100">See improvement within 90 days</div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       );
     }
 
