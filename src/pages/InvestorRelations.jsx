@@ -87,20 +87,24 @@ export default function InvestorRelations() {
       if (i > 0) pdf.addPage();
       
       setCurrentSlide(i);
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await new Promise(resolve => setTimeout(resolve, 1200));
       
       try {
         const canvas = await html2canvas(slideElement, {
-          scale: 2,
+          scale: 3,
           backgroundColor: '#6209e6',
           logging: false,
           useCORS: true,
           allowTaint: true,
-          foreignObjectRendering: true
+          foreignObjectRendering: true,
+          scrollX: 0,
+          scrollY: 0,
+          windowWidth: slideElement.scrollWidth,
+          windowHeight: slideElement.scrollHeight
         });
         
-        const imgData = canvas.toDataURL('image/png');
-        pdf.addImage(imgData, 'PNG', 0, 0, slideWidth, slideHeight);
+        const imgData = canvas.toDataURL('image/png', 1.0);
+        pdf.addImage(imgData, 'PNG', 0, 0, slideWidth, slideHeight, '', 'FAST');
       } catch (error) {
         console.error('Error capturing slide:', error);
       }
@@ -2296,9 +2300,31 @@ export default function InvestorRelations() {
               id="slide-content"
               className={`${isFullscreen ? 'h-full' : 'aspect-[16/9]'} bg-gradient-to-br from-[#6209e6] via-[#7C3AED] to-[#8B5CF6] rounded-3xl overflow-hidden relative shadow-2xl border border-purple-300`}
             >
+              {/* Logo - Top Left */}
+              <div className="absolute top-6 left-6 z-10">
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                  alt="1C Platform" 
+                  className="w-12 h-12"
+                />
+              </div>
+
               {/* Slide Number */}
               <div className="absolute top-6 right-6 text-sm font-semibold text-white/60 z-10">
                 {currentSlide + 1} / {investmentSlides.length}
+              </div>
+
+              {/* Website - Bottom Center */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
+                <a 
+                  href="https://1cplatform.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white text-sm font-medium transition-colors"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  1cplatform.com
+                </a>
               </div>
 
               {/* Slide Content */}
@@ -2308,7 +2334,7 @@ export default function InvestorRelations() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="w-full h-full flex items-center justify-center p-8 md:p-16 overflow-auto"
+                className="w-full h-full flex items-center justify-center p-8 md:p-16 pb-16 overflow-auto"
               >
                 {/* Cover Slide */}
                 {investmentSlides[currentSlide].id === 'cover' && (
