@@ -2456,52 +2456,29 @@ export default function InvestorRelations() {
 
                 {/* Demographics Slide */}
                 {investmentSlides[currentSlide].id === 'demographics' && (
-                  <div className="text-white w-full h-full flex flex-col justify-center">
-                    <h2 className="text-5xl md:text-6xl font-bold mb-8">Plan to Acquire Active Users</h2>
-                    <div className="grid md:grid-cols-3 gap-12 items-center">
-                      <div className="md:col-span-2">
-                        <div className="bg-white p-8 rounded-2xl">
-                          <ResponsiveContainer width="100%" height={350}>
-                            <BarChart data={[
-                              { year: '2026', users: 50000 },
-                              { year: '2028', users: 200000 },
-                              { year: '2030', users: 500000 },
-                              { year: '2033', users: 1500000 },
-                              { year: '2036', users: 3500000 }
-                            ]}>
-                              <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
-                              <XAxis dataKey="year" stroke="#1F2937" style={{ fontSize: '14px', fontWeight: '600' }} />
-                              <YAxis stroke="#1F2937" tickFormatter={(val) => `${(val / 1000000).toFixed(1)}m`} />
-                              <Tooltip formatter={(val) => `${(val / 1000000).toFixed(2)}m users`} />
-                              <Bar dataKey="users" radius={[8, 8, 0, 0]}>
-                                {[0, 1, 2].map((index) => (
-                                  <Cell key={`cell-${index}`} fill="#0891B2" />
-                                ))}
-                                {[3, 4].map((index) => (
-                                  <Cell key={`cell-${index}`} fill="#6209e6" />
-                                ))}
-                              </Bar>
-                            </BarChart>
-                          </ResponsiveContainer>
-                          <div className="flex justify-center gap-6 mt-4">
-                            <div className="flex items-center gap-2">
-                              <div className="w-4 h-4 rounded bg-[#0891B2]"></div>
-                              <span className="text-sm text-gray-700 font-medium">Foundation Phase</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <div className="w-4 h-4 rounded bg-[#6209e6]"></div>
-                              <span className="text-sm text-gray-700 font-medium">Hypergrowth</span>
-                            </div>
+                  <div className="text-white w-full max-w-6xl">
+                    <h2 className="text-4xl font-bold mb-10 text-center">Our Community</h2>
+                    <p className="text-xl text-purple-200 text-center mb-12">Decision makers driving transformation</p>
+                    <div className="grid md:grid-cols-3 gap-8">
+                      {[
+                        { percent: 36, filled: 4, label: 'C-Suite Executives', desc: 'CEOs, CTOs, COOs making strategic decisions' },
+                        { percent: 50, filled: 5, label: 'VP / Directors', desc: 'Department heads implementing AI solutions' },
+                        { percent: 14, filled: 2, label: 'Managers', desc: 'Team leaders optimizing operations' }
+                      ].map((demo, idx) => (
+                        <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center">
+                          <div className="text-7xl font-bold mb-4">{demo.percent}%</div>
+                          <div className="flex gap-1 mb-4 justify-center">
+                            {Array.from({ length: 10 }).map((_, i) => (
+                              <User 
+                                key={i} 
+                                className={`w-5 h-5 ${i < demo.filled ? 'text-white fill-white' : 'text-white/20 fill-white/20'}`} 
+                              />
+                            ))}
                           </div>
+                          <h3 className="text-lg font-bold mb-2">{demo.label}</h3>
+                          <p className="text-sm text-purple-200">{demo.desc}</p>
                         </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="inline-block bg-cyan-400 rounded-full px-10 py-6 mb-8">
-                          <div className="text-6xl font-bold text-gray-900">$1.3B</div>
-                        </div>
-                        <h3 className="text-2xl font-bold mb-3">Growth Projection</h3>
-                        <p className="text-lg opacity-90">Targeting 3.5M+ active users by 2036 through enterprise expansion.</p>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -2708,35 +2685,7 @@ export default function InvestorRelations() {
                   </div>
                 )}
 
-                {/* Community Demographics */}
-                {investmentSlides[currentSlide].id === 'demographics' && (
-                  <div className="text-white w-full h-full flex flex-col justify-center">
-                    <h2 className="text-5xl md:text-6xl font-bold mb-16">Our Community</h2>
-                    <div className="space-y-12 max-w-4xl mx-auto w-full">
-                      {[
-                        { percent: 36, filled: 4, label: 'C-Suite Executives', desc: 'CEOs, CTOs, COOs driving strategic decisions' },
-                        { percent: 50, filled: 5, label: 'VP / Directors', desc: 'Department heads implementing AI transformation' },
-                        { percent: 14, filled: 2, label: 'Managers & Team Leads', desc: 'Operational leaders optimizing workflows' }
-                      ].map((demo, idx) => (
-                        <div key={idx} className="flex items-center justify-between gap-8">
-                          <div className="text-8xl md:text-9xl font-bold w-40 text-left">{demo.percent}%</div>
-                          <div className="flex gap-2">
-                            {Array.from({ length: 10 }).map((_, i) => (
-                              <User 
-                                key={i} 
-                                className={`w-10 h-10 ${i < demo.filled ? 'fill-[#6209e6] text-[#6209e6]' : 'fill-white/20 text-white/20'}`} 
-                              />
-                            ))}
-                          </div>
-                          <div className="text-left flex-1">
-                            <div className="text-xl font-bold mb-1">{demo.label}</div>
-                            <div className="text-sm opacity-70">{demo.desc}</div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+
 
                 {/* Quarterly Profits Slide */}
                 {investmentSlides[currentSlide].id === 'quarterly' && (
