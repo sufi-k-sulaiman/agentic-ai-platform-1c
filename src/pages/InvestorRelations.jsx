@@ -629,6 +629,59 @@ export default function InvestorRelations() {
               </p>
             </div>
           </div>
+
+          {/* P&L Table */}
+          <div className="mt-12 bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">Projected P&L Statement (2026-2030)</h3>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="text-lg font-semibold">Year</TableHead>
+                  <TableHead className="text-lg font-semibold text-right">Revenue</TableHead>
+                  <TableHead className="text-lg font-semibold text-right">Operating Expense</TableHead>
+                  <TableHead className="text-lg font-semibold text-right">Profit</TableHead>
+                  <TableHead className="text-lg font-semibold text-right">Margin %</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-medium text-base">2026</TableCell>
+                  <TableCell className="text-right text-base text-green-600 font-semibold">$25.0M</TableCell>
+                  <TableCell className="text-right text-base text-orange-600 font-semibold">$17.0M</TableCell>
+                  <TableCell className="text-right text-base text-[#6209e6] font-semibold">$8.0M</TableCell>
+                  <TableCell className="text-right text-base font-semibold">32%</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium text-base">2027</TableCell>
+                  <TableCell className="text-right text-base text-green-600 font-semibold">$90.0M</TableCell>
+                  <TableCell className="text-right text-base text-orange-600 font-semibold">$55.0M</TableCell>
+                  <TableCell className="text-right text-base text-[#6209e6] font-semibold">$35.0M</TableCell>
+                  <TableCell className="text-right text-base font-semibold">39%</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium text-base">2028</TableCell>
+                  <TableCell className="text-right text-base text-green-600 font-semibold">$280.0M</TableCell>
+                  <TableCell className="text-right text-base text-orange-600 font-semibold">$155.0M</TableCell>
+                  <TableCell className="text-right text-base text-[#6209e6] font-semibold">$125.0M</TableCell>
+                  <TableCell className="text-right text-base font-semibold">45%</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium text-base">2029</TableCell>
+                  <TableCell className="text-right text-base text-green-600 font-semibold">$650.0M</TableCell>
+                  <TableCell className="text-right text-base text-orange-600 font-semibold">$330.0M</TableCell>
+                  <TableCell className="text-right text-base text-[#6209e6] font-semibold">$320.0M</TableCell>
+                  <TableCell className="text-right text-base font-semibold">49%</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-50">
+                  <TableCell className="font-bold text-base">2030</TableCell>
+                  <TableCell className="text-right text-base text-green-600 font-bold">$1,400.0M</TableCell>
+                  <TableCell className="text-right text-base text-orange-600 font-bold">$650.0M</TableCell>
+                  <TableCell className="text-right text-base text-[#6209e6] font-bold">$750.0M</TableCell>
+                  <TableCell className="text-right text-base font-bold">54%</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
         </div>
       </section>
 
