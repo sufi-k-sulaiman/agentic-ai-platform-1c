@@ -2385,7 +2385,7 @@ export default function InvestorRelations() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="w-full h-full flex items-center justify-center p-8 md:p-16 pb-16 overflow-auto"
+                className="w-full h-full flex items-center justify-center p-8 md:p-16 pb-20 pt-20"
               >
                 {/* Cover Slide */}
                 {investmentSlides[currentSlide].id === 'cover' && (
@@ -3347,10 +3347,10 @@ export default function InvestorRelations() {
 
                 {/* Go-to-Market Strategy Slide */}
                 {investmentSlides[currentSlide].id === 'gtm' && (
-                  <div className="w-full text-white flex flex-col items-center justify-center">
+                  <div className="w-full max-w-6xl text-white">
                     <h2 className="text-4xl font-bold mb-4 text-center">Go-to-Market Strategy</h2>
                     <p className="text-xl text-purple-200 text-center mb-10">Multi-channel customer acquisition engine</p>
-                    <div className="grid md:grid-cols-2 gap-8 mb-8 max-w-5xl">
+                    <div className="grid md:grid-cols-2 gap-8 mb-8">
                       <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-6">
                         <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                           <Users className="w-8 h-8" />
@@ -3400,7 +3400,7 @@ export default function InvestorRelations() {
                         </ul>
                       </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-6 max-w-4xl">
+                    <div className="grid grid-cols-3 gap-6">
                       <div className="bg-white/5 rounded-xl p-5 text-center">
                         <div className="text-4xl font-bold mb-2">65%</div>
                         <div className="text-sm text-purple-200">PLG revenue</div>
