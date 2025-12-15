@@ -2501,7 +2501,7 @@ export default function InvestorRelations() {
                     <h2 className="text-4xl font-bold mb-12 text-center">SWOT Analysis</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                       {/* Strengths */}
-                      <div className="bg-green-500/20 backdrop-blur-sm border-2 border-green-300/50 rounded-2xl p-6">
+                      <div className="bg-purple-500/20 backdrop-blur-sm border-2 border-purple-300/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
                           <CheckCircle2 className="w-6 h-6" />
                           <h3 className="text-xl font-bold">Strengths</h3>
@@ -2516,7 +2516,7 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Weaknesses */}
-                      <div className="bg-yellow-500/20 backdrop-blur-sm border-2 border-yellow-300/50 rounded-2xl p-6">
+                      <div className="bg-purple-400/20 backdrop-blur-sm border-2 border-purple-200/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
                           <Target className="w-6 h-6" />
                           <h3 className="text-xl font-bold">Weaknesses</h3>
@@ -2531,7 +2531,7 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Opportunities */}
-                      <div className="bg-blue-500/20 backdrop-blur-sm border-2 border-blue-300/50 rounded-2xl p-6">
+                      <div className="bg-purple-600/20 backdrop-blur-sm border-2 border-purple-400/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
                           <TrendingUp className="w-6 h-6" />
                           <h3 className="text-xl font-bold">Opportunities</h3>
@@ -2546,7 +2546,7 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Threats */}
-                      <div className="bg-red-500/20 backdrop-blur-sm border-2 border-red-300/50 rounded-2xl p-6">
+                      <div className="bg-purple-700/20 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
                           <Shield className="w-6 h-6" />
                           <h3 className="text-xl font-bold">Threats</h3>
