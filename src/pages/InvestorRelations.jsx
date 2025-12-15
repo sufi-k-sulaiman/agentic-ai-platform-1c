@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 const investmentSlides = [
@@ -64,62 +65,44 @@ export default function InvestorRelations() {
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % investmentSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + investmentSlides.length) % investmentSlides.length);
 
-  const downloadPDF = () => {
+  const downloadPDF = async () => {
     const pdf = new jsPDF('landscape', 'mm', [297, 210]);
     const slideWidth = 297;
     const slideHeight = 210;
     
-    investmentSlides.forEach((slide, index) => {
-      if (index > 0) pdf.addPage();
+    const slideElement = document.getElementById('slide-content');
+    if (!slideElement) return;
+    
+    for (let i = 0; i < investmentSlides.length; i++) {
+      if (i > 0) pdf.addPage();
       
-      // Purple gradient background
-      pdf.setFillColor(98, 9, 230);
-      pdf.rect(0, 0, slideWidth, slideHeight, 'F');
-      pdf.setFillColor(124, 58, 237);
-      pdf.triangle(slideWidth, 0, slideWidth, slideHeight, 0, slideHeight, 'F');
+      setCurrentSlide(i);
+      await new Promise(resolve => setTimeout(resolve, 500)); // Wait for slide to render
       
-      // Slide number
-      pdf.setTextColor(255, 255, 255);
-      pdf.setFontSize(10);
-      pdf.text(`${index + 1} / ${investmentSlides.length}`, slideWidth - 20, 15, { align: 'right' });
-      
-      // Title
-      pdf.setTextColor(255, 255, 255);
-      pdf.setFontSize(36);
-      pdf.setFont('helvetica', 'bold');
-      pdf.text(slide.title, slideWidth / 2, 70, { align: 'center', maxWidth: slideWidth - 60 });
-      
-      // Subtitle
-      if (slide.subtitle) {
-        pdf.setFontSize(18);
-        pdf.setFont('helvetica', 'normal');
-        pdf.setTextColor(226, 232, 240);
-        pdf.text(slide.subtitle, slideWidth / 2, 92, { align: 'center', maxWidth: slideWidth - 60 });
+      try {
+        const canvas = await html2canvas(slideElement, {
+          scale: 2,
+          backgroundColor: null,
+          logging: false,
+          useCORS: true
+        });
+        
+        const imgData = canvas.toDataURL('image/png');
+        pdf.addImage(imgData, 'PNG', 0, 0, slideWidth, slideHeight);
+      } catch (error) {
+        console.error('Error capturing slide:', error);
+        // Fallback to simple text
+        pdf.setFillColor(98, 9, 230);
+        pdf.rect(0, 0, slideWidth, slideHeight, 'F');
+        pdf.setTextColor(255, 255, 255);
+        pdf.setFontSize(36);
+        pdf.setFont('helvetica', 'bold');
+        pdf.text(investmentSlides[i].title, slideWidth / 2, slideHeight / 2, { align: 'center' });
       }
-      
-      // Type-specific content
-      pdf.setFontSize(12);
-      pdf.setFont('helvetica', 'normal');
-      pdf.setTextColor(216, 180, 254);
-      
-      if (slide.id === 'cover') {
-        pdf.setFontSize(14);
-        pdf.text('42 Beta Customers | $2M Series A | 2027: 10K Target', slideWidth / 2, 120, { align: 'center' });
-      } else if (slide.id === 'problem') {
-        pdf.text('87% struggle | 12-18mo deploy | 3x cost to scale', slideWidth / 2, 120, { align: 'center' });
-      } else if (slide.id === 'yearly') {
-        pdf.text('178% CAGR | $750M by 2030 | 9,275% total growth', slideWidth / 2, 120, { align: 'center' });
-      } else if (slide.id === 'market') {
-        pdf.text('$500B+ TAM | 85% adoption gap | 120% CAGR', slideWidth / 2, 120, { align: 'center' });
-      }
-      
-      // Footer
-      pdf.setFontSize(10);
-      pdf.setTextColor(216, 180, 254);
-      pdf.text('investor@1cplatform.com', slideWidth / 2, slideHeight - 10, { align: 'center' });
-    });
+    }
     
     pdf.save('1C-Platform-Investment-Deck.pdf');
+    setCurrentSlide(0); // Reset to first slide
   };
 
   return (
@@ -2309,7 +2292,10 @@ export default function InvestorRelations() {
             </button>
 
             {/* Slide Container */}
-            <div className={`${isFullscreen ? 'h-full' : 'aspect-[16/9]'} bg-gradient-to-br from-[#6209e6] via-[#7C3AED] to-[#8B5CF6] rounded-3xl overflow-hidden relative shadow-2xl border border-purple-300`}>
+            <div 
+              id="slide-content"
+              className={`${isFullscreen ? 'h-full' : 'aspect-[16/9]'} bg-gradient-to-br from-[#6209e6] via-[#7C3AED] to-[#8B5CF6] rounded-3xl overflow-hidden relative shadow-2xl border border-purple-300`}
+            >
               {/* Slide Number */}
               <div className="absolute top-6 right-6 text-sm font-semibold text-white/60 z-10">
                 {currentSlide + 1} / {investmentSlides.length}
