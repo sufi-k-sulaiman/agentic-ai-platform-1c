@@ -85,11 +85,12 @@ export default function InvestorRelations() {
     setIsGeneratingPDF(true);
     setPdfProgress(0);
     
-    const slideWidth = 1920;
-    const slideHeight = 1080;
-    const aspectRatio = slideWidth / slideHeight;
+    const targetWidth = 1920;
+    const targetHeight = 1080;
+    const aspectRatio = targetWidth / targetHeight;
     const mmHeight = 210;
     const mmWidth = mmHeight * aspectRatio;
+    
     const pdf = new jsPDF({
       orientation: 'landscape',
       unit: 'mm',
@@ -110,21 +111,29 @@ export default function InvestorRelations() {
         if (i > 0) pdf.addPage();
         
         setCurrentSlide(i);
-        setPdfProgress(Math.round((i / totalSlides) * 100));
+        setPdfProgress(Math.round(((i + 0.5) / totalSlides) * 100));
         
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        await new Promise(resolve => setTimeout(resolve, 2000));
         
         const canvas = await html2canvas(slideElement, {
-          scale: 2,
-          width: slideWidth,
-          height: slideHeight,
+          scale: 3,
           backgroundColor: '#6209e6',
           logging: false,
           useCORS: true,
           allowTaint: true,
           foreignObjectRendering: true,
-          windowWidth: slideWidth,
-          windowHeight: slideHeight
+          removeContainer: false,
+          imageTimeout: 0,
+          onclone: (clonedDoc) => {
+            const clonedSlide = clonedDoc.getElementById('slide-content');
+            if (clonedSlide) {
+              clonedSlide.style.width = targetWidth + 'px';
+              clonedSlide.style.height = targetHeight + 'px';
+              clonedSlide.style.display = 'flex';
+              clonedSlide.style.alignItems = 'center';
+              clonedSlide.style.justifyContent = 'center';
+            }
+          }
         });
         
         const imgData = canvas.toDataURL('image/png', 1.0);
@@ -140,7 +149,7 @@ export default function InvestorRelations() {
       setTimeout(() => {
         setIsGeneratingPDF(false);
         setPdfProgress(0);
-      }, 500);
+      }, 800);
     }
   };
 
