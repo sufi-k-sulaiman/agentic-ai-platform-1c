@@ -506,21 +506,21 @@ export default function InvestorRelations() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-              Quarterly Profits
+              Projected Quarterly Profits
             </h2>
           </motion.div>
 
           <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
             <ResponsiveContainer width="100%" height={400}>
               <BarChart data={[
-                { quarter: 'Q1 2023', profit: 3, color: '#0891B2' },
-                { quarter: 'Q2 2023', profit: 2, color: '#0891B2' },
-                { quarter: 'Q3 2023', profit: 3, color: '#0891B2' },
-                { quarter: 'Q4 2023', profit: 4, color: '#0891B2' },
-                { quarter: 'Q1 2024', profit: 6, color: '#6209e6' },
-                { quarter: 'Q2 2024', profit: 6, color: '#6209e6' },
-                { quarter: 'Q3 2024', profit: 7, color: '#6209e6' },
-                { quarter: 'Q4 2024', profit: 8, color: '#6209e6' }
+                { quarter: 'Q1 2026', profit: 2, color: '#0891B2' },
+                { quarter: 'Q2 2026', profit: 2, color: '#0891B2' },
+                { quarter: 'Q3 2026', profit: 3, color: '#0891B2' },
+                { quarter: 'Q4 2026', profit: 4, color: '#0891B2' },
+                { quarter: 'Q1 2027', profit: 6, color: '#6209e6' },
+                { quarter: 'Q2 2027', profit: 6, color: '#6209e6' },
+                { quarter: 'Q3 2027', profit: 7, color: '#6209e6' },
+                { quarter: 'Q4 2027', profit: 8, color: '#6209e6' }
               ]}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
                 <XAxis dataKey="quarter" stroke="#6B7280" />
@@ -543,11 +543,11 @@ export default function InvestorRelations() {
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="text-center">
                 <div className="text-4xl font-bold text-[#0891B2]">+46%</div>
-                <div className="text-sm text-gray-600">Early phase growth</div>
+                <div className="text-sm text-gray-600">Early phase growth (2026)</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-[#6209e6]">+124%</div>
-                <div className="text-sm text-gray-600">Post-AI launch acceleration</div>
+                <div className="text-sm text-gray-600">Acceleration phase (2027)</div>
               </div>
             </div>
           </div>
@@ -2065,18 +2065,18 @@ export default function InvestorRelations() {
                 {/* Quarterly Profits Slide */}
                 {investmentSlides[currentSlide].id === 'quarterly' && (
                   <div className="w-full max-w-6xl">
-                    <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">Quarterly Profits</h2>
+                    <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">Projected Quarterly Profits</h2>
                     <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
                       <ResponsiveContainer width="100%" height={350}>
                         <BarChart data={[
-                          { quarter: 'Q1 2023', profit: 3 },
-                          { quarter: 'Q2 2023', profit: 2 },
-                          { quarter: 'Q3 2023', profit: 3 },
-                          { quarter: 'Q4 2023', profit: 4 },
-                          { quarter: 'Q1 2024', profit: 6 },
-                          { quarter: 'Q2 2024', profit: 6 },
-                          { quarter: 'Q3 2024', profit: 7 },
-                          { quarter: 'Q4 2024', profit: 8 }
+                          { quarter: 'Q1 2026', profit: 2 },
+                          { quarter: 'Q2 2026', profit: 2 },
+                          { quarter: 'Q3 2026', profit: 3 },
+                          { quarter: 'Q4 2026', profit: 4 },
+                          { quarter: 'Q1 2027', profit: 6 },
+                          { quarter: 'Q2 2027', profit: 6 },
+                          { quarter: 'Q3 2027', profit: 7 },
+                          { quarter: 'Q4 2027', profit: 8 }
                         ]}>
                           <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
                           <XAxis dataKey="quarter" stroke="#6B7280" angle={-20} textAnchor="end" height={60} />
@@ -2098,11 +2098,11 @@ export default function InvestorRelations() {
                       <div className="grid grid-cols-2 gap-6 mt-8">
                         <div className="text-center bg-gray-50 rounded-xl p-4">
                           <div className="text-4xl font-bold text-[#0891B2] mb-2">+46%</div>
-                          <div className="text-sm text-gray-600">Early phase growth (2023)</div>
+                          <div className="text-sm text-gray-600">Early phase growth (2026)</div>
                         </div>
                         <div className="text-center bg-gray-50 rounded-xl p-4">
                           <div className="text-4xl font-bold text-[#6209e6] mb-2">+124%</div>
-                          <div className="text-sm text-gray-600">Post-AI launch acceleration (2024)</div>
+                          <div className="text-sm text-gray-600">Acceleration phase (2027)</div>
                         </div>
                       </div>
                     </div>
