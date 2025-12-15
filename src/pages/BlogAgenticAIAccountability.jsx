@@ -195,6 +195,14 @@ export default function BlogAgenticAIAccountability() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Accountability and transparency aren't burdens—they're competitive advantages. Organizations that openly address AI's challenges and take responsibility for outcomes will earn trust in an increasingly skeptical world.
             </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The accountability challenge intensifies with multi-agent systems where responsibility diffuses across interconnected autonomous components. When a customer experiences harm from a complex workflow involving a sales agent, inventory agent, pricing agent, and fulfillment agent, determining which agent made the critical error—and who owns that agent—becomes non-trivial. Organizations discover that accountability frameworks designed for single agents break down entirely at scale, requiring architectural patterns like comprehensive transaction logging that traces decision chains across agents, clear interface contracts that assign responsibility at integration boundaries, and governance structures where multi-agent workflow ownership sits with designated orchestration teams rather than fragmenting across individual agent owners.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The transparency requirement creates tension with competitive advantage that organizations must navigate carefully. Full transparency about agent capabilities, training data, and decision logic could enable competitors to replicate your AI advantages, undermining investments in proprietary agents. Yet insufficient transparency erodes customer trust, invites regulatory scrutiny, and prevents effective governance. The resolution involves tiered transparency: comprehensive internal transparency enabling governance and debugging, meaningful external transparency explaining what agents do and general decision factors without revealing implementation details, and reserved transparency providing regulators and auditors with complete access under appropriate confidentiality protections. Organizations that calibrate transparency appropriately across these dimensions maintain competitive differentiation while satisfying legitimate transparency requirements from stakeholders who deserve explanations without necessarily deserving complete intellectual property disclosure.
+            </p>
           </div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">

@@ -221,6 +221,14 @@ export default function BlogAgenticAISecurityPrivacy() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Security and privacy for agentic AI require proactive, multi-layered approaches. Organizations that treat security as foundational—not an afterthought—will deploy agents safely and maintain customer trust.
             </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The attack surface of agentic AI expands far beyond traditional application security. Conventional web applications have defined input/output boundaries that security teams can analyze exhaustively. Agentic AI systems interact with dozens of APIs, access multiple databases, process unstructured natural language, and exhibit emergent behaviors that security testing cannot fully anticipate. This creates blind spots where vulnerabilities hide until discovered by attackers who probe systems more creatively than security teams tested. The most dangerous attacks exploit the reasoning capabilities themselves: adversarial prompts that cause agents to misclassify security contexts, multi-turn conversations that gradually shift agent behavior outside safe boundaries, or context injection attacks that poison agent memory with malicious instructions that persist across interactions.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The privacy implications of agentic AI require reimagining data protection beyond traditional controls. Agents don't just process data—they synthesize it, combine it across sources, infer new information, and generate insights that weren't explicitly stored anywhere. A customer service agent with access to purchase history, support tickets, and browsing behavior can infer sensitive information about health conditions, financial status, or personal relationships that would violate privacy commitments if disclosed. Traditional data access controls that regulate reading database records cannot prevent these inferential privacy violations. Organizations must implement privacy-aware agent design that constrains not just what data agents access but what inferences they can draw and share, using techniques like differential privacy, purpose limitation in prompts, and output filtering that blocks disclosure of synthesized sensitive information regardless of whether source data was individually permissible.
+            </p>
           </div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">

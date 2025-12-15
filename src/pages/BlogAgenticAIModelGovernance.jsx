@@ -264,6 +264,14 @@ export default function BlogAgenticAIModelGovernance() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Model governance transforms AI from unpredictable experimentation to manageable enterprise asset. Treat models like critical software—version them, test them, monitor them, and manage their lifecycle systematically.
             </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The dependency management challenge in model governance rivals that of software supply chains but with less mature tooling and standards. Agents typically depend on base foundation models (GPT-4, Claude), which themselves update frequently with behavioral changes that can break agent workflows. Organizations discover this painfully when OpenAI releases GPT-4.5 with improved capabilities but subtly different response patterns that break carefully-crafted agent prompts relying on specific model behaviors. Managing these dependencies requires version pinning (specifying exact model versions), comprehensive testing before model upgrades, gradual rollout of new model versions across agent fleets, and fallback capabilities allowing rapid reversion when model updates cause regressions—practices common in software dependency management but still emerging in AI model governance.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The model retirement challenge creates significant technical debt when organizations fail to plan for graceful end-of-life transitions. LLM providers regularly deprecate older models: GPT-3.5-turbo-0301 retired after 18 months, forcing migrations to newer versions. Organizations with hundreds of agents built against deprecated models face compressed timelines for testing and migrating entire agent fleets simultaneously—often discovering prompts optimized for old models perform poorly on replacements, requiring extensive re-engineering under time pressure. Proactive model governance maintains parallel agent versions running on current and next-generation models before deprecation announcements, enabling thorough testing and gradual migration rather than emergency retrofitting. This architectural overhead—maintaining dual versions during transition periods—proves far less expensive than crisis migrations when vendors force deprecated model shutdowns.
+            </p>
           </div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">

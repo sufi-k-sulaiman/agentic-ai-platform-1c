@@ -212,6 +212,14 @@ export default function BlogAgenticAIAccessControl() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Access control is the foundation of agent security. Get it right from the start, review it regularly, and never compromise on the principle of least privilege.
             </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The permission creep phenomenon affects agentic AI more severely than traditional applications because agents continuously discover new capabilities and integration opportunities that require expanded access. An agent initially granted read access to customer data later needs write access to update preferences. An agent accessing internal documents later requires external API access for research. Each expansion request seems reasonable in isolation, but accumulated over months, agents accumulate permissions far exceeding original design intent—creating security exposures that no single approval decision would have sanctioned. Organizations must implement automated permission analysis that alerts when agent permissions grow beyond initial scope, mandatory re-justification requirements when permissions haven't been used recently, and sunset policies that automatically revoke unused permissions after defined periods, treating permission grants as temporary rather than permanent unless actively renewed.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The challenge of managing agent permissions at scale leads sophisticated organizations toward policy-as-code approaches where access rules express declaratively in version-controlled code rather than configured manually through admin interfaces. This enables permissions to undergo the same rigorous review processes as application code: peer review of permission changes, automated testing that validates policies behave as intended, deployment pipelines that stage permission updates before production, and rollback capabilities when permission changes cause incidents. The operational benefits compound as agent fleets grow: updating permissions for 100 agents becomes a code commit rather than 100 manual configuration changes, permission consistency across agents is guaranteed by shared policy templates, and permission drift becomes visible through version control differences rather than hidden in scattered configuration databases.
+            </p>
           </div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
