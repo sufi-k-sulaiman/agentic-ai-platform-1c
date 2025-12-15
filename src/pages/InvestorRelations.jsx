@@ -128,6 +128,7 @@ export default function InvestorRelations() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showDeck, setShowDeck] = useState(false);
+  const [selectedYear, setSelectedYear] = useState(null);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % investmentSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + investmentSlides.length) % investmentSlides.length);
@@ -597,7 +598,19 @@ export default function InvestorRelations() {
                     stroke="#10B981"
                     name="Revenue"
                     strokeWidth={3}
-                    dot={{ fill: '#10B981', r: 6 }}
+                    dot={(props) => {
+                      const isSelected = selectedYear === props.payload.year;
+                      return (
+                        <circle
+                          cx={props.cx}
+                          cy={props.cy}
+                          r={isSelected ? 10 : 6}
+                          fill="#10B981"
+                          stroke={isSelected ? "#fff" : "#10B981"}
+                          strokeWidth={isSelected ? 3 : 0}
+                        />
+                      );
+                    }}
                     activeDot={{ r: 8 }}
                   />
                   <Line 
@@ -606,7 +619,19 @@ export default function InvestorRelations() {
                     stroke="#F59E0B"
                     name="Operating Expense"
                     strokeWidth={3}
-                    dot={{ fill: '#F59E0B', r: 6 }}
+                    dot={(props) => {
+                      const isSelected = selectedYear === props.payload.year;
+                      return (
+                        <circle
+                          cx={props.cx}
+                          cy={props.cy}
+                          r={isSelected ? 10 : 6}
+                          fill="#F59E0B"
+                          stroke={isSelected ? "#fff" : "#F59E0B"}
+                          strokeWidth={isSelected ? 3 : 0}
+                        />
+                      );
+                    }}
                     activeDot={{ r: 8 }}
                   />
                   <Line 
@@ -615,7 +640,19 @@ export default function InvestorRelations() {
                     stroke="#6209e6" 
                     name="Profit"
                     strokeWidth={3}
-                    dot={{ fill: '#6209e6', r: 6, strokeWidth: 2, stroke: '#0891B2' }}
+                    dot={(props) => {
+                      const isSelected = selectedYear === props.payload.year;
+                      return (
+                        <circle
+                          cx={props.cx}
+                          cy={props.cy}
+                          r={isSelected ? 10 : 6}
+                          fill="#6209e6"
+                          stroke={isSelected ? "#fff" : "#0891B2"}
+                          strokeWidth={isSelected ? 3 : 2}
+                        />
+                      );
+                    }}
                     activeDot={{ r: 8 }}
                   />
                 </LineChart>
@@ -648,35 +685,50 @@ export default function InvestorRelations() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <TableRow>
+                <TableRow 
+                  onClick={() => setSelectedYear(selectedYear === '2026' ? null : '2026')}
+                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2026' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
+                >
                   <TableCell className="font-medium text-base">2026</TableCell>
                   <TableCell className="text-right text-base text-green-600 font-semibold">$25.0M</TableCell>
                   <TableCell className="text-right text-base text-orange-600 font-semibold">$17.0M</TableCell>
                   <TableCell className="text-right text-base text-[#6209e6] font-semibold">$8.0M</TableCell>
                   <TableCell className="text-right text-base font-semibold">32%</TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow 
+                  onClick={() => setSelectedYear(selectedYear === '2027' ? null : '2027')}
+                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2027' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
+                >
                   <TableCell className="font-medium text-base">2027</TableCell>
                   <TableCell className="text-right text-base text-green-600 font-semibold">$90.0M</TableCell>
                   <TableCell className="text-right text-base text-orange-600 font-semibold">$55.0M</TableCell>
                   <TableCell className="text-right text-base text-[#6209e6] font-semibold">$35.0M</TableCell>
                   <TableCell className="text-right text-base font-semibold">39%</TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow 
+                  onClick={() => setSelectedYear(selectedYear === '2028' ? null : '2028')}
+                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2028' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
+                >
                   <TableCell className="font-medium text-base">2028</TableCell>
                   <TableCell className="text-right text-base text-green-600 font-semibold">$280.0M</TableCell>
                   <TableCell className="text-right text-base text-orange-600 font-semibold">$155.0M</TableCell>
                   <TableCell className="text-right text-base text-[#6209e6] font-semibold">$125.0M</TableCell>
                   <TableCell className="text-right text-base font-semibold">45%</TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow 
+                  onClick={() => setSelectedYear(selectedYear === '2029' ? null : '2029')}
+                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2029' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
+                >
                   <TableCell className="font-medium text-base">2029</TableCell>
                   <TableCell className="text-right text-base text-green-600 font-semibold">$650.0M</TableCell>
                   <TableCell className="text-right text-base text-orange-600 font-semibold">$330.0M</TableCell>
                   <TableCell className="text-right text-base text-[#6209e6] font-semibold">$320.0M</TableCell>
                   <TableCell className="text-right text-base font-semibold">49%</TableCell>
                 </TableRow>
-                <TableRow className="bg-gray-50">
+                <TableRow 
+                  onClick={() => setSelectedYear(selectedYear === '2030' ? null : '2030')}
+                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2030' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
+                >
                   <TableCell className="font-bold text-base">2030</TableCell>
                   <TableCell className="text-right text-base text-green-600 font-bold">$1,400.0M</TableCell>
                   <TableCell className="text-right text-base text-orange-600 font-bold">$650.0M</TableCell>
