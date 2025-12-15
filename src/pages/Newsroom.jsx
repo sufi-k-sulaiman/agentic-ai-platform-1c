@@ -91,7 +91,7 @@ const news = [
     title: 'Enterprise Geospatial Intelligence Gets Major Upgrade: 1cPublishing\'s Agentic AI Delivers Unprecedented Clarity in Location-Based Data Analysis and Strategic Mapping',
     excerpt: 'New geospatial intelligence features provide unprecedented clarity in location-based data analysis and visualization for enterprise decision-makers.',
     date: 'December 9, 2024',
-    image: 'https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=800',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
     icon: TrendingUp
   },
   {
