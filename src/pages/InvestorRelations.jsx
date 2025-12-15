@@ -200,7 +200,7 @@ export default function InvestorRelations() {
               </span>
             </h1>
             <p className="text-2xl md:text-3xl text-gray-600 leading-relaxed mb-10 max-w-3xl">
-              1cPlatform is democratizing Agentic AI, empowering enterprises to transform operations and unlock unprecedented efficiency.
+              1cPlatform is building the no-code platform that will democratize Agentic AI for enterprises worldwide.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 
@@ -231,7 +231,7 @@ export default function InvestorRelations() {
               The $2.5 trillion enterprise AI problem
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Despite massive AI investment, 87% of enterprises struggle to deploy and only 15% have successfully implemented autonomous agents. The problem is urgent—companies without AI are losing 40% market share to AI-enabled competitors.
+              Despite massive AI investment, 87% of enterprises struggle to deploy and only 15% have successfully implemented autonomous agents. We're positioned to capture this massive opportunity as the market accelerates.
             </p>
             <div className="inline-flex items-center gap-3 bg-red-50 border border-red-200 rounded-xl px-6 py-3">
               <div className="text-3xl font-bold text-red-600">$2.5M</div>
@@ -700,9 +700,9 @@ export default function InvestorRelations() {
 
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              { name: 'Enterprise SaaS', slices: [{ name: 'Our Share', value: 55, color: '#6209e6' }, { name: 'Available', value: 45, color: '#0891B2' }] },
-              { name: 'Healthcare & Finance', slices: [{ name: 'Our Share', value: 61, color: '#6209e6' }, { name: 'Competitor', value: 15, color: '#0891B2' }, { name: 'Available', value: 24, color: '#374151' }] },
-              { name: 'Manufacturing & Retail', slices: [{ name: 'Our Share', value: 37, color: '#6209e6' }, { name: 'Available', value: 40, color: '#0891B2' }, { name: 'Competitor', value: 22, color: '#374151' }, { name: 'Other', value: 1, color: '#6B7280' }] }
+              { name: 'Enterprise SaaS', slices: [{ name: 'Our Share', value: 2, color: '#6209e6' }, { name: 'Available', value: 98, color: '#0891B2' }] },
+              { name: 'Healthcare & Finance', slices: [{ name: 'Our Share', value: 1, color: '#6209e6' }, { name: 'Competitors', value: 25, color: '#374151' }, { name: 'Available', value: 74, color: '#0891B2' }] },
+              { name: 'Manufacturing & Retail', slices: [{ name: 'Our Share', value: 1, color: '#6209e6' }, { name: 'Available', value: 85, color: '#0891B2' }, { name: 'Competitors', value: 14, color: '#374151' }] }
             ].map((sector, index) => (
               <motion.div
                 key={sector.name}
@@ -1041,10 +1041,10 @@ export default function InvestorRelations() {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Strong Unit Economics</h3>
             <div className="grid md:grid-cols-4 gap-6">
               {[
-                { metric: 'CAC', value: '$8,500', description: 'Customer acquisition cost' },
-                { metric: 'LTV', value: '$89,000', description: 'Lifetime value' },
-                { metric: 'LTV:CAC', value: '10.5:1', description: 'Outstanding efficiency' },
-                { metric: 'Payback', value: '4 months', description: 'Fast capital return' }
+                { metric: 'CAC', value: '$3,500', description: 'Customer acquisition cost' },
+                { metric: 'LTV', value: '$42,000', description: 'Projected lifetime value' },
+                { metric: 'LTV:CAC', value: '12:1', description: 'Excellent efficiency' },
+                { metric: 'Payback', value: '6 months', description: 'Projected capital return' }
               ].map((item, index) => (
                 <motion.div
                   key={item.metric}
@@ -1317,7 +1317,7 @@ export default function InvestorRelations() {
               { icon: Target, title: 'No-Code Platform', desc: 'Deploy AI agents 100x faster than competitors' },
               { icon: Brain, title: 'Advanced AI Models', desc: 'Proprietary multi-agent orchestration' },
               { icon: Shield, title: 'Enterprise Security', desc: 'Bank-grade security & compliance' },
-              { icon: Award, title: 'Proven Success', desc: '98% customer retention rate' }
+              { icon: Award, title: 'Strong Validation', desc: '95% beta customer retention' }
             ].map((advantage, index) => (
               <motion.div
                 key={advantage.title}
@@ -1432,9 +1432,9 @@ export default function InvestorRelations() {
             <h3 className="text-3xl font-bold mb-8 text-center">Historical Performance</h3>
             <div className="grid md:grid-cols-4 gap-6">
               {[
-                { year: '2023', revenue: '$2.5M', growth: 'N/A', customers: '250', arr: '$3.2M' },
-                { year: '2024', revenue: '$12.8M', growth: '+412%', customers: '2,500', arr: '$18.5M' },
-                { year: '2025 (proj)', revenue: '$48M', growth: '+275%', customers: '10,000', arr: '$65M' }
+                { year: '2024', revenue: '$0', growth: 'N/A', customers: '0', arr: '$0' },
+                { year: '2025', revenue: '$0.8M', growth: 'Launch', customers: '42', arr: '$1.2M' },
+                { year: '2026 (proj)', revenue: '$8M', growth: '+900%', customers: '500', arr: '$12M' }
               ].map((year, index) => (
                 <motion.div
                   key={year.year}
@@ -1482,12 +1482,12 @@ export default function InvestorRelations() {
                 <h4 className="text-2xl font-bold mb-6 text-gray-900">Revenue & Profitability</h4>
                 <div className="space-y-4">
                   {[
-                    { year: '2025', revenue: '$48M', margin: '-15%', status: 'Hypergrowth', focus: 'Scale sales & product' },
-                    { year: '2026', revenue: '$125M', margin: '-5%', status: 'Market leader', focus: 'International expansion' },
-                    { year: '2027', revenue: '$280M', margin: '+5%', status: 'Profitable', focus: 'Enterprise dominance' },
-                    { year: '2028', revenue: '$520M', margin: '+15%', status: 'High margins', focus: 'Market consolidation' },
-                    { year: '2029', revenue: '$850M', margin: '+22%', status: 'Category king', focus: 'Platform ecosystem' },
-                    { year: '2030', revenue: '$1.2B', margin: '+28%', status: 'IPO ready', focus: 'Sustained growth' }
+                    { year: '2025', revenue: '$0.8M', margin: '-80%', status: 'Launch', focus: 'Product development' },
+                    { year: '2026', revenue: '$8M', margin: '-40%', status: 'Early growth', focus: 'Customer acquisition' },
+                    { year: '2027', revenue: '$35M', margin: '-15%', status: 'Scale', focus: 'Market expansion' },
+                    { year: '2028', revenue: '$125M', margin: '+5%', status: 'Profitable', focus: 'Enterprise dominance' },
+                    { year: '2029', revenue: '$320M', margin: '+18%', status: 'High margins', focus: 'Global leadership' },
+                    { year: '2030', revenue: '$750M', margin: '+25%', status: 'IPO ready', focus: 'Sustained growth' }
                   ].map((projection) => (
                     <div key={projection.year} className="flex items-center gap-4 pb-4 border-b border-gray-200 last:border-0">
                       <div className="w-16 flex-shrink-0">
@@ -1517,11 +1517,11 @@ export default function InvestorRelations() {
                 <h4 className="text-2xl font-bold mb-6 text-gray-900">Key Metrics Evolution</h4>
                 <div className="space-y-6">
                   {[
-                    { metric: 'Enterprise Customers', y2025: '500', y2027: '5,000', y2030: '25,000' },
-                    { metric: 'Countries', y2025: '45', y2027: '85', y2030: '120+' },
-                    { metric: 'Team Size', y2025: '180', y2027: '800', y2030: '2,500' },
-                    { metric: 'Net Revenue Retention', y2025: '140%', y2027: '150%', y2030: '155%' },
-                    { metric: 'Gross Margin', y2025: '78%', y2027: '82%', y2030: '85%' }
+                    { metric: 'Enterprise Customers', y2025: '42', y2027: '10,000', y2030: '50,000' },
+                    { metric: 'Countries', y2025: '5', y2027: '45', y2030: '85+' },
+                    { metric: 'Team Size', y2025: '15', y2027: '120', y2030: '800' },
+                    { metric: 'Net Revenue Retention', y2025: 'N/A', y2027: '130%', y2030: '145%' },
+                    { metric: 'Gross Margin', y2025: '65%', y2027: '75%', y2030: '82%' }
                   ].map((item) => (
                     <div key={item.metric} className="pb-4 border-b border-gray-200 last:border-0">
                       <div className="text-sm text-gray-600 mb-2">{item.metric}</div>
@@ -1556,8 +1556,8 @@ export default function InvestorRelations() {
               <div className="grid md:grid-cols-3 gap-8">
                 {[
                   { phase: '2025-2026: Foundation', goals: ['Series B funding ($100M)', 'Expand to 85+ countries', 'Launch enterprise marketplace', '5,000 enterprise customers'] },
-                  { phase: '2027-2028: Dominance', goals: ['Series C ($200M)', 'Achieve profitability', 'Strategic acquisitions', 'Platform ecosystem launch'] },
-                  { phase: '2029-2030: IPO Prep', goals: ['$1B+ revenue run rate', 'Category leadership', 'Public market readiness', 'Sustainable 30%+ growth'] }
+                  { phase: '2027-2028: Dominance', goals: ['Achieve profitability', 'Reach 10,000 customers', 'Strategic partnerships', 'Platform ecosystem launch'] },
+                  { phase: '2029-2030: IPO Prep', goals: ['$750M+ revenue run rate', 'Category leadership', 'Public market readiness', 'Sustainable growth'] }
                 ].map((milestone, index) => (
                   <div key={milestone.phase} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                     <h5 className="font-bold text-white text-xl mb-4">{milestone.phase}</h5>
@@ -1590,15 +1590,15 @@ export default function InvestorRelations() {
                 Exceptional growth trajectory
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                We're experiencing hypergrowth across all key metrics, from revenue to customer acquisition, while maintaining strong unit economics and sustainable growth fundamentals.
+                We're in the early stages of our growth journey with strong initial traction, validated product-market fit, and a clear path to scaling.
               </p>
               <div className="space-y-4">
                 {[
-                  'Revenue growing 300%+ YoY',
-                  'Customer base expanding 250% annually',
-                  'Operating in 45+ countries',
-                  'Net revenue retention above 140%',
-                  'Path to profitability clear'
+                  '42 beta customers onboarded',
+                  'Product launched March 2025',
+                  'Strong initial customer validation',
+                  'Clear path to 10K customers by 2027',
+                  'Series B funding to accelerate growth'
                 ].map((point, index) => (
                   <motion.div
                     key={point}
@@ -1624,10 +1624,10 @@ export default function InvestorRelations() {
               <h3 className="text-2xl font-bold text-gray-900 mb-8">Key Milestones</h3>
               <div className="space-y-6">
                 {[
-                  { year: '2023', event: 'Founded, launched MVP' },
-                  { year: '2024', event: 'Series A funding, 1,000+ customers' },
-                  { year: '2025', event: '10,000+ customers, global expansion' },
-                  { year: '2026', event: 'Series B planned, enterprise dominance' }
+                  { year: '2024', event: 'Company founded, vision set' },
+                  { year: '2025', event: 'Product launched, 42 beta customers' },
+                  { year: '2026', event: 'Series B planned, global expansion' },
+                  { year: '2027', event: '10,000 customers target' }
                 ].map((milestone, index) => (
                   <div key={milestone.year} className="flex gap-4">
                     <div className="w-20 flex-shrink-0">
@@ -1658,7 +1658,7 @@ export default function InvestorRelations() {
               The best team to solve this problem
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Our founders and leadership team bring 30+ years of combined experience from Google, Microsoft, Amazon, and leading AI research labs. We've built and scaled systems processing billions of transactions daily.
+              Our founders and leadership team bring 30+ years of combined experience from Google, Microsoft, Amazon, and leading AI research labs, now focused on democratizing enterprise AI.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="bg-white border border-gray-200 rounded-xl px-6 py-3 shadow-sm">
@@ -1667,11 +1667,11 @@ export default function InvestorRelations() {
               </div>
               <div className="bg-white border border-gray-200 rounded-xl px-6 py-3 shadow-sm">
                 <div className="text-sm text-gray-600">Team size</div>
-                <div className="text-2xl font-bold text-[#6209e6]">2000+ people</div>
+                <div className="text-2xl font-bold text-[#6209e6]">15 people</div>
               </div>
               <div className="bg-white border border-gray-200 rounded-xl px-6 py-3 shadow-sm">
-                <div className="text-sm text-gray-600">Global offices</div>
-                <div className="text-2xl font-bold text-[#6209e6]">45+ locations</div>
+                <div className="text-sm text-gray-600">Beta customers</div>
+                <div className="text-2xl font-bold text-[#6209e6]">42 SMBs</div>
               </div>
             </div>
           </motion.div>
@@ -1694,9 +1694,9 @@ export default function InvestorRelations() {
                 background: 'Former VP Product at leading SaaS unicorn. Built products used by 5M+ users. Stanford CS, 15+ years in enterprise software. Expert in product-led growth and enterprise adoption.'
                },
                {
-                name: 'Advisory Board',
-                role: '8 Industry Experts',
-                background: 'Former C-suite executives from Fortune 500 companies across healthcare, finance, and manufacturing. Combined 200+ years experience. Advisors from Google, Amazon, Microsoft, and top AI research labs.'
+               name: 'Advisory Board',
+               role: '5 Industry Experts',
+               background: 'Former C-suite executives from Fortune 500 companies across healthcare, finance, and manufacturing. Deep expertise in AI, enterprise software, and go-to-market strategy.'
                }
             ].map((leader, index) => (
               <motion.div
@@ -1733,7 +1733,7 @@ export default function InvestorRelations() {
               Series B: $100M at $2.5B valuation
             </h2>
             <p className="text-2xl text-purple-100 mb-10 leading-relaxed">
-              Join leading investors in building the category-defining Agentic AI platform. This is your opportunity to invest in the future of enterprise automation.
+              Join us in building the category-defining Agentic AI platform. Early-stage opportunity to invest in the future of enterprise automation.
             </p>
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-10">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -1830,16 +1830,16 @@ export default function InvestorRelations() {
                     <p className="text-3xl text-gray-600 mb-12">The No-Code Agentic AI Revolution</p>
                     <div className="grid grid-cols-3 gap-6 mt-16">
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
-                        <div className="text-4xl font-bold text-[#6209e6] mb-2">10K+</div>
-                        <div className="text-sm text-gray-600">Organizations</div>
+                        <div className="text-4xl font-bold text-[#6209e6] mb-2">42</div>
+                        <div className="text-sm text-gray-600">Beta Customers</div>
                       </div>
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
-                        <div className="text-4xl font-bold text-[#6209e6] mb-2">$2.5B</div>
-                        <div className="text-sm text-gray-600">Valuation</div>
+                        <div className="text-4xl font-bold text-[#6209e6] mb-2">$2M</div>
+                        <div className="text-sm text-gray-600">Series A Raised</div>
                       </div>
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
-                        <div className="text-4xl font-bold text-[#6209e6] mb-2">45+</div>
-                        <div className="text-sm text-gray-600">Countries</div>
+                        <div className="text-4xl font-bold text-[#6209e6] mb-2">2027</div>
+                        <div className="text-sm text-gray-600">10K Target</div>
                       </div>
                     </div>
                   </div>
@@ -1875,7 +1875,7 @@ export default function InvestorRelations() {
                         { icon: Zap, title: 'No-Code Platform', desc: 'Deploy AI agents 100x faster than competitors', stat: '100x faster' },
                         { icon: Brain, title: 'Advanced AI Models', desc: 'Proprietary multi-agent orchestration', stat: '95% task automation' },
                         { icon: Shield, title: 'Enterprise Security', desc: 'Bank-grade security & compliance', stat: 'SOC 2 + ISO' },
-                        { icon: Award, title: 'Proven Success', desc: '98% customer retention rate', stat: '98% retention' }
+                        { icon: Award, title: 'Strong Validation', desc: '95% beta customer retention', stat: '95% retention' }
                       ].map((item, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
                           <item.icon className="w-16 h-16 text-[#6209e6] mx-auto mb-4" />
@@ -1949,10 +1949,10 @@ export default function InvestorRelations() {
                     <p className="text-xl text-gray-600 text-center mb-12">Proven success across industries</p>
                     <div className="grid grid-cols-4 gap-6">
                       {[
-                        { value: '10,000+', label: 'Organizations', icon: Users },
-                        { value: '98%', label: 'Retention Rate', icon: Award },
-                        { value: '140%', label: 'Net Revenue Retention', icon: TrendingUp },
-                        { value: '300%', label: 'YoY Growth', icon: Rocket }
+                        { value: '42', label: 'Beta Customers', icon: Users },
+                        { value: '95%', label: 'Retention Rate', icon: Award },
+                        { value: '10K', label: '2027 Target', icon: TrendingUp },
+                        { value: '$2M', label: 'Series A Raised', icon: Rocket }
                       ].map((metric, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-lg">
                           <metric.icon className="w-8 h-8 text-[#6209e6] mx-auto mb-3" strokeWidth={2} />
@@ -1964,16 +1964,16 @@ export default function InvestorRelations() {
                     <div className="mt-8 bg-white border-2 border-[#6209e6] rounded-2xl p-6">
                       <div className="grid grid-cols-3 gap-6 text-center">
                         <div>
-                          <div className="text-2xl font-bold text-gray-900 mb-1">$285K</div>
-                          <div className="text-sm text-gray-600">Avg Enterprise Deal</div>
+                          <div className="text-2xl font-bold text-gray-900 mb-1">$15K</div>
+                          <div className="text-sm text-gray-600">Avg Deal Size</div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-gray-900 mb-1">4.2 months</div>
+                          <div className="text-2xl font-bold text-gray-900 mb-1">2.5 months</div>
                           <div className="text-sm text-gray-600">Sales Cycle</div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-gray-900 mb-1">92%</div>
-                          <div className="text-sm text-gray-600">Win Rate</div>
+                          <div className="text-2xl font-bold text-gray-900 mb-1">16</div>
+                          <div className="text-sm text-gray-600">Beta Customers</div>
                         </div>
                       </div>
                     </div>
@@ -2340,9 +2340,9 @@ export default function InvestorRelations() {
                     <p className="text-xl text-gray-600 text-center mb-12">Sector-by-sector market share breakdown</p>
                     <div className="grid grid-cols-3 gap-8">
                       {[
-                        { name: 'Enterprise SaaS', slices: [{ value: 55, color: '#6209e6', name: 'Our Share' }, { value: 45, color: '#0891B2', name: 'Available' }] },
-                        { name: 'Healthcare & Finance', slices: [{ value: 61, color: '#6209e6', name: 'Our Share' }, { value: 25, color: '#0891B2', name: 'Available' }, { value: 14, color: '#9CA3AF', name: 'Competitors' }] },
-                        { name: 'Manufacturing & Retail', slices: [{ value: 37, color: '#6209e6', name: 'Our Share' }, { value: 40, color: '#0891B2', name: 'Available' }, { value: 22, color: '#9CA3AF', name: 'Competitors' }, { value: 1, color: '#D1D5DB', name: 'Other' }] }
+                        { name: 'Enterprise SaaS', slices: [{ value: 2, color: '#6209e6', name: 'Our Share' }, { value: 98, color: '#0891B2', name: 'Available' }] },
+                        { name: 'Healthcare & Finance', slices: [{ value: 1, color: '#6209e6', name: 'Our Share' }, { value: 74, color: '#0891B2', name: 'Available' }, { value: 25, color: '#9CA3AF', name: 'Competitors' }] },
+                        { name: 'Manufacturing & Retail', slices: [{ value: 1, color: '#6209e6', name: 'Our Share' }, { value: 85, color: '#0891B2', name: 'Available' }, { value: 14, color: '#9CA3AF', name: 'Competitors' }] }
                       ].map((sector, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">{sector.name}</h3>
@@ -2389,9 +2389,9 @@ export default function InvestorRelations() {
                     <p className="text-xl text-gray-600 text-center mb-12">Multiple high-margin revenue streams</p>
                     <div className="grid md:grid-cols-3 gap-6">
                       {[
-                        { title: 'Subscription', percent: '65%', desc: 'Monthly & annual SaaS contracts', growth: '+280% YoY', color: 'border-[#6209e6]' },
-                        { title: 'Usage-Based', percent: '25%', desc: 'API calls & AI compute fees', growth: '+350% YoY', color: 'border-[#6209e6]' },
-                        { title: 'Services', percent: '10%', desc: 'Implementation & support', growth: '+180% YoY', color: 'border-[#6209e6]' }
+                        { title: 'Subscription', percent: '70%', desc: 'Monthly & annual SaaS contracts', growth: 'Launch phase', color: 'border-[#6209e6]' },
+                        { title: 'Usage-Based', percent: '25%', desc: 'API calls & AI compute fees', growth: 'Scaling', color: 'border-[#6209e6]' },
+                        { title: 'Services', percent: '5%', desc: 'Implementation & support', growth: 'Early stage', color: 'border-[#6209e6]' }
                       ].map((stream, idx) => (
                         <div key={idx} className={`bg-white border-2 ${stream.color} rounded-2xl p-6 shadow-lg`}>
                           <div className="text-5xl font-bold text-[#6209e6] mb-2">{stream.percent}</div>
@@ -2429,10 +2429,10 @@ export default function InvestorRelations() {
                     <p className="text-xl text-gray-600 text-center mb-12">Best-in-class efficiency</p>
                     <div className="grid md:grid-cols-4 gap-6 mb-8">
                       {[
-                        { label: 'CAC', value: '$8,500', desc: 'Customer acquisition cost' },
-                        { label: 'LTV', value: '$89,000', desc: 'Lifetime value' },
-                        { label: 'LTV:CAC', value: '10.5:1', desc: 'Outstanding ratio' },
-                        { label: 'Payback', value: '4 mo', desc: 'Fast capital return' }
+                        { label: 'CAC', value: '$3,500', desc: 'Customer acquisition cost' },
+                        { label: 'LTV', value: '$42K', desc: 'Projected lifetime value' },
+                        { label: 'LTV:CAC', value: '12:1', desc: 'Excellent ratio' },
+                        { label: 'Payback', value: '6 mo', desc: 'Projected return' }
                       ].map((metric, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-lg">
                           <div className="text-sm font-semibold text-[#6209e6] mb-2">{metric.label}</div>
@@ -2447,15 +2447,15 @@ export default function InvestorRelations() {
                         <div className="space-y-3">
                           <div className="flex justify-between">
                             <span className="text-sm text-gray-600">ARR per customer</span>
-                            <span className="font-bold text-gray-900">$8,900</span>
+                            <span className="font-bold text-gray-900">$2,800</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-sm text-gray-600">Net revenue retention</span>
-                            <span className="font-bold text-[#6209e6]">140%</span>
+                            <span className="text-sm text-gray-600">Beta retention</span>
+                            <span className="font-bold text-[#6209e6]">95%</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-sm text-gray-600">Gross margin</span>
-                            <span className="font-bold text-gray-900">78%</span>
+                            <span className="font-bold text-gray-900">65%</span>
                           </div>
                         </div>
                       </div>
@@ -2464,15 +2464,15 @@ export default function InvestorRelations() {
                         <div className="space-y-3">
                           <div className="flex justify-between">
                             <span className="text-sm text-gray-600">Free to paid conversion</span>
-                            <span className="font-bold text-[#6209e6]">35%</span>
+                            <span className="font-bold text-[#6209e6]">25%</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-sm text-gray-600">Customer expansion rate</span>
-                            <span className="font-bold text-gray-900">3.2x</span>
+                            <span className="text-sm text-gray-600">Projected expansion</span>
+                            <span className="font-bold text-gray-900">2.5x</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-sm text-gray-600">Referral rate</span>
-                            <span className="font-bold text-gray-900">60%</span>
+                            <span className="font-bold text-gray-900">40%</span>
                           </div>
                         </div>
                       </div>
@@ -2486,12 +2486,12 @@ export default function InvestorRelations() {
                     <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">Competitive Advantages</h2>
                     <div className="grid md:grid-cols-3 gap-6">
                       {[
-                        { icon: Target, title: 'Network Effects', desc: 'Every deployment improves our AI models, creating compounding advantages competitors cannot replicate' },
-                        { icon: Shield, title: 'Switching Costs', desc: 'Deep integration into workflows makes migration to competitors costly and risky' },
-                        { icon: Rocket, title: 'First-Mover Advantage', desc: '10,000+ enterprises creates powerful brand equity and market leadership' },
-                        { icon: Brain, title: 'Proprietary Technology', desc: 'Multi-agent orchestration engine with 12 patents pending' },
-                        { icon: Users, title: 'Enterprise Trust', desc: 'SOC 2, ISO 27001, GDPR compliance unmatched in the space' },
-                        { icon: Zap, title: 'Speed to Market', desc: '100x faster deployment than any competitor or custom solution' }
+                        { icon: Target, title: 'Network Effects', desc: 'Each customer deployment improves our AI, creating compounding advantages as we scale' },
+                        { icon: Shield, title: 'First-Mover Advantage', desc: 'Early entry into emerging no-code Agentic AI market with validated product' },
+                        { icon: Rocket, title: 'Product Innovation', desc: 'Building truly differentiated technology that solves real enterprise pain points' },
+                        { icon: Brain, title: 'Proprietary Technology', desc: 'Multi-agent orchestration engine with strong technical foundation' },
+                        { icon: Users, title: 'Enterprise Ready', desc: 'Building SOC 2, GDPR compliance from day one for enterprise sales' },
+                        { icon: Zap, title: 'Speed to Market', desc: '100x faster deployment than custom solutions or competitors' }
                       ].map((adv, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                           <adv.icon className="w-12 h-12 text-[#6209e6] mb-4" />
@@ -2546,8 +2546,8 @@ export default function InvestorRelations() {
                     <div className="grid md:grid-cols-3 gap-4 mb-8">
                       {[
                         { value: '30+ years', label: 'Combined experience' },
-                        { value: '2,000+', label: 'Team members' },
-                        { value: '45+', label: 'Global offices' }
+                        { value: '15', label: 'Team members' },
+                        { value: '42', label: 'Beta customers' }
                       ].map((stat, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-xl p-4 text-center shadow-lg">
                           <div className="text-3xl font-bold text-[#6209e6] mb-1">{stat.value}</div>
@@ -2560,7 +2560,7 @@ export default function InvestorRelations() {
                         { name: 'Niroshi Nadarajah', role: 'CEO & Co-Founder', bg: 'Former microbiology researcher, now pioneering enterprise AI' },
                         { name: 'Suf K Sulaiman', role: 'CTO & Co-Founder', bg: '30+ years in AI, hardware & software. 12 patents' },
                         { name: 'Emily Zhang', role: 'Chief Product Officer', bg: 'Former VP at SaaS unicorn. Built products for 5M+ users' },
-                        { name: 'Advisory Board', role: '8 Industry Experts', bg: 'Fortune 500 C-suite, 200+ years combined experience' }
+                        { name: 'Advisory Board', role: '5 Industry Experts', bg: 'Fortune 500 C-suite driving AI adoption' }
                       ].map((leader, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-5 shadow-lg">
                           <h3 className="text-lg font-bold text-gray-900 mb-1">{leader.name}</h3>
@@ -2579,12 +2579,12 @@ export default function InvestorRelations() {
                     <p className="text-xl text-gray-600 text-center mb-12">2025-2030 Hypergrowth trajectory</p>
                     <div className="grid md:grid-cols-6 gap-4 mb-8">
                       {[
-                        { year: '2025', revenue: '$48M', margin: '-15%' },
-                        { year: '2026', revenue: '$125M', margin: '-5%' },
-                        { year: '2027', revenue: '$280M', margin: '+5%' },
-                        { year: '2028', revenue: '$520M', margin: '+15%' },
-                        { year: '2029', revenue: '$850M', margin: '+22%' },
-                        { year: '2030', revenue: '$1.2B', margin: '+28%' }
+                        { year: '2025', revenue: '$0.8M', margin: '-80%' },
+                        { year: '2026', revenue: '$8M', margin: '-40%' },
+                        { year: '2027', revenue: '$35M', margin: '-15%' },
+                        { year: '2028', revenue: '$125M', margin: '+5%' },
+                        { year: '2029', revenue: '$320M', margin: '+18%' },
+                        { year: '2030', revenue: '$750M', margin: '+25%' }
                       ].map((proj, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-xl p-4 shadow-lg">
                           <div className="text-lg font-bold text-[#6209e6] mb-2">{proj.year}</div>
@@ -2603,11 +2603,11 @@ export default function InvestorRelations() {
                         </div>
                         <div>
                           <div className="text-3xl font-bold text-gray-900 mb-1">2030</div>
-                          <div className="text-sm text-gray-600">IPO ready at $1.2B</div>
+                          <div className="text-sm text-gray-600">IPO ready at $750M</div>
                         </div>
                         <div>
-                          <div className="text-3xl font-bold text-[#6209e6] mb-1">300%+</div>
-                          <div className="text-sm text-gray-600">Avg YoY growth</div>
+                          <div className="text-3xl font-bold text-[#6209e6] mb-1">400%+</div>
+                          <div className="text-sm text-gray-600">Projected YoY growth</div>
                         </div>
                       </div>
                     </div>
@@ -2640,7 +2640,7 @@ export default function InvestorRelations() {
                     </div>
                     <div className="bg-gray-50 rounded-2xl p-8">
                       <p className="text-lg text-gray-700 mb-6">
-                        This investment will fuel product development, global expansion, and category dominance in the fastest-growing segment of enterprise software.
+                        This investment will fuel product development, customer acquisition, and international expansion to capture the massive enterprise AI opportunity.
                       </p>
                       <div className="text-sm text-gray-600">
                         Contact: <span className="font-semibold text-[#6209e6]">investor@1cplatform.com</span>
