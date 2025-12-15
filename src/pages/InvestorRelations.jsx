@@ -380,7 +380,7 @@ export default function InvestorRelations() {
         </div>
       </section>
 
-      {/* User Growth Chart */}
+      {/* User Acquisition Plan */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
@@ -390,7 +390,7 @@ export default function InvestorRelations() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Guide of Active Users
+              Plan to Acquire Active Users
             </h2>
             <div className="inline-flex items-center gap-3 bg-cyan-400 rounded-full px-8 py-4 mb-8">
               <div className="text-4xl font-bold text-white">$1.3B</div>
@@ -401,11 +401,11 @@ export default function InvestorRelations() {
             <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
               <ResponsiveContainer width="100%" height={400}>
                 <BarChart data={[
-                  { year: '2019', users: 950000, color: '#0891B2' },
-                  { year: '2020', users: 900000, color: '#0891B2' },
-                  { year: '2021', users: 950000, color: '#0891B2' },
-                  { year: '2022', users: 1180000, color: '#6209e6' },
-                  { year: '2023', users: 1250000, color: '#6209e6' }
+                  { year: '2026', users: 50000, color: '#0891B2' },
+                  { year: '2028', users: 200000, color: '#0891B2' },
+                  { year: '2030', users: 500000, color: '#0891B2' },
+                  { year: '2033', users: 1500000, color: '#6209e6' },
+                  { year: '2036', users: 3500000, color: '#6209e6' }
                 ]}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
                   <XAxis dataKey="year" stroke="#6B7280" />
@@ -413,11 +413,11 @@ export default function InvestorRelations() {
                   <Tooltip />
                   <Bar dataKey="users" radius={[8, 8, 0, 0]}>
                     {[
-                      { year: '2019', users: 950000, color: '#0891B2' },
-                      { year: '2020', users: 900000, color: '#0891B2' },
-                      { year: '2021', users: 950000, color: '#0891B2' },
-                      { year: '2022', users: 1180000, color: '#6209e6' },
-                      { year: '2023', users: 1250000, color: '#6209e6' }
+                      { year: '2026', users: 50000, color: '#0891B2' },
+                      { year: '2028', users: 200000, color: '#0891B2' },
+                      { year: '2030', users: 500000, color: '#0891B2' },
+                      { year: '2033', users: 1500000, color: '#6209e6' },
+                      { year: '2036', users: 3500000, color: '#6209e6' }
                     ].map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
@@ -427,23 +427,23 @@ export default function InvestorRelations() {
               <div className="flex justify-center gap-4 mt-4">
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-[#0891B2]"></div>
-                  <span className="text-sm text-gray-600">Early Growth</span>
+                  <span className="text-sm text-gray-600">Foundation Phase</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-[#6209e6]"></div>
-                  <span className="text-sm text-gray-600">AI Era</span>
+                  <span className="text-sm text-gray-600">Hypergrowth Phase</span>
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Observation</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Growth Projection</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                User growth accelerated 31% after launching Agentic AI platform in 2022. Retention improved from 82% to 98% as AI automation drove measurable ROI for customers.
+                Projected user acquisition from 2026 to 2036 with aggressive market penetration strategy. Targeting 3.5M+ active users by 2036 through enterprise expansion and product-led growth.
               </p>
               <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <div className="text-3xl font-bold text-[#6209e6] mb-2">250%</div>
-                <div className="text-sm text-gray-600">Average customer base growth annually</div>
+                <div className="text-3xl font-bold text-[#6209e6] mb-2">500%</div>
+                <div className="text-sm text-gray-600">Projected compound annual growth rate</div>
               </div>
             </div>
           </div>
@@ -1983,17 +1983,17 @@ export default function InvestorRelations() {
                 {/* Demographics Slide */}
                 {investmentSlides[currentSlide].id === 'demographics' && (
                   <div className="text-white w-full h-full flex flex-col justify-center">
-                    <h2 className="text-5xl md:text-6xl font-bold mb-8">Guide of Active Users</h2>
+                    <h2 className="text-5xl md:text-6xl font-bold mb-8">Plan to Acquire Active Users</h2>
                     <div className="grid md:grid-cols-3 gap-12 items-center">
                       <div className="md:col-span-2">
                         <div className="bg-white p-8 rounded-2xl">
                           <ResponsiveContainer width="100%" height={350}>
                             <BarChart data={[
-                              { year: '2019', users: 950000 },
-                              { year: '2020', users: 900000 },
-                              { year: '2021', users: 950000 },
-                              { year: '2022', users: 1180000 },
-                              { year: '2023', users: 1250000 }
+                              { year: '2026', users: 50000 },
+                              { year: '2028', users: 200000 },
+                              { year: '2030', users: 500000 },
+                              { year: '2033', users: 1500000 },
+                              { year: '2036', users: 3500000 }
                             ]}>
                               <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
                               <XAxis dataKey="year" stroke="#1F2937" style={{ fontSize: '14px', fontWeight: '600' }} />
@@ -2012,11 +2012,11 @@ export default function InvestorRelations() {
                           <div className="flex justify-center gap-6 mt-4">
                             <div className="flex items-center gap-2">
                               <div className="w-4 h-4 rounded bg-[#0891B2]"></div>
-                              <span className="text-sm text-gray-700 font-medium">Other</span>
+                              <span className="text-sm text-gray-700 font-medium">Foundation Phase</span>
                             </div>
                             <div className="flex items-center gap-2">
                               <div className="w-4 h-4 rounded bg-[#6209e6]"></div>
-                              <span className="text-sm text-gray-700 font-medium">US</span>
+                              <span className="text-sm text-gray-700 font-medium">Hypergrowth</span>
                             </div>
                           </div>
                         </div>
@@ -2025,8 +2025,8 @@ export default function InvestorRelations() {
                         <div className="inline-block bg-cyan-400 rounded-full px-10 py-6 mb-8">
                           <div className="text-6xl font-bold text-gray-900">$1.3B</div>
                         </div>
-                        <h3 className="text-2xl font-bold mb-3">Key Observation</h3>
-                        <p className="text-lg opacity-90">Break down the numbers you put forward.</p>
+                        <h3 className="text-2xl font-bold mb-3">Growth Projection</h3>
+                        <p className="text-lg opacity-90">Targeting 3.5M+ active users by 2036 through enterprise expansion.</p>
                       </div>
                     </div>
                   </div>
@@ -2164,15 +2164,15 @@ export default function InvestorRelations() {
                 {/* Growth Slide */}
                 {investmentSlides[currentSlide].id === 'growth' && (
                   <div className="w-full max-w-5xl">
-                    <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">Explosive Growth</h2>
+                    <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">User Acquisition Plan (2026-2036)</h2>
                     <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg mb-6">
                       <ResponsiveContainer width="100%" height={300}>
                         <BarChart data={[
-                          { year: '2019', users: 950000 },
-                          { year: '2020', users: 900000 },
-                          { year: '2021', users: 950000 },
-                          { year: '2022', users: 1180000 },
-                          { year: '2023', users: 1250000 }
+                          { year: '2026', users: 50000 },
+                          { year: '2028', users: 200000 },
+                          { year: '2030', users: 500000 },
+                          { year: '2033', users: 1500000 },
+                          { year: '2036', users: 3500000 }
                         ]}>
                           <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
                           <XAxis dataKey="year" stroke="#6B7280" />
@@ -2191,12 +2191,12 @@ export default function InvestorRelations() {
                     </div>
                     <div className="grid grid-cols-3 gap-4">
                       <div className="bg-gray-50 rounded-xl p-4 text-center">
-                        <div className="text-3xl font-bold text-gray-900 mb-1">1.25M</div>
-                        <div className="text-sm text-gray-600">Active Users (2023)</div>
+                        <div className="text-3xl font-bold text-gray-900 mb-1">3.5M</div>
+                        <div className="text-sm text-gray-600">Target Users (2036)</div>
                       </div>
                       <div className="bg-gray-50 rounded-xl p-4 text-center">
-                        <div className="text-3xl font-bold text-[#6209e6] mb-1">31%</div>
-                        <div className="text-sm text-gray-600">Growth since AI launch</div>
+                        <div className="text-3xl font-bold text-[#6209e6] mb-1">500%</div>
+                        <div className="text-sm text-gray-600">Projected CAGR</div>
                       </div>
                       <div className="bg-gray-50 rounded-xl p-4 text-center">
                         <div className="text-3xl font-bold text-gray-900 mb-1">$1.3B</div>
