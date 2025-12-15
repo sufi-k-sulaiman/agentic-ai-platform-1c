@@ -101,7 +101,12 @@ export default function Header() {
                 <div key={item.label} className="relative">
                   <button
                     onClick={() => setActiveMenu(activeMenu === item.label ? null : item.label)}
-                    className="text-gray-600 hover:text-[#6209e6] bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5 px-4 py-2 flex items-center gap-1 group"
+                    className={cn(
+                      "font-medium text-sm transition-all duration-200 hover:-translate-y-0.5 px-4 py-2 flex items-center gap-1 group",
+                      activeMenu === item.label 
+                        ? "text-[#6209e6] bg-purple-50 rounded-lg" 
+                        : "text-gray-600 hover:text-[#6209e6] bg-transparent"
+                    )}
                   >
                     {item.label}
                     <ChevronDown className={cn("w-3 h-3 transition-transform duration-200", activeMenu === item.label && "rotate-180")} />
