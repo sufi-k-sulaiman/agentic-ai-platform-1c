@@ -189,6 +189,14 @@ export default function BlogAgenticAIROIComparison() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Both approaches deliver strong ROI in the right contexts. Agentic AI generally shows faster payback and higher long-term returns for complex use cases, while traditional AI remains king for high-volume, narrow tasks.
             </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The ROI comparison becomes more favorable to agentic AI when accounting for optionality value—the strategic flexibility to pivot and expand. Traditional AI investments are narrowly useful: the fraud detection model detects fraud, period. Agentic AI platforms enable portfolio effects where initial customer service investment spawns sales assistance, internal helpdesk, research agents, and more—each incremental use case requiring minimal additional platform investment. This creates asymmetric ROI profiles: traditional AI delivers predictable 200-300% returns on isolated use cases, while agentic platforms generate 500-1000%+ returns across portfolios of applications that compound over time.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The risk-adjusted ROI calculation tips further toward agentic AI when considering obsolescence risk. Traditional AI systems built today will require replacement as agentic capabilities mature and costs drop—effectively shortening the useful life of investments and reducing long-term returns. Organizations deploying traditional AI for customer service in 2025 will likely migrate to agentic approaches by 2027, writing off residual value in those systems. Conversely, agentic AI investments appreciate as base models improve, extending useful life and increasing returns. The financially sophisticated analysis factors in not just initial payback but expected useful life and terminal value, decisively favoring technologies on improving trajectories versus maturing ones.
+            </p>
           </div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
