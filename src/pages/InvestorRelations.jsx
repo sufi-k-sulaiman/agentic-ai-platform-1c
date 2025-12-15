@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X, Download, User, Plus, Minus } from 'lucide-react';
+import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X, Download, User, Plus, Minus, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
@@ -50,6 +50,8 @@ export default function InvestorRelations() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showDeck, setShowDeck] = useState(false);
   const [selectedYear, setSelectedYear] = useState(null);
+  const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
+  const [pdfProgress, setPdfProgress] = useState(0);
   const [yearlyData, setYearlyData] = useState({
     '2026': { revenue: 25, opex: 17, profit: 8 },
     '2027': { revenue: 90, opex: 55, profit: 35 },
@@ -80,24 +82,38 @@ export default function InvestorRelations() {
 
   const downloadPDF = async (e) => {
     e?.stopPropagation();
+    setIsGeneratingPDF(true);
+    setPdfProgress(0);
+    
     const slideWidth = 1920;
     const slideHeight = 1080;
-    const mmWidth = (slideWidth / slideHeight) * 210;
+    const aspectRatio = slideWidth / slideHeight;
     const mmHeight = 210;
-    const pdf = new jsPDF('landscape', 'mm', [mmWidth, mmHeight]);
+    const mmWidth = mmHeight * aspectRatio;
+    const pdf = new jsPDF({
+      orientation: 'landscape',
+      unit: 'mm',
+      format: [mmWidth, mmHeight]
+    });
     
     const slideElement = document.getElementById('slide-content');
-    if (!slideElement) return;
+    if (!slideElement) {
+      setIsGeneratingPDF(false);
+      return;
+    }
     
     const originalSlide = currentSlide;
+    const totalSlides = investmentSlides.length;
     
-    for (let i = 0; i < investmentSlides.length; i++) {
-      if (i > 0) pdf.addPage();
-      
-      setCurrentSlide(i);
-      await new Promise(resolve => setTimeout(resolve, 1200));
-      
-      try {
+    try {
+      for (let i = 0; i < totalSlides; i++) {
+        if (i > 0) pdf.addPage();
+        
+        setCurrentSlide(i);
+        setPdfProgress(Math.round((i / totalSlides) * 100));
+        
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
         const canvas = await html2canvas(slideElement, {
           scale: 2,
           width: slideWidth,
@@ -107,19 +123,25 @@ export default function InvestorRelations() {
           useCORS: true,
           allowTaint: true,
           foreignObjectRendering: true,
-          scrollX: 0,
-          scrollY: 0
+          windowWidth: slideWidth,
+          windowHeight: slideHeight
         });
         
         const imgData = canvas.toDataURL('image/png', 1.0);
         pdf.addImage(imgData, 'PNG', 0, 0, mmWidth, mmHeight, '', 'FAST');
-      } catch (error) {
-        console.error('Error capturing slide:', error);
       }
+      
+      pdf.save('1C-Platform-Investment-Deck.pdf');
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+    } finally {
+      setCurrentSlide(originalSlide);
+      setPdfProgress(100);
+      setTimeout(() => {
+        setIsGeneratingPDF(false);
+        setPdfProgress(0);
+      }, 500);
     }
-    
-    pdf.save('1C-Platform-Investment-Deck.pdf');
-    setCurrentSlide(originalSlide);
   };
 
   return (
@@ -2287,9 +2309,14 @@ export default function InvestorRelations() {
             {/* Download PDF Button */}
             <button
               onClick={downloadPDF}
-              className="absolute top-4 right-20 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all"
+              disabled={isGeneratingPDF}
+              className="absolute top-4 right-20 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Download className="w-6 h-6" />
+              {isGeneratingPDF ? (
+                <Loader2 className="w-6 h-6 animate-spin" />
+              ) : (
+                <Download className="w-6 h-6" />
+              )}
             </button>
 
             {/* Fullscreen Toggle */}
@@ -3642,6 +3669,36 @@ export default function InvestorRelations() {
               Use arrow keys or swipe to navigate • Press ESC to close
             </div>
           </div>
+        </div>
+      )}
+
+      {/* PDF Generation Progress Modal */}
+      {isGeneratingPDF && (
+        <div className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-center justify-center">
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="bg-white rounded-3xl p-12 max-w-md w-full mx-4 text-center shadow-2xl"
+          >
+            <div className="w-20 h-20 mx-auto mb-6 bg-[#6209e6] rounded-full flex items-center justify-center">
+              <Loader2 className="w-10 h-10 text-white animate-spin" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Generating PDF</h3>
+            <p className="text-gray-600 mb-6">
+              Creating your investment deck... {pdfProgress}%
+            </p>
+            <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-gradient-to-r from-[#6209e6] to-[#8B5CF6]"
+                initial={{ width: 0 }}
+                animate={{ width: `${pdfProgress}%` }}
+                transition={{ duration: 0.3 }}
+              />
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              Slide {Math.ceil((pdfProgress / 100) * investmentSlides.length)} of {investmentSlides.length}
+            </p>
+          </motion.div>
         </div>
       )}
     </div>
