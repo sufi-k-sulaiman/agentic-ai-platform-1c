@@ -2308,18 +2308,16 @@ export default function InvestorRelations() {
               id="slide-content"
               className={`${isFullscreen ? 'h-full' : 'aspect-[16/9]'} bg-gradient-to-br from-[#6209e6] via-[#7C3AED] to-[#8B5CF6] rounded-3xl overflow-hidden relative shadow-2xl border border-purple-300`}
             >
-              {/* Logo - Top Left */}
-              <div className="absolute top-6 left-6 z-10">
+              {/* Logo & Slide Number - Top Left */}
+              <div className="absolute top-6 left-6 z-10 flex items-center gap-3">
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                   alt="1C Platform" 
                   className="w-12 h-12"
                 />
-              </div>
-
-              {/* Slide Number */}
-              <div className="absolute top-6 right-6 text-sm font-semibold text-white/60 z-10">
-                {currentSlide + 1} / {investmentSlides.length}
+                <div className="text-sm font-semibold text-white/60">
+                  {currentSlide + 1} / {investmentSlides.length}
+                </div>
               </div>
 
               {/* Website - Bottom Center */}
