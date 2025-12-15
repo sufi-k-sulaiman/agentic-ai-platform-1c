@@ -1555,7 +1555,7 @@ export default function InvestorRelations() {
               <h4 className="text-4xl md:text-5xl font-bold mb-12 text-white text-center">Strategic Milestones</h4>
               <div className="grid md:grid-cols-3 gap-8">
                 {[
-                  { phase: '2025-2026: Foundation', goals: ['Series B funding ($100M)', 'Expand to 85+ countries', 'Launch enterprise marketplace', '5,000 enterprise customers'] },
+                  { phase: '2025-2026: Foundation', goals: ['Acquire first 500 customers', 'Expand to 15+ countries', 'Build sales team', 'Achieve product-market fit'] },
                   { phase: '2027-2028: Dominance', goals: ['Achieve profitability', 'Reach 10,000 customers', 'Strategic partnerships', 'Platform ecosystem launch'] },
                   { phase: '2029-2030: IPO Prep', goals: ['$750M+ revenue run rate', 'Category leadership', 'Public market readiness', 'Sustainable growth'] }
                 ].map((milestone, index) => (
