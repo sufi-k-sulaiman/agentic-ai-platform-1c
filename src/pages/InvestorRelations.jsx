@@ -1581,11 +1581,11 @@ export default function InvestorRelations() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-50 to-green-100/30 p-8 rounded-3xl border border-green-200"
+              className="bg-gradient-to-br from-purple-50 to-purple-100/30 p-8 rounded-3xl border border-purple-200"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
-                  <CheckCircle2 className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                  <CheckCircle2 className="w-7 h-7 text-purple-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Strengths</h3>
               </div>
@@ -1600,7 +1600,7 @@ export default function InvestorRelations() {
                   'Validated product-market fit across 14 industries'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
                     <span className="text-black">{item}</span>
                   </li>
                 ))}
@@ -1612,11 +1612,11 @@ export default function InvestorRelations() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-yellow-50 to-yellow-100/30 p-8 rounded-3xl border border-yellow-200"
+              className="bg-gradient-to-br from-gray-50 to-gray-100/30 p-8 rounded-3xl border border-gray-200"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-yellow-600 rounded-xl flex items-center justify-center">
-                  <Target className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                  <Target className="w-7 h-7 text-black" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Weaknesses</h3>
               </div>
@@ -1630,7 +1630,7 @@ export default function InvestorRelations() {
                   'Need to scale team rapidly (hiring challenges)'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-yellow-600 flex-shrink-0 mt-0.5"></div>
+                    <div className="w-5 h-5 rounded-full bg-black flex-shrink-0 mt-0.5"></div>
                     <span className="text-black">{item}</span>
                   </li>
                 ))}
@@ -1642,11 +1642,11 @@ export default function InvestorRelations() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-blue-100/30 p-8 rounded-3xl border border-blue-200"
+              className="bg-gradient-to-br from-green-50 to-green-100/30 p-8 rounded-3xl border border-green-200"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                  <TrendingUp className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                  <TrendingUp className="w-7 h-7 text-green-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Opportunities</h3>
               </div>
@@ -1661,7 +1661,7 @@ export default function InvestorRelations() {
                   'Platform ecosystem and marketplace revenue'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <TrendingUp className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <TrendingUp className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-black">{item}</span>
                   </li>
                 ))}
@@ -1676,8 +1676,8 @@ export default function InvestorRelations() {
               className="bg-gradient-to-br from-red-50 to-red-100/30 p-8 rounded-3xl border border-red-200"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
-                  <Shield className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                  <Shield className="w-7 h-7 text-red-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">Threats</h3>
               </div>
@@ -2568,10 +2568,10 @@ export default function InvestorRelations() {
                       {/* Strengths */}
                       <div className="bg-purple-500/20 backdrop-blur-sm border-2 border-purple-300/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
-                          <CheckCircle2 className="w-6 h-6 text-purple-300" />
-                          <h3 className="text-xl font-bold text-purple-300">Strengths</h3>
+                          <CheckCircle2 className="w-6 h-6" />
+                          <h3 className="text-xl font-bold">Strengths</h3>
                         </div>
-                        <ul className="space-y-2 text-sm text-white">
+                        <ul className="space-y-2 text-sm">
                           <li>• First-to-market no-code platform</li>
                           <li>• 95% customer retention</li>
                           <li>• Enterprise-grade security</li>
@@ -2581,12 +2581,12 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Weaknesses */}
-                      <div className="bg-black/20 backdrop-blur-sm border-2 border-gray-400/50 rounded-2xl p-6">
+                      <div className="bg-purple-400/20 backdrop-blur-sm border-2 border-purple-200/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
-                          <Target className="w-6 h-6 text-gray-300" />
-                          <h3 className="text-xl font-bold text-gray-300">Weaknesses</h3>
+                          <Target className="w-6 h-6" />
+                          <h3 className="text-xl font-bold">Weaknesses</h3>
                         </div>
-                        <ul className="space-y-2 text-sm text-white">
+                        <ul className="space-y-2 text-sm">
                           <li>• Early-stage company</li>
                           <li>• Small customer base</li>
                           <li>• Not yet profitable</li>
@@ -2596,12 +2596,12 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Opportunities */}
-                      <div className="bg-green-500/20 backdrop-blur-sm border-2 border-green-300/50 rounded-2xl p-6">
+                      <div className="bg-purple-600/20 backdrop-blur-sm border-2 border-purple-400/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
-                          <TrendingUp className="w-6 h-6 text-green-300" />
-                          <h3 className="text-xl font-bold text-green-300">Opportunities</h3>
+                          <TrendingUp className="w-6 h-6" />
+                          <h3 className="text-xl font-bold">Opportunities</h3>
                         </div>
-                        <ul className="space-y-2 text-sm text-white">
+                        <ul className="space-y-2 text-sm">
                           <li>• $500B+ TAM with 85% gap</li>
                           <li>• 120% market CAGR</li>
                           <li>• 14 vertical markets</li>
@@ -2611,12 +2611,12 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Threats */}
-                      <div className="bg-red-500/20 backdrop-blur-sm border-2 border-red-300/50 rounded-2xl p-6">
+                      <div className="bg-purple-700/20 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
-                          <Shield className="w-6 h-6 text-red-300" />
-                          <h3 className="text-xl font-bold text-red-300">Threats</h3>
+                          <Shield className="w-6 h-6" />
+                          <h3 className="text-xl font-bold">Threats</h3>
                         </div>
-                        <ul className="space-y-2 text-sm text-white">
+                        <ul className="space-y-2 text-sm">
                           <li>• Well-funded competitors</li>
                           <li>• Big Tech entering market</li>
                           <li>• Rapid tech changes</li>
