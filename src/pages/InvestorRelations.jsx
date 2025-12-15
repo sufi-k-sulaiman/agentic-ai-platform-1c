@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X, Download, User } from 'lucide-react';
+import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Maximize2, X, Download, User, Plus, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
@@ -129,6 +129,23 @@ export default function InvestorRelations() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showDeck, setShowDeck] = useState(false);
   const [selectedYear, setSelectedYear] = useState(null);
+  const [yearlyData, setYearlyData] = useState({
+    '2026': { revenue: 25, opex: 17, profit: 8 },
+    '2027': { revenue: 90, opex: 55, profit: 35 },
+    '2028': { revenue: 280, opex: 155, profit: 125 },
+    '2029': { revenue: 650, opex: 330, profit: 320 },
+    '2030': { revenue: 1400, opex: 650, profit: 750 }
+  });
+
+  const updateValue = (year, field, delta) => {
+    setYearlyData(prev => ({
+      ...prev,
+      [year]: {
+        ...prev[year],
+        [field]: Math.max(0, prev[year][field] + delta)
+      }
+    }));
+  };
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % investmentSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + investmentSlides.length) % investmentSlides.length);
@@ -685,56 +702,91 @@ export default function InvestorRelations() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <TableRow 
-                  onClick={() => setSelectedYear(selectedYear === '2026' ? null : '2026')}
-                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2026' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
-                >
-                  <TableCell className="font-medium text-base">2026</TableCell>
-                  <TableCell className="text-right text-base text-green-600 font-semibold">$25.0M</TableCell>
-                  <TableCell className="text-right text-base text-orange-600 font-semibold">$17.0M</TableCell>
-                  <TableCell className="text-right text-base text-[#6209e6] font-semibold">$8.0M</TableCell>
-                  <TableCell className="text-right text-base font-semibold">32%</TableCell>
-                </TableRow>
-                <TableRow 
-                  onClick={() => setSelectedYear(selectedYear === '2027' ? null : '2027')}
-                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2027' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
-                >
-                  <TableCell className="font-medium text-base">2027</TableCell>
-                  <TableCell className="text-right text-base text-green-600 font-semibold">$90.0M</TableCell>
-                  <TableCell className="text-right text-base text-orange-600 font-semibold">$55.0M</TableCell>
-                  <TableCell className="text-right text-base text-[#6209e6] font-semibold">$35.0M</TableCell>
-                  <TableCell className="text-right text-base font-semibold">39%</TableCell>
-                </TableRow>
-                <TableRow 
-                  onClick={() => setSelectedYear(selectedYear === '2028' ? null : '2028')}
-                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2028' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
-                >
-                  <TableCell className="font-medium text-base">2028</TableCell>
-                  <TableCell className="text-right text-base text-green-600 font-semibold">$280.0M</TableCell>
-                  <TableCell className="text-right text-base text-orange-600 font-semibold">$155.0M</TableCell>
-                  <TableCell className="text-right text-base text-[#6209e6] font-semibold">$125.0M</TableCell>
-                  <TableCell className="text-right text-base font-semibold">45%</TableCell>
-                </TableRow>
-                <TableRow 
-                  onClick={() => setSelectedYear(selectedYear === '2029' ? null : '2029')}
-                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2029' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
-                >
-                  <TableCell className="font-medium text-base">2029</TableCell>
-                  <TableCell className="text-right text-base text-green-600 font-semibold">$650.0M</TableCell>
-                  <TableCell className="text-right text-base text-orange-600 font-semibold">$330.0M</TableCell>
-                  <TableCell className="text-right text-base text-[#6209e6] font-semibold">$320.0M</TableCell>
-                  <TableCell className="text-right text-base font-semibold">49%</TableCell>
-                </TableRow>
-                <TableRow 
-                  onClick={() => setSelectedYear(selectedYear === '2030' ? null : '2030')}
-                  className={`cursor-pointer hover:bg-purple-50 transition-colors ${selectedYear === '2030' ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''}`}
-                >
-                  <TableCell className="font-bold text-base">2030</TableCell>
-                  <TableCell className="text-right text-base text-green-600 font-bold">$1,400.0M</TableCell>
-                  <TableCell className="text-right text-base text-orange-600 font-bold">$650.0M</TableCell>
-                  <TableCell className="text-right text-base text-[#6209e6] font-bold">$750.0M</TableCell>
-                  <TableCell className="text-right text-base font-bold">54%</TableCell>
-                </TableRow>
+                {Object.keys(yearlyData).map((year) => {
+                  const data = yearlyData[year];
+                  const margin = ((data.profit / data.revenue) * 100).toFixed(0);
+                  const isLast = year === '2030';
+                  
+                  return (
+                    <TableRow 
+                      key={year}
+                      onClick={() => setSelectedYear(selectedYear === year ? null : year)}
+                      className={`hover:bg-purple-50 transition-colors ${selectedYear === year ? 'bg-purple-100 border-l-4 border-[#6209e6]' : ''} ${isLast ? 'bg-gray-50' : ''}`}
+                    >
+                      <TableCell className={`${isLast ? 'font-bold' : 'font-medium'} text-base`}>{year}</TableCell>
+                      <TableCell className="text-right">
+                        <div className="flex items-center justify-end gap-2">
+                          <Button
+                            size="icon"
+                            variant="ghost"
+                            className="h-6 w-6"
+                            onClick={(e) => { e.stopPropagation(); updateValue(year, 'revenue', -10); }}
+                          >
+                            <Minus className="h-3 w-3" />
+                          </Button>
+                          <span className={`text-base text-green-600 ${isLast ? 'font-bold' : 'font-semibold'}`}>
+                            ${data.revenue.toFixed(1)}M
+                          </span>
+                          <Button
+                            size="icon"
+                            variant="ghost"
+                            className="h-6 w-6"
+                            onClick={(e) => { e.stopPropagation(); updateValue(year, 'revenue', 10); }}
+                          >
+                            <Plus className="h-3 w-3" />
+                          </Button>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <div className="flex items-center justify-end gap-2">
+                          <Button
+                            size="icon"
+                            variant="ghost"
+                            className="h-6 w-6"
+                            onClick={(e) => { e.stopPropagation(); updateValue(year, 'opex', -10); }}
+                          >
+                            <Minus className="h-3 w-3" />
+                          </Button>
+                          <span className={`text-base text-orange-600 ${isLast ? 'font-bold' : 'font-semibold'}`}>
+                            ${data.opex.toFixed(1)}M
+                          </span>
+                          <Button
+                            size="icon"
+                            variant="ghost"
+                            className="h-6 w-6"
+                            onClick={(e) => { e.stopPropagation(); updateValue(year, 'opex', 10); }}
+                          >
+                            <Plus className="h-3 w-3" />
+                          </Button>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <div className="flex items-center justify-end gap-2">
+                          <Button
+                            size="icon"
+                            variant="ghost"
+                            className="h-6 w-6"
+                            onClick={(e) => { e.stopPropagation(); updateValue(year, 'profit', -10); }}
+                          >
+                            <Minus className="h-3 w-3" />
+                          </Button>
+                          <span className={`text-base text-[#6209e6] ${isLast ? 'font-bold' : 'font-semibold'}`}>
+                            ${data.profit.toFixed(1)}M
+                          </span>
+                          <Button
+                            size="icon"
+                            variant="ghost"
+                            className="h-6 w-6"
+                            onClick={(e) => { e.stopPropagation(); updateValue(year, 'profit', 10); }}
+                          >
+                            <Plus className="h-3 w-3" />
+                          </Button>
+                        </div>
+                      </TableCell>
+                      <TableCell className={`text-right text-base ${isLast ? 'font-bold' : 'font-semibold'}`}>{margin}%</TableCell>
+                    </TableRow>
+                  );
+                })}
               </TableBody>
             </Table>
           </div>
