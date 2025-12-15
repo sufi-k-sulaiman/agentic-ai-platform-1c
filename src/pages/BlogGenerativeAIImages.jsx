@@ -49,8 +49,8 @@ export default function BlogGenerativeAIImages() {
             </div>
 
             <img 
-              src="https://images.unsplash.com/photo-1706885093476-b1e54f26d597?w=1200&h=600&fit=crop"
-              alt="AI Art"
+              src="https://images.unsplash.com/photo-1547954575-855750c57bd3?w=1200&q=80"
+              alt="AI Image Generation: From DALL-E to Midjourney"
               className="w-full h-[400px] object-cover rounded-2xl mb-12"
             />
           </motion.div>
