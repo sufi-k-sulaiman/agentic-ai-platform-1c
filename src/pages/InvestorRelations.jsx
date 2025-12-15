@@ -3684,38 +3684,6 @@ export default function InvestorRelations() {
                         Launch Live Demo <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </div>
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                        <div className="text-xl font-bold mb-2">investor@1cplatform.com</div>
-                        <div className="text-sm text-purple-200 mb-4">Get in touch</div>
-                        <Button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            copyEmail('investor@1cplatform.com');
-                          }}
-                          variant="outline"
-                          size="sm"
-                          className="border-white/30 text-white hover:bg-white/10"
-                        >
-                          Copy Email
-                        </Button>
-                      </div>
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                        <div className="text-xl font-bold mb-2">1cplatform.com</div>
-                        <div className="text-sm text-purple-200 mb-4">Learn more</div>
-                        <Button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            window.open('https://1cplatform.com', '_blank', 'noopener,noreferrer');
-                          }}
-                          variant="outline"
-                          size="sm"
-                          className="border-white/30 text-white hover:bg-white/10"
-                        >
-                          Visit Website
-                        </Button>
-                      </div>
-                    </div>
                   </div>
                 )}
               </motion.div>
