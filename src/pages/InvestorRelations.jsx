@@ -2323,17 +2323,19 @@ export default function InvestorRelations() {
             </button>
 
             {/* Download PDF Button */}
-            <button
-              onClick={downloadPDF}
-              disabled={isGeneratingPDF}
-              className="absolute top-4 right-20 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isGeneratingPDF ? (
-                <Loader2 className="w-6 h-6 animate-spin" />
-              ) : (
-                <Download className="w-6 h-6" />
-              )}
-            </button>
+            {isFullscreen && (
+              <button
+                onClick={downloadPDF}
+                disabled={isGeneratingPDF}
+                className="absolute top-4 right-20 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isGeneratingPDF ? (
+                  <Loader2 className="w-6 h-6 animate-spin" />
+                ) : (
+                  <Download className="w-6 h-6" />
+                )}
+              </button>
+            )}
 
             {/* Fullscreen Toggle */}
             <button
