@@ -1024,6 +1024,14 @@ export default function Onboarding() {
             {/* Step 1: Vertical */}
             {step === 1 && (
               <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full" disabled={step === 1}>
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.vertical} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Hey there, what brings you here today?</h1>
                   <p className="text-gray-600 mb-8">Select your industry to get started</p>
@@ -1035,16 +1043,21 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
-                </div>
-                <Button onClick={nextStep} disabled={!formData.vertical} className="w-full bg-[#6209e6] hover:bg-[#5008c5] h-12 mt-8">
-                  Continue <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 2: Vertical Impact */}
             {step === 2 && selectedVertical && (
               <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.companyName || !formData.companyWebsite} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Perfect! Tell us about your company</h1>
                   <p className="text-gray-600 mb-6">We'll customize your experience</p>
@@ -1058,21 +1071,21 @@ export default function Onboarding() {
                       <Input id="website" type="url" placeholder="https://yourcompany.com" value={formData.companyWebsite} onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })} className="mt-2" />
                     </div>
                   </div>
-                </div>
-                <div className="flex gap-3 mt-8">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button onClick={nextStep} disabled={!formData.companyName || !formData.companyWebsite} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-              )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 3: Deployment Strategy */}
             {step === 3 && selectedVertical && (
               <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.deploymentStrategy || formData.deploymentStrategy.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What's your deployment strategy?</h1>
                   <p className="text-gray-600 mb-8">Select all that apply</p>
@@ -1104,21 +1117,21 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
-                </div>
-                <div className="flex gap-3 mt-8">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button onClick={nextStep} disabled={!formData.deploymentStrategy || formData.deploymentStrategy.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 4: Role */}
             {step === 4 && (
               <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.role} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What's your role?</h1>
                   <p className="text-gray-600 mb-8">Help us understand your position</p>
@@ -1129,21 +1142,21 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
-                </div>
-                <div className="flex gap-3 mt-8">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button onClick={nextStep} disabled={!formData.role} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 5: Team Size */}
             {step === 5 && (
               <motion.div key="step5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.teamSize} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How many people are on your team?</h1>
                   <p className="text-gray-600 mb-8">The team that will use this platform</p>
@@ -1154,21 +1167,21 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
-                </div>
-                <div className="flex gap-3 mt-8">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button onClick={nextStep} disabled={!formData.teamSize} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 6: Company Size */}
             {step === 6 && (
               <motion.div key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.companySize} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How large is your organization?</h1>
                   <p className="text-gray-600 mb-8">Total number of employees</p>
@@ -1179,21 +1192,21 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
-                </div>
-                <div className="flex gap-3 mt-8">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button onClick={nextStep} disabled={!formData.companySize} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 7: Pain Points */}
             {step === 7 && (
               <motion.div key="step7" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={formData.painPoints.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1 flex flex-col">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What challenges are you facing?</h1>
                   <p className="text-gray-600 mb-4">Select all that apply</p>
@@ -1215,21 +1228,21 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
-                </div>
-                <div className="flex gap-3 mt-6">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button onClick={nextStep} disabled={formData.painPoints.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 8: How did you hear */}
             {step === 8 && (
               <motion.div key="step8" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.hearAbout} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">How did you hear about us?</h1>
                   <p className="text-gray-600 mb-8">Help us understand our reach</p>
@@ -1240,21 +1253,21 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
-                </div>
-                <div className="flex gap-3 mt-8">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button onClick={nextStep} disabled={!formData.hearAbout} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 9: Agent Objectives */}
             {step === 9 && (
               <motion.div key="step9" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button onClick={nextStep} disabled={!formData.objectives || formData.objectives.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
+                    Finish <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1 flex flex-col">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Define your Agentic Ai objectives</h1>
                   <p className="text-gray-600 mb-6">Based on your challenges, select what your AI should focus on</p>
@@ -1295,21 +1308,25 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
-                </div>
-                <div className="flex gap-3 mt-6">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button onClick={nextStep} disabled={!formData.objectives || formData.objectives.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12">
-                    Finish <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
 
             {/* Step 10: Final */}
             {step === 10 && selectedVertical && (
               <motion.div key="step10" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                <div className="flex gap-3 mb-8">
+                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
+                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
+                  </Button>
+                  <Button 
+                    onClick={handleSubmit} 
+                    disabled={!formData.email || !formData.phone || isSubmitting}
+                    className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full"
+                  >
+                    {isSubmitting ? 'Saving...' : 'Complete Setup'} <CheckCircle2 className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
                 <div className="flex-1">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Almost there!</h1>
                   <p className="text-gray-600 mb-6">Enter your contact details to complete setup</p>
@@ -1351,21 +1368,9 @@ export default function Onboarding() {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex gap-3 mt-6">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
-                  <Button 
-                    onClick={handleSubmit} 
-                    disabled={!formData.email || !formData.phone || isSubmitting}
-                    className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12"
-                  >
-                    {isSubmitting ? 'Saving...' : 'Complete Setup'} <CheckCircle2 className="ml-2 w-5 h-5" />
-                  </Button>
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                  </motion.div>
+                  )}
           </AnimatePresence>
         </div>
       </div>
