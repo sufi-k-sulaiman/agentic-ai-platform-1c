@@ -5,6 +5,10 @@ import { Rocket, TrendingUp, Users, Globe, Zap, Target, Brain, Shield, Award, Ch
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import jsPDF from 'jspdf';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
