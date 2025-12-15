@@ -330,7 +330,7 @@ export default function InvestorRelations() {
               Plan to Acquire Active Users
             </h2>
             <div className="inline-flex items-center gap-3 bg-cyan-400 rounded-full px-8 py-4 mb-8">
-              <div className="text-4xl font-bold text-white">$1.3B</div>
+              <div className="text-4xl font-bold text-white">3.5 Million</div>
             </div>
           </motion.div>
 
