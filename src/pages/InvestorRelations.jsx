@@ -187,11 +187,6 @@ export default function InvestorRelations() {
             className="max-w-4xl"
           >
             <div className="mb-8 flex items-center gap-4">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                alt="1C Platform" 
-                className="w-16 h-16"
-              />
               <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-[#6209e6] px-4 py-2 rounded-full text-sm font-semibold">
                 <Rocket className="w-4 h-4" />
                 SERIES B INVESTMENT OPPORTUNITY
