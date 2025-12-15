@@ -1488,35 +1488,14 @@ export default function InvestorRelations() {
                   <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Monday.com</span>
                 </motion.div>
                 
-                {/* Sonar pulse rings */}
-                <motion.div
-                  className="absolute w-40 h-40 rounded-full border-2 border-[#6209e6]/30"
-                  animate={{ scale: [1, 2.5], opacity: [0.6, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }}
-                />
-                <motion.div
-                  className="absolute w-40 h-40 rounded-full border-2 border-[#6209e6]/30"
-                  animate={{ scale: [1, 2.5], opacity: [0.6, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeOut", delay: 1 }}
-                />
-                <motion.div
-                  className="absolute w-40 h-40 rounded-full border-2 border-[#6209e6]/30"
-                  animate={{ scale: [1, 2.5], opacity: [0.6, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeOut", delay: 2 }}
-                />
-                
                 {/* Center logo */}
-                <motion.div
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="relative w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center z-30"
-                >
+                <div className="relative w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center z-30">
                   <img 
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                     alt="1C Platform" 
                     className="w-20 h-20"
                   />
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           </div>
