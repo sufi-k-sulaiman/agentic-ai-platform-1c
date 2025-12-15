@@ -12,6 +12,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import toast from 'react-hot-toast';
 
 const investmentSlides = [
   { id: 'cover', title: '1C Platform', subtitle: 'The No-Code Agentic AI Revolution', type: 'cover' },
@@ -69,6 +70,11 @@ export default function InvestorRelations() {
         [field]: Math.max(0, prev[year][field] + delta)
       }
     }));
+  };
+
+  const copyEmail = (email) => {
+    navigator.clipboard.writeText(email);
+    toast.success('Email copied to clipboard!');
   };
 
   const nextSlide = (e) => {
@@ -197,7 +203,7 @@ export default function InvestorRelations() {
                 View investment deck <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <div className="mt-4 text-gray-600 text-sm">
-                email us at <a href="mailto:investor@1cplatform.com" className="text-[#6209e6] font-semibold hover:underline">investor@1cplatform.com</a>
+                email us at <button onClick={() => copyEmail('investor@1cplatform.com')} className="text-[#6209e6] font-semibold hover:underline">investor@1cplatform.com</button>
               </div>
             </div>
           </motion.div>
@@ -2286,7 +2292,7 @@ export default function InvestorRelations() {
                 View investment deck <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <div className="mt-4 text-purple-200 text-sm">
-                Or email us at <a href="mailto:investor@1cplatform.com" className="text-white font-semibold hover:underline">investor@1cplatform.com</a>
+                Or email us at <button onClick={() => copyEmail('investor@1cplatform.com')} className="text-white font-semibold hover:underline">investor@1cplatform.com</button>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-white/20">
@@ -3637,7 +3643,75 @@ export default function InvestorRelations() {
                         Fuel product development, customer acquisition, and international expansion
                       </p>
                       <div className="text-base text-purple-200">
-                        Contact: <span className="font-semibold text-white">investor@1cplatform.com</span>
+                        Contact: <button onClick={(e) => { e.stopPropagation(); copyEmail('investor@1cplatform.com'); }} className="font-semibold text-white hover:underline">investor@1cplatform.com</button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Thank You Slide */}
+                {investmentSlides[currentSlide].id === 'thankyou' && (
+                  <div className="w-full max-w-4xl text-center text-white">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.2, type: "spring" }}
+                      className="w-32 h-32 mx-auto mb-8 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center border-4 border-white/30"
+                    >
+                      <img 
+                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                        alt="1C" 
+                        className="w-20 h-20"
+                      />
+                    </motion.div>
+                    <h2 className="text-6xl font-bold mb-6">Thank You</h2>
+                    <p className="text-2xl text-purple-200 mb-12 leading-relaxed max-w-2xl mx-auto">
+                      We appreciate your time and interest in 1cPlatform
+                    </p>
+                    <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-10 mb-8">
+                      <h3 className="text-2xl font-bold mb-6">Experience Our Platform Live</h3>
+                      <p className="text-purple-200 mb-8">See Agentic AI in action with a real working demo</p>
+                      <Button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open('https://1cpublishing.com/home', '_blank', 'noopener,noreferrer');
+                        }}
+                        size="lg"
+                        className="bg-white text-[#6209e6] hover:bg-gray-100 rounded-full px-10 h-14 text-lg font-semibold"
+                      >
+                        Launch Live Demo <ArrowRight className="ml-2 w-5 h-5" />
+                      </Button>
+                    </div>
+                    <div className="grid grid-cols-2 gap-6">
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div className="text-xl font-bold mb-2">investor@1cplatform.com</div>
+                        <div className="text-sm text-purple-200 mb-4">Get in touch</div>
+                        <Button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            copyEmail('investor@1cplatform.com');
+                          }}
+                          variant="outline"
+                          size="sm"
+                          className="border-white/30 text-white hover:bg-white/10"
+                        >
+                          Copy Email
+                        </Button>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div className="text-xl font-bold mb-2">1cplatform.com</div>
+                        <div className="text-sm text-purple-200 mb-4">Learn more</div>
+                        <Button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            window.open('https://1cplatform.com', '_blank', 'noopener,noreferrer');
+                          }}
+                          variant="outline"
+                          size="sm"
+                          className="border-white/30 text-white hover:bg-white/10"
+                        >
+                          Visit Website
+                        </Button>
                       </div>
                     </div>
                   </div>
