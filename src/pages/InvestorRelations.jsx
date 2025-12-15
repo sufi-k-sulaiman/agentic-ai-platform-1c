@@ -1695,9 +1695,6 @@ export default function InvestorRelations() {
               className="bg-gradient-to-br from-gray-50 to-gray-100/30 p-8 rounded-3xl border border-gray-200"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center">
-                  <Target className="w-7 h-7 text-black" />
-                </div>
                 <h3 className="text-2xl font-bold text-black">Weaknesses</h3>
               </div>
               <ul className="space-y-3">
@@ -1710,7 +1707,7 @@ export default function InvestorRelations() {
                   'Need to scale team rapidly (hiring challenges)'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-black flex-shrink-0 mt-0.5"></div>
+                    <Target className="w-5 h-5 text-black flex-shrink-0 mt-0.5" />
                     <span className="text-black">{item}</span>
                   </li>
                 ))}
@@ -1756,9 +1753,6 @@ export default function InvestorRelations() {
               className="bg-gradient-to-br from-red-50 to-red-100/30 p-8 rounded-3xl border border-red-200"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center">
-                  <Shield className="w-7 h-7 text-red-600" />
-                </div>
                 <h3 className="text-2xl font-bold text-black">Threats</h3>
               </div>
               <ul className="space-y-3">
@@ -1771,7 +1765,7 @@ export default function InvestorRelations() {
                   'Customer acquisition cost inflation'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-red-600 flex-shrink-0 mt-0.5"></div>
+                    <Shield className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                     <span className="text-black">{item}</span>
                   </li>
                 ))}
