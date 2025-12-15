@@ -62,10 +62,18 @@ export default function InvestorRelations() {
     }));
   };
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % investmentSlides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + investmentSlides.length) % investmentSlides.length);
+  const nextSlide = (e) => {
+    e?.stopPropagation();
+    setCurrentSlide((prev) => (prev + 1) % investmentSlides.length);
+  };
+  
+  const prevSlide = (e) => {
+    e?.stopPropagation();
+    setCurrentSlide((prev) => (prev - 1 + investmentSlides.length) % investmentSlides.length);
+  };
 
-  const downloadPDF = async () => {
+  const downloadPDF = async (e) => {
+    e?.stopPropagation();
     const pdf = new jsPDF('landscape', 'mm', [297, 210]);
     const slideWidth = 297;
     const slideHeight = 210;
@@ -73,36 +81,33 @@ export default function InvestorRelations() {
     const slideElement = document.getElementById('slide-content');
     if (!slideElement) return;
     
+    const originalSlide = currentSlide;
+    
     for (let i = 0; i < investmentSlides.length; i++) {
       if (i > 0) pdf.addPage();
       
       setCurrentSlide(i);
-      await new Promise(resolve => setTimeout(resolve, 500)); // Wait for slide to render
+      await new Promise(resolve => setTimeout(resolve, 800));
       
       try {
         const canvas = await html2canvas(slideElement, {
           scale: 2,
-          backgroundColor: null,
+          backgroundColor: '#6209e6',
           logging: false,
-          useCORS: true
+          useCORS: true,
+          allowTaint: true,
+          foreignObjectRendering: true
         });
         
         const imgData = canvas.toDataURL('image/png');
         pdf.addImage(imgData, 'PNG', 0, 0, slideWidth, slideHeight);
       } catch (error) {
         console.error('Error capturing slide:', error);
-        // Fallback to simple text
-        pdf.setFillColor(98, 9, 230);
-        pdf.rect(0, 0, slideWidth, slideHeight, 'F');
-        pdf.setTextColor(255, 255, 255);
-        pdf.setFontSize(36);
-        pdf.setFont('helvetica', 'bold');
-        pdf.text(investmentSlides[i].title, slideWidth / 2, slideHeight / 2, { align: 'center' });
       }
     }
     
     pdf.save('1C-Platform-Investment-Deck.pdf');
-    setCurrentSlide(0); // Reset to first slide
+    setCurrentSlide(originalSlide);
   };
 
   return (
@@ -2257,7 +2262,8 @@ export default function InvestorRelations() {
           <div className={`${isFullscreen ? 'w-full h-full' : 'max-w-6xl w-full'} relative`}>
             {/* Close Button */}
             <button
-              onClick={() => {
+              onClick={(e) => {
+                e.stopPropagation();
                 setShowDeck(false);
                 setIsFullscreen(false);
               }}
@@ -2276,7 +2282,10 @@ export default function InvestorRelations() {
 
             {/* Fullscreen Toggle */}
             <button
-              onClick={() => setIsFullscreen(!isFullscreen)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsFullscreen(!isFullscreen);
+              }}
               className="absolute top-4 right-36 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all"
             >
               <Maximize2 className="w-6 h-6" />
@@ -2295,9 +2304,11 @@ export default function InvestorRelations() {
               {/* Slide Content */}
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="w-full h-full flex items-center justify-center p-8 md:p-16"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="w-full h-full flex items-center justify-center p-8 md:p-16 overflow-auto"
               >
                 {/* Cover Slide */}
                 {investmentSlides[currentSlide].id === 'cover' && (
@@ -3317,15 +3328,15 @@ export default function InvestorRelations() {
               {/* Navigation Arrows */}
               <button
                 onClick={prevSlide}
-                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all group"
+                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all group z-20"
               >
-                <ChevronLeft className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                <ChevronLeft className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
               </button>
               <button
                 onClick={nextSlide}
-                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all group"
+                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all group z-20"
               >
-                <ChevronRight className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                <ChevronRight className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
               </button>
             </div>
 
