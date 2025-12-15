@@ -1207,7 +1207,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Why Invest in 1C */}
-      <section className="py-24 bg-gradient-to-br from-violet-50 via-purple-50 to-white">
+      <section className="py-24 bg-gradient-to-br from-[#6209e6] via-[#7C3AED] to-[#8B5CF6]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1215,10 +1215,10 @@ export default function InvestorRelations() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Why invest in 1cPlatform?
             </h2>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl text-white max-w-3xl mx-auto">
               We're not just building technology—we're reshaping industries
             </p>
           </motion.div>
@@ -1264,9 +1264,9 @@ export default function InvestorRelations() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all"
               >
-                <reason.icon className="w-14 h-14 text-[#6209e6] mb-6" />
-                <h3 className="text-2xl font-bold mb-4">{reason.title}</h3>
-                <p className="text-gray-300 text-lg leading-relaxed">{reason.description}</p>
+                <reason.icon className="w-14 h-14 text-white mb-6" />
+                <h3 className="text-2xl font-bold mb-4 text-white">{reason.title}</h3>
+                <p className="text-white text-lg leading-relaxed">{reason.description}</p>
               </motion.div>
             ))}
           </div>
