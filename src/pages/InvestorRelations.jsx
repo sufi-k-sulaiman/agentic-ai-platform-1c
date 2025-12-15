@@ -12,7 +12,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import toast from 'react-hot-toast';
 
 const investmentSlides = [
   { id: 'cover', title: '1C Platform', subtitle: 'The No-Code Agentic AI Revolution', type: 'cover' },
@@ -43,7 +42,8 @@ const investmentSlides = [
   { id: 'milestones', title: 'Company Milestones', type: 'milestones' },
   { id: 'team', title: 'World-Class Team', type: 'team' },
   { id: 'financials', title: 'Financial Projections', subtitle: '2025-2030 Hypergrowth', type: 'financials' },
-  { id: 'ask', title: 'The Investment', subtitle: 'Series B Opportunity', type: 'ask' }
+  { id: 'ask', title: 'The Investment', subtitle: 'Series B Opportunity', type: 'ask' },
+  { id: 'thankyou', title: 'Thank You', subtitle: 'Experience our platform live', type: 'thankyou' }
 ];
 
 export default function InvestorRelations() {
@@ -69,11 +69,6 @@ export default function InvestorRelations() {
         [field]: Math.max(0, prev[year][field] + delta)
       }
     }));
-  };
-
-  const copyEmail = (email) => {
-    navigator.clipboard.writeText(email);
-    toast.success('Email copied to clipboard!');
   };
 
   const nextSlide = (e) => {
@@ -202,7 +197,7 @@ export default function InvestorRelations() {
                 View investment deck <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <div className="mt-4 text-gray-600 text-sm">
-                email us at <button onClick={() => copyEmail('investor@1cplatform.com')} className="text-[#6209e6] font-semibold hover:underline">investor@1cplatform.com</button>
+                email us at <a href="mailto:investor@1cplatform.com" className="text-[#6209e6] font-semibold hover:underline">investor@1cplatform.com</a>
               </div>
             </div>
           </motion.div>
@@ -2291,7 +2286,7 @@ export default function InvestorRelations() {
                 View investment deck <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <div className="mt-4 text-purple-200 text-sm">
-                Or email us at <button onClick={() => copyEmail('investor@1cplatform.com')} className="text-white font-semibold hover:underline">investor@1cplatform.com</button>
+                Or email us at <a href="mailto:investor@1cplatform.com" className="text-white font-semibold hover:underline">investor@1cplatform.com</a>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-white/20">
@@ -3642,7 +3637,7 @@ export default function InvestorRelations() {
                         Fuel product development, customer acquisition, and international expansion
                       </p>
                       <div className="text-base text-purple-200">
-                        Contact: <button onClick={() => copyEmail('investor@1cplatform.com')} className="font-semibold text-white hover:underline">investor@1cplatform.com</button>
+                        Contact: <span className="font-semibold text-white">investor@1cplatform.com</span>
                       </div>
                     </div>
                   </div>
