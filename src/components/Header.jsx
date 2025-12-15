@@ -76,6 +76,7 @@ const navItems = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
@@ -95,37 +96,40 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <NavigationMenuPrimitive.Root>
-              <NavigationMenuPrimitive.List className="flex gap-1">
-                {navItems.map((item) => (
-                  <NavigationMenuPrimitive.Item key={item.label} className="relative">
-                    {item.submenu ? (
-                      <>
-                        <NavigationMenuPrimitive.Trigger className="text-gray-600 hover:text-[#6209e6] bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5 px-4 py-2 flex items-center gap-1 group">
-                          {item.label}
-                          <ChevronDown className="w-3 h-3 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                        </NavigationMenuPrimitive.Trigger>
-                        <NavigationMenuPrimitive.Content className="absolute left-1/2 -translate-x-1/2 top-full mt-2 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0 data-[state=open]:zoom-in-95 data-[state=closed]:zoom-out-95 data-[state=closed]:duration-200 data-[state=open]:duration-200">
-                          <ul className={`grid gap-1 p-4 bg-white rounded-xl shadow-lg border border-gray-100 ${item.label === 'Verticals' ? 'w-[500px] grid-cols-2' : 'w-[400px]'}`}>
-                            {item.submenu.map((subitem) => (
-                              <li key={subitem.label}>
-                                <Link
-                                  to={subitem.href}
-                                  className="block select-none rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50"
-                                >
-                                  <div className="text-sm font-medium text-gray-900">{subitem.label}</div>
-                                  <p className="text-sm text-gray-500 mt-1">{subitem.description}</p>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </NavigationMenuPrimitive.Content>
-                      </>
-                    ) : null}
-                  </NavigationMenuPrimitive.Item>
-                ))}
-              </NavigationMenuPrimitive.List>
-            </NavigationMenuPrimitive.Root>
+            <div className="flex gap-1">
+              {navItems.map((item) => (
+                <div key={item.label} className="relative">
+                  <button
+                    onClick={() => setActiveMenu(activeMenu === item.label ? null : item.label)}
+                    className="text-gray-600 hover:text-[#6209e6] bg-transparent font-medium text-sm transition-all duration-200 hover:-translate-y-0.5 px-4 py-2 flex items-center gap-1 group"
+                  >
+                    {item.label}
+                    <ChevronDown className={cn("w-3 h-3 transition-transform duration-200", activeMenu === item.label && "rotate-180")} />
+                  </button>
+                  {activeMenu === item.label && item.submenu && (
+                    <>
+                      <div className="fixed inset-0 z-40" onClick={() => setActiveMenu(null)} />
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+                        <ul className={`grid gap-1 p-4 bg-white rounded-xl shadow-lg border border-gray-100 ${item.label === 'Verticals' ? 'w-[500px] grid-cols-2' : 'w-[400px]'}`}>
+                          {item.submenu.map((subitem) => (
+                            <li key={subitem.label}>
+                              <Link
+                                to={subitem.href}
+                                onClick={() => setActiveMenu(null)}
+                                className="block select-none rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50"
+                              >
+                                <div className="text-sm font-medium text-gray-900">{subitem.label}</div>
+                                <p className="text-sm text-gray-500 mt-1">{subitem.description}</p>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
           </nav>
 
           {/* Demo Button & Search */}
