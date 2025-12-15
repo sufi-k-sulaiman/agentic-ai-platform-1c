@@ -1380,56 +1380,136 @@ export default function InvestorRelations() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative bg-white border border-gray-200 rounded-3xl p-12 min-h-[500px] flex items-center justify-center shadow-lg">
+              <div className="relative bg-white border border-gray-200 rounded-3xl p-12 min-h-[500px] flex items-center justify-center shadow-lg overflow-hidden">
                 {/* Floating integration boxes */}
                 <motion.div
                   animate={{ y: [0, -20, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-12 left-12 bg-white rounded-xl shadow-lg p-4 flex items-center justify-center"
+                  className="absolute top-12 left-12 bg-white rounded-xl shadow-lg p-4 flex items-center justify-center z-20"
                 >
                   <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Salesforce</span>
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, 20, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="absolute top-24 right-16 bg-white rounded-xl shadow-lg p-4 flex items-center justify-center"
+                  className="absolute top-8 right-16 bg-white rounded-xl shadow-lg p-4 flex items-center justify-center z-20"
                 >
                   <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Slack</span>
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute bottom-32 left-20 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center"
+                  className="absolute bottom-32 left-20 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
                 >
                   <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">AWS</span>
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, 25, 0] }}
                   transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                  className="absolute bottom-20 right-24 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center"
+                  className="absolute bottom-20 right-24 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
                 >
                   <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">QuickBooks</span>
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, 15, 0] }}
                   transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-                  className="absolute top-40 left-32 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center"
+                  className="absolute top-40 left-32 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
                 >
                   <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">HubSpot</span>
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, -18, 0] }}
                   transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-                  className="absolute bottom-40 right-32 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center"
+                  className="absolute bottom-40 right-32 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
                 >
                   <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Azure</span>
                 </motion.div>
+                <motion.div
+                  animate={{ y: [0, -22, 0] }}
+                  transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                  className="absolute top-32 right-40 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Microsoft 365</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 18, 0] }}
+                  transition={{ duration: 4.1, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+                  className="absolute bottom-28 left-32 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">SAP</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, -16, 0] }}
+                  transition={{ duration: 3.9, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
+                  className="absolute top-20 left-48 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Oracle</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 20, 0] }}
+                  transition={{ duration: 4.3, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
+                  className="absolute bottom-36 right-48 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Workday</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, -12, 0] }}
+                  transition={{ duration: 3.7, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
+                  className="absolute top-52 right-20 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Jira</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 14, 0] }}
+                  transition={{ duration: 4.4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                  className="absolute bottom-48 left-40 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Zendesk</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, -19, 0] }}
+                  transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                  className="absolute top-60 left-24 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Tableau</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 17, 0] }}
+                  transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut", delay: 1.1 }}
+                  className="absolute bottom-52 right-36 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">NetSuite</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, -13, 0] }}
+                  transition={{ duration: 3.3, repeat: Infinity, ease: "easeInOut", delay: 1.7 }}
+                  className="absolute top-44 right-52 bg-white rounded-lg shadow-lg p-3 flex items-center justify-center z-20"
+                >
+                  <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">Monday.com</span>
+                </motion.div>
+                
+                {/* Sonar pulse rings */}
+                <motion.div
+                  className="absolute w-40 h-40 rounded-full border-2 border-[#6209e6]/30"
+                  animate={{ scale: [1, 2.5], opacity: [0.6, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }}
+                />
+                <motion.div
+                  className="absolute w-40 h-40 rounded-full border-2 border-[#6209e6]/30"
+                  animate={{ scale: [1, 2.5], opacity: [0.6, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeOut", delay: 1 }}
+                />
+                <motion.div
+                  className="absolute w-40 h-40 rounded-full border-2 border-[#6209e6]/30"
+                  animate={{ scale: [1, 2.5], opacity: [0.6, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeOut", delay: 2 }}
+                />
                 
                 {/* Center logo */}
                 <motion.div
                   animate={{ rotate: [0, 360] }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="relative w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center z-10"
+                  className="relative w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center z-30"
                 >
                   <img 
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
