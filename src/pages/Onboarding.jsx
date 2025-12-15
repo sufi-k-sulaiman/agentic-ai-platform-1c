@@ -1004,26 +1004,25 @@ export default function Onboarding() {
       {/* Left Side - Form */}
       <div className="w-full lg:w-1/2 bg-white p-8 lg:p-16 flex flex-col">
         <div className="max-w-xl mx-auto w-full flex-1 flex flex-col">
-          {/* Progress */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
-              <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
-            </div>
-            <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-[#6209e6]"
-                initial={{ width: 0 }}
-                animate={{ width: `${(step / totalSteps) * 100}%` }}
-                transition={{ duration: 0.3 }}
-              />
-            </div>
-          </div>
-
           <AnimatePresence mode="wait">
             {/* Step 1: Vertical */}
             {step === 1 && (
               <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full" disabled={step === 1}>
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1050,6 +1049,21 @@ export default function Onboarding() {
             {/* Step 2: Vertical Impact */}
             {step === 2 && selectedVertical && (
               <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1078,6 +1092,21 @@ export default function Onboarding() {
             {/* Step 3: Deployment Strategy */}
             {step === 3 && selectedVertical && (
               <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1124,6 +1153,21 @@ export default function Onboarding() {
             {/* Step 4: Role */}
             {step === 4 && (
               <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1149,6 +1193,21 @@ export default function Onboarding() {
             {/* Step 5: Team Size */}
             {step === 5 && (
               <motion.div key="step5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1174,6 +1233,21 @@ export default function Onboarding() {
             {/* Step 6: Company Size */}
             {step === 6 && (
               <motion.div key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1199,6 +1273,21 @@ export default function Onboarding() {
             {/* Step 7: Pain Points */}
             {step === 7 && (
               <motion.div key="step7" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1235,6 +1324,21 @@ export default function Onboarding() {
             {/* Step 8: How did you hear */}
             {step === 8 && (
               <motion.div key="step8" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1260,6 +1364,21 @@ export default function Onboarding() {
             {/* Step 9: Agent Objectives */}
             {step === 9 && (
               <motion.div key="step9" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
@@ -1315,6 +1434,21 @@ export default function Onboarding() {
             {/* Step 10: Final */}
             {step === 10 && selectedVertical && (
               <motion.div key="step10" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+                {/* Progress */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
+                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-[#6209e6]"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${(step / totalSteps) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
                 <div className="flex gap-3 mb-8">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
