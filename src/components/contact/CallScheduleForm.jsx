@@ -3,23 +3,52 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Calendar } from '@/components/ui/calendar';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { base44 } from '@/api/base44Client';
-import { Calendar as CalendarIcon, Loader2 } from 'lucide-react';
-import { format } from 'date-fns';
+import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, isAfter, isBefore } from 'date-fns';
+
+const timeSlots = [
+  '9:00am', '9:30am', '10:00am', '10:30am', '11:00am', '11:30am',
+  '12:00pm', '12:30pm', '1:00pm', '1:30pm', '2:00pm', '2:30pm',
+  '3:00pm', '3:30pm', '4:00pm', '4:30pm', '5:00pm'
+];
 
 export default function CallScheduleForm({ onSuccess }) {
   const [loading, setLoading] = useState(false);
+  const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     company: '',
-    preferred_date: null,
-    preferred_time: '',
     topic: ''
   });
+
+  const getDaysInMonth = () => {
+    const monthStart = startOfMonth(currentMonth);
+    const monthEnd = endOfMonth(currentMonth);
+    const startDate = startOfWeek(monthStart);
+    const endDate = endOfWeek(monthEnd);
+    
+    const days = [];
+    let day = startDate;
+    
+    while (isBefore(day, endDate) || isSameDay(day, endDate)) {
+      days.push(day);
+      day = addDays(day, 1);
+    }
+    
+    return days;
+  };
+
+  const isAvailableDate = (date) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return isAfter(date, today) && isSameMonth(date, currentMonth);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,7 +57,8 @@ export default function CallScheduleForm({ onSuccess }) {
     try {
       await base44.entities.CallSchedule.create({
         ...formData,
-        preferred_date: formData.preferred_date ? format(formData.preferred_date, 'yyyy-MM-dd') : ''
+        preferred_date: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : '',
+        preferred_time: selectedTime || ''
       });
       onSuccess();
     } catch (error) {
@@ -38,11 +68,136 @@ export default function CallScheduleForm({ onSuccess }) {
     }
   };
 
+  const handleContinue = () => {
+    if (selectedDate && selectedTime) {
+      setStep(2);
+    }
+  };
+
+  if (step === 1) {
+    return (
+      <div className="space-y-6">
+        <div className="mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">Select a Date & Time</h2>
+        </div>
+
+        <div className="grid lg:grid-cols-[1fr,300px] gap-8">
+          {/* Calendar */}
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-xl font-semibold text-gray-900">
+                {format(currentMonth, 'MMMM yyyy')}
+              </h3>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
+                  className="p-2 hover:bg-purple-50 rounded-lg transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5 text-[#6209e6]" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
+                  className="p-2 hover:bg-purple-50 rounded-lg transition-colors"
+                >
+                  <ChevronRight className="w-5 h-5 text-[#6209e6]" />
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-7 gap-2 mb-2">
+              {['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'].map((day) => (
+                <div key={day} className="text-center text-sm font-medium text-gray-600 py-2">
+                  {day}
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-7 gap-2">
+              {getDaysInMonth().map((day, idx) => {
+                const isAvailable = isAvailableDate(day);
+                const isSelected = selectedDate && isSameDay(day, selectedDate);
+                const isCurrentMonth = isSameMonth(day, currentMonth);
+
+                return (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => isAvailable && setSelectedDate(day)}
+                    disabled={!isAvailable}
+                    className={`
+                      aspect-square rounded-full text-lg font-medium transition-all
+                      ${!isCurrentMonth ? 'text-gray-300 cursor-default' : ''}
+                      ${isAvailable && !isSelected ? 'text-[#6209e6] bg-purple-50 hover:bg-purple-100' : ''}
+                      ${isSelected ? 'bg-[#6209e6] text-white ring-4 ring-purple-200' : ''}
+                      ${!isAvailable && isCurrentMonth ? 'text-gray-400 cursor-not-allowed' : ''}
+                    `}
+                  >
+                    {format(day, 'd')}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Time Slots */}
+          <div>
+            {selectedDate && (
+              <>
+                <div className="mb-4 text-lg font-semibold text-gray-900">
+                  {format(selectedDate, 'EEEE, MMMM d')}
+                </div>
+                <div className="space-y-2 max-h-[500px] overflow-y-auto pr-2">
+                  {timeSlots.map((time) => (
+                    <button
+                      key={time}
+                      type="button"
+                      onClick={() => setSelectedTime(time)}
+                      className={`
+                        w-full py-3 px-4 rounded-lg border-2 text-center font-medium transition-all
+                        ${selectedTime === time 
+                          ? 'border-[#6209e6] bg-purple-50 text-[#6209e6]' 
+                          : 'border-gray-200 text-gray-700 hover:border-[#6209e6] hover:bg-purple-50'
+                        }
+                      `}
+                    >
+                      {time}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+
+        <Button
+          type="button"
+          onClick={handleContinue}
+          disabled={!selectedDate || !selectedTime}
+          className="w-full bg-[#6209e6] hover:bg-[#5008c5] h-12 text-lg mt-6"
+        >
+          Continue
+        </Button>
+      </div>
+    );
+  }
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Schedule a Call</h2>
-        <p className="text-gray-600">Pick a time that works for you</p>
+      <div className="mb-6">
+        <button
+          type="button"
+          onClick={() => setStep(1)}
+          className="text-[#6209e6] hover:underline mb-4 flex items-center gap-2"
+        >
+          <ChevronLeft className="w-4 h-4" />
+          Back to calendar
+        </button>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">Your Details</h2>
+        <p className="text-gray-600">
+          Selected: {selectedDate && format(selectedDate, 'EEEE, MMMM d')} at {selectedTime}
+        </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -92,42 +247,6 @@ export default function CallScheduleForm({ onSuccess }) {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        <div>
-          <Label>Preferred Date</Label>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button
-                variant="outline"
-                className="w-full mt-2 justify-start text-left font-normal"
-              >
-                <CalendarIcon className="mr-2 h-4 w-4" />
-                {formData.preferred_date ? format(formData.preferred_date, 'PPP') : 'Pick a date'}
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-0">
-              <Calendar
-                mode="single"
-                selected={formData.preferred_date}
-                onSelect={(date) => setFormData({ ...formData, preferred_date: date })}
-                disabled={(date) => date < new Date()}
-              />
-            </PopoverContent>
-          </Popover>
-        </div>
-        <div>
-          <Label htmlFor="time">Preferred Time</Label>
-          <Input
-            id="time"
-            type="time"
-            required
-            value={formData.preferred_time}
-            onChange={(e) => setFormData({ ...formData, preferred_time: e.target.value })}
-            className="mt-2"
-          />
-        </div>
-      </div>
-
       <div>
         <Label htmlFor="topic">What would you like to discuss?</Label>
         <Textarea
@@ -144,7 +263,7 @@ export default function CallScheduleForm({ onSuccess }) {
       <Button
         type="submit"
         disabled={loading}
-        className="w-full bg-[#8B2EE5] hover:bg-[#7325C4] h-12 text-lg"
+        className="w-full bg-[#6209e6] hover:bg-[#5008c5] h-12 text-lg"
       >
         {loading ? (
           <>
