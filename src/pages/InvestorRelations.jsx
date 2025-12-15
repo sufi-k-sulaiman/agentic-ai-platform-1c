@@ -215,7 +215,7 @@ export default function InvestorRelations() {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-24 overflow-hidden bg-white">
+      <section className="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-violet-50">
         
         <div className="max-w-7xl mx-auto px-6 relative">
           <motion.div
@@ -224,13 +224,11 @@ export default function InvestorRelations() {
             className="max-w-4xl"
           >
             <div className="mb-8 flex items-center gap-4">
-              <div className="w-16 h-16 bg-[#6209e6] rounded-2xl flex items-center justify-center shadow-lg">
-                <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                  alt="1C Platform" 
-                  className="w-10 h-10"
-                />
-              </div>
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                alt="1C Platform" 
+                className="w-16 h-16"
+              />
               <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-[#6209e6] px-4 py-2 rounded-full text-sm font-semibold">
                 <Rocket className="w-4 h-4" />
                 SERIES B INVESTMENT OPPORTUNITY
@@ -328,7 +326,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Solutions - 4 Sections */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -336,13 +334,11 @@ export default function InvestorRelations() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="w-20 h-20 bg-[#6209e6] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                alt="1C Platform" 
-                className="w-12 h-12"
-              />
-            </div>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+              alt="1C Platform" 
+              className="w-20 h-20 mx-auto mb-6"
+            />
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Our solution: The 1cPlatform advantage
             </h2>
@@ -497,7 +493,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Community Demographics */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-violet-50 via-purple-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -850,7 +846,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Company Milestones Timeline */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-violet-50 via-purple-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -963,7 +959,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Market Opportunity - Section 2: Industry Breakdown */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1160,7 +1156,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Why Invest in 1C */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-violet-50 via-purple-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1229,7 +1225,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Works With Everything */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -1463,7 +1459,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Financials & Forecast - 2 Sections */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-violet-50 via-purple-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1630,7 +1626,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Growth Trajectory */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -1769,64 +1765,62 @@ export default function InvestorRelations() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-[#6209e6] to-[#7C3AED]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="w-24 h-24 bg-[#6209e6] rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                alt="1C Platform" 
-                className="w-14 h-14"
-              />
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+              alt="1C Platform" 
+              className="w-24 h-24 mx-auto mb-8"
+            />
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Series B: $100M at $2.5B valuation
             </h2>
-            <p className="text-2xl text-gray-600 mb-10 leading-relaxed">
+            <p className="text-2xl text-purple-100 mb-10 leading-relaxed">
               Join leading investors in building the category-defining Agentic AI platform. This is your opportunity to invest in the future of enterprise automation.
             </p>
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-10">
-              <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
-                <div className="text-3xl font-bold text-[#6209e6]">$100M</div>
-                <div className="text-sm text-gray-600">Target raise</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="text-3xl font-bold text-white">$100M</div>
+                <div className="text-sm text-purple-200">Target raise</div>
               </div>
-              <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
-                <div className="text-3xl font-bold text-[#6209e6]">$2.5B</div>
-                <div className="text-sm text-gray-600">Post-money valuation</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="text-3xl font-bold text-white">$2.5B</div>
+                <div className="text-sm text-purple-200">Post-money valuation</div>
               </div>
-              <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
-                <div className="text-3xl font-bold text-[#6209e6]">Q1 2025</div>
-                <div className="text-sm text-gray-600">Expected close</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="text-3xl font-bold text-white">Q1 2025</div>
+                <div className="text-sm text-purple-200">Expected close</div>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button 
                 onClick={() => setShowDeck(true)}
                 size="lg" 
-                className="bg-[#6209e6] hover:bg-[#5008c5] text-white rounded-full px-10 h-14 text-lg"
+                className="bg-white text-[#6209e6] hover:bg-gray-100 rounded-full px-10 h-14 text-lg"
               >
                 View investment deck <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <div className="mt-4 text-gray-600 text-sm">
-                Or email us at <a href="mailto:investor@1cplatform.com" className="text-[#6209e6] font-semibold hover:underline">investor@1cplatform.com</a>
+              <div className="mt-4 text-purple-200 text-sm">
+                Or email us at <a href="mailto:investor@1cplatform.com" className="text-white font-semibold hover:underline">investor@1cplatform.com</a>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-gray-200">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-white/20">
               <Button 
                 onClick={downloadPDF}
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-full px-10 h-14 text-lg"
+                className="border-2 border-white text-white hover:bg-white/10 rounded-full px-10 h-14 text-lg"
               >
                 <Download className="mr-2 w-5 h-5" />
                 Download deck (PDF)
               </Button>
               <Link to={createPageUrl('Contact')}>
-                <Button size="lg" className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-10 h-14 text-lg text-white">
+                <Button size="lg" className="bg-white text-[#6209e6] hover:bg-gray-100 rounded-full px-10 h-14 text-lg">
                   Contact us
                 </Button>
               </Link>
@@ -1875,13 +1869,11 @@ export default function InvestorRelations() {
                 {/* Cover Slide */}
                 {investmentSlides[currentSlide].id === 'cover' && (
                   <div className="text-center max-w-4xl">
-                    <div className="w-24 h-24 bg-[#6209e6] rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-xl">
-                      <img 
-                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                        alt="1C" 
-                        className="w-14 h-14"
-                      />
-                    </div>
+                    <img 
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                      alt="1C" 
+                      className="w-24 h-24 mx-auto mb-8"
+                    />
                     <h1 className="text-7xl md:text-8xl font-bold text-gray-900 mb-6">1C Platform</h1>
                     <p className="text-3xl text-gray-600 mb-12">The No-Code Agentic AI Revolution</p>
                     <div className="grid grid-cols-3 gap-6 mt-16">
@@ -1934,9 +1926,7 @@ export default function InvestorRelations() {
                         { icon: Award, title: 'Proven Success', desc: '98% customer retention rate', stat: '98% retention' }
                       ].map((item, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
-                          <div className="w-16 h-16 bg-[#6209e6] rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <item.icon className="w-8 h-8 text-white" />
-                          </div>
+                          <item.icon className="w-16 h-16 text-[#6209e6] mx-auto mb-4" />
                           <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                           <p className="text-sm text-gray-600 mb-4">{item.desc}</p>
                           <div className="text-xl font-bold text-[#6209e6]">{item.stat}</div>
@@ -1982,9 +1972,7 @@ export default function InvestorRelations() {
                         }
                       ].map((product, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
-                          <div className="w-14 h-14 bg-[#6209e6] rounded-xl flex items-center justify-center mb-4">
-                            <product.icon className="w-7 h-7 text-white" />
-                          </div>
+                          <product.icon className="w-14 h-14 text-[#6209e6] mb-4" />
                           <h3 className="text-xl font-bold text-gray-900 mb-3">{product.title}</h3>
                           <p className="text-sm text-gray-600 mb-4">{product.desc}</p>
                           <ul className="space-y-1 mb-4">
@@ -2015,7 +2003,7 @@ export default function InvestorRelations() {
                         { value: '300%', label: 'YoY Growth', icon: Rocket }
                       ].map((metric, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-lg">
-                          <metric.icon className="w-8 h-8 text-[#6209e6] mx-auto mb-3" />
+                          <metric.icon className="w-8 h-8 text-[#6209e6] mx-auto mb-3" strokeWidth={2} />
                           <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
                           <div className="text-sm text-gray-600">{metric.label}</div>
                         </div>
@@ -2554,9 +2542,7 @@ export default function InvestorRelations() {
                         { icon: Zap, title: 'Speed to Market', desc: '100x faster deployment than any competitor or custom solution' }
                       ].map((adv, idx) => (
                         <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
-                          <div className="w-12 h-12 bg-[#6209e6] rounded-xl flex items-center justify-center mb-4">
-                            <adv.icon className="w-6 h-6 text-white" />
-                          </div>
+                          <adv.icon className="w-12 h-12 text-[#6209e6] mb-4" />
                           <h3 className="text-lg font-bold text-gray-900 mb-2">{adv.title}</h3>
                           <p className="text-sm text-gray-600">{adv.desc}</p>
                         </div>
@@ -2604,15 +2590,15 @@ export default function InvestorRelations() {
                 {/* Team Slide */}
                 {investmentSlides[currentSlide].id === 'team' && (
                   <div className="w-full max-w-5xl">
-                    <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">World-Class Team</h2>
+                    <h2 className="text-5xl font-bold text-gray-900 mb-8 text-center">World-Class Team</h2>
                     <div className="grid md:grid-cols-3 gap-4 mb-8">
                       {[
                         { value: '30+ years', label: 'Combined experience' },
                         { value: '2,000+', label: 'Team members' },
                         { value: '45+', label: 'Global offices' }
                       ].map((stat, idx) => (
-                        <div key={idx} className="bg-white border border-gray-200 rounded-xl p-4 text-center shadow-sm">
-                          <div className="text-2xl font-bold text-[#6209e6] mb-1">{stat.value}</div>
+                        <div key={idx} className="bg-white border border-gray-200 rounded-xl p-4 text-center shadow-lg">
+                          <div className="text-3xl font-bold text-[#6209e6] mb-1">{stat.value}</div>
                           <div className="text-sm text-gray-600">{stat.label}</div>
                         </div>
                       ))}
@@ -2679,13 +2665,11 @@ export default function InvestorRelations() {
                 {/* Investment Ask Slide */}
                 {investmentSlides[currentSlide].id === 'ask' && (
                   <div className="w-full max-w-4xl text-center">
-                    <div className="w-24 h-24 bg-[#6209e6] rounded-3xl flex items-center justify-center mx-auto mb-8">
-                      <img 
-                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                        alt="1C" 
-                        className="w-14 h-14"
-                      />
-                    </div>
+                    <img 
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                      alt="1C" 
+                      className="w-24 h-24 mx-auto mb-8"
+                    />
                     <h2 className="text-6xl font-bold text-gray-900 mb-6">Series B Investment</h2>
                     <p className="text-2xl text-gray-600 mb-12">Join us in building the future of enterprise AI</p>
                     <div className="grid grid-cols-3 gap-6 mb-12">
