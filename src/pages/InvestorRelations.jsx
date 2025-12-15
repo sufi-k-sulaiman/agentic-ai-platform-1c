@@ -15,6 +15,7 @@ import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, Cart
 
 const investmentSlides = [
   { id: 'cover', title: '1C Platform', subtitle: 'The No-Code Agentic AI Revolution', type: 'cover' },
+  { id: 'vision', title: 'Our Vision', subtitle: 'Democratizing AI for every enterprise', type: 'vision' },
   { id: 'problem', title: 'The Enterprise AI Crisis', subtitle: '$2.5 trillion market struggling with AI adoption', type: 'problem' },
   { id: 'solution', title: 'Our Solution: The 1cPlatform Advantage', type: 'solution' },
   { id: 'product', title: 'Complete AI Product Suite', type: 'product' },
@@ -23,6 +24,11 @@ const investmentSlides = [
   { id: 'growth', title: 'User Acquisition Plan', subtitle: '2026-2036 Projections', type: 'growth' },
   { id: 'quarterly', title: 'Quarterly Profits', subtitle: '2026-2027 Trajectory', type: 'quarterly' },
   { id: 'yearly', title: 'Yearly Profit Projection', subtitle: '2026-2030', type: 'yearly' },
+  { id: 'gtm', title: 'Go-to-Market Strategy', subtitle: 'Capturing enterprise customers at scale', type: 'gtm' },
+  { id: 'dominance', title: 'Market Dominance', subtitle: 'Path to category leadership', type: 'dominance' },
+  { id: 'momentum', title: 'Creating Momentum', subtitle: 'Flywheel effect driving growth', type: 'momentum' },
+  { id: 'scale', title: 'Economy of Scale', subtitle: 'Cost advantages and margin expansion', type: 'scale' },
+  { id: 'payback', title: 'Investor Payback', subtitle: 'Clear path to returns', type: 'payback' },
   { id: 'swot', title: 'SWOT Analysis', subtitle: 'Strategic positioning', type: 'swot' },
   { id: 'triangle', title: 'Strategic Triangle', subtitle: 'Competitive advantage framework', type: 'triangle' },
   { id: 'quadrant', title: 'Magic Quadrant', subtitle: 'Market leadership position', type: 'quadrant' },
@@ -74,9 +80,11 @@ export default function InvestorRelations() {
 
   const downloadPDF = async (e) => {
     e?.stopPropagation();
-    const pdf = new jsPDF('landscape', 'mm', [297, 210]);
-    const slideWidth = 297;
-    const slideHeight = 210;
+    const pdf = new jsPDF({
+      orientation: 'landscape',
+      unit: 'px',
+      format: [1920, 1080]
+    });
     
     const slideElement = document.getElementById('slide-content');
     if (!slideElement) return;
@@ -91,20 +99,20 @@ export default function InvestorRelations() {
       
       try {
         const canvas = await html2canvas(slideElement, {
-          scale: 3,
+          width: 1920,
+          height: 1080,
+          scale: 2,
           backgroundColor: '#6209e6',
           logging: false,
           useCORS: true,
           allowTaint: true,
           foreignObjectRendering: true,
           scrollX: 0,
-          scrollY: 0,
-          windowWidth: slideElement.scrollWidth,
-          windowHeight: slideElement.scrollHeight
+          scrollY: 0
         });
         
         const imgData = canvas.toDataURL('image/png', 1.0);
-        pdf.addImage(imgData, 'PNG', 0, 0, slideWidth, slideHeight, '', 'FAST');
+        pdf.addImage(imgData, 'PNG', 0, 0, 1920, 1080, '', 'FAST');
       } catch (error) {
         console.error('Error capturing slide:', error);
       }
@@ -2336,6 +2344,369 @@ export default function InvestorRelations() {
                 transition={{ duration: 0.3 }}
                 className="w-full h-full flex items-center justify-center p-8 md:p-16 pb-16 overflow-auto"
               >
+                {/* Vision Slide */}
+                {investmentSlides[currentSlide].id === 'vision' && (
+                  <div className="text-white w-full max-w-6xl text-center">
+                    <h2 className="text-5xl font-bold mb-6">Our Vision</h2>
+                    <p className="text-2xl text-purple-200 mb-12">Democratizing AI for every enterprise worldwide</p>
+                    <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-3xl p-12 mb-8">
+                      <p className="text-3xl font-bold mb-8 leading-relaxed">
+                        "A world where every business, regardless of size or technical expertise, can harness the power of autonomous AI to transform their operations."
+                      </p>
+                      <div className="grid grid-cols-3 gap-8 mt-8">
+                        <div className="bg-white/10 rounded-xl p-6">
+                          <div className="text-5xl font-bold mb-2">100%</div>
+                          <div className="text-sm text-purple-200">Enterprises with AI</div>
+                        </div>
+                        <div className="bg-white/10 rounded-xl p-6">
+                          <div className="text-5xl font-bold mb-2">0</div>
+                          <div className="text-sm text-purple-200">Code required</div>
+                        </div>
+                        <div className="bg-white/10 rounded-xl p-6">
+                          <div className="text-5xl font-bold mb-2">5 min</div>
+                          <div className="text-sm text-purple-200">To deploy</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-6">
+                      <div className="bg-white/5 rounded-2xl p-6 text-left">
+                        <h3 className="text-xl font-bold mb-3">Short-term (2025-2027)</h3>
+                        <ul className="space-y-2 text-sm text-purple-200">
+                          <li>• Become the #1 no-code AI platform</li>
+                          <li>• Reach 10,000 enterprise customers</li>
+                          <li>• Expand to 45+ countries globally</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white/5 rounded-2xl p-6 text-left">
+                        <h3 className="text-xl font-bold mb-3">Long-term (2028-2030)</h3>
+                        <ul className="space-y-2 text-sm text-purple-200">
+                          <li>• Define the Agentic AI category</li>
+                          <li>• Power 1M+ autonomous agents</li>
+                          <li>• IPO as category leader</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Go-to-Market Strategy Slide */}
+                {investmentSlides[currentSlide].id === 'gtm' && (
+                  <div className="w-full max-w-6xl text-white">
+                    <h2 className="text-4xl font-bold mb-10 text-center">Go-to-Market Strategy</h2>
+                    <p className="text-xl text-purple-200 text-center mb-10">Multi-channel approach to rapid customer acquisition</p>
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div className="space-y-4">
+                        <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-6">
+                          <h3 className="text-2xl font-bold mb-4">Channel 1: Product-Led Growth</h3>
+                          <ul className="space-y-2 text-sm text-purple-200">
+                            <li>• Free tier with unlimited agents</li>
+                            <li>• 35% free-to-paid conversion</li>
+                            <li>• Viral sharing and referrals</li>
+                            <li>• Self-serve onboarding</li>
+                          </ul>
+                          <div className="mt-4 pt-4 border-t border-white/20">
+                            <div className="text-3xl font-bold">60%</div>
+                            <div className="text-xs text-purple-200">Customer acquisition share</div>
+                          </div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-6">
+                          <h3 className="text-2xl font-bold mb-4">Channel 2: Enterprise Sales</h3>
+                          <ul className="space-y-2 text-sm text-purple-200">
+                            <li>• Direct sales team for Fortune 500</li>
+                            <li>• $285K average deal size</li>
+                            <li>• 4.2 month sales cycle</li>
+                            <li>• White-glove implementation</li>
+                          </ul>
+                          <div className="mt-4 pt-4 border-t border-white/20">
+                            <div className="text-3xl font-bold">30%</div>
+                            <div className="text-xs text-purple-200">Customer acquisition share</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="space-y-4">
+                        <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-6">
+                          <h3 className="text-2xl font-bold mb-4">Channel 3: Partnerships</h3>
+                          <ul className="space-y-2 text-sm text-purple-200">
+                            <li>• System integrators (Accenture, Deloitte)</li>
+                            <li>• Cloud marketplaces (AWS, Azure, GCP)</li>
+                            <li>• Technology alliances</li>
+                            <li>• Co-selling agreements</li>
+                          </ul>
+                          <div className="mt-4 pt-4 border-t border-white/20">
+                            <div className="text-3xl font-bold">10%</div>
+                            <div className="text-xs text-purple-200">Customer acquisition share</div>
+                          </div>
+                        </div>
+                        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6">
+                          <h3 className="text-xl font-bold mb-4">Key Metrics</h3>
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <div className="text-3xl font-bold mb-1">$3.5K</div>
+                              <div className="text-xs text-purple-200">Blended CAC</div>
+                            </div>
+                            <div>
+                              <div className="text-3xl font-bold mb-1">6 mo</div>
+                              <div className="text-xs text-purple-200">Payback period</div>
+                            </div>
+                            <div>
+                              <div className="text-3xl font-bold mb-1">12:1</div>
+                              <div className="text-xs text-purple-200">LTV:CAC ratio</div>
+                            </div>
+                            <div>
+                              <div className="text-3xl font-bold mb-1">98%</div>
+                              <div className="text-xs text-purple-200">Retention</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Market Dominance Slide */}
+                {investmentSlides[currentSlide].id === 'dominance' && (
+                  <div className="w-full max-w-6xl text-white">
+                    <h2 className="text-4xl font-bold mb-10 text-center">Path to Market Dominance</h2>
+                    <p className="text-xl text-purple-200 text-center mb-10">Category-defining strategy for AI automation</p>
+                    <div className="grid grid-cols-3 gap-6 mb-8">
+                      {[
+                        { phase: 'Phase 1: 2025-2026', title: 'Early Adoption', share: '2%', desc: 'Establish beachhead in early-adopter companies' },
+                        { phase: 'Phase 2: 2027-2028', title: 'Growth', share: '12%', desc: 'Capture mainstream enterprise market' },
+                        { phase: 'Phase 3: 2029-2030', title: 'Dominance', share: '35%', desc: 'Become category leader and standard' }
+                      ].map((phase, idx) => (
+                        <div key={idx} className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-6">
+                          <div className="text-sm text-purple-300 mb-2">{phase.phase}</div>
+                          <div className="text-2xl font-bold mb-3">{phase.title}</div>
+                          <div className="text-6xl font-bold mb-4">{phase.share}</div>
+                          <div className="text-sm text-purple-200">{phase.desc}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                        <h3 className="text-xl font-bold mb-4">Dominance Drivers</h3>
+                        <ul className="space-y-2 text-sm text-purple-200">
+                          <li>• First-mover advantage in no-code AI</li>
+                          <li>• Network effects from 10K+ deployments</li>
+                          <li>• Brand recognition as category creator</li>
+                          <li>• Switching costs lock in customers</li>
+                          <li>• Platform ecosystem and integrations</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                        <h3 className="text-xl font-bold mb-4">Competitive Moats</h3>
+                        <ul className="space-y-2 text-sm text-purple-200">
+                          <li>• Proprietary multi-agent technology</li>
+                          <li>• Enterprise security certifications</li>
+                          <li>• 1,000+ integrations built</li>
+                          <li>• 14 vertical-specific solutions</li>
+                          <li>• Strong customer retention (98%)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Momentum Slide */}
+                {investmentSlides[currentSlide].id === 'momentum' && (
+                  <div className="w-full max-w-6xl text-white">
+                    <h2 className="text-4xl font-bold mb-10 text-center">Creating Momentum</h2>
+                    <p className="text-xl text-purple-200 text-center mb-10">The flywheel effect driving exponential growth</p>
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                      <div className="flex justify-center">
+                        <svg viewBox="0 0 400 400" className="w-full max-w-md">
+                          <circle cx="200" cy="200" r="140" fill="none" stroke="#ffffff" strokeWidth="3" strokeDasharray="8,8" opacity="0.3" />
+                          <circle cx="200" cy="200" r="60" fill="#ffffff" opacity="0.3" />
+                          <text x="200" y="195" textAnchor="middle" fill="#ffffff" fontSize="18" fontWeight="bold">Growth</text>
+                          <text x="200" y="215" textAnchor="middle" fill="#ffffff" fontSize="18" fontWeight="bold">Flywheel</text>
+                          
+                          {[
+                            { x: 200, y: 40, text: 'More Customers', num: '1' },
+                            { x: 340, y: 120, text: 'Better Product', num: '2' },
+                            { x: 340, y: 280, text: 'More Data', num: '3' },
+                            { x: 200, y: 360, text: 'Lower Costs', num: '4' },
+                            { x: 60, y: 280, text: 'More Features', num: '5' },
+                            { x: 60, y: 120, text: 'More Value', num: '6' }
+                          ].map((node) => (
+                            <g key={node.num}>
+                              <circle cx={node.x} cy={node.y} r="35" fill="#ffffff" opacity="0.9" />
+                              <text x={node.x} y={node.y - 8} textAnchor="middle" fill="#6209e6" fontSize="14" fontWeight="bold">{node.text}</text>
+                              <text x={node.x} y={node.y + 8} textAnchor="middle" fill="#6209e6" fontSize="20" fontWeight="bold">{node.num}</text>
+                            </g>
+                          ))}
+                        </svg>
+                      </div>
+                      <div className="space-y-4">
+                        <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                          <h3 className="text-2xl font-bold mb-4">How It Works</h3>
+                          <ol className="space-y-3 text-sm text-purple-200">
+                            <li className="flex gap-3"><span className="font-bold text-white">1.</span> More customers drive revenue growth</li>
+                            <li className="flex gap-3"><span className="font-bold text-white">2.</span> Revenue funds better product development</li>
+                            <li className="flex gap-3"><span className="font-bold text-white">3.</span> More deployments generate training data</li>
+                            <li className="flex gap-3"><span className="font-bold text-white">4.</span> Scale reduces per-unit costs</li>
+                            <li className="flex gap-3"><span className="font-bold text-white">5.</span> Cost savings enable new features</li>
+                            <li className="flex gap-3"><span className="font-bold text-white">6.</span> More value attracts more customers</li>
+                          </ol>
+                        </div>
+                        <div className="bg-white/5 rounded-2xl p-6">
+                          <h3 className="text-xl font-bold mb-4">Momentum Indicators</h3>
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <div className="text-3xl font-bold mb-1">280%</div>
+                              <div className="text-xs text-purple-200">YoY growth</div>
+                            </div>
+                            <div>
+                              <div className="text-3xl font-bold mb-1">2.8x</div>
+                              <div className="text-xs text-purple-200">Referrals/customer</div>
+                            </div>
+                            <div>
+                              <div className="text-3xl font-bold mb-1">98%</div>
+                              <div className="text-xs text-purple-200">Retention</div>
+                            </div>
+                            <div>
+                              <div className="text-3xl font-bold mb-1">140%</div>
+                              <div className="text-xs text-purple-200">NRR</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Economy of Scale Slide */}
+                {investmentSlides[currentSlide].id === 'scale' && (
+                  <div className="w-full max-w-6xl text-white">
+                    <h2 className="text-4xl font-bold mb-10 text-center">Economy of Scale</h2>
+                    <p className="text-xl text-purple-200 text-center mb-10">Cost advantages driving margin expansion</p>
+                    <div className="grid md:grid-cols-3 gap-6 mb-8">
+                      {[
+                        { metric: 'Infrastructure Costs', y2025: '45%', y2027: '28%', y2030: '15%', desc: 'of revenue' },
+                        { metric: 'Customer Support', y2025: '20%', y2027: '12%', y2030: '6%', desc: 'of revenue' },
+                        { metric: 'Gross Margin', y2025: '65%', y2027: '75%', y2030: '82%', desc: 'expanding' }
+                      ].map((item, idx) => (
+                        <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                          <h4 className="text-base font-bold mb-4">{item.metric}</h4>
+                          <div className="space-y-3">
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-purple-200">2025</span>
+                              <span className="text-2xl font-bold">{item.y2025}</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-purple-200">2027</span>
+                              <span className="text-2xl font-bold">{item.y2027}</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-purple-200">2030</span>
+                              <span className="text-3xl font-bold text-green-400">{item.y2030}</span>
+                            </div>
+                          </div>
+                          <div className="mt-4 pt-4 border-t border-white/20 text-xs text-purple-200">
+                            {item.desc}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                        <h3 className="text-xl font-bold mb-4">Scale Advantages</h3>
+                        <ul className="space-y-2 text-sm text-purple-200">
+                          <li>• Cloud infrastructure volume discounts</li>
+                          <li>• LLM API pricing improvements</li>
+                          <li>• Automated customer support at scale</li>
+                          <li>• Development costs amortized across customers</li>
+                          <li>• Negotiating power with vendors</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white/5 rounded-2xl p-6">
+                        <h3 className="text-xl font-bold mb-4">Margin Expansion Path</h3>
+                        <div className="space-y-3">
+                          <div className="flex justify-between">
+                            <span className="text-sm text-purple-200">2025 Gross Margin</span>
+                            <span className="font-bold">65%</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-purple-200">2027 Gross Margin</span>
+                            <span className="font-bold">75%</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-purple-200">2030 Gross Margin</span>
+                            <span className="font-bold text-green-400">82%</span>
+                          </div>
+                          <div className="pt-3 border-t border-white/20">
+                            <div className="text-3xl font-bold text-center">+17%</div>
+                            <div className="text-xs text-purple-200 text-center">Margin improvement</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Investor Payback Slide */}
+                {investmentSlides[currentSlide].id === 'payback' && (
+                  <div className="w-full max-w-6xl text-white">
+                    <h2 className="text-4xl font-bold mb-10 text-center">Investor Payback Analysis</h2>
+                    <p className="text-xl text-purple-200 text-center mb-10">Clear path to attractive returns</p>
+                    <div className="grid md:grid-cols-2 gap-8 mb-8">
+                      <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-8">
+                        <h3 className="text-2xl font-bold mb-6">Series B Investment</h3>
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-center pb-3 border-b border-white/20">
+                            <span className="text-purple-200">Investment amount</span>
+                            <span className="text-3xl font-bold">$100M</span>
+                          </div>
+                          <div className="flex justify-between items-center pb-3 border-b border-white/20">
+                            <span className="text-purple-200">Post-money valuation</span>
+                            <span className="text-3xl font-bold">$2.5B</span>
+                          </div>
+                          <div className="flex justify-between items-center pb-3 border-b border-white/20">
+                            <span className="text-purple-200">Ownership stake</span>
+                            <span className="text-3xl font-bold">4%</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-purple-200">Expected close</span>
+                            <span className="text-2xl font-bold">Q1 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-8">
+                        <h3 className="text-2xl font-bold mb-6">Projected Returns</h3>
+                        <div className="space-y-4">
+                          <div className="bg-white/5 rounded-xl p-4">
+                            <div className="text-sm text-purple-200 mb-2">2028 Exit (IPO/M&A)</div>
+                            <div className="text-4xl font-bold mb-1">$8B</div>
+                            <div className="text-sm text-green-400 font-bold">3.2x return • 320% ROI</div>
+                          </div>
+                          <div className="bg-white/5 rounded-xl p-4">
+                            <div className="text-sm text-purple-200 mb-2">2030 Exit (IPO)</div>
+                            <div className="text-4xl font-bold mb-1">$15B</div>
+                            <div className="text-sm text-green-400 font-bold">6x return • 600% ROI</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="grid md:grid-cols-4 gap-4">
+                      <div className="bg-white/5 rounded-xl p-5 text-center">
+                        <div className="text-3xl font-bold mb-1">3-5 yr</div>
+                        <div className="text-xs text-purple-200">Exit timeline</div>
+                      </div>
+                      <div className="bg-white/5 rounded-xl p-5 text-center">
+                        <div className="text-3xl font-bold mb-1">3-6x</div>
+                        <div className="text-xs text-purple-200">Expected multiple</div>
+                      </div>
+                      <div className="bg-white/5 rounded-xl p-5 text-center">
+                        <div className="text-3xl font-bold mb-1">45%</div>
+                        <div className="text-xs text-purple-200">Annual IRR</div>
+                      </div>
+                      <div className="bg-white/5 rounded-xl p-5 text-center">
+                        <div className="text-3xl font-bold mb-1">Low</div>
+                        <div className="text-xs text-purple-200">Dilution risk</div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Cover Slide */}
                 {investmentSlides[currentSlide].id === 'cover' && (
                   <div className="text-center max-w-4xl text-white">
