@@ -136,70 +136,33 @@ export default function InvestorRelations() {
     investmentSlides.forEach((slide, index) => {
       if (index > 0) pdf.addPage();
       
-      // Get gradient colors
-      const gradientMap = {
-        'from-purple-600 to-violet-700': ['#9333EA', '#6D28D9'],
-        'from-blue-600 to-cyan-700': ['#2563EB', '#0E7490'],
-        'from-red-600 to-orange-700': ['#DC2626', '#C2410C'],
-        'from-green-600 to-emerald-700': ['#16A34A', '#047857'],
-        'from-purple-600 to-pink-700': ['#9333EA', '#BE185D'],
-        'from-indigo-600 to-purple-700': ['#4F46E5', '#7E22CE'],
-        'from-yellow-600 to-orange-700': ['#CA8A04', '#C2410C'],
-        'from-teal-600 to-green-700': ['#0D9488', '#15803D'],
-        'from-rose-600 to-pink-700': ['#E11D48', '#BE185D'],
-        'from-violet-600 to-purple-700': ['#7C3AED', '#7E22CE'],
-        'from-blue-600 to-indigo-700': ['#2563EB', '#4338CA'],
-        'from-emerald-600 to-teal-700': ['#059669', '#0F766E'],
-        'from-amber-600 to-orange-700': ['#D97706', '#C2410C'],
-        'from-cyan-600 to-blue-700': ['#0891B2', '#1D4ED8'],
-        'from-violet-600 to-fuchsia-700': ['#7C3AED', '#A21CAF']
-      };
-      
-      const [color1, color2] = gradientMap[slide.bg] || ['#9333EA', '#7E22CE'];
-      
-      // Background gradient
-      pdf.setFillColor(color1);
+      // White background
+      pdf.setFillColor(255, 255, 255);
       pdf.rect(0, 0, slideWidth, slideHeight, 'F');
       
       // Slide number
-      pdf.setTextColor(255, 255, 255);
+      pdf.setTextColor(156, 163, 175);
       pdf.setFontSize(10);
-      pdf.text(`Slide ${index + 1} of ${investmentSlides.length}`, slideWidth / 2, 20, { align: 'center' });
+      pdf.text(`${index + 1} / ${investmentSlides.length}`, slideWidth - 20, 15, { align: 'right' });
       
       // Title
-      pdf.setFontSize(48);
+      pdf.setTextColor(17, 24, 39);
+      pdf.setFontSize(42);
       pdf.setFont('helvetica', 'bold');
-      pdf.text(slide.title, slideWidth / 2, 70, { align: 'center', maxWidth: slideWidth - 40 });
+      pdf.text(slide.title, slideWidth / 2, 70, { align: 'center', maxWidth: slideWidth - 60 });
       
       // Subtitle
-      pdf.setFontSize(24);
-      pdf.setFont('helvetica', 'normal');
-      pdf.text(slide.subtitle, slideWidth / 2, 95, { align: 'center', maxWidth: slideWidth - 40 });
-      
-      // Metrics
-      const metricsStartX = 40;
-      const metricWidth = (slideWidth - 80) / 3;
-      pdf.setFillColor(255, 255, 255, 0.1);
-      
-      slide.metrics.forEach((metric, idx) => {
-        const x = metricsStartX + (idx * metricWidth) + (idx * 10);
-        const y = 130;
-        
-        // Metric box with transparency
-        pdf.setDrawColor(255, 255, 255);
-        pdf.setLineWidth(0.5);
-        pdf.roundedRect(x, y, metricWidth - 10, 50, 3, 3, 'S');
-        
-        // Metric value
-        pdf.setFontSize(32);
-        pdf.setFont('helvetica', 'bold');
-        pdf.text(metric.value, x + (metricWidth - 10) / 2, y + 20, { align: 'center' });
-        
-        // Metric label
-        pdf.setFontSize(12);
+      if (slide.subtitle) {
+        pdf.setFontSize(20);
         pdf.setFont('helvetica', 'normal');
-        pdf.text(metric.label, x + (metricWidth - 10) / 2, y + 35, { align: 'center', maxWidth: metricWidth - 20 });
-      });
+        pdf.setTextColor(75, 85, 99);
+        pdf.text(slide.subtitle, slideWidth / 2, 95, { align: 'center', maxWidth: slideWidth - 60 });
+      }
+      
+      // Simple content indicator
+      pdf.setFontSize(14);
+      pdf.setTextColor(98, 9, 230);
+      pdf.text(`[${slide.type || 'slide'} content]`, slideWidth / 2, 130, { align: 'center' });
     });
     
     pdf.save('1C-Platform-Investment-Deck.pdf');
