@@ -266,8 +266,8 @@ export default function Pricing() {
               </thead>
               <tbody>
                 {[
-                  { feature: 'AI Agents', starter: '5', pro: '50', enterprise: 'Unlimited' },
-                  { feature: 'API Calls/month', starter: '10K', pro: '1M', enterprise: 'Unlimited' },
+                  { feature: 'AI Agents', starter: '1', pro: '5', enterprise: 'Unlimited' },
+                  { feature: 'API Calls/month', starter: '600', pro: '10,000', enterprise: 'Unlimited' },
                   { feature: 'Storage', starter: '1GB', pro: '100GB', enterprise: 'Unlimited' },
                   { feature: 'Support', starter: 'Community', pro: 'Priority Email', enterprise: '24/7 Phone & Chat' },
                   { feature: 'Analytics', starter: 'Basic', pro: 'Advanced', enterprise: 'Custom' },
