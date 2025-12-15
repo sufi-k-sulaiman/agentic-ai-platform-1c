@@ -838,13 +838,13 @@ export default function InvestorRelations() {
 
             {/* Milestones */}
             {[
-              { num: 1, title: 'Company Founded', date: 'Jan 2023', desc: 'Launched with vision to democratize enterprise AI' },
-              { num: 2, title: 'Product Launch', date: 'Mar 2023', desc: 'First no-code Agentic AI platform goes live' },
-              { num: 3, title: 'Series A Funding', date: 'Aug 2023', desc: 'Raised $15M led by top VCs' },
-              { num: 4, title: '1,000 Customers', date: 'Feb 2024', desc: 'Crossed 1,000 enterprise customers milestone' },
-              { num: 5, title: 'Global Expansion', date: 'Jun 2024', desc: 'Expanded to 45+ countries worldwide' },
-              { num: 6, title: 'Platform 2.0', date: 'Oct 2024', desc: 'Launched multi-agent orchestration' },
-              { num: 7, title: '10,000 Customers', date: 'Dec 2024', desc: 'Reached 10,000 organizations using platform' }
+              { num: 1, title: 'Company Founded', date: 'Jan 2024', desc: 'Launched with vision to democratize enterprise AI' },
+              { num: 2, title: 'Product Launch', date: 'Mar 2025', desc: 'First no-code Agentic AI platform goes live' },
+              { num: 3, title: 'Series A Funding', date: 'Aug 2023', desc: 'Raised $2M for development' },
+              { num: 4, title: '16 Beta Customers', date: 'Nov 2025', desc: 'Crossed 42 SMB customers milestone' },
+              { num: 5, title: 'Global Expansion', date: 'Dec 2026', desc: 'Expand to 45+ countries worldwide' },
+              { num: 6, title: 'Platform 2.0', date: 'Mar 2027', desc: 'Launch multi-agent orchestration' },
+              { num: 7, title: 'Reach 10,000 Customers', date: 'Dec 2027', desc: 'Plan to 10,000 organizations using platform' }
             ].map((milestone, index) => (
               <motion.div
                 key={milestone.num}
@@ -2516,11 +2516,11 @@ export default function InvestorRelations() {
                           </div>
                         </div>
                         {[
-                          { num: 1, title: 'Founded', date: 'Jan 2023', top: true },
-                          { num: 2, title: 'Product Launch', date: 'Mar 2023', top: false },
-                          { num: 3, title: '1K Customers', date: 'Feb 2024', top: true },
-                          { num: 4, title: 'Global Expansion', date: 'Jun 2024', top: false },
-                          { num: 5, title: '10K Customers', date: 'Dec 2024', top: true }
+                          { num: 1, title: 'Founded', date: 'Jan 2024', top: true },
+                          { num: 2, title: 'Product Launch', date: 'Mar 2025', top: false },
+                          { num: 3, title: '16 Beta Customers', date: 'Nov 2025', top: true },
+                          { num: 4, title: 'Global Expansion', date: 'Dec 2026', top: false },
+                          { num: 5, title: '10K Customers', date: 'Dec 2027', top: true }
                         ].map((milestone) => (
                           <div key={milestone.num} className="flex flex-col items-center z-10">
                             <div className={milestone.top ? 'mb-2' : 'mt-2 order-2'}>
