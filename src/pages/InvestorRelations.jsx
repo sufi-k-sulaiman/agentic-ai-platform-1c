@@ -363,8 +363,7 @@ export default function InvestorRelations() {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-violet-50">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4QjJFRTUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItMnptMC0ydjJoLTJ2LTJoMnptLTItMmgydi0yaC0ydjJ6bTItMmgydi0yaC0ydjJ6bS0yLTJoMnYtMmgtMnYyem0yLTJoMnYtMmgtMnYyem0tMi0yaC0ydjJoMnYtMnptMCAyaC0ydjJoMnYtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+      <section className="relative pt-32 pb-24 overflow-hidden bg-white">
         
         <div className="max-w-7xl mx-auto px-6 relative">
           <motion.div
@@ -373,14 +372,14 @@ export default function InvestorRelations() {
             className="max-w-4xl"
           >
             <div className="mb-8 flex items-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-[#6209e6] rounded-2xl flex items-center justify-center shadow-lg">
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                   alt="1C Platform" 
                   className="w-10 h-10"
                 />
               </div>
-              <div className="inline-flex items-center gap-2 bg-[#8B2EE5]/10 text-[#8B2EE5] px-4 py-2 rounded-full text-sm font-semibold">
+              <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-[#6209e6] px-4 py-2 rounded-full text-sm font-semibold">
                 <Rocket className="w-4 h-4" />
                 SERIES B INVESTMENT OPPORTUNITY
               </div>
@@ -388,7 +387,7 @@ export default function InvestorRelations() {
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.05]">
               The AI revolution
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B2EE5] to-[#A855F7]">
+              <span className="text-[#6209e6]">
                 starts here
               </span>
             </h1>
@@ -399,12 +398,12 @@ export default function InvestorRelations() {
               <Button 
                 onClick={() => setShowDeck(true)}
                 size="lg" 
-                className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-14 text-lg"
+                className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-10 h-14 text-lg"
               >
                 View investment deck <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <div className="mt-4 text-gray-600 text-sm">
-                email us at <a href="mailto:investor@1cplatform.com" className="text-[#8B2EE5] font-semibold hover:underline">investor@1cplatform.com</a>
+                email us at <a href="mailto:investor@1cplatform.com" className="text-[#6209e6] font-semibold hover:underline">investor@1cplatform.com</a>
               </div>
             </div>
           </motion.div>
@@ -462,7 +461,7 @@ export default function InvestorRelations() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-red-50 to-white p-8 rounded-2xl border border-red-100"
+                className="bg-white p-8 rounded-2xl border border-gray-200"
               >
                 <div className="text-5xl font-bold text-red-600 mb-4">{problem.stat}</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{problem.title}</h3>
@@ -477,7 +476,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Solutions - 4 Sections */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -485,7 +484,7 @@ export default function InvestorRelations() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+            <div className="w-20 h-20 bg-[#6209e6] rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                 alt="1C Platform" 
@@ -499,16 +498,16 @@ export default function InvestorRelations() {
               We eliminate every barrier to enterprise AI adoption with our patented no-code platform
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <div className="bg-green-50 border border-green-200 rounded-xl px-6 py-3">
-                <div className="text-3xl font-bold text-green-600">5 min</div>
+              <div className="bg-white border border-gray-200 rounded-xl px-6 py-3">
+                <div className="text-3xl font-bold text-[#6209e6]">5 min</div>
                 <div className="text-sm text-gray-700">Time to deploy</div>
               </div>
-              <div className="bg-blue-50 border border-blue-200 rounded-xl px-6 py-3">
-                <div className="text-3xl font-bold text-blue-600">100x</div>
+              <div className="bg-white border border-gray-200 rounded-xl px-6 py-3">
+                <div className="text-3xl font-bold text-[#6209e6]">100x</div>
                 <div className="text-sm text-gray-700">Faster than custom</div>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-xl px-6 py-3">
-                <div className="text-3xl font-bold text-purple-600">$50K</div>
+              <div className="bg-white border border-gray-200 rounded-xl px-6 py-3">
+                <div className="text-3xl font-bold text-[#6209e6]">$50K</div>
                 <div className="text-sm text-gray-700">vs $2.5M custom</div>
               </div>
             </div>
@@ -566,8 +565,8 @@ export default function InvestorRelations() {
                     </div>
                   ))}
                 </div>
-                <div className="pt-4 border-t border-purple-100">
-                  <p className="text-lg font-bold text-[#8B2EE5]">{solution.metric}</p>
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="text-lg font-bold text-[#6209e6]">{solution.metric}</p>
                 </div>
               </motion.div>
             ))}
@@ -636,7 +635,7 @@ export default function InvestorRelations() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 User growth accelerated 31% after launching Agentic AI platform in 2022. Retention improved from 82% to 98% as AI automation drove measurable ROI for customers.
               </p>
-              <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+              <div className="bg-white p-6 rounded-xl border border-gray-200">
                 <div className="text-3xl font-bold text-[#6209e6] mb-2">250%</div>
                 <div className="text-sm text-gray-600">Average customer base growth annually</div>
               </div>
@@ -646,7 +645,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Community Demographics */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -692,7 +691,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Quarterly Profits Chart */}
-      <section className="py-24 bg-gray-900 text-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -700,12 +699,12 @@ export default function InvestorRelations() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Quarterly Profits
             </h2>
           </motion.div>
 
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700">
+          <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
             <ResponsiveContainer width="100%" height={400}>
               <BarChart data={[
                 { quarter: 'Q1 2023', profit: 3, color: '#0891B2' },
@@ -718,11 +717,11 @@ export default function InvestorRelations() {
                 { quarter: 'Q4 2024', profit: 8, color: '#6209e6' }
               ]}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-                <XAxis dataKey="quarter" stroke="#9CA3AF" />
-                <YAxis stroke="#9CA3AF" tickFormatter={(value) => `$${value}m`} />
+                <XAxis dataKey="quarter" stroke="#6B7280" />
+                <YAxis stroke="#6B7280" tickFormatter={(value) => `$${value}m`} />
                 <Tooltip 
-                  contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #374151', borderRadius: '8px' }}
-                  labelStyle={{ color: '#F3F4F6' }}
+                  contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '8px' }}
+                  labelStyle={{ color: '#1F2937' }}
                   formatter={(value) => [`$${value}m`, 'Profit']}
                 />
                 <Bar dataKey="profit" radius={[8, 8, 0, 0]}>
@@ -737,12 +736,12 @@ export default function InvestorRelations() {
             </ResponsiveContainer>
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400">+46%</div>
-                <div className="text-sm text-gray-400">Early phase growth</div>
+                <div className="text-4xl font-bold text-[#0891B2]">+46%</div>
+                <div className="text-sm text-gray-600">Early phase growth</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400">+124%</div>
-                <div className="text-sm text-gray-400">Post-AI launch acceleration</div>
+                <div className="text-4xl font-bold text-[#6209e6]">+124%</div>
+                <div className="text-sm text-gray-600">Post-AI launch acceleration</div>
               </div>
             </div>
           </div>
@@ -750,7 +749,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Yearly Profit Trajectory */}
-      <section className="py-24 bg-gray-900 text-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -758,13 +757,13 @@ export default function InvestorRelations() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Yearly Profit
             </h2>
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700">
+            <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
               <ResponsiveContainer width="100%" height={400}>
                 <LineChart data={[
                   { year: '2018', profit: 20 },
@@ -776,11 +775,11 @@ export default function InvestorRelations() {
                   { year: '2024', profit: 140 }
                 ]}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-                  <XAxis dataKey="year" stroke="#9CA3AF" />
-                  <YAxis stroke="#9CA3AF" tickFormatter={(value) => `${value}k`} />
+                  <XAxis dataKey="year" stroke="#6B7280" />
+                  <YAxis stroke="#6B7280" tickFormatter={(value) => `${value}k`} />
                   <Tooltip 
-                    contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #374151', borderRadius: '8px' }}
-                    labelStyle={{ color: '#F3F4F6' }}
+                    contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '8px' }}
+                    labelStyle={{ color: '#1F2937' }}
                     formatter={(value) => [`$${value}k`, 'Profit']}
                   />
                   <Line 
@@ -796,12 +795,12 @@ export default function InvestorRelations() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <div className="bg-gradient-to-br from-cyan-400 to-cyan-500 text-gray-900 p-8 rounded-2xl mb-6">
-                <div className="text-6xl font-bold mb-2">28%</div>
+              <div className="bg-white border-2 border-[#6209e6] text-gray-900 p-8 rounded-2xl mb-6">
+                <div className="text-6xl font-bold mb-2 text-[#6209e6]">28%</div>
                 <div className="text-xl font-semibold">KEY METRIC</div>
                 <div className="text-sm mt-2">Average annual profit growth rate</div>
               </div>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 Profit trajectory shows strong inflection point post-2021 with AI product launch driving exponential growth.
               </p>
             </div>
@@ -879,7 +878,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Expansion Opportunity - Sector Analysis */}
-      <section className="py-24 bg-gray-900 text-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -887,10 +886,10 @@ export default function InvestorRelations() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Expansion Opportunity
             </h2>
-            <p className="text-2xl text-gray-400">Market share by sector with significant growth potential</p>
+            <p className="text-2xl text-gray-600">Market share by sector with significant growth potential</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-12">
@@ -907,7 +906,7 @@ export default function InvestorRelations() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10"
               >
-                <h3 className="text-xl font-bold mb-6 text-center">{sector.name}</h3>
+                <h3 className="text-xl font-bold mb-6 text-center text-gray-900">{sector.name}</h3>
                 <ResponsiveContainer width="100%" height={250}>
                   <PieChart>
                     <Pie
@@ -924,7 +923,7 @@ export default function InvestorRelations() {
                       ))}
                     </Pie>
                     <Tooltip 
-                      contentStyle={{ backgroundColor: '#1F2937', border: 'none', borderRadius: '8px' }}
+                      contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '8px' }}
                       formatter={(value) => `${value}%`}
                     />
                   </PieChart>
@@ -934,9 +933,9 @@ export default function InvestorRelations() {
                     <div key={idx} className="flex items-center justify-between text-sm">
                       <div className="flex items-center gap-2">
                         <div className="w-3 h-3 rounded-full" style={{ backgroundColor: slice.color }}></div>
-                        <span className="text-gray-300">{slice.name}</span>
+                        <span className="text-gray-700">{slice.name}</span>
                       </div>
-                      <span className="font-bold">{slice.value}%</span>
+                      <span className="font-bold text-gray-900">{slice.value}%</span>
                     </div>
                   ))}
                 </div>
@@ -999,7 +998,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Company Milestones Timeline */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1112,7 +1111,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Market Opportunity - Section 2: Industry Breakdown */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1151,7 +1150,7 @@ export default function InvestorRelations() {
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{market.industry}</h3>
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm text-gray-600">Market size</span>
-                  <span className="text-xl font-bold text-[#8B2EE5]">{market.tam}</span>
+                  <span className="text-xl font-bold text-[#6209e6]">{market.tam}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600">AI penetration</span>
@@ -1223,7 +1222,7 @@ export default function InvestorRelations() {
                       <div key={price} className="text-sm text-gray-700">{price}</div>
                     ))}
                   </div>
-                  <div className="pt-4 border-t border-purple-100">
+                  <div className="pt-4 border-t border-gray-200">
                     <p className="text-sm font-bold text-green-600">{stream.growth}</p>
                   </div>
                 </motion.div>
@@ -1309,7 +1308,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Why Invest in 1C */}
-      <section className="py-24 bg-gray-900 text-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1317,10 +1316,10 @@ export default function InvestorRelations() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Why invest in 1cPlatform?
             </h2>
-            <p className="text-2xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
               We're not just building technology—we're reshaping industries
             </p>
           </motion.div>
@@ -1378,7 +1377,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Works With Everything */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -1388,7 +1387,7 @@ export default function InvestorRelations() {
             >
               <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
                 Works with{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B2EE5] to-[#A855F7]">
+                <span className="text-[#6209e6]">
                   everything you use
                 </span>
               </h2>
@@ -1414,7 +1413,7 @@ export default function InvestorRelations() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-4 bg-green-50 border border-green-200 rounded-xl p-4"
                   >
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 bg-[#6209e6] rounded-full flex items-center justify-center flex-shrink-0">
                       <CheckCircle2 className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-lg font-medium text-gray-900">{integration}</span>
@@ -1429,7 +1428,7 @@ export default function InvestorRelations() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative bg-gradient-to-br from-purple-100 to-violet-100 rounded-3xl p-12 min-h-[500px] flex items-center justify-center">
+              <div className="relative bg-white border border-gray-200 rounded-3xl p-12 min-h-[500px] flex items-center justify-center shadow-lg">
                 {/* Floating integration boxes */}
                 <motion.div
                   animate={{ y: [0, -20, 0] }}
@@ -1557,7 +1556,7 @@ export default function InvestorRelations() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] text-white">
+                <tr className="bg-[#6209e6] text-white">
                   <th className="p-4 text-left rounded-tl-xl">Feature</th>
                   <th className="p-4 text-center">1cPlatform</th>
                   <th className="p-4 text-center">Custom Development</th>
@@ -1576,9 +1575,9 @@ export default function InvestorRelations() {
                   { feature: 'AI Model Quality', us: 'Best-in-class', custom: 'Varies', legacy: 'None', startups: 'Good' },
                   { feature: 'Support & Training', us: '24/7 + Dedicated', custom: 'Limited', legacy: 'Minimal', startups: 'Email only' }
                 ].map((row, index) => (
-                  <tr key={row.feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                  <tr key={row.feature} className="bg-white border-b border-gray-200">
                     <td className="p-4 font-semibold text-gray-900">{row.feature}</td>
-                    <td className="p-4 text-center font-bold text-[#8B2EE5]">{row.us}</td>
+                    <td className="p-4 text-center font-bold text-[#6209e6]">{row.us}</td>
                     <td className="p-4 text-center text-gray-600">{row.custom}</td>
                     <td className="p-4 text-center text-gray-600">{row.legacy}</td>
                     <td className="p-4 text-center text-gray-600">{row.startups}</td>
@@ -1612,7 +1611,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Financials & Forecast - 2 Sections */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 to-black text-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1620,10 +1619,10 @@ export default function InvestorRelations() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Financial performance & projections
             </h2>
-            <p className="text-2xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
               Exceptional growth trajectory with clear path to profitability
             </p>
           </motion.div>
@@ -1648,20 +1647,20 @@ export default function InvestorRelations() {
                   <div className="text-2xl font-bold text-[#A855F7] mb-4">{year.year}</div>
                   <div className="space-y-2">
                     <div>
-                      <div className="text-sm text-gray-400">Revenue</div>
-                      <div className="text-xl font-bold">{year.revenue}</div>
+                      <div className="text-sm text-gray-500">Revenue</div>
+                      <div className="text-xl font-bold text-gray-900">{year.revenue}</div>
                     </div>
                     <div>
-                      <div className="text-sm text-gray-400">Growth</div>
-                      <div className="text-lg font-semibold text-green-400">{year.growth}</div>
+                      <div className="text-sm text-gray-500">Growth</div>
+                      <div className="text-lg font-semibold text-green-600">{year.growth}</div>
                     </div>
                     <div>
-                      <div className="text-sm text-gray-400">Customers</div>
-                      <div className="text-lg">{year.customers}</div>
+                      <div className="text-sm text-gray-500">Customers</div>
+                      <div className="text-lg text-gray-900">{year.customers}</div>
                     </div>
                     <div>
-                      <div className="text-sm text-gray-400">ARR</div>
-                      <div className="text-lg font-semibold">{year.arr}</div>
+                      <div className="text-sm text-gray-500">ARR</div>
+                      <div className="text-lg font-semibold text-gray-900">{year.arr}</div>
                     </div>
                   </div>
                 </motion.div>
@@ -1680,7 +1679,7 @@ export default function InvestorRelations() {
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20"
               >
-                <h4 className="text-2xl font-bold mb-6">Revenue & Profitability</h4>
+                <h4 className="text-2xl font-bold mb-6 text-gray-900">Revenue & Profitability</h4>
                 <div className="space-y-4">
                   {[
                     { year: '2025', revenue: '$48M', margin: '-15%', status: 'Hypergrowth', focus: 'Scale sales & product' },
@@ -1690,18 +1689,18 @@ export default function InvestorRelations() {
                     { year: '2029', revenue: '$850M', margin: '+22%', status: 'Category king', focus: 'Platform ecosystem' },
                     { year: '2030', revenue: '$1.2B', margin: '+28%', status: 'IPO ready', focus: 'Sustained growth' }
                   ].map((projection) => (
-                    <div key={projection.year} className="flex items-center gap-4 pb-4 border-b border-white/10 last:border-0">
+                    <div key={projection.year} className="flex items-center gap-4 pb-4 border-b border-gray-200 last:border-0">
                       <div className="w-16 flex-shrink-0">
-                        <div className="text-lg font-bold text-[#A855F7]">{projection.year}</div>
+                        <div className="text-lg font-bold text-[#6209e6]">{projection.year}</div>
                       </div>
                       <div className="flex-1">
                         <div className="flex justify-between items-center mb-1">
-                          <span className="font-semibold">{projection.revenue}</span>
-                          <span className={`text-sm font-semibold ${projection.margin.startsWith('-') ? 'text-yellow-400' : 'text-green-400'}`}>
+                          <span className="font-semibold text-gray-900">{projection.revenue}</span>
+                          <span className={`text-sm font-semibold ${projection.margin.startsWith('-') ? 'text-yellow-600' : 'text-green-600'}`}>
                             {projection.margin} margin
                           </span>
                         </div>
-                        <div className="text-sm text-gray-400">{projection.status} • {projection.focus}</div>
+                        <div className="text-sm text-gray-600">{projection.status} • {projection.focus}</div>
                       </div>
                     </div>
                   ))}
@@ -1715,7 +1714,7 @@ export default function InvestorRelations() {
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20"
               >
-                <h4 className="text-2xl font-bold mb-6">Key Metrics Evolution</h4>
+                <h4 className="text-2xl font-bold mb-6 text-gray-900">Key Metrics Evolution</h4>
                 <div className="space-y-6">
                   {[
                     { metric: 'Enterprise Customers', y2025: '500', y2027: '5,000', y2030: '25,000' },
@@ -1724,20 +1723,20 @@ export default function InvestorRelations() {
                     { metric: 'Net Revenue Retention', y2025: '140%', y2027: '150%', y2030: '155%' },
                     { metric: 'Gross Margin', y2025: '78%', y2027: '82%', y2030: '85%' }
                   ].map((item) => (
-                    <div key={item.metric} className="pb-4 border-b border-white/10 last:border-0">
-                      <div className="text-sm text-gray-400 mb-2">{item.metric}</div>
+                    <div key={item.metric} className="pb-4 border-b border-gray-200 last:border-0">
+                      <div className="text-sm text-gray-600 mb-2">{item.metric}</div>
                       <div className="grid grid-cols-3 gap-4">
                         <div>
                           <div className="text-xs text-gray-500">2025</div>
-                          <div className="text-lg font-bold text-purple-300">{item.y2025}</div>
+                          <div className="text-lg font-bold text-[#6209e6]">{item.y2025}</div>
                         </div>
                         <div>
                           <div className="text-xs text-gray-500">2027</div>
-                          <div className="text-lg font-bold text-purple-200">{item.y2027}</div>
+                          <div className="text-lg font-bold text-[#6209e6]">{item.y2027}</div>
                         </div>
                         <div>
                           <div className="text-xs text-gray-500">2030</div>
-                          <div className="text-lg font-bold">{item.y2030}</div>
+                          <div className="text-lg font-bold text-gray-900">{item.y2030}</div>
                         </div>
                       </div>
                     </div>
@@ -1753,7 +1752,7 @@ export default function InvestorRelations() {
               viewport={{ once: true }}
               className="mt-8 bg-gradient-to-r from-purple-900/50 to-indigo-900/50 p-8 rounded-2xl border border-purple-500/30"
             >
-              <h4 className="text-2xl font-bold mb-6">Strategic Milestones</h4>
+              <h4 className="text-2xl font-bold mb-6 text-gray-900">Strategic Milestones</h4>
               <div className="grid md:grid-cols-3 gap-6">
                 {[
                   { phase: '2025-2026: Foundation', goals: ['Series B funding ($100M)', 'Expand to 85+ countries', 'Launch enterprise marketplace', '5,000 enterprise customers'] },
@@ -1761,12 +1760,12 @@ export default function InvestorRelations() {
                   { phase: '2029-2030: IPO Prep', goals: ['$1B+ revenue run rate', 'Category leadership', 'Public market readiness', 'Sustainable 30%+ growth'] }
                 ].map((milestone, index) => (
                   <div key={milestone.phase}>
-                    <h5 className="font-bold text-[#A855F7] mb-3">{milestone.phase}</h5>
+                    <h5 className="font-bold text-[#6209e6] mb-3">{milestone.phase}</h5>
                     <ul className="space-y-2">
                       {milestone.goals.map((goal) => (
                         <li key={goal} className="flex items-start gap-2 text-sm">
-                          <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-300">{goal}</span>
+                          <CheckCircle2 className="w-4 h-4 text-[#6209e6] flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-700">{goal}</span>
                         </li>
                       ))}
                     </ul>
@@ -1779,7 +1778,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* Growth Trajectory */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -1809,7 +1808,7 @@ export default function InvestorRelations() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <CheckCircle2 className="w-6 h-6 text-[#8B2EE5] flex-shrink-0" />
+                    <CheckCircle2 className="w-6 h-6 text-[#6209e6] flex-shrink-0" />
                     <span className="text-lg text-gray-700">{point}</span>
                   </motion.div>
                 ))}
@@ -1832,10 +1831,10 @@ export default function InvestorRelations() {
                 ].map((milestone, index) => (
                   <div key={milestone.year} className="flex gap-4">
                     <div className="w-20 flex-shrink-0">
-                      <div className="text-2xl font-bold text-[#8B2EE5]">{milestone.year}</div>
+                      <div className="text-2xl font-bold text-[#6209e6]">{milestone.year}</div>
                     </div>
                     <div className="flex-1 pt-1">
-                      <div className="h-px bg-gradient-to-r from-[#8B2EE5] to-transparent mb-2"></div>
+                      <div className="h-px bg-[#6209e6] mb-2"></div>
                       <p className="text-gray-700">{milestone.event}</p>
                     </div>
                   </div>
@@ -1862,17 +1861,17 @@ export default function InvestorRelations() {
               Our founders and leadership team bring 30+ years of combined experience from Google, Microsoft, Amazon, and leading AI research labs. We've built and scaled systems processing billions of transactions daily.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-purple-50 border border-purple-200 rounded-xl px-6 py-3">
+              <div className="bg-white border border-gray-200 rounded-xl px-6 py-3 shadow-sm">
                 <div className="text-sm text-gray-600">Combined experience</div>
-                <div className="text-2xl font-bold text-purple-600">30+ years</div>
+                <div className="text-2xl font-bold text-[#6209e6]">30+ years</div>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-xl px-6 py-3">
+              <div className="bg-white border border-gray-200 rounded-xl px-6 py-3 shadow-sm">
                 <div className="text-sm text-gray-600">Team size</div>
-                <div className="text-2xl font-bold text-purple-600">2000+ people</div>
+                <div className="text-2xl font-bold text-[#6209e6]">2000+ people</div>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-xl px-6 py-3">
+              <div className="bg-white border border-gray-200 rounded-xl px-6 py-3 shadow-sm">
                 <div className="text-sm text-gray-600">Global offices</div>
-                <div className="text-2xl font-bold text-purple-600">45+ locations</div>
+                <div className="text-2xl font-bold text-[#6209e6]">45+ locations</div>
               </div>
             </div>
           </motion.div>
@@ -1918,64 +1917,64 @@ export default function InvestorRelations() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-[#8B2EE5] to-[#6B21A8] text-white">
+      <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="w-24 h-24 bg-white rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <div className="w-24 h-24 bg-[#6209e6] rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl">
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                 alt="1C Platform" 
                 className="w-14 h-14"
               />
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Series B: $100M at $2.5B valuation
             </h2>
-            <p className="text-2xl text-purple-100 mb-10 leading-relaxed">
+            <p className="text-2xl text-gray-600 mb-10 leading-relaxed">
               Join leading investors in building the category-defining Agentic AI platform. This is your opportunity to invest in the future of enterprise automation.
             </p>
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-10">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold">$100M</div>
-                <div className="text-sm text-purple-200">Target raise</div>
+              <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
+                <div className="text-3xl font-bold text-[#6209e6]">$100M</div>
+                <div className="text-sm text-gray-600">Target raise</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold">$2.5B</div>
-                <div className="text-sm text-purple-200">Post-money valuation</div>
+              <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
+                <div className="text-3xl font-bold text-[#6209e6]">$2.5B</div>
+                <div className="text-sm text-gray-600">Post-money valuation</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold">Q1 2025</div>
-                <div className="text-sm text-purple-200">Expected close</div>
+              <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-lg">
+                <div className="text-3xl font-bold text-[#6209e6]">Q1 2025</div>
+                <div className="text-sm text-gray-600">Expected close</div>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button 
                 onClick={() => setShowDeck(true)}
                 size="lg" 
-                className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-10 h-14 text-lg"
+                className="bg-[#6209e6] hover:bg-[#5008c5] text-white rounded-full px-10 h-14 text-lg"
               >
                 View investment deck <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <div className="mt-4 text-purple-200 text-sm">
-                Or email us at <a href="mailto:investor@1cplatform.com" className="text-white font-semibold hover:underline">investor@1cplatform.com</a>
+              <div className="mt-4 text-gray-600 text-sm">
+                Or email us at <a href="mailto:investor@1cplatform.com" className="text-[#6209e6] font-semibold hover:underline">investor@1cplatform.com</a>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-white/20">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-gray-200">
               <Button 
                 onClick={downloadPDF}
                 size="lg" 
                 variant="outline" 
-                className="bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-full px-10 h-14 text-lg"
+                className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-full px-10 h-14 text-lg"
               >
                 <Download className="mr-2 w-5 h-5" />
                 Download deck (PDF)
               </Button>
               <Link to={createPageUrl('Contact')}>
-                <Button size="lg" className="bg-[#8B2EE5] hover:bg-[#7325C4] border-2 border-white rounded-full px-10 h-14 text-lg text-white">
+                <Button size="lg" className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-10 h-14 text-lg text-white">
                   Contact us
                 </Button>
               </Link>
