@@ -593,13 +593,12 @@ export default function InvestorRelations() {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
               <ResponsiveContainer width="100%" height={400}>
-                <LineChart data={[
-                  { year: '2026', revenue: 25, opex: 17, profit: 8 },
-                  { year: '2027', revenue: 90, opex: 55, profit: 35 },
-                  { year: '2028', revenue: 280, opex: 155, profit: 125 },
-                  { year: '2029', revenue: 650, opex: 330, profit: 320 },
-                  { year: '2030', revenue: 1400, opex: 650, profit: 750 }
-                ]}>
+                <LineChart data={Object.keys(yearlyData).map(year => ({
+                  year,
+                  revenue: yearlyData[year].revenue,
+                  opex: yearlyData[year].opex,
+                  profit: yearlyData[year].profit
+                }))}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
                   <XAxis dataKey="year" stroke="#6B7280" />
                   <YAxis stroke="#6B7280" tickFormatter={(value) => `$${value}m`} />
