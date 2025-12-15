@@ -1550,22 +1550,22 @@ export default function InvestorRelations() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mt-8 bg-gradient-to-r from-purple-900/50 to-indigo-900/50 p-8 rounded-2xl border border-purple-500/30"
+              className="mt-12 bg-gradient-to-br from-[#9333EA] to-[#7C3AED] p-12 md:p-16 rounded-3xl border-2 border-purple-400"
             >
-              <h4 className="text-2xl font-bold mb-6 text-gray-900">Strategic Milestones</h4>
-              <div className="grid md:grid-cols-3 gap-6">
+              <h4 className="text-4xl md:text-5xl font-bold mb-12 text-white text-center">Strategic Milestones</h4>
+              <div className="grid md:grid-cols-3 gap-8">
                 {[
                   { phase: '2025-2026: Foundation', goals: ['Series B funding ($100M)', 'Expand to 85+ countries', 'Launch enterprise marketplace', '5,000 enterprise customers'] },
                   { phase: '2027-2028: Dominance', goals: ['Series C ($200M)', 'Achieve profitability', 'Strategic acquisitions', 'Platform ecosystem launch'] },
                   { phase: '2029-2030: IPO Prep', goals: ['$1B+ revenue run rate', 'Category leadership', 'Public market readiness', 'Sustainable 30%+ growth'] }
                 ].map((milestone, index) => (
-                  <div key={milestone.phase}>
-                    <h5 className="font-bold text-[#6209e6] mb-3">{milestone.phase}</h5>
-                    <ul className="space-y-2">
+                  <div key={milestone.phase} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <h5 className="font-bold text-white text-xl mb-4">{milestone.phase}</h5>
+                    <ul className="space-y-3">
                       {milestone.goals.map((goal) => (
-                        <li key={goal} className="flex items-start gap-2 text-sm">
-                          <CheckCircle2 className="w-4 h-4 text-[#6209e6] flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{goal}</span>
+                        <li key={goal} className="flex items-start gap-3 text-base">
+                          <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                          <span className="text-purple-100">{goal}</span>
                         </li>
                       ))}
                     </ul>
