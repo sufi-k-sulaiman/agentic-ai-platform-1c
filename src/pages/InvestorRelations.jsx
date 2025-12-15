@@ -2322,12 +2322,23 @@ export default function InvestorRelations() {
               <X className="w-6 h-6" />
             </button>
 
+            {/* Fullscreen Toggle */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsFullscreen(!isFullscreen);
+              }}
+              className="absolute top-4 right-20 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all"
+            >
+              <Maximize2 className="w-6 h-6" />
+            </button>
+
             {/* Download PDF Button */}
             {isFullscreen && (
               <button
                 onClick={downloadPDF}
                 disabled={isGeneratingPDF}
-                className="absolute top-4 right-20 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="absolute top-4 right-36 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isGeneratingPDF ? (
                   <Loader2 className="w-6 h-6 animate-spin" />
@@ -2336,17 +2347,6 @@ export default function InvestorRelations() {
                 )}
               </button>
             )}
-
-            {/* Fullscreen Toggle */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsFullscreen(!isFullscreen);
-              }}
-              className="absolute top-4 right-36 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all"
-            >
-              <Maximize2 className="w-6 h-6" />
-            </button>
 
             {/* Slide Container */}
             <div 
