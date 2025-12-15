@@ -572,11 +572,11 @@ export default function InvestorRelations() {
             <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
               <ResponsiveContainer width="100%" height={400}>
                 <LineChart data={[
-                  { year: '2026', profit: 8 },
-                  { year: '2027', profit: 35 },
-                  { year: '2028', profit: 125 },
-                  { year: '2029', profit: 320 },
-                  { year: '2030', profit: 750 }
+                  { year: '2026', revenue: 25, opex: 17, profit: 8 },
+                  { year: '2027', revenue: 90, opex: 55, profit: 35 },
+                  { year: '2028', revenue: 280, opex: 155, profit: 125 },
+                  { year: '2029', revenue: 650, opex: 330, profit: 320 },
+                  { year: '2030', revenue: 1400, opex: 650, profit: 750 }
                 ]}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
                   <XAxis dataKey="year" stroke="#6B7280" />
@@ -584,12 +584,32 @@ export default function InvestorRelations() {
                   <Tooltip 
                     contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '8px' }}
                     labelStyle={{ color: '#1F2937' }}
-                    formatter={(value) => [`$${value}m`, 'Profit']}
+                    formatter={(value) => [`$${value}m`]}
+                  />
+                  <Legend />
+                  <Line 
+                    type="monotone" 
+                    dataKey="revenue" 
+                    stroke="#10B981"
+                    name="Revenue"
+                    strokeWidth={3}
+                    dot={{ fill: '#10B981', r: 6 }}
+                    activeDot={{ r: 8 }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="opex" 
+                    stroke="#F59E0B"
+                    name="Operating Expense"
+                    strokeWidth={3}
+                    dot={{ fill: '#F59E0B', r: 6 }}
+                    activeDot={{ r: 8 }}
                   />
                   <Line 
                     type="monotone" 
                     dataKey="profit" 
                     stroke="#6209e6" 
+                    name="Profit"
                     strokeWidth={3}
                     dot={{ fill: '#6209e6', r: 6, strokeWidth: 2, stroke: '#0891B2' }}
                     activeDot={{ r: 8 }}
@@ -2115,23 +2135,41 @@ export default function InvestorRelations() {
                       <div className="col-span-3 bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <ResponsiveContainer width="100%" height={350}>
                           <LineChart data={[
-                            { year: '2026', profit: 8 },
-                            { year: '2027', profit: 35 },
-                            { year: '2028', profit: 125 },
-                            { year: '2029', profit: 320 },
-                            { year: '2030', profit: 750 }
+                            { year: '2026', revenue: 25, opex: 17, profit: 8 },
+                            { year: '2027', revenue: 90, opex: 55, profit: 35 },
+                            { year: '2028', revenue: 280, opex: 155, profit: 125 },
+                            { year: '2029', revenue: 650, opex: 330, profit: 320 },
+                            { year: '2030', revenue: 1400, opex: 650, profit: 750 }
                           ]}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
                             <XAxis dataKey="year" stroke="#6B7280" />
                             <YAxis stroke="#6B7280" tickFormatter={(value) => `$${value}m`} />
                             <Tooltip 
                               contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '8px' }}
-                              formatter={(value) => [`$${value}m`, 'Profit']}
+                              formatter={(value) => [`$${value}m`]}
+                            />
+                            <Legend />
+                            <Line 
+                              type="monotone" 
+                              dataKey="revenue" 
+                              stroke="#10B981"
+                              name="Revenue"
+                              strokeWidth={4}
+                              dot={{ fill: '#10B981', r: 8 }}
+                            />
+                            <Line 
+                              type="monotone" 
+                              dataKey="opex" 
+                              stroke="#F59E0B"
+                              name="Operating Expense"
+                              strokeWidth={4}
+                              dot={{ fill: '#F59E0B', r: 8 }}
                             />
                             <Line 
                               type="monotone" 
                               dataKey="profit" 
                               stroke="#6209e6" 
+                              name="Profit"
                               strokeWidth={4}
                               dot={{ fill: '#6209e6', r: 8, strokeWidth: 3, stroke: '#0891B2' }}
                             />
