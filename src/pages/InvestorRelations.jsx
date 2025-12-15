@@ -1588,6 +1588,392 @@ export default function InvestorRelations() {
         </div>
       </section>
 
+      {/* SWOT Analysis */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              SWOT Analysis
+            </h2>
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+              Strategic positioning and growth opportunities
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Strengths */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border-2 border-green-200 shadow-lg"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
+                  <CheckCircle2 className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Strengths</h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  'First-to-market no-code Agentic AI platform',
+                  'Proprietary multi-agent orchestration technology',
+                  '95% beta customer retention rate',
+                  'Enterprise-grade security (SOC 2, ISO 27001)',
+                  'Strong founding team with 30+ years experience',
+                  '100x faster deployment than competitors',
+                  'Validated product-market fit across 14 industries'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Weaknesses */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-yellow-50 to-white p-8 rounded-2xl border-2 border-yellow-200 shadow-lg"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-yellow-600 rounded-xl flex items-center justify-center">
+                  <Target className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Weaknesses</h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  'Early-stage company with limited brand recognition',
+                  'Small customer base (42 beta customers)',
+                  'Not yet profitable (targeting 2028)',
+                  'Limited sales and marketing infrastructure',
+                  'Dependence on third-party AI model providers',
+                  'Need to scale team rapidly (hiring challenges)'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <div className="w-5 h-5 rounded-full bg-yellow-600 flex-shrink-0 mt-0.5"></div>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Opportunities */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-200 shadow-lg"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                  <TrendingUp className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Opportunities</h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  '$500B+ TAM with only 15% enterprise AI adoption',
+                  'Rapid market growth (120% CAGR)',
+                  'Expand to 14 untapped vertical markets',
+                  'International expansion to 45+ countries',
+                  'Strategic partnerships with system integrators',
+                  'Government sector adoption (low penetration)',
+                  'Platform ecosystem and marketplace revenue'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <TrendingUp className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Threats */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-red-50 to-white p-8 rounded-2xl border-2 border-red-200 shadow-lg"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
+                  <Shield className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Threats</h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  'Well-funded competitors entering the market',
+                  'Big Tech companies (Google, Microsoft) building similar solutions',
+                  'Rapid technology changes requiring constant innovation',
+                  'Economic downturn affecting enterprise spending',
+                  'Data privacy and AI regulation uncertainty',
+                  'Customer acquisition cost inflation'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <div className="w-5 h-5 rounded-full bg-red-600 flex-shrink-0 mt-0.5"></div>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tracy Triangle - Strategy Framework */}
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-violet-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Strategic Triangle
+            </h2>
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+              Our competitive advantage framework
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center min-h-[500px]"
+            >
+              <svg viewBox="0 0 400 400" className="w-full max-w-md">
+                {/* Triangle */}
+                <path
+                  d="M 200 50 L 350 350 L 50 350 Z"
+                  fill="none"
+                  stroke="#6209e6"
+                  strokeWidth="4"
+                />
+                
+                {/* Top vertex - Technology */}
+                <circle cx="200" cy="50" r="45" fill="#6209e6" />
+                <text x="200" y="45" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">Technology</text>
+                <text x="200" y="62" textAnchor="middle" fill="white" fontSize="12">Innovation</text>
+                
+                {/* Bottom right vertex - Market */}
+                <circle cx="350" cy="350" r="45" fill="#0891B2" />
+                <text x="350" y="345" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">Market</text>
+                <text x="350" y="362" textAnchor="middle" fill="white" fontSize="12">Opportunity</text>
+                
+                {/* Bottom left vertex - Execution */}
+                <circle cx="50" cy="350" r="45" fill="#10B981" />
+                <text x="50" y="345" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">Execution</text>
+                <text x="50" y="362" textAnchor="middle" fill="white" fontSize="12">Excellence</text>
+                
+                {/* Center - Competitive Advantage */}
+                <circle cx="200" cy="240" r="65" fill="#F59E0B" opacity="0.95" />
+                <text x="200" y="235" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">Competitive</text>
+                <text x="200" y="250" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">Advantage</text>
+              </svg>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white p-6 rounded-2xl border-2 border-[#6209e6] shadow-lg">
+                <div className="flex items-center gap-3 mb-3">
+                  <Brain className="w-8 h-8 text-[#6209e6]" />
+                  <h3 className="text-xl font-bold text-gray-900">Technology Innovation</h3>
+                </div>
+                <p className="text-gray-700 mb-3">Proprietary no-code platform with multi-agent orchestration</p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Advanced AI models and algorithms</li>
+                  <li>• 100x faster than custom development</li>
+                  <li>• Patent-pending technology</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl border-2 border-[#0891B2] shadow-lg">
+                <div className="flex items-center gap-3 mb-3">
+                  <Globe className="w-8 h-8 text-[#0891B2]" />
+                  <h3 className="text-xl font-bold text-gray-900">Market Opportunity</h3>
+                </div>
+                <p className="text-gray-700 mb-3">$500B+ TAM with massive enterprise AI adoption gap</p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• 85% of enterprises haven't deployed AI agents</li>
+                  <li>• 120% market CAGR growth</li>
+                  <li>• 14 vertical markets addressable</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl border-2 border-[#10B981] shadow-lg">
+                <div className="flex items-center gap-3 mb-3">
+                  <Target className="w-8 h-8 text-[#10B981]" />
+                  <h3 className="text-xl font-bold text-gray-900">Execution Excellence</h3>
+                </div>
+                <p className="text-gray-700 mb-3">World-class team with proven track record</p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• 30+ years combined experience</li>
+                  <li>• 95% customer retention rate</li>
+                  <li>• Validated product-market fit</li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Magic Quadrant - Competitive Positioning */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Competitive Positioning Map
+            </h2>
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+              Leading in both vision and execution
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 shadow-lg"
+            >
+              <div className="relative w-full aspect-square">
+                <svg viewBox="0 0 500 500" className="w-full h-full">
+                  {/* Background quadrants */}
+                  <rect x="0" y="0" width="250" height="250" fill="#FEE2E2" opacity="0.3" />
+                  <rect x="250" y="0" width="250" height="250" fill="#DBEAFE" opacity="0.3" />
+                  <rect x="0" y="250" width="250" height="250" fill="#FEF3C7" opacity="0.3" />
+                  <rect x="250" y="250" width="250" height="250" fill="#D1FAE5" opacity="0.3" />
+                  
+                  {/* Grid lines */}
+                  <line x1="250" y1="0" x2="250" y2="500" stroke="#9CA3AF" strokeWidth="2" />
+                  <line x1="0" y1="250" x2="500" y2="250" stroke="#9CA3AF" strokeWidth="2" />
+                  
+                  {/* Axes labels */}
+                  <text x="250" y="490" textAnchor="middle" fill="#374151" fontSize="16" fontWeight="bold">
+                    Completeness of Vision →
+                  </text>
+                  <text x="20" y="250" textAnchor="start" fill="#374151" fontSize="16" fontWeight="bold" transform="rotate(-90 20 250)">
+                    Ability to Execute →
+                  </text>
+                  
+                  {/* Quadrant labels */}
+                  <text x="125" y="125" textAnchor="middle" fill="#991B1B" fontSize="14" fontWeight="600">Niche Players</text>
+                  <text x="375" y="125" textAnchor="middle" fill="#1E40AF" fontSize="14" fontWeight="600">Visionaries</text>
+                  <text x="125" y="375" textAnchor="middle" fill="#92400E" fontSize="14" fontWeight="600">Challengers</text>
+                  <text x="375" y="375" textAnchor="middle" fill="#065F46" fontSize="14" fontWeight="600">Leaders</text>
+                  
+                  {/* Competitors */}
+                  <circle cx="150" cy="300" r="20" fill="#EF4444" opacity="0.7" />
+                  <text x="150" y="305" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">A</text>
+                  
+                  <circle cx="320" cy="200" r="22" fill="#3B82F6" opacity="0.7" />
+                  <text x="320" y="205" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">B</text>
+                  
+                  <circle cx="200" cy="320" r="18" fill="#F59E0B" opacity="0.7" />
+                  <text x="200" y="325" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">C</text>
+                  
+                  <circle cx="280" cy="280" r="18" fill="#F59E0B" opacity="0.7" />
+                  <text x="280" y="285" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">D</text>
+                  
+                  {/* 1cPlatform - Leaders quadrant */}
+                  <circle cx="380" cy="120" r="35" fill="#6209e6" stroke="#ffffff" strokeWidth="4" />
+                  <text x="380" y="118" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">1C</text>
+                  <text x="380" y="132" textAnchor="middle" fill="white" fontSize="10">Platform</text>
+                  
+                  {/* Arrow pointing to 1C */}
+                  <path d="M 420 100 L 450 70" stroke="#6209e6" strokeWidth="2" markerEnd="url(#arrowhead)" />
+                  <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                      <polygon points="0 0, 10 3, 0 6" fill="#6209e6" />
+                    </marker>
+                  </defs>
+                </svg>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-gradient-to-br from-[#6209e6] to-[#7C3AED] p-8 rounded-2xl text-white shadow-lg">
+                <h3 className="text-2xl font-bold mb-4">1cPlatform: Leader Quadrant</h3>
+                <p className="text-purple-100 mb-6">
+                  Positioned as a leader with strong vision and execution capabilities
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5" />
+                    <span>Complete no-code platform vision</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5" />
+                    <span>Validated product-market fit</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5" />
+                    <span>Strong execution track record</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-xl border border-gray-200">
+                  <div className="text-xs text-gray-600 mb-1">Competitor A</div>
+                  <div className="text-sm font-semibold text-gray-900">Legacy Automation</div>
+                </div>
+                <div className="bg-white p-4 rounded-xl border border-gray-200">
+                  <div className="text-xs text-gray-600 mb-1">Competitor B</div>
+                  <div className="text-sm font-semibold text-gray-900">AI Startup</div>
+                </div>
+                <div className="bg-white p-4 rounded-xl border border-gray-200">
+                  <div className="text-xs text-gray-600 mb-1">Competitor C</div>
+                  <div className="text-sm font-semibold text-gray-900">RPA Provider</div>
+                </div>
+                <div className="bg-white p-4 rounded-xl border border-gray-200">
+                  <div className="text-xs text-gray-600 mb-1">Competitor D</div>
+                  <div className="text-sm font-semibold text-gray-900">Low-Code Platform</div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h4 className="font-bold text-gray-900 mb-3">Our Competitive Edge</h4>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• <strong>Vision:</strong> Complete no-code Agentic AI platform</li>
+                  <li>• <strong>Execution:</strong> 95% customer retention, rapid deployment</li>
+                  <li>• <strong>Technology:</strong> Proprietary multi-agent orchestration</li>
+                  <li>• <strong>Market:</strong> First-mover in enterprise no-code AI</li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Financials & Forecast - 2 Sections */}
       <section className="py-24 bg-gradient-to-br from-violet-50 via-purple-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
