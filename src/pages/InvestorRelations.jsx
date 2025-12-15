@@ -1504,7 +1504,7 @@ export default function InvestorRelations() {
       </section>
 
       {/* SWOT Analysis */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1526,13 +1526,13 @@ export default function InvestorRelations() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border-2 border-green-200 shadow-lg"
+              className="bg-gradient-to-br from-green-50 to-green-100/30 p-8 rounded-3xl border border-green-200"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
                   <CheckCircle2 className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Strengths</h3>
+                <h3 className="text-2xl font-bold text-black">Strengths</h3>
               </div>
               <ul className="space-y-3">
                 {[
@@ -1544,9 +1544,9 @@ export default function InvestorRelations() {
                   '100x faster deployment than competitors',
                   'Validated product-market fit across 14 industries'
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
+                  <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-black">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -1557,13 +1557,13 @@ export default function InvestorRelations() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-yellow-50 to-white p-8 rounded-2xl border-2 border-yellow-200 shadow-lg"
+              className="bg-gradient-to-br from-yellow-50 to-yellow-100/30 p-8 rounded-3xl border border-yellow-200"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-yellow-600 rounded-xl flex items-center justify-center">
                   <Target className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Weaknesses</h3>
+                <h3 className="text-2xl font-bold text-black">Weaknesses</h3>
               </div>
               <ul className="space-y-3">
                 {[
@@ -1574,9 +1574,9 @@ export default function InvestorRelations() {
                   'Dependence on third-party AI model providers',
                   'Need to scale team rapidly (hiring challenges)'
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
+                  <li key={idx} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-yellow-600 flex-shrink-0 mt-0.5"></div>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-black">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -1587,13 +1587,13 @@ export default function InvestorRelations() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-200 shadow-lg"
+              className="bg-gradient-to-br from-blue-50 to-blue-100/30 p-8 rounded-3xl border border-blue-200"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
                   <TrendingUp className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Opportunities</h3>
+                <h3 className="text-2xl font-bold text-black">Opportunities</h3>
               </div>
               <ul className="space-y-3">
                 {[
@@ -1605,9 +1605,9 @@ export default function InvestorRelations() {
                   'Government sector adoption (low penetration)',
                   'Platform ecosystem and marketplace revenue'
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
+                  <li key={idx} className="flex items-start gap-3">
                     <TrendingUp className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-black">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -1618,13 +1618,13 @@ export default function InvestorRelations() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-red-50 to-white p-8 rounded-2xl border-2 border-red-200 shadow-lg"
+              className="bg-gradient-to-br from-red-50 to-red-100/30 p-8 rounded-3xl border border-red-200"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
                   <Shield className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Threats</h3>
+                <h3 className="text-2xl font-bold text-black">Threats</h3>
               </div>
               <ul className="space-y-3">
                 {[
@@ -1635,9 +1635,9 @@ export default function InvestorRelations() {
                   'Data privacy and AI regulation uncertainty',
                   'Customer acquisition cost inflation'
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
+                  <li key={idx} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-red-600 flex-shrink-0 mt-0.5"></div>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-black">{item}</span>
                   </li>
                 ))}
               </ul>
