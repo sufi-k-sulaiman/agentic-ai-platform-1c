@@ -224,8 +224,13 @@ export default function BlogAgenticAIEthics() {
           <p className="text-gray-700 leading-relaxed mb-6">
             Ethical agentic AI isn't a destination—it's an ongoing commitment. As technology advances and society's expectations evolve, organizations must continuously reassess and improve their ethical practices.
           </p>
+
           <p className="text-gray-700 leading-relaxed mb-6">
-            The organizations that lead in AI ethics won't just avoid problems—they'll build more trusted, sustainable, and ultimately more successful AI systems.
+            The complexity of AI ethics deepens as agents become more capable and autonomous. Early chatbots made simple mistakes that users easily dismissed. Modern agentic systems making financial decisions, medical recommendations, or hiring assessments carry profound consequences when they err. This escalating impact demands proportionally sophisticated ethical frameworks. Organizations must move beyond compliance checklists to cultivate genuine ethical cultures where teams instinctively ask "should we?" alongside "can we?" The most successful AI deployments emerge from organizations where engineers, ethicists, domain experts, and affected stakeholders collaborate throughout design and deployment, not where ethics is an afterthought or checkbox exercise.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed mb-6">
+            The organizations that lead in AI ethics won't just avoid problems—they'll build more trusted, sustainable, and ultimately more successful AI systems. Market research consistently shows consumers willing to pay premiums for demonstrably ethical AI, employees preferring to work for ethically responsible companies, and investors increasingly scrutinizing AI governance as part of ESG criteria. This creates powerful economic incentives beyond mere risk mitigation. Companies that view ethics as strategic advantage rather than regulatory burden discover that thoughtful ethical constraints actually spur innovation—forcing creative solutions that often prove superior to unrestrained approaches. The ethical AI leaders of 2025 will be the market leaders of 2030.
           </p>
 
           <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 mt-12">
@@ -235,7 +240,7 @@ export default function BlogAgenticAIEthics() {
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white">
-                Get started
+                Learn More
               </Button>
             </Link>
           </div>

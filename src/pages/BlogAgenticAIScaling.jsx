@@ -234,8 +234,13 @@ export default function BlogAgenticAIScaling() {
             <li>Measure relentlessly and iterate based on data</li>
             <li>Maintain long-term commitment through inevitable challenges</li>
           </ol>
+
           <p className="text-gray-700 leading-relaxed mb-6">
-            The prize—sustainable AI transformation delivering multiples of initial ROI—is worth the disciplined effort.
+            The hidden challenge in scaling isn't technical—it's organizational. Technology scales relatively predictably: add infrastructure, optimize code, manage load. Human systems scale non-linearly. The communication overhead of coordinating 50 stakeholders across 10 departments exceeds coordinating 5 people in one team by far more than 10x. Successful scaling organizations recognize this and invest heavily in governance structures, communication protocols, and decision-making frameworks before hitting scaling bottlenecks. They establish Centers of Excellence that standardize agent development, create reusable components and templates, and provide central support that prevents each team from solving the same problems independently.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed mb-6">
+            The prize—sustainable AI transformation delivering multiples of initial ROI—is worth the disciplined effort. Organizations that successfully scale report a phenomenon we call the "AI flywheel effect." Early agents generate data about business processes that makes subsequent agents smarter. Employees trained on agent collaboration become more effective at identifying automation opportunities. Infrastructure and tooling investments create platforms that reduce time-to-deployment for each new agent. Success breeds success, creating compounding returns where each wave of agent deployment happens faster and delivers more value than the last. After 18-24 months, leading organizations reach an inflection point where AI capabilities become self-sustaining growth engines rather than discrete projects requiring constant executive intervention.
           </p>
 
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 mt-12">
@@ -245,7 +250,7 @@ export default function BlogAgenticAIScaling() {
             </p>
             <Link to={createPageUrl('Onboarding')}>
               <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] text-white">
-                Get started
+                Start Your Journey
               </Button>
             </Link>
           </div>
