@@ -1017,7 +1017,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1058,7 +1058,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1101,7 +1101,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1162,7 +1162,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1202,7 +1202,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1242,7 +1242,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1282,7 +1282,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1333,7 +1333,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1373,7 +1373,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
@@ -1447,7 +1447,7 @@ export default function Onboarding() {
                   </Button>
                   </div>
                   {/* Progress */}
-                  <div className="mb-8">
+                  <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
                     <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
