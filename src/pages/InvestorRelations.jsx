@@ -564,7 +564,7 @@ export default function InvestorRelations() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-              Yearly Profit
+              Projected Yearly Profit
             </h2>
           </motion.div>
 
@@ -572,21 +572,19 @@ export default function InvestorRelations() {
             <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
               <ResponsiveContainer width="100%" height={400}>
                 <LineChart data={[
-                  { year: '2018', profit: 20 },
-                  { year: '2019', profit: 24 },
-                  { year: '2020', profit: 26 },
-                  { year: '2021', profit: 28 },
-                  { year: '2022', profit: 72 },
-                  { year: '2023', profit: 95 },
-                  { year: '2024', profit: 140 }
+                  { year: '2026', profit: 8 },
+                  { year: '2027', profit: 35 },
+                  { year: '2028', profit: 125 },
+                  { year: '2029', profit: 320 },
+                  { year: '2030', profit: 750 }
                 ]}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
                   <XAxis dataKey="year" stroke="#6B7280" />
-                  <YAxis stroke="#6B7280" tickFormatter={(value) => `${value}k`} />
+                  <YAxis stroke="#6B7280" tickFormatter={(value) => `$${value}m`} />
                   <Tooltip 
                     contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '8px' }}
                     labelStyle={{ color: '#1F2937' }}
-                    formatter={(value) => [`$${value}k`, 'Profit']}
+                    formatter={(value) => [`$${value}m`, 'Profit']}
                   />
                   <Line 
                     type="monotone" 
@@ -602,12 +600,12 @@ export default function InvestorRelations() {
 
             <div className="flex flex-col justify-center">
               <div className="bg-white border-2 border-[#6209e6] text-gray-900 p-8 rounded-2xl mb-6">
-                <div className="text-6xl font-bold mb-2 text-[#6209e6]">28%</div>
-                <div className="text-xl font-semibold">KEY METRIC</div>
-                <div className="text-sm mt-2">Average annual profit growth rate</div>
+                <div className="text-6xl font-bold mb-2 text-[#6209e6]">178%</div>
+                <div className="text-xl font-semibold">CAGR</div>
+                <div className="text-sm mt-2">Compound annual growth rate (2026-2030)</div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Profit trajectory shows strong inflection point post-2021 with AI product launch driving exponential growth.
+                Projected profit trajectory shows aggressive growth from 2026 onwards, driven by market expansion and enterprise adoption at scale.
               </p>
             </div>
           </div>
@@ -2112,25 +2110,23 @@ export default function InvestorRelations() {
                 {/* Yearly Profit Slide */}
                 {investmentSlides[currentSlide].id === 'yearly' && (
                   <div className="w-full max-w-6xl">
-                    <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">Yearly Profit Trajectory</h2>
+                    <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">Projected Yearly Profit</h2>
                     <div className="grid grid-cols-5 gap-6 items-end">
                       <div className="col-span-3 bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <ResponsiveContainer width="100%" height={350}>
                           <LineChart data={[
-                            { year: '2018', profit: 20 },
-                            { year: '2019', profit: 24 },
-                            { year: '2020', profit: 26 },
-                            { year: '2021', profit: 28 },
-                            { year: '2022', profit: 72 },
-                            { year: '2023', profit: 95 },
-                            { year: '2024', profit: 140 }
+                            { year: '2026', profit: 8 },
+                            { year: '2027', profit: 35 },
+                            { year: '2028', profit: 125 },
+                            { year: '2029', profit: 320 },
+                            { year: '2030', profit: 750 }
                           ]}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
                             <XAxis dataKey="year" stroke="#6B7280" />
-                            <YAxis stroke="#6B7280" tickFormatter={(value) => `$${value}k`} />
+                            <YAxis stroke="#6B7280" tickFormatter={(value) => `$${value}m`} />
                             <Tooltip 
                               contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '8px' }}
-                              formatter={(value) => [`$${value}k`, 'Profit']}
+                              formatter={(value) => [`$${value}m`, 'Profit']}
                             />
                             <Line 
                               type="monotone" 
@@ -2144,17 +2140,17 @@ export default function InvestorRelations() {
                       </div>
                       <div className="col-span-2 space-y-4">
                         <div className="bg-white border-2 border-[#6209e6] rounded-2xl p-6 text-center shadow-lg">
-                          <div className="text-6xl font-bold text-[#6209e6] mb-2">28%</div>
+                          <div className="text-6xl font-bold text-[#6209e6] mb-2">178%</div>
                           <div className="text-lg font-semibold text-gray-900 mb-1">CAGR</div>
-                          <div className="text-sm text-gray-600">Compound annual growth</div>
+                          <div className="text-sm text-gray-600">2026-2030 compound growth</div>
                         </div>
                         <div className="bg-gray-50 rounded-xl p-4 text-center">
-                          <div className="text-3xl font-bold text-gray-900 mb-1">$140K</div>
-                          <div className="text-sm text-gray-600">2024 Profit (projected)</div>
+                          <div className="text-3xl font-bold text-gray-900 mb-1">$750M</div>
+                          <div className="text-sm text-gray-600">2030 Profit (projected)</div>
                         </div>
                         <div className="bg-gray-50 rounded-xl p-4 text-center">
-                          <div className="text-3xl font-bold text-gray-900 mb-1">400%+</div>
-                          <div className="text-sm text-gray-600">Growth since 2021</div>
+                          <div className="text-3xl font-bold text-gray-900 mb-1">9,275%</div>
+                          <div className="text-sm text-gray-600">Total growth 2026-2030</div>
                         </div>
                       </div>
                     </div>
