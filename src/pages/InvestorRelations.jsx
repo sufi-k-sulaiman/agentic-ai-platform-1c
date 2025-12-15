@@ -1176,9 +1176,7 @@ export default function InvestorRelations() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all"
               >
-                <div className="w-14 h-14 bg-[#8B2EE5] rounded-xl flex items-center justify-center mb-6">
-                  <reason.icon className="w-7 h-7 text-white" />
-                </div>
+                <reason.icon className="w-14 h-14 text-[#6209e6] mb-6" />
                 <h3 className="text-2xl font-bold mb-4">{reason.title}</h3>
                 <p className="text-gray-300 text-lg leading-relaxed">{reason.description}</p>
               </motion.div>
@@ -1290,13 +1288,11 @@ export default function InvestorRelations() {
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                   className="relative w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center z-10"
                 >
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] rounded-full flex items-center justify-center">
-                    <img 
-                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                      alt="1C Platform" 
-                      className="w-12 h-12"
-                    />
-                  </div>
+                  <img 
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                    alt="1C Platform" 
+                    className="w-20 h-20"
+                  />
                 </motion.div>
               </div>
             </motion.div>
@@ -1336,9 +1332,7 @@ export default function InvestorRelations() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 text-center"
               >
-                <div className="w-12 h-12 bg-[#8B2EE5] rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <advantage.icon className="w-6 h-6 text-white" />
-                </div>
+                <advantage.icon className="w-12 h-12 text-[#6209e6] mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{advantage.title}</h3>
                 <p className="text-gray-600">{advantage.desc}</p>
               </motion.div>
