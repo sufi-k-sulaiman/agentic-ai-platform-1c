@@ -2568,10 +2568,10 @@ export default function InvestorRelations() {
                       {/* Strengths */}
                       <div className="bg-purple-500/20 backdrop-blur-sm border-2 border-purple-300/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
-                          <CheckCircle2 className="w-6 h-6" />
-                          <h3 className="text-xl font-bold">Strengths</h3>
+                          <CheckCircle2 className="w-6 h-6 text-purple-300" />
+                          <h3 className="text-xl font-bold text-purple-300">Strengths</h3>
                         </div>
-                        <ul className="space-y-2 text-sm">
+                        <ul className="space-y-2 text-sm text-white">
                           <li>• First-to-market no-code platform</li>
                           <li>• 95% customer retention</li>
                           <li>• Enterprise-grade security</li>
@@ -2581,12 +2581,12 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Weaknesses */}
-                      <div className="bg-purple-400/20 backdrop-blur-sm border-2 border-purple-200/50 rounded-2xl p-6">
+                      <div className="bg-black/20 backdrop-blur-sm border-2 border-gray-400/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
-                          <Target className="w-6 h-6" />
-                          <h3 className="text-xl font-bold">Weaknesses</h3>
+                          <Target className="w-6 h-6 text-gray-300" />
+                          <h3 className="text-xl font-bold text-gray-300">Weaknesses</h3>
                         </div>
-                        <ul className="space-y-2 text-sm">
+                        <ul className="space-y-2 text-sm text-white">
                           <li>• Early-stage company</li>
                           <li>• Small customer base</li>
                           <li>• Not yet profitable</li>
@@ -2596,12 +2596,12 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Opportunities */}
-                      <div className="bg-purple-600/20 backdrop-blur-sm border-2 border-purple-400/50 rounded-2xl p-6">
+                      <div className="bg-green-500/20 backdrop-blur-sm border-2 border-green-300/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
-                          <TrendingUp className="w-6 h-6" />
-                          <h3 className="text-xl font-bold">Opportunities</h3>
+                          <TrendingUp className="w-6 h-6 text-green-300" />
+                          <h3 className="text-xl font-bold text-green-300">Opportunities</h3>
                         </div>
-                        <ul className="space-y-2 text-sm">
+                        <ul className="space-y-2 text-sm text-white">
                           <li>• $500B+ TAM with 85% gap</li>
                           <li>• 120% market CAGR</li>
                           <li>• 14 vertical markets</li>
@@ -2611,12 +2611,12 @@ export default function InvestorRelations() {
                       </div>
 
                       {/* Threats */}
-                      <div className="bg-purple-700/20 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl p-6">
+                      <div className="bg-red-500/20 backdrop-blur-sm border-2 border-red-300/50 rounded-2xl p-6">
                         <div className="flex items-center gap-2 mb-4">
-                          <Shield className="w-6 h-6" />
-                          <h3 className="text-xl font-bold">Threats</h3>
+                          <Shield className="w-6 h-6 text-red-300" />
+                          <h3 className="text-xl font-bold text-red-300">Threats</h3>
                         </div>
-                        <ul className="space-y-2 text-sm">
+                        <ul className="space-y-2 text-sm text-white">
                           <li>• Well-funded competitors</li>
                           <li>• Big Tech entering market</li>
                           <li>• Rapid tech changes</li>
