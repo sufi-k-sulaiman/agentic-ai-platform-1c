@@ -2241,15 +2241,6 @@ export default function InvestorRelations() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-white/20">
-              <Button 
-                onClick={downloadPDF}
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white/10 rounded-full px-10 h-14 text-lg"
-              >
-                <Download className="mr-2 w-5 h-5" />
-                Download deck (PDF)
-              </Button>
               <Link to={createPageUrl('Contact')}>
                 <Button size="lg" className="bg-white text-[#6209e6] hover:bg-gray-100 rounded-full px-10 h-14 text-lg">
                   Contact us
