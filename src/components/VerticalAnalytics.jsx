@@ -100,14 +100,14 @@ export default function VerticalAnalytics({ industry }) {
                     <Users className="w-5 h-5 text-purple-500" />
                     <span className="text-sm text-gray-600">Traditional Approach</span>
                   </div>
-                  <div className="text-3xl font-bold text-gray-900">Siloed systems</div>
+                  <div className="text-3xl font-bold text-gray-900">Siloed</div>
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <TrendingUp className="w-5 h-5 text-cyan-500" />
                     <span className="text-sm text-gray-600">With Agentic AI</span>
                   </div>
-                  <div className="text-3xl font-bold text-gray-900">Unified automation</div>
+                  <div className="text-3xl font-bold text-gray-900">Unified</div>
                 </div>
               </div>
 
