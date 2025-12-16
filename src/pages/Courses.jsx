@@ -212,9 +212,6 @@ export default function Courses() {
               >
                 Start free trial <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14 text-base">
-                Browse courses
-              </Button>
             </div>
             <p className="text-sm text-gray-500 mt-4">14-day free trial • No credit card required</p>
           </motion.div>
