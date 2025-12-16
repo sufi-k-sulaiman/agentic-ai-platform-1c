@@ -965,6 +965,36 @@ export default function Community() {
                   <Button
                     className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4]"
                     onClick={() => {
+                      // Validate required fields
+                      if (!newDiscussionData.authorName.trim()) {
+                        alert('Please enter your name');
+                        return;
+                      }
+                      if (!newDiscussionData.authorEmail.trim()) {
+                        alert('Please enter your email');
+                        return;
+                      }
+                      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newDiscussionData.authorEmail)) {
+                        alert('Please enter a valid email address');
+                        return;
+                      }
+                      if (!newDiscussionData.title.trim()) {
+                        alert('Please enter a title');
+                        return;
+                      }
+                      if (newDiscussionData.title.trim().length < 10) {
+                        alert('Title must be at least 10 characters long');
+                        return;
+                      }
+                      if (!newDiscussionData.content.trim()) {
+                        alert('Please enter content');
+                        return;
+                      }
+                      if (newDiscussionData.content.trim().length < 20) {
+                        alert('Content must be at least 20 characters long');
+                        return;
+                      }
+                      
                       // Handle submission here
                       setShowNewDiscussion(false);
                       setNewDiscussionData({
@@ -1109,6 +1139,28 @@ export default function Community() {
                     <Button 
                       className="bg-[#8B2EE5] hover:bg-[#7325C4]"
                       onClick={() => {
+                        // Validate required fields
+                        if (!replyData.name.trim()) {
+                          alert('Please enter your name');
+                          return;
+                        }
+                        if (!replyData.email.trim()) {
+                          alert('Please enter your email');
+                          return;
+                        }
+                        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(replyData.email)) {
+                          alert('Please enter a valid email address');
+                          return;
+                        }
+                        if (!replyData.content.trim()) {
+                          alert('Please enter your reply');
+                          return;
+                        }
+                        if (replyData.content.trim().length < 10) {
+                          alert('Reply must be at least 10 characters long');
+                          return;
+                        }
+                        
                         // Handle reply submission
                         setReplyData({ content: '', name: '', email: '' });
                       }}
