@@ -257,7 +257,7 @@ export default function Cyber() {
       </section>
 
       {/* Website Validator */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-purple-50 to-violet-100">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
