@@ -515,35 +515,30 @@ export default function Cyber() {
                           <div className="flex-1 overflow-y-auto p-8">
                             <div className="space-y-6">
                               {[
-                                { key: 'security', label: 'Security', icon: Shield },
-                                { key: 'inputHandling', label: 'Input & Data Handling', icon: FileCheck },
-                                { key: 'authentication', label: 'Authentication & Sessions', icon: Lock },
-                                { key: 'accessControl', label: 'Access Control', icon: Shield },
-                                { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
-                                { key: 'dataProtection', label: 'Data Protection', icon: Lock },
-                                { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye },
-                                { key: 'design', label: 'Design & UX', icon: Eye },
-                                { key: 'seo', label: 'SEO & Marketing', icon: Globe },
-                                { key: 'performance', label: 'Performance', icon: FileCheck },
-                                { key: 'legal', label: 'Legal & Compliance', icon: Lock },
-                                { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
-                              ].map(({ key, label, icon: Icon }) => {
-                                const score = validationResults[key];
-                                const { passed, failed } = getIssuesForCategory(key);
+                               { key: 'securityHeaders', label: 'Security Headers', icon: Shield, grade: validationResults.securityHeadersGrade },
+                               { key: 'sslTls', label: 'SSL/TLS Configuration', icon: Lock, grade: validationResults.sslLabsGrade },
+                               { key: 'seo', label: 'SEO Optimization', icon: Globe, score: validationResults.seoScore },
+                               { key: 'accessibility', label: 'Accessibility', icon: Eye, score: validationResults.accessibilityScore },
+                               { key: 'performance', label: 'Performance', icon: FileCheck, score: validationResults.performanceScore },
+                               { key: 'content', label: 'Content Quality', icon: CheckCircle2, score: validationResults.contentScore },
+                               { key: 'mobile', label: 'Mobile Friendly', icon: Shield, score: validationResults.mobileScore }
+                              ].filter(({ grade, score }) => grade || score).map(({ key, label, icon: Icon, grade, score }) => {
+                               const { passed, failed } = getIssuesForCategory(key);
 
-                                if (passed.length === 0 && failed.length === 0) return null;
+                               if (passed.length === 0 && failed.length === 0) return null;
 
-                                return (
-                                  <div key={key} className="border border-gray-200 rounded-lg overflow-hidden">
-                                    <div className={`px-6 py-4 ${getScoreBgColor(score)} border-b border-gray-200`}>
-                                      <div className="flex items-center justify-between">
-                                        <div className="flex items-center gap-3">
-                                          <Icon className={`w-6 h-6 ${getScoreColor(score)}`} />
-                                          <h4 className="font-bold text-lg text-gray-900">{label}</h4>
-                                        </div>
-                                        <div className={`text-3xl font-bold ${getScoreColor(score)}`}>{score}</div>
-                                      </div>
-                                    </div>
+                               return (
+                                 <div key={key} className="border border-gray-200 rounded-lg overflow-hidden">
+                                   <div className="px-6 py-4 bg-purple-50 border-b border-gray-200">
+                                     <div className="flex items-center justify-between">
+                                       <div className="flex items-center gap-3">
+                                         <Icon className="w-6 h-6 text-[#8B2EE5]" />
+                                         <h4 className="font-bold text-lg text-gray-900">{label}</h4>
+                                       </div>
+                                       {grade && <div className="text-3xl font-bold text-[#8B2EE5]">{grade}</div>}
+                                       {score && <div className="text-3xl font-bold text-[#8B2EE5]">{score}/100</div>}
+                                     </div>
+                                   </div>
                                     <div className="p-6 space-y-4">
                                       {failed.length > 0 && (
                                         <div>
