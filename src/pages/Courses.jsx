@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,6 +7,7 @@ import { BookOpen, Clock, Users, Star, CheckCircle, ArrowRight, Play, Map, Targe
 import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import SubscriptionWorkflow from '@/components/SubscriptionWorkflow';
 
 const categories = [
   { id: 'agentic-ai-fundamentals', name: 'Agentic AI Fundamentals', count: 12, level: 'Beginner' },
@@ -171,8 +172,11 @@ const platformFeatures = [
 ];
 
 export default function Courses() {
+  const [workflowOpen, setWorkflowOpen] = useState(false);
+
   return (
     <div className="bg-white">
+      <SubscriptionWorkflow isOpen={workflowOpen} onClose={() => setWorkflowOpen(false)} />
       <PageMeta 
         title="Courses & Learning"
         description="Master Agentic AI with 100+ expert-led courses, structured learning paths, and unlimited subscriptions. From beginner to advanced."
@@ -202,7 +206,10 @@ export default function Courses() {
               Learn from industry experts with 100+ courses, structured learning paths, and unlimited access subscriptions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base">
+              <Button 
+                onClick={() => setWorkflowOpen(true)}
+                className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base"
+              >
                 Start free trial <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button variant="outline" className="rounded-full border-gray-300 px-8 h-14 text-base">
@@ -474,6 +481,7 @@ export default function Courses() {
                       ))}
                     </ul>
                     <Button 
+                      onClick={() => setWorkflowOpen(true)}
                       className={`w-full ${plan.badge ? 'bg-[#8B2EE5] hover:bg-[#7325C4] text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                     >
                       {plan.price === 'Custom' ? 'Contact sales' : 'Start free trial'}
@@ -536,7 +544,10 @@ export default function Courses() {
             <p className="text-xl text-purple-100 mb-10">
               Join thousands of professionals advancing their careers with our expert-led courses and structured learning paths.
             </p>
-            <Button className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-10 h-16 text-lg">
+            <Button 
+              onClick={() => setWorkflowOpen(true)}
+              className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-10 h-16 text-lg"
+            >
               Start free trial <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
