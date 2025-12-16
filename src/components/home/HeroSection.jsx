@@ -226,8 +226,14 @@ export default function HeroSection() {
           <div className="absolute inset-0 flex items-center justify-center flex-col">
             <motion.div
               initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              animate={{ 
+                scale: 1,
+                opacity: [1, 0.7, 1]
+              }}
+              transition={{ 
+                scale: { duration: 0.6, delay: 0.2 },
+                opacity: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+              }}
               className="relative flex items-center justify-center"
             >
               <img 
