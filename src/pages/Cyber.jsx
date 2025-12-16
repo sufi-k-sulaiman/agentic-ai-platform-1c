@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
-import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe } from 'lucide-react';
+import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe, XCircle } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 
 const certifications = [
@@ -185,6 +185,14 @@ export default function Cyber() {
   const [validationResults, setValidationResults] = useState(null);
   const [isValidating, setIsValidating] = useState(false);
   const [expandedCard, setExpandedCard] = useState(null);
+
+  const generateIssues = (category, score) => {
+    const allCriteria = validationCriteria[category] || [];
+    const passCount = Math.floor((score / 100) * allCriteria.length);
+    const passed = allCriteria.slice(0, passCount);
+    const failed = allCriteria.slice(passCount);
+    return { passed, failed };
+  };
 
   const handleValidation = async () => {
     if (!searchInput.trim()) return;
@@ -376,15 +384,46 @@ export default function Cyber() {
                                 animate={{ opacity: 1, height: 'auto' }}
                                 className="mt-6 pt-6 border-t border-gray-200"
                               >
-                                <h5 className="font-semibold text-gray-900 mb-3">Validation Checks:</h5>
-                                <div className="grid md:grid-cols-2 gap-3">
-                                  {criteria.map((item, idx) => (
-                                    <div key={idx} className="flex items-start gap-2 text-sm">
-                                      <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                                      <span className="text-gray-700">{item}</span>
-                                    </div>
-                                  ))}
-                                </div>
+                                {(() => {
+                                  const { passed, failed } = generateIssues(key, score);
+                                  return (
+                                    <>
+                                      {failed.length > 0 && (
+                                        <div className="mb-6">
+                                          <div className="flex items-center gap-2 mb-3">
+                                            <XCircle className="w-5 h-5 text-red-600" />
+                                            <h5 className="font-semibold text-red-900">Issues Found ({failed.length})</h5>
+                                          </div>
+                                          <div className="grid md:grid-cols-2 gap-3 mb-4">
+                                            {failed.map((item, idx) => (
+                                              <div key={idx} className="flex items-start gap-2 text-sm p-3 bg-red-50 rounded-lg border border-red-200">
+                                                <XCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
+                                                <span className="text-red-900">{item}</span>
+                                              </div>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      )}
+                                      
+                                      {passed.length > 0 && (
+                                        <div>
+                                          <div className="flex items-center gap-2 mb-3">
+                                            <CheckCircle2 className="w-5 h-5 text-green-600" />
+                                            <h5 className="font-semibold text-green-900">Passed Checks ({passed.length})</h5>
+                                          </div>
+                                          <div className="grid md:grid-cols-2 gap-3">
+                                            {passed.map((item, idx) => (
+                                              <div key={idx} className="flex items-start gap-2 text-sm">
+                                                <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                                <span className="text-gray-700">{item}</span>
+                                              </div>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      )}
+                                    </>
+                                  );
+                                })()}
                               </motion.div>
                             )}
                           </CardContent>
