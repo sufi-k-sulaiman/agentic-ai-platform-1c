@@ -178,46 +178,6 @@ export default function Cyber() {
 
 
 
-                  {/* Mozilla Observatory Results */}
-                  {validationResults.rawData?.mozilla && (
-                    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-                      <div className="bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-4">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h4 className="text-white font-bold text-lg">Mozilla Observatory</h4>
-                            <p className="text-purple-100 text-sm">HTTP Security Headers Analysis</p>
-                          </div>
-                          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                            <div className="text-white text-2xl font-bold">
-                              {validationResults.rawData.mozilla.score > 0 ? '+' : ''}{validationResults.rawData.mozilla.score}
-                            </div>
-                            <div className="text-purple-100 text-xs">Score</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="p-6">
-                        {validationResults.rawData.mozilla.tests && Object.entries(validationResults.rawData.mozilla.tests).map(([testKey, test]) => (
-                          <div key={testKey} className={`flex items-start gap-3 py-3 border-b border-gray-100 last:border-0`}>
-                            {test.pass ? (
-                              <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                            ) : (
-                              <XCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                            )}
-                            <div className="flex-1">
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="font-semibold text-gray-900">{testKey.replace(/-/g, ' ').replace(/_/g, ' ').toUpperCase()}</span>
-                                <Badge className={test.pass ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}>
-                                  {test.pass ? 'PASS' : 'FAIL'}
-                                </Badge>
-                              </div>
-                              <p className="text-sm text-gray-600">{test.score_description}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
                   {/* Security Headers Results */}
                   {validationResults.rawData?.securityHeaders && (
                     <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
@@ -420,16 +380,6 @@ export default function Cyber() {
                       <p className="text-sm text-gray-400">Debug view of actual API data</p>
                     </div>
                     <div className="p-6 space-y-6">
-                      <div>
-                        <h5 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                          <span className="text-purple-600">Mozilla Observatory API</span>
-                          <code className="text-xs text-gray-500">http-observatory.security.mozilla.org</code>
-                        </h5>
-                        <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-xs font-mono">
-                          {JSON.stringify(validationResults.rawData?.mozilla, null, 2)}
-                        </pre>
-                      </div>
-
                       <div>
                         <h5 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
                           <span className="text-blue-600">Security Headers API</span>

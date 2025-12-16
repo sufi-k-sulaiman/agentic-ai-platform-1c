@@ -12,72 +12,8 @@ Deno.serve(async (req) => {
     // Clean domain input
     const cleanDomain = domain.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
     
-    // Mozilla Observatory - requires polling
-    const getMozillaData = async () => {
-      try {
-        console.log('Starting Mozilla Observatory scan for:', cleanDomain);
-        
-        // Start scan
-        const initResponse = await fetch(`https://http-observatory.security.mozilla.org/api/v1/analyze?host=${cleanDomain}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' }
-        });
-        
-        const contentType = initResponse.headers.get('content-type');
-        if (!contentType || !contentType.includes('application/json')) {
-          console.error('Mozilla Observatory returned non-JSON:', contentType, 'Status:', initResponse.status);
-          return null;
-        }
-        
-        if (!initResponse.ok) {
-          console.error('Mozilla Observatory init failed with status:', initResponse.status);
-          return null;
-        }
-        
-        const initData = await initResponse.json();
-        console.log('Mozilla Observatory scan initiated, state:', initData.state);
-        
-        // Poll for results (max 60 seconds, check every 3 seconds)
-        for (let i = 0; i < 20; i++) {
-          await new Promise(resolve => setTimeout(resolve, 3000)); // Wait 3 seconds
-          const resultResponse = await fetch(`https://http-observatory.security.mozilla.org/api/v1/analyze?host=${cleanDomain}`);
-          
-          const pollContentType = resultResponse.headers.get('content-type');
-          if (!pollContentType || !pollContentType.includes('application/json')) {
-            console.error('Mozilla Observatory poll returned non-JSON');
-            continue;
-          }
-          
-          if (!resultResponse.ok) {
-            console.error('Mozilla Observatory poll failed:', resultResponse.status);
-            continue;
-          }
-          
-          const resultData = await resultResponse.json();
-          console.log(`Mozilla Observatory poll ${i + 1}: ${resultData.state}`);
-          
-          if (resultData.state === 'FINISHED') {
-            console.log('Mozilla Observatory scan completed successfully');
-            return resultData;
-          }
-          
-          if (resultData.state === 'FAILED') {
-            console.error('Mozilla Observatory scan failed:', resultData);
-            return resultData;
-          }
-        }
-        
-        console.warn('Mozilla Observatory timed out after 60s, returning initial data');
-        return initData;
-      } catch (error) {
-        console.error('Mozilla Observatory exception:', error.message);
-        return null;
-      }
-    };
-    
     // Run all API calls in parallel
-    const [mozillaData, securityHeadersData, sslLabsData] = await Promise.allSettled([
-      getMozillaData(),
+    const [securityHeadersData, sslLabsData] = await Promise.allSettled([
       
       // SecurityHeaders.com - Get actual HTTP headers from the domain
       fetch(`https://${cleanDomain}`, {
@@ -117,17 +53,11 @@ Deno.serve(async (req) => {
     ]);
 
     // Calculate scores based on API responses
-    const calculateScore = (value, max) => Math.round((value / max) * 100);
+    const gradeToScore = { 'A+': 100, 'A': 95, 'B': 85, 'C': 75, 'D': 65, 'F': 50 };
     
-    // Mozilla Observatory score (0-100+)
-    const mozScore = mozillaData.status === 'fulfilled' && mozillaData.value?.score 
-      ? Math.min(100, Math.max(0, mozillaData.value.score + 50)) // Normalize from -100-0 to 0-100
-      : 70;
-
     // Security Headers grade to score
     const secHeadersGrade = securityHeadersData.status === 'fulfilled' && securityHeadersData.value?.grade
       ? securityHeadersData.value.grade : 'C';
-    const gradeToScore = { 'A+': 100, 'A': 95, 'B': 85, 'C': 75, 'D': 65, 'F': 50 };
     const secHeadersScore = gradeToScore[secHeadersGrade] || 70;
 
     // SSL Labs score
@@ -151,66 +81,6 @@ Deno.serve(async (req) => {
         legal: { passed: [], failed: [] },
         content: { passed: [], failed: [] }
       };
-
-      // MOZILLA OBSERVATORY - Extract ALL tests with full details
-      if (mozillaData.status === 'fulfilled' && mozillaData.value?.tests) {
-        const tests = mozillaData.value.tests;
-        
-        Object.entries(tests).forEach(([key, test]) => {
-          const passed = test.pass === true;
-          const desc = test.score_description || key.replace(/-/g, ' ').replace(/_/g, ' ');
-          const score = test.score_modifier || 0;
-          const fullDesc = `${desc}${score !== 0 ? ` (score: ${score > 0 ? '+' : ''}${score})` : ''}`;
-          
-          // Map each test to appropriate category with full details
-          if (key === 'content-security-policy' || key === 'csp') {
-            issues.security[passed ? 'passed' : 'failed'].push(fullDesc);
-          } else if (key === 'x-frame-options') {
-            issues.security[passed ? 'passed' : 'failed'].push(`X-Frame-Options: ${desc}`);
-          } else if (key === 'x-content-type-options') {
-            issues.inputHandling[passed ? 'passed' : 'failed'].push(`X-Content-Type-Options: ${desc}`);
-          } else if (key === 'strict-transport-security' || key === 'hsts') {
-            issues.dataProtection[passed ? 'passed' : 'failed'].push(`HSTS: ${desc}`);
-          } else if (key === 'cookies') {
-            issues.authentication[passed ? 'passed' : 'failed'].push(`Cookie Security: ${desc}`);
-          } else if (key === 'cross-origin-resource-sharing' || key === 'cors') {
-            issues.accessControl[passed ? 'passed' : 'failed'].push(`CORS: ${desc}`);
-          } else if (key === 'subresource-integrity' || key === 'sri') {
-            issues.configuration[passed ? 'passed' : 'failed'].push(`Subresource Integrity: ${desc}`);
-          } else if (key === 'referrer-policy') {
-            issues.accessControl[passed ? 'passed' : 'failed'].push(`Referrer-Policy: ${desc}`);
-          } else if (key === 'x-xss-protection') {
-            issues.inputHandling[passed ? 'passed' : 'failed'].push(`XSS Protection: ${desc}`);
-          } else if (key === 'redirection') {
-            issues.configuration[passed ? 'passed' : 'failed'].push(`Redirection: ${desc}`);
-          } else if (key === 'contribute') {
-            issues.legal[passed ? 'passed' : 'failed'].push(`Contribute.json: ${desc}`);
-          } else {
-            issues.monitoring[passed ? 'passed' : 'failed'].push(`${key.replace(/-/g, ' ').replace(/_/g, ' ')}: ${desc}`);
-          }
-        });
-        
-        // Add comprehensive monitoring metrics
-        const score = mozillaData.value?.score;
-        const grade = mozillaData.value?.grade;
-        if (score !== undefined) {
-          issues.monitoring.passed.push(`Observatory Score: ${score > 0 ? '+' : ''}${score}/100`);
-          if (grade) {
-            issues.monitoring.passed.push(`Security Grade: ${grade}`);
-          }
-          if (mozillaData.value?.tests_passed !== undefined) {
-            issues.monitoring.passed.push(`Tests Passed: ${mozillaData.value.tests_passed}/${mozillaData.value.tests_quantity || 'N/A'}`);
-          }
-        }
-        
-        // Add scan metadata
-        if (mozillaData.value?.scan_id) {
-          issues.monitoring.passed.push(`Scan ID: ${mozillaData.value.scan_id}`);
-        }
-      } else {
-        issues.monitoring.failed.push('Mozilla Observatory scan failed or timed out');
-        issues.security.failed.push('Could not verify security headers via Observatory');
-      }
 
       // SECURITY HEADERS - Extract EVERY header with full details
       if (securityHeadersData.status === 'fulfilled' && securityHeadersData.value) {
@@ -535,10 +405,10 @@ Deno.serve(async (req) => {
       }
 
       // DESIGN - Based on security posture
-      if (mozScore >= 80 && secHeadersScore >= 85) {
+      if (secHeadersScore >= 85 && sslScore >= 85) {
         issues.design.passed.push('Strong security foundation');
         issues.design.passed.push('Modern security headers implemented');
-      } else if (mozScore >= 60) {
+      } else if (secHeadersScore >= 70) {
         issues.design.passed.push('Basic security measures in place');
         issues.design.failed.push('Security configuration could be improved');
       } else {
@@ -598,13 +468,13 @@ Deno.serve(async (req) => {
     // Build detailed results
     const results = {
       domain: cleanDomain,
-      security: Math.round((mozScore + secHeadersScore + sslScore) / 3),
-      inputHandling: mozScore > 80 ? 90 : 75,
+      security: Math.round((secHeadersScore + sslScore) / 2),
+      inputHandling: secHeadersScore > 80 ? 90 : 75,
       authentication: sslScore,
       accessControl: secHeadersScore > 80 ? 85 : 70,
-      configuration: Math.round((mozScore + secHeadersScore) / 2),
+      configuration: secHeadersScore,
       dataProtection: sslScore,
-      monitoring: mozScore > 75 ? 85 : 70,
+      monitoring: secHeadersScore > 75 ? 85 : 70,
       design: 80,
       seo: 75,
       performance: 75,
@@ -612,7 +482,6 @@ Deno.serve(async (req) => {
       content: 80,
       issues: detailedIssues,
       rawData: {
-        mozilla: mozillaData.status === 'fulfilled' ? mozillaData.value : null,
         securityHeaders: securityHeadersData.status === 'fulfilled' ? securityHeadersData.value : null,
         sslLabs: sslLabsData.status === 'fulfilled' ? sslLabsData.value : null
       }
