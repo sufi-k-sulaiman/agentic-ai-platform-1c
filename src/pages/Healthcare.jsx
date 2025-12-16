@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heart, TrendingDown, Database, Workflow, DollarSign, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
   {
@@ -90,6 +92,12 @@ const metrics = [
 export default function Healthcare() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Healthcare AI Solutions"
+        description="HIPAA-compliant AI for healthcare reducing admin time by 50% and costs by 40%. Automated documentation, billing, patient care coordination."
+        url="/healthcare"
+        keywords={['healthcare AI', 'medical automation', 'HIPAA compliant', 'clinical documentation', 'patient care']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -190,7 +198,29 @@ export default function Healthcare() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Patient scheduled', description: '8 appointments confirmed', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'Claim processed', description: '25 claims submitted successfully', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:20 AM', action: 'Prior auth approved', description: 'Automated in 2 hours', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'At-risk patient flagged', description: 'Follow-up scheduled', icon: 'AlertCircle', color: 'text-orange-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Admin Time Saved', current: 880, target: 1000, percentage: 88, color: 'bg-purple-500' },
+          { goal: 'Patient Satisfaction', current: 920, target: 1000, percentage: 92, color: 'bg-green-500' },
+          { goal: 'Claim Approval Rate', current: 95, target: 100, percentage: 95, color: 'bg-blue-500' },
+          { goal: 'HIPAA Compliance', current: 100, target: 100, percentage: 100, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Documentation Time Reduced', description: 'Average note time down 50%...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'No-Show Reduction', description: 'AI reminders cut no-shows by 45%...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Billing Improvement', description: 'First-pass claim rate at 95%...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Care Gap Identified', description: '12 patients need preventive screenings...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -229,7 +259,7 @@ export default function Healthcare() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

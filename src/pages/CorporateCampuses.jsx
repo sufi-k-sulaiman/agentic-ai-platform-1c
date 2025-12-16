@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building, TrendingDown, Database, Workflow, DollarSign, Users, Shield, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
   {
@@ -90,6 +92,12 @@ const metrics = [
 export default function CorporateCampuses() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Corporate Campus AI"
+        description="AI-powered workplace management for corporate campuses. 30% cost savings, 40% better space utilization, 24/7 automated services."
+        url="/corporate-campuses"
+        keywords={['corporate campus', 'workplace automation', 'space management', 'facility optimization', 'employee experience']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -204,7 +212,29 @@ export default function CorporateCampuses() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Space optimized', description: '5 meeting rooms reallocated', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'Visitor checked in', description: '12 guests processed automatically', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:20 AM', action: 'Energy reduced', description: 'HVAC optimized in 3 buildings', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Maintenance scheduled', description: 'Elevator service planned', icon: 'AlertCircle', color: 'text-orange-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Space Utilization', current: 820, target: 1000, percentage: 82, color: 'bg-purple-500' },
+          { goal: 'Cost Reduction', current: 750, target: 1000, percentage: 75, color: 'bg-green-500' },
+          { goal: 'Employee Satisfaction', current: 88, target: 100, percentage: 88, color: 'bg-blue-500' },
+          { goal: 'Energy Efficiency', current: 92, target: 100, percentage: 92, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Real Estate Savings', description: 'Space consolidation saved $120K...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Service Improvement', description: 'Average request time down to 4 hours...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Desk Booking', description: '95% utilization achieved this week...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Security Update', description: 'Badge access anomaly detected...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -243,7 +273,7 @@ export default function CorporateCampuses() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

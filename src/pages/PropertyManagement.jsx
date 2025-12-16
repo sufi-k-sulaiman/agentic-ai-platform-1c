@@ -216,7 +216,26 @@ export default function PropertyManagement() {
       </section>
 
       {/* Analytics */}
-      <VerticalAnalytics industry={{}} />
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Maintenance predicted', description: 'HVAC unit scheduled for service', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '10:45 AM', action: 'Work order completed', description: 'Leak repaired automatically', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:20 AM', action: 'Lease renewal sent', description: '15 tenants received offers', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Energy optimized', description: 'Saved $450 on utilities today', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Cost Reduction', current: 850, target: 1000, percentage: 85, color: 'bg-purple-500' },
+          { goal: 'Occupancy Rate', current: 920, target: 1000, percentage: 92, color: 'bg-green-500' },
+          { goal: 'Tenant Satisfaction', current: 88, target: 100, percentage: 88, color: 'bg-blue-500' },
+          { goal: 'Maintenance Efficiency', current: 78, target: 100, percentage: 78, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Rent Collection', description: '98% on-time payment this month...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Lease Renewals', description: '12 leases renewed automatically...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Predictive Alert', description: 'Water heater replacement needed...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Energy Savings', description: 'Monthly utility costs down 15%...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
 
       {/* Challenges */}
       <section className="py-24 bg-gray-50">

@@ -6,6 +6,7 @@ import { Gamepad2, TrendingDown, Database, Workflow, DollarSign, Users, Shield, 
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
   {
