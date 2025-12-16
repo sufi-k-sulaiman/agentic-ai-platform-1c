@@ -234,34 +234,54 @@ export default function SolutionsSection() {
             </motion.div>
           </div>
 
-          {/* Right - Stats Card */}
+          {/* Right - Dynamic Industry Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-[#6209e6] to-[#6B21A8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-2">Proven at scale</h3>
-              <p className="text-sm sm:text-base text-purple-200 mb-6 sm:mb-10">
-                Trusted by leading enterprises worldwide to power their most critical operations.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-                {stats.map((stat, index) => (
-                  <div key={index}>
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
-                    <div className="text-purple-200 text-xs sm:text-sm">{stat.label}</div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedIndustry}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="bg-gradient-to-br from-[#6209e6] to-[#6B21A8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white"
+              >
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">{selectedIndustry}</h3>
+                
+                <div className="space-y-4 mb-8">
+                  <div>
+                    <p className="text-xs font-semibold text-purple-200 mb-1">THE ISSUE</p>
+                    <p className="text-sm sm:text-base">
+                      {industryData[selectedIndustry].issue}
+                    </p>
                   </div>
-                ))}
-              </div>
+                  
+                  <div>
+                    <p className="text-xs font-semibold text-purple-200 mb-1">AGENTIC AI SOLUTION</p>
+                    <p className="text-sm sm:text-base">
+                      {industryData[selectedIndustry].solution}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  {industryData[selectedIndustry].stats.map((stat, index) => (
+                    <div key={index}>
+                      <div className="text-2xl sm:text-3xl font-bold mb-1">{stat.value}</div>
+                      <div className="text-purple-200 text-xs sm:text-sm">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
 
-              {/* Decorative */}
-              <div className="absolute top-6 right-6 w-20 h-20 border border-white/10 rounded-full" />
-              <div className="absolute bottom-10 right-10 w-32 h-32 border border-white/10 rounded-full" />
-            </div>
-
-
+                {/* Decorative */}
+                <div className="absolute top-6 right-6 w-20 h-20 border border-white/10 rounded-full" />
+                <div className="absolute bottom-10 right-10 w-32 h-32 border border-white/10 rounded-full" />
+              </motion.div>
+            </AnimatePresence>
           </motion.div>
         </div>
       </div>
