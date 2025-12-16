@@ -257,7 +257,7 @@ export default function Cyber() {
               </span>
             </h1>
             <p className="text-2xl text-gray-600 leading-relaxed mb-10">
-              Enterprise-grade security and compliance to protect your most sensitive data and AI workloads.
+              Enterprise-grade compliance to protect your most sensitive data and AI workloads.
             </p>
 
           </motion.div>
@@ -269,7 +269,7 @@ export default function Cyber() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Website Security Validator
+              Website Validator
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Validate your domain, website, or endpoint against industry best practices
