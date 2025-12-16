@@ -270,9 +270,6 @@ export default function CertificationDetail() {
                     <Button className="w-full bg-white text-gray-900 hover:bg-gray-100 h-12 text-lg mb-4">
                       Register now
                     </Button>
-                    <Button variant="outline" className="w-full border-white text-white hover:bg-white/10 h-12">
-                      Download study guide
-                    </Button>
                     <div className="mt-6 pt-6 border-t border-white/20 space-y-3 text-sm">
                       <div className="flex items-center justify-between text-purple-200">
                         <span>Preparation time</span>
