@@ -506,6 +506,45 @@ export default function Cyber() {
                     </div>
                   )}
 
+                  {/* Raw API Responses Debug */}
+                  <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                    <div className="bg-gray-900 px-6 py-4 border-b border-gray-700">
+                      <h4 className="font-bold text-lg text-white font-mono">Raw API Responses</h4>
+                      <p className="text-sm text-gray-400">Debug view of actual API data</p>
+                    </div>
+                    <div className="p-6 space-y-6">
+                      <div>
+                        <h5 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                          <span className="text-purple-600">Mozilla Observatory API</span>
+                          <code className="text-xs text-gray-500">http-observatory.security.mozilla.org</code>
+                        </h5>
+                        <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-xs font-mono">
+                          {JSON.stringify(validationResults.rawData?.mozilla, null, 2)}
+                        </pre>
+                      </div>
+
+                      <div>
+                        <h5 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                          <span className="text-blue-600">Security Headers API</span>
+                          <code className="text-xs text-gray-500">Direct header fetch</code>
+                        </h5>
+                        <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-xs font-mono">
+                          {JSON.stringify(validationResults.rawData?.securityHeaders, null, 2)}
+                        </pre>
+                      </div>
+
+                      <div>
+                        <h5 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                          <span className="text-green-600">SSL Labs API</span>
+                          <code className="text-xs text-gray-500">api.ssllabs.com</code>
+                        </h5>
+                        <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-xs font-mono">
+                          {JSON.stringify(validationResults.rawData?.sslLabs, null, 2)}
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Category Breakdown */}
                   <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
                     <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
