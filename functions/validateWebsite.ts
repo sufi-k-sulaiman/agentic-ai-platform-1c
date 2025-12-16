@@ -12,13 +12,36 @@ Deno.serve(async (req) => {
     // Clean domain input
     const cleanDomain = domain.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
     
+    // Mozilla Observatory - requires polling
+    const getMozillaData = async () => {
+      try {
+        // Start scan
+        const initResponse = await fetch(`https://http-observatory.security.mozilla.org/api/v1/analyze?host=${cleanDomain}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const initData = await initResponse.json();
+        
+        // Poll for results (max 30 seconds)
+        for (let i = 0; i < 15; i++) {
+          await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds
+          const resultResponse = await fetch(`https://http-observatory.security.mozilla.org/api/v1/analyze?host=${cleanDomain}`);
+          const resultData = await resultResponse.json();
+          
+          if (resultData.state === 'FINISHED') {
+            return resultData;
+          }
+        }
+        return initData; // Return whatever we have
+      } catch (error) {
+        console.error('Mozilla Observatory error:', error);
+        return null;
+      }
+    };
+    
     // Run all API calls in parallel
     const [mozillaData, securityHeadersData, sslLabsData] = await Promise.allSettled([
-      // Mozilla Observatory
-      fetch(`https://http-observatory.security.mozilla.org/api/v1/analyze?host=${cleanDomain}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' }
-      }).then(res => res.json()),
+      getMozillaData(),
       
       // SecurityHeaders.com - Get actual HTTP headers from the domain
       fetch(`https://${cleanDomain}`, {
