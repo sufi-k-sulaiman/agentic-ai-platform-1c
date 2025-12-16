@@ -479,10 +479,6 @@ export default function CertificationDetail() {
               <Button className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-10 h-16 text-lg">
                 Register for exam
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-10 h-16 text-lg">
-                <Download className="w-5 h-5 mr-2" />
-                Download study guide
-              </Button>
             </div>
           </motion.div>
         </div>
