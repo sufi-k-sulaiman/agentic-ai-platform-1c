@@ -304,20 +304,25 @@ export default function SolutionsSection() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className="bg-gradient-to-br from-[#6209e6] to-[#6B21A8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white"
+                className="bg-gradient-to-br from-[#6209e6] to-[#6B21A8] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white min-h-[600px] flex flex-col"
               >
-                <h3 className="text-xl sm:text-2xl font-bold mb-2">{selectedIndustry}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-6">{selectedIndustry}</h3>
                 
-                <div className="space-y-4 mb-8">
+                <div className="space-y-6 mb-8 flex-1">
                   <div>
-                    <p className="text-xs font-semibold text-purple-200 mb-1">THE ISSUE</p>
-                    <p className="text-sm sm:text-base">
-                      {industryData[selectedIndustry].issue}
-                    </p>
+                    <p className="text-xs font-semibold text-purple-200 mb-3">THE ISSUES</p>
+                    <ul className="space-y-2">
+                      {industryData[selectedIndustry].issues.map((issue, idx) => (
+                        <li key={idx} className="text-sm sm:text-base flex items-start gap-2">
+                          <span className="text-purple-300 mt-1">•</span>
+                          <span>{issue}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
                   <div>
-                    <p className="text-xs font-semibold text-purple-200 mb-1">AGENTIC AI SOLUTION</p>
+                    <p className="text-xs font-semibold text-purple-200 mb-2">AGENTIC AI SOLUTION</p>
                     <p className="text-sm sm:text-base">
                       {industryData[selectedIndustry].solution}
                     </p>
