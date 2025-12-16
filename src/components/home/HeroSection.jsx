@@ -6,12 +6,22 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
 const challenges = [
-  { icon: TrendingUp, title: 'Revenue Optimization', description: 'Analyzing market trends', color: 'from-green-500 to-emerald-500' },
-  { icon: Clock, title: 'Process Automation', description: 'Streamlining workflows', color: 'from-blue-500 to-cyan-500' },
-  { icon: DollarSign, title: 'Cost Reduction', description: 'Finding savings opportunities', color: 'from-purple-500 to-pink-500' },
-  { icon: Target, title: 'Performance Tracking', description: 'Monitoring KPIs in real-time', color: 'from-orange-500 to-red-500' },
-  { icon: BarChart3, title: 'Data Analysis', description: 'Processing insights', color: 'from-indigo-500 to-violet-500' },
-  { icon: UsersIcon, title: 'Customer Experience', description: 'Enhancing satisfaction', color: 'from-teal-500 to-cyan-500' }
+  { icon: TrendingUp, title: 'Revenue Optimization', description: 'Analyzing market trends', color: 'from-green-500 to-emerald-500', efficiency: '+45%', savings: '32%' },
+  { icon: Clock, title: 'Process Automation', description: 'Streamlining workflows', color: 'from-blue-500 to-cyan-500', efficiency: '+67%', savings: '41%' },
+  { icon: DollarSign, title: 'Cost Reduction', description: 'Finding savings opportunities', color: 'from-purple-500 to-pink-500', efficiency: '+52%', savings: '38%' },
+  { icon: Target, title: 'Performance Tracking', description: 'Monitoring KPIs in real-time', color: 'from-orange-500 to-red-500', efficiency: '+58%', savings: '29%' },
+  { icon: BarChart3, title: 'Data Analysis', description: 'Processing insights', color: 'from-indigo-500 to-violet-500', efficiency: '+71%', savings: '35%' },
+  { icon: UsersIcon, title: 'Customer Experience', description: 'Enhancing satisfaction', color: 'from-teal-500 to-cyan-500', efficiency: '+63%', savings: '27%' },
+  { icon: Building2, title: 'Resource Planning', description: 'Optimizing allocations', color: 'from-blue-600 to-indigo-600', efficiency: '+49%', savings: '33%' },
+  { icon: Server, title: 'Infrastructure Management', description: 'Scaling efficiently', color: 'from-gray-500 to-slate-600', efficiency: '+55%', savings: '44%' },
+  { icon: Landmark, title: 'Compliance Monitoring', description: 'Ensuring regulations', color: 'from-amber-500 to-yellow-600', efficiency: '+61%', savings: '24%' },
+  { icon: Heart, title: 'Quality Assurance', description: 'Maintaining standards', color: 'from-red-500 to-rose-600', efficiency: '+48%', savings: '31%' },
+  { icon: Train, title: 'Supply Chain', description: 'Managing logistics', color: 'from-cyan-500 to-blue-500', efficiency: '+54%', savings: '39%' },
+  { icon: TrafficCone, title: 'Risk Management', description: 'Mitigating threats', color: 'from-orange-600 to-red-600', efficiency: '+59%', savings: '28%' },
+  { icon: Zap, title: 'Energy Optimization', description: 'Reducing consumption', color: 'from-yellow-500 to-amber-500', efficiency: '+64%', savings: '47%' },
+  { icon: ShoppingBag, title: 'Inventory Control', description: 'Managing stock levels', color: 'from-pink-500 to-rose-500', efficiency: '+51%', savings: '36%' },
+  { icon: Shield, title: 'Security Operations', description: 'Protecting assets', color: 'from-slate-600 to-gray-700', efficiency: '+69%', savings: '26%' },
+  { icon: Plane, title: 'Operations Coordination', description: 'Synchronizing teams', color: 'from-sky-500 to-blue-600', efficiency: '+57%', savings: '34%' }
 ];
 
 const verticals = [
@@ -129,29 +139,517 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Floating Cards - AI Processing Challenges */}
-          <div className="absolute top-[8%] left-[5%] w-64 z-10">
+          {/* Floating Challenge Cards - Left Side */}
+          <div className="absolute top-[8%] left-[3%] w-56 z-10">
             <AnimatePresence mode="wait">
               <motion.div 
                 key={currentChallenge}
-                className="bg-white rounded-2xl shadow-lg p-5"
-                initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, x: -20, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -20, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
               >
-                <div className={`w-12 h-12 bg-gradient-to-br ${challenges[currentChallenge].color} rounded-xl flex items-center justify-center mb-3`}>
-                  {React.createElement(challenges[currentChallenge].icon, { className: "w-6 h-6 text-white" })}
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[currentChallenge].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[currentChallenge].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[currentChallenge].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[currentChallenge].description}</p>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-1">{challenges[currentChallenge].title}</h3>
-                <p className="text-sm text-gray-500 mb-3">{challenges[currentChallenge].description}</p>
-                <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
                   <motion.div 
-                    className={`h-2 rounded-full bg-gradient-to-r ${challenges[currentChallenge].color}`}
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[currentChallenge].color}`}
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 3, ease: "easeInOut" }}
                   />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[currentChallenge].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[currentChallenge].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Top Left */}
+          <div className="absolute top-[3%] left-[15%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 1}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, y: -20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 1) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 1) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 1) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 1) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 1) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 1) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 1) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Top Center */}
+          <div className="absolute top-[3%] left-[42%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 2}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, y: -20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 2) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 2) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 2) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 2) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 2) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 2) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 2) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Top Right */}
+          <div className="absolute top-[3%] right-[15%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 3}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, y: -20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 3) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 3) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 3) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 3) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 3) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 3) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 3) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right Side Top */}
+          <div className="absolute top-[8%] right-[3%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 4}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 4) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 4) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 4) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 4) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 4) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 4) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 4) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Left Side Middle */}
+          <div className="absolute top-[32%] left-[3%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 5}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, x: -20, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 5) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 5) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 5) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 5) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 5) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 5) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 5) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right Side Middle */}
+          <div className="absolute top-[32%] right-[3%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 6}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 6) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 6) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 6) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 6) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 6) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 6) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 6) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Left Side Bottom */}
+          <div className="absolute bottom-[20%] left-[3%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 7}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, x: -20, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 7) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 7) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 7) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 7) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 7) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 7) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 7) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right Side Bottom */}
+          <div className="absolute bottom-[20%] right-[3%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 8}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 8) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 8) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 8) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 8) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 8) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 8) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 8) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Bottom Left */}
+          <div className="absolute bottom-[8%] left-[15%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 9}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 9) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 9) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 9) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 9) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 9) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 9) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 9) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Bottom Center */}
+          <div className="absolute bottom-[8%] left-[42%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 10}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 10) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 10) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 10) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 10) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 10) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 10) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 10) % challenges.length].savings}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Bottom Right */}
+          <div className="absolute bottom-[8%] right-[15%] w-56 z-10">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentChallenge + 11}
+                className="bg-white rounded-2xl shadow-lg p-4"
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {React.createElement(challenges[(currentChallenge + 11) % challenges.length].icon, { 
+                    className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + 11) % challenges.length].color} bg-clip-text`,
+                    style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
+                  })}
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + 11) % challenges.length].title}</h3>
+                    <p className="text-xs text-gray-500">{challenges[(currentChallenge + 11) % challenges.length].description}</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
+                  <motion.div 
+                    className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + 11) % challenges.length].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+                <div className="flex gap-4 text-xs">
+                  <div>
+                    <div className="text-gray-500">Efficiency</div>
+                    <div className="font-semibold text-green-600">{challenges[(currentChallenge + 11) % challenges.length].efficiency}</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-500">OpEx Savings</div>
+                    <div className="font-semibold text-blue-600">{challenges[(currentChallenge + 11) % challenges.length].savings}</div>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
