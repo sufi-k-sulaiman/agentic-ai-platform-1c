@@ -481,7 +481,7 @@ export default function Courses() {
                       onClick={() => setWorkflowOpen(true)}
                       className={`w-full ${plan.badge ? 'bg-[#8B2EE5] hover:bg-[#7325C4] text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                     >
-                      {plan.price === 'Custom' ? 'Contact sales' : 'Start free trial'}
+                      {plan.price === 'Custom' ? 'Contact sales' : 'Start Now'}
                     </Button>
                   </CardContent>
                 </Card>
