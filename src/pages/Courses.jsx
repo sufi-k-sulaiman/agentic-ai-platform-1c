@@ -210,7 +210,7 @@ export default function Courses() {
                 onClick={() => setWorkflowOpen(true)}
                 className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base"
               >
-                Start free trial <ArrowRight className="ml-2 w-5 h-5" />
+                Start Now <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
             <p className="text-sm text-gray-500 mt-4">14-day free trial • No credit card required</p>
