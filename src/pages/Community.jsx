@@ -171,7 +171,7 @@ const discussions = [
     likes: 67,
     isPinned: false,
     timestamp: '1 week ago',
-    preview: 'Successfully automated our tenant onboarding process, reducing time from 5 days to 2 hours. Here's our approach...',
+    preview: 'Successfully automated our tenant onboarding process, reducing time from 5 days to 2 hours. Here\'s our approach...',
     tags: ['property', 'automation', 'tenants']
   },
   {
