@@ -670,6 +670,8 @@ export default function Community() {
     name: '',
     email: ''
   });
+  const [discussionErrors, setDiscussionErrors] = useState({});
+  const [replyErrors, setReplyErrors] = useState({});
 
   const filteredDiscussions = selectedCategory === 'all' 
     ? discussions 
@@ -888,11 +890,14 @@ export default function Community() {
                   <input
                     type="text"
                     value={newDiscussionData.authorName}
-                    onChange={(e) => setNewDiscussionData({ ...newDiscussionData, authorName: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent"
+                    onChange={(e) => {
+                      setNewDiscussionData({ ...newDiscussionData, authorName: e.target.value });
+                      setDiscussionErrors({ ...discussionErrors, authorName: '' });
+                    }}
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent ${discussionErrors.authorName ? 'border-red-500' : 'border-gray-300'}`}
                     placeholder="Enter your name"
-                    required
                   />
+                  {discussionErrors.authorName && <p className="text-red-500 text-sm mt-1">{discussionErrors.authorName}</p>}
                 </div>
 
                 <div>
@@ -900,11 +905,14 @@ export default function Community() {
                   <input
                     type="email"
                     value={newDiscussionData.authorEmail}
-                    onChange={(e) => setNewDiscussionData({ ...newDiscussionData, authorEmail: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent"
+                    onChange={(e) => {
+                      setNewDiscussionData({ ...newDiscussionData, authorEmail: e.target.value });
+                      setDiscussionErrors({ ...discussionErrors, authorEmail: '' });
+                    }}
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent ${discussionErrors.authorEmail ? 'border-red-500' : 'border-gray-300'}`}
                     placeholder="your@email.com"
-                    required
                   />
+                  {discussionErrors.authorEmail && <p className="text-red-500 text-sm mt-1">{discussionErrors.authorEmail}</p>}
                 </div>
 
                 <div>
@@ -925,22 +933,28 @@ export default function Community() {
                   <input
                     type="text"
                     value={newDiscussionData.title}
-                    onChange={(e) => setNewDiscussionData({ ...newDiscussionData, title: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent"
+                    onChange={(e) => {
+                      setNewDiscussionData({ ...newDiscussionData, title: e.target.value });
+                      setDiscussionErrors({ ...discussionErrors, title: '' });
+                    }}
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent ${discussionErrors.title ? 'border-red-500' : 'border-gray-300'}`}
                     placeholder="What's your discussion about?"
-                    required
                   />
+                  {discussionErrors.title && <p className="text-red-500 text-sm mt-1">{discussionErrors.title}</p>}
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Content *</label>
                   <Textarea
                     value={newDiscussionData.content}
-                    onChange={(e) => setNewDiscussionData({ ...newDiscussionData, content: e.target.value })}
-                    className="min-h-[200px]"
+                    onChange={(e) => {
+                      setNewDiscussionData({ ...newDiscussionData, content: e.target.value });
+                      setDiscussionErrors({ ...discussionErrors, content: '' });
+                    }}
+                    className={`min-h-[200px] ${discussionErrors.content ? 'border-red-500' : ''}`}
                     placeholder="Share your thoughts, questions, or insights..."
-                    required
                   />
+                  {discussionErrors.content && <p className="text-red-500 text-sm mt-1">{discussionErrors.content}</p>}
                 </div>
 
                 <div>
@@ -965,37 +979,33 @@ export default function Community() {
                   <Button
                     className="flex-1 bg-[#8B2EE5] hover:bg-[#7325C4]"
                     onClick={() => {
-                      // Validate required fields
+                      const errors = {};
+                      
                       if (!newDiscussionData.authorName.trim()) {
-                        alert('Please enter your name');
-                        return;
+                        errors.authorName = 'Please enter your name';
                       }
                       if (!newDiscussionData.authorEmail.trim()) {
-                        alert('Please enter your email');
-                        return;
-                      }
-                      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newDiscussionData.authorEmail)) {
-                        alert('Please enter a valid email address');
-                        return;
+                        errors.authorEmail = 'Please enter your email';
+                      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newDiscussionData.authorEmail)) {
+                        errors.authorEmail = 'Please enter a valid email address';
                       }
                       if (!newDiscussionData.title.trim()) {
-                        alert('Please enter a title');
-                        return;
-                      }
-                      if (newDiscussionData.title.trim().length < 10) {
-                        alert('Title must be at least 10 characters long');
-                        return;
+                        errors.title = 'Please enter a title';
+                      } else if (newDiscussionData.title.trim().length < 10) {
+                        errors.title = 'Title must be at least 10 characters long';
                       }
                       if (!newDiscussionData.content.trim()) {
-                        alert('Please enter content');
-                        return;
+                        errors.content = 'Please enter content';
+                      } else if (newDiscussionData.content.trim().length < 20) {
+                        errors.content = 'Content must be at least 20 characters long';
                       }
-                      if (newDiscussionData.content.trim().length < 20) {
-                        alert('Content must be at least 20 characters long');
+                      
+                      if (Object.keys(errors).length > 0) {
+                        setDiscussionErrors(errors);
                         return;
                       }
                       
-                      // Handle submission here
+                      setDiscussionErrors({});
                       setShowNewDiscussion(false);
                       setNewDiscussionData({
                         title: '',
@@ -1110,20 +1120,28 @@ export default function Community() {
                         <input
                           type="text"
                           value={replyData.name}
-                          onChange={(e) => setReplyData({ ...replyData, name: e.target.value })}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent text-sm"
+                          onChange={(e) => {
+                            setReplyData({ ...replyData, name: e.target.value });
+                            setReplyErrors({ ...replyErrors, name: '' });
+                          }}
+                          className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent text-sm ${replyErrors.name ? 'border-red-500' : 'border-gray-300'}`}
                           placeholder="Enter your name"
                         />
+                        {replyErrors.name && <p className="text-red-500 text-xs mt-1">{replyErrors.name}</p>}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">Your Email *</label>
                         <input
                           type="email"
                           value={replyData.email}
-                          onChange={(e) => setReplyData({ ...replyData, email: e.target.value })}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent text-sm"
+                          onChange={(e) => {
+                            setReplyData({ ...replyData, email: e.target.value });
+                            setReplyErrors({ ...replyErrors, email: '' });
+                          }}
+                          className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-[#8B2EE5] focus:border-transparent text-sm ${replyErrors.email ? 'border-red-500' : 'border-gray-300'}`}
                           placeholder="your@email.com"
                         />
+                        {replyErrors.email && <p className="text-red-500 text-xs mt-1">{replyErrors.email}</p>}
                       </div>
                     </div>
                     <div>
@@ -1131,37 +1149,40 @@ export default function Community() {
                       <Textarea
                         placeholder="Share your thoughts..."
                         value={replyData.content}
-                        onChange={(e) => setReplyData({ ...replyData, content: e.target.value })}
-                        className="mb-3"
+                        onChange={(e) => {
+                          setReplyData({ ...replyData, content: e.target.value });
+                          setReplyErrors({ ...replyErrors, content: '' });
+                        }}
+                        className={`mb-1 ${replyErrors.content ? 'border-red-500' : ''}`}
                         rows={4}
                       />
+                      {replyErrors.content && <p className="text-red-500 text-xs mb-2">{replyErrors.content}</p>}
                     </div>
                     <Button 
                       className="bg-[#8B2EE5] hover:bg-[#7325C4]"
                       onClick={() => {
-                        // Validate required fields
+                        const errors = {};
+                        
                         if (!replyData.name.trim()) {
-                          alert('Please enter your name');
-                          return;
+                          errors.name = 'Please enter your name';
                         }
                         if (!replyData.email.trim()) {
-                          alert('Please enter your email');
-                          return;
-                        }
-                        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(replyData.email)) {
-                          alert('Please enter a valid email address');
-                          return;
+                          errors.email = 'Please enter your email';
+                        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(replyData.email)) {
+                          errors.email = 'Please enter a valid email address';
                         }
                         if (!replyData.content.trim()) {
-                          alert('Please enter your reply');
-                          return;
+                          errors.content = 'Please enter your reply';
+                        } else if (replyData.content.trim().length < 10) {
+                          errors.content = 'Reply must be at least 10 characters long';
                         }
-                        if (replyData.content.trim().length < 10) {
-                          alert('Reply must be at least 10 characters long');
+                        
+                        if (Object.keys(errors).length > 0) {
+                          setReplyErrors(errors);
                           return;
                         }
                         
-                        // Handle reply submission
+                        setReplyErrors({});
                         setReplyData({ content: '', name: '', email: '' });
                       }}
                     >
