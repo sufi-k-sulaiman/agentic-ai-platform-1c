@@ -43,16 +43,26 @@ const verticals = [
 
 export default function HeroSection() {
   const [currentChallenge, setCurrentChallenge] = useState(0);
-  const [efficiencyValue, setEfficiencyValue] = useState(127);
+  const [efficiencyValue, setEfficiencyValue] = useState(0);
 
   useEffect(() => {
+    // Calculate average efficiency from current 4 corner cards
+    const calculateAverage = () => {
+      let sum = 0;
+      for (let i = 0; i < 4; i++) {
+        const efficiency = challenges[(currentChallenge + i) % challenges.length].efficiency;
+        sum += parseInt(efficiency.replace('+', '').replace('%', ''));
+      }
+      return Math.round(sum / 4);
+    };
+
+    setEfficiencyValue(calculateAverage());
+
     const interval = setInterval(() => {
       setCurrentChallenge((prev) => (prev + 1) % challenges.length);
-      // Randomize efficiency value between 80 and 150
-      setEfficiencyValue(Math.floor(Math.random() * 71) + 80);
     }, 5075);
     return () => clearInterval(interval);
-  }, []);
+  }, [currentChallenge]);
 
   const cardPositions = [
     { className: "absolute top-[5%] left-[5%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
@@ -216,7 +226,7 @@ export default function HeroSection() {
               transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, delay: 0.6 }}
             >
               <div className="flex items-center justify-center gap-2 mb-2">
                 <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
