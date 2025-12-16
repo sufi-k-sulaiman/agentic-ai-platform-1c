@@ -6,20 +6,20 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
 const verticals = [
-  { icon: Building2, name: 'Property Management', color: 'from-blue-500 to-cyan-500' },
-  { icon: Server, name: 'Data Centers', color: 'from-indigo-500 to-purple-500' },
-  { icon: Landmark, name: 'Financial Services', color: 'from-green-500 to-emerald-500' },
-  { icon: Heart, name: 'Healthcare', color: 'from-red-500 to-pink-500' },
-  { icon: Building, name: 'Corporate Campuses', color: 'from-orange-500 to-amber-500' },
-  { icon: Train, name: 'Public Transit', color: 'from-teal-500 to-cyan-500' },
-  { icon: TrafficCone, name: 'Traffic Management', color: 'from-yellow-500 to-orange-500' },
-  { icon: Zap, name: 'Energy & Utilities', color: 'from-lime-500 to-green-500' },
-  { icon: ShoppingBag, name: 'Retail', color: 'from-pink-500 to-rose-500' },
-  { icon: GraduationCap, name: 'Education', color: 'from-violet-500 to-purple-500' },
-  { icon: Gamepad2, name: 'Gaming', color: 'from-fuchsia-500 to-pink-500' },
-  { icon: Shield, name: 'Government', color: 'from-slate-500 to-gray-500' },
-  { icon: Plane, name: 'Airports', color: 'from-sky-500 to-blue-500' },
-  { icon: Users, name: 'Sports & Entertainment', color: 'from-rose-500 to-red-500' }
+  { icon: Building2, name: 'Property Management', color: 'from-blue-500 to-cyan-500', page: 'PropertyManagement' },
+  { icon: Server, name: 'Data Centers', color: 'from-indigo-500 to-purple-500', page: 'DataCenters' },
+  { icon: Landmark, name: 'Financial Services', color: 'from-green-500 to-emerald-500', page: 'FinancialInstitutions' },
+  { icon: Heart, name: 'Healthcare', color: 'from-red-500 to-pink-500', page: 'Healthcare' },
+  { icon: Building, name: 'Corporate Campuses', color: 'from-orange-500 to-amber-500', page: 'CorporateCampuses' },
+  { icon: Train, name: 'Public Transit', color: 'from-teal-500 to-cyan-500', page: 'Transit' },
+  { icon: TrafficCone, name: 'Traffic Management', color: 'from-yellow-500 to-orange-500', page: 'Traffic' },
+  { icon: Zap, name: 'Energy & Utilities', color: 'from-lime-500 to-green-500', page: 'EnergyUtilities' },
+  { icon: ShoppingBag, name: 'Retail', color: 'from-pink-500 to-rose-500', page: 'Retail' },
+  { icon: GraduationCap, name: 'Education', color: 'from-violet-500 to-purple-500', page: 'Education' },
+  { icon: Gamepad2, name: 'Gaming', color: 'from-fuchsia-500 to-pink-500', page: 'Gaming' },
+  { icon: Shield, name: 'Government', color: 'from-slate-500 to-gray-500', page: 'GovernmentAgencies' },
+  { icon: Plane, name: 'Airports', color: 'from-sky-500 to-blue-500', page: 'Airports' },
+  { icon: Users, name: 'Sports & Entertainment', color: 'from-rose-500 to-red-500', page: 'SportsEntertainment' }
 ];
 
 export default function HeroSection() {
@@ -197,12 +197,14 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="group"
               >
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 border border-purple-100/50 h-full flex flex-col items-center text-center">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${vertical.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
-                    <vertical.icon className="w-6 h-6 text-white" />
+                <Link to={createPageUrl(vertical.page)}>
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 border border-purple-100/50 h-full flex flex-col items-center text-center cursor-pointer">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${vertical.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                      <vertical.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-semibold text-gray-900 text-sm leading-tight">{vertical.name}</h3>
                   </div>
-                  <h3 className="font-semibold text-gray-900 text-sm leading-tight">{vertical.name}</h3>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
