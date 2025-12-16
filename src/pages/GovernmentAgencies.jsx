@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2, TrendingDown, Database, Workflow, DollarSign, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
   {
@@ -196,7 +197,29 @@ export default function GovernmentAgencies() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Permit approved', description: 'Business license processed in 2 hours', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'Citizen inquiry handled', description: 'AI assistant resolved 15 questions', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:20 AM', action: 'Compliance report generated', description: 'Quarterly audit completed', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Public records request', description: 'Documents retrieved and sent', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Processing Speed', current: 850, target: 1000, percentage: 85, color: 'bg-purple-500' },
+          { goal: 'Citizen Satisfaction', current: 780, target: 1000, percentage: 78, color: 'bg-green-500' },
+          { goal: 'Cost Efficiency', current: 92, target: 100, percentage: 92, color: 'bg-blue-500' },
+          { goal: 'Compliance Score', current: 100, target: 100, percentage: 100, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Processing Time Improved', description: 'Average permit time down to 4 hours...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Budget Savings', description: 'Monthly operational costs reduced 40%...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Service Expansion', description: 'AI services now available in 5 languages...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Citizen Engagement', description: 'Portal usage increased 65%...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -235,7 +258,7 @@ export default function GovernmentAgencies() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

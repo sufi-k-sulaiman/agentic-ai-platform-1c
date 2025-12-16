@@ -182,7 +182,29 @@ export default function Education() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Assignment graded', description: '32 student submissions processed', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'At-risk student identified', description: 'Early intervention triggered', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '11:20 AM', action: 'Lesson plan generated', description: 'Personalized content created', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Parent notification sent', description: 'Progress reports delivered', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Student Engagement', current: 880, target: 1000, percentage: 88, color: 'bg-purple-500' },
+          { goal: 'Learning Outcomes', current: 750, target: 1000, percentage: 75, color: 'bg-green-500' },
+          { goal: 'Admin Time Saved', current: 92, target: 100, percentage: 92, color: 'bg-blue-500' },
+          { goal: 'Retention Rate', current: 85, target: 100, percentage: 85, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Improved Test Scores', description: 'Class average up 15% this semester...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Attendance Boost', description: 'Daily attendance at 96%...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'New Content', description: 'AI generated 12 personalized lessons...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Parent Engagement', description: 'Parent portal usage increased 40%...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -221,7 +243,7 @@ export default function Education() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

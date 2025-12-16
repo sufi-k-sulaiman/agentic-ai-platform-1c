@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Train, TrendingDown, Database, Workflow, DollarSign, Users, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
   {
@@ -203,7 +204,29 @@ export default function Transit() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Route optimized', description: 'Line 42 delay avoided', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'Maintenance predicted', description: 'Bus 847 service scheduled', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '11:20 AM', action: 'Real-time update sent', description: '5,000 passengers notified', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Capacity adjusted', description: 'Extra train added to route', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'On-Time Performance', current: 920, target: 1000, percentage: 92, color: 'bg-purple-500' },
+          { goal: 'Passenger Satisfaction', current: 850, target: 1000, percentage: 85, color: 'bg-green-500' },
+          { goal: 'Maintenance Efficiency', current: 78, target: 100, percentage: 78, color: 'bg-blue-500' },
+          { goal: 'Cost Reduction', current: 65, target: 100, percentage: 65, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Route Performance', description: 'Line 42 achieved 95% on-time today...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Ridership Increase', description: 'Monthly ridership up 12%...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Predictive Maintenance', description: '3 vehicles scheduled for service...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Weather Advisory', description: 'Snow expected, routes adjusted...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -242,7 +265,7 @@ export default function Transit() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

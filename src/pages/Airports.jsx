@@ -182,7 +182,29 @@ export default function Airports() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Gate reassigned', description: 'Flight 458 optimized for connections', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'Baggage rerouted', description: 'Missed connection prevented', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '11:20 AM', action: 'Security optimized', description: 'Wait time reduced to 8 minutes', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Delay predicted', description: 'Passengers notified 30min early', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'On-Time Performance', current: 880, target: 1000, percentage: 88, color: 'bg-purple-500' },
+          { goal: 'Passenger Satisfaction', current: 850, target: 1000, percentage: 85, color: 'bg-green-500' },
+          { goal: 'Baggage Accuracy', current: 95, target: 100, percentage: 95, color: 'bg-blue-500' },
+          { goal: 'Operational Efficiency', current: 82, target: 100, percentage: 82, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'On-Time Record', description: '94% of flights departed on schedule today...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Revenue Increase', description: 'Concessions revenue up 18%...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Gate Optimization', description: 'Average taxi time reduced 12%...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Weather Advisory', description: 'Storm approaching, operations adjusted...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -221,7 +243,7 @@ export default function Airports() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

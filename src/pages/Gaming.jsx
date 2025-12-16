@@ -182,7 +182,29 @@ export default function Gaming() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Server scaled up', description: '50 new instances provisioned', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'Cheat detected', description: 'Player banned automatically', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '11:20 AM', action: 'Support ticket resolved', description: 'AI handled 45 inquiries', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Event deployed', description: 'New content launched successfully', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Infrastructure Cost Optimization', current: 820, target: 1000, percentage: 82, color: 'bg-purple-500' },
+          { goal: 'Support Automation', current: 900, target: 1000, percentage: 90, color: 'bg-green-500' },
+          { goal: 'Cheat Detection Accuracy', current: 99, target: 100, percentage: 99, color: 'bg-blue-500' },
+          { goal: 'Player Retention', current: 75, target: 100, percentage: 75, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Cost Savings', description: 'Infrastructure costs down 35% this month...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Active Players', description: 'Concurrent users at all-time high...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Balance Update', description: 'AI detected meta shift, adjustments ready...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Revenue Milestone', description: 'Daily revenue increased 20%...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -221,7 +243,7 @@ export default function Gaming() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
