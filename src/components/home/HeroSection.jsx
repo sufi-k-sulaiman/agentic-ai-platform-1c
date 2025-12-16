@@ -137,7 +137,7 @@ export default function HeroSection() {
           {/* Sonar Wave Rings - Slow Pulsing */}
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
-              className="absolute w-[200px] h-[200px] rounded-full border-2 border-purple-300/30"
+              className="absolute w-[280px] h-[280px] rounded-full border-2 border-purple-300/30"
               animate={{ 
                 scale: [1, 1.8, 1],
                 opacity: [0.4, 0.1, 0.4]
@@ -149,7 +149,7 @@ export default function HeroSection() {
               }}
             />
             <motion.div
-              className="absolute w-[200px] h-[200px] rounded-full border-2 border-purple-300/30"
+              className="absolute w-[280px] h-[280px] rounded-full border-2 border-purple-300/30"
               animate={{ 
                 scale: [1, 1.8, 1],
                 opacity: [0.4, 0.1, 0.4]
@@ -162,7 +162,7 @@ export default function HeroSection() {
               }}
             />
             <motion.div
-              className="absolute w-[200px] h-[200px] rounded-full border-2 border-purple-300/30"
+              className="absolute w-[280px] h-[280px] rounded-full border-2 border-purple-300/30"
               animate={{ 
                 scale: [1, 1.8, 1],
                 opacity: [0.4, 0.1, 0.4]
