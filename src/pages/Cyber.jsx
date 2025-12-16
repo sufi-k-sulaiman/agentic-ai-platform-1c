@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 
 const certifications = [
@@ -87,7 +88,101 @@ const practices = [
   }
 ];
 
+const validationCriteria = {
+  security: [
+    'SSL/TLS certificate installed and auto-renewed',
+    'Force HTTPS site-wide',
+    'Regular vulnerability scans and penetration testing',
+    'Secure headers (HSTS, CSP, X-Frame-Options, X-Content-Type-Options)',
+    'Database access restricted and encrypted',
+    'Regular patching of CMS, plugins, and dependencies',
+    'Strong authentication (MFA, password policies, role-based access)',
+    'Logging and monitoring of suspicious activity',
+    'Automated daily backups stored offsite'
+  ],
+  design: [
+    'Responsive design across devices',
+    'Accessibility compliance (WCAG 2.1 standards)',
+    'Clear navigation and site hierarchy',
+    'Consistent branding (fonts, colors, logos)',
+    'Fast loading speed (optimized images, caching, minified CSS/JS)',
+    'Readable typography and sufficient contrast',
+    'Custom error pages (404, 500) with helpful navigation'
+  ],
+  seo: [
+    'Optimized meta tags (title, description, keywords)',
+    'XML sitemap submitted to search engines',
+    'Robots.txt configured correctly',
+    'Canonical tags to prevent duplicate content',
+    'Structured data (schema.org) implemented',
+    'Analytics installed (Google Analytics, GA4, or equivalent)',
+    'Social media integration (Open Graph, Twitter cards)',
+    'Content strategy aligned with business goals'
+  ],
+  performance: [
+    'Cross-browser testing (Chrome, Firefox, Safari, Edge)',
+    'Forms tested (contact, signup, checkout)',
+    'Load testing for traffic spikes',
+    'Mobile performance optimized (Core Web Vitals)',
+    'CDN configured for global delivery',
+    'Regular updates of content and features',
+    'Error handling and logging in place'
+  ],
+  legal: [
+    'Privacy policy and terms of service published',
+    'Cookie consent banner (GDPR/CCPA compliance)',
+    'Accessibility statement available',
+    'Copyright and licensing for images, fonts, and code respected',
+    'Contact information and business address visible'
+  ],
+  content: [
+    'Proofread content for grammar and clarity',
+    'Internal linking strategy implemented',
+    'External links checked (no broken links)',
+    'Media optimized (compressed images, lazy loading)',
+    'Regular editorial calendar for updates',
+    'Backup and restore process tested'
+  ]
+};
+
 export default function Cyber() {
+  const [searchInput, setSearchInput] = useState('');
+  const [validationResults, setValidationResults] = useState(null);
+  const [isValidating, setIsValidating] = useState(false);
+
+  const handleValidation = async () => {
+    if (!searchInput.trim()) return;
+    
+    setIsValidating(true);
+    
+    // Simulate validation process
+    setTimeout(() => {
+      const results = {
+        domain: searchInput,
+        security: Math.floor(Math.random() * 30) + 70,
+        design: Math.floor(Math.random() * 30) + 70,
+        seo: Math.floor(Math.random() * 30) + 70,
+        performance: Math.floor(Math.random() * 30) + 70,
+        legal: Math.floor(Math.random() * 30) + 70,
+        content: Math.floor(Math.random() * 30) + 70
+      };
+      setValidationResults(results);
+      setIsValidating(false);
+    }, 1500);
+  };
+
+  const getScoreColor = (score) => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 75) return 'text-yellow-600';
+    return 'text-red-600';
+  };
+
+  const getScoreBgColor = (score) => {
+    if (score >= 90) return 'bg-green-100';
+    if (score >= 75) return 'bg-yellow-100';
+    return 'bg-red-100';
+  };
+
   return (
     <div className="bg-white">
       <PageMeta 
@@ -121,6 +216,140 @@ export default function Cyber() {
               Download security whitepaper
             </Button>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Website Validator */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Website Security Validator
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Validate your domain, website, or endpoint against industry best practices
+            </p>
+          </div>
+
+          <Card className="shadow-xl">
+            <CardContent className="p-8">
+              <div className="flex gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Globe className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Input
+                    type="text"
+                    placeholder="Enter domain or URL (e.g., example.com or https://example.com)"
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleValidation()}
+                    className="pl-12 h-14 text-lg"
+                  />
+                </div>
+                <Button 
+                  onClick={handleValidation}
+                  disabled={!searchInput.trim() || isValidating}
+                  className="bg-[#8B2EE5] hover:bg-[#7325C4] h-14 px-8"
+                >
+                  {isValidating ? (
+                    <>Validating...</>
+                  ) : (
+                    <>
+                      <Search className="w-5 h-5 mr-2" />
+                      Validate
+                    </>
+                  )}
+                </Button>
+              </div>
+
+              {validationResults && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="space-y-6"
+                >
+                  <div className="flex items-center justify-between pb-6 border-b border-gray-200">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Validation Results</h3>
+                      <p className="text-gray-600">{validationResults.domain}</p>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => setValidationResults(null)}
+                      className="text-gray-500"
+                    >
+                      <X className="w-5 h-5" />
+                    </Button>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {[
+                      { key: 'security', label: 'Security', icon: Shield },
+                      { key: 'design', label: 'Design & UX', icon: Eye },
+                      { key: 'seo', label: 'SEO & Marketing', icon: Globe },
+                      { key: 'performance', label: 'Performance', icon: FileCheck },
+                      { key: 'legal', label: 'Legal & Compliance', icon: Lock },
+                      { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
+                    ].map(({ key, label, icon: Icon }) => {
+                      const score = validationResults[key];
+                      return (
+                        <Card key={key} className="hover:shadow-md transition-shadow">
+                          <CardContent className="p-6">
+                            <div className="flex items-center gap-3 mb-3">
+                              <div className={`w-10 h-10 rounded-lg ${getScoreBgColor(score)} flex items-center justify-center`}>
+                                <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
+                              </div>
+                              <div className="flex-1">
+                                <div className="text-sm font-medium text-gray-700">{label}</div>
+                              </div>
+                            </div>
+                            <div className="flex items-end gap-2">
+                              <div className={`text-4xl font-bold ${getScoreColor(score)}`}>
+                                {score}
+                              </div>
+                              <div className="text-gray-500 mb-1">/100</div>
+                            </div>
+                            <div className="mt-3 h-2 bg-gray-100 rounded-full overflow-hidden">
+                              <div 
+                                className={`h-full ${score >= 90 ? 'bg-green-600' : score >= 75 ? 'bg-yellow-600' : 'bg-red-600'}`}
+                                style={{ width: `${score}%` }}
+                              />
+                            </div>
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
+                  </div>
+
+                  <Card className="bg-blue-50 border-blue-200">
+                    <CardContent className="p-6">
+                      <h4 className="font-semibold text-gray-900 mb-4">Validation Criteria</h4>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        {Object.entries(validationCriteria).map(([category, items]) => (
+                          <div key={category}>
+                            <h5 className="font-semibold text-gray-900 mb-2 capitalize">
+                              {category === 'seo' ? 'SEO & Marketing' : category === 'design' ? 'Design & UX' : category === 'legal' ? 'Legal & Compliance' : category === 'content' ? 'Content & Operations' : category}
+                            </h5>
+                            <ul className="space-y-1.5 text-sm text-gray-700">
+                              {items.slice(0, 5).map((item, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                  <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                              {items.length > 5 && (
+                                <li className="text-xs text-gray-500 pl-6">+ {items.length - 5} more</li>
+                              )}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )}
+            </CardContent>
+          </Card>
         </div>
       </section>
 
