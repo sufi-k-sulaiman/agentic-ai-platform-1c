@@ -234,7 +234,6 @@ export default function HeroSection() {
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                 alt="1C" 
                 className="relative w-16 h-16 z-10"
-                style={{ filter: 'brightness(0)' }}
               />
             </motion.div>
 
