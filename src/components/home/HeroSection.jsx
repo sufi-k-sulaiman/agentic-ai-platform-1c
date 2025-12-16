@@ -44,19 +44,27 @@ const verticals = [
 export default function HeroSection() {
   const [currentChallenge, setCurrentChallenge] = useState(0);
   const [efficiencyValue, setEfficiencyValue] = useState(0);
+  const [savingsValue, setSavingsValue] = useState(0);
 
   useEffect(() => {
-    // Calculate average efficiency from current 4 corner cards
-    const calculateAverage = () => {
-      let sum = 0;
+    // Calculate averages from current 4 corner cards
+    const calculateAverages = () => {
+      let efficiencySum = 0;
+      let savingsSum = 0;
       for (let i = 0; i < 4; i++) {
-        const efficiency = challenges[(currentChallenge + i) % challenges.length].efficiency;
-        sum += parseInt(efficiency.replace('+', '').replace('%', ''));
+        const challenge = challenges[(currentChallenge + i) % challenges.length];
+        efficiencySum += parseInt(challenge.efficiency.replace('+', '').replace('%', ''));
+        savingsSum += parseInt(challenge.savings.replace('%', ''));
       }
-      return Math.round(sum / 4);
+      return {
+        efficiency: Math.round(efficiencySum / 4),
+        savings: Math.round(savingsSum / 4)
+      };
     };
 
-    setEfficiencyValue(calculateAverage());
+    const averages = calculateAverages();
+    setEfficiencyValue(averages.efficiency);
+    setSavingsValue(averages.savings);
 
     const interval = setInterval(() => {
       setCurrentChallenge((prev) => (prev + 1) % challenges.length);
@@ -234,19 +242,38 @@ export default function HeroSection() {
                 </div>
                 <span className="text-xs font-medium text-gray-600">Task Completed</span>
               </div>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={efficiencyValue}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-4xl font-bold text-gray-900 mb-1"
-                >
-                  +{efficiencyValue}%
-                </motion.div>
-              </AnimatePresence>
-              <p className="text-sm text-gray-500">Efficiency increase</p>
+              <div className="flex items-center justify-center gap-6">
+                <div className="text-center">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={efficiencyValue}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-3xl font-bold text-gray-900 mb-1"
+                    >
+                      +{efficiencyValue}%
+                    </motion.div>
+                  </AnimatePresence>
+                  <p className="text-xs text-gray-500">Efficiency</p>
+                </div>
+                <div className="text-center">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={savingsValue}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-3xl font-bold text-gray-900 mb-1"
+                    >
+                      {savingsValue}%
+                    </motion.div>
+                  </AnimatePresence>
+                  <p className="text-xs text-gray-500">OpEx Savings</p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
