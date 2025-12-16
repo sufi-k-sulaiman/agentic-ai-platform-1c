@@ -6,6 +6,7 @@ import { Server, TrendingDown, Database, Workflow, DollarSign, Zap, Shield, Arro
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
   {
@@ -214,8 +215,30 @@ export default function DataCenters() {
         </div>
       </section>
 
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Temperature spike detected', description: 'Rack 47 thermal anomaly', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '10:31 AM', action: 'AI analysis complete', description: 'CRAC unit efficiency drop', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:32 AM', action: 'Cooling adjusted', description: 'Airflow optimized automatically', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:35 AM', action: 'Normal operations', description: 'Temperature stabilized', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Energy Efficiency (PUE)', current: '1.2', target: '1.4', percentage: 85, color: 'bg-green-500' },
+          { goal: 'Uptime SLA', current: '99.998%', target: '99.999%', percentage: 99, color: 'bg-purple-500' },
+          { goal: 'Capacity Optimization', current: 82, target: 100, percentage: 82, color: 'bg-blue-500' },
+          { goal: 'Predictive Maintenance', current: 95, target: 100, percentage: 95, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Equipment Maintenance Scheduled', description: 'UPS battery replacement in 14 days...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Energy Cost Savings', description: 'Monthly savings reached $45K...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Capacity Alert', description: 'Rack 52 approaching 80% capacity...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Security Scan Complete', description: 'All systems passed compliance check...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
       {/* Challenges */}
-      <section className="py-24">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -255,7 +278,7 @@ export default function DataCenters() {
       </section>
 
       {/* Solutions */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

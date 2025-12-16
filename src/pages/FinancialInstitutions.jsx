@@ -207,8 +207,30 @@ export default function FinancialInstitutions() {
         </div>
       </section>
 
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Fraud pattern detected', description: 'Suspicious transaction flagged', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '10:31 AM', action: 'AI analysis complete', description: 'Behavioral pattern confirmed', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:32 AM', action: 'Transaction blocked', description: 'Account secured automatically', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:35 AM', action: 'Customer notified', description: 'Security alert sent', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Fraud Detection Rate', current: 950, target: 1000, percentage: 95, color: 'bg-purple-500' },
+          { goal: 'Loan Processing Speed', current: 92, target: 100, percentage: 92, color: 'bg-green-500' },
+          { goal: 'Compliance Score', current: 100, target: 100, percentage: 100, color: 'bg-blue-500' },
+          { goal: 'Customer Satisfaction', current: 88, target: 100, percentage: 88, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Fraud Prevention Success', description: '$2.5M in fraudulent transactions blocked...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Loan Approval Milestone', description: '500+ loans processed today...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Compliance Update', description: 'New regulatory rules integrated...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Risk Alert', description: 'Market volatility detected in portfolio...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
       {/* Challenges */}
-      <section className="py-24">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -248,7 +270,7 @@ export default function FinancialInstitutions() {
       </section>
 
       {/* Solutions */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
