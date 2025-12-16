@@ -35,8 +35,6 @@ import Retail from './pages/Retail';
 import Education from './pages/Education';
 import Onboarding from './pages/Onboarding';
 import Courses from './pages/Courses';
-import DigitalLearningSubscriptions from './pages/DigitalLearningSubscriptions';
-import LearningJourney from './pages/LearningJourney';
 import ProfessionalCertifications from './pages/ProfessionalCertifications';
 import BlogAgenticAIEnterprise from './pages/BlogAgenticAIEnterprise';
 import BlogAutonomousAgents from './pages/BlogAutonomousAgents';
@@ -169,8 +167,6 @@ export const PAGES = {
     "Education": Education,
     "Onboarding": Onboarding,
     "Courses": Courses,
-    "DigitalLearningSubscriptions": DigitalLearningSubscriptions,
-    "LearningJourney": LearningJourney,
     "ProfessionalCertifications": ProfessionalCertifications,
     "BlogAgenticAIEnterprise": BlogAgenticAIEnterprise,
     "BlogAutonomousAgents": BlogAutonomousAgents,
