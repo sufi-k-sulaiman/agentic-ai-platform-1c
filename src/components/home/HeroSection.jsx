@@ -114,9 +114,6 @@ export default function HeroSection() {
 
         {/* Central Visualization with Sonar Waves */}
         <div className="relative w-full max-w-5xl mx-auto aspect-[16/10] mb-16">
-          {/* Background Card */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-200/40 via-purple-100/30 to-violet-200/40 rounded-[3rem] backdrop-blur-sm" />
-          
           {/* Sonar Wave Rings - Slow Pulsing */}
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
