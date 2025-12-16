@@ -1310,9 +1310,9 @@ export default function Onboarding() {
                       className="w-full"
                     />
                   </div>
-                  <div className="grid gap-2 overflow-y-auto pr-2 max-h-[400px]">
+                  <div className="grid grid-cols-2 gap-2 overflow-y-auto pr-2 max-h-[450px]">
                     {painPoints.filter(point => point.toLowerCase().includes(painPointSearch.toLowerCase())).map((point) => (
-                      <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-3 rounded-lg border-2 transition-all text-left text-sm ${formData.painPoints.includes(point) ? 'border-[#6209e6] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
+                      <button key={point} onClick={() => handlePainPointToggle(point)} className={`p-4 rounded-lg border-2 transition-all text-left text-sm ${formData.painPoints.includes(point) ? 'border-[#6209e6] bg-purple-50' : 'border-gray-200 hover:border-gray-300'}`}>
                         {point}
                       </button>
                     ))}
