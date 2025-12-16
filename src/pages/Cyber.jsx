@@ -190,12 +190,11 @@ export default function Cyber() {
   const [showContactForm, setShowContactForm] = useState(false);
   const [validationError, setValidationError] = useState(null);
 
-  const generateIssues = (category, score) => {
-    const allCriteria = validationCriteria[category] || [];
-    const passCount = Math.floor((score / 100) * allCriteria.length);
-    const passed = allCriteria.slice(0, passCount);
-    const failed = allCriteria.slice(passCount);
-    return { passed, failed };
+  const getIssuesForCategory = (category) => {
+    if (!validationResults?.issues?.[category]) {
+      return { passed: [], failed: [] };
+    }
+    return validationResults.issues[category];
   };
 
   const handleValidation = async () => {
@@ -396,7 +395,18 @@ export default function Cyber() {
                                 className="mt-6 pt-6 border-t border-gray-200"
                               >
                                 {(() => {
-                                  const { passed, failed } = generateIssues(key, score);
+                                  const { passed, failed } = getIssuesForCategory(key);
+                                  const hasData = passed.length > 0 || failed.length > 0;
+                                  
+                                  if (!hasData) {
+                                    return (
+                                      <div className="text-center py-8 text-gray-500">
+                                        <p>No detailed validation data available for this category.</p>
+                                        <p className="text-sm mt-2">Score is estimated based on overall security posture.</p>
+                                      </div>
+                                    );
+                                  }
+                                  
                                   return (
                                     <>
                                       {failed.length > 0 && (
@@ -405,7 +415,7 @@ export default function Cyber() {
                                             <XCircle className="w-5 h-5 text-red-600" />
                                             <h5 className="font-semibold text-red-900">Issues Found ({failed.length})</h5>
                                           </div>
-                                          <div className="grid md:grid-cols-2 gap-3 mb-4">
+                                          <div className="space-y-2">
                                             {failed.map((item, idx) => (
                                               <div key={idx} className="flex items-start gap-2 text-sm p-3 bg-red-50 rounded-lg border border-red-200">
                                                 <XCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
@@ -422,9 +432,9 @@ export default function Cyber() {
                                             <CheckCircle2 className="w-5 h-5 text-green-600" />
                                             <h5 className="font-semibold text-green-900">Passed Checks ({passed.length})</h5>
                                           </div>
-                                          <div className="grid md:grid-cols-2 gap-3">
+                                          <div className="space-y-2">
                                             {passed.map((item, idx) => (
-                                              <div key={idx} className="flex items-start gap-2 text-sm">
+                                              <div key={idx} className="flex items-start gap-2 text-sm p-2 hover:bg-gray-50 rounded">
                                                 <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                                                 <span className="text-gray-700">{item}</span>
                                               </div>

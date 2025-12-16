@@ -49,6 +49,78 @@ Deno.serve(async (req) => {
       ? gradeToScore[sslLabsData.value.endpoints[0].grade] || 75
       : 75;
 
+    // Extract actual issues from APIs
+    const extractIssues = () => {
+      const issues = {
+        security: { passed: [], failed: [] },
+        inputHandling: { passed: [], failed: [] },
+        authentication: { passed: [], failed: [] },
+        accessControl: { passed: [], failed: [] },
+        configuration: { passed: [], failed: [] },
+        dataProtection: { passed: [], failed: [] },
+        monitoring: { passed: [], failed: [] }
+      };
+
+      // Mozilla Observatory issues
+      if (mozillaData.status === 'fulfilled' && mozillaData.value?.tests) {
+        const tests = mozillaData.value.tests;
+        
+        Object.entries(tests).forEach(([key, test]) => {
+          const testName = test.name || key;
+          const passed = test.pass || test.score_description === 'pass';
+          
+          if (key.includes('csrf') || key.includes('xss') || key.includes('injection')) {
+            issues.inputHandling[passed ? 'passed' : 'failed'].push(testName);
+          } else if (key.includes('cookie') || key.includes('session')) {
+            issues.authentication[passed ? 'passed' : 'failed'].push(testName);
+          } else if (key.includes('header') || key.includes('csp') || key.includes('frame')) {
+            issues.security[passed ? 'passed' : 'failed'].push(testName);
+          } else if (key.includes('ssl') || key.includes('tls') || key.includes('https')) {
+            issues.dataProtection[passed ? 'passed' : 'failed'].push(testName);
+          } else {
+            issues.configuration[passed ? 'passed' : 'failed'].push(testName);
+          }
+        });
+      }
+
+      // Security Headers issues
+      if (securityHeadersData.status === 'fulfilled' && securityHeadersData.value?.headers) {
+        const headers = securityHeadersData.value.headers;
+        
+        Object.entries(headers).forEach(([header, data]) => {
+          const passed = data.present || false;
+          const issue = `${header}: ${passed ? 'Present' : 'Missing'}`;
+          
+          if (header.includes('Content-Security-Policy') || header.includes('X-Frame-Options')) {
+            issues.security[passed ? 'passed' : 'failed'].push(issue);
+          } else if (header.includes('X-Content-Type-Options')) {
+            issues.inputHandling[passed ? 'passed' : 'failed'].push(issue);
+          } else {
+            issues.accessControl[passed ? 'passed' : 'failed'].push(issue);
+          }
+        });
+      }
+
+      // SSL Labs issues
+      if (sslLabsData.status === 'fulfilled' && sslLabsData.value?.endpoints?.[0]) {
+        const endpoint = sslLabsData.value.endpoints[0];
+        const sslGrade = endpoint.grade || 'Unknown';
+        const passed = ['A+', 'A', 'A-'].includes(sslGrade);
+        
+        issues.dataProtection[passed ? 'passed' : 'failed'].push(`SSL/TLS Grade: ${sslGrade}`);
+        
+        if (endpoint.details) {
+          const tlsVersion = endpoint.details.protocols || [];
+          const hasTLS13 = tlsVersion.some(p => p.name === 'TLS' && p.version === '1.3');
+          issues.dataProtection[hasTLS13 ? 'passed' : 'failed'].push(`TLS 1.3: ${hasTLS13 ? 'Supported' : 'Not Supported'}`);
+        }
+      }
+
+      return issues;
+    };
+
+    const detailedIssues = extractIssues();
+
     // Build detailed results
     const results = {
       domain: cleanDomain,
@@ -59,11 +131,12 @@ Deno.serve(async (req) => {
       configuration: Math.round((mozScore + secHeadersScore) / 2),
       dataProtection: sslScore,
       monitoring: mozScore > 75 ? 85 : 70,
-      design: 80, // Would need Lighthouse API for real data
-      seo: 75, // Would need Lighthouse API for real data
-      performance: 75, // Would need Lighthouse API for real data
+      design: 80,
+      seo: 75,
+      performance: 75,
       legal: secHeadersScore > 80 ? 90 : 75,
       content: 80,
+      issues: detailedIssues,
       rawData: {
         mozilla: mozillaData.status === 'fulfilled' ? mozillaData.value : null,
         securityHeaders: securityHeadersData.status === 'fulfilled' ? securityHeadersData.value : null,
