@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Search, Code, Terminal, Copy, Key, Shield, Zap, AlertCircle, Check, Clock, Globe, Package, Webhook, PlayCircle } from 'lucide-react';
+import { Code, Terminal, Copy, Key, Shield, Zap, AlertCircle, Check, Clock, Globe, Package, Webhook, PlayCircle } from 'lucide-react';
 import { toast } from 'sonner';
 
 const endpoints = [
@@ -247,7 +247,6 @@ agent = client.agents.create(
 };
 
 export default function APIReference() {
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('curl');
   const [selectedEndpoint, setSelectedEndpoint] = useState(null);
 
@@ -255,14 +254,6 @@ export default function APIReference() {
     navigator.clipboard.writeText(text);
     toast.success('Copied to clipboard!');
   };
-
-  const filteredEndpoints = endpoints.map(category => ({
-    ...category,
-    methods: category.methods.filter(method => 
-      method.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      method.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(category => category.methods.length > 0);
 
   return (
     <div className="bg-white">
@@ -283,20 +274,9 @@ export default function APIReference() {
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Complete API documentation
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed mb-8">
+            <p className="text-xl text-gray-600 leading-relaxed">
               RESTful API with comprehensive endpoints for all platform capabilities. Base URL: <code className="px-2 py-1 bg-gray-100 rounded text-[#8B2EE5]">https://api.1cplatform.com</code>
             </p>
-
-            {/* Search */}
-            <div className="relative max-w-xl">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <Input
-                placeholder="Search endpoints..."
-                className="pl-12 h-12 rounded-full border-gray-300 bg-white"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
           </motion.div>
         </div>
       </section>
@@ -395,7 +375,7 @@ export default function APIReference() {
             {/* Sidebar with endpoints */}
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-8">
-                {filteredEndpoints.map((category) => (
+                {endpoints.map((category) => (
                   <div key={category.category}>
                     <h3 className="font-bold text-gray-900 mb-4">{category.category}</h3>
                     <div className="space-y-2">
@@ -437,7 +417,7 @@ export default function APIReference() {
 
             {/* Main content */}
             <div className="lg:col-span-2 space-y-12">
-              {filteredEndpoints.map((category) =>
+              {endpoints.map((category) =>
                 category.methods.map((method, index) => (
                   <motion.div
                     key={`${category.category}-${index}`}
