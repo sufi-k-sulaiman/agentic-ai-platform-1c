@@ -215,8 +215,11 @@ export default function PropertyManagement() {
         </div>
       </section>
 
+      {/* Analytics */}
+      <VerticalAnalytics industry={{}} />
+
       {/* Challenges */}
-      <section className="py-24">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
