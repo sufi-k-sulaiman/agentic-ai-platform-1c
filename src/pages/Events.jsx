@@ -167,6 +167,138 @@ const events = [
     type: 'webinar'
   },
   {
+    title: 'Agentic AI Fundamentals Webinar',
+    date: 'Every Wednesday in 2026',
+    time: '12:00 PM - 1:00 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '2,000+',
+    description: 'Introduction to autonomous agents, tool use, reasoning, and multi-agent systems for beginners.',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Building Production-Ready AI Agents',
+    date: 'Every Thursday in 2026',
+    time: '3:00 PM - 4:00 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,800+',
+    description: 'Deploy reliable autonomous agents: error handling, monitoring, testing, and scaling strategies.',
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Advanced Agent Memory & Context',
+    date: 'Bi-weekly Fridays in 2026',
+    time: '2:00 PM - 3:30 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,600+',
+    description: 'Deep dive into episodic memory, semantic memory, and long-term context management for agents.',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Multi-Agent Coordination Patterns',
+    date: 'Monthly - First Monday',
+    time: '1:00 PM - 2:30 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,400+',
+    description: 'Patterns for agent-to-agent communication, task delegation, and collaborative problem solving.',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Tool Calling & Function Use Mastery',
+    date: 'Monthly - Second Tuesday',
+    time: '11:00 AM - 12:30 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,700+',
+    description: 'Design robust tool ecosystems: API integration, error recovery, and function composition for agents.',
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Agent Reasoning & Planning',
+    date: 'Monthly - Third Wednesday',
+    time: '2:00 PM - 3:30 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,500+',
+    description: 'Implementing chain-of-thought, tree-of-thought, and advanced planning algorithms for autonomous agents.',
+    image: 'https://images.unsplash.com/photo-1531498860502-7c67cf02f657?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Agentic AI Security & Safety',
+    date: 'Monthly - Fourth Thursday',
+    time: '10:00 AM - 11:30 AM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,900+',
+    description: 'Securing autonomous agents: sandboxing, permission systems, monitoring, and preventing misuse.',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Agent Evaluation & Testing',
+    date: 'Bi-weekly Mondays',
+    time: '4:00 PM - 5:00 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,300+',
+    description: 'Testing strategies, benchmarks, and evaluation frameworks for measuring agent performance.',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Enterprise Agentic AI Deployment',
+    date: 'Monthly - Last Friday',
+    time: '1:00 PM - 2:30 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '2,200+',
+    description: 'Best practices for deploying autonomous agents at enterprise scale: governance, compliance, and ROI.',
+    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Agent Observability & Debugging',
+    date: 'Bi-weekly Tuesdays',
+    time: '3:00 PM - 4:00 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,450+',
+    description: 'Tracing agent behavior, logging, debugging tools, and observability best practices.',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Agentic Workflows for Business',
+    date: 'Monthly - Second Thursday',
+    time: '12:00 PM - 1:30 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,800+',
+    description: 'Business process automation with agentic AI: customer service, data processing, and operations.',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800',
+    type: 'webinar'
+  },
+  {
+    title: 'Cost Optimization for AI Agents',
+    date: 'Monthly - Third Friday',
+    time: '11:00 AM - 12:00 PM EST',
+    location: 'Virtual',
+    format: 'Online',
+    attendees: '1,550+',
+    description: 'Reduce costs of autonomous agents: caching, batching, model selection, and efficient prompting.',
+    image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=800',
+    type: 'webinar'
+  },
+  {
     title: 'Agentic AI Developer Meetup',
     date: 'Monthly - Last Friday',
     time: '6:00 PM - 9:00 PM Local',
@@ -372,7 +504,7 @@ const events = [
     format: 'Hybrid',
     attendees: '900+',
     description: '$100K prizes for AI solutions tackling climate change: energy optimization, carbon tracking, and sustainability.',
-    image: 'https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=800',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800',
     type: 'hackathon'
   },
   {
