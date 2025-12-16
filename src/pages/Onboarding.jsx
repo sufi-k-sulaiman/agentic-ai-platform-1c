@@ -334,6 +334,7 @@ export default function Onboarding() {
     const [painPointSearch, setPainPointSearch] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isComplete, setIsComplete] = useState(false);
+    const [errors, setErrors] = useState({});
     const [formData, setFormData] = useState({
     vertical: '',
     companyName: '',
@@ -349,10 +350,51 @@ export default function Onboarding() {
     phone: ''
   });
 
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    return /^[\d\s\-\+\(\)]+$/.test(phone) && phone.replace(/\D/g, '').length >= 10;
+  };
+
+  const validateWebsite = (url) => {
+    try {
+      new URL(url.startsWith('http') ? url : `https://${url}`);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  const validateStep = (stepNum) => {
+    const newErrors = {};
+    
+    if (stepNum === 2) {
+      if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
+      if (!formData.companyWebsite.trim()) newErrors.companyWebsite = 'Website is required';
+      else if (!validateWebsite(formData.companyWebsite)) newErrors.companyWebsite = 'Invalid website URL';
+    }
+    
+    if (stepNum === 10) {
+      if (!formData.email.trim()) newErrors.email = 'Email is required';
+      else if (!validateEmail(formData.email)) newErrors.email = 'Invalid email format';
+      if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
+      else if (!validatePhone(formData.phone)) newErrors.phone = 'Invalid phone number';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const totalSteps = 10;
   const selectedVertical = verticals.find(v => v.id === formData.vertical);
 
-  const nextStep = () => setStep(Math.min(step + 1, totalSteps));
+  const nextStep = () => {
+    if ((step === 2 || step === 10) && !validateStep(step)) return;
+    setErrors({});
+    setStep(Math.min(step + 1, totalSteps));
+  };
   const prevStep = () => setStep(Math.max(step - 1, 1));
 
   const handlePainPointToggle = (point) => {
@@ -365,6 +407,7 @@ export default function Onboarding() {
   };
 
   const handleSubmit = async () => {
+    if (!validateStep(10)) return;
     setIsSubmitting(true);
     try {
       await base44.entities.OnboardingData.create({
@@ -1078,11 +1121,32 @@ export default function Onboarding() {
                   <div className="space-y-6">
                     <div>
                       <Label htmlFor="company">Company Name</Label>
-                      <Input id="company" placeholder="Your company name" value={formData.companyName} onChange={(e) => setFormData({ ...formData, companyName: e.target.value })} className="mt-2" />
+                      <Input 
+                        id="company" 
+                        placeholder="Your company name" 
+                        value={formData.companyName} 
+                        onChange={(e) => {
+                          setFormData({ ...formData, companyName: e.target.value });
+                          if (errors.companyName) setErrors({ ...errors, companyName: '' });
+                        }} 
+                        className={`mt-2 ${errors.companyName ? 'border-red-500' : ''}`} 
+                      />
+                      {errors.companyName && <p className="text-red-500 text-sm mt-1">{errors.companyName}</p>}
                     </div>
                     <div>
                       <Label htmlFor="website">Company Website</Label>
-                      <Input id="website" type="url" placeholder="https://yourcompany.com" value={formData.companyWebsite} onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })} className="mt-2" />
+                      <Input 
+                        id="website" 
+                        type="url" 
+                        placeholder="https://yourcompany.com" 
+                        value={formData.companyWebsite} 
+                        onChange={(e) => {
+                          setFormData({ ...formData, companyWebsite: e.target.value });
+                          if (errors.companyWebsite) setErrors({ ...errors, companyWebsite: '' });
+                        }} 
+                        className={`mt-2 ${errors.companyWebsite ? 'border-red-500' : ''}`} 
+                      />
+                      {errors.companyWebsite && <p className="text-red-500 text-sm mt-1">{errors.companyWebsite}</p>}
                     </div>
                   </div>
                   </div>
@@ -1472,10 +1536,14 @@ export default function Onboarding() {
                         type="email" 
                         placeholder="your@email.com" 
                         value={formData.email} 
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
-                        className="mt-2" 
+                        onChange={(e) => {
+                          setFormData({ ...formData, email: e.target.value });
+                          if (errors.email) setErrors({ ...errors, email: '' });
+                        }} 
+                        className={`mt-2 ${errors.email ? 'border-red-500' : ''}`} 
                         required
                       />
+                      {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                     </div>
                     <div>
                       <Label htmlFor="phone">Phone Number *</Label>
@@ -1484,10 +1552,14 @@ export default function Onboarding() {
                         type="tel" 
                         placeholder="+1 (555) 000-0000" 
                         value={formData.phone} 
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
-                        className="mt-2"
+                        onChange={(e) => {
+                          setFormData({ ...formData, phone: e.target.value });
+                          if (errors.phone) setErrors({ ...errors, phone: '' });
+                        }} 
+                        className={`mt-2 ${errors.phone ? 'border-red-500' : ''}`}
                         required
                       />
+                      {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                     </div>
                     <div className="p-4 rounded-xl bg-purple-50 border border-purple-200 mt-6">
                       <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">

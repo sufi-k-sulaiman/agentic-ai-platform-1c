@@ -19,6 +19,7 @@ export default function CallScheduleForm({ onSuccess }) {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [step, setStep] = useState(1);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,6 +27,14 @@ export default function CallScheduleForm({ onSuccess }) {
     company: '',
     topic: ''
   });
+
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    return /^[\d\s\-\+\(\)]+$/.test(phone) && phone.replace(/\D/g, '').length >= 10;
+  };
 
   const getDaysInMonth = () => {
     const monthStart = startOfMonth(currentMonth);
@@ -52,6 +61,20 @@ export default function CallScheduleForm({ onSuccess }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    else if (!validateEmail(formData.email)) newErrors.email = 'Invalid email format';
+    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
+    else if (!validatePhone(formData.phone)) newErrors.phone = 'Invalid phone number';
+    if (!formData.topic.trim()) newErrors.topic = 'Topic is required';
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    
     setLoading(true);
     
     try {
@@ -207,9 +230,13 @@ export default function CallScheduleForm({ onSuccess }) {
             id="name"
             required
             value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="mt-2"
+            onChange={(e) => {
+              setFormData({ ...formData, name: e.target.value });
+              if (errors.name) setErrors({ ...errors, name: '' });
+            }}
+            className={`mt-2 ${errors.name ? 'border-red-500' : ''}`}
           />
+          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         </div>
         <div>
           <Label htmlFor="email">Email Address</Label>
@@ -218,9 +245,13 @@ export default function CallScheduleForm({ onSuccess }) {
             type="email"
             required
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="mt-2"
+            onChange={(e) => {
+              setFormData({ ...formData, email: e.target.value });
+              if (errors.email) setErrors({ ...errors, email: '' });
+            }}
+            className={`mt-2 ${errors.email ? 'border-red-500' : ''}`}
           />
+          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
       </div>
 
@@ -232,9 +263,13 @@ export default function CallScheduleForm({ onSuccess }) {
             type="tel"
             required
             value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="mt-2"
+            onChange={(e) => {
+              setFormData({ ...formData, phone: e.target.value });
+              if (errors.phone) setErrors({ ...errors, phone: '' });
+            }}
+            className={`mt-2 ${errors.phone ? 'border-red-500' : ''}`}
           />
+          {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
         </div>
         <div>
           <Label htmlFor="company">Company (Optional)</Label>
@@ -254,10 +289,14 @@ export default function CallScheduleForm({ onSuccess }) {
           required
           rows={4}
           value={formData.topic}
-          onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
+          onChange={(e) => {
+            setFormData({ ...formData, topic: e.target.value });
+            if (errors.topic) setErrors({ ...errors, topic: '' });
+          }}
           placeholder="Brief description of the call topic..."
-          className="mt-2"
+          className={`mt-2 ${errors.topic ? 'border-red-500' : ''}`}
         />
+        {errors.topic && <p className="text-red-500 text-sm mt-1">{errors.topic}</p>}
       </div>
 
       <Button

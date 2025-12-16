@@ -8,6 +8,7 @@ import { Loader2 } from 'lucide-react';
 
 export default function EmailForm({ onSuccess }) {
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,8 +16,25 @@ export default function EmailForm({ onSuccess }) {
     message: ''
   });
 
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    else if (!validateEmail(formData.email)) newErrors.email = 'Invalid email format';
+    if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
+    if (!formData.message.trim()) newErrors.message = 'Message is required';
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    
     setLoading(true);
     
     try {
@@ -54,9 +72,13 @@ ${formData.message}
             id="name"
             required
             value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="mt-2"
+            onChange={(e) => {
+              setFormData({ ...formData, name: e.target.value });
+              if (errors.name) setErrors({ ...errors, name: '' });
+            }}
+            className={`mt-2 ${errors.name ? 'border-red-500' : ''}`}
           />
+          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         </div>
         <div>
           <Label htmlFor="email">Email Address</Label>
@@ -65,9 +87,13 @@ ${formData.message}
             type="email"
             required
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="mt-2"
+            onChange={(e) => {
+              setFormData({ ...formData, email: e.target.value });
+              if (errors.email) setErrors({ ...errors, email: '' });
+            }}
+            className={`mt-2 ${errors.email ? 'border-red-500' : ''}`}
           />
+          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
       </div>
 
@@ -77,9 +103,13 @@ ${formData.message}
           id="subject"
           required
           value={formData.subject}
-          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-          className="mt-2"
+          onChange={(e) => {
+            setFormData({ ...formData, subject: e.target.value });
+            if (errors.subject) setErrors({ ...errors, subject: '' });
+          }}
+          className={`mt-2 ${errors.subject ? 'border-red-500' : ''}`}
         />
+        {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
       </div>
 
       <div>
@@ -89,10 +119,14 @@ ${formData.message}
           required
           rows={8}
           value={formData.message}
-          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          onChange={(e) => {
+            setFormData({ ...formData, message: e.target.value });
+            if (errors.message) setErrors({ ...errors, message: '' });
+          }}
           placeholder="Tell us how we can help..."
-          className="mt-2"
+          className={`mt-2 ${errors.message ? 'border-red-500' : ''}`}
         />
+        {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
       </div>
 
       <Button

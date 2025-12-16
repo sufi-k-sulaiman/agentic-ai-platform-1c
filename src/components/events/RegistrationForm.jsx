@@ -11,6 +11,7 @@ import { base44 } from '@/api/base44Client';
 export default function RegistrationForm({ event, onClose, onSuccess }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -23,8 +24,30 @@ export default function RegistrationForm({ event, onClose, onSuccess }) {
     special_requests: ''
   });
 
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    if (!phone) return true; // Phone is optional
+    return /^[\d\s\-\+\(\)]+$/.test(phone) && phone.replace(/\D/g, '').length >= 10;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    const newErrors = {};
+    if (!formData.first_name.trim()) newErrors.first_name = 'First name is required';
+    if (!formData.last_name.trim()) newErrors.last_name = 'Last name is required';
+    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    else if (!validateEmail(formData.email)) newErrors.email = 'Invalid email format';
+    if (formData.phone && !validatePhone(formData.phone)) newErrors.phone = 'Invalid phone number';
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
@@ -108,9 +131,13 @@ export default function RegistrationForm({ event, onClose, onSuccess }) {
                       id="first_name"
                       required
                       value={formData.first_name}
-                      onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
-                      className="mt-2"
+                      onChange={(e) => {
+                        setFormData({ ...formData, first_name: e.target.value });
+                        if (errors.first_name) setErrors({ ...errors, first_name: '' });
+                      }}
+                      className={`mt-2 ${errors.first_name ? 'border-red-500' : ''}`}
                     />
+                    {errors.first_name && <p className="text-red-500 text-sm mt-1">{errors.first_name}</p>}
                   </div>
                   <div>
                     <Label htmlFor="last_name">Last Name *</Label>
@@ -118,9 +145,13 @@ export default function RegistrationForm({ event, onClose, onSuccess }) {
                       id="last_name"
                       required
                       value={formData.last_name}
-                      onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
-                      className="mt-2"
+                      onChange={(e) => {
+                        setFormData({ ...formData, last_name: e.target.value });
+                        if (errors.last_name) setErrors({ ...errors, last_name: '' });
+                      }}
+                      className={`mt-2 ${errors.last_name ? 'border-red-500' : ''}`}
                     />
+                    {errors.last_name && <p className="text-red-500 text-sm mt-1">{errors.last_name}</p>}
                   </div>
                 </div>
 
@@ -131,9 +162,13 @@ export default function RegistrationForm({ event, onClose, onSuccess }) {
                     type="email"
                     required
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="mt-2"
+                    onChange={(e) => {
+                      setFormData({ ...formData, email: e.target.value });
+                      if (errors.email) setErrors({ ...errors, email: '' });
+                    }}
+                    className={`mt-2 ${errors.email ? 'border-red-500' : ''}`}
                   />
+                  {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                 </div>
 
                 <div>
@@ -142,10 +177,14 @@ export default function RegistrationForm({ event, onClose, onSuccess }) {
                     id="phone"
                     type="tel"
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="mt-2"
+                    onChange={(e) => {
+                      setFormData({ ...formData, phone: e.target.value });
+                      if (errors.phone) setErrors({ ...errors, phone: '' });
+                    }}
+                    className={`mt-2 ${errors.phone ? 'border-red-500' : ''}`}
                     placeholder="+1 (555) 000-0000"
                   />
+                  {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">

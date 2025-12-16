@@ -9,6 +9,7 @@ import { Loader2 } from 'lucide-react';
 
 export default function TicketForm({ onSuccess }) {
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,8 +19,25 @@ export default function TicketForm({ onSuccess }) {
     description: ''
   });
 
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    else if (!validateEmail(formData.email)) newErrors.email = 'Invalid email format';
+    if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
+    if (!formData.description.trim()) newErrors.description = 'Description is required';
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    
     setLoading(true);
     
     try {
@@ -46,9 +64,13 @@ export default function TicketForm({ onSuccess }) {
             id="name"
             required
             value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="mt-2"
+            onChange={(e) => {
+              setFormData({ ...formData, name: e.target.value });
+              if (errors.name) setErrors({ ...errors, name: '' });
+            }}
+            className={`mt-2 ${errors.name ? 'border-red-500' : ''}`}
           />
+          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         </div>
         <div>
           <Label htmlFor="email">Email Address</Label>
@@ -57,9 +79,13 @@ export default function TicketForm({ onSuccess }) {
             type="email"
             required
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="mt-2"
+            onChange={(e) => {
+              setFormData({ ...formData, email: e.target.value });
+              if (errors.email) setErrors({ ...errors, email: '' });
+            }}
+            className={`mt-2 ${errors.email ? 'border-red-500' : ''}`}
           />
+          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
       </div>
 
@@ -69,9 +95,13 @@ export default function TicketForm({ onSuccess }) {
           id="subject"
           required
           value={formData.subject}
-          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-          className="mt-2"
+          onChange={(e) => {
+            setFormData({ ...formData, subject: e.target.value });
+            if (errors.subject) setErrors({ ...errors, subject: '' });
+          }}
+          className={`mt-2 ${errors.subject ? 'border-red-500' : ''}`}
         />
+        {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -113,10 +143,14 @@ export default function TicketForm({ onSuccess }) {
           required
           rows={6}
           value={formData.description}
-          onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+          onChange={(e) => {
+            setFormData({ ...formData, description: e.target.value });
+            if (errors.description) setErrors({ ...errors, description: '' });
+          }}
           placeholder="Please describe your issue in detail..."
-          className="mt-2"
+          className={`mt-2 ${errors.description ? 'border-red-500' : ''}`}
         />
+        {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
       </div>
 
       <Button
