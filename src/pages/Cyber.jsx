@@ -637,21 +637,19 @@ export default function Cyber() {
               }
             ].map((feature, idx) => (
               <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+               key={idx}
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: idx * 0.1 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2 bg-gradient-to-br from-purple-800 to-purple-900">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-purple-200" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-purple-200 leading-relaxed">{feature.description}</p>
-                  </CardContent>
-                </Card>
+               <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-0 bg-gradient-to-br from-purple-800 to-purple-900">
+                 <CardContent className="p-6">
+                   <feature.icon className="w-8 h-8 text-purple-200 mb-4" />
+                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                   <p className="text-purple-200 leading-relaxed">{feature.description}</p>
+                 </CardContent>
+               </Card>
               </motion.div>
             ))}
           </div>
