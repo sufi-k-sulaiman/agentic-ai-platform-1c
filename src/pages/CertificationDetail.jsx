@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -7,6 +7,7 @@ import { Award, CheckCircle, Clock, FileCheck, ArrowLeft, TrendingUp, BookOpen, 
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import CertificationRegistrationWorkflow from '@/components/CertificationRegistrationWorkflow';
 
 const certificationData = {
   'ai-specialist': {
@@ -186,11 +187,17 @@ const certificationData = {
 export default function CertificationDetail() {
   const urlParams = new URLSearchParams(window.location.search);
   const certId = urlParams.get('id') || 'ai-developer';
+  const [workflowOpen, setWorkflowOpen] = useState(false);
   
   const cert = useMemo(() => certificationData[certId] || certificationData['ai-developer'], [certId]);
 
   return (
     <div className="bg-white">
+      <CertificationRegistrationWorkflow 
+        isOpen={workflowOpen} 
+        onClose={() => setWorkflowOpen(false)}
+        certification={cert}
+      />
       <PageMeta 
         title={cert.title}
         description={cert.description}
@@ -267,7 +274,10 @@ export default function CertificationDetail() {
                   <CardContent className="p-6">
                     <div className="text-4xl font-bold text-white mb-2">{cert.cost}</div>
                     <div className="text-purple-200 text-sm mb-6">Exam fee + study materials included</div>
-                    <Button className="w-full bg-white text-gray-900 hover:bg-gray-100 h-12 text-lg mb-4">
+                    <Button 
+                      onClick={() => setWorkflowOpen(true)}
+                      className="w-full bg-white text-gray-900 hover:bg-gray-100 h-12 text-lg mb-4"
+                    >
                       Register now
                     </Button>
                     <div className="mt-6 pt-6 border-t border-white/20 space-y-3 text-sm">
@@ -476,7 +486,10 @@ export default function CertificationDetail() {
               Start your preparation today and join thousands of certified AI professionals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-10 h-16 text-lg">
+              <Button 
+                onClick={() => setWorkflowOpen(true)}
+                className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-10 h-16 text-lg"
+              >
                 Register for exam
               </Button>
             </div>
