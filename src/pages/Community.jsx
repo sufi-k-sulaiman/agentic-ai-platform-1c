@@ -9,18 +9,18 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Users, MessageSquare, ThumbsUp, MessageCircle, Eye, Pin, TrendingUp, Clock, Sparkles, Bot, Shield, Brain, Zap, ChevronRight, Send } from 'lucide-react';
 
 const categories = [
-  { id: 'all', name: 'All Discussions', icon: MessageSquare, count: 3247 },
-  { id: 'generative-ai', name: 'Generative AI', icon: Sparkles, count: 523 },
-  { id: 'agentic-ai', name: 'Agentic AI', icon: Bot, count: 489 },
-  { id: 'governance', name: 'AI Governance', icon: Shield, count: 367 },
-  { id: 'ml-ops', name: 'ML & AI Ops', icon: Brain, count: 412 },
-  { id: 'products', name: 'Products & Features', icon: Zap, count: 256 },
-  { id: 'property-management', name: 'Property Management', icon: Users, count: 198 },
-  { id: 'healthcare', name: 'Healthcare AI', icon: Users, count: 234 },
-  { id: 'finance', name: 'Financial Services', icon: TrendingUp, count: 287 },
-  { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 176 },
-  { id: 'energy', name: 'Energy & Utilities', icon: Zap, count: 145 },
-  { id: 'datacenter', name: 'Data Centers', icon: Brain, count: 134 }
+  { id: 'all', name: 'All Discussions', icon: MessageSquare, count: 45 },
+  { id: 'generative-ai', name: 'Generative AI', icon: Sparkles, count: 5 },
+  { id: 'agentic-ai', name: 'Agentic AI', icon: Bot, count: 6 },
+  { id: 'governance', name: 'AI Governance', icon: Shield, count: 6 },
+  { id: 'ml-ops', name: 'ML & AI Ops', icon: Brain, count: 3 },
+  { id: 'products', name: 'Products & Features', icon: Zap, count: 2 },
+  { id: 'property-management', name: 'Property Management', icon: Users, count: 4 },
+  { id: 'healthcare', name: 'Healthcare AI', icon: Users, count: 4 },
+  { id: 'finance', name: 'Financial Services', icon: TrendingUp, count: 4 },
+  { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 4 },
+  { id: 'energy', name: 'Energy & Utilities', icon: Zap, count: 3 },
+  { id: 'datacenter', name: 'Data Centers', icon: Brain, count: 4 }
 ];
 
 const discussions = [
