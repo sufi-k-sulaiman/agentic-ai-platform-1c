@@ -260,6 +260,9 @@ export default function Cyber() {
       <section className="py-24 bg-gradient-to-br from-purple-50 via-purple-50 to-violet-100">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
+            <div className="w-16 h-16 bg-[#8B2EE5] rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Globe className="w-8 h-8 text-white" />
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Website Validator
             </h2>
@@ -271,15 +274,14 @@ export default function Cyber() {
           <Card className="shadow-xl">
             <CardContent className="p-8">
               <div className="mb-8 relative">
-                <Globe className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
                 <Input
                   type="text"
                   placeholder="Enter domain or URL (e.g., example.com or https://example.com)"
                   value={searchInput}
                   onChange={(e) => setSearchInput(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleValidation()}
-                  className="pl-14 pr-32 h-16 text-lg rounded-full shadow-lg border-2"
-                />
+                  className="pr-32 h-16 text-lg rounded-full shadow-lg border-2"
+                  />
                 <Button 
                   onClick={handleValidation}
                   disabled={!searchInput.trim() || isValidating}
