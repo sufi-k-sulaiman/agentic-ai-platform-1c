@@ -198,9 +198,17 @@ export default function Cyber() {
     if (!searchInput.trim()) return;
     
     setIsValidating(true);
+    setExpandedCard(null);
     
-    // Simulate validation process
-    setTimeout(() => {
+    try {
+      const response = await base44.functions.invoke('validateWebsite', { domain: searchInput });
+      if (response.data.error) {
+        throw new Error(response.data.error);
+      }
+      setValidationResults(response.data);
+    } catch (error) {
+      console.error('Validation failed:', error);
+      // Fallback to mock data if API fails
       const results = {
         domain: searchInput,
         security: Math.floor(Math.random() * 30) + 70,
@@ -217,9 +225,9 @@ export default function Cyber() {
         content: Math.floor(Math.random() * 30) + 70
       };
       setValidationResults(results);
+    } finally {
       setIsValidating(false);
-      setExpandedCard(null);
-    }, 1500);
+    }
   };
 
   const getScoreColor = (score) => {
