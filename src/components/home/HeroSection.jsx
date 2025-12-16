@@ -170,6 +170,7 @@ export default function HeroSection() {
                   animate={position.animate}
                   exit={position.exit}
                   transition={{ duration: 0.4, delay: idx * 0.2 }}
+                  style={{ scale: 1.28 }}
                 >
                   <div className="flex items-center gap-3 mb-3">
                     {React.createElement(challenges[(currentChallenge + idx) % challenges.length].icon, { 
