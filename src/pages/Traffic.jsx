@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TrafficCone, TrendingDown, Database, Workflow, DollarSign, Zap, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
   {
@@ -82,6 +84,12 @@ const metrics = [
 export default function Traffic() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Traffic Management AI"
+        description="AI-powered traffic management reducing congestion by 30%. Smart signal optimization, incident detection, and 40% faster emergency response."
+        url="/traffic"
+        keywords={['traffic management', 'smart traffic', 'congestion reduction', 'traffic AI', 'signal optimization']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -206,7 +214,29 @@ export default function Traffic() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Congestion detected', description: 'Main St bottleneck identified', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '10:31 AM', action: 'Signal timing adjusted', description: '5 intersections optimized', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:35 AM', action: 'Traffic flow improved', description: '30% congestion reduction', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:40 AM', action: 'Incident cleared', description: 'Emergency route restored', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Congestion Reduction', current: 720, target: 1000, percentage: 72, color: 'bg-purple-500' },
+          { goal: 'Response Time', current: 880, target: 1000, percentage: 88, color: 'bg-green-500' },
+          { goal: 'Signal Optimization', current: 85, target: 100, percentage: 85, color: 'bg-blue-500' },
+          { goal: 'Incident Detection', current: 92, target: 100, percentage: 92, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Commute Time Reduced', description: 'Average travel time down 8 minutes...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Signal Optimization', description: '15 intersections updated automatically...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Accident Detected', description: 'Highway 101 incident, rerouting traffic...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Rush Hour Prediction', description: 'Heavy volume expected at 5 PM...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -245,7 +275,7 @@ export default function Traffic() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

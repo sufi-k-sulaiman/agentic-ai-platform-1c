@@ -183,7 +183,29 @@ export default function Retail() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Price optimized', description: 'Dynamic pricing updated for 50 SKUs', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'Inventory replenished', description: 'Auto-ordered 25 products', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:20 AM', action: 'Personalized offer sent', description: '500 customers targeted', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Campaign performance', description: '35% conversion rate achieved', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Conversion Rate', current: 850, target: 1000, percentage: 85, color: 'bg-purple-500' },
+          { goal: 'Margin Improvement', current: 720, target: 1000, percentage: 72, color: 'bg-green-500' },
+          { goal: 'Inventory Optimization', current: 88, target: 100, percentage: 88, color: 'bg-blue-500' },
+          { goal: 'Customer Retention', current: 78, target: 100, percentage: 78, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Sales Milestone', description: 'Daily revenue target exceeded by 15%...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Stock Alert Resolved', description: 'Popular item restocked automatically...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Personalization Success', description: 'Email campaign achieved 42% open rate...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Pricing Update', description: 'Competitive pricing adjusted for 100 items...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -222,7 +244,7 @@ export default function Retail() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
