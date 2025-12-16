@@ -545,7 +545,7 @@ export default function Courses() {
               onClick={() => setWorkflowOpen(true)}
               className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-10 h-16 text-lg"
             >
-              Start free trial <ArrowRight className="ml-2 w-5 h-5" />
+              Start free <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
         </div>
