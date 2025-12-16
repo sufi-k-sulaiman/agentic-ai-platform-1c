@@ -719,8 +719,8 @@ export default function HeroSection() {
               >
                 <Link to={createPageUrl(vertical.page)}>
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 border border-purple-100/50 h-full flex flex-col items-center text-center cursor-pointer">
-                    <div className="w-12 h-12 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                      <vertical.icon className={`w-12 h-12 bg-gradient-to-br ${vertical.color} bg-clip-text text-transparent`} style={{ WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }} />
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${vertical.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                      <vertical.icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="font-semibold text-gray-900 text-sm leading-tight">{vertical.name}</h3>
                   </div>
