@@ -169,7 +169,7 @@ export default function HeroSection() {
                   initial={position.initial}
                   animate={position.animate}
                   exit={position.exit}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.4, delay: idx * 0.2 }}
                 >
                   <div className="flex items-center gap-3 mb-3">
                     {React.createElement(challenges[(currentChallenge + idx) % challenges.length].icon, { 
@@ -223,14 +223,14 @@ export default function HeroSection() {
             <motion.div 
               className="mt-8 text-center z-10"
               animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, delay: 0.6 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
             >
               <div className="flex items-center justify-center gap-2 mb-2">
-                <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg className="w-3.5 h-3.5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                  <svg className="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
