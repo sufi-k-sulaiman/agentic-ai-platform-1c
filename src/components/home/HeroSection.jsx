@@ -187,7 +187,7 @@ export default function HeroSection() {
             <div key={idx} className={position.className}>
               <AnimatePresence mode="wait">
                 <motion.div 
-                  key={`${currentChallenge}-${idx}`}
+                  key={`${shownIndices[idx]}-${idx}`}
                   className="bg-white rounded-2xl shadow-lg p-4"
                   initial={position.initial}
                   animate={position.animate}
@@ -196,18 +196,18 @@ export default function HeroSection() {
                   style={{ scale: 1.28 }}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    {React.createElement(challenges[(currentChallenge + idx) % challenges.length].icon, { 
-                      className: `w-10 h-10 bg-gradient-to-br ${challenges[(currentChallenge + idx) % challenges.length].color} bg-clip-text`,
+                    {React.createElement(challenges[shownIndices[idx]].icon, { 
+                      className: `w-10 h-10 bg-gradient-to-br ${challenges[shownIndices[idx]].color} bg-clip-text`,
                       style: { WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text' }
                     })}
                     <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 text-sm">{challenges[(currentChallenge + idx) % challenges.length].title}</h3>
-                      <p className="text-xs text-gray-500">{challenges[(currentChallenge + idx) % challenges.length].description}</p>
+                      <h3 className="font-semibold text-gray-900 text-sm">{challenges[shownIndices[idx]].title}</h3>
+                      <p className="text-xs text-gray-500">{challenges[shownIndices[idx]].description}</p>
                     </div>
                   </div>
                   <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden mb-3">
                     <motion.div 
-                      className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[(currentChallenge + idx) % challenges.length].color}`}
+                      className={`h-1.5 rounded-full bg-gradient-to-r ${challenges[shownIndices[idx]].color}`}
                       initial={{ width: "0%" }}
                       animate={{ width: "100%" }}
                       transition={{ duration: 3, ease: "easeInOut" }}
@@ -216,11 +216,11 @@ export default function HeroSection() {
                   <div className="flex gap-4 text-xs">
                     <div>
                       <div className="text-gray-500">Efficiency</div>
-                      <div className="font-semibold text-green-600">{challenges[(currentChallenge + idx) % challenges.length].efficiency}</div>
+                      <div className="font-semibold text-green-600">{challenges[shownIndices[idx]].efficiency}</div>
                     </div>
                     <div>
                       <div className="text-gray-500">OpEx Savings</div>
-                      <div className="font-semibold text-blue-600">{challenges[(currentChallenge + idx) % challenges.length].savings}</div>
+                      <div className="font-semibold text-blue-600">{challenges[shownIndices[idx]].savings}</div>
                     </div>
                   </div>
                 </motion.div>
