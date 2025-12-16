@@ -50,7 +50,7 @@ export default function HeroSection() {
       setCurrentChallenge((prev) => (prev + 1) % challenges.length);
       // Randomize efficiency value between 80 and 150
       setEfficiencyValue(Math.floor(Math.random() * 71) + 80);
-    }, 3500);
+    }, 5075);
     return () => clearInterval(interval);
   }, []);
 
@@ -194,54 +194,53 @@ export default function HeroSection() {
             </div>
           ))}
 
-          {/* Center Logo with Enhanced Shadow */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          {/* Center Logo (No Background) */}
+          <div className="absolute inset-0 flex items-center justify-center flex-col">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full shadow-2xl flex items-center justify-center"
+              className="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-200/30 to-violet-200/30 rounded-full blur-xl" />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                 alt="1C" 
                 className="relative w-20 h-20 sm:w-24 sm:h-24 z-10"
               />
             </motion.div>
-          </div>
 
-          {/* Task Completed - Below Center Logo (No Background) */}
-          <motion.div 
-            className="absolute top-[58%] left-1/2 -translate-x-1/2 z-10 text-center"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                <svg className="w-3.5 h-3.5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
+            {/* Task Completed - Below Logo */}
+            <motion.div 
+              className="mt-8 text-center z-10"
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg className="w-3.5 h-3.5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-xs font-medium text-gray-600">Task Completed</span>
               </div>
-              <span className="text-xs font-medium text-gray-600">Task Completed</span>
-            </div>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={efficiencyValue}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="text-4xl font-bold text-gray-900 mb-1"
-              >
-                +{efficiencyValue}%
-              </motion.div>
-            </AnimatePresence>
-            <p className="text-sm text-gray-500">Efficiency increase</p>
-          </motion.div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={efficiencyValue}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-4xl font-bold text-gray-900 mb-1"
+                >
+                  +{efficiencyValue}%
+                </motion.div>
+              </AnimatePresence>
+              <p className="text-sm text-gray-500">Efficiency increase</p>
+            </motion.div>
+          </div>
         </div>
 
         {/* Verticals Grid */}
