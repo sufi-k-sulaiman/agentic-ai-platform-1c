@@ -182,74 +182,6 @@ export default function Cyber() {
           </div>
         </div>
       </section>
-
-      {/* Built with Security in Mind */}
-      <section className="py-24 bg-gradient-to-br from-purple-600 to-purple-700 text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Built with security in mind
-            </h2>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-              Multiple layers of protection to keep your data safe
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: Lock,
-                title: 'Encryption at Rest & in Transit',
-                description: 'All data is encrypted using AES-256 encryption at rest and TLS 1.3 in transit.'
-              },
-              {
-                icon: Eye,
-                title: 'Zero-Knowledge Architecture',
-                description: 'Your data is encrypted with keys only you control. We cannot access your sensitive information.'
-              },
-              {
-                icon: Shield,
-                title: 'Network Security',
-                description: 'Advanced DDoS protection, WAF, and intrusion detection systems protect our infrastructure.'
-              },
-              {
-                icon: AlertTriangle,
-                title: 'Threat Detection',
-                description: 'Real-time monitoring and automated threat detection across all systems.'
-              },
-              {
-                icon: FileCheck,
-                title: 'Regular Audits',
-                description: 'Third-party security audits and penetration testing conducted quarterly.'
-              },
-              {
-                icon: Lock,
-                title: 'Access Controls',
-                description: 'Role-based access control (RBAC) and multi-factor authentication (MFA) required.'
-              }
-            ].map((feature, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2 bg-gradient-to-br from-purple-800 to-purple-900">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-purple-200" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-purple-200 leading-relaxed">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Website Validator */}
       <section className="py-24 bg-gradient-to-br from-[#8B2EE5] to-[#6B21A8] text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -672,6 +604,75 @@ export default function Cyber() {
           </Card>
         </div>
       </section>
+
+      {/* Built with Security in Mind */}
+      <section className="py-24 bg-gradient-to-br from-purple-600 to-purple-700 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Built with security in mind
+            </h2>
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+              Multiple layers of protection to keep your data safe
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Lock,
+                title: 'Encryption at Rest & in Transit',
+                description: 'All data is encrypted using AES-256 encryption at rest and TLS 1.3 in transit.'
+              },
+              {
+                icon: Eye,
+                title: 'Zero-Knowledge Architecture',
+                description: 'Your data is encrypted with keys only you control. We cannot access your sensitive information.'
+              },
+              {
+                icon: Shield,
+                title: 'Network Security',
+                description: 'Advanced DDoS protection, WAF, and intrusion detection systems protect our infrastructure.'
+              },
+              {
+                icon: AlertTriangle,
+                title: 'Threat Detection',
+                description: 'Real-time monitoring and automated threat detection across all systems.'
+              },
+              {
+                icon: FileCheck,
+                title: 'Regular Audits',
+                description: 'Third-party security audits and penetration testing conducted quarterly.'
+              },
+              {
+                icon: Lock,
+                title: 'Access Controls',
+                description: 'Role-based access control (RBAC) and multi-factor authentication (MFA) required.'
+              }
+            ].map((feature, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2 bg-gradient-to-br from-purple-800 to-purple-900">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+                      <feature.icon className="w-6 h-6 text-purple-200" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-purple-200 leading-relaxed">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
 
 
