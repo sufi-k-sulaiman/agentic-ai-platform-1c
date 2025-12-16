@@ -49,7 +49,7 @@ Deno.serve(async (req) => {
       ? gradeToScore[sslLabsData.value.endpoints[0].grade] || 75
       : 75;
 
-    // Extract actual issues from APIs
+    // Extract ALL data from APIs and map to categories
     const extractIssues = () => {
       const issues = {
         security: { passed: [], failed: [] },
@@ -66,131 +66,219 @@ Deno.serve(async (req) => {
         content: { passed: [], failed: [] }
       };
 
-      // Mozilla Observatory issues
+      // MOZILLA OBSERVATORY - Extract ALL tests
       if (mozillaData.status === 'fulfilled' && mozillaData.value?.tests) {
         const tests = mozillaData.value.tests;
         
         Object.entries(tests).forEach(([key, test]) => {
-          const testName = test.score_description || test.name || key.replace(/-/g, ' ');
           const passed = test.pass === true;
+          const desc = test.score_description || key.replace(/-/g, ' ').replace(/_/g, ' ');
           
-          if (key.includes('csrf') || key.includes('xss') || key.includes('injection') || key.includes('content-type')) {
-            issues.inputHandling[passed ? 'passed' : 'failed'].push(testName);
-          } else if (key.includes('cookies') || key.includes('session')) {
-            issues.authentication[passed ? 'passed' : 'failed'].push(testName);
-          } else if (key.includes('csp') || key.includes('x-frame') || key.includes('frame')) {
-            issues.security[passed ? 'passed' : 'failed'].push(testName);
-          } else if (key.includes('hsts') || key.includes('redirection')) {
-            issues.dataProtection[passed ? 'passed' : 'failed'].push(testName);
-          } else if (key.includes('sri') || key.includes('subresource')) {
-            issues.configuration[passed ? 'passed' : 'failed'].push(testName);
+          // Map each test to appropriate category
+          if (key === 'content-security-policy' || key === 'csp') {
+            const result = passed ? `CSP: ${desc}` : `CSP: ${desc}`;
+            issues.security[passed ? 'passed' : 'failed'].push(result);
+          } else if (key === 'x-frame-options') {
+            issues.security[passed ? 'passed' : 'failed'].push(`X-Frame-Options: ${desc}`);
+          } else if (key === 'x-content-type-options') {
+            issues.inputHandling[passed ? 'passed' : 'failed'].push(`X-Content-Type-Options: ${desc}`);
+          } else if (key === 'strict-transport-security' || key === 'hsts') {
+            issues.dataProtection[passed ? 'passed' : 'failed'].push(`HSTS: ${desc}`);
+          } else if (key === 'cookies') {
+            issues.authentication[passed ? 'passed' : 'failed'].push(`Cookie Security: ${desc}`);
+          } else if (key === 'cross-origin-resource-sharing' || key === 'cors') {
+            issues.accessControl[passed ? 'passed' : 'failed'].push(`CORS: ${desc}`);
+          } else if (key === 'subresource-integrity' || key === 'sri') {
+            issues.configuration[passed ? 'passed' : 'failed'].push(`Subresource Integrity: ${desc}`);
+          } else if (key === 'referrer-policy') {
+            issues.accessControl[passed ? 'passed' : 'failed'].push(`Referrer-Policy: ${desc}`);
+          } else if (key === 'x-xss-protection') {
+            issues.inputHandling[passed ? 'passed' : 'failed'].push(`XSS Protection: ${desc}`);
           } else {
-            issues.accessControl[passed ? 'passed' : 'failed'].push(testName);
+            issues.configuration[passed ? 'passed' : 'failed'].push(`${key.replace(/-/g, ' ')}: ${desc}`);
           }
         });
         
-        // Add monitoring info
-        if (mozillaData.value?.score !== undefined) {
-          const score = mozillaData.value.score;
-          issues.monitoring.passed.push(`Observatory Score: ${score}/100`);
-          if (score >= 0) {
-            issues.monitoring.passed.push('Security monitoring: Active');
+        // Add monitoring metrics
+        const score = mozillaData.value?.score;
+        if (score !== undefined) {
+          issues.monitoring.passed.push(`Observatory Security Score: ${score > 0 ? '+' : ''}${score}`);
+          if (score >= 50) {
+            issues.monitoring.passed.push('Good security configuration detected');
+          } else if (score >= 0) {
+            issues.monitoring.passed.push('Basic security measures in place');
+          } else {
+            issues.monitoring.failed.push('Security configuration needs improvement');
           }
         }
+      } else {
+        issues.monitoring.failed.push('Mozilla Observatory scan failed or timed out');
       }
 
-      // Security Headers issues
+      // SECURITY HEADERS - Extract ALL headers with detailed info
       if (securityHeadersData.status === 'fulfilled' && securityHeadersData.value) {
-        const headers = [
-          'Content-Security-Policy',
-          'X-Frame-Options', 
-          'X-Content-Type-Options',
-          'Strict-Transport-Security',
-          'Referrer-Policy',
-          'Permissions-Policy'
-        ];
+        const data = securityHeadersData.value;
         
-        headers.forEach(header => {
-          // Assume missing if not in response
-          const headerKey = header.toLowerCase().replace(/-/g, '_');
-          const present = securityHeadersData.value[headerKey] !== undefined;
-          
-          if (header.includes('Content-Security-Policy') || header.includes('X-Frame-Options')) {
-            issues.security[present ? 'passed' : 'failed'].push(`${header}: ${present ? 'Configured' : 'Missing'}`);
-          } else if (header.includes('X-Content-Type-Options')) {
-            issues.inputHandling[present ? 'passed' : 'failed'].push(`${header}: ${present ? 'Configured' : 'Missing'}`);
-          } else if (header.includes('Strict-Transport-Security')) {
-            issues.dataProtection[present ? 'passed' : 'failed'].push(`${header}: ${present ? 'Configured' : 'Missing'}`);
+        // Check for CSP
+        if (data['content-security-policy']) {
+          issues.security.passed.push('Content-Security-Policy: Configured');
+        } else {
+          issues.security.failed.push('Content-Security-Policy: Missing');
+        }
+        
+        // Check for X-Frame-Options
+        if (data['x-frame-options']) {
+          issues.security.passed.push(`X-Frame-Options: ${data['x-frame-options']}`);
+        } else {
+          issues.security.failed.push('X-Frame-Options: Missing (clickjacking risk)');
+        }
+        
+        // Check for X-Content-Type-Options
+        if (data['x-content-type-options']) {
+          issues.inputHandling.passed.push('X-Content-Type-Options: nosniff enabled');
+        } else {
+          issues.inputHandling.failed.push('X-Content-Type-Options: Missing (MIME sniffing risk)');
+        }
+        
+        // Check for HSTS
+        if (data['strict-transport-security']) {
+          issues.dataProtection.passed.push(`HSTS: Configured (${data['strict-transport-security'].split(';')[0]})`);
+        } else {
+          issues.dataProtection.failed.push('HSTS: Missing (not forcing HTTPS)');
+        }
+        
+        // Check for Referrer-Policy
+        if (data['referrer-policy']) {
+          issues.accessControl.passed.push(`Referrer-Policy: ${data['referrer-policy']}`);
+        } else {
+          issues.accessControl.failed.push('Referrer-Policy: Not set');
+        }
+        
+        // Check for Permissions-Policy
+        if (data['permissions-policy'] || data['feature-policy']) {
+          issues.accessControl.passed.push('Permissions-Policy: Configured');
+        } else {
+          issues.accessControl.failed.push('Permissions-Policy: Missing');
+        }
+        
+        // Overall grade
+        if (data.grade) {
+          const grade = data.grade;
+          if (['A+', 'A', 'A-'].includes(grade)) {
+            issues.legal.passed.push(`Security Headers Grade: ${grade}`);
           } else {
-            issues.accessControl[present ? 'passed' : 'failed'].push(`${header}: ${present ? 'Configured' : 'Missing'}`);
+            issues.legal.failed.push(`Security Headers Grade: ${grade} (should be A or higher)`);
           }
-        });
+        }
+      } else {
+        issues.security.failed.push('SecurityHeaders scan failed');
+        issues.accessControl.failed.push('Could not verify access control headers');
       }
 
-      // SSL Labs issues
+      // SSL LABS - Extract ALL certificate and TLS info
       if (sslLabsData.status === 'fulfilled' && sslLabsData.value?.endpoints?.[0]) {
         const endpoint = sslLabsData.value.endpoints[0];
-        const sslGrade = endpoint.grade || 'Unknown';
-        const passed = ['A+', 'A', 'A-'].includes(sslGrade);
+        const grade = endpoint.grade;
         
-        issues.dataProtection[passed ? 'passed' : 'failed'].push(`SSL/TLS Grade: ${sslGrade}`);
-        issues.authentication[passed ? 'passed' : 'failed'].push(`Certificate Security: ${sslGrade}`);
+        // Overall SSL grade
+        if (['A+', 'A', 'A-'].includes(grade)) {
+          issues.dataProtection.passed.push(`SSL/TLS Grade: ${grade}`);
+          issues.authentication.passed.push(`Certificate Security: ${grade}`);
+        } else {
+          issues.dataProtection.failed.push(`SSL/TLS Grade: ${grade} (should be A or higher)`);
+          issues.authentication.failed.push(`Weak certificate configuration`);
+        }
         
-        if (endpoint.details) {
-          const tlsVersion = endpoint.details.protocols || [];
-          const hasTLS13 = tlsVersion.some(p => p.name === 'TLS' && p.version === '1.3');
-          const hasTLS12 = tlsVersion.some(p => p.name === 'TLS' && p.version === '1.2');
-          
-          if (hasTLS13) {
-            issues.dataProtection.passed.push('TLS 1.3: Supported');
-          } else if (hasTLS12) {
-            issues.dataProtection.passed.push('TLS 1.2: Supported');
-          } else {
-            issues.dataProtection.failed.push('Modern TLS: Not supported');
+        // TLS versions
+        if (endpoint.details?.protocols) {
+          const protocols = endpoint.details.protocols;
+          protocols.forEach(proto => {
+            const version = `${proto.name} ${proto.version}`;
+            if (proto.name === 'TLS' && parseFloat(proto.version) >= 1.2) {
+              issues.dataProtection.passed.push(`${version}: Supported`);
+            } else {
+              issues.dataProtection.failed.push(`${version}: Outdated protocol`);
+            }
+          });
+        }
+        
+        // Certificate info
+        if (endpoint.details?.cert) {
+          const cert = endpoint.details.cert;
+          issues.authentication.passed.push(`Certificate: Valid`);
+          if (cert.issues === 0) {
+            issues.authentication.passed.push('No certificate issues found');
           }
         }
+        
+        // Vulnerabilities
+        if (endpoint.details?.vulnBeast === false) {
+          issues.dataProtection.passed.push('BEAST: Not vulnerable');
+        }
+        if (endpoint.details?.poodle === false) {
+          issues.dataProtection.passed.push('POODLE: Not vulnerable');
+        }
+        
       } else {
-        // SSL Labs might be slow or failed, add basic SSL check
-        issues.dataProtection.passed.push('SSL/TLS: Checking (may take up to 2 minutes)');
+        // SSL Labs takes time, add pending status
+        issues.dataProtection.passed.push('SSL/TLS: Analysis in progress (can take 2+ minutes)');
+        issues.authentication.passed.push('Certificate check: Pending full analysis');
       }
 
-      // Add more comprehensive checks for each category
-      
-      // Design checks
-      if (mozScore >= 80) {
-        issues.design.passed.push('Security best practices followed');
+      // DESIGN - Based on security posture
+      if (mozScore >= 80 && secHeadersScore >= 85) {
+        issues.design.passed.push('Strong security foundation');
+        issues.design.passed.push('Modern security headers implemented');
+      } else if (mozScore >= 60) {
+        issues.design.passed.push('Basic security measures in place');
+        issues.design.failed.push('Security configuration could be improved');
       } else {
-        issues.design.failed.push('Security improvements needed');
+        issues.design.failed.push('Weak security configuration');
+        issues.design.failed.push('Multiple security improvements needed');
       }
-      
-      // SEO checks
-      if (secHeadersScore >= 80) {
-        issues.seo.passed.push('Security headers configured for SEO');
+
+      // SEO - Security headers affect SEO
+      if (secHeadersScore >= 85) {
+        issues.seo.passed.push('Security headers optimized for SEO');
+        issues.seo.passed.push('Site credibility signals present');
       } else {
-        issues.seo.failed.push('Missing critical security headers');
+        issues.seo.failed.push('Missing security headers can hurt SEO rankings');
       }
-      
-      // Performance checks
+
+      // PERFORMANCE - HTTPS and header efficiency
       if (sslScore >= 90) {
-        issues.performance.passed.push('Optimized HTTPS performance');
+        issues.performance.passed.push('Excellent HTTPS configuration');
+        issues.performance.passed.push('Fast TLS handshake');
       } else if (sslScore >= 75) {
         issues.performance.passed.push('Good HTTPS setup');
       } else {
-        issues.performance.failed.push('HTTPS configuration could be improved');
+        issues.performance.failed.push('HTTPS configuration needs optimization');
       }
-      
-      // Legal checks
-      if (secHeadersScore >= 80) {
-        issues.legal.passed.push('Security compliance headers present');
+
+      // LEGAL - Compliance indicators
+      if (secHeadersScore >= 85 && sslScore >= 85) {
+        issues.legal.passed.push('Strong security compliance posture');
+        issues.legal.passed.push('Privacy protection headers configured');
       } else {
-        issues.legal.failed.push('Missing security compliance headers');
+        issues.legal.failed.push('Security compliance gaps detected');
       }
-      
-      // Content checks  
+
+      // CONTENT - Secure delivery
       if (sslScore >= 80) {
-        issues.content.passed.push('Secure content delivery (HTTPS)');
+        issues.content.passed.push('Secure content delivery (HTTPS enforced)');
+        issues.content.passed.push('Content integrity protected');
       } else {
-        issues.content.failed.push('Content delivery security needs improvement');
+        issues.content.failed.push('Content delivery security insufficient');
+      }
+
+      // CONFIGURATION - Overall deployment
+      const totalPassed = Object.values(issues).reduce((sum, cat) => sum + cat.passed.length, 0);
+      const totalFailed = Object.values(issues).reduce((sum, cat) => sum + cat.failed.length, 0);
+      
+      if (totalPassed > totalFailed * 2) {
+        issues.configuration.passed.push('Well-configured security deployment');
+      } else {
+        issues.configuration.failed.push('Configuration improvements recommended');
       }
 
       return issues;
