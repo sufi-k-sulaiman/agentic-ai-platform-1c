@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
-import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe, XCircle } from 'lucide-react';
+import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe, XCircle, ChevronRight } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 import BugBountyForm from '@/components/contact/BugBountyForm';
 import { base44 } from '@/api/base44Client';
@@ -20,6 +20,8 @@ export default function Cyber() {
   const [expandedCard, setExpandedCard] = useState(null);
   const [showContactForm, setShowContactForm] = useState(false);
   const [validationError, setValidationError] = useState(null);
+  const [expandedCategories, setExpandedCategories] = useState({});
+  const [showAllDetailsModal, setShowAllDetailsModal] = useState(false);
 
   const getIssuesForCategory = (category) => {
     if (!validationResults?.issues?.[category]) {
@@ -452,9 +454,18 @@ export default function Cyber() {
 
                   {/* Category Breakdown */}
                   <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-                    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
-                      <h4 className="font-bold text-lg text-gray-900">All Categories Breakdown</h4>
-                      <p className="text-sm text-gray-600">Comprehensive security assessment across all validation areas</p>
+                    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900">All Categories Breakdown</h4>
+                        <p className="text-sm text-gray-600">Comprehensive security assessment across all validation areas</p>
+                      </div>
+                      <Button
+                        onClick={() => setShowAllDetailsModal(true)}
+                        variant="outline"
+                        className="text-[#8B2EE5] border-[#8B2EE5] hover:bg-purple-50"
+                      >
+                        View All Details
+                      </Button>
                     </div>
                     <div className="p-6">
                       <div className="grid md:grid-cols-2 gap-6">
@@ -474,18 +485,22 @@ export default function Cyber() {
                         ].map(({ key, label, icon: Icon }) => {
                           const score = validationResults[key];
                           const { passed, failed } = getIssuesForCategory(key);
-                          
+                          const isExpanded = expandedCategories[key];
+                          const totalItems = passed.length + failed.length;
+                          const showLimit = 3;
+                          const hasMore = totalItems > showLimit;
+
                           return (
-                            <div key={key} className="border border-gray-200 rounded-lg p-4">
+                            <div key={key} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
                               <div className="flex items-center gap-2 mb-3">
                                 <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
                                 <span className="font-semibold text-gray-900">{label}</span>
                                 <span className={`ml-auto text-2xl font-bold ${getScoreColor(score)}`}>{score}</span>
                               </div>
-                              
+
                               {failed.length > 0 && (
                                 <div className="mb-2">
-                                  {failed.map((item, idx) => (
+                                  {failed.slice(0, isExpanded ? undefined : showLimit).map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-2 text-xs py-1">
                                       <XCircle className="w-3 h-3 text-red-600 mt-0.5 flex-shrink-0" />
                                       <span className="text-red-900">{item}</span>
@@ -493,10 +508,10 @@ export default function Cyber() {
                                   ))}
                                 </div>
                               )}
-                              
+
                               {passed.length > 0 && (
                                 <div>
-                                  {passed.map((item, idx) => (
+                                  {passed.slice(0, isExpanded ? undefined : (showLimit - failed.length)).map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-2 text-xs py-1">
                                       <CheckCircle2 className="w-3 h-3 text-green-600 mt-0.5 flex-shrink-0" />
                                       <span className="text-gray-700">{item}</span>
@@ -504,12 +519,140 @@ export default function Cyber() {
                                   ))}
                                 </div>
                               )}
+
+                              {hasMore && (
+                                <button
+                                  onClick={() => setExpandedCategories(prev => ({ ...prev, [key]: !prev[key] }))}
+                                  className="mt-2 text-xs text-[#8B2EE5] hover:text-[#7325C4] font-medium flex items-center gap-1"
+                                >
+                                  {isExpanded ? (
+                                    <>
+                                      Show less
+                                      <ChevronRight className="w-3 h-3 rotate-90" />
+                                    </>
+                                  ) : (
+                                    <>
+                                      Show {totalItems - showLimit} more
+                                      <ChevronRight className="w-3 h-3 -rotate-90" />
+                                    </>
+                                  )}
+                                </button>
+                              )}
                             </div>
                           );
                         })}
                       </div>
                     </div>
                   </div>
+
+                  {/* All Details Modal */}
+                  <AnimatePresence>
+                    {showAllDetailsModal && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                        onClick={() => setShowAllDetailsModal(false)}
+                      >
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                          animate={{ opacity: 1, scale: 1, y: 0 }}
+                          exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                          onClick={(e) => e.stopPropagation()}
+                          className="bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+                        >
+                          <div className="bg-gradient-to-r from-[#8B2EE5] to-[#7325C4] px-8 py-6 flex items-center justify-between">
+                            <div>
+                              <h3 className="text-2xl font-bold text-white">Complete Security Analysis</h3>
+                              <p className="text-purple-100 mt-1">All checks for {validationResults.domain}</p>
+                            </div>
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => setShowAllDetailsModal(false)}
+                              className="text-white hover:bg-white/20"
+                            >
+                              <X className="w-6 h-6" />
+                            </Button>
+                          </div>
+
+                          <div className="flex-1 overflow-y-auto p-8">
+                            <div className="space-y-6">
+                              {[
+                                { key: 'security', label: 'Security', icon: Shield },
+                                { key: 'inputHandling', label: 'Input & Data Handling', icon: FileCheck },
+                                { key: 'authentication', label: 'Authentication & Sessions', icon: Lock },
+                                { key: 'accessControl', label: 'Access Control', icon: Shield },
+                                { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
+                                { key: 'dataProtection', label: 'Data Protection', icon: Lock },
+                                { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye },
+                                { key: 'design', label: 'Design & UX', icon: Eye },
+                                { key: 'seo', label: 'SEO & Marketing', icon: Globe },
+                                { key: 'performance', label: 'Performance', icon: FileCheck },
+                                { key: 'legal', label: 'Legal & Compliance', icon: Lock },
+                                { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
+                              ].map(({ key, label, icon: Icon }) => {
+                                const score = validationResults[key];
+                                const { passed, failed } = getIssuesForCategory(key);
+
+                                if (passed.length === 0 && failed.length === 0) return null;
+
+                                return (
+                                  <div key={key} className="border border-gray-200 rounded-lg overflow-hidden">
+                                    <div className={`px-6 py-4 ${getScoreBgColor(score)} border-b border-gray-200`}>
+                                      <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-3">
+                                          <Icon className={`w-6 h-6 ${getScoreColor(score)}`} />
+                                          <h4 className="font-bold text-lg text-gray-900">{label}</h4>
+                                        </div>
+                                        <div className={`text-3xl font-bold ${getScoreColor(score)}`}>{score}</div>
+                                      </div>
+                                    </div>
+                                    <div className="p-6 space-y-4">
+                                      {failed.length > 0 && (
+                                        <div>
+                                          <h5 className="font-semibold text-red-900 mb-2 flex items-center gap-2">
+                                            <XCircle className="w-4 h-4" />
+                                            Issues Found ({failed.length})
+                                          </h5>
+                                          <div className="space-y-2">
+                                            {failed.map((item, idx) => (
+                                              <div key={idx} className="flex items-start gap-2 text-sm py-1.5 px-3 bg-red-50 rounded">
+                                                <XCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
+                                                <span className="text-red-900">{item}</span>
+                                              </div>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      )}
+
+                                      {passed.length > 0 && (
+                                        <div>
+                                          <h5 className="font-semibold text-green-900 mb-2 flex items-center gap-2">
+                                            <CheckCircle2 className="w-4 h-4" />
+                                            Passed Checks ({passed.length})
+                                          </h5>
+                                          <div className="space-y-2">
+                                            {passed.map((item, idx) => (
+                                              <div key={idx} className="flex items-start gap-2 text-sm py-1.5 px-3 bg-green-50 rounded">
+                                                <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                                <span className="text-gray-700">{item}</span>
+                                              </div>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      )}
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
 
                 </motion.div>
               )}
