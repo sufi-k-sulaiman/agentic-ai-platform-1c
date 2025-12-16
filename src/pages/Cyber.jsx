@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -330,24 +329,7 @@ export default function Cyber() {
                     </Button>
                   </div>
 
-                  {/* Overall Scores Summary */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {[
-                      { label: 'Security', score: validationResults.security, icon: Shield },
-                      { label: 'Data Protection', score: validationResults.dataProtection, icon: Lock },
-                      { label: 'Authentication', score: validationResults.authentication, icon: FileCheck },
-                      { label: 'Access Control', score: validationResults.accessControl, icon: Eye }
-                    ].map(({ label, score, icon: Icon }) => (
-                      <div key={label} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
-                          <span className="text-sm text-gray-600">{label}</span>
-                        </div>
-                        <div className={`text-3xl font-bold ${getScoreColor(score)}`}>{score}</div>
-                        <div className="text-xs text-gray-500 mt-1">/100</div>
-                      </div>
-                    ))}
-                  </div>
+
 
                   {/* Mozilla Observatory Results */}
                   {validationResults.rawData?.mozilla && (
