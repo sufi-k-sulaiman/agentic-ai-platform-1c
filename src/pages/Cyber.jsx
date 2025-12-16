@@ -200,38 +200,32 @@ export default function Cyber() {
               {
                 icon: Lock,
                 title: 'Encryption at Rest & in Transit',
-                description: 'All data is encrypted using AES-256 encryption at rest and TLS 1.3 in transit.',
-                color: 'purple'
+                description: 'All data is encrypted using AES-256 encryption at rest and TLS 1.3 in transit.'
               },
               {
                 icon: Eye,
                 title: 'Zero-Knowledge Architecture',
-                description: 'Your data is encrypted with keys only you control. We cannot access your sensitive information.',
-                color: 'blue'
+                description: 'Your data is encrypted with keys only you control. We cannot access your sensitive information.'
               },
               {
                 icon: Shield,
                 title: 'Network Security',
-                description: 'Advanced DDoS protection, WAF, and intrusion detection systems protect our infrastructure.',
-                color: 'green'
+                description: 'Advanced DDoS protection, WAF, and intrusion detection systems protect our infrastructure.'
               },
               {
                 icon: AlertTriangle,
                 title: 'Threat Detection',
-                description: 'Real-time monitoring and automated threat detection across all systems.',
-                color: 'red'
+                description: 'Real-time monitoring and automated threat detection across all systems.'
               },
               {
                 icon: FileCheck,
                 title: 'Regular Audits',
-                description: 'Third-party security audits and penetration testing conducted quarterly.',
-                color: 'yellow'
+                description: 'Third-party security audits and penetration testing conducted quarterly.'
               },
               {
                 icon: Lock,
                 title: 'Access Controls',
-                description: 'Role-based access control (RBAC) and multi-factor authentication (MFA) required.',
-                color: 'indigo'
+                description: 'Role-based access control (RBAC) and multi-factor authentication (MFA) required.'
               }
             ].map((feature, idx) => (
               <motion.div
@@ -243,8 +237,8 @@ export default function Cyber() {
               >
                 <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2">
                   <CardContent className="p-6">
-                    <div className={`w-12 h-12 bg-${feature.color}-100 rounded-lg flex items-center justify-center mb-4`}>
-                      <feature.icon className={`w-6 h-6 text-${feature.color}-600`} />
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                      <feature.icon className="w-6 h-6 text-[#8B2EE5]" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{feature.description}</p>
