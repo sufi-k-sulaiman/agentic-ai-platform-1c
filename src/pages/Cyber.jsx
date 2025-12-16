@@ -128,8 +128,8 @@ export default function Cyber() {
                   onClick={() => setExpandedCard(expandedCard === cert.name ? null : cert.name)}
                 >
                   <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <cert.icon className="w-6 h-6 text-[#8B2EE5]" />
+                    <div className="flex items-center justify-center mx-auto mb-4">
+                      <cert.icon className="w-8 h-8 text-[#8B2EE5]" />
                     </div>
                     <h3 className="font-bold text-gray-900 mb-2">{cert.name}</h3>
                     <Badge className="bg-green-100 text-green-800">{cert.status}</Badge>
