@@ -1,161 +1,212 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
+const verticals = [
+  { icon: Building2, name: 'Property Management', color: 'from-blue-500 to-cyan-500' },
+  { icon: Server, name: 'Data Centers', color: 'from-indigo-500 to-purple-500' },
+  { icon: Landmark, name: 'Financial Services', color: 'from-green-500 to-emerald-500' },
+  { icon: Heart, name: 'Healthcare', color: 'from-red-500 to-pink-500' },
+  { icon: Building, name: 'Corporate Campuses', color: 'from-orange-500 to-amber-500' },
+  { icon: Train, name: 'Public Transit', color: 'from-teal-500 to-cyan-500' },
+  { icon: TrafficCone, name: 'Traffic Management', color: 'from-yellow-500 to-orange-500' },
+  { icon: Zap, name: 'Energy & Utilities', color: 'from-lime-500 to-green-500' },
+  { icon: ShoppingBag, name: 'Retail', color: 'from-pink-500 to-rose-500' },
+  { icon: GraduationCap, name: 'Education', color: 'from-violet-500 to-purple-500' },
+  { icon: Gamepad2, name: 'Gaming', color: 'from-fuchsia-500 to-pink-500' },
+  { icon: Shield, name: 'Government', color: 'from-slate-500 to-gray-500' },
+  { icon: Plane, name: 'Airports', color: 'from-sky-500 to-blue-500' },
+  { icon: Users, name: 'Sports & Entertainment', color: 'from-rose-500 to-red-500' }
+];
+
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50" />
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 right-[10%] w-72 h-72 bg-purple-200/30 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-[5%] w-96 h-96 bg-violet-200/30 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
-      </div>
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-purple-100 via-purple-50 to-violet-100">{/* Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        {/* Main Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm text-[#6209e6] text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-[#6209e6] rounded-full animate-pulse" />
+            14 Industries, Infinite Possibilities
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
+            The future of
+            <span className="block bg-gradient-to-r from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">
+              enterprise AI
+            </span>
+            is here
+          </h1>
+          
+          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-10 max-w-3xl mx-auto">
+            Transform your business with autonomous Agentic AI that understands, decides, and acts. 
+            1cPlatform delivers intelligent automation at enterprise scale.
+          </p>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <Link to={createPageUrl('Onboarding')}>
+            <Button 
+              size="lg" 
+              className="bg-[#6209e6] hover:bg-[#5008c5] text-white font-semibold rounded-full px-8 h-14 text-base group"
+            >
+              Get started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </motion.div>
+
+        {/* Central Visualization with Sonar Waves */}
+        <div className="relative w-full max-w-5xl mx-auto aspect-[16/10] mb-16">
+          {/* Background Card */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-200/40 via-purple-100/30 to-violet-200/40 rounded-[3rem] backdrop-blur-sm" />
+          
+          {/* Sonar Wave Rings - Slow Pulsing */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div
+              className="absolute w-[200px] h-[200px] rounded-full border-2 border-purple-300/30"
+              animate={{ 
+                scale: [1, 1.8, 1],
+                opacity: [0.4, 0.1, 0.4]
+              }}
+              transition={{ 
+                duration: 6, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <motion.div
+              className="absolute w-[200px] h-[200px] rounded-full border-2 border-purple-300/30"
+              animate={{ 
+                scale: [1, 1.8, 1],
+                opacity: [0.4, 0.1, 0.4]
+              }}
+              transition={{ 
+                duration: 6, 
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2
+              }}
+            />
+            <motion.div
+              className="absolute w-[200px] h-[200px] rounded-full border-2 border-purple-300/30"
+              animate={{ 
+                scale: [1, 1.8, 1],
+                opacity: [0.4, 0.1, 0.4]
+              }}
+              transition={{ 
+                duration: 6, 
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 4
+              }}
+            />
+          </div>
+
+          {/* Floating Cards - AI Processing */}
+          <motion.div 
+            className="absolute top-[8%] left-[5%] bg-white rounded-2xl shadow-lg p-5 w-56 z-10"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 text-[#6209e6] text-sm font-medium mb-8">
-              <span className="w-2 h-2 bg-[#6209e6] rounded-full animate-pulse" />
-              Introducing Agentic Ai
+            <div className="w-10 h-10 bg-gradient-to-br from-[#6209e6] to-[#A855F7] rounded-xl flex items-center justify-center mb-3">
+              <Zap className="w-6 h-6 text-white" />
             </div>
-            
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
-              The future of
-              <span className="block bg-gradient-to-r from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">
-                enterprise Ai
-              </span>
-              is here
-            </h1>
-            
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 sm:mb-10 max-w-xl">
-              Transform your business with autonomous Agentic Ai that understands, decides, and acts. 
-              1cPlatform delivers intelligent automation at enterprise scale.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-              <Link to={createPageUrl('Onboarding')} className="w-full sm:w-auto">
-                <Button 
-                  size="lg" 
-                  className="w-full sm:w-auto bg-[#6209e6] hover:bg-[#5008c5] text-white font-semibold rounded-full px-8 h-12 sm:h-14 text-base group"
-                >
-                  Get started
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
-              <p className="text-sm text-gray-500 mb-4">Integrates with</p>
-              <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 opacity-60">
-                <div className="text-lg sm:text-xl font-bold text-gray-400">Salesforce</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">Microsoft 365</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">SAP</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">Oracle</div>
-                                <div className="text-lg sm:text-xl font-bold text-gray-400">Workday</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">SAP</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">Jira</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">HubSpot</div>
-                                <div className="text-lg sm:text-xl font-bold text-gray-400">Zendesk</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">Tableau</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">NetSuite</div>
-                <div className="text-lg sm:text-xl font-bold text-gray-400">Monday.com</div>
-              </div>
+            <h3 className="font-semibold text-gray-900 mb-1">AI Processing</h3>
+            <p className="text-sm text-gray-500 mb-3">Real-time analysis complete</p>
+            <div className="w-full bg-gray-100 rounded-full h-2">
+              <motion.div 
+                className="bg-[#6209e6] h-2 rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: "75%" }}
+                transition={{ duration: 2, delay: 0.5 }}
+              />
             </div>
           </motion.div>
 
-          {/* Visual Element */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden lg:block"
+          {/* Floating Cards - Task Completed */}
+          <motion.div 
+            className="absolute bottom-[12%] right-[8%] bg-white rounded-2xl shadow-lg p-5 w-60 z-10"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
           >
-            <div className="relative aspect-square">
-              {/* Main Visual Container */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#6209e6]/10 to-[#A855F7]/10 rounded-3xl backdrop-blur-sm border border-purple-200/50" />
-              
-              {/* Floating Cards */}
-              <motion.div 
-                className="absolute top-8 left-8 bg-white rounded-2xl shadow-xl p-6 w-64"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
-                <div className="w-10 h-10 bg-[#6209e6] rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-1">AI Processing</h3>
-                <p className="text-sm text-gray-500">Real-time analysis complete</p>
-                <div className="mt-3 w-full bg-gray-100 rounded-full h-2">
-                  <div className="bg-[#6209e6] h-2 rounded-full w-3/4" />
-                </div>
-              </motion.div>
-
-              <motion.div 
-                className="absolute bottom-12 right-8 bg-white rounded-2xl shadow-xl p-6 w-56"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-sm font-medium text-gray-600">Task Completed</span>
-                </div>
-                <div className="text-2xl font-bold text-gray-900">+127%</div>
-                <p className="text-sm text-gray-500">Efficiency increase</p>
-              </motion.div>
-
-              {/* Center Logo */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                  className="w-48 h-48 rounded-full border-2 border-dashed border-purple-200"
-                />
-                <div className="absolute w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center">
-                  <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                    alt="1C" 
-                    className="w-20 h-20"
-                  />
-                </div>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
               </div>
+              <span className="text-sm font-semibold text-gray-700">Task Completed</span>
             </div>
+            <div className="text-3xl font-bold text-gray-900 mb-1">+127%</div>
+            <p className="text-sm text-gray-500">Efficiency increase</p>
           </motion.div>
+
+          {/* Center Logo with Enhanced Shadow */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full shadow-2xl flex items-center justify-center"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-200/30 to-violet-200/30 rounded-full blur-xl" />
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                alt="1C" 
+                className="relative w-20 h-20 sm:w-24 sm:h-24 z-10"
+              />
+            </motion.div>
+          </div>
         </div>
+
+        {/* Verticals Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+            Trusted across <span className="bg-gradient-to-r from-[#6209e6] to-[#A855F7] bg-clip-text text-transparent">14 industries</span>
+          </h2>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            {verticals.map((vertical, index) => (
+              <motion.div
+                key={vertical.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="group"
+              >
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 border border-purple-100/50 h-full flex flex-col items-center text-center">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${vertical.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                    <vertical.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 text-sm leading-tight">{vertical.name}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
