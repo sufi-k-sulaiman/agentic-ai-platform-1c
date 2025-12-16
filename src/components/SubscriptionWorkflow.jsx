@@ -62,6 +62,7 @@ const plans = [
 export default function SubscriptionWorkflow({ isOpen, onClose }) {
   const [step, setStep] = useState(1);
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -74,6 +75,65 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
     billingAddress: ''
   });
 
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    return /^[\d\s\-\+\(\)]+$/.test(phone) && phone.replace(/\D/g, '').length >= 10;
+  };
+
+  const validateCardNumber = (card) => {
+    return /^\d{13,19}$/.test(card.replace(/\s/g, ''));
+  };
+
+  const validateExpiry = (expiry) => {
+    if (!/^\d{2}\/\d{2}$/.test(expiry)) return false;
+    const [month, year] = expiry.split('/').map(Number);
+    const currentYear = new Date().getFullYear() % 100;
+    const currentMonth = new Date().getMonth() + 1;
+    return month >= 1 && month <= 12 && (year > currentYear || (year === currentYear && month >= currentMonth));
+  };
+
+  const validateCVV = (cvv) => {
+    return /^\d{3,4}$/.test(cvv);
+  };
+
+  const validateStep2 = () => {
+    const newErrors = {};
+    
+    if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
+    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    else if (!validateEmail(formData.email)) newErrors.email = 'Invalid email format';
+    if (formData.phone && !validatePhone(formData.phone)) newErrors.phone = 'Invalid phone number';
+    
+    if (selectedPlan?.name === 'Team') {
+      if (!formData.company.trim()) newErrors.company = 'Company name is required';
+      if (!formData.teamSize) newErrors.teamSize = 'Team size is required';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const validateStep3 = () => {
+    const newErrors = {};
+    
+    if (!formData.cardNumber.trim()) newErrors.cardNumber = 'Card number is required';
+    else if (!validateCardNumber(formData.cardNumber)) newErrors.cardNumber = 'Invalid card number';
+    
+    if (!formData.expiryDate.trim()) newErrors.expiryDate = 'Expiry date is required';
+    else if (!validateExpiry(formData.expiryDate)) newErrors.expiryDate = 'Invalid or expired date';
+    
+    if (!formData.cvv.trim()) newErrors.cvv = 'CVV is required';
+    else if (!validateCVV(formData.cvv)) newErrors.cvv = 'Invalid CVV';
+    
+    if (!formData.billingAddress.trim()) newErrors.billingAddress = 'Billing address is required';
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handlePlanSelect = (plan) => {
     setSelectedPlan(plan);
     if (plan.name === 'Enterprise') {
@@ -84,6 +144,8 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
   };
 
   const handleNext = () => {
+    if (step === 2 && !validateStep2()) return;
+    setErrors({});
     setStep(step + 1);
   };
 
@@ -92,7 +154,7 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
   };
 
   const handleSubmit = () => {
-    // Handle subscription submission
+    if (!validateStep3()) return;
     console.log('Subscription submitted:', { plan: selectedPlan, formData });
     setStep(5); // Success screen
   };
@@ -223,10 +285,14 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                         id="fullName"
                         placeholder="John Doe"
                         value={formData.fullName}
-                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className="pl-10"
+                        onChange={(e) => {
+                          setFormData({ ...formData, fullName: e.target.value });
+                          if (errors.fullName) setErrors({ ...errors, fullName: '' });
+                        }}
+                        className={`pl-10 ${errors.fullName ? 'border-red-500' : ''}`}
                       />
                     </div>
+                    {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
                   </div>
                   <div>
                     <Label htmlFor="email">Email Address *</Label>
@@ -237,10 +303,14 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                         type="email"
                         placeholder="john@example.com"
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="pl-10"
+                        onChange={(e) => {
+                          setFormData({ ...formData, email: e.target.value });
+                          if (errors.email) setErrors({ ...errors, email: '' });
+                        }}
+                        className={`pl-10 ${errors.email ? 'border-red-500' : ''}`}
                       />
                     </div>
+                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                   </div>
                   <div>
                     <Label htmlFor="phone">Phone Number</Label>
@@ -250,10 +320,14 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                         id="phone"
                         placeholder="+1 (555) 000-0000"
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="pl-10"
+                        onChange={(e) => {
+                          setFormData({ ...formData, phone: e.target.value });
+                          if (errors.phone) setErrors({ ...errors, phone: '' });
+                        }}
+                        className={`pl-10 ${errors.phone ? 'border-red-500' : ''}`}
                       />
                     </div>
+                    {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                   </div>
                   {selectedPlan.name === 'Team' && (
                     <>
@@ -265,10 +339,14 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                             id="company"
                             placeholder="Acme Inc."
                             value={formData.company}
-                            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                            className="pl-10"
+                            onChange={(e) => {
+                              setFormData({ ...formData, company: e.target.value });
+                              if (errors.company) setErrors({ ...errors, company: '' });
+                            }}
+                            className={`pl-10 ${errors.company ? 'border-red-500' : ''}`}
                           />
                         </div>
+                        {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}
                       </div>
                       <div>
                         <Label htmlFor="teamSize">Team Size</Label>
@@ -277,9 +355,13 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                           type="number"
                           placeholder="5"
                           value={formData.teamSize}
-                          onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
-                          className="mt-2"
+                          onChange={(e) => {
+                            setFormData({ ...formData, teamSize: e.target.value });
+                            if (errors.teamSize) setErrors({ ...errors, teamSize: '' });
+                          }}
+                          className={`mt-2 ${errors.teamSize ? 'border-red-500' : ''}`}
                         />
+                        {errors.teamSize && <p className="text-red-500 text-sm mt-1">{errors.teamSize}</p>}
                       </div>
                     </>
                   )}
@@ -319,10 +401,15 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                         id="cardNumber"
                         placeholder="1234 5678 9012 3456"
                         value={formData.cardNumber}
-                        onChange={(e) => setFormData({ ...formData, cardNumber: e.target.value })}
-                        className="pl-10"
+                        onChange={(e) => {
+                          setFormData({ ...formData, cardNumber: e.target.value });
+                          if (errors.cardNumber) setErrors({ ...errors, cardNumber: '' });
+                        }}
+                        className={`pl-10 ${errors.cardNumber ? 'border-red-500' : ''}`}
+                        maxLength={19}
                       />
                     </div>
+                    {errors.cardNumber && <p className="text-red-500 text-sm mt-1">{errors.cardNumber}</p>}
                   </div>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -331,9 +418,14 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                         id="expiryDate"
                         placeholder="MM/YY"
                         value={formData.expiryDate}
-                        onChange={(e) => setFormData({ ...formData, expiryDate: e.target.value })}
-                        className="mt-2"
+                        onChange={(e) => {
+                          setFormData({ ...formData, expiryDate: e.target.value });
+                          if (errors.expiryDate) setErrors({ ...errors, expiryDate: '' });
+                        }}
+                        className={`mt-2 ${errors.expiryDate ? 'border-red-500' : ''}`}
+                        maxLength={5}
                       />
+                      {errors.expiryDate && <p className="text-red-500 text-sm mt-1">{errors.expiryDate}</p>}
                     </div>
                     <div>
                       <Label htmlFor="cvv">CVV *</Label>
@@ -341,9 +433,14 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                         id="cvv"
                         placeholder="123"
                         value={formData.cvv}
-                        onChange={(e) => setFormData({ ...formData, cvv: e.target.value })}
-                        className="mt-2"
+                        onChange={(e) => {
+                          setFormData({ ...formData, cvv: e.target.value });
+                          if (errors.cvv) setErrors({ ...errors, cvv: '' });
+                        }}
+                        className={`mt-2 ${errors.cvv ? 'border-red-500' : ''}`}
+                        maxLength={4}
                       />
+                      {errors.cvv && <p className="text-red-500 text-sm mt-1">{errors.cvv}</p>}
                     </div>
                   </div>
                   <div>
@@ -352,9 +449,13 @@ export default function SubscriptionWorkflow({ isOpen, onClose }) {
                       id="billingAddress"
                       placeholder="123 Main St, City, State, ZIP"
                       value={formData.billingAddress}
-                      onChange={(e) => setFormData({ ...formData, billingAddress: e.target.value })}
-                      className="mt-2"
+                      onChange={(e) => {
+                        setFormData({ ...formData, billingAddress: e.target.value });
+                        if (errors.billingAddress) setErrors({ ...errors, billingAddress: '' });
+                      }}
+                      className={`mt-2 ${errors.billingAddress ? 'border-red-500' : ''}`}
                     />
+                    {errors.billingAddress && <p className="text-red-500 text-sm mt-1">{errors.billingAddress}</p>}
                   </div>
                 </div>
 
