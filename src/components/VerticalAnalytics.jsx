@@ -255,7 +255,6 @@ export default function VerticalAnalytics({ industry }) {
                     <CardTitle>Notifications</CardTitle>
                   </div>
                   <button className="text-sm text-[#6209e6] hover:underline">
-                    Mark all read
                   </button>
                 </div>
               </CardHeader>
