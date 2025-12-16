@@ -228,12 +228,12 @@ export default function HeroSection() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center"
+              className="relative flex items-center justify-center"
             >
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                 alt="1C" 
-                className="relative w-20 h-20 sm:w-24 sm:h-24 z-10"
+                className="relative w-16 h-16 z-10"
               />
             </motion.div>
 
