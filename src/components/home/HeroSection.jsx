@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ArrowRight, Building2, Server, Landmark, Heart, Building, Train, TrafficCone, Zap, ShoppingBag, GraduationCap, Gamepad2, Shield, Plane, Users, TrendingUp, Clock, DollarSign, Target, BarChart3, Users as UsersIcon } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+
+const challenges = [
+  { icon: TrendingUp, title: 'Revenue Optimization', description: 'Analyzing market trends', color: 'from-green-500 to-emerald-500' },
+  { icon: Clock, title: 'Process Automation', description: 'Streamlining workflows', color: 'from-blue-500 to-cyan-500' },
+  { icon: DollarSign, title: 'Cost Reduction', description: 'Finding savings opportunities', color: 'from-purple-500 to-pink-500' },
+  { icon: Target, title: 'Performance Tracking', description: 'Monitoring KPIs in real-time', color: 'from-orange-500 to-red-500' },
+  { icon: BarChart3, title: 'Data Analysis', description: 'Processing insights', color: 'from-indigo-500 to-violet-500' },
+  { icon: UsersIcon, title: 'Customer Experience', description: 'Enhancing satisfaction', color: 'from-teal-500 to-cyan-500' }
+];
 
 const verticals = [
   { icon: Building2, name: 'Property Management', color: 'from-blue-500 to-cyan-500', page: 'PropertyManagement' },
@@ -23,6 +32,15 @@ const verticals = [
 ];
 
 export default function HeroSection() {
+  const [currentChallenge, setCurrentChallenge] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentChallenge((prev) => (prev + 1) % challenges.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-purple-100 via-purple-50 to-violet-100">{/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,46,229,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,46,229,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -111,29 +129,33 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Floating Cards - AI Processing */}
-          <motion.div 
-            className="absolute top-[8%] left-[5%] bg-white rounded-2xl shadow-lg p-5 w-56 z-10"
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="w-10 h-10 bg-gradient-to-br from-[#6209e6] to-[#A855F7] rounded-xl flex items-center justify-center mb-3">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-1">AI Processing</h3>
-            <p className="text-sm text-gray-500 mb-3">Real-time analysis complete</p>
-            <div className="w-full bg-gray-100 rounded-full h-2">
+          {/* Floating Cards - AI Processing Challenges */}
+          <div className="absolute top-[8%] left-[5%] w-64 z-10">
+            <AnimatePresence mode="wait">
               <motion.div 
-                className="bg-[#6209e6] h-2 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: "75%" }}
-                transition={{ duration: 2, delay: 0.5 }}
-              />
-            </div>
-          </motion.div>
+                key={currentChallenge}
+                className="bg-white rounded-2xl shadow-lg p-5"
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className={`w-12 h-12 bg-gradient-to-br ${challenges[currentChallenge].color} rounded-xl flex items-center justify-center mb-3`}>
+                  {React.createElement(challenges[currentChallenge].icon, { className: "w-6 h-6 text-white" })}
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-1">{challenges[currentChallenge].title}</h3>
+                <p className="text-sm text-gray-500 mb-3">{challenges[currentChallenge].description}</p>
+                <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+                  <motion.div 
+                    className={`h-2 rounded-full bg-gradient-to-r ${challenges[currentChallenge].color}`}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 3, ease: "easeInOut" }}
+                  />
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           {/* Floating Cards - Task Completed */}
           <motion.div 
