@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -184,13 +185,13 @@ export default function Cyber() {
       </section>
 
       {/* Built with Security in Mind */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gradient-to-br from-purple-600 to-purple-700 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Built with security in mind
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
               Multiple layers of protection to keep your data safe
             </p>
           </div>
@@ -235,13 +236,13 @@ export default function Cyber() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2">
+                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2 bg-gradient-to-br from-purple-800 to-purple-900">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-[#8B2EE5]" />
+                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+                      <feature.icon className="w-6 h-6 text-purple-200" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-purple-200 leading-relaxed">{feature.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -251,16 +252,16 @@ export default function Cyber() {
       </section>
 
       {/* Website Validator */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-purple-50 to-violet-100">
+      <section className="py-24 bg-gradient-to-br from-[#8B2EE5] to-[#6B21A8] text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="w-16 h-16 bg-[#8B2EE5] rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Globe className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Website Validator
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
               Validate your domain, website, or endpoint against industry best practices
             </p>
           </div>
