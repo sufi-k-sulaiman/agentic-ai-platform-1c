@@ -408,11 +408,16 @@ export default function Cyber() {
                       </Button>
                     </div>
                     <div className="p-6">
-                      <div className="grid md:grid-cols-2 gap-6">
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                           { key: 'securityHeaders', label: 'Security Headers', icon: Shield, grade: validationResults.securityHeadersGrade },
-                          { key: 'sslTls', label: 'SSL/TLS Configuration', icon: Lock, grade: validationResults.sslLabsGrade }
-                        ].map(({ key, label, icon: Icon, grade }) => {
+                          { key: 'sslTls', label: 'SSL/TLS Configuration', icon: Lock, grade: validationResults.sslLabsGrade },
+                          { key: 'seo', label: 'SEO Optimization', icon: Globe, score: validationResults.seoScore },
+                          { key: 'accessibility', label: 'Accessibility', icon: Eye, score: validationResults.accessibilityScore },
+                          { key: 'performance', label: 'Performance', icon: FileCheck, score: validationResults.performanceScore },
+                          { key: 'content', label: 'Content Quality', icon: CheckCircle2, score: validationResults.contentScore },
+                          { key: 'mobile', label: 'Mobile Friendly', icon: Shield, score: validationResults.mobileScore }
+                        ].filter(({ grade, score }) => grade || score).map(({ key, label, icon: Icon, grade, score }) => {
                           const { passed, failed } = getIssuesForCategory(key);
                           const isExpanded = expandedCategories[key];
                           const totalItems = passed.length + failed.length;
@@ -425,6 +430,7 @@ export default function Cyber() {
                                 <Icon className="w-5 h-5 text-[#8B2EE5]" />
                                 <span className="font-semibold text-gray-900">{label}</span>
                                 {grade && <span className="ml-auto text-2xl font-bold text-[#8B2EE5]">{grade}</span>}
+                                {score && <span className="ml-auto text-2xl font-bold text-[#8B2EE5]">{score}/100</span>}
                               </div>
 
                               {failed.length > 0 && (

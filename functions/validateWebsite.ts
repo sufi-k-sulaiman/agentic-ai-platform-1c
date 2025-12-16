@@ -12,8 +12,17 @@ Deno.serve(async (req) => {
     // Clean domain input
     const cleanDomain = domain.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
     
+    // Fetch website HTML for LLM analysis
+    let htmlContent = '';
+    try {
+      const htmlRes = await fetch(`https://${cleanDomain}`);
+      htmlContent = await htmlRes.text();
+    } catch (e) {
+      console.log('Could not fetch HTML:', e.message);
+    }
+
     // Run all API calls in parallel
-    const [securityHeadersData, sslLabsData] = await Promise.allSettled([
+    const [securityHeadersData, sslLabsData, llmAnalysis] = await Promise.allSettled([
       
       // SecurityHeaders.com - Get actual HTTP headers from the domain
       fetch(`https://${cleanDomain}`, {
@@ -49,8 +58,71 @@ Deno.serve(async (req) => {
       
       // SSL Labs (just initiate, results take time)
       fetch(`https://api.ssllabs.com/api/v3/analyze?host=${cleanDomain}&startNew=on&all=done`)
-        .then(res => res.json()).catch(() => null)
-    ]);
+        .then(res => res.json()).catch(() => null),
+
+      // LLM Analysis
+      htmlContent ? base44.asServiceRole.integrations.Core.InvokeLLM({
+        prompt: `Analyze this website and provide a comprehensive assessment. Website: ${cleanDomain}
+
+      HTML Content (first 15000 chars):
+      ${htmlContent.substring(0, 15000)}
+
+      Analyze:
+      1. SEO optimization (meta tags, structured data, page titles, descriptions)
+      2. Accessibility (ARIA labels, alt text, semantic HTML)
+      3. Performance indicators (scripts, resources, page structure)
+      4. Content quality (headings, structure, readability)
+      5. Mobile responsiveness indicators
+      6. User experience elements
+
+      Provide specific findings with examples from the code.`,
+        response_json_schema: {
+          type: "object",
+          properties: {
+            seo: {
+              type: "object",
+              properties: {
+                score: { type: "number" },
+                passed: { type: "array", items: { type: "string" } },
+                failed: { type: "array", items: { type: "string" } }
+              }
+            },
+            accessibility: {
+              type: "object",
+              properties: {
+                score: { type: "number" },
+                passed: { type: "array", items: { type: "string" } },
+                failed: { type: "array", items: { type: "string" } }
+              }
+            },
+            performance: {
+              type: "object",
+              properties: {
+                score: { type: "number" },
+                passed: { type: "array", items: { type: "string" } },
+                failed: { type: "array", items: { type: "string" } }
+              }
+            },
+            content: {
+              type: "object",
+              properties: {
+                score: { type: "number" },
+                passed: { type: "array", items: { type: "string" } },
+                failed: { type: "array", items: { type: "string" } }
+              }
+            },
+            mobile: {
+              type: "object",
+              properties: {
+                score: { type: "number" },
+                passed: { type: "array", items: { type: "string" } },
+                failed: { type: "array", items: { type: "string" } }
+              }
+            }
+          }
+        }
+      }).catch(() => null) : Promise.resolve(null)
+      ]);
 
     // Calculate scores based on API responses
     const gradeToScore = { 'A+': 100, 'A': 95, 'B': 85, 'C': 75, 'D': 65, 'F': 50 };
@@ -69,7 +141,12 @@ Deno.serve(async (req) => {
     const extractIssues = () => {
       const issues = {
         securityHeaders: { passed: [], failed: [] },
-        sslTls: { passed: [], failed: [] }
+        sslTls: { passed: [], failed: [] },
+        seo: { passed: [], failed: [] },
+        accessibility: { passed: [], failed: [] },
+        performance: { passed: [], failed: [] },
+        content: { passed: [], failed: [] },
+        mobile: { passed: [], failed: [] }
       };
 
       // SECURITY HEADERS - Extract EVERY header with full details
@@ -266,10 +343,43 @@ Deno.serve(async (req) => {
         issues.sslTls.failed.push('SSL Labs scan failed or unavailable');
       }
 
+      // LLM ANALYSIS - Content, SEO, Accessibility, Performance
+      if (llmAnalysis.status === 'fulfilled' && llmAnalysis.value) {
+        const data = llmAnalysis.value;
+        
+        if (data.seo) {
+          issues.seo.passed = data.seo.passed || [];
+          issues.seo.failed = data.seo.failed || [];
+        }
+        
+        if (data.accessibility) {
+          issues.accessibility.passed = data.accessibility.passed || [];
+          issues.accessibility.failed = data.accessibility.failed || [];
+        }
+        
+        if (data.performance) {
+          issues.performance.passed = data.performance.passed || [];
+          issues.performance.failed = data.performance.failed || [];
+        }
+        
+        if (data.content) {
+          issues.content.passed = data.content.passed || [];
+          issues.content.failed = data.content.failed || [];
+        }
+        
+        if (data.mobile) {
+          issues.mobile.passed = data.mobile.passed || [];
+          issues.mobile.failed = data.mobile.failed || [];
+        }
+      }
+
       return issues;
     };
 
     const detailedIssues = extractIssues();
+
+    // Calculate LLM scores
+    const llmScores = llmAnalysis.status === 'fulfilled' && llmAnalysis.value ? llmAnalysis.value : null;
 
     // Build detailed results
     const results = {
@@ -278,10 +388,16 @@ Deno.serve(async (req) => {
       sslLabsGrade: sslLabsData.status === 'fulfilled' && sslLabsData.value?.endpoints?.[0]?.grade 
         ? sslLabsData.value.endpoints[0].grade 
         : null,
+      seoScore: llmScores?.seo?.score || null,
+      accessibilityScore: llmScores?.accessibility?.score || null,
+      performanceScore: llmScores?.performance?.score || null,
+      contentScore: llmScores?.content?.score || null,
+      mobileScore: llmScores?.mobile?.score || null,
       issues: detailedIssues,
       rawData: {
         securityHeaders: securityHeadersData.status === 'fulfilled' ? securityHeadersData.value : null,
-        sslLabs: sslLabsData.status === 'fulfilled' ? sslLabsData.value : null
+        sslLabs: sslLabsData.status === 'fulfilled' ? sslLabsData.value : null,
+        llmAnalysis: llmScores
       }
     };
 
