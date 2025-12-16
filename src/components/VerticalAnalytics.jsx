@@ -133,6 +133,7 @@ export default function VerticalAnalytics({ industry }) {
                         border: '1px solid #e5e7eb',
                         borderRadius: '8px'
                       }}
+                      formatter={(value) => value.toFixed(2)}
                     />
                     <Legend />
                     <Area 
