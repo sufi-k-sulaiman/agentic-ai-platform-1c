@@ -52,17 +52,7 @@ export default function Cyber() {
     }
   };
 
-  const getScoreColor = (score) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 75) return 'text-yellow-600';
-    return 'text-red-600';
-  };
 
-  const getScoreBgColor = (score) => {
-    if (score >= 90) return 'bg-green-100';
-    if (score >= 75) return 'bg-yellow-100';
-    return 'bg-red-100';
-  };
 
   return (
     <div className="bg-white">
@@ -406,8 +396,8 @@ export default function Cyber() {
                   <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
                     <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                       <div>
-                        <h4 className="font-bold text-lg text-gray-900">All Categories Breakdown</h4>
-                        <p className="text-sm text-gray-600">Comprehensive security assessment across all validation areas</p>
+                        <h4 className="font-bold text-lg text-gray-900">Validation Results</h4>
+                        <p className="text-sm text-gray-600">Security headers and SSL/TLS analysis</p>
                       </div>
                       <Button
                         onClick={() => setShowAllDetailsModal(true)}
@@ -420,15 +410,9 @@ export default function Cyber() {
                     <div className="p-6">
                       <div className="grid md:grid-cols-2 gap-6">
                         {[
-                          { key: 'security', label: 'Security', icon: Shield },
-                          { key: 'inputHandling', label: 'Input & Data Handling', icon: FileCheck },
-                          { key: 'authentication', label: 'Authentication & Sessions', icon: Lock },
-                          { key: 'accessControl', label: 'Access Control', icon: Shield },
-                          { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
-                          { key: 'dataProtection', label: 'Data Protection', icon: Lock },
-                          { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye }
-                        ].map(({ key, label, icon: Icon }) => {
-                          const score = validationResults[key];
+                          { key: 'securityHeaders', label: 'Security Headers', icon: Shield, grade: validationResults.securityHeadersGrade },
+                          { key: 'sslTls', label: 'SSL/TLS Configuration', icon: Lock, grade: validationResults.sslLabsGrade }
+                        ].map(({ key, label, icon: Icon, grade }) => {
                           const { passed, failed } = getIssuesForCategory(key);
                           const isExpanded = expandedCategories[key];
                           const totalItems = passed.length + failed.length;
@@ -438,9 +422,9 @@ export default function Cyber() {
                           return (
                             <div key={key} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
                               <div className="flex items-center gap-2 mb-3">
-                                <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
+                                <Icon className="w-5 h-5 text-[#8B2EE5]" />
                                 <span className="font-semibold text-gray-900">{label}</span>
-                                <span className={`ml-auto text-2xl font-bold ${getScoreColor(score)}`}>{score}</span>
+                                {grade && <span className="ml-auto text-2xl font-bold text-[#8B2EE5]">{grade}</span>}
                               </div>
 
                               {failed.length > 0 && (
@@ -531,7 +515,12 @@ export default function Cyber() {
                                 { key: 'accessControl', label: 'Access Control', icon: Shield },
                                 { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
                                 { key: 'dataProtection', label: 'Data Protection', icon: Lock },
-                                { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye }
+                                { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye },
+                                { key: 'design', label: 'Design & UX', icon: Eye },
+                                { key: 'seo', label: 'SEO & Marketing', icon: Globe },
+                                { key: 'performance', label: 'Performance', icon: FileCheck },
+                                { key: 'legal', label: 'Legal & Compliance', icon: Lock },
+                                { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
                               ].map(({ key, label, icon: Icon }) => {
                                 const score = validationResults[key];
                                 const { passed, failed } = getIssuesForCategory(key);
