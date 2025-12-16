@@ -6,6 +6,8 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe, XCircle } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import EmailForm from '@/components/contact/EmailForm';
+import { base44 } from '@/api/base44Client';
 
 const certifications = [
   { name: 'SOC 2 Type II', status: 'Certified', icon: Shield },
@@ -185,6 +187,7 @@ export default function Cyber() {
   const [validationResults, setValidationResults] = useState(null);
   const [isValidating, setIsValidating] = useState(false);
   const [expandedCard, setExpandedCard] = useState(null);
+  const [showContactForm, setShowContactForm] = useState(false);
 
   const generateIssues = (category, score) => {
     const allCriteria = validationCriteria[category] || [];
@@ -270,10 +273,7 @@ export default function Cyber() {
             <p className="text-2xl text-gray-600 leading-relaxed mb-10">
               Enterprise-grade security and compliance to protect your most sensitive data and AI workloads.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14">
-              <Download className="w-5 h-5 mr-2" />
-              Download security whitepaper
-            </Button>
+
           </motion.div>
         </div>
       </section>
@@ -578,17 +578,21 @@ export default function Cyber() {
             <p className="text-xl text-purple-100 mb-10">
               Found a security vulnerability? We reward responsible disclosure through our bug bounty program.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-8">
-                Report a vulnerability
-              </Button>
-              <Button size="lg" className="bg-[#8B2EE5] hover:bg-[#7325C4] border-2 border-white rounded-full px-8">
-                View program details
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              onClick={() => setShowContactForm(true)}
+              className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-8"
+            >
+              Report a vulnerability
+            </Button>
           </motion.div>
         </div>
       </section>
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <EmailForm onClose={() => setShowContactForm(false)} />
+      )}
 
     </div>
   );
