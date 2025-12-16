@@ -329,7 +329,7 @@ export default function SolutionsSection() {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
                   {industryData[selectedIndustry].stats.map((stat, index) => (
                     <div key={index}>
                       <div className="text-2xl sm:text-3xl font-bold mb-1">{stat.value}</div>
@@ -337,6 +337,13 @@ export default function SolutionsSection() {
                     </div>
                   ))}
                 </div>
+
+                <Link 
+                  to={industries.find(i => i.name === selectedIndustry)?.href || ''}
+                  className="inline-flex items-center gap-2 bg-white text-[#6209e6] hover:bg-purple-50 px-6 py-3 rounded-full font-semibold transition-all"
+                >
+                  Learn more <ArrowRight className="w-4 h-4" />
+                </Link>
 
                 {/* Decorative */}
                 <div className="absolute top-6 right-6 w-20 h-20 border border-white/10 rounded-full" />
