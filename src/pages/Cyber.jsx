@@ -610,7 +610,7 @@ export default function Cyber() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Built with security in mind
+              Built with cybersecurity in mind
             </h2>
             <p className="text-xl text-purple-100 max-w-3xl mx-auto">
               Multiple layers of protection to keep your data safe
