@@ -203,7 +203,29 @@ export default function SportsEntertainment() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Dynamic pricing updated', description: '500 tickets repriced for tonight', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:45 AM', action: 'Mobile order completed', description: '150 concession orders processed', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:20 AM', action: 'Parking optimized', description: '2,000 spaces allocated efficiently', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '11:45 AM', action: 'Fan alert sent', description: 'Gate opening time notified', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Revenue Per Fan', current: 880, target: 1000, percentage: 88, color: 'bg-purple-500' },
+          { goal: 'Fan Satisfaction', current: 920, target: 1000, percentage: 92, color: 'bg-green-500' },
+          { goal: 'Operational Efficiency', current: 85, target: 100, percentage: 85, color: 'bg-blue-500' },
+          { goal: 'Sponsorship ROI', current: 78, target: 100, percentage: 78, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Record Revenue Night', description: 'Per-fan spending reached $68 average...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Sellout Alert', description: 'All premium seats sold for playoffs...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Concession Optimization', description: 'Wait times reduced to under 5 minutes...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Season Ticket Renewal', description: '92% renewal rate, up 15%...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
+
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -242,7 +264,7 @@ export default function SportsEntertainment() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
