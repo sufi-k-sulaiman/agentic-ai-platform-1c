@@ -205,9 +205,26 @@ export default function HeroSection() {
             </div>
           ))}
 
-          {/* Floating Cards - Task Completed */}
+          {/* Center Logo with Enhanced Shadow */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full shadow-2xl flex items-center justify-center"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-200/30 to-violet-200/30 rounded-full blur-xl" />
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
+                alt="1C" 
+                className="relative w-20 h-20 sm:w-24 sm:h-24 z-10"
+              />
+            </motion.div>
+          </div>
+
+          {/* Task Completed Card - Below Center Logo */}
           <motion.div 
-            className="absolute bottom-[12%] right-[8%] bg-white rounded-2xl shadow-lg p-5 w-60 z-10"
+            className="absolute top-[58%] left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-lg p-5 w-60 z-10"
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
             initial={{ opacity: 0, scale: 0.8 }}
@@ -225,23 +242,6 @@ export default function HeroSection() {
             <div className="text-3xl font-bold text-gray-900 mb-1">+127%</div>
             <p className="text-sm text-gray-500">Efficiency increase</p>
           </motion.div>
-
-          {/* Center Logo with Enhanced Shadow */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full shadow-2xl flex items-center justify-center"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-200/30 to-violet-200/30 rounded-full blur-xl" />
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
-                alt="1C" 
-                className="relative w-20 h-20 sm:w-24 sm:h-24 z-10"
-              />
-            </motion.div>
-          </div>
         </div>
 
         {/* Verticals Grid */}
