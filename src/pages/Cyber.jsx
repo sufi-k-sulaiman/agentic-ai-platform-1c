@@ -589,7 +589,7 @@ export default function Cyber() {
               Responsible disclosure
             </h2>
             <p className="text-xl text-purple-100 mb-10">
-              Found a security vulnerability? We reward responsible disclosure through our bug bounty program.
+              Found a vulnerability? We reward responsible disclosure through our bug bounty program.
             </p>
             <Button 
               size="lg" 
