@@ -95,8 +95,169 @@ export default function Cyber() {
         </div>
       </section>
 
-      {/* Website Validator */}
+      {/* Certifications & Compliance */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Certifications & compliance
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We meet the highest industry standards for security and data protection
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              { name: 'SOC 2 Type II', status: 'Certified', description: 'SOC 2 Type II certification verifies that our security controls are properly designed and operating effectively over time. This includes rigorous testing of our security, availability, processing integrity, confidentiality, and privacy controls.', icon: Shield },
+              { name: 'ISO 27001', status: 'Certified', description: 'ISO 27001 is the international standard for information security management systems (ISMS). Our certification demonstrates systematic management of sensitive information to keep it secure through comprehensive security controls.', icon: FileCheck },
+              { name: 'GDPR', status: 'Compliant', description: 'Full compliance with the General Data Protection Regulation (GDPR), ensuring proper handling of EU citizen data with strong privacy protections, data subject rights, and lawful processing requirements.', icon: Lock },
+              { name: 'HIPAA', status: 'Compliant', description: 'Health Insurance Portability and Accountability Act (HIPAA) compliance for handling protected health information (PHI), with strict safeguards for patient data security and privacy.', icon: Shield },
+              { name: 'PCI DSS', status: 'Level 1', description: 'Payment Card Industry Data Security Standard (PCI DSS) Level 1 compliance - the highest level of validation for organizations processing the largest volume of card transactions securely.', icon: Lock },
+              { name: 'CCPA', status: 'Compliant', description: 'California Consumer Privacy Act (CCPA) compliance, providing California residents with enhanced privacy rights and control over their personal information.', icon: Eye }
+            ].map((cert, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <Card 
+                  className="cursor-pointer hover:shadow-xl transition-all hover:-translate-y-1 h-full"
+                  onClick={() => setExpandedCard(expandedCard === cert.name ? null : cert.name)}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <cert.icon className="w-6 h-6 text-[#8B2EE5]" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 mb-2">{cert.name}</h3>
+                    <Badge className="bg-green-100 text-green-800">{cert.status}</Badge>
+                  </CardContent>
+                </Card>
+
+                {/* Modal */}
+                <AnimatePresence>
+                  {expandedCard === cert.name && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                      onClick={() => setExpandedCard(null)}
+                    >
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                        onClick={(e) => e.stopPropagation()}
+                        className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8"
+                      >
+                        <div className="flex items-start justify-between mb-6">
+                          <div className="flex items-center gap-4">
+                            <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center">
+                              <cert.icon className="w-8 h-8 text-[#8B2EE5]" />
+                            </div>
+                            <div>
+                              <h3 className="text-2xl font-bold text-gray-900">{cert.name}</h3>
+                              <Badge className="bg-green-100 text-green-800 mt-2">{cert.status}</Badge>
+                            </div>
+                          </div>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setExpandedCard(null)}
+                            className="text-gray-500 hover:text-gray-700"
+                          >
+                            <X className="w-6 h-6" />
+                          </Button>
+                        </div>
+                        <p className="text-gray-700 leading-relaxed">{cert.description}</p>
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Built with Security in Mind */}
       <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Built with security in mind
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Multiple layers of protection to keep your data safe
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Lock,
+                title: 'Encryption at Rest & in Transit',
+                description: 'All data is encrypted using AES-256 encryption at rest and TLS 1.3 in transit.',
+                color: 'purple'
+              },
+              {
+                icon: Eye,
+                title: 'Zero-Knowledge Architecture',
+                description: 'Your data is encrypted with keys only you control. We cannot access your sensitive information.',
+                color: 'blue'
+              },
+              {
+                icon: Shield,
+                title: 'Network Security',
+                description: 'Advanced DDoS protection, WAF, and intrusion detection systems protect our infrastructure.',
+                color: 'green'
+              },
+              {
+                icon: AlertTriangle,
+                title: 'Threat Detection',
+                description: 'Real-time monitoring and automated threat detection across all systems.',
+                color: 'red'
+              },
+              {
+                icon: FileCheck,
+                title: 'Regular Audits',
+                description: 'Third-party security audits and penetration testing conducted quarterly.',
+                color: 'yellow'
+              },
+              {
+                icon: Lock,
+                title: 'Access Controls',
+                description: 'Role-based access control (RBAC) and multi-factor authentication (MFA) required.',
+                color: 'indigo'
+              }
+            ].map((feature, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2">
+                  <CardContent className="p-6">
+                    <div className={`w-12 h-12 bg-${feature.color}-100 rounded-lg flex items-center justify-center mb-4`}>
+                      <feature.icon className={`w-6 h-6 text-${feature.color}-600`} />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Website Validator */}
+      <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
