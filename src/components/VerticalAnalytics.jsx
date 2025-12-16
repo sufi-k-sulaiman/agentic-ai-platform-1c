@@ -17,12 +17,22 @@ export default function VerticalAnalytics({ industry }) {
   const [timeRange, setTimeRange] = useState('30D');
   const chartData = generateChartData();
 
-  const activityTimeline = industry.activityTimeline || [
-    { time: '10:30 AM', action: 'Issue detected', description: 'System anomaly identified', icon: AlertCircle, color: 'text-orange-500' },
-    { time: '10:32 AM', action: 'AI analysis complete', description: 'Root cause determined', icon: CheckCircle, color: 'text-green-500' },
-    { time: '10:35 AM', action: 'Solution deployed', description: 'Automated fix applied', icon: CheckCircle, color: 'text-green-500' },
-    { time: '10:40 AM', action: 'Verification complete', description: 'System operating normally', icon: CheckCircle, color: 'text-green-500' }
-  ];
+  const iconMap = {
+    'AlertCircle': AlertCircle,
+    'CheckCircle': CheckCircle,
+    'Info': Info,
+    'TrendingUp': TrendingUp,
+    'Clock': Clock
+  };
+
+  const getIcon = (iconName) => iconMap[iconName] || Info;
+
+  const activityTimeline = (industry.activityTimeline || [
+    { time: '10:30 AM', action: 'Issue detected', description: 'System anomaly identified', icon: 'AlertCircle', color: 'text-orange-500' },
+    { time: '10:32 AM', action: 'AI analysis complete', description: 'Root cause determined', icon: 'CheckCircle', color: 'text-green-500' },
+    { time: '10:35 AM', action: 'Solution deployed', description: 'Automated fix applied', icon: 'CheckCircle', color: 'text-green-500' },
+    { time: '10:40 AM', action: 'Verification complete', description: 'System operating normally', icon: 'CheckCircle', color: 'text-green-500' }
+  ]).map(item => ({ ...item, icon: typeof item.icon === 'string' ? getIcon(item.icon) : item.icon }));
 
   const goalsProgress = industry.goalsProgress || [
     { goal: 'Cost Reduction Target', current: 390, target: 500, percentage: 78, color: 'bg-purple-500' },
@@ -31,12 +41,12 @@ export default function VerticalAnalytics({ industry }) {
     { goal: 'Satisfaction Score', current: 9, target: 20, percentage: 45, color: 'bg-orange-500' }
   ];
 
-  const notifications = industry.notifications || [
-    { title: 'Cost Savings Achieved', description: 'Reduced operational expenses by...', time: '2 min ago', icon: CheckCircle, color: 'text-green-500' },
-    { title: 'Efficiency Milestone', description: 'Process automation at 85%...', time: '15 min ago', icon: TrendingUp, color: 'text-blue-500' },
-    { title: 'New Optimization', description: 'AI identified new efficiency gain...', time: '1 hour ago', icon: Info, color: 'text-purple-500' },
-    { title: 'Performance Alert', description: 'Review quarterly improvements...', time: '3 hours ago', icon: AlertCircle, color: 'text-orange-500' }
-  ];
+  const notifications = (industry.notifications || [
+    { title: 'Cost Savings Achieved', description: 'Reduced operational expenses by...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+    { title: 'Efficiency Milestone', description: 'Process automation at 85%...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+    { title: 'New Optimization', description: 'AI identified new efficiency gain...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+    { title: 'Performance Alert', description: 'Review quarterly improvements...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+  ]).map(item => ({ ...item, icon: typeof item.icon === 'string' ? getIcon(item.icon) : item.icon }));
 
   return (
     <section className="py-24 bg-white">
