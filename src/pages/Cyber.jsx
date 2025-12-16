@@ -324,12 +324,12 @@ export default function Cyber() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="space-y-6"
+                  className="space-y-8"
                 >
                   <div className="flex items-center justify-between pb-6 border-b border-gray-200">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Validation Results</h3>
-                      <p className="text-gray-600">{validationResults.domain}</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Security Analysis Results</h3>
+                      <p className="text-gray-600 font-mono">{validationResults.domain}</p>
                     </div>
                     <Button
                       variant="ghost"
@@ -341,100 +341,231 @@ export default function Cyber() {
                     </Button>
                   </div>
 
-                  <div className="space-y-4">
+                  {/* Overall Scores Summary */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
-                      { key: 'security', label: 'Security', icon: Shield },
-                      { key: 'inputHandling', label: 'Input & Data Handling', icon: FileCheck },
-                      { key: 'authentication', label: 'Authentication & Sessions', icon: Lock },
-                      { key: 'accessControl', label: 'Access Control', icon: Shield },
-                      { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
-                      { key: 'dataProtection', label: 'Data Protection', icon: Lock },
-                      { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye },
-                      { key: 'design', label: 'Design & UX', icon: Eye },
-                      { key: 'seo', label: 'SEO & Marketing', icon: Globe },
-                      { key: 'performance', label: 'Performance', icon: FileCheck },
-                      { key: 'legal', label: 'Legal & Compliance', icon: Lock },
-                      { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
-                    ].map(({ key, label, icon: Icon }) => {
-                      const score = validationResults[key];
-                      const { passed, failed } = getIssuesForCategory(key);
-                      const hasData = passed.length > 0 || failed.length > 0;
-                      
-                      return (
-                        <Card key={key} className="hover:shadow-md transition-all">
-                          <CardContent className="p-6">
-                            <div className="flex items-start justify-between mb-4">
-                              <div className="flex items-center gap-3">
-                                <div className={`w-10 h-10 rounded-lg ${getScoreBgColor(score)} flex items-center justify-center`}>
-                                  <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
-                                </div>
-                                <div>
-                                  <div className="text-lg font-semibold text-gray-900">{label}</div>
-                                  <div className="flex items-center gap-2 mt-1">
-                                    <div className={`text-3xl font-bold ${getScoreColor(score)}`}>
-                                      {score}
-                                    </div>
-                                    <div className="text-gray-500">/100</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            
-                            <div className="mb-4 h-2 bg-gray-100 rounded-full overflow-hidden">
-                              <div 
-                                className={`h-full ${score >= 90 ? 'bg-green-600' : score >= 75 ? 'bg-yellow-600' : 'bg-red-600'}`}
-                                style={{ width: `${score}%` }}
-                              />
-                            </div>
-                            
-                            {hasData ? (
-                              <div className="space-y-4">
-                                {failed.length > 0 && (
-                                  <div>
-                                    <div className="flex items-center gap-2 mb-2">
-                                      <XCircle className="w-4 h-4 text-red-600" />
-                                      <h5 className="font-semibold text-red-900 text-sm">Issues Found ({failed.length})</h5>
-                                    </div>
-                                    <div className="space-y-2">
-                                      {failed.map((item, idx) => (
-                                        <div key={idx} className="flex items-start gap-2 text-sm p-2 bg-red-50 rounded-lg border border-red-200">
-                                          <XCircle className="w-3 h-3 text-red-600 mt-0.5 flex-shrink-0" />
-                                          <span className="text-red-900">{item}</span>
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-                                )}
-                                
-                                {passed.length > 0 && (
-                                  <div>
-                                    <div className="flex items-center gap-2 mb-2">
-                                      <CheckCircle2 className="w-4 h-4 text-green-600" />
-                                      <h5 className="font-semibold text-green-900 text-sm">Passed Checks ({passed.length})</h5>
-                                    </div>
-                                    <div className="space-y-1">
-                                      {passed.map((item, idx) => (
-                                        <div key={idx} className="flex items-start gap-2 text-sm p-2 hover:bg-gray-50 rounded">
-                                          <CheckCircle2 className="w-3 h-3 text-green-600 mt-0.5 flex-shrink-0" />
-                                          <span className="text-gray-700">{item}</span>
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
-                            ) : (
-                              <div className="text-center py-4 text-gray-500">
-                                <p className="text-sm">No detailed validation data available for this category.</p>
-                                <p className="text-xs mt-1">Score is estimated based on overall security posture.</p>
-                              </div>
-                            )}
-                          </CardContent>
-                        </Card>
-                      );
-                    })}
+                      { label: 'Security', score: validationResults.security, icon: Shield },
+                      { label: 'Data Protection', score: validationResults.dataProtection, icon: Lock },
+                      { label: 'Authentication', score: validationResults.authentication, icon: FileCheck },
+                      { label: 'Access Control', score: validationResults.accessControl, icon: Eye }
+                    ].map(({ label, score, icon: Icon }) => (
+                      <div key={label} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
+                          <span className="text-sm text-gray-600">{label}</span>
+                        </div>
+                        <div className={`text-3xl font-bold ${getScoreColor(score)}`}>{score}</div>
+                        <div className="text-xs text-gray-500 mt-1">/100</div>
+                      </div>
+                    ))}
                   </div>
 
+                  {/* Mozilla Observatory Results */}
+                  {validationResults.rawData?.mozilla && (
+                    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                      <div className="bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-4">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="text-white font-bold text-lg">Mozilla Observatory</h4>
+                            <p className="text-purple-100 text-sm">HTTP Security Headers Analysis</p>
+                          </div>
+                          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+                            <div className="text-white text-2xl font-bold">
+                              {validationResults.rawData.mozilla.score > 0 ? '+' : ''}{validationResults.rawData.mozilla.score}
+                            </div>
+                            <div className="text-purple-100 text-xs">Score</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        {validationResults.rawData.mozilla.tests && Object.entries(validationResults.rawData.mozilla.tests).map(([testKey, test]) => (
+                          <div key={testKey} className={`flex items-start gap-3 py-3 border-b border-gray-100 last:border-0`}>
+                            {test.pass ? (
+                              <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                            ) : (
+                              <XCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                            )}
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="font-semibold text-gray-900">{testKey.replace(/-/g, ' ').replace(/_/g, ' ').toUpperCase()}</span>
+                                <Badge className={test.pass ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}>
+                                  {test.pass ? 'PASS' : 'FAIL'}
+                                </Badge>
+                              </div>
+                              <p className="text-sm text-gray-600">{test.score_description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Security Headers Results */}
+                  {validationResults.rawData?.securityHeaders && (
+                    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                      <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="text-white font-bold text-lg">SecurityHeaders.com</h4>
+                            <p className="text-blue-100 text-sm">HTTP Response Headers Check</p>
+                          </div>
+                          {validationResults.rawData.securityHeaders.grade && (
+                            <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+                              <div className="text-white text-2xl font-bold">
+                                {validationResults.rawData.securityHeaders.grade}
+                              </div>
+                              <div className="text-blue-100 text-xs">Grade</div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div className="p-6 space-y-4">
+                        {Object.entries(validationResults.rawData.securityHeaders).map(([header, value]) => {
+                          if (header === 'grade') return null;
+                          const isPresent = value && value !== 'missing';
+                          return (
+                            <div key={header} className="flex items-start gap-3 pb-3 border-b border-gray-100 last:border-0">
+                              {isPresent ? (
+                                <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                              ) : (
+                                <XCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                              )}
+                              <div className="flex-1">
+                                <div className="font-semibold text-gray-900 font-mono text-sm">{header}</div>
+                                <div className="text-sm text-gray-600 mt-1 break-all">{isPresent ? value : 'Not configured'}</div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* SSL Labs Results */}
+                  {validationResults.rawData?.sslLabs?.endpoints?.[0] && (
+                    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                      <div className="bg-gradient-to-r from-green-600 to-green-700 px-6 py-4">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="text-white font-bold text-lg">SSL Labs</h4>
+                            <p className="text-green-100 text-sm">SSL/TLS Configuration Analysis</p>
+                          </div>
+                          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+                            <div className="text-white text-2xl font-bold">
+                              {validationResults.rawData.sslLabs.endpoints[0].grade || 'Pending'}
+                            </div>
+                            <div className="text-green-100 text-xs">Grade</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <div className="space-y-3">
+                          <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                            <span className="text-sm font-medium text-gray-700">Status</span>
+                            <Badge className="bg-green-100 text-green-800">
+                              {validationResults.rawData.sslLabs.endpoints[0].statusMessage || 'Ready'}
+                            </Badge>
+                          </div>
+                          
+                          {validationResults.rawData.sslLabs.endpoints[0].details?.protocols && (
+                            <div className="py-2 border-b border-gray-100">
+                              <div className="text-sm font-medium text-gray-700 mb-2">Supported Protocols</div>
+                              <div className="flex flex-wrap gap-2">
+                                {validationResults.rawData.sslLabs.endpoints[0].details.protocols.map((proto, idx) => (
+                                  <Badge key={idx} className={
+                                    proto.name === 'TLS' && parseFloat(proto.version) >= 1.2 
+                                      ? 'bg-green-100 text-green-800' 
+                                      : 'bg-orange-100 text-orange-800'
+                                  }>
+                                    {proto.name} {proto.version}
+                                  </Badge>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {validationResults.rawData.sslLabs.endpoints[0].details?.cert && (
+                            <div className="py-2">
+                              <div className="text-sm font-medium text-gray-700 mb-2">Certificate Information</div>
+                              <div className="grid grid-cols-2 gap-3 text-sm">
+                                <div>
+                                  <span className="text-gray-500">Subject:</span>
+                                  <p className="text-gray-900 font-mono text-xs">{validationResults.rawData.sslLabs.endpoints[0].details.cert.subject || 'N/A'}</p>
+                                </div>
+                                <div>
+                                  <span className="text-gray-500">Issues:</span>
+                                  <p className={`font-semibold ${validationResults.rawData.sslLabs.endpoints[0].details.cert.issues === 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                    {validationResults.rawData.sslLabs.endpoints[0].details.cert.issues || 0}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Category Breakdown */}
+                  <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                      <h4 className="font-bold text-lg text-gray-900">All Categories Breakdown</h4>
+                      <p className="text-sm text-gray-600">Comprehensive security assessment across all validation areas</p>
+                    </div>
+                    <div className="p-6">
+                      <div className="grid md:grid-cols-2 gap-6">
+                        {[
+                          { key: 'security', label: 'Security', icon: Shield },
+                          { key: 'inputHandling', label: 'Input & Data Handling', icon: FileCheck },
+                          { key: 'authentication', label: 'Authentication & Sessions', icon: Lock },
+                          { key: 'accessControl', label: 'Access Control', icon: Shield },
+                          { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
+                          { key: 'dataProtection', label: 'Data Protection', icon: Lock },
+                          { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye },
+                          { key: 'design', label: 'Design & UX', icon: Eye },
+                          { key: 'seo', label: 'SEO & Marketing', icon: Globe },
+                          { key: 'performance', label: 'Performance', icon: FileCheck },
+                          { key: 'legal', label: 'Legal & Compliance', icon: Lock },
+                          { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
+                        ].map(({ key, label, icon: Icon }) => {
+                          const score = validationResults[key];
+                          const { passed, failed } = getIssuesForCategory(key);
+                          
+                          return (
+                            <div key={key} className="border border-gray-200 rounded-lg p-4">
+                              <div className="flex items-center gap-2 mb-3">
+                                <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
+                                <span className="font-semibold text-gray-900">{label}</span>
+                                <span className={`ml-auto text-2xl font-bold ${getScoreColor(score)}`}>{score}</span>
+                              </div>
+                              
+                              {failed.length > 0 && (
+                                <div className="mb-2">
+                                  {failed.map((item, idx) => (
+                                    <div key={idx} className="flex items-start gap-2 text-xs py-1">
+                                      <XCircle className="w-3 h-3 text-red-600 mt-0.5 flex-shrink-0" />
+                                      <span className="text-red-900">{item}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                              
+                              {passed.length > 0 && (
+                                <div>
+                                  {passed.map((item, idx) => (
+                                    <div key={idx} className="flex items-start gap-2 text-xs py-1">
+                                      <CheckCircle2 className="w-3 h-3 text-green-600 mt-0.5 flex-shrink-0" />
+                                      <span className="text-gray-700">{item}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
 
                 </motion.div>
               )}
