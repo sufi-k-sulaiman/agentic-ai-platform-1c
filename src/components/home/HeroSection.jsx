@@ -43,20 +43,13 @@ const verticals = [
 
 export default function HeroSection() {
   const [currentChallenge, setCurrentChallenge] = useState(0);
-  const [visiblePositions, setVisiblePositions] = useState([0, 1, 2, 3]);
+  const [efficiencyValue, setEfficiencyValue] = useState(127);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentChallenge((prev) => (prev + 1) % challenges.length);
-      // Randomly select 4 positions
-      const positions = [];
-      while (positions.length < 4) {
-        const random = Math.floor(Math.random() * 8);
-        if (!positions.includes(random)) {
-          positions.push(random);
-        }
-      }
-      setVisiblePositions(positions);
+      // Randomize efficiency value between 80 and 150
+      setEfficiencyValue(Math.floor(Math.random() * 71) + 80);
     }, 3500);
     return () => clearInterval(interval);
   }, []);
@@ -64,12 +57,8 @@ export default function HeroSection() {
   const cardPositions = [
     { className: "absolute top-[5%] left-[5%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
     { className: "absolute top-[5%] right-[5%] w-56 z-10", initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } },
-    { className: "absolute top-[28%] left-[3%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
-    { className: "absolute top-[28%] right-[3%] w-56 z-10", initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } },
     { className: "absolute bottom-[22%] left-[5%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
-    { className: "absolute bottom-[22%] right-[5%] w-56 z-10", initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } },
-    { className: "absolute top-[10%] left-[28%] w-56 z-10", initial: { opacity: 0, y: -20 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -20 } },
-    { className: "absolute top-[10%] right-[28%] w-56 z-10", initial: { opacity: 0, y: -20 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -20 } }
+    { className: "absolute bottom-[22%] right-[5%] w-56 z-10", initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } }
   ];
 
   return (
@@ -160,16 +149,16 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Dynamic Challenge Cards - 4 at random positions */}
-          {visiblePositions.map((posIndex, idx) => (
-            <div key={idx} className={cardPositions[posIndex].className}>
+          {/* Corner Challenge Cards */}
+          {cardPositions.map((position, idx) => (
+            <div key={idx} className={position.className}>
               <AnimatePresence mode="wait">
                 <motion.div 
-                  key={`${currentChallenge}-${posIndex}`}
+                  key={`${currentChallenge}-${idx}`}
                   className="bg-white rounded-2xl shadow-lg p-4"
-                  initial={cardPositions[posIndex].initial}
-                  animate={cardPositions[posIndex].animate}
-                  exit={cardPositions[posIndex].exit}
+                  initial={position.initial}
+                  animate={position.animate}
+                  exit={position.exit}
                   transition={{ duration: 0.4 }}
                 >
                   <div className="flex items-center gap-3 mb-3">
@@ -222,24 +211,35 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Task Completed Card - Below Center Logo */}
+          {/* Task Completed - Below Center Logo (No Background) */}
           <motion.div 
-            className="absolute top-[58%] left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-lg p-5 w-60 z-10"
+            className="absolute top-[58%] left-1/2 -translate-x-1/2 z-10 text-center"
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                <svg className="w-3.5 h-3.5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="text-sm font-semibold text-gray-700">Task Completed</span>
+              <span className="text-xs font-medium text-gray-600">Task Completed</span>
             </div>
-            <div className="text-3xl font-bold text-gray-900 mb-1">+127%</div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={efficiencyValue}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="text-4xl font-bold text-gray-900 mb-1"
+              >
+                +{efficiencyValue}%
+              </motion.div>
+            </AnimatePresence>
             <p className="text-sm text-gray-500">Efficiency increase</p>
           </motion.div>
         </div>
