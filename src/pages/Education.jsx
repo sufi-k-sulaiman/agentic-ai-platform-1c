@@ -220,7 +220,7 @@ export default function Education() {
               <motion.div key={challenge.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}>
                 <Card className="h-full hover:shadow-xl transition-shadow">
                   <CardHeader>
-                    <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                    <div className="w-14 h-14 flex items-center justify-center mb-4">
                       <challenge.icon className="w-7 h-7 text-[#8B2EE5]" />
                     </div>
                     <CardTitle className="text-2xl">{challenge.title}</CardTitle>
