@@ -154,19 +154,43 @@ Deno.serve(async (req) => {
         issues.dataProtection.passed.push('SSL/TLS: Checking (may take up to 2 minutes)');
       }
 
-      // Add basic checks for other categories based on scores
+      // Add more comprehensive checks for each category
+      
+      // Design checks
       if (mozScore >= 80) {
         issues.design.passed.push('Security best practices followed');
-        issues.legal.passed.push('Security compliance measures in place');
+      } else {
+        issues.design.failed.push('Security improvements needed');
       }
       
+      // SEO checks
       if (secHeadersScore >= 80) {
         issues.seo.passed.push('Security headers configured for SEO');
-        issues.performance.passed.push('Optimized security headers');
+      } else {
+        issues.seo.failed.push('Missing critical security headers');
       }
       
+      // Performance checks
+      if (sslScore >= 90) {
+        issues.performance.passed.push('Optimized HTTPS performance');
+      } else if (sslScore >= 75) {
+        issues.performance.passed.push('Good HTTPS setup');
+      } else {
+        issues.performance.failed.push('HTTPS configuration could be improved');
+      }
+      
+      // Legal checks
+      if (secHeadersScore >= 80) {
+        issues.legal.passed.push('Security compliance headers present');
+      } else {
+        issues.legal.failed.push('Missing security compliance headers');
+      }
+      
+      // Content checks  
       if (sslScore >= 80) {
         issues.content.passed.push('Secure content delivery (HTTPS)');
+      } else {
+        issues.content.failed.push('Content delivery security needs improvement');
       }
 
       return issues;
