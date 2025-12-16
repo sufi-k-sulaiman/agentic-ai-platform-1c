@@ -426,12 +426,7 @@ export default function Cyber() {
                           { key: 'accessControl', label: 'Access Control', icon: Shield },
                           { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
                           { key: 'dataProtection', label: 'Data Protection', icon: Lock },
-                          { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye },
-                          { key: 'design', label: 'Design & UX', icon: Eye },
-                          { key: 'seo', label: 'SEO & Marketing', icon: Globe },
-                          { key: 'performance', label: 'Performance', icon: FileCheck },
-                          { key: 'legal', label: 'Legal & Compliance', icon: Lock },
-                          { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
+                          { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye }
                         ].map(({ key, label, icon: Icon }) => {
                           const score = validationResults[key];
                           const { passed, failed } = getIssuesForCategory(key);
@@ -536,12 +531,7 @@ export default function Cyber() {
                                 { key: 'accessControl', label: 'Access Control', icon: Shield },
                                 { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
                                 { key: 'dataProtection', label: 'Data Protection', icon: Lock },
-                                { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye },
-                                { key: 'design', label: 'Design & UX', icon: Eye },
-                                { key: 'seo', label: 'SEO & Marketing', icon: Globe },
-                                { key: 'performance', label: 'Performance', icon: FileCheck },
-                                { key: 'legal', label: 'Legal & Compliance', icon: Lock },
-                                { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
+                                { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye }
                               ].map(({ key, label, icon: Icon }) => {
                                 const score = validationResults[key];
                                 const { passed, failed } = getIssuesForCategory(key);

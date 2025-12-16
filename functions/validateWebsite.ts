@@ -74,12 +74,7 @@ Deno.serve(async (req) => {
         accessControl: { passed: [], failed: [] },
         configuration: { passed: [], failed: [] },
         dataProtection: { passed: [], failed: [] },
-        monitoring: { passed: [], failed: [] },
-        design: { passed: [], failed: [] },
-        seo: { passed: [], failed: [] },
-        performance: { passed: [], failed: [] },
-        legal: { passed: [], failed: [] },
-        content: { passed: [], failed: [] }
+        monitoring: { passed: [], failed: [] }
       };
 
       // SECURITY HEADERS - Extract EVERY header with full details
@@ -404,52 +399,6 @@ Deno.serve(async (req) => {
         issues.performance.failed.push('TLS performance metrics unavailable');
       }
 
-      // DESIGN - Based on security posture
-      if (secHeadersScore >= 85 && sslScore >= 85) {
-        issues.design.passed.push('Strong security foundation');
-        issues.design.passed.push('Modern security headers implemented');
-      } else if (secHeadersScore >= 70) {
-        issues.design.passed.push('Basic security measures in place');
-        issues.design.failed.push('Security configuration could be improved');
-      } else {
-        issues.design.failed.push('Weak security configuration');
-        issues.design.failed.push('Multiple security improvements needed');
-      }
-
-      // SEO - Security headers affect SEO
-      if (secHeadersScore >= 85) {
-        issues.seo.passed.push('Security headers optimized for SEO');
-        issues.seo.passed.push('Site credibility signals present');
-      } else {
-        issues.seo.failed.push('Missing security headers can hurt SEO rankings');
-      }
-
-      // PERFORMANCE - HTTPS and header efficiency
-      if (sslScore >= 90) {
-        issues.performance.passed.push('Excellent HTTPS configuration');
-        issues.performance.passed.push('Fast TLS handshake');
-      } else if (sslScore >= 75) {
-        issues.performance.passed.push('Good HTTPS setup');
-      } else {
-        issues.performance.failed.push('HTTPS configuration needs optimization');
-      }
-
-      // LEGAL - Compliance indicators
-      if (secHeadersScore >= 85 && sslScore >= 85) {
-        issues.legal.passed.push('Strong security compliance posture');
-        issues.legal.passed.push('Privacy protection headers configured');
-      } else {
-        issues.legal.failed.push('Security compliance gaps detected');
-      }
-
-      // CONTENT - Secure delivery
-      if (sslScore >= 80) {
-        issues.content.passed.push('Secure content delivery (HTTPS enforced)');
-        issues.content.passed.push('Content integrity protected');
-      } else {
-        issues.content.failed.push('Content delivery security insufficient');
-      }
-
       // CONFIGURATION - Overall deployment
       const totalPassed = Object.values(issues).reduce((sum, cat) => sum + cat.passed.length, 0);
       const totalFailed = Object.values(issues).reduce((sum, cat) => sum + cat.failed.length, 0);
@@ -475,11 +424,6 @@ Deno.serve(async (req) => {
       configuration: secHeadersScore,
       dataProtection: sslScore,
       monitoring: secHeadersScore > 75 ? 85 : 70,
-      design: 80,
-      seo: 75,
-      performance: 75,
-      legal: secHeadersScore > 80 ? 90 : 75,
-      content: 80,
       issues: detailedIssues,
       rawData: {
         securityHeaders: securityHeadersData.status === 'fulfilled' ? securityHeadersData.value : null,
