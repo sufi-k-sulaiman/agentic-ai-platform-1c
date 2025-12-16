@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe, XCircle } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
-import EmailForm from '@/components/contact/EmailForm';
+import BugBountyForm from '@/components/contact/BugBountyForm';
 import { base44 } from '@/api/base44Client';
 
 const certifications = [
@@ -589,9 +589,9 @@ export default function Cyber() {
         </div>
       </section>
 
-      {/* Contact Form Modal */}
+      {/* Bug Bounty Form Modal */}
       {showContactForm && (
-        <EmailForm onClose={() => setShowContactForm(false)} />
+        <BugBountyForm onClose={() => setShowContactForm(false)} />
       )}
 
     </div>
