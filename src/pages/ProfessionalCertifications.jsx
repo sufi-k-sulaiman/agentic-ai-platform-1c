@@ -180,9 +180,6 @@ export default function ProfessionalCertifications() {
             <p className="text-2xl text-gray-600 leading-relaxed mb-10">
               Industry-recognized certifications that validate your AI expertise and accelerate your career.
             </p>
-            <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-10 h-16 text-lg">
-              View certifications <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
           </motion.div>
         </div>
       </section>
