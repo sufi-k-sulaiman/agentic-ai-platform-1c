@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Zap, TrendingDown, Database, Workflow, DollarSign, Shield, Activity, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
   {
@@ -82,6 +84,12 @@ const metrics = [
 export default function EnergyUtilities() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Energy & Utilities AI"
+        description="AI-powered smart grid management reducing waste by 20% and outages by 40%. Predictive maintenance, renewable integration, and grid optimization."
+        url="/energy-utilities"
+        keywords={['smart grid', 'energy AI', 'utility automation', 'predictive maintenance', 'renewable energy']}
+      />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -164,9 +172,29 @@ export default function EnergyUtilities() {
         </div>
       </section>
 
+      {/* Analytics */}
+      <VerticalAnalytics industry={{
+        activityTimeline: [
+          { time: '10:30 AM', action: 'Grid anomaly detected', description: 'Transformer overload identified', icon: 'AlertCircle', color: 'text-orange-500' },
+          { time: '10:31 AM', action: 'Load balanced', description: 'Power rerouted automatically', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:35 AM', action: 'Renewable integrated', description: 'Solar surge absorbed by grid', icon: 'CheckCircle', color: 'text-green-500' },
+          { time: '10:40 AM', action: 'Maintenance scheduled', description: 'Predictive service planned', icon: 'CheckCircle', color: 'text-green-500' }
+        ],
+        goalsProgress: [
+          { goal: 'Energy Efficiency', current: 820, target: 1000, percentage: 82, color: 'bg-purple-500' },
+          { goal: 'Outage Prevention', current: 920, target: 1000, percentage: 92, color: 'bg-green-500' },
+          { goal: 'Renewable Integration', current: 75, target: 100, percentage: 75, color: 'bg-blue-500' },
+          { goal: 'Grid Reliability', current: 99, target: 100, percentage: 99, color: 'bg-orange-500' }
+        ],
+        notifications: [
+          { title: 'Energy Saved', description: 'Grid optimization saved 15 MWh today...', time: '2 min ago', icon: 'CheckCircle', color: 'text-green-500' },
+          { title: 'Outage Prevented', description: 'Equipment failure avoided with AI alert...', time: '15 min ago', icon: 'TrendingUp', color: 'text-blue-500' },
+          { title: 'Demand Forecast', description: 'Peak demand predicted for 6 PM...', time: '1 hour ago', icon: 'Info', color: 'text-purple-500' },
+          { title: 'Renewable Surge', description: 'High solar output managed smoothly...', time: '3 hours ago', icon: 'AlertCircle', color: 'text-orange-500' }
+        ]
+      }} />
 
-
-      <section className="py-24">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -205,7 +233,7 @@ export default function EnergyUtilities() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
