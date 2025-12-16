@@ -16,50 +16,62 @@ Deno.serve(async (req) => {
     const getMozillaData = async () => {
       try {
         console.log('Starting Mozilla Observatory scan for:', cleanDomain);
-
+        
         // Start scan
         const initResponse = await fetch(`https://http-observatory.security.mozilla.org/api/v1/analyze?host=${cleanDomain}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' }
         });
-
-        if (!initResponse.ok) {
-          console.error('Mozilla Observatory init failed:', initResponse.status, await initResponse.text());
+        
+        const contentType = initResponse.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          console.error('Mozilla Observatory returned non-JSON:', contentType, 'Status:', initResponse.status);
           return null;
         }
-
+        
+        if (!initResponse.ok) {
+          console.error('Mozilla Observatory init failed with status:', initResponse.status);
+          return null;
+        }
+        
         const initData = await initResponse.json();
-        console.log('Mozilla Observatory scan initiated:', initData.state);
-
+        console.log('Mozilla Observatory scan initiated, state:', initData.state);
+        
         // Poll for results (max 60 seconds, check every 3 seconds)
         for (let i = 0; i < 20; i++) {
           await new Promise(resolve => setTimeout(resolve, 3000)); // Wait 3 seconds
           const resultResponse = await fetch(`https://http-observatory.security.mozilla.org/api/v1/analyze?host=${cleanDomain}`);
-
+          
+          const pollContentType = resultResponse.headers.get('content-type');
+          if (!pollContentType || !pollContentType.includes('application/json')) {
+            console.error('Mozilla Observatory poll returned non-JSON');
+            continue;
+          }
+          
           if (!resultResponse.ok) {
             console.error('Mozilla Observatory poll failed:', resultResponse.status);
             continue;
           }
-
+          
           const resultData = await resultResponse.json();
           console.log(`Mozilla Observatory poll ${i + 1}: ${resultData.state}`);
-
+          
           if (resultData.state === 'FINISHED') {
-            console.log('Mozilla Observatory scan completed');
+            console.log('Mozilla Observatory scan completed successfully');
             return resultData;
           }
-
+          
           if (resultData.state === 'FAILED') {
             console.error('Mozilla Observatory scan failed:', resultData);
-            return resultData; // Return failed data with error info
+            return resultData;
           }
         }
-
-        console.warn('Mozilla Observatory scan timed out after 60 seconds');
-        return initData; // Return whatever we have
+        
+        console.warn('Mozilla Observatory timed out after 60s, returning initial data');
+        return initData;
       } catch (error) {
-        console.error('Mozilla Observatory error:', error.message, error.stack);
-        return { error: error.message };
+        console.error('Mozilla Observatory exception:', error.message);
+        return null;
       }
     };
     
