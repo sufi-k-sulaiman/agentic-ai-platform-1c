@@ -276,22 +276,20 @@ export default function Cyber() {
 
           <Card className="shadow-xl">
             <CardContent className="p-8">
-              <div className="flex gap-4 mb-8">
-                <div className="flex-1 relative">
-                  <Globe className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <Input
-                    type="text"
-                    placeholder="Enter domain or URL (e.g., example.com or https://example.com)"
-                    value={searchInput}
-                    onChange={(e) => setSearchInput(e.target.value)}
-                    onKeyDown={(e) => e.key === 'Enter' && handleValidation()}
-                    className="pl-12 h-14 text-lg"
-                  />
-                </div>
+              <div className="mb-8 relative">
+                <Globe className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
+                <Input
+                  type="text"
+                  placeholder="Enter domain or URL (e.g., example.com or https://example.com)"
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleValidation()}
+                  className="pl-14 pr-32 h-16 text-lg rounded-full shadow-lg border-2"
+                />
                 <Button 
                   onClick={handleValidation}
                   disabled={!searchInput.trim() || isValidating}
-                  className="bg-[#8B2EE5] hover:bg-[#7325C4] h-14 px-8"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#8B2EE5] hover:bg-[#7325C4] h-12 px-6 rounded-full"
                 >
                   {isValidating ? (
                     <>Validating...</>
