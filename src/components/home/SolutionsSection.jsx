@@ -338,12 +338,14 @@ export default function SolutionsSection() {
                   ))}
                 </div>
 
-                <Link 
-                  to={industries.find(i => i.name === selectedIndustry)?.href || ''}
-                  className="inline-flex items-center gap-2 bg-white text-[#6209e6] hover:bg-purple-50 px-6 py-3 rounded-full font-semibold transition-all"
-                >
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </Link>
+                <div className="flex justify-center">
+                  <Link 
+                    to={industries.find(i => i.name === selectedIndustry)?.href || ''}
+                    className="inline-flex items-center gap-2 bg-white text-[#6209e6] hover:bg-purple-50 px-6 py-3 rounded-full font-semibold transition-all"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
 
                 {/* Decorative */}
                 <div className="absolute top-6 right-6 w-20 h-20 border border-white/10 rounded-full" />
