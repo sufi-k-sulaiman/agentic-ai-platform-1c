@@ -100,6 +100,41 @@ const validationCriteria = {
     'Logging and monitoring of suspicious activity',
     'Automated daily backups stored offsite'
   ],
+  inputHandling: [
+    'SQL Injection: All database queries use parameterized statements',
+    'Cross-Site Scripting (XSS): Input validated and sanitized, output escaped',
+    'Cross-Site Request Forgery (CSRF): CSRF tokens for forms and state-changing requests',
+    'File Upload Vulnerabilities: File types restricted, uploads scanned, stored outside webroot',
+    'Insecure Deserialization: No unsafe object deserialization, data structures validated'
+  ],
+  authentication: [
+    'Weak Passwords: Strong password policies enforced, secure hashing (bcrypt, Argon2)',
+    'Session Hijacking: Secure cookies with HttpOnly and Secure flags',
+    'Broken Authentication: MFA implemented, lockout policies, rate limiting',
+    'Token Management: JWTs or API tokens properly rotated and expired'
+  ],
+  accessControl: [
+    'Broken Access Control: Role-based permissions verified on every request',
+    'Directory Traversal: ../ path traversal attacks prevented',
+    'Privilege Escalation: No unauthorized access to admin functions',
+    'API Exposure: Sensitive endpoints restricted, authorization checks enforced'
+  ],
+  configuration: [
+    'Default Credentials: Default usernames/passwords removed or changed',
+    'Security Misconfiguration: Directory listing disabled, server banners hidden',
+    'Unpatched Software: CMS, plugins, and frameworks kept updated',
+    'Error Handling: Stack traces and sensitive info not exposed in errors'
+  ],
+  dataProtection: [
+    'Sensitive Data Exposure: Data encrypted at rest and in transit',
+    'Insecure Storage: No plain-text passwords or sensitive info in logs',
+    'Insufficient Transport Layer Security: TLS 1.2+ enforced, weak ciphers disabled'
+  ],
+  monitoring: [
+    'Lack of Logging: Security events are logged',
+    'Log Injection: Log entries sanitized to prevent injection attacks',
+    'Alerting: Alerts configured for suspicious activity'
+  ],
   design: [
     'Responsive design across devices',
     'Accessibility compliance (WCAG 2.1 standards)',
@@ -149,6 +184,7 @@ export default function Cyber() {
   const [searchInput, setSearchInput] = useState('');
   const [validationResults, setValidationResults] = useState(null);
   const [isValidating, setIsValidating] = useState(false);
+  const [expandedCard, setExpandedCard] = useState(null);
 
   const handleValidation = async () => {
     if (!searchInput.trim()) return;
@@ -160,6 +196,12 @@ export default function Cyber() {
       const results = {
         domain: searchInput,
         security: Math.floor(Math.random() * 30) + 70,
+        inputHandling: Math.floor(Math.random() * 30) + 70,
+        authentication: Math.floor(Math.random() * 30) + 70,
+        accessControl: Math.floor(Math.random() * 30) + 70,
+        configuration: Math.floor(Math.random() * 30) + 70,
+        dataProtection: Math.floor(Math.random() * 30) + 70,
+        monitoring: Math.floor(Math.random() * 30) + 70,
         design: Math.floor(Math.random() * 30) + 70,
         seo: Math.floor(Math.random() * 30) + 70,
         performance: Math.floor(Math.random() * 30) + 70,
@@ -168,6 +210,7 @@ export default function Cyber() {
       };
       setValidationResults(results);
       setIsValidating(false);
+      setExpandedCard(null);
     }, 1500);
   };
 
@@ -285,6 +328,12 @@ export default function Cyber() {
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {[
                       { key: 'security', label: 'Security', icon: Shield },
+                      { key: 'inputHandling', label: 'Input & Data Handling', icon: FileCheck },
+                      { key: 'authentication', label: 'Authentication & Sessions', icon: Lock },
+                      { key: 'accessControl', label: 'Access Control', icon: Shield },
+                      { key: 'configuration', label: 'Configuration & Deployment', icon: FileCheck },
+                      { key: 'dataProtection', label: 'Data Protection', icon: Lock },
+                      { key: 'monitoring', label: 'Monitoring & Logging', icon: Eye },
                       { key: 'design', label: 'Design & UX', icon: Eye },
                       { key: 'seo', label: 'SEO & Marketing', icon: Globe },
                       { key: 'performance', label: 'Performance', icon: FileCheck },
@@ -292,8 +341,15 @@ export default function Cyber() {
                       { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
                     ].map(({ key, label, icon: Icon }) => {
                       const score = validationResults[key];
+                      const isExpanded = expandedCard === key;
+                      const criteria = validationCriteria[key] || [];
+                      
                       return (
-                        <Card key={key} className="hover:shadow-md transition-shadow">
+                        <Card 
+                          key={key} 
+                          className={`hover:shadow-md transition-all cursor-pointer ${isExpanded ? 'md:col-span-2 lg:col-span-3' : ''}`}
+                          onClick={() => setExpandedCard(isExpanded ? null : key)}
+                        >
                           <CardContent className="p-6">
                             <div className="flex items-center gap-3 mb-3">
                               <div className={`w-10 h-10 rounded-lg ${getScoreBgColor(score)} flex items-center justify-center`}>
@@ -315,37 +371,35 @@ export default function Cyber() {
                                 style={{ width: `${score}%` }}
                               />
                             </div>
+                            
+                            {isExpanded && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                className="mt-6 pt-6 border-t border-gray-200"
+                              >
+                                <h5 className="font-semibold text-gray-900 mb-3">Validation Checks:</h5>
+                                <div className="grid md:grid-cols-2 gap-3">
+                                  {criteria.map((item, idx) => (
+                                    <div key={idx} className="flex items-start gap-2 text-sm">
+                                      <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                      <span className="text-gray-700">{item}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
                           </CardContent>
                         </Card>
                       );
                     })}
                   </div>
 
-                  <Card className="bg-blue-50 border-blue-200">
-                    <CardContent className="p-6">
-                      <h4 className="font-semibold text-gray-900 mb-4">Validation Criteria</h4>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        {Object.entries(validationCriteria).map(([category, items]) => (
-                          <div key={category}>
-                            <h5 className="font-semibold text-gray-900 mb-2 capitalize">
-                              {category === 'seo' ? 'SEO & Marketing' : category === 'design' ? 'Design & UX' : category === 'legal' ? 'Legal & Compliance' : category === 'content' ? 'Content & Operations' : category}
-                            </h5>
-                            <ul className="space-y-1.5 text-sm text-gray-700">
-                              {items.slice(0, 5).map((item, idx) => (
-                                <li key={idx} className="flex items-start gap-2">
-                                  <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                              {items.length > 5 && (
-                                <li className="text-xs text-gray-500 pl-6">+ {items.length - 5} more</li>
-                              )}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="mt-6">
+                    <p className="text-sm text-gray-600 text-center">
+                      Click on any card above to view detailed validation criteria
+                    </p>
+                  </div>
                 </motion.div>
               )}
             </CardContent>
