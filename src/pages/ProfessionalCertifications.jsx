@@ -386,9 +386,6 @@ export default function ProfessionalCertifications() {
             <p className="text-xl text-purple-100 mb-10">
               Start your certification journey today and join thousands of successful AI professionals.
             </p>
-            <Button className="bg-white text-[#8B2EE5] hover:bg-gray-100 rounded-full px-10 h-16 text-lg">
-              Begin preparation <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
           </motion.div>
         </div>
       </section>
