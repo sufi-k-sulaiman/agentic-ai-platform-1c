@@ -20,10 +20,37 @@ Deno.serve(async (req) => {
         headers: { 'Content-Type': 'application/json' }
       }).then(res => res.json()),
       
-      // SecurityHeaders.com
-      fetch(`https://securityheaders.com/?q=${cleanDomain}&followRedirects=on`, {
-        headers: { 'Accept': 'application/json' }
-      }).then(res => res.json()).catch(() => null),
+      // SecurityHeaders.com - Get actual HTTP headers from the domain
+      fetch(`https://${cleanDomain}`, {
+        method: 'HEAD'
+      }).then(res => {
+        const headers = {};
+        res.headers.forEach((value, key) => {
+          if (key.toLowerCase().includes('security') || 
+              key.toLowerCase().includes('policy') || 
+              key.toLowerCase().includes('frame') ||
+              key.toLowerCase().includes('content') ||
+              key.toLowerCase().includes('transport') ||
+              key.toLowerCase().includes('referrer') ||
+              key.toLowerCase().includes('xss') ||
+              key.toLowerCase().includes('permission') ||
+              key.toLowerCase().includes('feature') ||
+              key.toLowerCase().includes('origin') ||
+              key.toLowerCase().includes('expect')) {
+            headers[key.toLowerCase()] = value;
+          }
+        });
+        // Calculate grade based on headers present
+        let score = 50;
+        if (headers['content-security-policy']) score += 10;
+        if (headers['x-frame-options']) score += 10;
+        if (headers['x-content-type-options']) score += 10;
+        if (headers['strict-transport-security']) score += 15;
+        if (headers['referrer-policy']) score += 5;
+        const gradeMap = {100: 'A+', 95: 'A', 85: 'A-', 75: 'B', 65: 'C', 50: 'D'};
+        headers.grade = Object.entries(gradeMap).find(([s]) => score >= s)?.[1] || 'F';
+        return headers;
+      }).catch(() => null),
       
       // SSL Labs (just initiate, results take time)
       fetch(`https://api.ssllabs.com/api/v3/analyze?host=${cleanDomain}&startNew=on&all=done`)
