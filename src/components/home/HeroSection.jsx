@@ -21,7 +21,19 @@ const challenges = [
   { icon: Zap, title: 'Energy Optimization', description: 'Reducing consumption', color: 'from-yellow-500 to-amber-500', efficiency: '+64%', savings: '47%' },
   { icon: ShoppingBag, title: 'Inventory Control', description: 'Managing stock levels', color: 'from-pink-500 to-rose-500', efficiency: '+51%', savings: '36%' },
   { icon: Shield, title: 'Security Operations', description: 'Protecting assets', color: 'from-slate-600 to-gray-700', efficiency: '+69%', savings: '26%' },
-  { icon: Plane, title: 'Operations Coordination', description: 'Synchronizing teams', color: 'from-sky-500 to-blue-600', efficiency: '+57%', savings: '34%' }
+  { icon: Plane, title: 'Operations Coordination', description: 'Synchronizing teams', color: 'from-sky-500 to-blue-600', efficiency: '+57%', savings: '34%' },
+  { icon: Building2, title: 'Property Maintenance', description: 'Predictive facility care', color: 'from-blue-500 to-indigo-500', efficiency: '+53%', savings: '42%' },
+  { icon: Server, title: 'Data Center Cooling', description: 'Optimizing temperature', color: 'from-slate-500 to-blue-600', efficiency: '+72%', savings: '51%' },
+  { icon: Landmark, title: 'Fraud Detection', description: 'Real-time monitoring', color: 'from-green-600 to-emerald-700', efficiency: '+68%', savings: '45%' },
+  { icon: Heart, title: 'Patient Care Optimization', description: 'Improving outcomes', color: 'from-red-400 to-pink-500', efficiency: '+56%', savings: '38%' },
+  { icon: Building, title: 'Space Utilization', description: 'Maximizing efficiency', color: 'from-orange-400 to-amber-500', efficiency: '+62%', savings: '35%' },
+  { icon: Train, title: 'Transit Scheduling', description: 'Route optimization', color: 'from-teal-600 to-cyan-700', efficiency: '+65%', savings: '40%' },
+  { icon: TrafficCone, title: 'Traffic Flow Analysis', description: 'Reducing congestion', color: 'from-yellow-600 to-orange-700', efficiency: '+59%', savings: '33%' },
+  { icon: Zap, title: 'Grid Management', description: 'Load balancing', color: 'from-lime-500 to-green-600', efficiency: '+70%', savings: '52%' },
+  { icon: ShoppingBag, title: 'Demand Forecasting', description: 'Predicting trends', color: 'from-pink-400 to-rose-600', efficiency: '+61%', savings: '43%' },
+  { icon: GraduationCap, title: 'Learning Personalization', description: 'Adaptive education', color: 'from-violet-500 to-purple-600', efficiency: '+54%', savings: '29%' },
+  { icon: Gamepad2, title: 'Player Engagement', description: 'Optimizing experience', color: 'from-fuchsia-500 to-pink-600', efficiency: '+66%', savings: '31%' },
+  { icon: Plane, title: 'Gate Management', description: 'Turnaround efficiency', color: 'from-sky-600 to-blue-700', efficiency: '+58%', savings: '46%' }
 ];
 
 const verticals = [
