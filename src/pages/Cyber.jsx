@@ -582,18 +582,6 @@ export default function Cyber() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Security questions?</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Contact our security team for inquiries or to request additional documentation
-          </p>
-          <a href="mailto:security@1cplatform.com" className="text-2xl font-semibold text-[#8B2EE5] hover:underline">
-            security@1cplatform.com
-          </a>
-        </div>
-      </section>
     </div>
   );
 }
