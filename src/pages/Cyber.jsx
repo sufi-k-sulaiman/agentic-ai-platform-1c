@@ -316,12 +316,34 @@ export default function Cyber() {
                           )}
 
                           {validationResults.rawData.sslLabs.endpoints[0].details?.cert && (
-                            <div className="py-2">
+                            <div className="py-2 border-b border-gray-100">
                               <div className="text-sm font-medium text-gray-700 mb-2">Certificate Information</div>
                               <div className="grid grid-cols-2 gap-3 text-sm">
                                 <div>
                                   <span className="text-gray-500">Subject:</span>
-                                  <p className="text-gray-900 font-mono text-xs">{validationResults.rawData.sslLabs.endpoints[0].details.cert.subject || 'N/A'}</p>
+                                  <p className="text-gray-900 font-mono text-xs break-all">{validationResults.rawData.sslLabs.endpoints[0].details.cert.subject || 'N/A'}</p>
+                                </div>
+                                <div>
+                                  <span className="text-gray-500">Issuer:</span>
+                                  <p className="text-gray-900 text-xs">{validationResults.rawData.sslLabs.endpoints[0].details.cert.issuerLabel || 'N/A'}</p>
+                                </div>
+                                <div>
+                                  <span className="text-gray-500">Valid Until:</span>
+                                  <p className="text-gray-900 text-xs">
+                                    {validationResults.rawData.sslLabs.endpoints[0].details.cert.notAfter 
+                                      ? new Date(validationResults.rawData.sslLabs.endpoints[0].details.cert.notAfter).toLocaleDateString()
+                                      : 'N/A'}
+                                  </p>
+                                </div>
+                                <div>
+                                  <span className="text-gray-500">Key Strength:</span>
+                                  <p className="text-gray-900 text-xs">
+                                    {validationResults.rawData.sslLabs.endpoints[0].details.cert.keyAlg} {validationResults.rawData.sslLabs.endpoints[0].details.cert.keySize}-bit
+                                  </p>
+                                </div>
+                                <div>
+                                  <span className="text-gray-500">Signature:</span>
+                                  <p className="text-gray-900 text-xs">{validationResults.rawData.sslLabs.endpoints[0].details.cert.sigAlg || 'N/A'}</p>
                                 </div>
                                 <div>
                                   <span className="text-gray-500">Issues:</span>
@@ -329,6 +351,73 @@ export default function Cyber() {
                                     {validationResults.rawData.sslLabs.endpoints[0].details.cert.issues || 0}
                                   </p>
                                 </div>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Vulnerabilities */}
+                          {validationResults.rawData.sslLabs.endpoints[0].details && (
+                            <div className="py-2 border-b border-gray-100">
+                              <div className="text-sm font-medium text-gray-700 mb-2">Known Vulnerabilities</div>
+                              <div className="grid grid-cols-2 gap-2 text-xs">
+                                {[
+                                  { key: 'heartbleed', label: 'Heartbleed' },
+                                  { key: 'poodle', label: 'POODLE' },
+                                  { key: 'vulnBeast', label: 'BEAST' },
+                                  { key: 'freak', label: 'FREAK' },
+                                  { key: 'logjam', label: 'Logjam' },
+                                  { key: 'drownVulnerable', label: 'DROWN' }
+                                ].map(({ key, label }) => {
+                                  const value = validationResults.rawData.sslLabs.endpoints[0].details[key];
+                                  if (value === undefined || value === null) return null;
+                                  return (
+                                    <div key={key} className="flex items-center gap-2">
+                                      {value ? (
+                                        <XCircle className="w-3 h-3 text-red-600 flex-shrink-0" />
+                                      ) : (
+                                        <CheckCircle2 className="w-3 h-3 text-green-600 flex-shrink-0" />
+                                      )}
+                                      <span className={value ? 'text-red-900' : 'text-gray-700'}>{label}</span>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Forward Secrecy */}
+                          {validationResults.rawData.sslLabs.endpoints[0].details?.forwardSecrecy !== undefined && (
+                            <div className="py-2 border-b border-gray-100">
+                              <div className="text-sm font-medium text-gray-700 mb-2">Forward Secrecy</div>
+                              <div className="flex items-center gap-2">
+                                <CheckCircle2 className={`w-4 h-4 ${validationResults.rawData.sslLabs.endpoints[0].details.forwardSecrecy >= 2 ? 'text-green-600' : 'text-orange-600'}`} />
+                                <span className="text-sm text-gray-900">
+                                  {validationResults.rawData.sslLabs.endpoints[0].details.forwardSecrecy >= 4 
+                                    ? 'Excellent (all connections)'
+                                    : validationResults.rawData.sslLabs.endpoints[0].details.forwardSecrecy >= 2
+                                    ? 'Good (modern browsers)'
+                                    : 'Weak or missing'}
+                                </span>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Cipher Suites */}
+                          {validationResults.rawData.sslLabs.endpoints[0].details?.suites?.list && (
+                            <div className="py-2">
+                              <div className="text-sm font-medium text-gray-700 mb-2">Cipher Suites</div>
+                              <div className="text-sm text-gray-900">
+                                {validationResults.rawData.sslLabs.endpoints[0].details.suites.list.length} cipher suites available
+                                {(() => {
+                                  const weakCiphers = validationResults.rawData.sslLabs.endpoints[0].details.suites.list.filter(
+                                    s => s.q === 0 || (s.cipherStrength && s.cipherStrength < 128)
+                                  );
+                                  return weakCiphers.length > 0 ? (
+                                    <span className="text-red-600 ml-2">({weakCiphers.length} weak)</span>
+                                  ) : (
+                                    <span className="text-green-600 ml-2">(all strong)</span>
+                                  );
+                                })()}
                               </div>
                             </div>
                           )}
