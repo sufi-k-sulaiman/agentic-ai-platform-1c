@@ -7,7 +7,11 @@ import { createPageUrl } from '@/utils';
 
 const industryData = {
   'Property Management': {
-    issue: 'Managing multiple properties with manual processes leads to inefficiencies and delayed responses',
+    issues: [
+      'Managing multiple properties with manual processes leads to inefficiencies and delayed responses',
+      'Tenant complaints and maintenance requests pile up, causing dissatisfaction and churn',
+      'Tracking rent payments and lease renewals manually results in missed revenue opportunities'
+    ],
     solution: 'AI agents automate tenant communications, maintenance scheduling, and rent collection',
     stats: [
       { value: '40%', label: 'Cost reduction' },
@@ -17,7 +21,11 @@ const industryData = {
     ]
   },
   'Data Centers': {
-    issue: 'Maintaining uptime while managing energy costs and predicting hardware failures is challenging',
+    issues: [
+      'Maintaining uptime while managing energy costs and predicting hardware failures is challenging',
+      'Cooling inefficiencies drive up operational expenses and environmental impact',
+      'Capacity planning requires constant manual monitoring and forecasting'
+    ],
     solution: 'AI agents optimize cooling, predict failures, and automate capacity planning',
     stats: [
       { value: '99.999%', label: 'Uptime achieved' },
@@ -27,7 +35,11 @@ const industryData = {
     ]
   },
   'Financial Services': {
-    issue: 'Manual KYC, slow loan processing, and fraud detection gaps create operational bottlenecks',
+    issues: [
+      'Manual KYC and compliance checks create bottlenecks and regulatory risks',
+      'Loan processing takes days or weeks, losing customers to faster competitors',
+      'Fraud detection relies on rules-based systems that miss sophisticated attacks'
+    ],
     solution: 'AI agents automate compliance, process loans instantly, and detect fraud in real-time',
     stats: [
       { value: '95%', label: 'Fraud detection' },
@@ -37,7 +49,11 @@ const industryData = {
     ]
   },
   'Healthcare': {
-    issue: 'Administrative burden consumes 70% of staff time, delaying patient care and increasing costs',
+    issues: [
+      'Administrative burden consumes 70% of staff time, delaying patient care',
+      'Medical coding errors result in claim denials and lost revenue',
+      'Patient scheduling inefficiencies lead to no-shows and underutilized appointments'
+    ],
     solution: 'AI agents handle scheduling, coding, claims, and documentation automatically',
     stats: [
       { value: '70%', label: 'Time saved' },
@@ -47,7 +63,11 @@ const industryData = {
     ]
   },
   'Corporate Campuses': {
-    issue: 'Inefficient space usage and manual coordination lead to wasted resources and employee friction',
+    issues: [
+      'Inefficient space usage leads to wasted real estate costs and poor employee experience',
+      'Manual visitor coordination creates security risks and delays',
+      'Energy consumption goes unoptimized, driving up operational expenses'
+    ],
     solution: 'AI agents optimize space allocation, coordinate visitors, and manage employee services',
     stats: [
       { value: '40%', label: 'Space savings' },
@@ -57,7 +77,11 @@ const industryData = {
     ]
   },
   'Public Transit': {
-    issue: 'Route inefficiencies and maintenance delays reduce on-time performance and rider satisfaction',
+    issues: [
+      'Route inefficiencies reduce on-time performance and rider satisfaction',
+      'Unpredictable maintenance delays disrupt service and increase costs',
+      'Passenger information systems fail to provide accurate real-time updates'
+    ],
     solution: 'AI agents optimize routes, predict maintenance, and provide real-time passenger updates',
     stats: [
       { value: '35%', label: 'On-time boost' },
@@ -67,7 +91,11 @@ const industryData = {
     ]
   },
   'Traffic Management': {
-    issue: 'Congestion and slow incident response create delays and safety risks across the network',
+    issues: [
+      'Congestion and slow incident response create delays and safety risks',
+      'Traffic signals operate on fixed timers, ignoring real-time flow patterns',
+      'Emergency response times suffer due to lack of predictive routing'
+    ],
     solution: 'AI agents optimize signals, detect incidents instantly, and predict congestion patterns',
     stats: [
       { value: '30%', label: 'Congestion down' },
@@ -77,7 +105,11 @@ const industryData = {
     ]
   },
   'Energy & Utilities': {
-    issue: 'Outages and inefficiencies impact reliability while increasing operational costs',
+    issues: [
+      'Outages and inefficiencies impact reliability while increasing costs',
+      'Grid balancing becomes difficult with renewable energy variability',
+      'Customer service struggles with high call volumes during outages'
+    ],
     solution: 'AI agents predict outages, optimize the grid, and integrate renewable energy seamlessly',
     stats: [
       { value: '90%', label: 'Outages prevented' },
@@ -87,7 +119,11 @@ const industryData = {
     ]
   },
   'Retail': {
-    issue: 'Inventory mismanagement and low conversion rates reduce margins and customer loyalty',
+    issues: [
+      'Inventory mismanagement leads to stockouts and overstock, reducing margins',
+      'Low conversion rates result from generic, non-personalized shopping experiences',
+      'Manual pricing strategies fail to respond to market dynamics in real-time'
+    ],
     solution: 'AI agents optimize inventory, personalize offers, and implement dynamic pricing',
     stats: [
       { value: '35%', label: 'Conversion boost' },
@@ -97,7 +133,11 @@ const industryData = {
     ]
   },
   'Education': {
-    issue: 'Administrative tasks and one-size-fits-all learning limit engagement and outcomes',
+    issues: [
+      'Administrative tasks consume valuable teaching time and resources',
+      'One-size-fits-all learning fails to engage students with different needs',
+      'Tracking student progress manually makes early intervention difficult'
+    ],
     solution: 'AI agents automate admin work, personalize learning paths, and track student progress',
     stats: [
       { value: '60%', label: 'Engagement up' },
@@ -107,7 +147,11 @@ const industryData = {
     ]
   },
   'Gaming': {
-    issue: 'Infrastructure costs and cheating impact player experience and operational efficiency',
+    issues: [
+      'Infrastructure costs spiral during peak usage, eating into margins',
+      'Cheating and toxic behavior ruin player experience and drive churn',
+      'Manual LiveOps management limits the speed of content updates and events'
+    ],
     solution: 'AI agents scale infrastructure, detect cheats, and automate LiveOps',
     stats: [
       { value: '40%', label: 'Cost reduction' },
@@ -117,7 +161,11 @@ const industryData = {
     ]
   },
   'Government': {
-    issue: 'Manual processes delay citizen services and increase administrative overhead',
+    issues: [
+      'Manual processes delay citizen services and increase administrative overhead',
+      'Document processing backlogs frustrate citizens and staff alike',
+      'Compliance reporting requires extensive manual effort and verification'
+    ],
     solution: 'AI agents automate citizen services, process documents, and ensure compliance',
     stats: [
       { value: '55%', label: 'Satisfaction up' },
@@ -127,7 +175,11 @@ const industryData = {
     ]
   },
   'Airports': {
-    issue: 'Passenger flow bottlenecks and coordination challenges impact on-time performance',
+    issues: [
+      'Passenger flow bottlenecks create congestion and impact on-time performance',
+      'Security screening delays frustrate travelers and reduce satisfaction',
+      'Gate and baggage coordination challenges lead to missed connections'
+    ],
     solution: 'AI agents optimize passenger flow, streamline security, and coordinate operations',
     stats: [
       { value: '25%', label: 'On-time boost' },
@@ -137,7 +189,11 @@ const industryData = {
     ]
   },
   'Sports & Entertainment': {
-    issue: 'Suboptimal fan engagement and venue operations limit revenue per attendee',
+    issues: [
+      'Suboptimal fan engagement reduces revenue per attendee and loyalty',
+      'Venue operations lack real-time coordination, impacting guest experience',
+      'Static pricing leaves money on the table during high-demand events'
+    ],
     solution: 'AI agents enhance fan experiences, optimize ticketing, and manage venue operations',
     stats: [
       { value: '30%', label: 'Revenue boost' },
