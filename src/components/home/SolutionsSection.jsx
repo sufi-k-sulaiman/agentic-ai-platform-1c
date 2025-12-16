@@ -208,14 +208,20 @@ export default function SolutionsSection() {
               className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10"
             >
               {industries.map((industry) => (
-                <Link
+                <button
                   key={industry.name}
-                  to={industry.href}
-                  className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 hover:bg-purple-50 hover:border-[#6209e6]/20 border border-transparent transition-all group"
+                  onClick={() => setSelectedIndustry(industry.name)}
+                  className={`flex items-center gap-3 p-4 rounded-xl border transition-all ${
+                    selectedIndustry === industry.name
+                      ? 'bg-purple-50 border-[#6209e6] text-[#6209e6]'
+                      : 'bg-gray-50 hover:bg-purple-50 hover:border-[#6209e6]/20 border-transparent text-gray-700'
+                  }`}
                 >
-                  <industry.icon className="w-5 h-5 text-gray-400 group-hover:text-[#6209e6]" />
-                  <span className="text-sm font-medium text-gray-700 group-hover:text-[#6209e6]">{industry.name}</span>
-                </Link>
+                  <industry.icon className={`w-5 h-5 ${
+                    selectedIndustry === industry.name ? 'text-[#6209e6]' : 'text-gray-400'
+                  }`} />
+                  <span className="text-sm font-medium text-left">{industry.name}</span>
+                </button>
               ))}
             </motion.div>
 
