@@ -341,7 +341,7 @@ export default function Cyber() {
                     </Button>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="space-y-4">
                     {[
                       { key: 'security', label: 'Security', icon: Shield },
                       { key: 'inputHandling', label: 'Input & Data Handling', icon: FileCheck },
@@ -357,95 +357,77 @@ export default function Cyber() {
                       { key: 'content', label: 'Content & Operations', icon: CheckCircle2 }
                     ].map(({ key, label, icon: Icon }) => {
                       const score = validationResults[key];
-                      const isExpanded = expandedCard === key;
-                      const criteria = validationCriteria[key] || [];
+                      const { passed, failed } = getIssuesForCategory(key);
+                      const hasData = passed.length > 0 || failed.length > 0;
                       
                       return (
-                        <Card 
-                          key={key} 
-                          className={`hover:shadow-md transition-all cursor-pointer ${isExpanded ? 'md:col-span-2 lg:col-span-3' : ''}`}
-                          onClick={() => setExpandedCard(isExpanded ? null : key)}
-                        >
+                        <Card key={key} className="hover:shadow-md transition-all">
                           <CardContent className="p-6">
-                            <div className="flex items-center gap-3 mb-3">
-                              <div className={`w-10 h-10 rounded-lg ${getScoreBgColor(score)} flex items-center justify-center`}>
-                                <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
-                              </div>
-                              <div className="flex-1">
-                                <div className="text-sm font-medium text-gray-700">{label}</div>
+                            <div className="flex items-start justify-between mb-4">
+                              <div className="flex items-center gap-3">
+                                <div className={`w-10 h-10 rounded-lg ${getScoreBgColor(score)} flex items-center justify-center`}>
+                                  <Icon className={`w-5 h-5 ${getScoreColor(score)}`} />
+                                </div>
+                                <div>
+                                  <div className="text-lg font-semibold text-gray-900">{label}</div>
+                                  <div className="flex items-center gap-2 mt-1">
+                                    <div className={`text-3xl font-bold ${getScoreColor(score)}`}>
+                                      {score}
+                                    </div>
+                                    <div className="text-gray-500">/100</div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                            <div className="flex items-end gap-2">
-                              <div className={`text-4xl font-bold ${getScoreColor(score)}`}>
-                                {score}
-                              </div>
-                              <div className="text-gray-500 mb-1">/100</div>
-                            </div>
-                            <div className="mt-3 h-2 bg-gray-100 rounded-full overflow-hidden">
+                            
+                            <div className="mb-4 h-2 bg-gray-100 rounded-full overflow-hidden">
                               <div 
                                 className={`h-full ${score >= 90 ? 'bg-green-600' : score >= 75 ? 'bg-yellow-600' : 'bg-red-600'}`}
                                 style={{ width: `${score}%` }}
                               />
                             </div>
                             
-                            {isExpanded && (
-                              <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                className="mt-6 pt-6 border-t border-gray-200"
-                              >
-                                {(() => {
-                                  const { passed, failed } = getIssuesForCategory(key);
-                                  const hasData = passed.length > 0 || failed.length > 0;
-                                  
-                                  if (!hasData) {
-                                    return (
-                                      <div className="text-center py-8 text-gray-500">
-                                        <p>No detailed validation data available for this category.</p>
-                                        <p className="text-sm mt-2">Score is estimated based on overall security posture.</p>
-                                      </div>
-                                    );
-                                  }
-                                  
-                                  return (
-                                    <>
-                                      {failed.length > 0 && (
-                                        <div className="mb-6">
-                                          <div className="flex items-center gap-2 mb-3">
-                                            <XCircle className="w-5 h-5 text-red-600" />
-                                            <h5 className="font-semibold text-red-900">Issues Found ({failed.length})</h5>
-                                          </div>
-                                          <div className="space-y-2">
-                                            {failed.map((item, idx) => (
-                                              <div key={idx} className="flex items-start gap-2 text-sm p-3 bg-red-50 rounded-lg border border-red-200">
-                                                <XCircle className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" />
-                                                <span className="text-red-900">{item}</span>
-                                              </div>
-                                            ))}
-                                          </div>
+                            {hasData ? (
+                              <div className="space-y-4">
+                                {failed.length > 0 && (
+                                  <div>
+                                    <div className="flex items-center gap-2 mb-2">
+                                      <XCircle className="w-4 h-4 text-red-600" />
+                                      <h5 className="font-semibold text-red-900 text-sm">Issues Found ({failed.length})</h5>
+                                    </div>
+                                    <div className="space-y-2">
+                                      {failed.map((item, idx) => (
+                                        <div key={idx} className="flex items-start gap-2 text-sm p-2 bg-red-50 rounded-lg border border-red-200">
+                                          <XCircle className="w-3 h-3 text-red-600 mt-0.5 flex-shrink-0" />
+                                          <span className="text-red-900">{item}</span>
                                         </div>
-                                      )}
-                                      
-                                      {passed.length > 0 && (
-                                        <div>
-                                          <div className="flex items-center gap-2 mb-3">
-                                            <CheckCircle2 className="w-5 h-5 text-green-600" />
-                                            <h5 className="font-semibold text-green-900">Passed Checks ({passed.length})</h5>
-                                          </div>
-                                          <div className="space-y-2">
-                                            {passed.map((item, idx) => (
-                                              <div key={idx} className="flex items-start gap-2 text-sm p-2 hover:bg-gray-50 rounded">
-                                                <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                                                <span className="text-gray-700">{item}</span>
-                                              </div>
-                                            ))}
-                                          </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                                
+                                {passed.length > 0 && (
+                                  <div>
+                                    <div className="flex items-center gap-2 mb-2">
+                                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                                      <h5 className="font-semibold text-green-900 text-sm">Passed Checks ({passed.length})</h5>
+                                    </div>
+                                    <div className="space-y-1">
+                                      {passed.map((item, idx) => (
+                                        <div key={idx} className="flex items-start gap-2 text-sm p-2 hover:bg-gray-50 rounded">
+                                          <CheckCircle2 className="w-3 h-3 text-green-600 mt-0.5 flex-shrink-0" />
+                                          <span className="text-gray-700">{item}</span>
                                         </div>
-                                      )}
-                                    </>
-                                  );
-                                })()}
-                              </motion.div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            ) : (
+                              <div className="text-center py-4 text-gray-500">
+                                <p className="text-sm">No detailed validation data available for this category.</p>
+                                <p className="text-xs mt-1">Score is estimated based on overall security posture.</p>
+                              </div>
                             )}
                           </CardContent>
                         </Card>
@@ -453,11 +435,7 @@ export default function Cyber() {
                     })}
                   </div>
 
-                  <div className="mt-6">
-                    <p className="text-sm text-gray-600 text-center">
-                      Click on any card above to view detailed validation criteria
-                    </p>
-                  </div>
+
                 </motion.div>
               )}
             </CardContent>
