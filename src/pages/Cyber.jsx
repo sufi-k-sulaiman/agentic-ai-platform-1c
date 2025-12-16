@@ -188,6 +188,7 @@ export default function Cyber() {
   const [isValidating, setIsValidating] = useState(false);
   const [expandedCard, setExpandedCard] = useState(null);
   const [showContactForm, setShowContactForm] = useState(false);
+  const [validationError, setValidationError] = useState(null);
 
   const generateIssues = (category, score) => {
     const allCriteria = validationCriteria[category] || [];
@@ -202,6 +203,8 @@ export default function Cyber() {
     
     setIsValidating(true);
     setExpandedCard(null);
+    setValidationError(null);
+    setValidationResults(null);
     
     try {
       const response = await base44.functions.invoke('validateWebsite', { domain: searchInput });
@@ -211,23 +214,7 @@ export default function Cyber() {
       setValidationResults(response.data);
     } catch (error) {
       console.error('Validation failed:', error);
-      // Fallback to mock data if API fails
-      const results = {
-        domain: searchInput,
-        security: Math.floor(Math.random() * 30) + 70,
-        inputHandling: Math.floor(Math.random() * 30) + 70,
-        authentication: Math.floor(Math.random() * 30) + 70,
-        accessControl: Math.floor(Math.random() * 30) + 70,
-        configuration: Math.floor(Math.random() * 30) + 70,
-        dataProtection: Math.floor(Math.random() * 30) + 70,
-        monitoring: Math.floor(Math.random() * 30) + 70,
-        design: Math.floor(Math.random() * 30) + 70,
-        seo: Math.floor(Math.random() * 30) + 70,
-        performance: Math.floor(Math.random() * 30) + 70,
-        legal: Math.floor(Math.random() * 30) + 70,
-        content: Math.floor(Math.random() * 30) + 70
-      };
-      setValidationResults(results);
+      setValidationError(error.message || 'Failed to validate website. Please try again.');
     } finally {
       setIsValidating(false);
     }
@@ -317,6 +304,22 @@ export default function Cyber() {
                   )}
                 </Button>
               </div>
+
+              {validationError && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-6 bg-red-50 border border-red-200 rounded-xl"
+                >
+                  <div className="flex items-start gap-3">
+                    <AlertTriangle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold text-red-900 mb-1">Validation Failed</h4>
+                      <p className="text-red-700 text-sm">{validationError}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
 
               {validationResults && (
                 <motion.div
