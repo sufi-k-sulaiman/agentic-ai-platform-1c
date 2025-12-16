@@ -54,7 +54,7 @@ const verticals = [
 ];
 
 export default function HeroSection() {
-  const [currentChallenge, setCurrentChallenge] = useState(0);
+  const [shownIndices, setShownIndices] = useState([0, 1, 2, 3]);
   const [efficiencyValue, setEfficiencyValue] = useState(0);
   const [savingsValue, setSavingsValue] = useState(0);
 
@@ -63,11 +63,11 @@ export default function HeroSection() {
     const calculateAverages = () => {
       let efficiencySum = 0;
       let savingsSum = 0;
-      for (let i = 0; i < 4; i++) {
-        const challenge = challenges[(currentChallenge + i) % challenges.length];
+      shownIndices.forEach(idx => {
+        const challenge = challenges[idx];
         efficiencySum += parseInt(challenge.efficiency.replace('+', '').replace('%', ''));
         savingsSum += parseInt(challenge.savings.replace('%', ''));
-      }
+      });
       return {
         efficiency: Math.round(efficiencySum / 4),
         savings: Math.round(savingsSum / 4)
@@ -79,10 +79,16 @@ export default function HeroSection() {
     setSavingsValue(averages.savings);
 
     const interval = setInterval(() => {
-      setCurrentChallenge((prev) => (prev + 1) % challenges.length);
+      setShownIndices((prev) => {
+        // Get indices not currently shown
+        const available = challenges.map((_, idx) => idx).filter(idx => !prev.includes(idx));
+        // Pick 4 random unique indices from available
+        const shuffled = available.sort(() => Math.random() - 0.5);
+        return shuffled.slice(0, 4);
+      });
     }, 5075);
     return () => clearInterval(interval);
-  }, [currentChallenge]);
+  }, [shownIndices]);
 
   const cardPositions = [
     { className: "absolute top-[5%] left-[5%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
