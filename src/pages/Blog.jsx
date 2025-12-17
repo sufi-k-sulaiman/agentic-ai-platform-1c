@@ -669,7 +669,7 @@ const posts = [
     date: 'December 15, 2024',
     readTime: '19 min read',
     category: 'Generative AI',
-    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/cf6bc9a87_generated_image.png',
     page: 'BlogGenerativeAIFuture'
   },
   {
@@ -679,7 +679,7 @@ const posts = [
     date: 'January 20, 2025',
     readTime: '18 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/52c2965ee_generated_image.png',
     page: 'BlogAgenticAIGovernanceIntro'
   },
   {
@@ -689,7 +689,7 @@ const posts = [
     date: 'January 21, 2025',
     readTime: '16 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/bafc68c7d_generated_image.png',
     page: 'BlogAIAutonomyIntro'
   },
   {
@@ -699,7 +699,7 @@ const posts = [
     date: 'December 22, 2024',
     readTime: '20 min read',
     category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/33829a881_generated_image.png',
     page: 'BlogAgenticVsTraditionalAI'
   },
   {
@@ -709,7 +709,7 @@ const posts = [
     date: 'November 30, 2024',
     readTime: '15 min read',
     category: 'AI Insights',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/67aa083e3_generated_image.png',
     page: 'BlogAgenticAIEnterprise'
   },
   {
@@ -719,7 +719,7 @@ const posts = [
     date: 'December 25, 2024',
     readTime: '14 min read',
     category: 'Generative AI',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/42c6ece83_generated_image.png',
     page: 'BlogGenerativeAIEthics'
   }
 ];
