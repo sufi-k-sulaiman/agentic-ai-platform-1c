@@ -152,6 +152,14 @@ import BlogMultiModalProcessing from './pages/BlogMultiModalProcessing';
 import BlogPlanningStrategyCapabilities from './pages/BlogPlanningStrategyCapabilities';
 import BlogCollaborationCapabilities from './pages/BlogCollaborationCapabilities';
 import BlogRealTimeReasoning from './pages/BlogRealTimeReasoning';
+import BlogProductionGenAIApps from './pages/BlogProductionGenAIApps';
+import BlogPromptEngineeringApps from './pages/BlogPromptEngineeringApps';
+import BlogManagingAICosts from './pages/BlogManagingAICosts';
+import BlogFineTuningVsRAG from './pages/BlogFineTuningVsRAG';
+import BlogQualityEvaluationAI from './pages/BlogQualityEvaluationAI';
+import BlogScalingGenAIApps from './pages/BlogScalingGenAIApps';
+import BlogUXPatternsAIApps from './pages/BlogUXPatternsAIApps';
+import BlogSecurityComplianceAI from './pages/BlogSecurityComplianceAI';
 import __Layout from './Layout.jsx';
 
 
@@ -310,6 +318,14 @@ export const PAGES = {
     "BlogPlanningStrategyCapabilities": BlogPlanningStrategyCapabilities,
     "BlogCollaborationCapabilities": BlogCollaborationCapabilities,
     "BlogRealTimeReasoning": BlogRealTimeReasoning,
+    "BlogProductionGenAIApps": BlogProductionGenAIApps,
+    "BlogPromptEngineeringApps": BlogPromptEngineeringApps,
+    "BlogManagingAICosts": BlogManagingAICosts,
+    "BlogFineTuningVsRAG": BlogFineTuningVsRAG,
+    "BlogQualityEvaluationAI": BlogQualityEvaluationAI,
+    "BlogScalingGenAIApps": BlogScalingGenAIApps,
+    "BlogUXPatternsAIApps": BlogUXPatternsAIApps,
+    "BlogSecurityComplianceAI": BlogSecurityComplianceAI,
 }
 
 export const pagesConfig = {

@@ -874,6 +874,86 @@ const posts = [
     page: 'BlogAgenticAIEnterprise'
   },
   {
+    title: 'Building Production-Ready Generative AI Applications',
+    excerpt: 'Essential patterns for deploying generative AI apps. Reliability, monitoring, error handling, versioning, and production best practices.',
+    author: 'Dr. James Wilson',
+    date: 'January 15, 2025',
+    readTime: '20 min read',
+    category: 'Agentic Insights',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200',
+    page: 'BlogProductionGenAIApps'
+  },
+  {
+    title: 'Prompt Engineering Mastery for AI Applications',
+    excerpt: 'Advanced prompt engineering techniques. System prompts, few-shot learning, chain-of-thought, and prompt optimization strategies.',
+    author: 'Maria Chen',
+    date: 'January 14, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Insights',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200',
+    page: 'BlogPromptEngineeringApps'
+  },
+  {
+    title: 'Managing AI Model Costs in Production Applications',
+    excerpt: 'Cost optimization for generative AI apps. Token usage tracking, caching strategies, model selection, and budget management.',
+    author: 'David Park',
+    date: 'January 13, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Insights',
+    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200',
+    page: 'BlogManagingAICosts'
+  },
+  {
+    title: 'Fine-Tuning vs RAG: Choosing the Right Approach for Your App',
+    excerpt: 'Compare fine-tuning and retrieval-augmented generation. When to use each, implementation patterns, and hybrid approaches.',
+    author: 'Dr. Sarah Kim',
+    date: 'January 12, 2025',
+    readTime: '19 min read',
+    category: 'Agentic Insights',
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200',
+    page: 'BlogFineTuningVsRAG'
+  },
+  {
+    title: 'Quality Evaluation and Testing for Generative AI Apps',
+    excerpt: 'Build robust evaluation frameworks. Automated testing, human evaluation, quality metrics, and continuous monitoring.',
+    author: 'Rachel Foster',
+    date: 'January 11, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Insights',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
+    page: 'BlogQualityEvaluationAI'
+  },
+  {
+    title: 'Scaling Generative AI Applications: Architecture and Strategies',
+    excerpt: 'Scale from prototype to millions of users. Load balancing, caching, rate limiting, queue management, and infrastructure patterns.',
+    author: 'Michael Rodriguez',
+    date: 'January 10, 2025',
+    readTime: '21 min read',
+    category: 'Agentic Insights',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200',
+    page: 'BlogScalingGenAIApps'
+  },
+  {
+    title: 'User Experience Design Patterns for AI-Powered Applications',
+    excerpt: 'Design delightful AI app experiences. Loading states, streaming UX, error handling, feedback collection, and trust-building patterns.',
+    author: 'Emma Wilson',
+    date: 'January 9, 2025',
+    readTime: '15 min read',
+    category: 'Agentic Insights',
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200',
+    page: 'BlogUXPatternsAIApps'
+  },
+  {
+    title: 'Security and Compliance in Generative AI Applications',
+    excerpt: 'Secure your AI apps. Data privacy, prompt injection prevention, output filtering, compliance requirements, and security best practices.',
+    author: 'Dr. Alex Kumar',
+    date: 'January 8, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Insights',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200',
+    page: 'BlogSecurityComplianceAI'
+  },
+  {
     title: 'Autonomous Decision-Making Capabilities: How AI Agents Choose Actions',
     excerpt: 'Explore how AI agents make decisions independently. Decision frameworks, reasoning patterns, confidence scoring, and autonomous action selection.',
     author: 'Dr. Marcus Chen',
