@@ -128,12 +128,6 @@ import DocWorkflowAutomation from './pages/DocWorkflowAutomation';
 import DocDataIntegration from './pages/DocDataIntegration';
 import BlogAgenticAIArchitecturePatterns from './pages/BlogAgenticAIArchitecturePatterns';
 import BlogAgenticAIMemoryManagement from './pages/BlogAgenticAIMemoryManagement';
-import BlogAgenticAIToolIntegration from './pages/BlogAgenticAIToolIntegration';
-import BlogAgenticAIObservability from './pages/BlogAgenticAIObservability';
-import BlogAgenticAIPromptEngineering from './pages/BlogAgenticAIPromptEngineering';
-import BlogAgenticAIErrorHandling from './pages/BlogAgenticAIErrorHandling';
-import BlogAgenticAIContextManagement from './pages/BlogAgenticAIContextManagement';
-import BlogAgenticAIScalability from './pages/BlogAgenticAIScalability';
 import __Layout from './Layout.jsx';
 
 
@@ -268,12 +262,6 @@ export const PAGES = {
     "DocDataIntegration": DocDataIntegration,
     "BlogAgenticAIArchitecturePatterns": BlogAgenticAIArchitecturePatterns,
     "BlogAgenticAIMemoryManagement": BlogAgenticAIMemoryManagement,
-    "BlogAgenticAIToolIntegration": BlogAgenticAIToolIntegration,
-    "BlogAgenticAIObservability": BlogAgenticAIObservability,
-    "BlogAgenticAIPromptEngineering": BlogAgenticAIPromptEngineering,
-    "BlogAgenticAIErrorHandling": BlogAgenticAIErrorHandling,
-    "BlogAgenticAIContextManagement": BlogAgenticAIContextManagement,
-    "BlogAgenticAIScalability": BlogAgenticAIScalability,
 }
 
 export const pagesConfig = {
