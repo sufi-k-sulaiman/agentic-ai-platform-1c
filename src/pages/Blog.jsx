@@ -11,6 +11,87 @@ import PageMeta from '@/components/PageMeta';
 
 const posts = [
   {
+    title: 'User Experience Design for AI Agents: Best Practices Guide',
+    excerpt: 'Master UX design principles for autonomous AI agents. Learn interaction patterns, user flows, and interface guidelines for intuitive agent experiences.',
+    author: 'Rachel Foster',
+    date: 'January 22, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Design',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/8dbd436fc_generated_image.png',
+    page: 'BlogAgenticAIUXDesign',
+    featured: true
+  },
+  {
+    title: 'Designing Conversational AI Interfaces: From Chatbots to Agents',
+    excerpt: 'Create engaging conversational experiences for AI agents. Message design, context management, and natural dialogue patterns.',
+    author: 'Sophie Martinez',
+    date: 'January 21, 2025',
+    readTime: '14 min read',
+    category: 'Agentic Design',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a5bc3e19a_generated_image.png',
+    page: 'BlogConversationalAIDesign'
+  },
+  {
+    title: 'Visual Design Patterns for Agentic AI: Component Library Guide',
+    excerpt: 'Build consistent AI agent interfaces with reusable design patterns. Explore component libraries, design systems, and visual guidelines.',
+    author: 'David Chen',
+    date: 'January 20, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Design',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/3fb58ca0f_generated_image.png',
+    page: 'BlogVisualDesignPatterns'
+  },
+  {
+    title: 'Designing for AI Transparency: Building Trust Through Design',
+    excerpt: 'Design interfaces that make AI decision-making transparent. Explainability patterns, trust indicators, and confidence displays.',
+    author: 'Emma Wilson',
+    date: 'January 19, 2025',
+    readTime: '15 min read',
+    category: 'Agentic Design',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/daede25ec_generated_image.png',
+    page: 'BlogAITransparencyDesign'
+  },
+  {
+    title: 'Multi-Agent System UI/UX: Coordinating Multiple AI Agents',
+    excerpt: 'Design interfaces for complex multi-agent systems. Agent coordination, status visualization, and managing agent interactions.',
+    author: 'Michael Torres',
+    date: 'January 18, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Design',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/d402edd7b_generated_image.png',
+    page: 'BlogMultiAgentUIDesign'
+  },
+  {
+    title: 'Designing AI Agent Personas: Character and Voice Guidelines',
+    excerpt: 'Create compelling AI agent personalities. Persona development, voice design, tone guidelines, and character consistency.',
+    author: 'Jessica Park',
+    date: 'January 17, 2025',
+    readTime: '13 min read',
+    category: 'Agentic Design',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/1a49d1181_generated_image.png',
+    page: 'BlogAIAgentPersonas'
+  },
+  {
+    title: 'Design Systems for AI-First Products: Scalable UI Architecture',
+    excerpt: 'Build design systems optimized for AI products. Component architecture, token systems, and scaling AI interfaces.',
+    author: 'Alex Kumar',
+    date: 'January 16, 2025',
+    readTime: '19 min read',
+    category: 'Agentic Design',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/f51c460f9_generated_image.png',
+    page: 'BlogAIDesignSystems'
+  },
+  {
+    title: 'Accessibility in Agentic AI Design: Inclusive Agent Experiences',
+    excerpt: 'Design accessible AI agents for all users. WCAG compliance, screen reader support, keyboard navigation, and inclusive design principles.',
+    author: 'Maria Rodriguez',
+    date: 'January 15, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Design',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a2aae8476_generated_image.png',
+    page: 'BlogAccessibleAIDesign'
+  },
+  {
     title: 'Agentic AI vs Traditional AI: Complete Comparison Guide',
     excerpt: 'Comprehensive comparison of agentic AI and traditional AI systems. Understand key differences, capabilities, limitations, and when to use each approach.',
     author: 'Dr. Sarah Mitchell',
@@ -814,6 +895,7 @@ export default function Blog() {
             <Tabs value={activeCategory} onValueChange={setActiveCategory}>
               <TabsList className="bg-gray-100 rounded-full inline-flex w-auto h-auto p-1.5 gap-1">
                 <TabsTrigger value="all" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">All</TabsTrigger>
+                <TabsTrigger value="agentic-design" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Design</TabsTrigger>
                 <TabsTrigger value="ai-autonomy" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Autonomy</TabsTrigger>
                 <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Comparison</TabsTrigger>
                 <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Governance</TabsTrigger>
