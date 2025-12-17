@@ -818,11 +818,12 @@ export default function Blog() {
                   transition={{ delay: (index % 12) * 0.05 }}
                   className="group cursor-pointer"
                 >
-                <div className="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6">
+                <div className="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6 bg-gradient-to-br from-purple-100 to-violet-100">
                   <img
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
                 </div>
                 <Badge variant="secondary" className="mb-2 sm:mb-3 text-xs sm:text-sm">{post.category}</Badge>
