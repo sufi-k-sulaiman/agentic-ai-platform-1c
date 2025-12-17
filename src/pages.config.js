@@ -136,6 +136,14 @@ import BlogMultiAgentUIDesign from './pages/BlogMultiAgentUIDesign';
 import BlogAIAgentPersonas from './pages/BlogAIAgentPersonas';
 import BlogAIDesignSystems from './pages/BlogAIDesignSystems';
 import BlogAccessibleAIDesign from './pages/BlogAccessibleAIDesign';
+import BlogToolSelectionDesign from './pages/BlogToolSelectionDesign';
+import BlogAgentToolInterfaces from './pages/BlogAgentToolInterfaces';
+import BlogAPIDesignAgenticTools from './pages/BlogAPIDesignAgenticTools';
+import BlogToolDiscoveryUX from './pages/BlogToolDiscoveryUX';
+import BlogToolErrorHandling from './pages/BlogToolErrorHandling';
+import BlogToolChainingWorkflows from './pages/BlogToolChainingWorkflows';
+import BlogMonitoringToolsDesign from './pages/BlogMonitoringToolsDesign';
+import BlogTestingToolsFrameworks from './pages/BlogTestingToolsFrameworks';
 import __Layout from './Layout.jsx';
 
 
@@ -278,6 +286,14 @@ export const PAGES = {
     "BlogAIAgentPersonas": BlogAIAgentPersonas,
     "BlogAIDesignSystems": BlogAIDesignSystems,
     "BlogAccessibleAIDesign": BlogAccessibleAIDesign,
+    "BlogToolSelectionDesign": BlogToolSelectionDesign,
+    "BlogAgentToolInterfaces": BlogAgentToolInterfaces,
+    "BlogAPIDesignAgenticTools": BlogAPIDesignAgenticTools,
+    "BlogToolDiscoveryUX": BlogToolDiscoveryUX,
+    "BlogToolErrorHandling": BlogToolErrorHandling,
+    "BlogToolChainingWorkflows": BlogToolChainingWorkflows,
+    "BlogMonitoringToolsDesign": BlogMonitoringToolsDesign,
+    "BlogTestingToolsFrameworks": BlogTestingToolsFrameworks,
 }
 
 export const pagesConfig = {

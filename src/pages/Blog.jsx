@@ -92,6 +92,86 @@ const posts = [
     page: 'BlogAccessibleAIDesign'
   },
   {
+    title: 'Tool Selection and Integration Design for AI Agents',
+    excerpt: 'Master the art of selecting and integrating tools for AI agents. Design patterns for tool discovery, evaluation, and seamless integration.',
+    author: 'Kevin Zhang',
+    date: 'January 14, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Design',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200',
+    page: 'BlogToolSelectionDesign'
+  },
+  {
+    title: 'Designing Agent Tool Interfaces: Best Practices and Patterns',
+    excerpt: 'Create intuitive tool interfaces for AI agents. Input/output design, parameter configuration, and result visualization patterns.',
+    author: 'Sarah Mitchell',
+    date: 'January 13, 2025',
+    readTime: '15 min read',
+    category: 'Agentic Design',
+    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200',
+    page: 'BlogAgentToolInterfaces'
+  },
+  {
+    title: 'API Design for Agentic AI Tools: Developer Experience Guide',
+    excerpt: 'Build developer-friendly APIs for AI agent tools. Endpoint design, authentication, versioning, and documentation best practices.',
+    author: 'Michael Chen',
+    date: 'January 12, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Design',
+    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200',
+    page: 'BlogAPIDesignAgenticTools'
+  },
+  {
+    title: 'Tool Discovery UX: Helping Agents Find the Right Tools',
+    excerpt: 'Design effective tool discovery experiences for AI agents. Search, categorization, recommendations, and intelligent tool matching.',
+    author: 'Emma Wilson',
+    date: 'January 11, 2025',
+    readTime: '14 min read',
+    category: 'Agentic Design',
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200',
+    page: 'BlogToolDiscoveryUX'
+  },
+  {
+    title: 'Error Handling Design for Agent Tool Execution',
+    excerpt: 'Handle tool execution failures gracefully. Retry strategies, fallback patterns, user communication, and recovery workflows.',
+    author: 'David Park',
+    date: 'January 10, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Design',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200',
+    page: 'BlogToolErrorHandling'
+  },
+  {
+    title: 'Tool Chaining and Workflow Design for AI Agents',
+    excerpt: 'Design complex tool chains and workflows. Sequential execution, parallel processing, conditional logic, and workflow visualization.',
+    author: 'Rachel Foster',
+    date: 'January 9, 2025',
+    readTime: '19 min read',
+    category: 'Agentic Design',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200',
+    page: 'BlogToolChainingWorkflows'
+  },
+  {
+    title: 'Monitoring Tools for Agentic AI: Observability Interface Design',
+    excerpt: 'Design monitoring and observability interfaces for AI agents. Metrics visualization, log analysis, trace viewing, and alert management.',
+    author: 'James Patterson',
+    date: 'January 8, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Design',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+    page: 'BlogMonitoringToolsDesign'
+  },
+  {
+    title: 'Testing Tools and Frameworks for Agentic AI Systems',
+    excerpt: 'Build comprehensive testing tools for AI agents. Unit testing, integration testing, simulation environments, and quality assurance patterns.',
+    author: 'Dr. Alex Kumar',
+    date: 'January 7, 2025',
+    readTime: '20 min read',
+    category: 'Agentic Design',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
+    page: 'BlogTestingToolsFrameworks'
+  },
+  {
     title: 'Agentic AI vs Traditional AI: Complete Comparison Guide',
     excerpt: 'Comprehensive comparison of agentic AI and traditional AI systems. Understand key differences, capabilities, limitations, and when to use each approach.',
     author: 'Dr. Sarah Mitchell',
