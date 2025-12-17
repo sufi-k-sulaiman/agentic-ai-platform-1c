@@ -713,19 +713,19 @@ export default function Community() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-1">1,547</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">45</div>
               <div className="text-sm text-gray-600">Discussions</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-1">12.4K</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">820</div>
               <div className="text-sm text-gray-600">Comments</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-1">8,234</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">266</div>
               <div className="text-sm text-gray-600">Members</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-1">342</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">42</div>
               <div className="text-sm text-gray-600">Online now</div>
             </div>
           </div>
