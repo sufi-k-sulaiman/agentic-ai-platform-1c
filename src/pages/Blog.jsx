@@ -259,7 +259,7 @@ const posts = [
     date: 'December 8, 2024',
     readTime: '15 min read',
     category: 'Generative AI',
-    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/0767878c4_image.png',
     page: 'BlogLLMGuide'
   },
   {
@@ -419,7 +419,7 @@ const posts = [
     date: 'January 7, 2025',
     readTime: '12 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/37ee6506f_image.png',
     page: 'BlogAgenticAIAccessControl'
   },
   {
@@ -599,7 +599,7 @@ const posts = [
     date: 'January 19, 2025',
     readTime: '14 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/fd66d78c0_image.png',
     page: 'BlogAIAutonomyLevels'
   },
   {
@@ -609,7 +609,7 @@ const posts = [
     date: 'January 18, 2025',
     readTime: '17 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/330e323bd_image.png',
     page: 'BlogAutonomousDecisionMaking'
   },
   {
