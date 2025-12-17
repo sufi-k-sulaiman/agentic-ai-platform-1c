@@ -38,7 +38,7 @@ const posts = [
     date: 'December 18, 2024',
     readTime: '14 min read',
     category: 'AI Comparison',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/1b8d68866_image.png',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
     page: 'BlogAgenticVsRuleBased'
   },
   {
@@ -48,7 +48,7 @@ const posts = [
     date: 'December 17, 2024',
     readTime: '16 min read',
     category: 'AI Comparison',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/fd6161ec7_image.png',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
     page: 'BlogAgenticAICostAnalysis'
   },
   {
@@ -70,6 +70,86 @@ const posts = [
     category: 'AI Comparison',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
     page: 'BlogAgenticAIArchitecture'
+  },
+  {
+    title: 'Agentic AI Architecture Patterns: ReAct, Chain-of-Thought, and Beyond',
+    excerpt: 'Comprehensive guide to AI agent architecture patterns. Compare ReAct, Chain-of-Thought, ReWOO, and other frameworks for building autonomous agents.',
+    author: 'Dr. Alex Thompson',
+    date: 'January 15, 2025',
+    readTime: '20 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    page: 'BlogAgenticAIArchitecturePatterns'
+  },
+  {
+    title: 'Memory Management in Agentic AI: Short-term vs Long-term Strategies',
+    excerpt: 'Complete guide to memory architecture for AI agents. Learn about short-term, long-term, and episodic memory patterns for autonomous systems.',
+    author: 'Dr. Sarah Mitchell',
+    date: 'January 14, 2025',
+    readTime: '18 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
+    page: 'BlogAgenticAIMemoryManagement'
+  },
+  {
+    title: 'Tool Integration in Agentic AI: APIs, Functions, and External Systems',
+    excerpt: 'Master tool integration for AI agents. Learn how to connect agents with APIs, databases, and external systems for powerful autonomous capabilities.',
+    author: 'Kevin Zhang',
+    date: 'January 13, 2025',
+    readTime: '19 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800',
+    page: 'BlogAgenticAIToolIntegration'
+  },
+  {
+    title: 'Observability for Agentic AI: Monitoring, Debugging, and Optimization',
+    excerpt: 'Comprehensive guide to observability in AI agents. Learn how to monitor, debug, and optimize autonomous systems with traces, metrics, and logs.',
+    author: 'Dr. Marcus Chen',
+    date: 'January 12, 2025',
+    readTime: '17 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+    page: 'BlogAgenticAIObservability'
+  },
+  {
+    title: 'Prompt Engineering for Agentic AI: Techniques and Best Practices',
+    excerpt: 'Master prompt engineering for autonomous agents. Learn techniques for system prompts, few-shot examples, and structured outputs.',
+    author: 'Rachel Foster',
+    date: 'January 11, 2025',
+    readTime: '21 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800',
+    page: 'BlogAgenticAIPromptEngineering'
+  },
+  {
+    title: 'Error Handling and Recovery in Agentic AI Systems',
+    excerpt: 'Master error handling for AI agents. Learn retry strategies, fallback patterns, and graceful degradation for robust autonomous systems.',
+    author: 'James Patterson',
+    date: 'January 10, 2025',
+    readTime: '16 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
+    page: 'BlogAgenticAIErrorHandling'
+  },
+  {
+    title: 'Context Window Management in Agentic AI: Strategies and Techniques',
+    excerpt: 'Master context management for AI agents. Learn how to work within token limits while maintaining rich context for autonomous decision-making.',
+    author: 'Laura Martinez',
+    date: 'January 9, 2025',
+    readTime: '17 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    page: 'BlogAgenticAIContextManagement'
+  },
+  {
+    title: 'Scaling Agentic AI: From Prototype to Production at Enterprise Scale',
+    excerpt: 'Learn how to scale AI agents to handle millions of requests. Infrastructure patterns, performance optimization, and cost management at scale.',
+    author: 'Michael Rodriguez',
+    date: 'January 8, 2025',
+    readTime: '19 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
+    page: 'BlogAgenticAIScalability'
   },
   {
     title: 'Use Cases: Where Agentic AI and Traditional AI Each Excel',
@@ -98,7 +178,7 @@ const posts = [
     date: 'December 12, 2024',
     readTime: '13 min read',
     category: 'AI Comparison',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/ca6de42da_image.png',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
     page: 'BlogAgenticAIROIComparison'
   },
   {
@@ -169,7 +249,7 @@ const posts = [
     date: 'December 9, 2024',
     readTime: '12 min read',
     category: 'Generative AI',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/6fdcd9ca7_image.png',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
     page: 'BlogGenerativeAIvsTraditional'
   },
   {
@@ -179,7 +259,7 @@ const posts = [
     date: 'December 8, 2024',
     readTime: '15 min read',
     category: 'Generative AI',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/2ec670342_image.png',
+    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
     page: 'BlogLLMGuide'
   },
   {
@@ -621,66 +701,6 @@ const posts = [
     category: 'AI Comparison',
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800',
     page: 'BlogAgenticVsTraditionalAI'
-  },
-  {
-    title: 'Agentic AI Architecture Patterns: Comparing Design Approaches',
-    excerpt: 'Compare architectural patterns for agentic AI: monolithic vs microservices, event-driven vs synchronous, layered architectures, and multi-agent coordination.',
-    author: 'Dr. Michael Chen',
-    date: 'December 28, 2024',
-    readTime: '22 min read',
-    category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
-    page: 'BlogAgenticAIArchitecturePatterns'
-  },
-  {
-    title: 'Scalability Architectures for Agentic AI: Vertical vs Horizontal',
-    excerpt: 'Deep dive into scaling strategies for AI agents. Compare vertical vs horizontal scaling, auto-scaling patterns, and distributed architectures.',
-    author: 'Alex Rodriguez',
-    date: 'December 27, 2024',
-    readTime: '19 min read',
-    category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
-    page: 'BlogAgenticAIScalabilityComparison'
-  },
-  {
-    title: 'Data Flow Architectures in Agentic AI: Push vs Pull vs Stream',
-    excerpt: 'Compare data flow patterns for AI systems: pull-based (request-response), push-based (webhooks), and streaming (WebSocket/SSE) architectures.',
-    author: 'Dr. Sarah Williams',
-    date: 'December 26, 2024',
-    readTime: '20 min read',
-    category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
-    page: 'BlogAgenticAIDataFlowPatterns'
-  },
-  {
-    title: 'State Management in Agentic AI: Stateless vs Stateful Architectures',
-    excerpt: 'Compare stateless and stateful architectures for AI agents. Session management, context persistence, memory patterns, and scalability trade-offs.',
-    author: 'Jennifer Park',
-    date: 'December 25, 2024',
-    readTime: '21 min read',
-    category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800',
-    page: 'BlogAgenticAIStateManagement'
-  },
-  {
-    title: 'Deployment Architectures for Agentic AI: Cloud vs On-Premises vs Hybrid',
-    excerpt: 'Compare deployment patterns: cloud-native, on-premises, hybrid cloud, and edge computing. Cost analysis, compliance, and architecture recommendations.',
-    author: 'David Kumar',
-    date: 'December 24, 2024',
-    readTime: '23 min read',
-    category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
-    page: 'BlogAgenticAIDeploymentPatterns'
-  },
-  {
-    title: 'Observability Architecture for Agentic AI: Monitoring Patterns Compared',
-    excerpt: 'Compare observability patterns for AI systems: centralized logging, distributed tracing, metrics monitoring, and LLM-specific debugging tools.',
-    author: 'Dr. Lisa Anderson',
-    date: 'December 23, 2024',
-    readTime: '24 min read',
-    category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
-    page: 'BlogAgenticAIObservabilityArchitecture'
   },
   {
     title: 'Real-Time AI Insights: Building Streaming Analytics with Agents',
