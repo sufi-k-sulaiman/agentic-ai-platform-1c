@@ -1034,6 +1034,86 @@ const posts = [
     page: 'BlogRealTimeReasoning'
   },
   {
+    title: 'Memory and Context Management in AI Agents',
+    excerpt: 'Master how agents store and retrieve information. Short-term memory, long-term storage, context windows, and memory optimization strategies.',
+    author: 'Dr. Marcus Chen',
+    date: 'January 24, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?w=1200',
+    page: 'BlogMemoryContextManagement'
+  },
+  {
+    title: 'Tool Use and Function Calling Capabilities in AI Agents',
+    excerpt: 'Learn how agents interact with external tools and APIs. Function calling, parameter extraction, tool selection, and execution patterns.',
+    author: 'Kevin Zhang',
+    date: 'January 23, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200',
+    page: 'BlogToolUseFunctionCalling'
+  },
+  {
+    title: 'Reasoning and Logic Capabilities in Agentic AI',
+    excerpt: 'Explore logical reasoning in AI agents. Deductive reasoning, inductive learning, analogical thinking, and causal inference.',
+    author: 'Dr. Sarah Mitchell',
+    date: 'January 22, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200',
+    page: 'BlogReasoningLogicCapabilities'
+  },
+  {
+    title: 'Knowledge Retrieval Capabilities: How Agents Find Information',
+    excerpt: 'Master information retrieval in AI agents. Vector search, semantic similarity, ranking algorithms, and retrieval optimization.',
+    author: 'Rachel Foster',
+    date: 'January 21, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200',
+    page: 'BlogKnowledgeRetrievalCapabilities'
+  },
+  {
+    title: 'Task Execution and Workflow Capabilities in AI Agents',
+    excerpt: 'Learn how agents execute complex workflows. Task orchestration, parallel execution, error recovery, and workflow optimization.',
+    author: 'Michael Rodriguez',
+    date: 'January 20, 2025',
+    readTime: '19 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200',
+    page: 'BlogTaskExecutionWorkflow'
+  },
+  {
+    title: 'Perception and Observation Capabilities in AI Agents',
+    excerpt: 'Understand how agents perceive their environment. State detection, change monitoring, pattern recognition, and environmental awareness.',
+    author: 'Dr. Emily Carter',
+    date: 'January 19, 2025',
+    readTime: '15 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200',
+    page: 'BlogPerceptionObservation'
+  },
+  {
+    title: 'Goal Management and Prioritization in AI Agents',
+    excerpt: 'Master goal handling in AI agents. Goal setting, priority scoring, conflict resolution, and dynamic goal adjustment.',
+    author: 'Jennifer Martinez',
+    date: 'January 18, 2025',
+    readTime: '14 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200',
+    page: 'BlogGoalManagementPrioritization'
+  },
+  {
+    title: 'Learning from Feedback: How AI Agents Improve Through Interaction',
+    excerpt: 'Explore feedback mechanisms in AI agents. User corrections, implicit signals, reinforcement learning, and continuous improvement cycles.',
+    author: 'Dr. Alex Thompson',
+    date: 'January 17, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200',
+    page: 'BlogLearningFromFeedback'
+  },
+  {
     title: 'Generative AI Content Moderation: Balancing Safety and Innovation',
     excerpt: 'Build robust content moderation systems for generative AI. Safety layers, toxicity detection, brand safety, and user protection strategies.',
     author: 'Rachel Foster',

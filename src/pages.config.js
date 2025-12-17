@@ -160,6 +160,14 @@ import BlogQualityEvaluationAI from './pages/BlogQualityEvaluationAI';
 import BlogScalingGenAIApps from './pages/BlogScalingGenAIApps';
 import BlogUXPatternsAIApps from './pages/BlogUXPatternsAIApps';
 import BlogSecurityComplianceAI from './pages/BlogSecurityComplianceAI';
+import BlogMemoryContextManagement from './pages/BlogMemoryContextManagement';
+import BlogToolUseFunctionCalling from './pages/BlogToolUseFunctionCalling';
+import BlogReasoningLogicCapabilities from './pages/BlogReasoningLogicCapabilities';
+import BlogKnowledgeRetrievalCapabilities from './pages/BlogKnowledgeRetrievalCapabilities';
+import BlogTaskExecutionWorkflow from './pages/BlogTaskExecutionWorkflow';
+import BlogPerceptionObservation from './pages/BlogPerceptionObservation';
+import BlogGoalManagementPrioritization from './pages/BlogGoalManagementPrioritization';
+import BlogLearningFromFeedback from './pages/BlogLearningFromFeedback';
 import __Layout from './Layout.jsx';
 
 
@@ -326,6 +334,14 @@ export const PAGES = {
     "BlogScalingGenAIApps": BlogScalingGenAIApps,
     "BlogUXPatternsAIApps": BlogUXPatternsAIApps,
     "BlogSecurityComplianceAI": BlogSecurityComplianceAI,
+    "BlogMemoryContextManagement": BlogMemoryContextManagement,
+    "BlogToolUseFunctionCalling": BlogToolUseFunctionCalling,
+    "BlogReasoningLogicCapabilities": BlogReasoningLogicCapabilities,
+    "BlogKnowledgeRetrievalCapabilities": BlogKnowledgeRetrievalCapabilities,
+    "BlogTaskExecutionWorkflow": BlogTaskExecutionWorkflow,
+    "BlogPerceptionObservation": BlogPerceptionObservation,
+    "BlogGoalManagementPrioritization": BlogGoalManagementPrioritization,
+    "BlogLearningFromFeedback": BlogLearningFromFeedback,
 }
 
 export const pagesConfig = {
