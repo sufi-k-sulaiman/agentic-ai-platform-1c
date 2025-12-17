@@ -144,6 +144,14 @@ import BlogToolErrorHandling from './pages/BlogToolErrorHandling';
 import BlogToolChainingWorkflows from './pages/BlogToolChainingWorkflows';
 import BlogMonitoringToolsDesign from './pages/BlogMonitoringToolsDesign';
 import BlogTestingToolsFrameworks from './pages/BlogTestingToolsFrameworks';
+import BlogAutonomousDecisionCapabilities from './pages/BlogAutonomousDecisionCapabilities';
+import BlogSelfLearningCapabilities from './pages/BlogSelfLearningCapabilities';
+import BlogComplexProblemSolving from './pages/BlogComplexProblemSolving';
+import BlogNaturalLanguageCapabilities from './pages/BlogNaturalLanguageCapabilities';
+import BlogMultiModalProcessing from './pages/BlogMultiModalProcessing';
+import BlogPlanningStrategyCapabilities from './pages/BlogPlanningStrategyCapabilities';
+import BlogCollaborationCapabilities from './pages/BlogCollaborationCapabilities';
+import BlogRealTimeReasoning from './pages/BlogRealTimeReasoning';
 import __Layout from './Layout.jsx';
 
 
@@ -294,6 +302,14 @@ export const PAGES = {
     "BlogToolChainingWorkflows": BlogToolChainingWorkflows,
     "BlogMonitoringToolsDesign": BlogMonitoringToolsDesign,
     "BlogTestingToolsFrameworks": BlogTestingToolsFrameworks,
+    "BlogAutonomousDecisionCapabilities": BlogAutonomousDecisionCapabilities,
+    "BlogSelfLearningCapabilities": BlogSelfLearningCapabilities,
+    "BlogComplexProblemSolving": BlogComplexProblemSolving,
+    "BlogNaturalLanguageCapabilities": BlogNaturalLanguageCapabilities,
+    "BlogMultiModalProcessing": BlogMultiModalProcessing,
+    "BlogPlanningStrategyCapabilities": BlogPlanningStrategyCapabilities,
+    "BlogCollaborationCapabilities": BlogCollaborationCapabilities,
+    "BlogRealTimeReasoning": BlogRealTimeReasoning,
 }
 
 export const pagesConfig = {

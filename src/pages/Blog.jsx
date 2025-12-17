@@ -874,6 +874,86 @@ const posts = [
     page: 'BlogAgenticAIEnterprise'
   },
   {
+    title: 'Autonomous Decision-Making Capabilities: How AI Agents Choose Actions',
+    excerpt: 'Explore how AI agents make decisions independently. Decision frameworks, reasoning patterns, confidence scoring, and autonomous action selection.',
+    author: 'Dr. Marcus Chen',
+    date: 'January 23, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?w=1200',
+    page: 'BlogAutonomousDecisionCapabilities'
+  },
+  {
+    title: 'Self-Learning and Adaptive Capabilities in AI Agents',
+    excerpt: 'Understand how agents learn from experience and adapt over time. Reinforcement learning, feedback loops, and continuous improvement mechanisms.',
+    author: 'Dr. Sarah Kim',
+    date: 'January 22, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200',
+    page: 'BlogSelfLearningCapabilities'
+  },
+  {
+    title: 'Complex Problem-Solving Capabilities of AI Agents',
+    excerpt: 'Discover how agents tackle multi-step problems. Problem decomposition, solution exploration, constraint satisfaction, and optimization strategies.',
+    author: 'Kevin Zhang',
+    date: 'January 21, 2025',
+    readTime: '19 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200',
+    page: 'BlogComplexProblemSolving'
+  },
+  {
+    title: 'Natural Language Understanding Capabilities in Agentic AI',
+    excerpt: 'Master NLU in AI agents. Intent recognition, entity extraction, context understanding, sentiment analysis, and conversational capabilities.',
+    author: 'Rachel Foster',
+    date: 'January 20, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200',
+    page: 'BlogNaturalLanguageCapabilities'
+  },
+  {
+    title: 'Multi-Modal Processing: Agents That See, Hear, and Understand',
+    excerpt: 'Explore multi-modal AI capabilities. Vision processing, speech recognition, image generation, cross-modal reasoning, and unified understanding.',
+    author: 'Dr. Emily Carter',
+    date: 'January 19, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200',
+    page: 'BlogMultiModalProcessing'
+  },
+  {
+    title: 'Planning and Strategy Capabilities in AI Agents',
+    excerpt: 'Learn how agents plan ahead and strategize. Goal decomposition, action sequencing, resource allocation, and long-term planning capabilities.',
+    author: 'Michael Rodriguez',
+    date: 'January 18, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200',
+    page: 'BlogPlanningStrategyCapabilities'
+  },
+  {
+    title: 'Collaboration Capabilities: How AI Agents Work Together',
+    excerpt: 'Understand agent-to-agent collaboration. Communication protocols, task delegation, shared memory, conflict resolution, and team coordination.',
+    author: 'Jennifer Martinez',
+    date: 'January 17, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200',
+    page: 'BlogCollaborationCapabilities'
+  },
+  {
+    title: 'Real-Time Reasoning: How Agents Think on Their Feet',
+    excerpt: 'Explore real-time reasoning capabilities. Dynamic problem solving, context switching, interrupt handling, and adaptive response generation.',
+    author: 'Dr. Alex Thompson',
+    date: 'January 16, 2025',
+    readTime: '15 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200',
+    page: 'BlogRealTimeReasoning'
+  },
+  {
     title: 'Generative AI Content Moderation: Balancing Safety and Innovation',
     excerpt: 'Build robust content moderation systems for generative AI. Safety layers, toxicity detection, brand safety, and user protection strategies.',
     author: 'Rachel Foster',
@@ -980,6 +1060,7 @@ export default function Blog() {
                 <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Comparison</TabsTrigger>
                 <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Governance</TabsTrigger>
                 <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Generative AI</TabsTrigger>
+                <TabsTrigger value="agentic-capabilities" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Capabilities</TabsTrigger>
                 <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Insights</TabsTrigger>
               </TabsList>
             </Tabs>
