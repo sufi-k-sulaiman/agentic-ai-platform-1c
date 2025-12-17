@@ -38,7 +38,7 @@ const posts = [
     date: 'December 18, 2024',
     readTime: '14 min read',
     category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a9eba6afb_image.png',
     page: 'BlogAgenticVsRuleBased'
   },
   {
