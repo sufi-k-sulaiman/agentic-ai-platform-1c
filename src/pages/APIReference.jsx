@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Code, Terminal, Copy, Key, Shield, Zap, AlertCircle, Check, Clock, Globe, Package, Webhook, PlayCircle } from 'lucide-react';
 import { toast } from 'sonner';
+import PageMeta from '@/components/PageMeta';
 
 const endpoints = [
   {
@@ -257,6 +258,13 @@ export default function APIReference() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="API Reference"
+        description="Complete REST & GraphQL API reference for 1C Platform. Authentication, endpoints, SDKs, webhooks, and code examples in multiple languages."
+        url="/api-reference"
+        keywords={['API reference', 'REST API', 'GraphQL', 'API documentation', 'SDK', 'API endpoints']}
+      />
+      
       {/* Hero */}
       <section className="pt-32 pb-12 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

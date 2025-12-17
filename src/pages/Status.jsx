@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle2, AlertCircle, Activity, Clock, TrendingUp } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const systems = [
   { name: 'API Gateway', status: 'operational', uptime: '99.99%' },
@@ -49,6 +50,13 @@ const metrics = [
 export default function Status() {
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="System Status"
+        description="Real-time monitoring of 1C Platform services. 99.99% uptime, all systems operational. Check current status and incident history."
+        url="/status"
+        keywords={['system status', 'uptime', 'service monitoring', 'platform health', 'API status']}
+      />
+      
       {/* Hero */}
       <section className="pt-32 pb-12 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
