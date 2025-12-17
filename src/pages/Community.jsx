@@ -682,7 +682,7 @@ export default function Community() {
     <div className="bg-white">
       <PageMeta 
         title="Community Forum"
-        description="Join 100,000+ AI practitioners discussing generative AI, agentic systems, governance, and ML operations. Share knowledge and learn from experts."
+        description="Join 10,000+ Ai practitioners discussing generative AI, agentic systems, governance, and ML operations. Share knowledge and learn from experts."
         url="/community"
         keywords={['AI community', 'developer forum', 'AI discussions', 'machine learning community', 'agent development']}
       />
