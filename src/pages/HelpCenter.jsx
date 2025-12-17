@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Search, MessageCircle, Book, Video, FileQuestion, ArrowRight, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 const categories = [
   {
@@ -84,6 +85,13 @@ export default function HelpCenter() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Help Center"
+        description="Get help with 1C Platform. Browse guides, FAQs, tutorials, and troubleshooting articles. 24/7 support available."
+        url="/help-center"
+        keywords={['help center', 'support articles', 'troubleshooting', 'FAQs', 'platform guides']}
+      />
+      
       {/* Hero with Search */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-5xl mx-auto px-6">

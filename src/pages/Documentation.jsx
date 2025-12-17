@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Search, BookOpen, Code, Zap, Terminal, FileText, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 const categories = [
   {
@@ -67,6 +68,13 @@ export default function Documentation() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Documentation"
+        description="Complete documentation for 1C Platform. API reference, SDKs, quick start guides, tutorials, and integration examples."
+        url="/documentation"
+        keywords={['API documentation', 'developer docs', 'SDK reference', 'integration guides', 'AI platform docs']}
+      />
+      
       {/* Hero with Search */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-5xl mx-auto px-6">

@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Users, MessageSquare, ThumbsUp, MessageCircle, Eye, Pin, TrendingUp, Clock, Sparkles, Bot, Shield, Brain, Zap, ChevronRight, Send } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 const categories = [
   { id: 'all', name: 'All Discussions', icon: MessageSquare, count: 45 },
@@ -679,6 +680,13 @@ export default function Community() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Community Forum"
+        description="Join 100,000+ AI practitioners discussing generative AI, agentic systems, governance, and ML operations. Share knowledge and learn from experts."
+        url="/community"
+        keywords={['AI community', 'developer forum', 'AI discussions', 'machine learning community', 'agent development']}
+      />
+      
       {/* Hero */}
       <section className="pt-32 pb-12 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

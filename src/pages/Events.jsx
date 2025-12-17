@@ -9,6 +9,7 @@ import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
 import RegistrationForm from '@/components/events/RegistrationForm';
 import { toast } from 'sonner';
+import PageMeta from '@/components/PageMeta';
 
 const events = [
   {
@@ -615,6 +616,13 @@ export default function Events() {
 
   return (
     <div className="bg-white">
+      <PageMeta 
+        title="Events & Webinars"
+        description="Join AI conferences, workshops, webinars, and hackathons. Learn about agentic AI, generative AI, and autonomous agents from industry experts."
+        url="/events"
+        keywords={['AI events', 'AI conferences', 'AI workshops', 'webinars', 'hackathons', 'tech events']}
+      />
+      
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
