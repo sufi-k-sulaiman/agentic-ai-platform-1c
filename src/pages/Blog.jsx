@@ -1194,6 +1194,86 @@ const posts = [
     page: 'BlogAgentDeploymentStrategies'
   },
   {
+    title: 'Context Window Optimization for AI Applications',
+    excerpt: 'Maximize context efficiency in AI apps. Token management, context compression, sliding windows, and memory optimization strategies.',
+    author: 'Dr. Sarah Kim',
+    date: 'January 26, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200',
+    page: 'BlogContextWindowOptimization'
+  },
+  {
+    title: 'Streaming and Real-Time AI Responses: Building Responsive Apps',
+    excerpt: 'Implement streaming for instant feedback. Server-sent events, WebSockets, progressive rendering, and real-time UX patterns.',
+    author: 'Michael Rodriguez',
+    date: 'January 25, 2025',
+    readTime: '15 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+    page: 'BlogStreamingRealTimeAI'
+  },
+  {
+    title: 'Multi-Model Orchestration in AI Applications',
+    excerpt: 'Coordinate multiple AI models effectively. Model routing, fallback chains, ensemble methods, and cost-performance optimization.',
+    author: 'Dr. Alex Thompson',
+    date: 'January 24, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200',
+    page: 'BlogMultiModelOrchestration'
+  },
+  {
+    title: 'Vector Database Integration for AI Applications',
+    excerpt: 'Master vector databases for AI apps. Embeddings, similarity search, indexing strategies, and production deployment patterns.',
+    author: 'Kevin Zhang',
+    date: 'January 23, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200',
+    page: 'BlogVectorDatabaseIntegration'
+  },
+  {
+    title: 'AI Application Observability and Debugging',
+    excerpt: 'Debug AI apps effectively. Tracing, logging, replay systems, LLM call inspection, and troubleshooting methodologies.',
+    author: 'Rachel Foster',
+    date: 'January 22, 2025',
+    readTime: '19 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+    page: 'BlogAIObservabilityDebugging'
+  },
+  {
+    title: 'Rate Limiting and Quota Management for AI Applications',
+    excerpt: 'Control AI usage and costs. User quotas, rate limiting strategies, fair usage policies, and overage handling.',
+    author: 'Jennifer Martinez',
+    date: 'January 21, 2025',
+    readTime: '14 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200',
+    page: 'BlogRateLimitingQuotaManagement'
+  },
+  {
+    title: 'AI Response Quality and Consistency: Ensuring Reliable Outputs',
+    excerpt: 'Maintain output quality across requests. Validation schemas, consistency checks, quality scoring, and improvement loops.',
+    author: 'Dr. Emily Carter',
+    date: 'January 20, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
+    page: 'BlogAIResponseQuality'
+  },
+  {
+    title: 'Building AI Plugins and Extensions: Modular AI Architecture',
+    excerpt: 'Create extensible AI applications. Plugin systems, extension APIs, marketplace patterns, and third-party integration frameworks.',
+    author: 'David Park',
+    date: 'January 19, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200',
+    page: 'BlogAIPluginsExtensions'
+  },
+  {
     title: 'Generative AI Content Moderation: Balancing Safety and Innovation',
     excerpt: 'Build robust content moderation systems for generative AI. Safety layers, toxicity detection, brand safety, and user protection strategies.',
     author: 'Rachel Foster',
