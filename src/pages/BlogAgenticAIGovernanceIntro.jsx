@@ -13,6 +13,7 @@ export default function BlogAgenticAIGovernanceIntro() {
         title="Introduction to Agentic AI Governance: A Strategic Framework"
         description="Understand the critical importance of governance for autonomous AI agents. Learn frameworks, best practices, and how to implement effective oversight."
         url="/blog/agentic-ai-governance-intro"
+        keywords={['AI governance', 'agentic AI governance', 'AI compliance', 'AI risk management', 'autonomous AI oversight']}
       />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">

@@ -13,6 +13,7 @@ export default function BlogGenerativeAIIntro() {
         title="Introduction to Generative AI: A Complete Guide"
         description="Discover what generative AI is, how it works, and why it's transforming industries. Learn about the technology behind ChatGPT, DALL-E, and more."
         url="/blog/generative-ai-intro"
+        keywords={['generative AI', 'ChatGPT', 'DALL-E', 'large language models', 'AI content creation', 'transformers']}
       />
 
       {/* Hero */}

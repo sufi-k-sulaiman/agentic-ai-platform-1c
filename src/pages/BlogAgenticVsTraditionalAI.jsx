@@ -13,6 +13,7 @@ export default function BlogAgenticVsTraditionalAI() {
         title="Agentic AI vs Traditional AI: Complete Comparison Guide"
         description="Comprehensive comparison of agentic AI and traditional AI systems. Understand key differences, capabilities, limitations, and when to use each approach."
         url="/blog/agentic-vs-traditional-ai"
+        keywords={['agentic AI vs traditional AI', 'AI comparison', 'autonomous AI', 'traditional machine learning', 'AI architecture comparison']}
       />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">

@@ -13,6 +13,7 @@ export default function BlogAIAutonomyIntro() {
         title="Understanding AI Autonomy: From Basic Automation to True Intelligence"
         description="Explore the spectrum of AI autonomy, from simple automation to fully autonomous systems. Learn what true AI autonomy means and why it matters."
         url="/blog/ai-autonomy-intro"
+        keywords={['AI autonomy', 'autonomous systems', 'automation levels', 'AI decision making', 'intelligent systems']}
       />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
