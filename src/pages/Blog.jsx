@@ -38,7 +38,7 @@ const posts = [
     date: 'December 18, 2024',
     readTime: '14 min read',
     category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/1b8d68866_image.png',
     page: 'BlogAgenticVsRuleBased'
   },
   {
@@ -48,7 +48,7 @@ const posts = [
     date: 'December 17, 2024',
     readTime: '16 min read',
     category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/fd6161ec7_image.png',
     page: 'BlogAgenticAICostAnalysis'
   },
   {
@@ -98,7 +98,7 @@ const posts = [
     date: 'December 12, 2024',
     readTime: '13 min read',
     category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/ca6de42da_image.png',
     page: 'BlogAgenticAIROIComparison'
   },
   {
@@ -169,7 +169,7 @@ const posts = [
     date: 'December 9, 2024',
     readTime: '12 min read',
     category: 'Generative AI',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/6fdcd9ca7_image.png',
     page: 'BlogGenerativeAIvsTraditional'
   },
   {
@@ -179,7 +179,7 @@ const posts = [
     date: 'December 8, 2024',
     readTime: '15 min read',
     category: 'Generative AI',
-    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/2ec670342_image.png',
     page: 'BlogLLMGuide'
   },
   {
