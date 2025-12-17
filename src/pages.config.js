@@ -132,6 +132,10 @@ import BlogAgenticAIUXDesign from './pages/BlogAgenticAIUXDesign';
 import BlogConversationalAIDesign from './pages/BlogConversationalAIDesign';
 import BlogVisualDesignPatterns from './pages/BlogVisualDesignPatterns';
 import BlogAITransparencyDesign from './pages/BlogAITransparencyDesign';
+import BlogMultiAgentUIDesign from './pages/BlogMultiAgentUIDesign';
+import BlogAIAgentPersonas from './pages/BlogAIAgentPersonas';
+import BlogAIDesignSystems from './pages/BlogAIDesignSystems';
+import BlogAccessibleAIDesign from './pages/BlogAccessibleAIDesign';
 import __Layout from './Layout.jsx';
 
 
@@ -270,6 +274,10 @@ export const PAGES = {
     "BlogConversationalAIDesign": BlogConversationalAIDesign,
     "BlogVisualDesignPatterns": BlogVisualDesignPatterns,
     "BlogAITransparencyDesign": BlogAITransparencyDesign,
+    "BlogMultiAgentUIDesign": BlogMultiAgentUIDesign,
+    "BlogAIAgentPersonas": BlogAIAgentPersonas,
+    "BlogAIDesignSystems": BlogAIDesignSystems,
+    "BlogAccessibleAIDesign": BlogAccessibleAIDesign,
 }
 
 export const pagesConfig = {
