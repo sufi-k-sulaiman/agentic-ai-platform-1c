@@ -379,7 +379,7 @@ const posts = [
     date: 'January 11, 2025',
     readTime: '15 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800',
+    image: 'https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg',
     page: 'BlogAgenticAIEthicalFrameworks'
   },
   {
@@ -389,7 +389,7 @@ const posts = [
     date: 'January 10, 2025',
     readTime: '13 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/30/entrepreneur-593371_1280.jpg',
     page: 'BlogAgenticAIAccountability'
   },
   {
@@ -399,7 +399,7 @@ const posts = [
     date: 'January 9, 2025',
     readTime: '16 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1642790551116-18e150f248e8?w=800',
+    image: 'https://cdn.pixabay.com/photo/2017/08/10/08/47/laptop-2620118_1280.jpg',
     page: 'BlogAgenticAIDataGovernance'
   },
   {
@@ -409,7 +409,7 @@ const posts = [
     date: 'January 8, 2025',
     readTime: '14 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/05/28/14/53/ux-788002_1280.jpg',
     page: 'BlogAgenticAIMonitoring'
   },
   {
@@ -419,7 +419,7 @@ const posts = [
     date: 'January 7, 2025',
     readTime: '12 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800',
+    image: 'https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_1280.jpg',
     page: 'BlogAgenticAIAccessControl'
   },
   {
@@ -429,7 +429,7 @@ const posts = [
     date: 'January 6, 2025',
     readTime: '17 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg',
     page: 'BlogAgenticAIComplianceFrameworks'
   },
   {
@@ -439,7 +439,7 @@ const posts = [
     date: 'January 5, 2025',
     readTime: '15 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1642790551116-18e150f248e8?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/01/09/11/09/startup-594127_1280.jpg',
     page: 'BlogAgenticAIGovernanceBestPractices'
   },
   {
@@ -449,7 +449,7 @@ const posts = [
     date: 'January 4, 2025',
     readTime: '13 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849826_1280.jpg',
     page: 'BlogAgenticAIGovernanceCommittee'
   },
   {
@@ -459,7 +459,7 @@ const posts = [
     date: 'January 3, 2025',
     readTime: '16 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg',
     page: 'BlogAgenticAIModelGovernance'
   },
   {
@@ -469,7 +469,7 @@ const posts = [
     date: 'January 2, 2025',
     readTime: '14 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/02/19/11/19/computer-1209641_1280.jpg',
     page: 'BlogAgenticAIVendorManagement'
   },
   {
@@ -499,7 +499,7 @@ const posts = [
     date: 'December 5, 2024',
     readTime: '15 min read',
     category: 'Tutorials',
-    image: 'https://images.unsplash.com/photo-1642790551116-18e150f248e8?w=800',
+    image: 'https://cdn.pixabay.com/photo/2017/03/27/13/54/background-2178951_1280.jpg',
     page: 'BlogMultiAgentSystems'
   },
   {
@@ -509,7 +509,7 @@ const posts = [
     date: 'December 3, 2024',
     readTime: '9 min read',
     category: 'Tutorials',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594091_1280.jpg',
     page: 'BlogNoCodeAgenticAI'
   },
   {
@@ -519,7 +519,7 @@ const posts = [
     date: 'November 28, 2024',
     readTime: '11 min read',
     category: 'Security',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
+    image: 'https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_1280.jpg',
     page: 'BlogAgenticAISecurity'
   },
   {
@@ -529,7 +529,7 @@ const posts = [
     date: 'November 25, 2024',
     readTime: '13 min read',
     category: 'Product',
-    image: 'https://images.unsplash.com/photo-1642790551116-18e150f248e8?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821_1280.jpg',
     page: 'BlogAgenticAIROI'
   },
   {
@@ -539,7 +539,7 @@ const posts = [
     date: 'November 20, 2024',
     readTime: '10 min read',
     category: 'AI Insights',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/07/17/22/43/startup-849804_1280.jpg',
     page: 'BlogHumanAICollaboration'
   },
   {
@@ -549,7 +549,7 @@ const posts = [
     date: 'November 15, 2024',
     readTime: '14 min read',
     category: 'AI Insights',
-    image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/11/29/08/41/apple-1868496_1280.jpg',
     page: 'BlogAutomationToAutonomy'
   },
   {
@@ -559,7 +559,7 @@ const posts = [
     date: 'November 12, 2024',
     readTime: '16 min read',
     category: 'Case Studies',
-    image: 'https://images.unsplash.com/photo-1642790551116-18e150f248e8?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_1280.jpg',
     page: 'BlogAgenticAIUseCases'
   },
   {
@@ -569,7 +569,7 @@ const posts = [
     date: 'November 8, 2024',
     readTime: '12 min read',
     category: 'AI Insights',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_1280.jpg',
     page: 'BlogAgenticAIEthics'
   },
   {
@@ -579,7 +579,7 @@ const posts = [
     date: 'November 1, 2024',
     readTime: '15 min read',
     category: 'Product',
-    image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800',
+    image: 'https://cdn.pixabay.com/photo/2014/07/06/13/55/calculator-385506_1280.jpg',
     page: 'BlogAgenticAIScaling'
   },
   {
@@ -619,7 +619,7 @@ const posts = [
     date: 'January 17, 2025',
     readTime: '18 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_1280.jpg',
     page: 'BlogBuildingAutonomousAI'
   },
   {
@@ -629,7 +629,7 @@ const posts = [
     date: 'January 16, 2025',
     readTime: '15 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800',
+    image: 'https://cdn.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg',
     page: 'BlogAIAutonomyVsOversight'
   },
   {
@@ -639,7 +639,7 @@ const posts = [
     date: 'January 15, 2025',
     readTime: '16 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1642790551116-18e150f248e8?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg',
     page: 'BlogAutonomousAIApplications'
   },
   {
@@ -649,7 +649,7 @@ const posts = [
     date: 'January 14, 2025',
     readTime: '15 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866572_1280.jpg',
     page: 'BlogAIAutonomyChallenges'
   },
   {
@@ -659,7 +659,7 @@ const posts = [
     date: 'January 13, 2025',
     readTime: '17 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800',
+    image: 'https://cdn.pixabay.com/photo/2024/03/04/16/38/ai-generated-8612467_1280.png',
     page: 'BlogAIAutonomyFuture'
   },
   {
@@ -669,7 +669,7 @@ const posts = [
     date: 'December 15, 2024',
     readTime: '19 min read',
     category: 'Generative AI',
-    image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg',
     page: 'BlogGenerativeAIFuture'
   },
   {
@@ -679,7 +679,7 @@ const posts = [
     date: 'January 20, 2025',
     readTime: '18 min read',
     category: 'AI Governance',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800',
+    image: 'https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396_1280.jpg',
     page: 'BlogAgenticAIGovernanceIntro'
   },
   {
@@ -689,7 +689,7 @@ const posts = [
     date: 'January 21, 2025',
     readTime: '16 min read',
     category: 'AI Autonomy',
-    image: 'https://images.unsplash.com/photo-1642790551116-18e150f248e8?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_1280.jpg',
     page: 'BlogAIAutonomyIntro'
   },
   {
@@ -699,7 +699,7 @@ const posts = [
     date: 'December 22, 2024',
     readTime: '20 min read',
     category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/07/28/22/05/mockup-865110_1280.jpg',
     page: 'BlogAgenticVsTraditionalAI'
   },
   {
@@ -709,7 +709,7 @@ const posts = [
     date: 'November 30, 2024',
     readTime: '15 min read',
     category: 'AI Insights',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800',
+    image: 'https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg',
     page: 'BlogAgenticAIEnterprise'
   },
   {
@@ -719,7 +719,7 @@ const posts = [
     date: 'December 25, 2024',
     readTime: '14 min read',
     category: 'Generative AI',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800',
+    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593341_1280.jpg',
     page: 'BlogGenerativeAIEthics'
   }
 ];
