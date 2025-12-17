@@ -129,6 +129,7 @@ import DocDataIntegration from './pages/DocDataIntegration';
 import BlogAgenticAIArchitecturePatterns from './pages/BlogAgenticAIArchitecturePatterns';
 import BlogAgenticAIMemoryManagement from './pages/BlogAgenticAIMemoryManagement';
 import BlogAgenticAIToolIntegration from './pages/BlogAgenticAIToolIntegration';
+import BlogAgenticAIObservability from './pages/BlogAgenticAIObservability';
 import __Layout from './Layout.jsx';
 
 
@@ -264,6 +265,7 @@ export const PAGES = {
     "BlogAgenticAIArchitecturePatterns": BlogAgenticAIArchitecturePatterns,
     "BlogAgenticAIMemoryManagement": BlogAgenticAIMemoryManagement,
     "BlogAgenticAIToolIntegration": BlogAgenticAIToolIntegration,
+    "BlogAgenticAIObservability": BlogAgenticAIObservability,
 }
 
 export const pagesConfig = {
