@@ -168,6 +168,14 @@ import BlogTaskExecutionWorkflow from './pages/BlogTaskExecutionWorkflow';
 import BlogPerceptionObservation from './pages/BlogPerceptionObservation';
 import BlogGoalManagementPrioritization from './pages/BlogGoalManagementPrioritization';
 import BlogLearningFromFeedback from './pages/BlogLearningFromFeedback';
+import BlogAgentArchitectureFundamentals from './pages/BlogAgentArchitectureFundamentals';
+import BlogPromptDesignPatterns from './pages/BlogPromptDesignPatterns';
+import BlogAgentStateManagement from './pages/BlogAgentStateManagement';
+import BlogInterAgentCommunication from './pages/BlogInterAgentCommunication';
+import BlogAgentReliabilityResilience from './pages/BlogAgentReliabilityResilience';
+import BlogAgentPerformanceOptimization from './pages/BlogAgentPerformanceOptimization';
+import BlogAgentTestingValidation from './pages/BlogAgentTestingValidation';
+import BlogAgentDeploymentStrategies from './pages/BlogAgentDeploymentStrategies';
 import __Layout from './Layout.jsx';
 
 
@@ -342,6 +350,14 @@ export const PAGES = {
     "BlogPerceptionObservation": BlogPerceptionObservation,
     "BlogGoalManagementPrioritization": BlogGoalManagementPrioritization,
     "BlogLearningFromFeedback": BlogLearningFromFeedback,
+    "BlogAgentArchitectureFundamentals": BlogAgentArchitectureFundamentals,
+    "BlogPromptDesignPatterns": BlogPromptDesignPatterns,
+    "BlogAgentStateManagement": BlogAgentStateManagement,
+    "BlogInterAgentCommunication": BlogInterAgentCommunication,
+    "BlogAgentReliabilityResilience": BlogAgentReliabilityResilience,
+    "BlogAgentPerformanceOptimization": BlogAgentPerformanceOptimization,
+    "BlogAgentTestingValidation": BlogAgentTestingValidation,
+    "BlogAgentDeploymentStrategies": BlogAgentDeploymentStrategies,
 }
 
 export const pagesConfig = {

@@ -1114,6 +1114,86 @@ const posts = [
     page: 'BlogLearningFromFeedback'
   },
   {
+    title: 'Agent Architecture Fundamentals: Building Blocks of Autonomous AI',
+    excerpt: 'Master the core components of agent architecture. Control loops, decision engines, memory systems, and modular design patterns.',
+    author: 'Dr. Marcus Chen',
+    date: 'January 25, 2025',
+    readTime: '19 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200',
+    page: 'BlogAgentArchitectureFundamentals'
+  },
+  {
+    title: 'Prompt Design Patterns for AI Agents: System Instructions Guide',
+    excerpt: 'Craft effective system prompts for agents. Role definition, constraint setting, output formatting, and behavior tuning strategies.',
+    author: 'Rachel Foster',
+    date: 'January 24, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200',
+    page: 'BlogPromptDesignPatterns'
+  },
+  {
+    title: 'Agent State Management: Tracking Context and Progress',
+    excerpt: 'Learn how to manage agent state effectively. State persistence, transitions, recovery, and distributed state synchronization.',
+    author: 'Kevin Zhang',
+    date: 'January 23, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+    page: 'BlogAgentStateManagement'
+  },
+  {
+    title: 'Inter-Agent Communication Protocols: Building Connected Systems',
+    excerpt: 'Design robust communication between agents. Message formats, protocols, event buses, and coordination patterns.',
+    author: 'Dr. Sarah Mitchell',
+    date: 'January 22, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200',
+    page: 'BlogInterAgentCommunication'
+  },
+  {
+    title: 'Agent Reliability and Resilience: Building Fault-Tolerant Systems',
+    excerpt: 'Build agents that handle failures gracefully. Circuit breakers, timeouts, retries, fallbacks, and self-healing patterns.',
+    author: 'Michael Rodriguez',
+    date: 'January 21, 2025',
+    readTime: '20 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200',
+    page: 'BlogAgentReliabilityResilience'
+  },
+  {
+    title: 'Performance Optimization for AI Agents: Speed and Efficiency',
+    excerpt: 'Optimize agent performance. Latency reduction, parallel execution, caching strategies, and resource management.',
+    author: 'Dr. Emily Carter',
+    date: 'January 20, 2025',
+    readTime: '16 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200',
+    page: 'BlogAgentPerformanceOptimization'
+  },
+  {
+    title: 'Testing and Validation Strategies for AI Agents',
+    excerpt: 'Comprehensive testing approaches for agents. Unit tests, integration tests, behavior validation, and quality assurance.',
+    author: 'Jennifer Martinez',
+    date: 'January 19, 2025',
+    readTime: '18 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
+    page: 'BlogAgentTestingValidation'
+  },
+  {
+    title: 'Agent Deployment Strategies: From Development to Production',
+    excerpt: 'Deploy agents safely to production. Blue-green deployments, canary releases, gradual rollouts, and rollback procedures.',
+    author: 'David Park',
+    date: 'January 18, 2025',
+    readTime: '17 min read',
+    category: 'Agentic Capabilities',
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200',
+    page: 'BlogAgentDeploymentStrategies'
+  },
+  {
     title: 'Generative AI Content Moderation: Balancing Safety and Innovation',
     excerpt: 'Build robust content moderation systems for generative AI. Safety layers, toxicity detection, brand safety, and user protection strategies.',
     author: 'Rachel Foster',
