@@ -126,6 +126,8 @@ import DocAuthentication from './pages/DocAuthentication';
 import DocAPIReference from './pages/DocAPIReference';
 import DocWorkflowAutomation from './pages/DocWorkflowAutomation';
 import DocDataIntegration from './pages/DocDataIntegration';
+import BlogAgenticAIArchitecturePatterns from './pages/BlogAgenticAIArchitecturePatterns';
+import BlogAgenticAIMemoryManagement from './pages/BlogAgenticAIMemoryManagement';
 import __Layout from './Layout.jsx';
 
 
@@ -258,6 +260,8 @@ export const PAGES = {
     "DocAPIReference": DocAPIReference,
     "DocWorkflowAutomation": DocWorkflowAutomation,
     "DocDataIntegration": DocDataIntegration,
+    "BlogAgenticAIArchitecturePatterns": BlogAgenticAIArchitecturePatterns,
+    "BlogAgenticAIMemoryManagement": BlogAgenticAIMemoryManagement,
 }
 
 export const pagesConfig = {
