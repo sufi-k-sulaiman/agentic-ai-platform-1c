@@ -128,6 +128,10 @@ import DocWorkflowAutomation from './pages/DocWorkflowAutomation';
 import DocDataIntegration from './pages/DocDataIntegration';
 import BlogAgenticAIArchitecturePatterns from './pages/BlogAgenticAIArchitecturePatterns';
 import BlogAgenticAIMemoryManagement from './pages/BlogAgenticAIMemoryManagement';
+import BlogAgenticAIUXDesign from './pages/BlogAgenticAIUXDesign';
+import BlogConversationalAIDesign from './pages/BlogConversationalAIDesign';
+import BlogVisualDesignPatterns from './pages/BlogVisualDesignPatterns';
+import BlogAITransparencyDesign from './pages/BlogAITransparencyDesign';
 import __Layout from './Layout.jsx';
 
 
@@ -262,6 +266,10 @@ export const PAGES = {
     "DocDataIntegration": DocDataIntegration,
     "BlogAgenticAIArchitecturePatterns": BlogAgenticAIArchitecturePatterns,
     "BlogAgenticAIMemoryManagement": BlogAgenticAIMemoryManagement,
+    "BlogAgenticAIUXDesign": BlogAgenticAIUXDesign,
+    "BlogConversationalAIDesign": BlogConversationalAIDesign,
+    "BlogVisualDesignPatterns": BlogVisualDesignPatterns,
+    "BlogAITransparencyDesign": BlogAITransparencyDesign,
 }
 
 export const pagesConfig = {
