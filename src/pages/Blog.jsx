@@ -895,12 +895,12 @@ export default function Blog() {
             <Tabs value={activeCategory} onValueChange={setActiveCategory}>
               <TabsList className="bg-gray-100 rounded-full inline-flex w-auto h-auto p-1.5 gap-1">
                 <TabsTrigger value="all" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">All</TabsTrigger>
-                <TabsTrigger value="agentic-design" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Design</TabsTrigger>
-                <TabsTrigger value="ai-autonomy" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Autonomy</TabsTrigger>
-                <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Comparison</TabsTrigger>
-                <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Governance</TabsTrigger>
+                <TabsTrigger value="agentic-design" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Design</TabsTrigger>
+                <TabsTrigger value="ai-autonomy" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Autonomy</TabsTrigger>
+                <TabsTrigger value="ai-comparison" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Comparison</TabsTrigger>
+                <TabsTrigger value="ai-governance" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Governance</TabsTrigger>
                 <TabsTrigger value="generative-ai" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Generative AI</TabsTrigger>
-                <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Insights</TabsTrigger>
+                <TabsTrigger value="ai-insights" className="text-xs sm:text-sm px-4 sm:px-5 py-2 whitespace-nowrap rounded-full">Agentic Insights</TabsTrigger>
               </TabsList>
             </Tabs>
           </div>
