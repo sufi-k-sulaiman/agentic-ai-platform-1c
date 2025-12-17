@@ -17,7 +17,7 @@ const posts = [
     date: 'December 20, 2024',
     readTime: '18 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2023/04/03/12/22/ai-generated-7897375_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4db66854b_generated_image.png',
     page: 'BlogAgenticVsTraditionalAI',
     featured: true
   },
@@ -28,7 +28,7 @@ const posts = [
     date: 'December 19, 2024',
     readTime: '15 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2024/01/26/19/07/ai-generated-8533561_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/6324a2cc5_generated_image.png',
     page: 'BlogWhenUseAgenticAI'
   },
   {
@@ -38,7 +38,7 @@ const posts = [
     date: 'December 18, 2024',
     readTime: '14 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2023/01/26/22/12/ai-generated-7746247_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/23082dda6_generated_image.png',
     page: 'BlogAgenticVsRuleBased'
   },
   {
@@ -48,7 +48,7 @@ const posts = [
     date: 'December 17, 2024',
     readTime: '16 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2018/03/10/09/16/woman-3213139_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/fa0085381_generated_image.png',
     page: 'BlogAgenticAICostAnalysis'
   },
   {
@@ -58,7 +58,7 @@ const posts = [
     date: 'December 16, 2024',
     readTime: '17 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2023/11/03/10/42/laptop-8361851_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/498e4e839_generated_image.png',
     page: 'BlogAgenticAIPerformance'
   },
   {
@@ -68,7 +68,7 @@ const posts = [
     date: 'December 15, 2024',
     readTime: '16 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2016/11/19/15/32/laptop-1839876_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/01eaffc7d_generated_image.png',
     page: 'BlogAgenticAIArchitecture'
   },
   {
@@ -78,7 +78,7 @@ const posts = [
     date: 'January 15, 2025',
     readTime: '20 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2020/05/18/16/17/social-media-5187243_1280.png',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/bda3167c8_generated_image.png',
     page: 'BlogAgenticAIArchitecturePatterns'
   },
   {
@@ -88,7 +88,7 @@ const posts = [
     date: 'January 14, 2025',
     readTime: '18 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2023/06/05/08/47/ai-generated-8041125_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/96c754a07_generated_image.png',
     page: 'BlogAgenticAIMemoryManagement'
   },
   {
@@ -98,7 +98,7 @@ const posts = [
     date: 'January 13, 2025',
     readTime: '19 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2018/05/08/21/28/laptop-3383741_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/d7bff2e14_generated_image.png',
     page: 'BlogAgenticAIToolIntegration'
   },
   {
@@ -108,7 +108,7 @@ const posts = [
     date: 'January 12, 2025',
     readTime: '17 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2022/01/11/21/48/link-6931554_1280.png',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/73a6c1756_generated_image.png',
     page: 'BlogAgenticAIObservability'
   },
   {
@@ -118,7 +118,7 @@ const posts = [
     date: 'January 11, 2025',
     readTime: '21 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2020/08/09/14/25/business-5475661_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/9fd68b89e_generated_image.png',
     page: 'BlogAgenticAIPromptEngineering'
   },
   {
@@ -128,7 +128,7 @@ const posts = [
     date: 'January 10, 2025',
     readTime: '16 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2015/07/17/22/42/startup-849804_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e64c3b9c2_generated_image.png',
     page: 'BlogAgenticAIErrorHandling'
   },
   {
@@ -138,7 +138,7 @@ const posts = [
     date: 'January 9, 2025',
     readTime: '17 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2016/11/29/08/41/apple-1868496_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/84d83fc30_generated_image.png',
     page: 'BlogAgenticAIContextManagement'
   },
   {
@@ -148,7 +148,7 @@ const posts = [
     date: 'January 8, 2025',
     readTime: '19 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/616f41550_generated_image.png',
     page: 'BlogAgenticAIScalability'
   },
   {
@@ -158,7 +158,7 @@ const posts = [
     date: 'December 14, 2024',
     readTime: '15 min read',
     category: 'AI Comparison',
-    image: 'https://cdn.pixabay.com/photo/2015/05/31/12/14/meeting-788002_1280.jpg',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a2e628435_generated_image.png',
     page: 'BlogAgenticAIUseCaseComparison'
   },
   {
