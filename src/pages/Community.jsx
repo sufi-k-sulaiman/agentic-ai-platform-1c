@@ -702,7 +702,7 @@ export default function Community() {
               AI Community Forum
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Discuss generative AI, agentic systems, governance, and more with 100,000+ AI practitioners
+              Discuss generative AI, agentic systems, governance, and more with 10,000+ Ai practitioners
             </p>
           </motion.div>
         </div>
