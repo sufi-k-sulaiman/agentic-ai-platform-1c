@@ -48,7 +48,7 @@ const posts = [
     date: 'December 17, 2024',
     readTime: '16 min read',
     category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/57a21d52a_image.png',
     page: 'BlogAgenticAICostAnalysis'
   },
   {
@@ -88,7 +88,7 @@ const posts = [
     date: 'January 14, 2025',
     readTime: '18 min read',
     category: 'AI Comparison',
-    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/f4f9f1982_image.png',
     page: 'BlogAgenticAIMemoryManagement'
   },
   {
@@ -249,7 +249,7 @@ const posts = [
     date: 'December 9, 2024',
     readTime: '12 min read',
     category: 'Generative AI',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/16356c73f_image.png',
     page: 'BlogGenerativeAIvsTraditional'
   },
   {
