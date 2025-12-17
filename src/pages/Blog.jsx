@@ -623,6 +623,66 @@ const posts = [
     page: 'BlogAgenticVsTraditionalAI'
   },
   {
+    title: 'Agentic AI Architecture Patterns: Comparing Design Approaches',
+    excerpt: 'Compare architectural patterns for agentic AI: monolithic vs microservices, event-driven vs synchronous, layered architectures, and multi-agent coordination.',
+    author: 'Dr. Michael Chen',
+    date: 'December 28, 2024',
+    readTime: '22 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800',
+    page: 'BlogAgenticAIArchitecturePatterns'
+  },
+  {
+    title: 'Scalability Architectures for Agentic AI: Vertical vs Horizontal',
+    excerpt: 'Deep dive into scaling strategies for AI agents. Compare vertical vs horizontal scaling, auto-scaling patterns, and distributed architectures.',
+    author: 'Alex Rodriguez',
+    date: 'December 27, 2024',
+    readTime: '19 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+    page: 'BlogAgenticAIScalabilityComparison'
+  },
+  {
+    title: 'Data Flow Architectures in Agentic AI: Push vs Pull vs Stream',
+    excerpt: 'Compare data flow patterns for AI systems: pull-based (request-response), push-based (webhooks), and streaming (WebSocket/SSE) architectures.',
+    author: 'Dr. Sarah Williams',
+    date: 'December 26, 2024',
+    readTime: '20 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800',
+    page: 'BlogAgenticAIDataFlowPatterns'
+  },
+  {
+    title: 'State Management in Agentic AI: Stateless vs Stateful Architectures',
+    excerpt: 'Compare stateless and stateful architectures for AI agents. Session management, context persistence, memory patterns, and scalability trade-offs.',
+    author: 'Jennifer Park',
+    date: 'December 25, 2024',
+    readTime: '21 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800',
+    page: 'BlogAgenticAIStateManagement'
+  },
+  {
+    title: 'Deployment Architectures for Agentic AI: Cloud vs On-Premises vs Hybrid',
+    excerpt: 'Compare deployment patterns: cloud-native, on-premises, hybrid cloud, and edge computing. Cost analysis, compliance, and architecture recommendations.',
+    author: 'David Kumar',
+    date: 'December 24, 2024',
+    readTime: '23 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
+    page: 'BlogAgenticAIDeploymentPatterns'
+  },
+  {
+    title: 'Observability Architecture for Agentic AI: Monitoring Patterns Compared',
+    excerpt: 'Compare observability patterns for AI systems: centralized logging, distributed tracing, metrics monitoring, and LLM-specific debugging tools.',
+    author: 'Dr. Lisa Anderson',
+    date: 'December 23, 2024',
+    readTime: '24 min read',
+    category: 'AI Comparison',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    page: 'BlogAgenticAIObservabilityArchitecture'
+  },
+  {
     title: 'Real-Time AI Insights: Building Streaming Analytics with Agents',
     excerpt: 'Implement real-time analytics using AI agents. Stream processing, event-driven architectures, and continuous intelligence systems.',
     author: 'Sarah Mitchell',
