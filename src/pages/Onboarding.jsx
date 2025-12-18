@@ -329,31 +329,6 @@ const hearAboutUs = [
   'Other'
 ];
 
-const softwareSystems = [
-  'Salesforce',
-  'Microsoft 365',
-  'Google Workspace',
-  'Slack',
-  'Zoom',
-  'SAP',
-  'Oracle',
-  'Workday',
-  'ServiceNow',
-  'Jira',
-  'Confluence',
-  'HubSpot',
-  'Zendesk',
-  'Adobe Creative Cloud',
-  'Tableau',
-  'Power BI',
-  'QuickBooks',
-  'NetSuite',
-  'Shopify',
-  'Asana',
-  'Monday.com',
-  'Trello'
-];
-
 export default function Onboarding() {
     const [step, setStep] = useState(1);
     const [painPointSearch, setPainPointSearch] = useState('');
@@ -370,7 +345,6 @@ export default function Onboarding() {
     companySize: '',
     painPoints: [],
     hearAbout: '',
-    selectedSoftware: [],
     objectives: [],
     email: '',
     phone: ''
@@ -402,7 +376,7 @@ export default function Onboarding() {
       else if (!validateWebsite(formData.companyWebsite)) newErrors.companyWebsite = 'Invalid website URL';
     }
     
-    if (stepNum === 11) {
+    if (stepNum === 10) {
       if (!formData.email.trim()) newErrors.email = 'Email is required';
       else if (!validateEmail(formData.email)) newErrors.email = 'Invalid email format';
       if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
@@ -413,11 +387,11 @@ export default function Onboarding() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const totalSteps = 11;
+  const totalSteps = 10;
   const selectedVertical = verticals.find(v => v.id === formData.vertical);
 
   const nextStep = () => {
-    if ((step === 2 || step === 11) && !validateStep(step)) return;
+    if ((step === 2 || step === 10) && !validateStep(step)) return;
     setErrors({});
     setStep(Math.min(step + 1, totalSteps));
   };
@@ -433,7 +407,7 @@ export default function Onboarding() {
   };
 
   const handleSubmit = async () => {
-    if (!validateStep(11)) return;
+    if (!validateStep(10)) return;
     setIsSubmitting(true);
     try {
       await base44.entities.OnboardingData.create({
@@ -469,7 +443,6 @@ export default function Onboarding() {
       companySize: '',
       painPoints: [],
       hearAbout: '',
-      selectedSoftware: [],
       objectives: [],
       email: '',
       phone: ''
@@ -837,53 +810,6 @@ export default function Onboarding() {
     if (step === 9) {
       const today = new Date();
       const formattedDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-      const selectedSoftware = formData.selectedSoftware || [];
-      
-      return (
-        <div className="text-white">
-          <h2 className="text-3xl font-bold mb-4">Current Software Stack</h2>
-          <p className="text-purple-100 text-lg mb-2">{selectedSoftware.length} system{selectedSoftware.length !== 1 ? 's' : ''} selected</p>
-          <div className="text-sm text-purple-200 mb-6">{formattedDate}</div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
-            <h3 className="font-semibold mb-4">Integration Readiness</h3>
-            <div className="space-y-3">
-              {[
-                { system: 'CRM Systems', percent: 95, color: 'from-blue-400 to-cyan-300' },
-                { system: 'Communication Tools', percent: 98, color: 'from-green-400 to-emerald-300' },
-                { system: 'Project Management', percent: 92, color: 'from-purple-400 to-pink-300' },
-                { system: 'Business Intelligence', percent: 88, color: 'from-yellow-400 to-orange-300' }
-              ].map((item, idx) => (
-                <div key={idx}>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span>{item.system}</span>
-                    <span>{item.percent}%</span>
-                  </div>
-                  <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
-                    <motion.div 
-                      className={`h-full bg-gradient-to-r ${item.color}`}
-                      initial={{ width: 0 }}
-                      animate={{ width: `${item.percent}%` }}
-                      transition={{ duration: 1, delay: idx * 0.1 }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
-            <CheckCircle2 className="w-6 h-6 mx-auto mb-2" />
-            <div className="text-xl font-bold mb-1">Seamless Integration</div>
-            <div className="text-xs text-purple-100">Connect your existing tools effortlessly</div>
-          </div>
-        </div>
-      );
-    }
-
-    if (step === 10) {
-      const today = new Date();
-      const formattedDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
       const selectedObjectives = formData.objectives || [];
       
       return (
@@ -940,7 +866,7 @@ export default function Onboarding() {
       );
     }
 
-    if (step === 11) {
+    if (step === 10) {
       return (
         <div className="text-white text-center">
           <div className="w-32 h-32 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
@@ -1499,73 +1425,15 @@ export default function Onboarding() {
                   </motion.div>
                   )}
 
-            {/* Step 9: Software Systems */}
+            {/* Step 9: Agent Objectives */}
             {step === 9 && (
               <motion.div key="step9" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex gap-3 mb-6">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
                   </Button>
-                  <Button onClick={nextStep} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                  </div>
-                  {/* Progress */}
-                  <div className="mb-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-gray-600">Step {step} of {totalSteps}</span>
-                    <span className="text-sm font-medium text-[#6209e6]">{Math.round((step / totalSteps) * 100)}%</span>
-                  </div>
-                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-[#6209e6]"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${(step / totalSteps) * 100}%` }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </div>
-                  </div>
-                  <div className="flex-1 flex flex-col">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">What systems are you currently using?</h1>
-                  <p className="text-gray-600 mb-4">Select the software and tools your team relies on</p>
-                  <div className="text-sm text-gray-500 mb-4">
-                    {formData.selectedSoftware.length} selected
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-2 overflow-y-auto pr-2 max-h-[500px]">
-                    {softwareSystems.map((software) => (
-                      <button 
-                        key={software}
-                        onClick={() => {
-                          const current = formData.selectedSoftware || [];
-                          const updated = current.includes(software)
-                            ? current.filter(s => s !== software)
-                            : [...current, software];
-                          setFormData({ ...formData, selectedSoftware: updated });
-                        }}
-                        className={`p-3 rounded-lg border-2 transition-all text-left text-sm font-medium ${
-                          (formData.selectedSoftware || []).includes(software) 
-                            ? 'border-[#6209e6] bg-purple-50' 
-                            : 'border-gray-200 hover:border-gray-300'
-                        }`}
-                      >
-                        {software}
-                      </button>
-                    ))}
-                  </div>
-                  </div>
-                  </motion.div>
-                  )}
-
-            {/* Step 10: Agent Objectives */}
-            {step === 10 && (
-              <motion.div key="step10" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
-                <div className="flex gap-3 mb-6">
-                  <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
-                    <ArrowLeft className="mr-2 w-5 h-5" /> Back
-                  </Button>
                   <Button onClick={nextStep} disabled={!formData.objectives || formData.objectives.length === 0} className="flex-1 bg-[#6209e6] hover:bg-[#5008c5] h-12 rounded-full">
-                    Continue <ArrowRight className="ml-2 w-5 h-5" />
+                    Finish <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                   </div>
                   {/* Progress */}
@@ -1627,9 +1495,9 @@ export default function Onboarding() {
                   </motion.div>
                   )}
 
-            {/* Step 11: Final */}
-            {step === 11 && selectedVertical && (
-              <motion.div key="step11" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
+            {/* Step 10: Final */}
+            {step === 10 && selectedVertical && (
+              <motion.div key="step10" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex-1 flex flex-col">
                 <div className="flex gap-3 mb-6">
                   <Button onClick={prevStep} variant="outline" className="flex-1 h-12 rounded-full">
                     <ArrowLeft className="mr-2 w-5 h-5" /> Back
