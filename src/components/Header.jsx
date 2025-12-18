@@ -81,13 +81,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to={createPageUrl('Home')} className="flex items-center gap-3 flex-1 lg:flex-initial">
+          <Link to={createPageUrl('Home')} className="flex items-center gap-2 lg:gap-3 flex-1 lg:flex-initial">
             <img 
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/334042dc2_1C-logocopy.png" 
               alt="1C Platform" 
               className="h-9 w-9"
             />
-            <span className="font-semibold text-xl lg:text-xl text-[14.4px] tracking-tight">
+            <span className="font-semibold text-[15.84px] lg:text-xl tracking-tight">
               <span className="text-[#6209e6]">1c</span><span className="text-gray-900">Platform</span>
             </span>
           </Link>
