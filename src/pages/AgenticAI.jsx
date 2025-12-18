@@ -1,10 +1,248 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Bot, Brain, Zap, Shield, RefreshCw, Network, ArrowRight, CheckCircle, TrendingUp, Clock, Target } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Bot, Brain, Zap, Shield, RefreshCw, Network, ArrowRight, CheckCircle, TrendingUp, Clock, Target, Search, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+
+const platforms = [
+  {
+    name: 'Salesforce',
+    pros: ['Extremely customizable CRM', 'Large app marketplace (AppExchange)', 'Strong analytics & AI (Einstein)', 'Scales well for enterprises', 'Strong partner ecosystem'],
+    painPoints: ['Very expensive as features scale', 'Complex setup & maintenance', 'Steep learning curve for admins', 'Customization can lead to "spaghetti" workflows', 'Requires dedicated admin/developer resources']
+  },
+  {
+    name: 'Microsoft 365',
+    pros: ['Comprehensive suite (Word, Excel, Teams, Outlook)', 'Strong enterprise security', 'Deep integration across apps', 'Familiar UI for most users', 'Frequent updates & cloud sync'],
+    painPoints: ['Licensing confusion (many tiers)', 'Can feel bloated for small teams', 'Teams can be unintuitive vs. Slack', 'Requires stable internet for cloud features', 'Legacy compatibility issues']
+  },
+  {
+    name: 'Google Workspace',
+    pros: ['Affordable pricing', 'Seamless real-time collaboration', 'Intuitive UI', 'Cloud-native from the start', 'Easy onboarding for SMBs'],
+    painPoints: ['Limited advanced features vs. Microsoft', 'Offline functionality weaker', 'Privacy concerns with Google data policies', 'Less adoption in regulated industries', 'Limited enterprise-grade customization']
+  },
+  {
+    name: 'Slack',
+    pros: ['Excellent team communication', 'Rich integrations (apps, bots)', 'Searchable history', 'Reduces email clutter', 'Strong culture of adoption'],
+    painPoints: ['Notification overload', 'Can become distracting ("chat fatigue")', 'Higher cost for large orgs', 'Limited project management features', 'Reliance on integrations for advanced workflows']
+  },
+  {
+    name: 'Zoom',
+    pros: ['Easy to use', 'Reliable video/audio quality', 'Large meeting support', 'Cross-platform compatibility', 'Breakout rooms & webinar features'],
+    painPoints: ['Security concerns (past Zoombombing)', 'Free plan limited to 40 mins', 'Bandwidth heavy', 'Fatigue from too many video calls', 'Limited collaboration beyond meetings']
+  },
+  {
+    name: 'SAP',
+    pros: ['Comprehensive ERP suite', 'Strong analytics & reporting', 'Global scalability', 'Industry-specific modules', 'Long-standing enterprise trust'],
+    painPoints: ['Extremely expensive', 'Very complex implementation', 'Long training cycles', 'Customization is difficult', 'Slow innovation compared to cloud-native rivals']
+  },
+  {
+    name: 'Oracle',
+    pros: ['Robust database & ERP solutions', 'High scalability', 'Advanced security', 'Strong enterprise support', 'Cloud offerings improving'],
+    painPoints: ['High licensing costs', 'Complex setup & maintenance', 'Perceived as less user-friendly', 'Slow support response', 'Vendor lock-in concerns']
+  },
+  {
+    name: 'Workday',
+    pros: ['User-friendly HR/HCM', 'Strong reporting & analytics', 'Secure cloud-native design', 'Good integration with payroll & finance', 'Modern UI vs. legacy HR systems'],
+    painPoints: ['High cost', 'Complex configuration', 'Limited payroll localization', 'Requires strong change management', 'Not ideal for SMBs']
+  },
+  {
+    name: 'ServiceNow',
+    pros: ['Powerful ITSM workflows', 'Automation & AI features', 'Scales across departments', 'Strong enterprise adoption', 'Customizable dashboards'],
+    painPoints: ['Expensive licensing', 'Steep learning curve', 'Complex implementation', 'Requires dedicated admins', 'Can feel rigid if poorly configured']
+  },
+  {
+    name: 'Jira',
+    pros: ['Excellent for Agile/Scrum', 'Highly customizable workflows', 'Strong issue tracking', 'Integrates with Confluence & DevOps tools', 'Scales for software teams'],
+    painPoints: ['Overly complex for non-tech teams', 'Steep learning curve', 'Can feel cluttered', 'Performance issues with large projects', 'Requires admin oversight']
+  },
+  {
+    name: 'Confluence',
+    pros: ['Great documentation hub', 'Integrates with Jira', 'Templates for knowledge sharing', 'Strong collaboration features', 'Good for wikis'],
+    painPoints: ['Can be slow with large spaces', 'Cluttered UI', 'Limited advanced project management', 'Search can be weak', 'Requires discipline to avoid "messy wiki"']
+  },
+  {
+    name: 'HubSpot',
+    pros: ['Free CRM tier', 'User-friendly marketing automation', 'Strong integrations', 'Good analytics', 'Easy onboarding'],
+    painPoints: ['Pricing escalates quickly', 'Inflexible contracts', 'Limited CMS flexibility', 'Advanced features locked behind higher tiers', 'Can feel "lightweight" for enterprises']
+  },
+  {
+    name: 'Zendesk',
+    pros: ['Strong customer support tools', 'Omnichannel support', 'Knowledge base features', 'Scales well', 'Easy to use'],
+    painPoints: ['Expensive at scale', 'Declining support quality', 'Less customizable', 'Can feel dated vs. modern CX tools', 'Limited analytics depth']
+  },
+  {
+    name: 'Adobe Creative Cloud',
+    pros: ['Industry-standard creative tools', 'Frequent updates', 'AI-powered features', 'Cross-device sync', 'Huge creative ecosystem'],
+    painPoints: ['Subscription-only pricing', 'Resource-heavy apps', 'Steep learning curve', 'Expensive for individuals', 'Requires powerful hardware']
+  },
+  {
+    name: 'Tableau',
+    pros: ['Powerful data visualization', 'Intuitive dashboards', 'Strong community', 'Flexible integrations', 'Good storytelling features'],
+    painPoints: ['High cost', 'Limited advanced analytics', 'Performance issues with very large datasets', 'Requires training', 'Licensing complexity']
+  },
+  {
+    name: 'Power BI',
+    pros: ['Affordable', 'Integrates with Microsoft stack', 'Strong visualization', 'Easy sharing', 'Frequent updates'],
+    painPoints: ['Limited with huge datasets', 'Weaker on-premises options', 'Steep learning for advanced features', 'Can feel less polished vs. Tableau', 'Requires Microsoft ecosystem for best use']
+  },
+  {
+    name: 'QuickBooks',
+    pros: ['User-friendly accounting', 'Invoicing & payroll features', 'Tax tools', 'Popular with SMBs', 'Affordable'],
+    painPoints: ['Poor customer support', 'Limited scalability', 'Add-on costs', 'Can feel outdated UI', 'Not ideal for complex enterprises']
+  },
+  {
+    name: 'NetSuite',
+    pros: ['Comprehensive ERP', 'Integrates finance, CRM, e-commerce', 'Scalable for enterprises', 'Cloud-native', 'Strong reporting'],
+    painPoints: ['Very expensive', 'Complex setup', 'Steep learning curve', 'Requires consultants', 'Long implementation cycles']
+  },
+  {
+    name: 'Shopify',
+    pros: ['Easy to use', 'Scalable for SMBs & enterprises', 'Strong app ecosystem', 'Excellent support', 'Fast onboarding'],
+    painPoints: ['Transaction fees', 'Limited customization without coding', 'Costly add-ons', 'SEO limitations', 'Less suited for complex B2B']
+  },
+  {
+    name: 'Asana',
+    pros: ['Intuitive project management', 'Task tracking', 'Strong collaboration', 'Integrations', 'Clean UI'],
+    painPoints: ['Limited reporting', 'One-person-per-task restriction', 'Costly premium plans', 'Can feel basic for enterprises', 'Requires discipline for adoption']
+  },
+  {
+    name: 'Monday.com',
+    pros: ['Highly customizable workflows', 'Visual boards', 'Automation features', 'Strong integrations', 'Flexible use cases'],
+    painPoints: ['Expensive at scale', 'Can feel overwhelming', 'Limited advanced reporting', 'Requires training', 'Can become cluttered']
+  },
+  {
+    name: 'Trello',
+    pros: ['Simple Kanban boards', 'Easy to use', 'Flexible', 'Great for small teams', 'Free tier available'],
+    painPoints: ['Limited advanced features', 'Weak reporting', 'Not ideal for large teams', 'Basic automation', 'Lacks enterprise-grade security']
+  }
+];
+
+function PlatformComparison() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [expandedPlatform, setExpandedPlatform] = useState(null);
+
+  const filteredPlatforms = platforms.filter(platform =>
+    platform.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <section className="min-h-screen flex items-center bg-white py-32">
+      <div className="max-w-7xl mx-auto px-6 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
+            Why companies
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+              choose us
+            </span>
+          </h2>
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
+            See how we solve the pain points of popular enterprise platforms
+          </p>
+          <div className="max-w-md mx-auto relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Input
+              type="text"
+              placeholder="Search platforms..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-12 h-14 text-lg rounded-full border-2"
+            />
+          </div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredPlatforms.map((platform, index) => (
+            <motion.div
+              key={platform.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-indigo-300 transition-all"
+            >
+              <button
+                onClick={() => setExpandedPlatform(expandedPlatform === platform.name ? null : platform.name)}
+                className="w-full p-6 text-left"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-2xl font-bold text-gray-900">{platform.name}</h3>
+                  <ChevronDown
+                    className={`w-6 h-6 text-gray-600 transition-transform ${
+                      expandedPlatform === platform.name ? 'rotate-180' : ''
+                    }`}
+                  />
+                </div>
+              </button>
+
+              {expandedPlatform === platform.name && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  className="px-6 pb-6"
+                >
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-green-700 mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4" />
+                      Pros
+                    </h4>
+                    <ul className="space-y-2">
+                      {platform.pros.map((pro, i) => (
+                        <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
+                          <span className="text-green-600 mt-0.5">•</span>
+                          {pro}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-red-700 mb-3 flex items-center gap-2">
+                      <span className="text-red-600">⚠</span>
+                      Pain Points
+                    </h4>
+                    <ul className="space-y-2">
+                      {platform.painPoints.map((pain, i) => (
+                        <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
+                          <span className="text-red-600 mt-0.5">•</span>
+                          {pain}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <p className="text-sm font-semibold text-indigo-600 mb-2">
+                      ✨ How 1cPlatform helps:
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Our AI agents integrate with {platform.name}, automating complex workflows while eliminating pain points through intelligent automation.
+                    </p>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+          ))}
+        </div>
+
+        {filteredPlatforms.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-xl text-gray-500">No platforms found matching "{searchTerm}"</p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
 
 export default function AgenticAI() {
   return (
@@ -586,6 +824,9 @@ export default function AgenticAI() {
           </motion.div>
         </div>
       </section>
+
+      {/* Platform Comparison - New Interactive Section */}
+      <PlatformComparison />
 
       {/* Compliance - Fold 15 */}
       <section className="min-h-screen flex items-center bg-gray-900 text-white">
