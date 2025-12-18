@@ -295,7 +295,7 @@ export default function SolutionsSection() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative hidden lg:block"
           >
             <AnimatePresence mode="wait">
               <motion.div
