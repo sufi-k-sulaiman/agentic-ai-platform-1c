@@ -2266,9 +2266,9 @@ export default function InvestorRelations() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: 'Niroshi Nadarajah',
+                name: 'Henry Schurbach',
                 role: 'CEO & Co-Founder',
-                background: 'Former microbiology researcher at leading pharmaceutical companies, now pioneering enterprise AI transformation with a vision for autonomous business intelligence. Deep understanding of healthcare and life sciences AI applications.'
+                background: 'Visionary entrepreneur and disciplined investor who combines innovation with financial wisdom to create lasting impact, now pioneering enterprise AI transformation with a vision for autonomous business intelligence. Deep understanding of healthcare and life sciences AI applications.'
               },
               {
                 name: 'Suf K Sulaiman',
