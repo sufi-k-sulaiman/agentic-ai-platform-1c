@@ -54,7 +54,7 @@ const verticals = [
 ];
 
 export default function HeroSection() {
-  const [shownIndices, setShownIndices] = useState([0, 1, 2, 3]);
+  const [shownIndices, setShownIndices] = useState([0, 1]);
   const [efficiencyValue, setEfficiencyValue] = useState(0);
   const [savingsValue, setSavingsValue] = useState(0);
 
