@@ -896,41 +896,6 @@ export default function AgenticAI() {
         </div>
       </section>
 
-      {/* Integration - Fold 14 */}
-      <section className="min-h-screen flex items-center bg-gradient-to-br from-indigo-50 to-purple-50">
-        <div className="max-w-7xl mx-auto px-6 py-32 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
-              Connects with
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-                everything
-              </span>
-            </h2>
-            <p className="text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
-              1,000+ pre-built integrations. Or build your own in minutes.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-              {['Salesforce', 'Slack', 'HubSpot', 'Zendesk', 'Shopify', 'Stripe', 'Gmail', 'Notion'].map((app, i) => (
-                <motion.div
-                  key={app}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  className="bg-white rounded-2xl shadow-md p-6 text-center font-semibold text-gray-900"
-                >
-                  {app}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Platform Comparison - New Interactive Section */}
       <PlatformComparison />
