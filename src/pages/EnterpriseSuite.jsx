@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, DollarSign, Users, Package, BarChart, FileText, Calendar, Briefcase, Globe, TrendingUp, Shield, Zap, CheckCircle } from 'lucide-react';
+import { ArrowRight, DollarSign, Users, Package, BarChart, FileText, Calendar, Briefcase, Globe, TrendingUp, Shield, Zap, CheckCircle, Search, ChevronDown } from 'lucide-react';
 import { BarChart as RechartsBar, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
@@ -76,6 +77,145 @@ const benefits = [
   { stat: '99.99%', label: 'Uptime SLA' },
   { stat: '24/7', label: 'Global support' }
 ];
+
+const integrationPlatforms = [
+  { name: 'Salesforce', category: 'CRM' },
+  { name: 'Microsoft 365', category: 'Productivity' },
+  { name: 'Google Workspace', category: 'Productivity' },
+  { name: 'Slack', category: 'Communication' },
+  { name: 'Zoom', category: 'Communication' },
+  { name: 'SAP', category: 'ERP' },
+  { name: 'Oracle', category: 'ERP' },
+  { name: 'Workday', category: 'HR' },
+  { name: 'ServiceNow', category: 'ITSM' },
+  { name: 'Jira', category: 'Project Management' },
+  { name: 'Confluence', category: 'Collaboration' },
+  { name: 'HubSpot', category: 'Marketing' },
+  { name: 'Zendesk', category: 'Support' },
+  { name: 'Adobe Creative Cloud', category: 'Design' },
+  { name: 'Tableau', category: 'Analytics' }
+];
+
+function PlatformIntegrations() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [expandedRow, setExpandedRow] = useState(null);
+
+  const filteredPlatforms = integrationPlatforms.filter(platform =>
+    platform.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const getRowIndex = (index) => Math.floor(index / 3);
+
+  return (
+    <section className="py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Connects with{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+              everything
+            </span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            1,400+ pre-built integrations. Or build your own in minutes.
+          </p>
+          <div className="max-w-md mx-auto relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Input
+              type="text"
+              placeholder="Search platforms..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-12 h-14 text-lg rounded-full border-2"
+            />
+          </div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredPlatforms.map((platform, index) => {
+            const rowIndex = getRowIndex(index);
+            const isExpanded = expandedRow === rowIndex;
+            
+            return (
+              <motion.div
+                key={platform.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-purple-300 transition-all"
+              >
+                <button
+                  onClick={() => setExpandedRow(isExpanded ? null : rowIndex)}
+                  className="w-full p-6 text-left"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">{platform.name}</h3>
+                      <p className="text-sm text-gray-500 mt-1">{platform.category}</p>
+                    </div>
+                    <ChevronDown
+                      className={`w-6 h-6 text-gray-600 transition-transform ${
+                        isExpanded ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </div>
+                </button>
+
+                {isExpanded && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="px-6 pb-6 border-t border-gray-200"
+                  >
+                    <div className="pt-4">
+                      <h4 className="text-sm font-semibold text-purple-700 mb-3">
+                        ✨ Integration Features
+                      </h4>
+                      <ul className="space-y-2 mb-4">
+                        <li className="text-sm text-gray-600 flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          Real-time data synchronization
+                        </li>
+                        <li className="text-sm text-gray-600 flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          Bi-directional workflows
+                        </li>
+                        <li className="text-sm text-gray-600 flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          Automated field mapping
+                        </li>
+                        <li className="text-sm text-gray-600 flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          Pre-configured templates
+                        </li>
+                      </ul>
+                      <Button size="sm" className="w-full bg-purple-600 hover:bg-purple-700">
+                        Connect {platform.name}
+                      </Button>
+                    </div>
+                  </motion.div>
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {filteredPlatforms.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-xl text-gray-500">No platforms found matching "{searchTerm}"</p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
 
 export default function EnterpriseSuite() {
   return (
@@ -364,6 +504,9 @@ export default function EnterpriseSuite() {
           </div>
         </div>
       </section>
+
+      {/* Platform Integrations Section */}
+      <PlatformIntegrations />
 
       {/* Integration Section */}
       <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
