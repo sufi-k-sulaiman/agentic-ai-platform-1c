@@ -101,13 +101,18 @@ export default function AboutUs() {
                   Join our team <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
+            <div className="flex flex-wrap gap-4">
               <Button 
                 onClick={() => setShowDeck(true)}
-                variant="outline" 
-                className="border-[#8B2EE5] text-[#8B2EE5] hover:bg-[#8B2EE5] hover:text-white rounded-full px-8 h-14 text-base"
+                size="lg" 
+                className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-10 h-14 text-lg"
               >
                 View investment deck <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
+              <div className="mt-4 text-gray-600 text-sm">
+                email us at <button onClick={() => copyEmail('investor@1cplatform.com')} className="text-[#6209e6] font-semibold hover:underline">investor@1cplatform.com</button>
+              </div>
+            </div>
             </div>
           </motion.div>
         </div>
