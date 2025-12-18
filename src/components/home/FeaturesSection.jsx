@@ -232,15 +232,15 @@ export default function FeaturesSection() {
               key={feature.title}
               variants={itemVariants}
               onClick={() => setSelectedFeature(feature)}
-              className={`group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300 cursor-pointer ${index > 0 ? 'hidden md:block' : ''}`}
+              className={`group p-5 md:p-8 rounded-xl md:rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300 cursor-pointer ${index > 0 ? 'hidden md:block' : ''}`}
             >
-              <div className="mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
-                <feature.icon className="w-12 h-12 sm:w-14 sm:h-14 text-[#8B2EE5]" />
+              <div className="mb-3 md:mb-6 group-hover:scale-110 transition-transform">
+                <feature.icon className="w-9 h-9 md:w-14 md:h-14 text-[#8B2EE5]" />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
+              <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-2 md:mb-3">
                 {feature.title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+              <p className="text-xs md:text-base text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
