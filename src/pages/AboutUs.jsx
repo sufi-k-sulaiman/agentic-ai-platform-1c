@@ -5,6 +5,7 @@ import { ArrowRight, Target, Users, Globe, Award, ChevronLeft, ChevronRight, Max
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import toast from 'react-hot-toast';
 
 const values = [
   {
@@ -65,6 +66,11 @@ export default function AboutUs() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showDeck, setShowDeck] = useState(false);
+
+  const copyEmail = (email) => {
+    navigator.clipboard.writeText(email);
+    toast.success('Email copied to clipboard!');
+  };
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % investmentSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + investmentSlides.length) % investmentSlides.length);
