@@ -81,7 +81,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to={createPageUrl('Home')} className="flex items-center gap-2 lg:gap-3 flex-1 lg:flex-initial">
+          <Link to={createPageUrl('Home')} className="flex items-center gap-1 lg:gap-3 flex-1 lg:flex-initial">
             <img 
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/334042dc2_1C-logocopy.png" 
               alt="1C Platform" 
