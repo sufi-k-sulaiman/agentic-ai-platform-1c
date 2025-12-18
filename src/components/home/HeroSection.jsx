@@ -91,10 +91,8 @@ export default function HeroSection() {
   }, [shownIndices]);
 
   const cardPositions = [
-    { className: "absolute top-[5%] left-[5%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
-    { className: "absolute top-[5%] right-[5%] w-56 z-10", initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } },
-    { className: "absolute bottom-[22%] left-[5%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
-    { className: "absolute bottom-[22%] right-[5%] w-56 z-10", initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } }
+    { className: "absolute top-[5%] left-1/2 -translate-x-1/2 w-56 z-10", initial: { opacity: 0, y: -20 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -20 } },
+    { className: "absolute bottom-[22%] left-1/2 -translate-x-1/2 w-56 z-10", initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: 20 } }
   ];
 
   return (
