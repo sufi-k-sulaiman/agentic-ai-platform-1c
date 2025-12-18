@@ -118,15 +118,15 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2">2000+</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">28+</div>
               <div className="text-gray-400">Team members</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2">500+</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">42+</div>
               <div className="text-gray-400">Enterprise clients</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2">50+</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">5+</div>
               <div className="text-gray-400">Countries</div>
             </div>
             <div className="text-center">
