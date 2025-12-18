@@ -358,7 +358,7 @@ export default function FeaturesSection() {
                       {selectedFeature.title === 'Global Scale' && 'Global scale enables ambitious international expansion without the traditional infrastructure and operational challenges. Organizations can enter new markets quickly, confident that infrastructure will support growth. As usage increases, the platform scales automatically without requiring architectural changes or capacity planning projects. This removes infrastructure concerns from business strategy discussions, letting leaders focus on market opportunities rather than technical limitations.'}
                     </p>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6">
                     {selectedFeature.details.benefits.map((benefit, i) => (
                       <div key={i} className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-lg p-4 sm:p-6 text-center">
                         <div className="text-2xl sm:text-3xl font-bold text-[#8B2EE5] mb-2">{benefit.metric}</div>
