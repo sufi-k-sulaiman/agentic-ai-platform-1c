@@ -240,10 +240,10 @@ function PlatformComparison() {
           className="text-center mb-16"
         >
           <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
-            Why companies
+            Connects with
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-              choose us
+              everything
             </span>
           </h2>
           <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
