@@ -78,10 +78,10 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-2 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to={createPageUrl('Home')} className="flex items-center gap-1 lg:gap-3 flex-1 lg:flex-initial">
+          <Link to={createPageUrl('Home')} className="flex items-center gap-1 lg:gap-3 flex-shrink-0">
             <img 
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/334042dc2_1C-logocopy.png" 
               alt="1C Platform" 
