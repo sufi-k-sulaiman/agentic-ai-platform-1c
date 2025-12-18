@@ -346,9 +346,10 @@ export default function Onboarding() {
     painPoints: [],
     hearAbout: '',
     objectives: [],
+    software: [],
     email: '',
     phone: ''
-  });
+    });
 
   const validateEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -1451,11 +1452,11 @@ export default function Onboarding() {
                     />
                   </div>
                   </div>
-                  <div className="flex-1 flex flex-col">
+                  <div className="flex-1 flex flex-col overflow-y-auto pr-2">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Define your Agentic Ai objectives</h1>
                   <p className="text-gray-600 mb-6">Based on your challenges, select what your AI should focus on</p>
-                  
-                  <div className="grid gap-2 overflow-y-auto pr-2 max-h-[500px]">
+
+                  <div className="grid gap-2 mb-8 max-h-[300px] overflow-y-auto pr-2">
                     {formData.painPoints.flatMap(challenge => {
                       const objectives = {
                         'Inefficient processes': ['Automate repetitive tasks', 'Streamline workflows', 'Reduce manual errors'],
