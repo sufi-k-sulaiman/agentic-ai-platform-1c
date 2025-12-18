@@ -141,7 +141,7 @@ export default function HeroSection() {
         {/* Central Visualization with Sonar Waves */}
         <div className="relative w-full max-w-5xl mx-auto aspect-[16/10] mb-16">
           {/* Sonar Wave Rings - Slow Pulsing */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center hidden md:flex">
             <motion.div
               className="absolute w-[280px] h-[280px] rounded-full border-2 border-purple-300/30"
               animate={{ 
@@ -229,7 +229,7 @@ export default function HeroSection() {
           ))}
 
           {/* Center Logo (No Background) */}
-          <div className="absolute inset-0 flex items-center justify-center flex-col">
+          <div className="absolute inset-0 flex items-center justify-center flex-col hidden md:flex">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ 
