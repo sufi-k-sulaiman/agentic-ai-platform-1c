@@ -117,6 +117,106 @@ const platforms = [
     name: 'Trello',
     pros: ['Simple Kanban boards', 'Easy to use', 'Flexible', 'Great for small teams', 'Free tier available'],
     painPoints: ['Limited advanced features', 'Weak reporting', 'Not ideal for large teams', 'Basic automation', 'Lacks enterprise-grade security']
+  },
+  {
+    name: 'GitHub Enterprise',
+    pros: ['Code collaboration', 'Large developer community', 'Integrates with CI/CD tools', 'Strong version control', 'Enterprise security features'],
+    painPoints: ['Expensive for large orgs', 'Reliance on Git workflows', 'Can be complex for non-dev teams', 'Requires governance for large repos', 'Limited project management features']
+  },
+  {
+    name: 'GitLab',
+    pros: ['End-to-end DevOps lifecycle management', 'Built-in CI/CD', 'Open-source roots', 'Strong integrations', 'Good visibility across pipelines'],
+    painPoints: ['Steep learning curve', 'Can feel heavy for small teams', 'UI less polished vs. GitHub', 'Expensive enterprise tier', 'Requires DevOps maturity']
+  },
+  {
+    name: 'Atlassian Bitbucket',
+    pros: ['Source control', 'Integrates tightly with Jira/Confluence', 'Supports Git workflows', 'Affordable', 'Good for Atlassian ecosystem users'],
+    painPoints: ['Smaller adoption vs. GitHub/GitLab', 'Limited community support', 'Less feature-rich', 'UI less intuitive', 'Can feel redundant if already using GitHub']
+  },
+  {
+    name: 'Splunk',
+    pros: ['IT monitoring and log analytics', 'Scales to huge data volumes', 'Strong visualization', 'Security analytics', 'Enterprise adoption'],
+    painPoints: ['Very expensive', 'Complex setup', 'Steep learning curve', 'Requires skilled admins', 'Can be resource-intensive']
+  },
+  {
+    name: 'New Relic',
+    pros: ['Application performance monitoring', 'Easy dashboards', 'Real-time insights', 'Strong integrations', 'Developer-friendly'],
+    painPoints: ['Expensive', 'Limited free tier', 'Can overwhelm with metrics', 'Requires tuning for value', 'Less suited for non-tech teams']
+  },
+  {
+    name: 'Marketo (Adobe)',
+    pros: ['Marketing automation', 'Strong campaign management', 'Integrates with Adobe ecosystem', 'Good analytics', 'Enterprise adoption'],
+    painPoints: ['Complex UI', 'Expensive', 'Steep learning curve', 'Requires dedicated marketing ops', 'Less SMB-friendly']
+  },
+  {
+    name: 'Pega',
+    pros: ['Customer engagement and BPM', 'Strong automation', 'Case management', 'Scalable for enterprises', 'AI-driven workflows'],
+    painPoints: ['Complex setup', 'Expensive', 'Steep learning curve', 'Requires specialized skills', 'Less intuitive UI']
+  },
+  {
+    name: 'Intercom',
+    pros: ['Customer messaging platform', 'Modern UI', 'Easy onboarding', 'Strong engagement tools', 'Good for SaaS startups'],
+    painPoints: ['Expensive', 'Limited enterprise features', 'Can feel lightweight', 'Requires integrations for depth', 'Less suited for complex support']
+  },
+  {
+    name: 'Freshdesk/Freshworks',
+    pros: ['Customer support and CRM', 'Affordable', 'Easy to use', 'Omnichannel support', 'Quick onboarding'],
+    painPoints: ['Less robust vs. Zendesk', 'Limited enterprise scalability', 'Can feel basic', 'Reporting weaker', 'Add-ons needed for depth']
+  },
+  {
+    name: 'ADP',
+    pros: ['Payroll and HR services', 'Trusted brand', 'Compliance support', 'Scalable', 'Global reach'],
+    painPoints: ['Dated UI', 'Expensive add-ons', 'Limited flexibility', 'Customer support complaints', 'Complex contracts']
+  },
+  {
+    name: 'SAP SuccessFactors',
+    pros: ['HR suite', 'Strong global adoption', 'Integrates with SAP ERP', 'Talent management features', 'Scalable'],
+    painPoints: ['Complex setup', 'Expensive', 'Steep learning curve', 'UI less modern', 'Requires SAP ecosystem']
+  },
+  {
+    name: 'Cornerstone OnDemand',
+    pros: ['Learning and talent management', 'Strong LMS features', 'Compliance support', 'Scalable', 'Good reporting'],
+    painPoints: ['Less intuitive UI', 'Expensive', 'Steep learning curve', 'Limited SMB adoption', 'Can feel rigid']
+  },
+  {
+    name: 'Greenhouse',
+    pros: ['Recruiting software', 'Modern workflows', 'Easy to use', 'Strong integrations', 'Candidate experience focus'],
+    painPoints: ['Expensive', 'Limited reporting', 'Less suited for enterprises', 'Requires integrations for analytics', 'Can feel niche']
+  },
+  {
+    name: 'Infor',
+    pros: ['ERP and supply chain software', 'Industry-specific modules', 'Strong SCM features', 'Global adoption', 'Flexible deployment'],
+    painPoints: ['Less modern UI', 'Slower innovation', 'Expensive', 'Complex setup', 'Limited outside manufacturing']
+  },
+  {
+    name: 'Epicor',
+    pros: ['ERP for manufacturing/distribution', 'Strong industry focus', 'Scalable', 'Good reporting', 'Flexible deployment'],
+    painPoints: ['Complex setup', 'Limited outside manufacturing', 'Expensive', 'Steep learning curve', 'Smaller ecosystem']
+  },
+  {
+    name: 'Manhattan Associates',
+    pros: ['Supply chain management', 'Strong logistics features', 'Enterprise adoption', 'Scalable', 'Industry expertise'],
+    painPoints: ['Expensive', 'Niche focus', 'Complex implementation', 'Limited outside SCM', 'Requires specialized skills']
+  },
+  {
+    name: 'AWS (Amazon Web Services)',
+    pros: ['Leading cloud platform', 'Huge ecosystem', 'Scalable', 'Flexible services', 'Strong innovation'],
+    painPoints: ['Complex pricing', 'Steep learning curve', 'Requires skilled cloud architects', 'Can feel overwhelming', 'Vendor lock-in risk']
+  },
+  {
+    name: 'Microsoft Azure',
+    pros: ['Enterprise cloud services', 'Strong Microsoft integration', 'Global adoption', 'Hybrid cloud support', 'Security features'],
+    painPoints: ['Complex licensing', 'Less intuitive UI', 'Expensive at scale', 'Requires Microsoft ecosystem', 'Steep learning curve']
+  },
+  {
+    name: 'Google Cloud Platform (GCP)',
+    pros: ['Cloud-native services', 'Strong AI/ML tools', 'Easy integration with Google Workspace', 'Flexible pricing', 'Modern UI'],
+    painPoints: ['Smaller enterprise adoption', 'Weaker enterprise support', 'Limited ecosystem vs. AWS/Azure', 'Expensive at scale', 'Vendor lock-in risk']
+  },
+  {
+    name: 'VMware',
+    pros: ['Virtualization and hybrid cloud', 'Strong enterprise trust', 'Scalable', 'Good for hybrid deployments', 'Long-standing reputation'],
+    painPoints: ['Expensive licensing', 'Complex setup', 'Requires specialized skills', 'Recent acquisition uncertainty', 'Can feel legacy']
   }
 ];
 
