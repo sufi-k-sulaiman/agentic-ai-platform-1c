@@ -59,7 +59,7 @@ export default function HeroSection() {
   const [savingsValue, setSavingsValue] = useState(0);
 
   useEffect(() => {
-    // Calculate averages from current 4 corner cards
+    // Calculate averages from current 2 cards
     const calculateAverages = () => {
       let efficiencySum = 0;
       let savingsSum = 0;
@@ -69,8 +69,8 @@ export default function HeroSection() {
         savingsSum += parseInt(challenge.savings.replace('%', ''));
       });
       return {
-        efficiency: Math.round(efficiencySum / 4),
-        savings: Math.round(savingsSum / 4)
+        efficiency: Math.round(efficiencySum / 2),
+        savings: Math.round(savingsSum / 2)
       };
     };
 
@@ -82,9 +82,9 @@ export default function HeroSection() {
       setShownIndices((prev) => {
         // Get indices not currently shown
         const available = challenges.map((_, idx) => idx).filter(idx => !prev.includes(idx));
-        // Pick 4 random unique indices from available
+        // Pick 2 random unique indices from available
         const shuffled = available.sort(() => Math.random() - 0.5);
-        return shuffled.slice(0, 4);
+        return shuffled.slice(0, 2);
       });
     }, 5075);
     return () => clearInterval(interval);
