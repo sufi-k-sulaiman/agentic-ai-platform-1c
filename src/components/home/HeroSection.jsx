@@ -54,12 +54,12 @@ const verticals = [
 ];
 
 export default function HeroSection() {
-  const [shownIndices, setShownIndices] = useState([0, 1]);
+  const [shownIndices, setShownIndices] = useState([0, 1, 2, 3]);
   const [efficiencyValue, setEfficiencyValue] = useState(0);
   const [savingsValue, setSavingsValue] = useState(0);
 
   useEffect(() => {
-    // Calculate averages from current 2 cards
+    // Calculate averages from current 4 corner cards
     const calculateAverages = () => {
       let efficiencySum = 0;
       let savingsSum = 0;
@@ -69,8 +69,8 @@ export default function HeroSection() {
         savingsSum += parseInt(challenge.savings.replace('%', ''));
       });
       return {
-        efficiency: Math.round(efficiencySum / 2),
-        savings: Math.round(savingsSum / 2)
+        efficiency: Math.round(efficiencySum / 4),
+        savings: Math.round(savingsSum / 4)
       };
     };
 
@@ -82,17 +82,19 @@ export default function HeroSection() {
       setShownIndices((prev) => {
         // Get indices not currently shown
         const available = challenges.map((_, idx) => idx).filter(idx => !prev.includes(idx));
-        // Pick 2 random unique indices from available
+        // Pick 4 random unique indices from available
         const shuffled = available.sort(() => Math.random() - 0.5);
-        return shuffled.slice(0, 2);
+        return shuffled.slice(0, 4);
       });
     }, 5075);
     return () => clearInterval(interval);
   }, [shownIndices]);
 
   const cardPositions = [
-    { className: "absolute top-[5%] left-1/2 -translate-x-1/2 w-56 z-10", initial: { opacity: 0, y: -20 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -20 } },
-    { className: "absolute bottom-[22%] left-1/2 -translate-x-1/2 w-56 z-10", initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: 20 } }
+    { className: "absolute top-[5%] left-[5%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
+    { className: "absolute top-[5%] right-[5%] w-56 z-10", initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } },
+    { className: "absolute bottom-[22%] left-[5%] w-56 z-10", initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
+    { className: "absolute bottom-[22%] right-[5%] w-56 z-10", initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } }
   ];
 
   return (
@@ -191,7 +193,7 @@ export default function HeroSection() {
                   animate={position.animate}
                   exit={position.exit}
                   transition={{ duration: 0.4, delay: idx * 0.2 }}
-                  style={{ scale: 0.92 }}
+                  style={{ scale: 1.28 }}
                 >
                   <div className="flex items-center gap-3 mb-3">
                     {React.createElement(challenges[shownIndices[idx]].icon, { 
