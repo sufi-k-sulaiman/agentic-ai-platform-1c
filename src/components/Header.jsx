@@ -155,7 +155,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Actions */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden ml-auto">
             <a 
               href="https://1cpublishing.com/home" 
               target="_blank" 
