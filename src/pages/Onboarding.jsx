@@ -1492,6 +1492,37 @@ export default function Onboarding() {
                       </button>
                     ))}
                   </div>
+
+                  <div className="mt-8 pt-8 border-t border-gray-200">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-3">Select software your organization uses</h2>
+                    <p className="text-gray-600 mb-4">We'll integrate with your existing tools</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {[
+                        'Salesforce', 'Microsoft 365', 'Google Workspace', 'Slack', 'Zoom', 'SAP',
+                        'Oracle', 'Workday', 'ServiceNow', 'Jira', 'Confluence', 'HubSpot',
+                        'Zendesk', 'Adobe Creative Cloud', 'Tableau', 'Power BI', 'QuickBooks',
+                        'NetSuite', 'Shopify', 'Asana', 'Monday.com', 'Trello'
+                      ].map((software) => (
+                        <button 
+                          key={software}
+                          onClick={() => {
+                            const current = formData.software || [];
+                            const updated = current.includes(software)
+                              ? current.filter(s => s !== software)
+                              : [...current, software];
+                            setFormData({ ...formData, software: updated });
+                          }}
+                          className={`p-3 rounded-lg border-2 transition-all text-left text-sm font-medium ${
+                            (formData.software || []).includes(software) 
+                              ? 'border-[#6209e6] bg-purple-50' 
+                              : 'border-gray-200 hover:border-gray-300'
+                          }`}
+                        >
+                          {software}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                   </div>
                   </motion.div>
                   )}
