@@ -188,7 +188,7 @@ export default function FeaturesSection() {
   const [selectedFeature, setSelectedFeature] = useState(null);
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white" id="agentic-ai">
+    <section className="py-20 sm:py-24 lg:py-32 bg-white" id="agentic-ai">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
@@ -225,7 +225,7 @@ export default function FeaturesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {features.map((feature, index) => (
             <motion.div
