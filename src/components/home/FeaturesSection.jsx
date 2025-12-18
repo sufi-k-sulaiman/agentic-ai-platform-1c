@@ -225,14 +225,14 @@ export default function FeaturesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
               variants={itemVariants}
               onClick={() => setSelectedFeature(feature)}
-              className={`group p-5 md:p-8 rounded-xl md:rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300 cursor-pointer ${index > 0 ? 'hidden md:block' : ''}`}
+              className="group p-5 md:p-8 rounded-xl md:rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300 cursor-pointer"
             >
               <div className="mb-3 md:mb-6 group-hover:scale-110 transition-transform">
                 <feature.icon className="w-9 h-9 md:w-14 md:h-14 text-[#8B2EE5]" />
