@@ -4,9 +4,9 @@ import PageMeta from '@/components/PageMeta';
 
 const leaders = [
   {
-    name: 'Niroshi Nadarajah',
+    name: 'Henry Schurbach',
     title: 'Chief Executive Officer',
-    bio: ['With a distinguished background in microbiology and medical research, Niroshi brings a unique scientific perspective to technology leadership. Her journey from medical sciences to AI innovation has shaped her approach to solving complex enterprise challenges.', 'As CEO of 1cPlatform, she leads the vision to democratize AI across industries, combining deep scientific rigor with practical business acumen. Her passion for running marathons mirrors her leadership style: disciplined, endurance-focused, and always pushing boundaries.'],
+    bio: ['With a distinguished background in building large business, Henry brings a unique scientific perspective to technology leadership. His journey from manufatoring to AI innovation has shaped her approach to solving complex enterprise challenges.', 'As CEO of 1cPlatform, he leads the vision to democratize AI across industries, combining deep scientific rigor with practical business acumen. His passion for running marathons mirrors her leadership style: disciplined, endurance-focused, and always pushing boundaries.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a80c07556_CMO.png'
   },
   {
