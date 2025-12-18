@@ -122,11 +122,13 @@ const platforms = [
 
 function PlatformComparison() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [expandedPlatform, setExpandedPlatform] = useState(null);
+  const [expandedRow, setExpandedRow] = useState(null);
 
   const filteredPlatforms = platforms.filter(platform =>
     platform.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const getRowIndex = (index) => Math.floor(index / 3);
 
   return (
     <section className="min-h-screen flex items-center bg-white py-32">
@@ -160,30 +162,34 @@ function PlatformComparison() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPlatforms.map((platform, index) => (
-            <motion.div
-              key={platform.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-indigo-300 transition-all"
-            >
-              <button
-                onClick={() => setExpandedPlatform(expandedPlatform === platform.name ? null : platform.name)}
-                className="w-full p-6 text-left"
+          {filteredPlatforms.map((platform, index) => {
+            const rowIndex = getRowIndex(index);
+            const isExpanded = expandedRow === rowIndex;
+            
+            return (
+              <motion.div
+                key={platform.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-indigo-300 transition-all"
               >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-bold text-gray-900">{platform.name}</h3>
-                  <ChevronDown
-                    className={`w-6 h-6 text-gray-600 transition-transform ${
-                      expandedPlatform === platform.name ? 'rotate-180' : ''
-                    }`}
-                  />
-                </div>
-              </button>
+                <button
+                  onClick={() => setExpandedRow(isExpanded ? null : rowIndex)}
+                  className="w-full p-6 text-left"
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-2xl font-bold text-gray-900">{platform.name}</h3>
+                    <ChevronDown
+                      className={`w-6 h-6 text-gray-600 transition-transform ${
+                        isExpanded ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </div>
+                </button>
 
-              {expandedPlatform === platform.name && (
+                {isExpanded && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
@@ -230,8 +236,9 @@ function PlatformComparison() {
                   </div>
                 </motion.div>
               )}
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         {filteredPlatforms.length === 0 && (
