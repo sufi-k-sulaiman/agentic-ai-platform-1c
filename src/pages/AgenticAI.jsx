@@ -247,7 +247,7 @@ function PlatformComparison() {
             </span>
           </h2>
           <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-            See how we solve the pain points of popular enterprise platforms
+           1,400+ pre-built integrations. Or build your own in minutes.
           </p>
           <div className="max-w-md mx-auto relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
