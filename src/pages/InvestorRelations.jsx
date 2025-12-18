@@ -3309,7 +3309,7 @@ export default function InvestorRelations() {
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                       {[
-                        { name: 'Niroshi Nadarajah', role: 'CEO & Co-Founder', bg: 'Microbiology researcher → Enterprise AI pioneer' },
+                        { name: 'Henry Schurbach', role: 'CEO & Co-Founder', bg: 'Visionary entrepreneur and investor → Enterprise AI pioneer' },
                         { name: 'Suf K Sulaiman', role: 'CTO & Co-Founder', bg: '30+ years AI/hardware. 12 patents' },
                         { name: 'Emily Zhang', role: 'Chief Product Officer', bg: 'VP at SaaS unicorn. 5M+ users' },
                         { name: 'Advisory Board', role: '5 Industry Experts', bg: 'Fortune 500 C-suite executives' }
