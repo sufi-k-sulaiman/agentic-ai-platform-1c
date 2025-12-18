@@ -7,7 +7,7 @@ const leaders = [
     name: 'Henry Schurbach',
     title: 'Chief Executive Officer',
     bio: ['With a distinguished background in building large business, Henry brings a unique scientific perspective to technology leadership. His journey from manufatoring to AI innovation has shaped her approach to solving complex enterprise challenges.', 'As CEO of 1cPlatform, he leads the vision to democratize AI across industries, combining deep scientific rigor with practical business acumen. His passion for running marathons mirrors her leadership style: disciplined, endurance-focused, and always pushing boundaries.'],
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a80c07556_CMO.png'
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/d6adfa0f7_Henry-Schnurbach.png'
   },
   {
     name: 'Suf K Sulaiman',
