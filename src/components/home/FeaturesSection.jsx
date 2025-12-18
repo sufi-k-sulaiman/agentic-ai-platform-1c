@@ -227,7 +227,7 @@ export default function FeaturesSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
-          {features.map((feature, index) => (
+          {features.slice(0, window.innerWidth < 768 ? 2 : features.length).map((feature, index) => (
             <motion.div
               key={feature.title}
               variants={itemVariants}
