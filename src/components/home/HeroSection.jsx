@@ -251,7 +251,7 @@ export default function HeroSection() {
 
             {/* Task Completed - Below Logo */}
             <motion.div 
-              className="mt-8 text-center z-10"
+              className="mt-8 text-center z-10 hidden sm:block"
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               initial={{ opacity: 0, scale: 0.8 }}
