@@ -3311,7 +3311,7 @@ export default function InvestorRelations() {
                       {[
                         { name: 'Henry Schurbach', role: 'CEO & Co-Founder', bg: 'Visionary entrepreneur and investor → Enterprise AI pioneer' },
                         { name: 'Suf K Sulaiman', role: 'CTO & Co-Founder', bg: '30+ years AI/hardware. 12 patents' },
-                        { name: 'Emily Zhang', role: 'Chief Product Officer', bg: 'VP at SaaS unicorn. 5M+ users' },
+                        { name: 'Liya Elayna', role: 'Chief Product Officer', bg: 'VP at SaaS unicorn. 5M+ users' },
                         { name: 'Advisory Board', role: '5 Industry Experts', bg: 'Fortune 500 C-suite executives' }
                       ].map((leader, idx) => (
                         <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5">
