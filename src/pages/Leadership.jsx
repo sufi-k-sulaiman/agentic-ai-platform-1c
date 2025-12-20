@@ -4,7 +4,7 @@ import PageMeta from '@/components/PageMeta';
 
 const leaders = [
   {
-    name: 'Henry Schurbach',
+    name: 'Kevin Marcus',
     title: 'Chief Executive Officer',
     bio: ['With a distinguished background in building large business, Henry brings a unique scientific perspective to technology leadership. His journey from manufacturing to AI innovation has shaped his approach to solving complex enterprise challenges.', 'As CEO of 1cPlatform, he leads the vision to democratize AI across industries, combining deep scientific rigor with practical business acumen. His passion for running marathons mirrors her leadership style: disciplined, endurance-focused, and always pushing boundaries.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/0636a8715_Henry-Schnurbach.png'
