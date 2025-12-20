@@ -94,7 +94,7 @@ export default function AboutUs() {
             <p className="text-[#8B2EE5] font-semibold mb-6">ABOUT 1C</p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
               Building the future of
-              <span className="bg-clip-text text-transparent pb-1 block from-[#8B2EE5] to-[#A855F7]">intelligent enterprise
+              <span className="bg-clip-text text-slate-400 pb-1 block from-[#8B2EE5] to-[#A855F7]">intelligent enterprise
 
               </span>
             </h1>
