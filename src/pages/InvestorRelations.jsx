@@ -2266,7 +2266,7 @@ export default function InvestorRelations() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: 'Henry Schurbach',
+                name: 'Kevin Marcus',
                 role: 'CEO & Co-Founder',
                 background: 'Visionary entrepreneur and disciplined investor who combines innovation with financial wisdom to create lasting impact, now pioneering enterprise AI transformation with a vision for autonomous business intelligence. Deep understanding of healthcare and life sciences AI applications.'
               },
