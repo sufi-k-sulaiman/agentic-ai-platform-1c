@@ -2266,7 +2266,7 @@ export default function InvestorRelations() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: 'Kevin Marcus',
+                name: 'Henry Schurbach',
                 role: 'CEO & Co-Founder',
                 background: 'Visionary entrepreneur and disciplined investor who combines innovation with financial wisdom to create lasting impact, now pioneering enterprise AI transformation with a vision for autonomous business intelligence. Deep understanding of healthcare and life sciences AI applications.'
               },
@@ -3309,9 +3309,9 @@ export default function InvestorRelations() {
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                       {[
-                        { name: 'Kevin Marcus', role: 'CEO & Co-Founder', bg: 'Visionary entrepreneur and investor → Enterprise AI pioneer' },
+                        { name: 'Henry Schurbach', role: 'CEO & Co-Founder', bg: 'Visionary entrepreneur and investor → Enterprise AI pioneer' },
                         { name: 'Suf K Sulaiman', role: 'CTO & Co-Founder', bg: '30+ years AI/hardware. 12 patents' },
-                        { name: 'Liya Elayna', role: 'Chief Product Officer', bg: 'VP at SaaS unicorn. 5M+ users' },
+                        { name: 'Emily Zhang', role: 'Chief Product Officer', bg: 'VP at SaaS unicorn. 5M+ users' },
                         { name: 'Advisory Board', role: '5 Industry Experts', bg: 'Fortune 500 C-suite executives' }
                       ].map((leader, idx) => (
                         <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5">
