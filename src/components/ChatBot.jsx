@@ -57,12 +57,12 @@ You are an AI assistant for 1C Platform, an enterprise Agentic AI platform.
 
 export default function ChatBot({ isOpen, onClose }) {
   const [messages, setMessages] = useState([
-    {
-      role: 'assistant',
-      content: 'Hi! 👋 I\'m here to help you learn more about 1C Platform. What can I assist you with today?',
-      timestamp: new Date()
-    }
-  ]);
+  {
+    role: 'assistant',
+    content: 'Hi! 👋 I\'m here to help you learn more about 1C Platform. What can I assist you with today?',
+    timestamp: new Date()
+  }]
+  );
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
@@ -84,15 +84,15 @@ export default function ChatBot({ isOpen, onClose }) {
       timestamp: new Date()
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages((prev) => [...prev, userMessage]);
     setInputValue('');
     setIsLoading(true);
 
     try {
-      const conversationHistory = messages
-        .slice(-6)
-        .map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`)
-        .join('\n');
+      const conversationHistory = messages.
+      slice(-6).
+      map((m) => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`).
+      join('\n');
 
       const prompt = `${PLATFORM_CONTEXT}
 
@@ -114,7 +114,7 @@ Provide a helpful, concise response about 1C Platform. If the question is about 
         timestamp: new Date()
       };
 
-      setMessages(prev => [...prev, botMessage]);
+      setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error('Chat error:', error);
       const errorMessage = {
@@ -122,7 +122,7 @@ Provide a helpful, concise response about 1C Platform. If the question is about 
         content: 'I apologize, but I\'m having trouble connecting right now. A member of our sales team will get back to you shortly. In the meantime, feel free to explore our documentation or schedule a demo.',
         timestamp: new Date()
       };
-      setMessages(prev => [...prev, errorMessage]);
+      setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
@@ -147,8 +147,8 @@ Provide a helpful, concise response about 1C Platform. If the question is about 
       initial={{ opacity: 0, y: 20, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 20, scale: 0.95 }}
-      className="fixed bottom-6 right-6 w-[400px] h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col z-50 border border-gray-200"
-    >
+      className="fixed bottom-6 right-6 w-[400px] h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col z-50 border border-gray-200">
+
       {/* Header */}
       <div className="bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] p-4 rounded-t-2xl flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -163,14 +163,14 @@ Provide a helpful, concise response about 1C Platform. If the question is about 
         <div className="flex items-center gap-2">
           <button
             onClick={onClose}
-            className="text-white hover:bg-white/20 rounded-lg p-1 transition-colors"
-          >
+            className="text-white hover:bg-white/20 rounded-lg p-1 transition-colors">
+
             <Minimize2 className="w-5 h-5" />
           </button>
           <button
             onClick={onClose}
-            className="text-white hover:bg-white/20 rounded-lg p-1 transition-colors"
-          >
+            className="text-white hover:bg-white/20 rounded-lg p-1 transition-colors">
+
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -178,38 +178,38 @@ Provide a helpful, concise response about 1C Platform. If the question is about 
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((message, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-          >
+        {messages.map((message, index) =>
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+
             <div
-              className={`max-w-[80%] rounded-2xl px-4 py-3 ${
-                message.role === 'user'
-                  ? 'bg-[#8B2EE5] text-white'
-                  : 'bg-gray-100 text-gray-900'
-              }`}
-            >
+            className={`max-w-[80%] rounded-2xl px-4 py-3 ${
+            message.role === 'user' ?
+            'bg-[#8B2EE5] text-white' :
+            'bg-gray-100 text-gray-900'}`
+            }>
+
               <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
               <p className={`text-xs mt-1 ${message.role === 'user' ? 'text-purple-200' : 'text-gray-500'}`}>
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </p>
             </div>
           </motion.div>
-        ))}
-        {isLoading && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex justify-start"
-          >
+        )}
+        {isLoading &&
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex justify-start">
+
             <div className="max-w-[80%] rounded-2xl px-4 py-3 bg-gray-100">
               <Loader2 className="w-5 h-5 text-gray-500 animate-spin" />
             </div>
           </motion.div>
-        )}
+        }
         <div ref={messagesEndRef} />
       </div>
 
@@ -219,22 +219,22 @@ Provide a helpful, concise response about 1C Platform. If the question is about 
           <button
             onClick={() => handleQuickAction('I want to schedule a demo')}
             disabled={isLoading}
-            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50"
-          >
+            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50">
+
             Schedule Demo
           </button>
           <button
             onClick={() => handleQuickAction('Tell me about pricing')}
             disabled={isLoading}
-            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50"
-          >
+            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50">
+
             Pricing Info
           </button>
           <button
             onClick={() => handleQuickAction('How does it work?')}
             disabled={isLoading}
-            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50"
-          >
+            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50">
+
             How it works
           </button>
         </div>
@@ -249,23 +249,23 @@ Provide a helpful, concise response about 1C Platform. If the question is about 
             onKeyPress={handleKeyPress}
             placeholder="Type your message..."
             className="flex-1"
-            disabled={isLoading}
-          />
+            disabled={isLoading} />
+
           <Button
             onClick={handleSend}
             disabled={isLoading || !inputValue.trim()}
-            className="bg-[#8B2EE5] hover:bg-[#7325C4] px-4"
-          >
-            {isLoading ? (
-              <Loader2 className="w-4 h-4 animate-spin" />
-            ) : (
-              <Send className="w-4 h-4" />
-            )}
+            className="bg-[#8B2EE5] hover:bg-[#7325C4] px-4">
+
+            {isLoading ?
+            <Loader2 className="w-4 h-4 animate-spin" /> :
+
+            <Send className="w-4 h-4" />
+            }
           </Button>
         </div>
       </div>
-    </motion.div>
-  );
+    </motion.div>);
+
 }
 
 export function ChatBotTrigger({ onClick }) {
@@ -273,10 +273,10 @@ export function ChatBotTrigger({ onClick }) {
     <motion.button
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] rounded-full shadow-2xl flex items-center justify-center z-40 hover:shadow-[#8B2EE5]/50 transition-shadow"
-    >
+      whileTap={{ scale: 0.95 }} className="bg-[#6209e6] rounded-full fixed bottom-6 right-6 w-16 h-16 from-[#8B2EE5] to-[#A855F7] shadow-2xl flex items-center justify-center z-40 hover:shadow-[#8B2EE5]/50 transition-shadow">
+
+
       <MessageCircle className="w-7 h-7 text-white" />
-    </motion.button>
-  );
+    </motion.button>);
+
 }
