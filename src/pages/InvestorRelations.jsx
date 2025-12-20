@@ -2276,7 +2276,7 @@ export default function InvestorRelations() {
                 background: '30+ years driving innovation across AI, hardware, and software at global tech giants. Architect of systems processing billions of transactions daily. Holds 12 patents in distributed systems and machine learning.'
               },
               {
-                name: 'Emily Zhang',
+                name: 'Liya Elayna',
                 role: 'Chief Product Officer',
                 background: 'Former VP Product at leading SaaS unicorn. Built products used by 5M+ users. Stanford CS, 15+ years in enterprise software. Expert in product-led growth and enterprise adoption.'
                },
