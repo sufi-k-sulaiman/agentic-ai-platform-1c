@@ -114,10 +114,7 @@ export default function Leadership() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { name: 'Jennifer Martinez', role: 'Board Chair, Enterprise Technology Executive' },
               { name: 'Dr. Andrew Lee', role: 'AI Ethics Advisor, Academic Researcher' },
-              { name: 'Rachel Green', role: 'Independent Director, Finance Executive' },
-              { name: 'Thomas Brown', role: 'Venture Partner, Investment Professional' },
               { name: 'Dr. Maria Santos', role: 'Technical Advisor, Research Scientist' },
               { name: 'William Chang', role: 'Independent Director, Technology Executive' }
             ].map((member, index) => (
