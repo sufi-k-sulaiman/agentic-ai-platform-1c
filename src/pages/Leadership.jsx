@@ -28,7 +28,7 @@ const leaders = [
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/b9fad4d11_CFO.png'
   },
   {
-    name: 'Virgina Nadarajah',
+    name: 'Adrian Emanuel',
     title: 'Chief Marketing Officer',
     bio: ['A growth marketing expert with extensive experience building billion-dollar brands in the technology sector, Priya understands how to create authentic connections between innovative technology and customers. Her expertise spans brand building, demand generation, and go-to-market strategy.', 'As CMO of 1cPlatform, her data-driven approach to brand building transforms how companies think about marketing in the AI age. She leads the go-to-market strategy, ensuring the message resonates with enterprises worldwide.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4918bd092_CEO.png'
