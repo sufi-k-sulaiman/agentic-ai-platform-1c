@@ -16,7 +16,7 @@ const leaders = [
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e26495cc8_CTO.png'
   },
   {
-    name: 'Liya Elayna',
+    name: 'Claudia Isabel Martinez',
     title: 'Chief Product Officer',
     bio: ['With extensive experience leading enterprise product teams and building solutions used by millions, Emily brings deep expertise in creating user-centric AI products. Her background combines strategic product leadership with hands-on experience in the enterprise software industry.', 'As CPO of 1cPlatform, her philosophy centers on simplicity and impact. She believes the best AI products are those that feel invisible, seamlessly integrating into workflows while delivering transformative results for enterprises worldwide.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/06e4281e3_CPO.png'
