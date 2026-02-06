@@ -64,7 +64,7 @@ const discussions = [
     id: 3,
     title: 'GPT-4 vs Claude for multi-agent systems - performance comparison',
     author: {
-      name: 'Claudia Isabel Martinez',
+      name: 'Emily Zhang',
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100',
       role: 'Research Scientist'
     },

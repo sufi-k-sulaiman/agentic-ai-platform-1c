@@ -94,8 +94,8 @@ export default function AboutUs() {
             <p className="text-[#8B2EE5] font-semibold mb-6">ABOUT 1C</p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
               Building the future of
-              <span className="bg-clip-text text-[#6209e6] pb-1 block from-[#8B2EE5] to-[#A855F7]">intelligent enterprise
-
+              <span className="block bg-gradient-to-r from-[#8B2EE5] to-[#A855F7] bg-clip-text text-transparent">
+                intelligent enterprise
               </span>
             </h1>
             <p className="text-2xl text-gray-600 leading-relaxed mb-10">
@@ -103,7 +103,7 @@ export default function AboutUs() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to={createPageUrl('Careers')}>
-                <Button className="bg-[#6209e6] text-primary-foreground px-8 py-2 text-base font-medium rounded-full inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow hover:bg-[#7325C4] h-14">
+                <Button className="bg-[#8B2EE5] hover:bg-[#7325C4] rounded-full px-8 h-14 text-base">
                   Join our team <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -160,8 +160,8 @@ export default function AboutUs() {
               transition={{ delay: index * 0.1 }}
               className="text-center">
 
-                <div className="bg-slate-50 mb-6 mx-auto rounded-2xl w-16 h-16 flex items-center justify-center">
-                  <value.icon className="text-[#6209e6] lucide lucide-target w-8 h-8" />
+                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="w-8 h-8 text-[#8B2EE5]" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>

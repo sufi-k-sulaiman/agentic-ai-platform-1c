@@ -4,7 +4,7 @@ import PageMeta from '@/components/PageMeta';
 
 const leaders = [
   {
-    name: 'Kevin Marcus',
+    name: 'Henry Schurbach',
     title: 'Chief Executive Officer',
     bio: ['With a distinguished background in building large business, Henry brings a unique scientific perspective to technology leadership. His journey from manufatoring to AI innovation has shaped her approach to solving complex enterprise challenges.', 'As CEO of 1cPlatform, he leads the vision to democratize AI across industries, combining deep scientific rigor with practical business acumen. His passion for running marathons mirrors her leadership style: disciplined, endurance-focused, and always pushing boundaries.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/0636a8715_Henry-Schnurbach.png'
@@ -16,7 +16,7 @@ const leaders = [
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e26495cc8_CTO.png'
   },
   {
-    name: 'Claudia Isabel Martinez',
+    name: 'Emily Zhang',
     title: 'Chief Product Officer',
     bio: ['With extensive experience leading enterprise product teams and building solutions used by millions, Emily brings deep expertise in creating user-centric AI products. Her background combines strategic product leadership with hands-on experience in the enterprise software industry.', 'As CPO of 1cPlatform, her philosophy centers on simplicity and impact. She believes the best AI products are those that feel invisible, seamlessly integrating into workflows while delivering transformative results for enterprises worldwide.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/06e4281e3_CPO.png'
@@ -28,7 +28,7 @@ const leaders = [
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/b9fad4d11_CFO.png'
   },
   {
-    name: 'Adrianna Emanuel',
+    name: 'Priya Patel',
     title: 'Chief Marketing Officer',
     bio: ['A growth marketing expert with extensive experience building billion-dollar brands in the technology sector, Priya understands how to create authentic connections between innovative technology and customers. Her expertise spans brand building, demand generation, and go-to-market strategy.', 'As CMO of 1cPlatform, her data-driven approach to brand building transforms how companies think about marketing in the AI age. She leads the go-to-market strategy, ensuring the message resonates with enterprises worldwide.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4918bd092_CEO.png'
@@ -114,7 +114,10 @@ export default function Leadership() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
+              { name: 'Jennifer Martinez', role: 'Board Chair, Enterprise Technology Executive' },
               { name: 'Dr. Andrew Lee', role: 'AI Ethics Advisor, Academic Researcher' },
+              { name: 'Rachel Green', role: 'Independent Director, Finance Executive' },
+              { name: 'Thomas Brown', role: 'Venture Partner, Investment Professional' },
               { name: 'Dr. Maria Santos', role: 'Technical Advisor, Research Scientist' },
               { name: 'William Chang', role: 'Independent Director, Technology Executive' }
             ].map((member, index) => (
