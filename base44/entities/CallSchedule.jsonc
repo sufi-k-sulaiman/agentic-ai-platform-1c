@@ -1,0 +1,55 @@
+{
+  "name": "CallSchedule",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the person"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Preferred date for the call"
+    },
+    "preferred_time": {
+      "type": "string",
+      "description": "Preferred time for the call"
+    },
+    "topic": {
+      "type": "string",
+      "description": "What would you like to discuss"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Confirmed",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Pending",
+      "description": "Call status"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "phone",
+    "preferred_date",
+    "preferred_time",
+    "topic"
+  ]
+}

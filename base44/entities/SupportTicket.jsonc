@@ -1,0 +1,63 @@
+{
+  "name": "SupportTicket",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the person submitting the ticket"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject of the ticket"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Technical Issue",
+        "Billing Question",
+        "Feature Request",
+        "General Inquiry",
+        "Bug Report"
+      ],
+      "description": "Category of the support request"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High",
+        "Urgent"
+      ],
+      "default": "Medium",
+      "description": "Priority level"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the issue"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Open",
+        "In Progress",
+        "Resolved",
+        "Closed"
+      ],
+      "default": "Open",
+      "description": "Current status of the ticket"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "subject",
+    "category",
+    "description"
+  ]
+}

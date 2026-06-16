@@ -113,7 +113,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} <a href="https://1cplatform.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">1cPlatform</a>. Developed by <a href="https://sufikhan.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Sufi K Sulaiman</a>. All rights reserved.
+              © {new Date().getFullYear()} <a href="https://1cplatform.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">1cPlatform</a>. Developed by <a href="https://sufikhan.com/" target="_blank" rel="noopener noreferrer" title="Sufi Khan Sulaiman — 20+ years of building scalable Ecommerce solutions" className="hover:text-gray-300 transition-colors">Sufi Khan Sulaiman</a>. All rights reserved.
             </p>
             <div className="flex items-center gap-4 sm:gap-6">
               <Link to={createPageUrl('Terms')} className="text-xs sm:text-sm text-gray-500 hover:text-gray-300 transition-colors">

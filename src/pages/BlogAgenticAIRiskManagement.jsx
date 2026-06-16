@@ -204,7 +204,7 @@ export default function BlogAgenticAIRiskManagement() {
               <ul className="list-disc pl-6 text-gray-700 space-y-1 mb-4">
                 <li>Comprehensive risk assessment identifying 23 distinct risks</li>
                 <li>Bias testing across protected characteristics</li>
-                <li>Human review for all loan amounts >$50K</li>
+                <li>Human review for all loan amounts &gt;$50K</li>
                 <li>Audit trail for every decision</li>
                 <li>Quarterly fairness audits</li>
               </ul>

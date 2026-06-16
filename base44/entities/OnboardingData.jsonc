@@ -1,0 +1,80 @@
+{
+  "name": "OnboardingData",
+  "type": "object",
+  "properties": {
+    "vertical": {
+      "type": "string",
+      "description": "Industry/vertical selected"
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "company_website": {
+      "type": "string",
+      "description": "Company website URL"
+    },
+    "deployment_strategy": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Deployment strategy options"
+    },
+    "role": {
+      "type": "string",
+      "description": "User's role in the company"
+    },
+    "team_size": {
+      "type": "string",
+      "description": "Size of the team"
+    },
+    "company_size": {
+      "type": "string",
+      "description": "Size of the company"
+    },
+    "pain_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Selected pain points"
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Business objectives"
+    },
+    "software": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Software tools used by organization"
+    },
+    "hear_about_us": {
+      "type": "string",
+      "description": "How they heard about the platform"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether onboarding is completed"
+    }
+  },
+  "required": [
+    "vertical",
+    "email"
+  ]
+}

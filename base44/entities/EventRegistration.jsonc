@@ -1,0 +1,76 @@
+{
+  "name": "EventRegistration",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "ID of the event"
+    },
+    "event_title": {
+      "type": "string",
+      "description": "Event title for reference"
+    },
+    "first_name": {
+      "type": "string",
+      "description": "Attendee first name"
+    },
+    "last_name": {
+      "type": "string",
+      "description": "Attendee last name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "role": {
+      "type": "string",
+      "description": "Job title or role"
+    },
+    "dietary_requirements": {
+      "type": "string",
+      "description": "Dietary requirements (if applicable)"
+    },
+    "special_requests": {
+      "type": "string",
+      "description": "Any special requests or accessibility needs"
+    },
+    "registration_status": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "waitlist",
+        "cancelled",
+        "attended"
+      ],
+      "default": "confirmed",
+      "description": "Registration status"
+    },
+    "ticket_type": {
+      "type": "string",
+      "enum": [
+        "general",
+        "vip",
+        "student",
+        "speaker"
+      ],
+      "default": "general",
+      "description": "Ticket type"
+    }
+  },
+  "required": [
+    "event_id",
+    "event_title",
+    "first_name",
+    "last_name",
+    "email"
+  ]
+}
