@@ -1405,6 +1405,21 @@ export default function Blog() {
         </div>
       </section>
 
+      {/* Topic Clusters */}
+      <section className="py-8 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Explore Topic Clusters</h2>
+          <div className="flex flex-wrap gap-2">
+            <Link to={createPageUrl('BlogCategoryAgenticCapabilities')} className="px-4 py-2 bg-purple-50 text-[#8B2EE5] rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Agentic Capabilities</Link>
+            <Link to={createPageUrl('BlogCategoryAIComparison')} className="px-4 py-2 bg-purple-50 text-[#8B2EE5] rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">AI Comparison</Link>
+            <Link to={createPageUrl('BlogCategoryAgenticDesign')} className="px-4 py-2 bg-purple-50 text-[#8B2EE5] rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Agentic Design</Link>
+            <Link to={createPageUrl('BlogCategoryAIGovernance')} className="px-4 py-2 bg-purple-50 text-[#8B2EE5] rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">AI Governance</Link>
+            <Link to={createPageUrl('BlogCategoryGenerativeAI')} className="px-4 py-2 bg-purple-50 text-[#8B2EE5] rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Generative AI</Link>
+            <Link to={createPageUrl('BlogCategoryAIAutonomy')} className="px-4 py-2 bg-purple-50 text-[#8B2EE5] rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">AI Autonomy</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Blog Grid */}
       <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
