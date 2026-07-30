@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { MessageSquare, Calendar, Mail, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import TicketForm from '@/components/contact/TicketForm';
 import CallScheduleForm from '@/components/contact/CallScheduleForm';
 import EmailForm from '@/components/contact/EmailForm';
@@ -50,7 +51,13 @@ export default function Contact() {
         title="Contact Support"
         description="Get help from our 24/7 support team. Create a ticket, schedule a call, or send us an email."
         url="/contact"
+        keywords={['contact', 'support', 'customer service', 'schedule a call', 'support ticket']}
+        image="https://images.unsplash.com/photo-1573437675149-ce6dc4be8c46?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Contact' }
+      ]} />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
         <AnimatePresence mode="wait">

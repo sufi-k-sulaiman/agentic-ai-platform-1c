@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const categories = [
   {
@@ -74,7 +75,23 @@ export default function Documentation() {
         description="Complete documentation for 1C Platform. API reference, SDKs, quick start guides, tutorials, and integration examples."
         url="/documentation"
         keywords={['API documentation', 'developer docs', 'SDK reference', 'integration guides', 'AI platform docs']}
+        image="https://images.unsplash.com/photo-1499956285475-3631ae93606f?w=1200&h=630&fit=crop"
+        howTo={{
+          name: 'Getting Started with 1C Platform',
+          description: 'Step-by-step guide to setting up and deploying your first AI agent',
+          steps: [
+            { name: 'Sign up for an account', text: 'Create your free 1C Platform account at our registration page. No credit card required to start.' },
+            { name: 'Get your API key', text: 'Navigate to Settings > API Keys and generate a new API key for your application.' },
+            { name: 'Install the SDK', text: 'Install our SDK via npm or pip depending on your preferred programming language.' },
+            { name: 'Create your first agent', text: 'Use the dashboard or SDK to create your first autonomous AI agent with a template.' },
+            { name: 'Test and deploy', text: 'Test your agent in the sandbox environment, then deploy to production when ready.' },
+          ],
+        }}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Documentation' }
+      ]} />
       
       {/* Hero with Search */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import toast from 'react-hot-toast';
 
 const values = [
@@ -82,7 +83,12 @@ export default function AboutUs() {
         title="About Us"
         description="Building the future of intelligent enterprise. 2000+ team members, 500+ enterprise clients, $2.5B valuation. Our mission is to empower every organization with autonomous AI."
         url="/about-us"
-        keywords={['about 1C Platform', 'AI company', 'enterprise AI leader', 'company values', 'AI innovation']} />
+        keywords={['about 1C Platform', 'AI company', 'enterprise AI leader', 'company values', 'AI innovation']}
+        image="https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop" />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'About Us' }
+      ]} />
 
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -90,7 +91,20 @@ export default function Education() {
         description="AI-powered education platform for personalized learning. 45% higher engagement, 60% admin time saved, 30% better learning outcomes through adaptive technology."
         url="/education"
         keywords={['education AI', 'personalized learning', 'adaptive learning', 'automated grading', 'student success', 'learning platform']}
+        image="https://images.unsplash.com/photo-1523243827797-8c9b0b0b0b0b?w=1200&h=630&fit=crop"
+        service={{
+          type: 'Education AI Platform',
+          areaServed: 'Worldwide',
+        }}
+        localBusiness={{
+          name: '1C Platform - Education AI',
+          telephone: '+1-800-1C-LEARN',
+        }}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Education' }
+      ]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

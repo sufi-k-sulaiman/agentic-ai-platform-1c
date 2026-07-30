@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -98,7 +99,20 @@ export default function Healthcare() {
         description="HIPAA-compliant AI for healthcare reducing admin time by 50% and costs by 40%. Automated documentation, billing, patient care coordination."
         url="/healthcare"
         keywords={['healthcare AI', 'medical automation', 'HIPAA compliant', 'clinical documentation', 'patient care']}
+        image="https://images.unsplash.com/photo-1576091166688-1e0f3a96b8e3?w=1200&h=630&fit=crop"
+        service={{
+          type: 'Healthcare AI Solutions',
+          areaServed: 'Worldwide',
+        }}
+        localBusiness={{
+          name: '1C Platform - Healthcare AI',
+          telephone: '+1-800-1C-HEALTH',
+        }}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Healthcare' }
+      ]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

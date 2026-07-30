@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -90,7 +91,20 @@ export default function Retail() {
         description="Transform retail with AI-powered personalization and inventory optimization. 35% conversion lift, 20% margin growth, 30% cost reduction through automation."
         url="/retail"
         keywords={['retail AI', 'inventory optimization', 'personalization', 'dynamic pricing', 'customer experience', 'retail automation']}
+        image="https://images.unsplash.com/photo-1551434657960-0d6c3b1e8b9a?w=1200&h=630&fit=crop"
+        service={{
+          type: 'Retail AI Solutions',
+          areaServed: 'Worldwide',
+        }}
+        localBusiness={{
+          name: '1C Platform - Retail AI',
+          telephone: '+1-800-1C-RETAIL',
+        }}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Retail' }
+      ]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

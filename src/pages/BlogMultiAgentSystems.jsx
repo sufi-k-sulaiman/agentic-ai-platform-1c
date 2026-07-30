@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 import { Button } from '@/components/ui/button';
 
 export default function BlogMultiAgentSystems() {
@@ -16,6 +17,13 @@ export default function BlogMultiAgentSystems() {
         description="Master the art of building multi-agent AI systems with orchestration patterns and best practices for enterprise deployments."
         url="/blog/multi-agent-systems"
         keywords={['multi-agent systems', 'AI orchestration', 'distributed AI', 'agent coordination', 'system design']}
+        article={{
+          author: 'Michael Rodriguez',
+          datePublished: '2024-12-15',
+          image: 'https://images.unsplash.com/photo-1526116215124-5d9c3a7b9c3e?w=1200',
+          section: 'AI Architecture',
+          tags: ['multi-agent systems', 'AI orchestration', 'distributed AI'],
+        }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
@@ -49,16 +57,21 @@ export default function BlogMultiAgentSystems() {
           </div>
 
           <img 
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200" 
-            alt="Multi-Agent Systems" 
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
+            alt="Multi-agent AI systems architecture diagram showing agent coordination"
+            width={1200}
+            height={384}
+            loading="eager"
             className="w-full h-96 object-cover rounded-2xl mb-12"
           />
         </motion.div>
 
         <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            The most powerful AI applications don't rely on a single agent—they orchestrate teams of specialized agents working in concert. Multi-agent systems (MAS) represent the frontier of enterprise AI, enabling solutions to complex problems that single agents can't tackle alone.
-          </p>
+          <InternalLinker currentPage="BlogMultiAgentSystems">
+            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+              The most powerful AI applications don't rely on a single agent—they orchestrate teams of specialized agents working in concert. Multi-agent systems (MAS) represent the frontier of enterprise AI, enabling solutions to complex problems that single agents can't tackle alone. These systems power agentic AI, multi-agent systems, and enterprise ERP solutions at scale.
+            </p>
+          </InternalLinker>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Understanding Multi-Agent Architecture</h2>
           <p className="text-gray-700 leading-relaxed mb-6">

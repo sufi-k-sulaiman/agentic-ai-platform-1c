@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const benefits = [
   { title: 'Competitive Salary', description: 'Top-tier compensation packages' },
@@ -210,7 +211,12 @@ export default function Careers() {
         description="Join our team building the future of enterprise AI. Competitive salary, remote-first culture, unlimited PTO, and equity options. Open positions in engineering, product, and more."
         url="/careers"
         keywords={['careers', 'jobs', 'AI careers', 'engineering jobs', 'remote work', 'tech careers']}
+        image="https://images.unsplash.com/photo-1522202172294-6940c44f7c74?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Careers' }
+      ]} />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

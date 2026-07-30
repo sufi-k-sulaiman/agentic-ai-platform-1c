@@ -15,6 +15,7 @@ export default function Home() {
         description="Transform your business with Agentic AI. Autonomous AI agents that think, decide, and act. 500+ enterprises trust our platform."
         url="/"
         keywords={['Agentic AI', 'AI platform', 'autonomous AI', 'enterprise AI', 'AI automation', 'business intelligence']}
+        image="https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200&h=630&fit=crop"
       />
       <HeroSection />
       <FeaturesSection />

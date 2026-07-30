@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const platforms = [
   {
@@ -360,7 +361,12 @@ export default function AgenticAI() {
         description="Deploy autonomous AI agents that think, decide, and act. No-code builder, multi-agent orchestration, and enterprise-grade security. 70% faster response times."
         url="/agentic-ai"
         keywords={['Agentic AI', 'autonomous agents', 'AI automation', 'intelligent agents', 'no-code AI', 'multi-agent systems']}
+        image="https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Agentic AI' }
+      ]} />
 
       {/* Hero - Fold 1 */}
       <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">

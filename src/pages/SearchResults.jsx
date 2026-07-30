@@ -9,7 +9,7 @@ import { createPageUrl } from '@/utils';
 import { base44 } from '@/api/base44Client';
 import PageMeta from '@/components/PageMeta';
 
-// All available pages
+// All available pages (SearchResults is noIndex'd to avoid search result pages in Google)
 const allPages = [
   { name: 'Home', path: 'Home', description: 'Main landing page' },
   { name: 'Agentic AI', path: 'AgenticAI', description: 'Autonomous AI agents platform' },
@@ -59,6 +59,7 @@ const aiTopics = [
   'AI Ethics', 'AI in Healthcare', 'AI in Finance', 'AI Governance'
 ];
 
+// SearchResults is noIndex'd — utility page that shouldn't appear in search results
 export default function SearchResults() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -169,6 +170,7 @@ Return ONLY these relevant topics and pages, ranked by relevance.`,
         title="Search Results"
         description="Search results powered by AI"
         url="/search"
+        noIndex
       />
 
       <div className="max-w-5xl mx-auto px-6 py-16">

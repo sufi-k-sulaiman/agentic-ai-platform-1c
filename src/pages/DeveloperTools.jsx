@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 export default function DeveloperTools() {
   return (
@@ -15,7 +16,12 @@ export default function DeveloperTools() {
         description="Complete developer platform with REST & GraphQL APIs, SDKs in 8 languages, CLI tools, webhooks, and edge functions. 99.99% API uptime, <50ms response time."
         url="/developer-tools"
         keywords={['developer tools', 'API', 'SDK', 'CLI', 'webhooks', 'GraphQL', 'REST API', 'edge functions']}
+        image="https://images.unsplash.com/photo-1555066925-5d3719e8b3a0?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Developer Tools' }
+      ]} />
 
       {/* Hero - Fold 1 */}
       <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">

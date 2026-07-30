@@ -17,6 +17,13 @@ export default function BlogAgenticAIEnterprise() {
         description="Discover how autonomous AI agents are transforming enterprise operations and enabling intelligent decision-making across industries."
         url="/blog/agentic-ai-enterprise"
         keywords={['Agentic AI', 'enterprise AI', 'autonomous agents', 'AI transformation', 'business automation']}
+        article={{
+          author: 'Michael Rodriguez',
+          datePublished: '2024-11-20',
+          image: 'https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200',
+          section: 'Enterprise AI',
+          tags: ['Agentic AI', 'enterprise AI', 'AI transformation'],
+        }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
@@ -50,16 +57,21 @@ export default function BlogAgenticAIEnterprise() {
           </div>
 
           <img 
-            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200" 
-            alt="Agentic AI" 
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
+            alt="Agentic AI transforming enterprise operations"
+            width={1200}
+            height={384}
+            loading="eager"
             className="w-full h-96 object-cover rounded-2xl mb-12"
           />
         </motion.div>
 
         <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            The enterprise landscape is witnessing a paradigm shift with the emergence of Agentic AI—autonomous systems that can perceive, reason, and act independently to achieve specific goals. Unlike traditional automation, these intelligent agents don't just follow scripts; they think, learn, and adapt.
-          </p>
+          <InternalLinker currentPage="BlogAgenticAIEnterprise">
+            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+              The enterprise landscape is witnessing a paradigm shift with the emergence of Agentic AI—autonomous systems that can perceive, reason, and act independently to achieve specific goals. Unlike traditional automation, these intelligent agents don't just follow scripts; they think, learn, and adapt. From enterprise suite to cloud platform, agentic AI is transforming operations.
+            </p>
+          </InternalLinker>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">What Makes AI "Agentic"?</h2>
           <p className="text-gray-700 leading-relaxed mb-6">

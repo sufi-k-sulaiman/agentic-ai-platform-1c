@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 export default function CloudPlatform() {
   return (
@@ -15,7 +16,12 @@ export default function CloudPlatform() {
         description="Enterprise cloud infrastructure built for AI workloads. 99.99% uptime SLA, auto-scaling, global edge network. Deploy across 32 regions with Kubernetes-native platform."
         url="/cloud-platform"
         keywords={['cloud platform', 'AI infrastructure', 'Kubernetes', 'auto-scaling', 'edge network', 'managed databases']}
+        image="https://images.unsplash.com/photo-1451187582-2980bd714515?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Cloud Platform' }
+      ]} />
 
       {/* Hero - Fold 1 */}
       <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">

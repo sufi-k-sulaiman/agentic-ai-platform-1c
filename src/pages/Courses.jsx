@@ -8,6 +8,7 @@ import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import SubscriptionWorkflow from '@/components/SubscriptionWorkflow';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 const categories = [
   { id: 'agentic-ai-fundamentals', name: 'Agentic AI Fundamentals', count: 12, level: 'Beginner' },
@@ -182,6 +183,14 @@ export default function Courses() {
         description="Master Agentic AI with 100+ expert-led courses, structured learning paths, and unlimited subscriptions. From beginner to advanced."
         url="/courses"
         keywords={['AI courses', 'Agentic AI training', 'learning paths', 'AI certification', 'online learning', 'AI subscription']}
+        image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop"
+        course={{
+          name: 'Introduction to Agentic AI',
+          provider: '1C Platform',
+          description: 'Learn the fundamentals of building autonomous AI agents that can make decisions and take actions independently.',
+          rating: '4.9',
+          reviewCount: '2840',
+        }}
       />
       
       {/* Hero */}

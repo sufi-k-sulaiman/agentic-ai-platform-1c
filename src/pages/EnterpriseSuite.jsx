@@ -7,6 +7,7 @@ import { ArrowRight, DollarSign, Users, Package, BarChart, FileText, Calendar, B
 import { BarChart as RechartsBar, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
@@ -226,7 +227,12 @@ export default function EnterpriseSuite() {
         description="Unified ERP, CRM, and business management platform powered by AI. 60% faster processes, 45% cost reduction. Complete business modules for your entire enterprise."
         url="/enterprise-suite"
         keywords={['enterprise suite', 'ERP', 'CRM', 'business management', 'financial management', 'HR payroll', 'supply chain']}
+        image="https://images.unsplash.com/photo-1551288044-60e67c10b9b3?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Enterprise Suite' }
+      ]} />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-black" />

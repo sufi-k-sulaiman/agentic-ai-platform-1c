@@ -16,6 +16,13 @@ export default function BlogAutonomousAgents() {
         description="Explore the transformative power of autonomous AI agents in modern business operations and their impact on productivity and efficiency."
         url="/blog/autonomous-agents"
         keywords={['autonomous agents', 'AI automation', 'business operations', 'intelligent automation', 'productivity']}
+        article={{
+          author: 'Michael Rodriguez',
+          datePublished: '2024-12-08',
+          image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200',
+          section: 'AI Automation',
+          tags: ['autonomous agents', 'AI automation', 'business operations'],
+        }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
@@ -49,8 +56,11 @@ export default function BlogAutonomousAgents() {
           </div>
 
           <img 
-            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200" 
-            alt="Autonomous Agents" 
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200"
+            alt="Autonomous Agents revolutionizing business operations with AI technology"
+            width={1200}
+            height={384}
+            loading="eager"
             className="w-full h-96 object-cover rounded-2xl mb-12"
           />
         </motion.div>

@@ -11,6 +11,8 @@ import { ArrowRight, TrendingUp, DollarSign, Clock, Users, X } from 'lucide-reac
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+// BreadcrumbNav and RelatedContent added for SEO
 import PageMeta from '@/components/PageMeta';
 
 export default function SavingsCalculator() {
@@ -78,7 +80,13 @@ export default function SavingsCalculator() {
         title="ROI & Savings Calculator"
         description="Calculate your potential savings and ROI with Agentic Ai automation. See how much time and money your organization can save."
         url="/savings-calculator"
+        keywords={['ROI calculator', 'savings calculator', 'cost reduction', 'productivity gains', 'AI ROI', 'business case']}
+        image="https://images.unsplash.com/photo-1614628061581-e0b4c0e8e3c8?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'ROI Calculator' }
+      ]} />
 
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

@@ -50,6 +50,7 @@ export default function Leadership() {
         description="Meet our world-class leadership team. Experienced executives driving AI innovation across enterprise technology."
         url="/leadership"
         keywords={['leadership', 'executive team', 'CEO', 'CTO', 'management team', 'company leaders']}
+        image="https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop"
       />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

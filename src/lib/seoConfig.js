@@ -10,6 +10,35 @@ export const SITE_URL = 'https://1cplatform.com';
 export const SITE_NAME = '1C Platform';
 export const SITE_DESCRIPTION = 'Agentic AI platform delivering autonomous AI agents, ERP, CRM, and intelligent automation for 500+ enterprises.';
 
+// Default OG image
+export const DEFAULT_OG_IMAGE = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png';
+
+// Per-page OG images for social sharing
+export const ogImages = {
+  Home: 'https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200&h=630&fit=crop',
+  AgenticAI: 'https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop',
+  EnterpriseSuite: 'https://images.unsplash.com/photo-1551288044-60e67c10b9b3?w=1200&h=630&fit=crop',
+  CloudPlatform: 'https://images.unsplash.com/photo-1451187582-2980bd714515?w=1200&h=630&fit=crop',
+  DeveloperTools: 'https://images.unsplash.com/photo-1555066925-5d3719e8b3a0?w=1200&h=630&fit=crop',
+  Pricing: 'https://images.unsplash.com/photo-1554224075-ff6c8ad421b8?w=1200&h=630&fit=crop',
+  Cyber: 'https://images.unsplash.com/photo-1563206157-b3e1599f7397?w=1200&h=630&fit=crop',
+  AboutUs: 'https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop',
+  Careers: 'https://images.unsplash.com/photo-1522202172294-6940c44f7c74?w=1200&h=630&fit=crop',
+  Leadership: 'https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop',
+  Contact: 'https://images.unsplash.com/photo-1573437675149-ce6dc4be8c46?w=1200&h=630&fit=crop',
+  SavingsCalculator: 'https://images.unsplash.com/photo-1614628061581-e0b4c0e8e3c8?w=1200&h=630&fit=crop',
+  Documentation: 'https://images.unsplash.com/photo-1499956285475-3631ae93606f?w=1200&h=630&fit=crop',
+  HelpCenter: 'https://images.unsplash.com/photo-1584444932173-9b1c1b1e8e0c?w=1200&h=630&fit=crop',
+  Blog: 'https://images.unsplash.com/photo-1593561500160bae3b8b1c5e6b1a0e8f1?w=1200&h=630&fit=crop',
+};
+
+/**
+ * Get OG image for a page, falling back to default logo
+ */
+export function getOgImage(pageName) {
+  return ogImages[pageName] || DEFAULT_OG_IMAGE;
+}
+
 /**
  * @typedef {Object} SeoPage
  * @property {string} pageName - The page key in pages.config PAGES object

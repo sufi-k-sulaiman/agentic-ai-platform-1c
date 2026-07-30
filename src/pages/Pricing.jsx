@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 export default function Pricing() {
   return (
@@ -15,7 +16,20 @@ export default function Pricing() {
         description="Simple, transparent pricing for AI automation. Free Starter plan, Professional from $99/mo, Enterprise custom pricing. No hidden fees."
         url="/pricing"
         keywords={['AI pricing', 'platform pricing', 'enterprise AI cost', 'subscription plans', 'AI automation pricing']}
+        image="https://images.unsplash.com/photo-1554224075-ff6c8ad421b8?w=1200&h=630&fit=crop"
+        faq={[
+          { question: 'Is there a free plan?', answer: 'Yes, our Starter plan is free forever and includes 1,000 API calls per month, 1 AI agent, and community support.' },
+          { question: 'Can I upgrade or downgrade my plan anytime?', answer: 'Absolutely. You can upgrade, downgrade, or cancel your subscription at any time from your account settings. No long-term contracts required.' },
+          { question: 'How is pricing calculated?', answer: 'Pricing is based on your plan tier, number of AI agents, API calls per month, and storage usage. You only pay for what you use beyond your plan limits.' },
+          { question: 'Do you offer enterprise support?', answer: 'Yes! Enterprise plans include 24/7 phone and chat support, a dedicated account manager, custom SLAs, and priority access to new features.' },
+          { question: 'Are there any hidden fees?', answer: 'No. Our pricing is fully transparent. The price you see is the price you pay. No setup fees, no per-user fees, no hidden charges.' },
+          { question: 'What payment methods do we accept?', answer: 'We accept all major credit cards, ACH transfers, and wire transfers for enterprise plans.' },
+        ]}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Pricing' }
+      ]} />
 
       {/* Hero - Fold 1 */}
       <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">

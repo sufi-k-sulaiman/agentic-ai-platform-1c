@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const categories = [
   {
@@ -90,8 +91,14 @@ export default function HelpCenter() {
         title="Help Center"
         description="Get help with 1C Platform. Browse guides, FAQs, tutorials, and troubleshooting articles. 24/7 support available."
         url="/help-center"
-        keywords={['help center', 'support articles', 'troubleshooting', 'FAQs', 'platform guides']}
+        keywords={['help center', 'support', 'FAQ', 'troubleshooting', 'technical support']}
+        faq={faqs.map(f => ({ question: f.question, answer: f.answer }))}
+        image="https://images.unsplash.com/photo-1584444932173-9b1c1b1e8e0c?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Help Center' }
+      ]} />
       
       {/* Hero with Search */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

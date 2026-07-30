@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe, XCircle, ChevronRight } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import BugBountyForm from '@/components/contact/BugBountyForm';
 import { base44 } from '@/api/base44Client';
 
@@ -62,7 +63,19 @@ export default function Cyber() {
         description="Enterprise-grade cybersecurity with SOC 2, ISO 27001, GDPR, and HIPAA compliance. AES-256 encryption, zero-knowledge architecture, and 24/7 threat detection."
         url="/cyber"
         keywords={['security', 'compliance', 'SOC 2', 'ISO 27001', 'GDPR', 'data protection', 'encryption']}
+        image="https://images.unsplash.com/photo-1563206157-b3e1599f7397?w=1200&h=630&fit=crop"
+        faq={[
+          { question: 'Is 1C Platform SOC 2 Type II compliant?', answer: 'Yes. We maintain SOC 2 Type II certification and undergo regular third-party security audits. Reports are available upon request for enterprise customers.' },
+          { question: 'Do we comply with GDPR?', answer: 'We are fully GDPR compliant with data residency controls, right-to-erasure, and data processing agreements available for all customers.' },
+          { question: 'Is patient data HIPAA compliant?', answer: 'Yes, our healthcare solutions include HIPAA-compliant data encryption, access controls, and audit trails for all protected health information.' },
+          { question: 'What encryption standards do we use?', answer: 'We use AES-256 encryption for data at rest and TLS 1.3 for data in transit. We employ zero-knowledge architecture for sensitive workloads.' },
+          { question: 'Do we offer bug bounty programs?', answer: 'Yes, we run a bug bounty program. Security researchers can submit vulnerabilities through our Cyber page and earn rewards for confirmed findings.' },
+        ]}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Security' }
+      ]} />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
