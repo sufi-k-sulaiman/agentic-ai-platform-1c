@@ -5,6 +5,7 @@ import { ArrowRight, Target, Users, Globe, Award, ChevronLeft, ChevronRight, Max
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 import toast from 'react-hot-toast';
 
 const values = [
@@ -285,6 +286,12 @@ export default function AboutUs() {
           </div>
         </div>
       }
+      <RelatedContent
+        currentPage="AboutUs"
+        category="company"
+        crossCategories={['product']}
+        title="Explore the Platform"
+      />
     </div>);
 
 }

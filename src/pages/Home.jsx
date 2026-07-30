@@ -5,6 +5,7 @@ import ProductsSection from '@/components/home/ProductsSection';
 import SolutionsSection from '@/components/home/SolutionsSection';
 import CTASection from '@/components/home/CTASection';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function Home() {
   return (
@@ -20,6 +21,11 @@ export default function Home() {
       <ProductsSection />
       <SolutionsSection />
       <CTASection />
+      <RelatedContent
+        currentPage="Home"
+        crossCategories={['product', 'resources', 'company']}
+        title="Explore 1C Platform"
+      />
     </div>
   );
 }

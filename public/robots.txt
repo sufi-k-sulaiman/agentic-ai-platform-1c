@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /Onboarding
+Disallow: /JobApplication
+Disallow: /EventRegistrations
+Disallow: /NewsletterSignups
+
+# Sitemap
+Sitemap: https://1cplatform.com/sitemap.xml

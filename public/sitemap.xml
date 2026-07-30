@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url><loc>https://1cplatform.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://1cplatform.com/AboutUs</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.com/AgenticAI</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.com/EnterpriseSuite</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.com/CloudPlatform</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.com/DeveloperTools</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.com/Pricing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.com/Documentation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/APIReference</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/Blog</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.com/Community</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Events</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/HelpCenter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/Status</loc><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <url><loc>https://1cplatform.com/Careers</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Leadership</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/InvestorRelations</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Newsroom</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/Contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/Cyber</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/SavingsCalculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.com/Courses</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/ProfessionalCertifications</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- Industry Pages -->
+  <url><loc>https://1cplatform.com/PropertyManagement</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/DataCenters</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/FinancialInstitutions</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/CorporateCampuses</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Healthcare</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Transit</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Traffic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/GovernmentAgencies</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/EnergyUtilities</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/SportsEntertainment</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Gaming</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/PublicSafety</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Cities</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Airports</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Retail</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.com/Education</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Blog Posts -->
+  <url><loc>https://1cplatform.com/BlogAgenticAIEnterprise</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAutonomousAgents</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogMultiAgentSystems</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogNoCodeAgenticAI</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAISecurity</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAIROI</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogHumanAICollaboration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAutomationToAutonomy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAIUseCases</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAIEthics</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAIScaling</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogGenerativeAIIntro</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAIArchitecture</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAIGovernanceIntro</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAICompliance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAIRiskManagement</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAIAutonomyIntro</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgentArchitectureFundamentals</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogPromptDesignPatterns</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogAgenticAIUXDesign</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.com/BlogConversationalAIDesign</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://1cplatform.com/Privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://1cplatform.com/Terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://1cplatform.com/Cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

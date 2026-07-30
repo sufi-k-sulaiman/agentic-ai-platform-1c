@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, DollarSign, Users, Package, BarChart, FileText, Calendar, Briefcase, Globe, TrendingUp, Shield, Zap, CheckCircle, Search, ChevronDown } from 'lucide-react';
 import { BarChart as RechartsBar, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
@@ -1265,6 +1266,12 @@ await suite.crm.updateLead({...});`}
           </div>
         </motion.div>
       </section>
+      <RelatedContent
+        currentPage="EnterpriseSuite"
+        category="product"
+        crossCategories={['resources', 'industry']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

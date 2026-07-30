@@ -6,6 +6,7 @@ import { Bot, Brain, Zap, Shield, RefreshCw, Network, ArrowRight, CheckCircle, T
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 const platforms = [
   {
@@ -1101,6 +1102,12 @@ export default function AgenticAI() {
           </div>
         </motion.div>
       </section>
+      <RelatedContent
+        currentPage="AgenticAI"
+        category="product"
+        crossCategories={['resources', 'industry']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }
