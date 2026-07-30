@@ -24,6 +24,7 @@ export default function BlogChatGPTLLMs() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      speakable={{ cssSelectors: ['h1', 'article > p'] }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

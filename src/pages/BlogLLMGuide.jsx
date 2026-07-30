@@ -24,6 +24,7 @@ export default function BlogLLMGuide() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      speakable={{ cssSelectors: ['h1', 'article > p'] }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Understanding Large Language Models: GPT' }]} />

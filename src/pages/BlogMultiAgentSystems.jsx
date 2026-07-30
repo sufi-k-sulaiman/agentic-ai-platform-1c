@@ -25,6 +25,7 @@ export default function BlogMultiAgentSystems() {
           tags: ['multi-agent systems', 'AI orchestration', 'distributed AI'],
         timeRequired: 'PT15M',
         }}
+        speakable={{ cssSelectors: ['h1', 'article > p'] }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

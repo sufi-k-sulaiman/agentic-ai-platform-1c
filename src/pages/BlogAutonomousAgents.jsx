@@ -25,6 +25,7 @@ export default function BlogAutonomousAgents() {
           tags: ['autonomous agents', 'AI automation', 'business operations'],
         timeRequired: 'PT10M',
         }}
+        speakable={{ cssSelectors: ['h1', 'article > p'] }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

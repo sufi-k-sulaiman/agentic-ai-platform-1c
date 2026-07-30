@@ -370,6 +370,7 @@ export default function AgenticAI() {
           { question: 'What tools can my AI agents use?', answer: 'Agents can call any REST API, query databases, read and write files, search the web, send emails, and integrate with 500+ enterprise tools including Salesforce, Microsoft 365, Google Workspace, Slack, SAP, Oracle, and Workday.' },
           { question: 'How do I monitor and debug my agents?', answer: 'Every agent run is logged with full traceability — inputs, tool calls, decisions, and outputs. Use our observability dashboard to replay runs, inspect failures, and optimize prompts. Alerts notify you of errors, cost overruns, and policy violations in real time.' },
         ]}
+        speakable={{ cssSelectors: ['h1', '.hero-subtitle'] }}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

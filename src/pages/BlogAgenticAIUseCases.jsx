@@ -25,6 +25,7 @@ export default function BlogAgenticAIUseCases() {
         tags: ['case studies', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      speakable={{ cssSelectors: ['h1', 'article > p'] }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
