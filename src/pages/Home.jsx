@@ -6,6 +6,7 @@ import SolutionsSection from '@/components/home/SolutionsSection';
 import CTASection from '@/components/home/CTASection';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import ContentParagraphs from '@/components/home/ContentParagraphs';
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
       <ProductsSection />
       <SolutionsSection />
       <CTASection />
+      <ContentParagraphs />
       <RelatedContent
         currentPage="Home"
         crossCategories={['product', 'resources', 'company']}
