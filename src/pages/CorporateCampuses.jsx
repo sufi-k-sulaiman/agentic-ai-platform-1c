@@ -6,6 +6,8 @@ import { Building, TrendingDown, Database, Workflow, DollarSign, Users, Shield, 
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -97,7 +99,11 @@ export default function CorporateCampuses() {
         description="AI-powered workplace management for corporate campuses. 30% cost savings, 40% better space utilization, 24/7 automated services."
         url="/corporate-campuses"
         keywords={['corporate campus', 'workplace automation', 'space management', 'facility optimization', 'employee experience']}
+        image="https://images.unsplash.com/photo-1522202172294-6940c44f7c74?w=1200&h=630&fit=crop"
+        service={{ type: 'Corporate Campus AI', areaServed: 'Worldwide' }}
+        localBusiness={{ name: '1C Platform - Corporate Campus AI', telephone: '+1-800-1C-CORP' }}
       />
+      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Corporate Campuses' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -333,6 +339,7 @@ export default function CorporateCampuses() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent currentPage="CorporateCampuses" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
   );
 }

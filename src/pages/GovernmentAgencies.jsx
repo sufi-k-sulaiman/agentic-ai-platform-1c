@@ -5,6 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2, TrendingDown, Database, Workflow, DollarSign, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -83,6 +86,16 @@ const metrics = [
 export default function GovernmentAgencies() {
   return (
     <div className="bg-white">
+      <PageMeta
+        title="Government AI Solutions"
+        description="AI-powered public services for government agencies. 40% cost reduction, 75% faster processing, 50% higher citizen satisfaction."
+        url="/government-agencies"
+        keywords={['government AI', 'public services', 'citizen engagement', 'government automation', 'civic technology']}
+        image="https://images.unsplash.com/photo-1521791579171-1aa5986f0589?w=1200&h=630&fit=crop"
+        service={{ type: 'Government AI Solutions', areaServed: 'Worldwide' }}
+        localBusiness={{ name: '1C Platform - Government AI', telephone: '+1-800-1C-GOVERN' }}
+      />
+      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Government' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -318,6 +331,7 @@ export default function GovernmentAgencies() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent currentPage="GovernmentAgencies" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
   );
 }

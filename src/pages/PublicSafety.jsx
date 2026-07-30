@@ -6,6 +6,8 @@ import { Shield, TrendingDown, Database, Workflow, DollarSign, AlertTriangle, Cl
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const challenges = [
   {
@@ -88,7 +90,11 @@ export default function PublicSafety() {
         description="AI-powered emergency response and law enforcement. 40% faster response times, 65% crime prevention, 30% cost reduction through predictive policing."
         url="/public-safety"
         keywords={['public safety AI', 'emergency response', 'predictive policing', '911 dispatch', 'law enforcement technology']}
+        image="https://images.unsplash.com/photo-1521295296519-6449b00d7773?w=1200&h=630&fit=crop"
+        service={{ type: 'Public Safety AI', areaServed: 'Worldwide' }}
+        localBusiness={{ name: '1C Platform - Public Safety AI', telephone: '+1-800-1C-SAFETY' }}
       />
+      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Public Safety' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -269,6 +275,7 @@ export default function PublicSafety() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent currentPage="PublicSafety" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
   );
 }

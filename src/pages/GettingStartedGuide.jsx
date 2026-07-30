@@ -24,6 +24,19 @@ export default function GettingStartedGuide() {
         title="Getting Started Guide"
         description="New to 1cPlatform? Start here with our comprehensive getting started guides and tutorials."
         url="/getting-started"
+        keywords={['getting started', 'quick start', 'onboarding guide', 'AI tutorial', 'platform setup']}
+        howTo={{
+          name: 'Getting Started with 1C Platform',
+          description: 'Follow these steps to set up your account and deploy your first AI agent',
+          steps: [
+            { name: 'Create your account', text: 'Sign up for a free 1C Platform account. No credit card required to start.' },
+            { name: 'Get your API key', text: 'Navigate to Settings > API Keys and generate a new API key for your application.' },
+            { name: 'Install the SDK', text: 'Install our SDK via npm install @base44/sdk or pip install base44 depending on your language.' },
+            { name: 'Create your first agent', text: 'Use the dashboard or SDK to create your first autonomous AI agent from a template.' },
+            { name: 'Test your agent', text: 'Test your agent in the sandbox environment to ensure it behaves as expected.' },
+            { name: 'Deploy to production', text: 'Once tested, deploy your agent to production with a single click or CLI command.' },
+          ],
+        }}
       />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

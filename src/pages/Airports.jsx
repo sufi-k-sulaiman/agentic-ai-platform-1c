@@ -6,6 +6,8 @@ import { Plane, TrendingDown, Database, Workflow, DollarSign, Users, Shield, Arr
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -89,7 +91,20 @@ export default function Airports() {
         description="AI-powered airport operations optimization. 35% cost reduction, 25% better on-time performance, 40% higher passenger satisfaction through automated operations."
         url="/airports"
         keywords={['airport AI', 'airport operations', 'flight delays', 'passenger experience', 'gate optimization', 'aviation technology']}
+        image="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&h=630&fit=crop"
+        service={{
+          type: 'Airport AI Solutions',
+          areaServed: 'Worldwide',
+        }}
+        localBusiness={{
+          name: '1C Platform - Airport AI',
+          telephone: '+1-800-1C-AIRPORT',
+        }}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Airports' }
+      ]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -304,6 +319,12 @@ export default function Airports() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="Airports"
+        category="industry"
+        crossCategories={['product']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

@@ -5,6 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Train, TrendingDown, Database, Workflow, DollarSign, Users, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -83,6 +86,25 @@ const metrics = [
 export default function Transit() {
   return (
     <div className="bg-white">
+      <PageMeta
+        title="Transit AI Solutions"
+        description="AI-powered public transportation optimization. 25% cost reduction, 95% on-time performance, 35% ridership growth through dynamic routing and predictive maintenance."
+        url="/transit"
+        keywords={['transit AI', 'public transportation', 'route optimization', 'fleet management', 'transit automation', 'ridership analytics']}
+        image="https://images.unsplash.com/photo-1505723900298-9a5e86f7c9e5?w=1200&h=630&fit=crop"
+        service={{
+          type: 'Public Transit AI Solutions',
+          areaServed: 'Worldwide',
+        }}
+        localBusiness={{
+          name: '1C Platform - Transit AI',
+          telephone: '+1-800-1C-TRANSIT',
+        }}
+      />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Public Transit' }
+      ]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -325,6 +347,12 @@ export default function Transit() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="Transit"
+        category="industry"
+        crossCategories={['product']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

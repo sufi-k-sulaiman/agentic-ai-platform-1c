@@ -6,6 +6,8 @@ import { Server, TrendingDown, Database, Workflow, DollarSign, Zap, Shield, Arro
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -97,7 +99,20 @@ export default function DataCenters() {
         description="Autonomous data center operations with 35% energy savings and 99.999% uptime. Predictive maintenance, real-time optimization, and $2M+ annual savings per facility."
         url="/data-centers"
         keywords={['data center automation', 'DCIM', 'predictive maintenance', 'energy optimization', 'infrastructure automation']}
+        image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=630&fit=crop"
+        service={{
+          type: 'Data Center AI Solutions',
+          areaServed: 'Worldwide',
+        }}
+        localBusiness={{
+          name: '1C Platform - Data Center AI',
+          telephone: '+1-800-1C-DATACENTER',
+        }}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Data Centers' }
+      ]} />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -339,6 +354,12 @@ export default function DataCenters() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="DataCenters"
+        category="industry"
+        crossCategories={['product']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

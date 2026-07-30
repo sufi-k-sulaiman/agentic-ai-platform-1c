@@ -6,6 +6,8 @@ import { Building2, TrendingDown, Database, Workflow, DollarSign, TrendingUp, Us
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -97,7 +99,11 @@ export default function PropertyManagement() {
         description="AI-powered property management reducing costs by 40%. Automated maintenance, tenant services, and operations. 99.9% response rate, 24/7 availability."
         url="/property-management"
         keywords={['property management AI', 'smart buildings', 'automated maintenance', 'tenant management', 'facilities automation']}
+        image="https://images.unsplash.com/photo-1560510525667-88b934b2c3c5?w=1200&h=630&fit=crop"
+        service={{ type: 'Property Management AI', areaServed: 'Worldwide' }}
+        localBusiness={{ name: '1C Platform - Property AI', telephone: '+1-800-1C-PROPERTY' }}
       />
+      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Property Management' }]} />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -339,6 +345,7 @@ export default function PropertyManagement() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent currentPage="PropertyManagement" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
   );
 }

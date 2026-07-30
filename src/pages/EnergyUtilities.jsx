@@ -6,6 +6,8 @@ import { Zap, TrendingDown, Database, Workflow, DollarSign, Shield, Activity, Ar
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -89,7 +91,11 @@ export default function EnergyUtilities() {
         description="AI-powered smart grid management reducing waste by 20% and outages by 40%. Predictive maintenance, renewable integration, and grid optimization."
         url="/energy-utilities"
         keywords={['smart grid', 'energy AI', 'utility automation', 'predictive maintenance', 'renewable energy']}
+        image="https://images.unsplash.com/photo-1593350677244-7e6d8b0b0b0b?w=1200&h=630&fit=crop"
+        service={{ type: 'Energy & Utilities AI', areaServed: 'Worldwide' }}
+        localBusiness={{ name: '1C Platform - Energy AI', telephone: '+1-800-1C-ENERGY' }}
       />
+      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Energy & Utilities' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -293,6 +299,7 @@ export default function EnergyUtilities() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent currentPage="EnergyUtilities" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
   );
 }

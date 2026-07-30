@@ -249,6 +249,15 @@ export default function CourseDetail() {
         description={course.description}
         url={`/course-detail?id=${courseId}`}
         keywords={[course.title, 'AI course', course.level, 'online learning']}
+        image={course.image}
+        course={{
+          name: course.title,
+          provider: '1C Platform',
+          description: course.description,
+          rating: String(course.rating),
+          reviewCount: String(course.reviews || 1),
+        }}
+        noIndex={false}
       />
       
       {/* Hero */}
