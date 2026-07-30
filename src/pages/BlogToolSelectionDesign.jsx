@@ -6,6 +6,8 @@ import { ArrowLeft, CheckCircle, Target, Search, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogToolSelectionDesign() {
   return (
@@ -15,7 +17,16 @@ export default function BlogToolSelectionDesign() {
         description="Master the art of selecting and integrating tools for AI agents. Design patterns for tool discovery, evaluation, and seamless integration."
         url="/blog/tool-selection-design"
         keywords={['AI agent tools', 'tool selection', 'tool integration', 'agent design', 'API integration', 'tool discovery']}
+        article={{
+        author: 'Kevin Zhang',
+        datePublished: '2025-01-14',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Selection and Integration Design fo' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

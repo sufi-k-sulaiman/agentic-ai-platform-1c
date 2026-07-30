@@ -6,6 +6,8 @@ import { ArrowLeft, Shield, Lock, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogSecurityComplianceAI() {
   return (
@@ -15,7 +17,16 @@ export default function BlogSecurityComplianceAI() {
         description="Secure your AI apps. Data privacy, prompt injection prevention, output filtering, compliance requirements, and security best practices."
         url="/blog/security-compliance-ai"
         keywords={['AI security', 'prompt injection', 'data privacy', 'AI compliance', 'output filtering']}
+        article={{
+        author: 'Dr. Alex Kumar',
+        datePublished: '2025-01-08',
+        image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200',
+        section: 'Agentic Insights',
+        tags: ['agentic insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Security and Compliance in Generative AI' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

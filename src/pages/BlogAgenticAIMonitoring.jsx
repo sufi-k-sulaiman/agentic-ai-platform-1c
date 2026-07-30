@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIMonitoring() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIMonitoring() {
         title="Monitoring and Auditing AI Agents: Observability Best Practices"
         description="Learn how to monitor autonomous AI agents in production. Metrics, dashboards, alerting, and audit procedures."
         url="/blog/agentic-ai-monitoring"
+        article={{
+        author: 'Kevin Zhang',
+        datePublished: '2025-01-08',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/6dd3a31d4_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Monitoring and Auditing AI Agents: Obser' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -226,6 +237,8 @@ export default function BlogAgenticAIMonitoring() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIMonitoring" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

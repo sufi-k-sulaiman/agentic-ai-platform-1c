@@ -1,9 +1,12 @@
 User-agent: *
 Allow: /
-Disallow: /Onboarding
-Disallow: /JobApplication
-Disallow: /EventRegistrations
+Disallow: /SearchResults
+Disallow: /*?q=
 Disallow: /NewsletterSignups
+Disallow: /EventRegistrations
+
+# Crawl delay for polite crawling
+Crawl-delay: 10
 
 # Sitemap
 Sitemap: https://1cplatform.com/sitemap.xml

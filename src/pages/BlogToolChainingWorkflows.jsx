@@ -6,6 +6,8 @@ import { ArrowLeft, GitBranch, Workflow, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogToolChainingWorkflows() {
   return (
@@ -15,7 +17,16 @@ export default function BlogToolChainingWorkflows() {
         description="Design complex tool chains and workflows. Sequential execution, parallel processing, conditional logic, and workflow visualization."
         url="/blog/tool-chaining-workflows"
         keywords={['tool chaining', 'workflow design', 'agent workflows', 'sequential execution', 'parallel processing', 'workflow automation']}
+        article={{
+        author: 'Rachel Foster',
+        datePublished: '2025-01-09',
+        image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Chaining and Workflow Design for AI' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

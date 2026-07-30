@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIUseCases() {
   return (
@@ -15,6 +16,13 @@ export default function BlogAgenticAIUseCases() {
         description="Explore real-world applications of autonomous AI agents across departments with implementation guides and expected outcomes."
         url="/blog/agentic-ai-use-cases"
         keywords={['AI use cases', 'AI applications', 'business automation', 'enterprise AI', 'real-world AI']}
+        article={{
+        author: 'Alexandra Moore',
+        datePublished: '2024-11-12',
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200',
+        section: 'Case Studies',
+        tags: ['case studies', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

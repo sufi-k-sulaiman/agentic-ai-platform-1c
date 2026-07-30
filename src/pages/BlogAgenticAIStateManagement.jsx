@@ -6,6 +6,8 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIStateManagement() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgenticAIStateManagement() {
         description="Compare stateless and stateful architectures for agentic AI systems. Learn about session management, context persistence, and memory patterns."
         url="/blog/agentic-ai-state-management"
         keywords={['AI state management', 'stateless architecture', 'stateful systems', 'session management']}
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AgenticAIStateManagement' }]} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
@@ -51,6 +62,8 @@ export default function BlogAgenticAIStateManagement() {
             </div>
           </motion.div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIStateManagement" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
 
       {/* Article Content */}

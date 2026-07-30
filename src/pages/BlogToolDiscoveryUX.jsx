@@ -6,6 +6,8 @@ import { ArrowLeft, Search, Filter, Tag, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogToolDiscoveryUX() {
   return (
@@ -15,7 +17,16 @@ export default function BlogToolDiscoveryUX() {
         description="Design effective tool discovery experiences for AI agents. Search, categorization, recommendations, and intelligent tool matching."
         url="/blog/tool-discovery-ux"
         keywords={['tool discovery', 'search UX', 'tool marketplace', 'agent tools', 'recommendation systems', 'tool matching']}
+        article={{
+        author: 'Emma Wilson',
+        datePublished: '2025-01-11',
+        image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Discovery UX: Helping Agents Find t' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

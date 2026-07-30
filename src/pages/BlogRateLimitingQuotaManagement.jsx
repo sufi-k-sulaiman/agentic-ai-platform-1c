@@ -6,6 +6,8 @@ import { ArrowLeft, Gauge, Shield, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogRateLimitingQuotaManagement() {
   return (
@@ -15,7 +17,16 @@ export default function BlogRateLimitingQuotaManagement() {
         description="Control AI usage and costs. User quotas, rate limiting strategies, fair usage policies, and overage handling."
         url="/blog/rate-limiting-quota-management"
         keywords={['rate limiting', 'quota management', 'usage limits', 'fair usage', 'cost control']}
+        article={{
+        author: 'Jennifer Martinez',
+        datePublished: '2025-01-21',
+        image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Rate Limiting and Quota Management for A' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

@@ -6,6 +6,8 @@ import { ArrowLeft, Eye, Bug, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIObservabilityDebugging() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAIObservabilityDebugging() {
         description="Debug AI apps effectively. Tracing, logging, replay systems, LLM call inspection, and troubleshooting methodologies."
         url="/blog/ai-observability-debugging"
         keywords={['AI debugging', 'observability', 'tracing', 'logging', 'troubleshooting', 'LLM debugging']}
+        article={{
+        author: 'Rachel Foster',
+        datePublished: '2025-01-22',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Application Observability and Debuggi' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

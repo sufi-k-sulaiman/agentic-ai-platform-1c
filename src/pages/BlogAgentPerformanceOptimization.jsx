@@ -6,6 +6,8 @@ import { ArrowLeft, Zap, TrendingUp, Timer } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgentPerformanceOptimization() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgentPerformanceOptimization() {
         description="Optimize agent performance. Latency reduction, parallel execution, caching strategies, and resource management."
         url="/blog/agent-performance-optimization"
         keywords={['performance optimization', 'latency reduction', 'agent speed', 'parallel execution', 'caching']}
+        article={{
+        author: 'Dr. Emily Carter',
+        datePublished: '2025-01-20',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Performance Optimization for AI Agents: ' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

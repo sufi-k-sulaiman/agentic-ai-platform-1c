@@ -6,6 +6,8 @@ import { ArrowLeft, Shield, RefreshCw, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgentReliabilityResilience() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgentReliabilityResilience() {
         description="Build agents that handle failures gracefully. Circuit breakers, timeouts, retries, fallbacks, and self-healing patterns."
         url="/blog/agent-reliability-resilience"
         keywords={['agent reliability', 'fault tolerance', 'circuit breakers', 'resilience', 'error recovery']}
+        article={{
+        author: 'Michael Rodriguez',
+        datePublished: '2025-01-21',
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agent Reliability and Resilience: Buildi' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

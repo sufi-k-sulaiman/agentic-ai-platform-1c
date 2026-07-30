@@ -6,6 +6,8 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIDeploymentPatterns() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgenticAIDeploymentPatterns() {
         description="Compare deployment patterns for agentic AI systems. Learn about cloud, on-premises, hybrid, and edge deployment strategies with pros and cons."
         url="/blog/agentic-ai-deployment-patterns"
         keywords={['AI deployment', 'cloud vs on-premise', 'hybrid cloud', 'edge computing AI']}
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AgenticAIDeploymentPatterns' }]} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
@@ -51,6 +62,8 @@ export default function BlogAgenticAIDeploymentPatterns() {
             </div>
           </motion.div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIDeploymentPatterns" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
 
       {/* Article Content */}

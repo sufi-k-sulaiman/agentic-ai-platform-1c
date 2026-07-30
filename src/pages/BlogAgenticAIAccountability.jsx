@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIAccountability() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIAccountability() {
         title="AI Agent Accountability and Transparency: Who's Responsible?"
         description="Establish clear accountability for autonomous AI agents. Learn how to track decisions, explain actions, and assign responsibility."
         url="/blog/agentic-ai-accountability"
+        article={{
+        author: 'Thomas Anderson',
+        datePublished: '2025-01-10',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/4f073cd9e_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Agent Accountability and Transparency' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -217,6 +228,8 @@ export default function BlogAgenticAIAccountability() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIAccountability" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

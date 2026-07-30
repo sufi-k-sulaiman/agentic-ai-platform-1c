@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAISecurityPrivacy() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAISecurityPrivacy() {
         title="Security and Privacy in Agentic AI: Protecting Data and Systems"
         description="Comprehensive guide to securing autonomous AI agents, protecting sensitive data, and ensuring privacy compliance."
         url="/blog/agentic-ai-security-privacy"
+        article={{
+        author: 'Marcus Williams',
+        datePublished: '2025-01-12',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/940a4a4c2_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Security and Privacy in Agentic AI: Prot' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -243,6 +254,8 @@ export default function BlogAgenticAISecurityPrivacy() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAISecurityPrivacy" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

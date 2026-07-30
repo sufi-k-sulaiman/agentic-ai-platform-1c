@@ -6,6 +6,8 @@ import { ArrowLeft, Code, Key, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAPIDesignAgenticTools() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAPIDesignAgenticTools() {
         description="Build developer-friendly APIs for AI agent tools. Endpoint design, authentication, versioning, and documentation best practices."
         url="/blog/api-design-agentic-tools"
         keywords={['API design', 'REST API', 'GraphQL', 'agent APIs', 'developer experience', 'API best practices']}
+        article={{
+        author: 'Michael Chen',
+        datePublished: '2025-01-12',
+        image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'API Design for Agentic AI Tools: Develop' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

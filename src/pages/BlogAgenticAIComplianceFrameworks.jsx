@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIComplianceFrameworks() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIComplianceFrameworks() {
         title="Compliance Frameworks for Agentic AI: SOC 2, ISO, and Beyond"
         description="Navigate compliance requirements for AI agents. SOC 2, ISO 27001, GDPR, HIPAA, and industry-specific standards."
         url="/blog/agentic-ai-compliance-frameworks"
+        article={{
+        author: 'Patricia Johnson',
+        datePublished: '2025-01-06',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/6fe64484b_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Compliance Frameworks for Agentic AI: SO' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -255,6 +266,8 @@ export default function BlogAgenticAIComplianceFrameworks() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIComplianceFrameworks" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

@@ -6,6 +6,8 @@ import { ArrowLeft, Puzzle, Lightbulb, GitBranch } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogComplexProblemSolving() {
   return (
@@ -15,7 +17,16 @@ export default function BlogComplexProblemSolving() {
         description="Discover how agents tackle multi-step problems. Problem decomposition, solution exploration, constraint satisfaction, and optimization strategies."
         url="/blog/complex-problem-solving"
         keywords={['problem solving', 'AI reasoning', 'problem decomposition', 'optimization', 'constraint satisfaction', 'agent intelligence']}
+        article={{
+        author: 'Kevin Zhang',
+        datePublished: '2025-01-21',
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Complex Problem-Solving Capabilities of ' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

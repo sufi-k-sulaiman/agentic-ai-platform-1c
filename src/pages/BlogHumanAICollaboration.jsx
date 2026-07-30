@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogHumanAICollaboration() {
   return (
@@ -15,6 +16,13 @@ export default function BlogHumanAICollaboration() {
         description="Explore how humans and AI agents will work together in the future workplace, creating unprecedented productivity and innovation."
         url="/blog/human-ai-collaboration"
         keywords={['human-AI collaboration', 'future of work', 'AI workplace', 'augmented intelligence', 'workforce transformation']}
+        article={{
+        author: 'Jennifer Martinez',
+        datePublished: '2024-11-20',
+        image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAccessibleAIDesign() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAccessibleAIDesign() {
         description="Design accessible AI agents for all users. WCAG compliance, screen reader support, keyboard navigation, and inclusive design principles."
         url="/blog/accessible-ai-design"
         keywords={['accessible AI', 'inclusive design', 'WCAG compliance', 'AI accessibility']}
+        article={{
+        author: 'Maria Rodriguez',
+        datePublished: '2025-01-15',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a2aae8476_generated_image.png',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Accessibility in Agentic AI Design: Incl' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -333,6 +344,8 @@ export default function BlogAccessibleAIDesign() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogAccessibleAIDesign" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

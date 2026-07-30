@@ -6,6 +6,8 @@ import { ArrowLeft, Wrench, Code, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogToolUseFunctionCalling() {
   return (
@@ -15,7 +17,16 @@ export default function BlogToolUseFunctionCalling() {
         description="Learn how agents interact with external tools and APIs. Function calling, parameter extraction, tool selection, and execution patterns."
         url="/blog/tool-use-function-calling"
         keywords={['function calling', 'AI tools', 'tool use', 'API integration', 'agent capabilities']}
+        article={{
+        author: 'Kevin Zhang',
+        datePublished: '2025-01-23',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Use and Function Calling Capabiliti' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

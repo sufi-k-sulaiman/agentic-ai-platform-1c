@@ -6,6 +6,8 @@ import { ArrowLeft, MessageSquare, Ear, Languages } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogNaturalLanguageCapabilities() {
   return (
@@ -15,7 +17,16 @@ export default function BlogNaturalLanguageCapabilities() {
         description="Master NLU in AI agents. Intent recognition, entity extraction, context understanding, sentiment analysis, and conversational capabilities."
         url="/blog/natural-language-capabilities"
         keywords={['NLU', 'natural language processing', 'intent recognition', 'entity extraction', 'conversational AI', 'sentiment analysis']}
+        article={{
+        author: 'Rachel Foster',
+        datePublished: '2025-01-20',
+        image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Natural Language Understanding Capabilit' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

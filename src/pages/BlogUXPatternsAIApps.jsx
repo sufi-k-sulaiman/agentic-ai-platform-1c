@@ -6,6 +6,8 @@ import { ArrowLeft, Sparkles, Loader2, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogUXPatternsAIApps() {
   return (
@@ -15,7 +17,16 @@ export default function BlogUXPatternsAIApps() {
         description="Design delightful AI app experiences. Loading states, streaming UX, error handling, feedback collection, and trust-building patterns."
         url="/blog/ux-patterns-ai-apps"
         keywords={['AI UX', 'user experience', 'loading states', 'streaming UI', 'AI design patterns']}
+        article={{
+        author: 'Emma Wilson',
+        datePublished: '2025-01-09',
+        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200',
+        section: 'Agentic Insights',
+        tags: ['agentic insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'User Experience Design Patterns for AI-P' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

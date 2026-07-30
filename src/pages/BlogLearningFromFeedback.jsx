@@ -6,6 +6,8 @@ import { ArrowLeft, ThumbsUp, TrendingUp, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogLearningFromFeedback() {
   return (
@@ -15,7 +17,16 @@ export default function BlogLearningFromFeedback() {
         description="Explore feedback mechanisms in AI agents. User corrections, implicit signals, reinforcement learning, and continuous improvement cycles."
         url="/blog/learning-from-feedback"
         keywords={['feedback learning', 'AI improvement', 'user feedback', 'reinforcement learning', 'continuous improvement']}
+        article={{
+        author: 'Dr. Alex Thompson',
+        datePublished: '2025-01-17',
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Learning from Feedback: How AI Agents Im' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

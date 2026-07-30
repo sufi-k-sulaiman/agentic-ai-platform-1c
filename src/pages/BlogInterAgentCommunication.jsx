@@ -6,6 +6,8 @@ import { ArrowLeft, MessageCircle, Radio, Network } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogInterAgentCommunication() {
   return (
@@ -15,7 +17,16 @@ export default function BlogInterAgentCommunication() {
         description="Design robust communication between agents. Message formats, protocols, event buses, and coordination patterns."
         url="/blog/inter-agent-communication"
         keywords={['agent communication', 'message protocols', 'event bus', 'multi-agent systems', 'agent coordination']}
+        article={{
+        author: 'Dr. Sarah Mitchell',
+        datePublished: '2025-01-22',
+        image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Inter-Agent Communication Protocols: Bui' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

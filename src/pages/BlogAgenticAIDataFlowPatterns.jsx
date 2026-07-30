@@ -6,6 +6,8 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIDataFlowPatterns() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgenticAIDataFlowPatterns() {
         description="Compare data flow patterns for agentic AI systems. Learn about push-based, pull-based, and streaming architectures for different use cases."
         url="/blog/agentic-ai-data-flow-patterns"
         keywords={['AI data flow', 'streaming architecture', 'push pull patterns', 'event streaming']}
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AgenticAIDataFlowPatterns' }]} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
@@ -51,6 +62,8 @@ export default function BlogAgenticAIDataFlowPatterns() {
             </div>
           </motion.div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIDataFlowPatterns" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
 
       {/* Article Content */}

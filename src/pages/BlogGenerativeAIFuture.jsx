@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogGenerativeAIFuture() {
   return (
@@ -13,7 +15,16 @@ export default function BlogGenerativeAIFuture() {
         title="The Future of Generative AI: Trends and Predictions for 2025-2030"
         description="Explore where generative AI is heading. From multimodal models to autonomous agents, discover the trends shaping the next 5 years."
         url="/blog/generative-ai-future"
+        article={{
+        author: 'Dr. Kevin Park',
+        datePublished: '2024-12-15',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/cf6bc9a87_generated_image.png',
+        section: 'Generative AI',
+        tags: ['generative ai', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Advanced Generative AI Techniques: RAG, ' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -311,6 +322,8 @@ export default function BlogGenerativeAIFuture() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogGenerativeAIFuture" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

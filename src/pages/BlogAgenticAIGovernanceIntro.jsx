@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIGovernanceIntro() {
   return (
@@ -14,7 +16,16 @@ export default function BlogAgenticAIGovernanceIntro() {
         description="Understand the critical importance of governance for autonomous AI agents. Learn frameworks, best practices, and how to implement effective oversight."
         url="/blog/agentic-ai-governance-intro"
         keywords={['AI governance', 'agentic AI governance', 'AI compliance', 'AI risk management', 'autonomous AI oversight']}
+        article={{
+        author: 'Dr. Michelle Torres',
+        datePublished: '2025-01-20',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/52c2965ee_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Governance in Healthcare: Compliance ' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -257,6 +268,8 @@ export default function BlogAgenticAIGovernanceIntro() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIGovernanceIntro" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

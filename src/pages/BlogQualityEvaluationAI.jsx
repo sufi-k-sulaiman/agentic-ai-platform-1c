@@ -6,6 +6,8 @@ import { ArrowLeft, CheckCircle, BarChart3, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogQualityEvaluationAI() {
   return (
@@ -15,7 +17,16 @@ export default function BlogQualityEvaluationAI() {
         description="Build robust evaluation frameworks. Automated testing, human evaluation, quality metrics, and continuous monitoring."
         url="/blog/quality-evaluation-ai"
         keywords={['AI testing', 'quality evaluation', 'AI metrics', 'automated testing', 'human evaluation']}
+        article={{
+        author: 'Rachel Foster',
+        datePublished: '2025-01-11',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
+        section: 'Agentic Insights',
+        tags: ['agentic insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Quality Evaluation and Testing for Gener' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

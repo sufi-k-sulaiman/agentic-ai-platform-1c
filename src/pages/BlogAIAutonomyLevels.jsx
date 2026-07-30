@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIAutonomyLevels() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAIAutonomyLevels() {
         title="The 6 Levels of AI Autonomy: A Complete Framework"
         description="Understand the six levels of AI autonomy from assisted to full autonomy. Learn where your AI systems fit and how to advance them."
         url="/blog/ai-autonomy-levels"
+        article={{
+        author: 'Michael Stevens',
+        datePublished: '2025-01-19',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/05ae80f12_generated_image.png',
+        section: 'AI Autonomy',
+        tags: ['ai autonomy', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'The 6 Levels of AI Autonomy: A Complete ' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -380,6 +391,8 @@ export default function BlogAIAutonomyLevels() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAIAutonomyLevels" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

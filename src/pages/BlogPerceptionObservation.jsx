@@ -6,6 +6,8 @@ import { ArrowLeft, Eye, Activity, Bell, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogPerceptionObservation() {
   return (
@@ -15,7 +17,16 @@ export default function BlogPerceptionObservation() {
         description="Understand how agents perceive their environment. State detection, change monitoring, pattern recognition, and environmental awareness."
         url="/blog/perception-observation"
         keywords={['AI perception', 'observation', 'state detection', 'change monitoring', 'environmental awareness']}
+        article={{
+        author: 'Dr. Emily Carter',
+        datePublished: '2025-01-19',
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Perception and Observation Capabilities ' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogMultiAgentUIDesign() {
   return (
@@ -15,7 +17,16 @@ export default function BlogMultiAgentUIDesign() {
         description="Design interfaces for complex multi-agent systems. Agent coordination, status visualization, and managing agent interactions."
         url="/blog/multi-agent-ui-design"
         keywords={['multi-agent UI', 'agent coordination', 'system design', 'agent orchestration']}
+        article={{
+        author: 'Michael Torres',
+        datePublished: '2025-01-18',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/d402edd7b_generated_image.png',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Multi-Agent System UI/UX: Coordinating M' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -337,6 +348,8 @@ export default function BlogMultiAgentUIDesign() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogMultiAgentUIDesign" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

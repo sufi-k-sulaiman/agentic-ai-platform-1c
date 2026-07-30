@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogChatGPTLLMs() {
   return (
@@ -15,6 +16,13 @@ export default function BlogChatGPTLLMs() {
         description="Deep dive into how ChatGPT and other LLMs work, their capabilities, limitations, and best practices for business use."
         url="/blog/chatgpt-llms"
         keywords={['ChatGPT', 'large language models', 'LLM', 'GPT-4', 'AI chatbot', 'natural language processing']}
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

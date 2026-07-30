@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogGenerativeAICode() {
   return (
@@ -13,7 +15,16 @@ export default function BlogGenerativeAICode() {
         title="AI-Powered Code Generation: Accelerating Software Development"
         description="Learn how AI code assistants like GitHub Copilot are transforming software development. Best practices, limitations, and real-world examples."
         url="/blog/generative-ai-code"
+        article={{
+        author: 'Alex Thompson',
+        datePublished: '2024-12-06',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/8df7d2e10_generated_image.png',
+        section: 'Generative AI',
+        tags: ['generative ai', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI-Powered Code Generation: Accelerating' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -262,6 +273,8 @@ export default function BlogGenerativeAICode() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogGenerativeAICode" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

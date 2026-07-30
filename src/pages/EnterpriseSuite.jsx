@@ -228,6 +228,12 @@ export default function EnterpriseSuite() {
         url="/enterprise-suite"
         keywords={['enterprise suite', 'ERP', 'CRM', 'business management', 'financial management', 'HR payroll', 'supply chain']}
         image="https://images.unsplash.com/photo-1551288044-60e67c10b9b3?w=1200&h=630&fit=crop"
+        faq={[
+          { question: 'What modules are included in the Enterprise Suite?', answer: 'The Enterprise Suite includes Financial Management, CRM, HR & Payroll, Supply Chain Management, Business Intelligence, Document Management, and Project Management — all unified on one AI-powered platform.' },
+          { question: 'Can I migrate from my existing ERP?', answer: 'Yes, we provide migration tools and professional services to migrate from SAP, Oracle, NetSuite, Microsoft Dynamics, and other ERPs. Our team handles data migration, workflow mapping, and user training.' },
+          { question: 'Does the Enterprise Suite integrate with my existing tools?', answer: 'The Enterprise Suite integrates natively with 500+ tools including Salesforce, Microsoft 365, Google Workspace, Slack, Zoom, Tableau, Power BI, QuickBooks, and more. Custom integrations are available via REST API and webhooks.' },
+          { question: 'What is the typical implementation timeline?', answer: 'Implementation typically takes 4-8 weeks depending on scope. SMB deployments can go live in 2 weeks, while full enterprise rollouts with custom modules and data migration take 6-12 weeks.' },
+        ]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

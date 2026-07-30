@@ -6,6 +6,8 @@ import { ArrowLeft, Map, Target, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogPlanningStrategyCapabilities() {
   return (
@@ -15,7 +17,16 @@ export default function BlogPlanningStrategyCapabilities() {
         description="Learn how agents plan ahead and strategize. Goal decomposition, action sequencing, resource allocation, and long-term planning capabilities."
         url="/blog/planning-strategy-capabilities"
         keywords={['AI planning', 'strategic thinking', 'goal decomposition', 'action sequencing', 'resource allocation', 'long-term planning']}
+        article={{
+        author: 'Michael Rodriguez',
+        datePublished: '2025-01-18',
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Planning and Strategy Capabilities in AI' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

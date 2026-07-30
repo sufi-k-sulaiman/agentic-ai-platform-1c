@@ -6,6 +6,8 @@ import { ArrowLeft, Zap, Brain, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogRealTimeReasoning() {
   return (
@@ -15,7 +17,16 @@ export default function BlogRealTimeReasoning() {
         description="Explore real-time reasoning capabilities. Dynamic problem solving, context switching, interrupt handling, and adaptive response generation."
         url="/blog/real-time-reasoning"
         keywords={['real-time AI', 'dynamic reasoning', 'context switching', 'interrupt handling', 'adaptive AI', 'instant decision making']}
+        article={{
+        author: 'Dr. Alex Thompson',
+        datePublished: '2025-01-16',
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Real-Time Reasoning: How Agents Think on' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

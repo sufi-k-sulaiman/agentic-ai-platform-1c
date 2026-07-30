@@ -6,6 +6,8 @@ import { ArrowLeft, Zap, Radio, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogStreamingRealTimeAI() {
   return (
@@ -15,7 +17,16 @@ export default function BlogStreamingRealTimeAI() {
         description="Implement streaming for instant feedback. Server-sent events, WebSockets, progressive rendering, and real-time UX patterns."
         url="/blog/streaming-realtime-ai"
         keywords={['streaming AI', 'real-time responses', 'SSE', 'WebSockets', 'progressive rendering']}
+        article={{
+        author: 'Michael Rodriguez',
+        datePublished: '2025-01-25',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Streaming and Real-Time AI Responses: Bu' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

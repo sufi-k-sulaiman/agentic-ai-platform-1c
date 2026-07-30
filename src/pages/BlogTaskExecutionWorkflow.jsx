@@ -6,6 +6,8 @@ import { ArrowLeft, Play, GitBranch, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogTaskExecutionWorkflow() {
   return (
@@ -15,7 +17,16 @@ export default function BlogTaskExecutionWorkflow() {
         description="Learn how agents execute complex workflows. Task orchestration, parallel execution, error recovery, and workflow optimization."
         url="/blog/task-execution-workflow"
         keywords={['task execution', 'workflow automation', 'task orchestration', 'parallel execution', 'agent workflows']}
+        article={{
+        author: 'Michael Rodriguez',
+        datePublished: '2025-01-20',
+        image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Task Execution and Workflow Capabilities' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

@@ -6,6 +6,8 @@ import { ArrowLeft, GitCompare, Database, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogFineTuningVsRAG() {
   return (
@@ -15,7 +17,16 @@ export default function BlogFineTuningVsRAG() {
         description="Compare fine-tuning and retrieval-augmented generation. When to use each, implementation patterns, and hybrid approaches."
         url="/blog/fine-tuning-vs-rag"
         keywords={['fine-tuning', 'RAG', 'retrieval augmented generation', 'AI customization', 'model training']}
+        article={{
+        author: 'Dr. Sarah Kim',
+        datePublished: '2025-01-12',
+        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200',
+        section: 'Agentic Insights',
+        tags: ['agentic insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Fine-Tuning vs RAG: Choosing the Right A' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

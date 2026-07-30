@@ -6,6 +6,8 @@ import { ArrowLeft, CheckCircle, Star, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIResponseQuality() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAIResponseQuality() {
         description="Maintain output quality across requests. Validation schemas, consistency checks, quality scoring, and improvement loops."
         url="/blog/ai-response-quality"
         keywords={['AI quality', 'output validation', 'consistency', 'quality scoring', 'response validation']}
+        article={{
+        author: 'Dr. Emily Carter',
+        datePublished: '2025-01-20',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Response Quality and Consistency: Ens' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIFutureProof() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIFutureProof() {
         title="Future-Proofing with Agentic AI: Why Autonomous Systems Win Long-Term"
         description="Why agentic AI is the future. Technology trends, market predictions, and strategic advantages of autonomous systems."
         url="/blog/agentic-ai-future-proof"
+        article={{
+        author: 'Dr. Emily Carter',
+        datePublished: '2024-12-11',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/b3d6b8b14_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Future-Proofing with Agentic AI: Why Aut' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -221,6 +232,8 @@ export default function BlogAgenticAIFutureProof() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIFutureProof" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

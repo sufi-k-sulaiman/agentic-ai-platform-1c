@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogGenerativeAIIntro() {
   return (
@@ -14,7 +16,16 @@ export default function BlogGenerativeAIIntro() {
         description="Discover what generative AI is, how it works, and why it's transforming industries. Learn about the technology behind ChatGPT, DALL-E, and more."
         url="/blog/generative-ai-intro"
         keywords={['generative AI', 'ChatGPT', 'DALL-E', 'large language models', 'AI content creation', 'transformers']}
+        article={{
+        author: 'Sarah Chen',
+        datePublished: '2024-12-10',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/946ae1662_generated_image.png',
+        section: 'Generative AI',
+        tags: ['generative ai', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Introduction to Generative AI: A Complet' }]} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
@@ -168,6 +179,8 @@ export default function BlogGenerativeAIIntro() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogGenerativeAIIntro" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

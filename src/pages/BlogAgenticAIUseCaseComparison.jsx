@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIUseCaseComparison() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIUseCaseComparison() {
         title="Use Cases: Where Agentic AI and Traditional AI Each Excel"
         description="Real-world use cases comparing agentic and traditional AI approaches. See which technology fits your specific business need."
         url="/blog/agentic-ai-use-case-comparison"
+        article={{
+        author: 'Rachel Thompson',
+        datePublished: '2024-12-14',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a2e628435_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Use Cases: Where Agentic AI and Traditio' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -224,6 +235,8 @@ export default function BlogAgenticAIUseCaseComparison() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIUseCaseComparison" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

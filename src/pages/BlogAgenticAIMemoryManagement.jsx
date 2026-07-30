@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIMemoryManagement() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgenticAIMemoryManagement() {
         description="Complete guide to memory architecture for AI agents. Learn about short-term, long-term, and episodic memory patterns for autonomous systems."
         url="/blog/agentic-ai-memory-management"
         keywords={['AI memory', 'agent memory', 'agentic AI architecture', 'context management', 'RAG']}
+        article={{
+        author: 'Dr. Sarah Mitchell',
+        datePublished: '2025-01-14',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/96c754a07_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Memory Management in Agentic AI: Short-t' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -360,6 +371,8 @@ export default function BlogAgenticAIMemoryManagement() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIMemoryManagement" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

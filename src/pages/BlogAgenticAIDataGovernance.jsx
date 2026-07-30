@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIDataGovernance() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIDataGovernance() {
         title="Data Governance for Agentic AI: Managing Information Flows"
         description="Control how AI agents access, use, and share data. Frameworks for data classification, access control, and lifecycle management."
         url="/blog/agentic-ai-data-governance"
+        article={{
+        author: 'Linda Chen',
+        datePublished: '2025-01-09',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/0c4ccc602_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Data Governance for Agentic AI: Managing' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -237,6 +248,8 @@ export default function BlogAgenticAIDataGovernance() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIDataGovernance" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

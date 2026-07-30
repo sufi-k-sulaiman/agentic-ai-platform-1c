@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIEthics() {
   return (
@@ -15,6 +16,13 @@ export default function BlogAgenticAIEthics() {
         description="Navigate the ethical challenges of agentic AI with frameworks for responsible deployment and governance."
         url="/blog/agentic-ai-ethics"
         keywords={['AI ethics', 'responsible AI', 'AI governance', 'ethical AI', 'AI accountability']}
+        article={{
+        author: 'Dr. Priya Sharma',
+        datePublished: '2024-11-08',
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

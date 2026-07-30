@@ -6,6 +6,8 @@ import { ArrowLeft, Network, Shuffle, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogMultiModelOrchestration() {
   return (
@@ -15,7 +17,16 @@ export default function BlogMultiModelOrchestration() {
         description="Coordinate multiple AI models effectively. Model routing, fallback chains, ensemble methods, and cost-performance optimization."
         url="/blog/multi-model-orchestration"
         keywords={['multi-model', 'model orchestration', 'model routing', 'ensemble AI', 'model fallback']}
+        article={{
+        author: 'Dr. Alex Thompson',
+        datePublished: '2025-01-24',
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Multi-Model Orchestration in AI Applicat' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

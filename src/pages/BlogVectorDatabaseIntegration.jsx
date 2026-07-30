@@ -6,6 +6,8 @@ import { ArrowLeft, Database, Search, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogVectorDatabaseIntegration() {
   return (
@@ -15,7 +17,16 @@ export default function BlogVectorDatabaseIntegration() {
         description="Master vector databases for AI apps. Embeddings, similarity search, indexing strategies, and production deployment patterns."
         url="/blog/vector-database-integration"
         keywords={['vector database', 'embeddings', 'similarity search', 'Pinecone', 'Weaviate', 'RAG']}
+        article={{
+        author: 'Kevin Zhang',
+        datePublished: '2025-01-23',
+        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Vector Database Integration for AI Appli' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAILimitations() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAILimitations() {
         title="Limitations of Agentic AI: When Traditional AI is Still Better"
         description="Honest assessment of where agentic AI falls short. Understand constraints and when to stick with traditional approaches."
         url="/blog/agentic-ai-limitations"
+        article={{
+        author: 'Mark Stevens',
+        datePublished: '2024-12-10',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/90c3d3130_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Limitations of Agentic AI: When Traditio' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -207,6 +218,8 @@ export default function BlogAgenticAILimitations() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAILimitations" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

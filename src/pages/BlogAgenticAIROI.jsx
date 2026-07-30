@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIROI() {
   return (
@@ -15,6 +16,13 @@ export default function BlogAgenticAIROI() {
         description="Learn how to calculate, track, and maximize returns from autonomous AI agents with proven frameworks and metrics."
         url="/blog/agentic-ai-roi"
         keywords={['AI ROI', 'return on investment', 'AI metrics', 'business value', 'cost savings']}
+        article={{
+        author: 'Robert Taylor',
+        datePublished: '2024-11-25',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+        section: 'Product',
+        tags: ['product', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

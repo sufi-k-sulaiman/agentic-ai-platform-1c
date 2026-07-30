@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogGenerativeAIFineTuning() {
   return (
@@ -13,7 +15,16 @@ export default function BlogGenerativeAIFineTuning() {
         title="Fine-Tuning Generative AI Models: A Practical Guide"
         description="Learn how to customize generative AI models for your specific needs through fine-tuning. Techniques, best practices, and real-world examples."
         url="/blog/generative-ai-finetuning"
+        article={{
+        author: 'Dr. Lisa Anderson',
+        datePublished: '2024-12-02',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/78d43cb2a_generated_image.png',
+        section: 'Generative AI',
+        tags: ['generative ai', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Fine-Tuning Generative AI Models: A Prac' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -316,6 +327,8 @@ export default function BlogGenerativeAIFineTuning() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogGenerativeAIFineTuning" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

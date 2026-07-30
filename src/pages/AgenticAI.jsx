@@ -362,6 +362,12 @@ export default function AgenticAI() {
         url="/agentic-ai"
         keywords={['Agentic AI', 'autonomous agents', 'AI automation', 'intelligent agents', 'no-code AI', 'multi-agent systems']}
         image="https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop"
+        faq={[
+          { question: 'What are agentic AI agents?', answer: 'Agentic AI agents are autonomous AI systems that can think, plan, decide, and execute multi-step tasks independently. Unlike traditional chatbots, agentic AI agents can use tools, access databases, coordinate with other agents, and complete complex workflows without human intervention.' },
+          { question: 'Do I need coding skills to build AI agents?', answer: 'No. Our no-code visual builder lets you create AI agents by defining goals, selecting tools, and configuring behavior — all through an intuitive drag-and-drop interface. Developers can also use our SDK and CLI for advanced control.' },
+          { question: 'How many agents can I deploy?', answer: 'The number of agents depends on your plan. Starter plan includes 1 agent, Professional plan includes 10 agents, and Enterprise plan offers unlimited agents with auto-scaling across multiple regions.' },
+          { question: 'Can agents work together on complex tasks?', answer: 'Yes. Our multi-agent orchestration system allows agents to communicate, delegate tasks, share context, and coordinate on complex workflows. You can define agent teams, role hierarchies, and collaboration patterns.' },
+        ]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

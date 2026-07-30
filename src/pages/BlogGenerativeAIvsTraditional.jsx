@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogGenerativeAIvsTraditional() {
   return (
@@ -13,7 +15,16 @@ export default function BlogGenerativeAIvsTraditional() {
         title="Generative AI vs Traditional AI: Key Differences Explained"
         description="Understand the fundamental differences between generative and traditional AI, their use cases, and which one is right for your business needs."
         url="/blog/generative-ai-vs-traditional"
+        article={{
+        author: 'Michael Rodriguez',
+        datePublished: '2024-12-09',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/becba97a2_generated_image.png',
+        section: 'Generative AI',
+        tags: ['generative ai', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Generative AI vs Traditional AI: Key Dif' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -194,6 +205,8 @@ export default function BlogGenerativeAIvsTraditional() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogGenerativeAIvsTraditional" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

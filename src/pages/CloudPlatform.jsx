@@ -17,6 +17,12 @@ export default function CloudPlatform() {
         url="/cloud-platform"
         keywords={['cloud platform', 'AI infrastructure', 'Kubernetes', 'auto-scaling', 'edge network', 'managed databases']}
         image="https://images.unsplash.com/photo-1451187582-2980bd714515?w=1200&h=630&fit=crop"
+        faq={[
+          { question: 'What is the uptime SLA?', answer: 'We provide a 99.99% uptime SLA for Enterprise customers, with service credits if we fall short. This translates to less than 5 minutes of downtime per month.' },
+          { question: 'Can I deploy on-premise or hybrid?', answer: 'Yes. We support cloud, on-premise, and hybrid deployments. Use our Kubernetes operator to deploy on your own data centers, or connect on-premise resources to the cloud via secure VPN or private link.' },
+          { question: 'Which regions are available?', answer: 'We operate across 32 global regions including US, Canada, Europe, UK, Asia, and Australia. Edge locations are available in 200+ cities for low-latency content delivery.' },
+          { question: 'How does auto-scaling work?', answer: 'Our platform automatically scales your AI agents and services based on demand. Configure scaling policies by CPU, memory, request queue depth, or custom metrics. Scale-to-zero is supported for cost optimization.' },
+        ]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

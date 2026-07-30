@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAutonomousAIApplications() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAutonomousAIApplications() {
         title="Autonomous AI in Action: 10 Real-World Enterprise Applications"
         description="Explore real-world deployments of autonomous AI across industries. Use cases, results, and lessons learned from leading organizations."
         url="/blog/autonomous-ai-applications"
+        article={{
+        author: 'Robert Chen',
+        datePublished: '2025-01-15',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/f299782ce_generated_image.png',
+        section: 'AI Autonomy',
+        tags: ['ai autonomy', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Autonomous AI in Action: 10 Real-World E' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -484,6 +495,8 @@ export default function BlogAutonomousAIApplications() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAutonomousAIApplications" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

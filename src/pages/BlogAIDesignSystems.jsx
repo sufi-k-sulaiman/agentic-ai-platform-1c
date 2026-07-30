@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIDesignSystems() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAIDesignSystems() {
         description="Build design systems optimized for AI products. Component architecture, token systems, and scaling AI interfaces."
         url="/blog/ai-design-systems"
         keywords={['design systems', 'AI UI', 'component architecture', 'scalable design']}
+        article={{
+        author: 'Alex Kumar',
+        datePublished: '2025-01-16',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/f51c460f9_generated_image.png',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Design Systems for AI-First Products: Sc' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -314,6 +325,8 @@ export default function BlogAIDesignSystems() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogAIDesignSystems" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

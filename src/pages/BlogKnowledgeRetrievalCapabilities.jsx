@@ -6,6 +6,8 @@ import { ArrowLeft, Search, Database, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogKnowledgeRetrievalCapabilities() {
   return (
@@ -15,7 +17,16 @@ export default function BlogKnowledgeRetrievalCapabilities() {
         description="Master information retrieval in AI agents. Vector search, semantic similarity, ranking algorithms, and retrieval optimization."
         url="/blog/knowledge-retrieval-capabilities"
         keywords={['knowledge retrieval', 'vector search', 'semantic search', 'RAG', 'information retrieval']}
+        article={{
+        author: 'Rachel Foster',
+        datePublished: '2025-01-21',
+        image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Knowledge Retrieval Capabilities: How Ag' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

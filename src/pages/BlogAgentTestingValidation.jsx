@@ -6,6 +6,8 @@ import { ArrowLeft, CheckCircle, TestTube, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgentTestingValidation() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgentTestingValidation() {
         description="Comprehensive testing approaches for agents. Unit tests, integration tests, behavior validation, and quality assurance."
         url="/blog/agent-testing-validation"
         keywords={['agent testing', 'AI validation', 'unit tests', 'integration tests', 'quality assurance']}
+        article={{
+        author: 'Jennifer Martinez',
+        datePublished: '2025-01-19',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Testing and Validation Strategies for AI' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

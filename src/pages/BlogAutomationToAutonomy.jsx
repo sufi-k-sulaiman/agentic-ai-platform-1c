@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAutomationToAutonomy() {
   return (
@@ -15,6 +16,13 @@ export default function BlogAutomationToAutonomy() {
         description="Trace the journey from simple automation to autonomous AI systems and understand the technological leaps driving business transformation."
         url="/blog/automation-to-autonomy"
         keywords={['AI evolution', 'automation', 'autonomous AI', 'AI history', 'business technology']}
+        article={{
+        author: 'Dr. Marcus Chen',
+        datePublished: '2024-11-15',
+        image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

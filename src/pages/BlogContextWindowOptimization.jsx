@@ -6,6 +6,8 @@ import { ArrowLeft, Maximize2, Minimize2, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogContextWindowOptimization() {
   return (
@@ -15,7 +17,16 @@ export default function BlogContextWindowOptimization() {
         description="Maximize context efficiency in AI apps. Token management, context compression, sliding windows, and memory optimization strategies."
         url="/blog/context-window-optimization"
         keywords={['context window', 'token optimization', 'context compression', 'AI memory', 'token management']}
+        article={{
+        author: 'Dr. Sarah Kim',
+        datePublished: '2025-01-26',
+        image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Context Window Optimization for AI Appli' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

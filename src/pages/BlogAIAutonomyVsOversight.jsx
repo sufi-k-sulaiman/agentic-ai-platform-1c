@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIAutonomyVsOversight() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAIAutonomyVsOversight() {
         title="AI Autonomy vs Human Oversight: Finding the Right Balance"
         description="When should AI act autonomously and when do humans need to intervene? Framework for balancing autonomy with oversight and control."
         url="/blog/ai-autonomy-vs-oversight"
+        article={{
+        author: 'Jennifer Martinez',
+        datePublished: '2025-01-16',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/3a99bae71_generated_image.png',
+        section: 'AI Autonomy',
+        tags: ['ai autonomy', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Autonomy vs Human Oversight: Finding ' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -335,6 +346,8 @@ export default function BlogAIAutonomyVsOversight() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAIAutonomyVsOversight" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

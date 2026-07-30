@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAISkillsTransition() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAISkillsTransition() {
         title="Skills Transition: From Traditional AI to Agentic AI Development"
         description="How ML engineers and data scientists can transition to agentic AI. New skills needed, learning paths, and career implications."
         url="/blog/agentic-ai-skills-transition"
+        article={{
+        author: 'Lisa Anderson',
+        datePublished: '2024-12-09',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/59b1829e1_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Skills Transition: From Traditional AI t' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -225,6 +236,8 @@ export default function BlogAgenticAISkillsTransition() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAISkillsTransition" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogGenerativeAIBusiness() {
   return (
@@ -13,7 +15,16 @@ export default function BlogGenerativeAIBusiness() {
         title="Generative AI for Business Automation: ROI and Use Cases"
         description="Discover how enterprises are using generative AI to automate processes, reduce costs, and drive growth. Real use cases and ROI metrics."
         url="/blog/generative-ai-business"
+        article={{
+        author: 'David Park',
+        datePublished: '2024-12-03',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/53f2b0881_generated_image.png',
+        section: 'Generative AI',
+        tags: ['generative ai', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Generative AI for Business Automation: R' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -302,6 +313,8 @@ export default function BlogGenerativeAIBusiness() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogGenerativeAIBusiness" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

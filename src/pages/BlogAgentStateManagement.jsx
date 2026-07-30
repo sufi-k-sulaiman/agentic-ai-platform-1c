@@ -6,6 +6,8 @@ import { ArrowLeft, HardDrive, GitBranch, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgentStateManagement() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgentStateManagement() {
         description="Learn how to manage agent state effectively. State persistence, transitions, recovery, and distributed state synchronization."
         url="/blog/agent-state-management"
         keywords={['state management', 'agent state', 'state persistence', 'state transitions', 'context tracking']}
+        article={{
+        author: 'Kevin Zhang',
+        datePublished: '2025-01-23',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agent State Management: Tracking Context' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

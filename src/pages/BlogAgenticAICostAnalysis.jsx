@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAICostAnalysis() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAICostAnalysis() {
         title="Cost Comparison: Agentic AI vs Traditional AI Systems"
         description="Detailed cost analysis of agentic vs traditional AI. Development costs, operational expenses, ROI timelines, and total cost of ownership."
         url="/blog/agentic-ai-cost-analysis"
+        article={{
+        author: 'David Chang, CFO',
+        datePublished: '2024-12-17',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/fa0085381_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Cost Comparison: Agentic AI vs Tradition' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -223,6 +234,8 @@ export default function BlogAgenticAICostAnalysis() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAICostAnalysis" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

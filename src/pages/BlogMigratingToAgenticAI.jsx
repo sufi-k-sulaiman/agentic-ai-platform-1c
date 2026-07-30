@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogMigratingToAgenticAI() {
   return (
@@ -13,7 +15,16 @@ export default function BlogMigratingToAgenticAI() {
         title="Migration Guide: From Traditional AI to Agentic AI Systems"
         description="Step-by-step guide to migrating from traditional AI to agentic systems. Strategies, timelines, and risk mitigation."
         url="/blog/migrating-to-agentic-ai"
+        article={{
+        author: 'Michael Rodriguez',
+        datePublished: '2024-12-13',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/586fe2f5d_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Migration Guide: From Traditional AI to ' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -223,6 +234,8 @@ export default function BlogMigratingToAgenticAI() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogMigratingToAgenticAI" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

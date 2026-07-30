@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogBuildingAutonomousAI() {
   return (
@@ -13,7 +15,16 @@ export default function BlogBuildingAutonomousAI() {
         title="Building Truly Autonomous AI Systems: Architecture and Design Patterns"
         description="Practical guide to designing and building autonomous AI systems. Architecture patterns, key components, and implementation strategies."
         url="/blog/building-autonomous-ai"
+        article={{
+        author: 'Kevin Zhang',
+        datePublished: '2025-01-17',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/8fa53da31_generated_image.png',
+        section: 'AI Autonomy',
+        tags: ['ai autonomy', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Building Truly Autonomous AI Systems: Ar' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -311,6 +322,8 @@ export default function BlogBuildingAutonomousAI() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogBuildingAutonomousAI" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAISecurity() {
   return (
@@ -15,6 +16,13 @@ export default function BlogAgenticAISecurity() {
         description="Comprehensive guide to securing autonomous AI agents in enterprise environments with best practices and frameworks."
         url="/blog/agentic-ai-security"
         keywords={['AI security', 'enterprise security', 'agent security', 'AI governance', 'cybersecurity']}
+        article={{
+        author: 'Lisa Anderson',
+        datePublished: '2024-11-28',
+        image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200',
+        section: 'Security',
+        tags: ['security', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

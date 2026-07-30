@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAISecurityComparison() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAISecurityComparison() {
         title="Security Comparison: Agentic AI vs Traditional AI Risk Profiles"
         description="Compare security risks and mitigations for agentic and traditional AI. Threat models, vulnerabilities, and best practices."
         url="/blog/agentic-ai-security-comparison"
+        article={{
+        author: 'Marcus Johnson, CISO',
+        datePublished: '2024-12-07',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/87c0f5ef6_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Security Comparison: Agentic AI vs Tradi' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -253,6 +264,8 @@ export default function BlogAgenticAISecurityComparison() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAISecurityComparison" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

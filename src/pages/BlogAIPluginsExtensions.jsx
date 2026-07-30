@@ -6,6 +6,8 @@ import { ArrowLeft, Puzzle, Package, Plug, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIPluginsExtensions() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAIPluginsExtensions() {
         description="Create extensible AI applications. Plugin systems, extension APIs, marketplace patterns, and third-party integration frameworks."
         url="/blog/ai-plugins-extensions"
         keywords={['AI plugins', 'extensions', 'modular AI', 'plugin architecture', 'marketplace']}
+        article={{
+        author: 'David Park',
+        datePublished: '2025-01-19',
+        image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Building AI Plugins and Extensions: Modu' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

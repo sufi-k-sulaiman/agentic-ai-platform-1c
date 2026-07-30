@@ -6,6 +6,8 @@ import { ArrowLeft, TrendingUp, RefreshCw, Brain } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogSelfLearningCapabilities() {
   return (
@@ -15,7 +17,16 @@ export default function BlogSelfLearningCapabilities() {
         description="Understand how agents learn from experience and adapt over time. Reinforcement learning, feedback loops, and continuous improvement mechanisms."
         url="/blog/self-learning-capabilities"
         keywords={['self-learning AI', 'adaptive agents', 'reinforcement learning', 'continuous improvement', 'agent learning', 'feedback loops']}
+        article={{
+        author: 'Dr. Sarah Kim',
+        datePublished: '2025-01-22',
+        image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Self-Learning and Adaptive Capabilities ' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

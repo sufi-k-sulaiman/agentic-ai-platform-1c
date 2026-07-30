@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogLLMGuide() {
   return (
@@ -13,7 +15,16 @@ export default function BlogLLMGuide() {
         title="Understanding Large Language Models: GPT, Claude, and Beyond"
         description="A comprehensive guide to large language models, how they work, and how businesses are using them to transform operations."
         url="/blog/llm-guide"
+        article={{
+        author: 'Dr. Emily Wang',
+        datePublished: '2024-12-08',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/7880b85c3_generated_image.png',
+        section: 'Generative AI',
+        tags: ['generative ai', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Understanding Large Language Models: GPT' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -227,6 +238,8 @@ export default function BlogLLMGuide() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogLLMGuide" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

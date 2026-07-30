@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIAgentPersonas() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAIAgentPersonas() {
         description="Create compelling AI agent personalities. Persona development, voice design, tone guidelines, and character consistency."
         url="/blog/ai-agent-personas"
         keywords={['AI personas', 'agent personality', 'voice design', 'character design']}
+        article={{
+        author: 'Jessica Park',
+        datePublished: '2025-01-17',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/1a49d1181_generated_image.png',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Designing AI Agent Personas: Character a' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -297,6 +308,8 @@ export default function BlogAIAgentPersonas() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogAIAgentPersonas" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

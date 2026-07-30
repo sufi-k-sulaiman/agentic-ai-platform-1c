@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogImageGeneration() {
   return (
@@ -15,6 +16,13 @@ export default function BlogImageGeneration() {
         description="Comprehensive guide to AI image generation tools, techniques, and creative applications for businesses and creators."
         url="/blog/ai-image-generation"
         keywords={['AI image generation', 'DALL-E', 'Midjourney', 'Stable Diffusion', 'text-to-image', 'AI art']}
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

@@ -6,6 +6,8 @@ import { ArrowLeft, AlertCircle, RefreshCw, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogToolErrorHandling() {
   return (
@@ -15,7 +17,16 @@ export default function BlogToolErrorHandling() {
         description="Handle tool execution failures gracefully. Retry strategies, fallback patterns, user communication, and recovery workflows."
         url="/blog/tool-error-handling"
         keywords={['error handling', 'retry logic', 'fallback patterns', 'agent reliability', 'fault tolerance', 'error recovery']}
+        article={{
+        author: 'David Park',
+        datePublished: '2025-01-10',
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Error Handling Design for Agent Tool Exe' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

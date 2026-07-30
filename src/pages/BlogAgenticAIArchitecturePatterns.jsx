@@ -6,6 +6,8 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIArchitecturePatterns() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgenticAIArchitecturePatterns() {
         description="Compare different architectural patterns for building agentic AI systems. Learn about monolithic vs microservices, event-driven vs synchronous, and layered architectures."
         url="/blog/agentic-ai-architecture-patterns"
         keywords={['agentic AI architecture', 'AI design patterns', 'microservices AI', 'AI system design']}
+        article={{
+        author: 'Dr. Alex Thompson',
+        datePublished: '2025-01-15',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/bda3167c8_generated_image.png',
+        section: 'AI Comparison',
+        tags: ['ai comparison', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agentic AI Architecture Patterns: ReAct,' }]} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
@@ -51,6 +62,8 @@ export default function BlogAgenticAIArchitecturePatterns() {
             </div>
           </motion.div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIArchitecturePatterns" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
 
       {/* Article Content */}

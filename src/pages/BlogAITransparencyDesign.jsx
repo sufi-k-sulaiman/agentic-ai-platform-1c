@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAITransparencyDesign() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAITransparencyDesign() {
         description="Design interfaces that make AI decision-making transparent. Explainability patterns, trust indicators, and confidence displays."
         url="/blog/ai-transparency-design"
         keywords={['AI transparency', 'explainable AI', 'trust design', 'AI explainability']}
+        article={{
+        author: 'Emma Wilson',
+        datePublished: '2025-01-19',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/daede25ec_generated_image.png',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Designing for AI Transparency: Building ' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -268,6 +279,8 @@ export default function BlogAITransparencyDesign() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogAITransparencyDesign" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

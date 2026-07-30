@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogConversationalAIDesign() {
   return (
@@ -15,7 +17,16 @@ export default function BlogConversationalAIDesign() {
         description="Create engaging conversational experiences for AI agents. Message design, context management, and natural dialogue patterns."
         url="/blog/conversational-ai-design"
         keywords={['conversational AI', 'chatbot design', 'dialogue design', 'message UI']}
+        article={{
+        author: 'Sophie Martinez',
+        datePublished: '2025-01-21',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a5bc3e19a_generated_image.png',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Designing Conversational AI Interfaces: ' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -223,6 +234,8 @@ export default function BlogConversationalAIDesign() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogConversationalAIDesign" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIAuditFrameworks() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAIAuditFrameworks() {
         title="AI Audit Frameworks: Ensuring Accountability in Autonomous Systems"
         description="How to audit autonomous AI agents for performance, compliance, and ethical behavior. Frameworks, checklists, and automation strategies."
         url="/blog/ai-audit-frameworks"
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIAuditFrameworks' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -218,6 +229,8 @@ export default function BlogAIAuditFrameworks() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAIAuditFrameworks" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

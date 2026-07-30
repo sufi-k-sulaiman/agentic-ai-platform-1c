@@ -6,6 +6,8 @@ import { ArrowLeft, CheckCircle, Layout, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgentToolInterfaces() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgentToolInterfaces() {
         description="Create intuitive tool interfaces for AI agents. Input/output design, parameter configuration, and result visualization patterns."
         url="/blog/agent-tool-interfaces"
         keywords={['tool interfaces', 'agent tools', 'UI design', 'parameter design', 'result visualization', 'tool UX']}
+        article={{
+        author: 'Sarah Mitchell',
+        datePublished: '2025-01-13',
+        image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Designing Agent Tool Interfaces: Best Pr' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

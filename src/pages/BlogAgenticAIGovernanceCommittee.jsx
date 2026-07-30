@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIGovernanceCommittee() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIGovernanceCommittee() {
         title="Building an AI Governance Committee: Structure and Operations"
         description="Create an effective AI governance committee. Roles, responsibilities, meeting cadence, and decision-making processes."
         url="/blog/agentic-ai-governance-committee"
+        article={{
+        author: 'Richard Brown',
+        datePublished: '2025-01-04',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e9b7c4eae_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Building an AI Governance Committee: Str' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -270,6 +281,8 @@ export default function BlogAgenticAIGovernanceCommittee() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIGovernanceCommittee" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

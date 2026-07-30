@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIAutonomyChallenges() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAIAutonomyChallenges() {
         title="Overcoming Challenges in AI Autonomy: Risk, Trust, and Control"
         description="Navigate the key challenges of deploying autonomous AI. Risk management, building trust, maintaining control, and ensuring safety."
         url="/blog/ai-autonomy-challenges"
+        article={{
+        author: 'Dr. Marcus Williams',
+        datePublished: '2025-01-14',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/43a0f2cea_generated_image.png',
+        section: 'AI Autonomy',
+        tags: ['ai autonomy', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Overcoming Challenges in AI Autonomy: Ri' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -298,6 +309,8 @@ export default function BlogAIAutonomyChallenges() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAIAutonomyChallenges" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

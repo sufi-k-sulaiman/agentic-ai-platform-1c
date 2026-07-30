@@ -6,6 +6,8 @@ import { ArrowLeft, Brain, CheckCircle, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAutonomousDecisionCapabilities() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAutonomousDecisionCapabilities() {
         description="Explore how AI agents make decisions independently. Decision frameworks, reasoning patterns, confidence scoring, and autonomous action selection."
         url="/blog/autonomous-decision-capabilities"
         keywords={['autonomous decisions', 'AI decision making', 'agent reasoning', 'confidence scoring', 'action selection', 'decision frameworks']}
+        article={{
+        author: 'Dr. Marcus Chen',
+        datePublished: '2025-01-23',
+        image: 'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Autonomous Decision-Making Capabilities:' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

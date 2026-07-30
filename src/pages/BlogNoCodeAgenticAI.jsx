@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogNoCodeAgenticAI() {
   return (
@@ -15,6 +16,13 @@ export default function BlogNoCodeAgenticAI() {
         description="Discover how no-code platforms democratize AI agent development for business users without technical backgrounds."
         url="/blog/no-code-agentic-ai"
         keywords={['no-code AI', 'citizen developers', 'business users', 'AI democratization', 'low-code automation']}
+        article={{
+        author: 'David Kim',
+        datePublished: '2024-12-03',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200',
+        section: 'Tutorials',
+        tags: ['tutorials', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

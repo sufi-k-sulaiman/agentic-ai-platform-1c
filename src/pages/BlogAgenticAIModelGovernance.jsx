@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIModelGovernance() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIModelGovernance() {
         title="AI Model Governance: Versioning, Testing, and Lifecycle Management"
         description="Manage AI models powering your agents. Version control, testing standards, deployment processes, and retirement procedures."
         url="/blog/agentic-ai-model-governance"
+        article={{
+        author: 'Dr. Nina Patel',
+        datePublished: '2025-01-03',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/317fbbf93_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Model Governance: Versioning, Testing' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -286,6 +297,8 @@ export default function BlogAgenticAIModelGovernance() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIModelGovernance" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

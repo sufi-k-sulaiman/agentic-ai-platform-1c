@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAISecurityGovernance() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAISecurityGovernance() {
         title="Security Governance for Agentic AI: Protecting Autonomous Systems"
         description="Comprehensive security governance framework for autonomous AI agents. Threat models, controls, and incident response strategies."
         url="/blog/ai-security-governance"
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AISecurityGovernance' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -208,6 +219,8 @@ export default function BlogAISecurityGovernance() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAISecurityGovernance" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

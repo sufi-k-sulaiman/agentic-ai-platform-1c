@@ -1335,6 +1335,22 @@ export default function Blog() {
         description="Insights, tutorials, and stories from the forefront of enterprise AI. Learn about Agentic AI, autonomous agents, implementation strategies, and digital transformation."
         url="/blog"
         keywords={['AI blog', 'Agentic AI articles', 'enterprise AI insights', 'AI tutorials', 'autonomous agents']}
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: '1C Platform Blog Articles',
+            description: 'Insights, tutorials, and stories from the forefront of enterprise AI',
+            numberOfItems: posts.length,
+            itemListElement: posts.map((post, idx) => ({
+              '@type': 'ListItem',
+              position: idx + 1,
+              name: post.title,
+              url: `https://1cplatform.com/${post.page}`,
+              image: post.image,
+            })),
+          }
+        ]}
       />
       {/* Hero */}
       <section className="pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

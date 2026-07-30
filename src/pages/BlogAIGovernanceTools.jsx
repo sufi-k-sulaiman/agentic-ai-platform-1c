@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIGovernanceTools() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAIGovernanceTools() {
         title="AI Governance Tools and Platforms: Technology Stack Guide"
         description="Comprehensive guide to tools and platforms for AI governance. From monitoring to compliance automation, build your governance technology stack."
         url="/blog/ai-governance-tools"
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernanceTools' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -215,6 +226,8 @@ export default function BlogAIGovernanceTools() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAIGovernanceTools" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

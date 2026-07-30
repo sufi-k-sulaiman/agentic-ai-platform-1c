@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAICompliance() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAICompliance() {
         title="Regulatory Compliance for Agentic AI: Navigating Global Requirements"
         description="Comprehensive guide to AI regulations affecting autonomous agents. EU AI Act, US requirements, and industry-specific compliance."
         url="/blog/agentic-ai-compliance"
+        article={{
+        author: 'Maria Santos',
+        datePublished: '2025-01-14',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/557b55254_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Regulatory Compliance for Agentic AI: Na' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -221,6 +232,8 @@ export default function BlogAgenticAICompliance() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAICompliance" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

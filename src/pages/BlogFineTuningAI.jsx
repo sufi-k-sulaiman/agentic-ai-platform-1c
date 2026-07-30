@@ -6,6 +6,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogFineTuningAI() {
   return (
@@ -15,6 +16,13 @@ export default function BlogFineTuningAI() {
         description="Learn how to customize and fine-tune generative AI models for your specific business needs, data, and use cases."
         url="/blog/fine-tuning-ai"
         keywords={['AI fine-tuning', 'custom AI models', 'model training', 'transfer learning', 'AI customization']}
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

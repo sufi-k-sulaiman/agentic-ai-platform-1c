@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIVendorManagement() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIVendorManagement() {
         title="AI Vendor Management: Assessing and Managing Third-Party AI Risks"
         description="Evaluate and manage risks from AI/LLM vendors. Due diligence, contracts, SLAs, and ongoing vendor governance."
         url="/blog/agentic-ai-vendor-management"
+        article={{
+        author: 'Steven Martinez',
+        datePublished: '2025-01-02',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/05f386c60_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Vendor Management: Assessing and Mana' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -225,6 +236,8 @@ export default function BlogAgenticAIVendorManagement() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIVendorManagement" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

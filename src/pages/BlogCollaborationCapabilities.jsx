@@ -6,6 +6,8 @@ import { ArrowLeft, Users, MessageCircle, Network } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogCollaborationCapabilities() {
   return (
@@ -15,7 +17,16 @@ export default function BlogCollaborationCapabilities() {
         description="Understand agent-to-agent collaboration. Communication protocols, task delegation, shared memory, conflict resolution, and team coordination."
         url="/blog/collaboration-capabilities"
         keywords={['agent collaboration', 'multi-agent systems', 'task delegation', 'agent communication', 'team coordination', 'distributed AI']}
+        article={{
+        author: 'Jennifer Martinez',
+        datePublished: '2025-01-17',
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Collaboration Capabilities: How AI Agent' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

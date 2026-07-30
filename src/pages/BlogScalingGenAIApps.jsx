@@ -6,6 +6,8 @@ import { ArrowLeft, TrendingUp, Zap, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogScalingGenAIApps() {
   return (
@@ -15,7 +17,16 @@ export default function BlogScalingGenAIApps() {
         description="Scale from prototype to millions of users. Load balancing, caching, rate limiting, queue management, and infrastructure patterns."
         url="/blog/scaling-genai-apps"
         keywords={['scaling AI', 'AI infrastructure', 'load balancing', 'caching strategies', 'rate limiting']}
+        article={{
+        author: 'Michael Rodriguez',
+        datePublished: '2025-01-10',
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200',
+        section: 'Agentic Insights',
+        tags: ['agentic insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Scaling Generative AI Applications: Arch' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIGovernanceBestPractices() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIGovernanceBestPractices() {
         title="Agentic AI Governance Best Practices: Lessons from Leaders"
         description="Learn from organizations with mature AI governance. Proven strategies, common mistakes, and practical implementation guidance."
         url="/blog/agentic-ai-governance-best-practices"
+        article={{
+        author: 'Amanda Foster',
+        datePublished: '2025-01-05',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/95a02745c_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agentic AI Governance Best Practices: Le' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -233,6 +244,8 @@ export default function BlogAgenticAIGovernanceBestPractices() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIGovernanceBestPractices" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

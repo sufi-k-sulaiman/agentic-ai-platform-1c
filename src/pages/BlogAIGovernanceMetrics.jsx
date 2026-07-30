@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIGovernanceMetrics() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAIGovernanceMetrics() {
         title="AI Governance Metrics: Measuring and Reporting Effectiveness"
         description="Key performance indicators for AI governance. How to measure effectiveness, report to stakeholders, and drive continuous improvement."
         url="/blog/ai-governance-metrics"
+        article={{
+        author: '1C Platform Team',
+        datePublished: '2025-01-01',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png',
+        section: 'AI Insights',
+        tags: ['ai insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernanceMetrics' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -219,6 +230,8 @@ export default function BlogAIGovernanceMetrics() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAIGovernanceMetrics" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

@@ -20,6 +20,7 @@ import { SITE_NAME, SITE_URL } from '@/lib/seoConfig';
  * @param {Object} [course] - Course schema: { name, provider, description, rating, reviewCount }
  * @param {Object} [localBusiness] - LocalBusiness schema: { name, address, telephone }
  * @param {Object[]} [schemas] - Additional custom JSON-LD schema objects
+ * @param {Object} [speakable] - Speakable schema: { cssSelectors: ['h1', '.summary'] }
  */
 export default function PageMeta({
   title,
@@ -35,6 +36,7 @@ export default function PageMeta({
   course,
   localBusiness,
   schemas = [],
+  speakable,
 }) {
   const fullTitle = `${title} | ${SITE_NAME}`;
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : SITE_URL;
@@ -182,6 +184,16 @@ export default function PageMeta({
       }
     : null;
 
+  // Speakable structured data (for voice search optimization)
+  const speakableJsonLd = speakable
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Speakable',
+        url: fullUrl,
+        cssSelector: speakable.cssSelectors || ['h1'],
+      }
+    : null;
+
   // Collect all JSON-LD schemas
   const allSchemas = [
     breadcrumbJsonLd,
@@ -191,6 +203,7 @@ export default function PageMeta({
     serviceJsonLd,
     courseJsonLd,
     localBusinessJsonLd,
+    speakableJsonLd,
     ...schemas,
   ].filter(Boolean);
 

@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIUXDesign() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgenticAIUXDesign() {
         description="Master UX design principles for autonomous AI agents. Learn interaction patterns, user flows, and interface guidelines for intuitive agent experiences."
         url="/blog/agentic-ai-ux-design"
         keywords={['AI UX design', 'agent interface design', 'AI user experience', 'interaction patterns']}
+        article={{
+        author: 'Rachel Foster',
+        datePublished: '2025-01-22',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/8dbd436fc_generated_image.png',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'User Experience Design for AI Agents: Be' }]} />
 
       {/* Header */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
@@ -224,6 +235,8 @@ export default function BlogAgenticAIUXDesign() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIUXDesign" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

@@ -6,6 +6,8 @@ import { ArrowLeft, FileText, Settings, Wand2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogPromptDesignPatterns() {
   return (
@@ -15,7 +17,16 @@ export default function BlogPromptDesignPatterns() {
         description="Craft effective system prompts for agents. Role definition, constraint setting, output formatting, and behavior tuning strategies."
         url="/blog/prompt-design-patterns"
         keywords={['prompt design', 'system prompts', 'agent instructions', 'prompt patterns', 'behavior tuning']}
+        article={{
+        author: 'Rachel Foster',
+        datePublished: '2025-01-24',
+        image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Prompt Design Patterns for AI Agents: Sy' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

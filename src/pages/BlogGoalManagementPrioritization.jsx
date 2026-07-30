@@ -6,6 +6,8 @@ import { ArrowLeft, Target, Star, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogGoalManagementPrioritization() {
   return (
@@ -15,7 +17,16 @@ export default function BlogGoalManagementPrioritization() {
         description="Master goal handling in AI agents. Goal setting, priority scoring, conflict resolution, and dynamic goal adjustment."
         url="/blog/goal-management-prioritization"
         keywords={['goal management', 'prioritization', 'AI goals', 'task priority', 'objective management']}
+        article={{
+        author: 'Jennifer Martinez',
+        datePublished: '2025-01-18',
+        image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Goal Management and Prioritization in AI' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

@@ -6,6 +6,8 @@ import { ArrowLeft, Wand2, Target, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogPromptEngineeringApps() {
   return (
@@ -15,7 +17,16 @@ export default function BlogPromptEngineeringApps() {
         description="Advanced prompt engineering techniques. System prompts, few-shot learning, chain-of-thought, and prompt optimization strategies."
         url="/blog/prompt-engineering-apps"
         keywords={['prompt engineering', 'system prompts', 'few-shot learning', 'chain of thought', 'prompt optimization']}
+        article={{
+        author: 'Maria Chen',
+        datePublished: '2025-01-14',
+        image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200',
+        section: 'Agentic Insights',
+        tags: ['agentic insights', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Prompt Engineering Mastery for AI Applic' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

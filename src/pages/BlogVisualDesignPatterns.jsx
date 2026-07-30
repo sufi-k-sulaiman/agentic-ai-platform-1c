@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogVisualDesignPatterns() {
   return (
@@ -15,7 +17,16 @@ export default function BlogVisualDesignPatterns() {
         description="Build consistent AI agent interfaces with reusable design patterns. Explore component libraries, design systems, and visual guidelines."
         url="/blog/visual-design-patterns"
         keywords={['design patterns', 'AI components', 'design system', 'UI patterns']}
+        article={{
+        author: 'David Chen',
+        datePublished: '2025-01-20',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/3fb58ca0f_generated_image.png',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Visual Design Patterns for Agentic AI: C' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -244,6 +255,8 @@ export default function BlogVisualDesignPatterns() {
 
           </motion.article>
         </div>
+      
+      <RelatedContent currentPage="BlogVisualDesignPatterns" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

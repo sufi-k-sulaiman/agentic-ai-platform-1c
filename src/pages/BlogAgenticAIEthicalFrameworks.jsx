@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgenticAIEthicalFrameworks() {
   return (
@@ -13,7 +15,16 @@ export default function BlogAgenticAIEthicalFrameworks() {
         title="Ethical Frameworks for Agentic AI: Building Responsible Systems"
         description="Develop ethical guidelines for autonomous AI agents. Frameworks, principles, and practical implementation strategies."
         url="/blog/agentic-ai-ethical-frameworks"
+        article={{
+        author: 'Dr. Aisha Patel',
+        datePublished: '2025-01-11',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/67f334540_generated_image.png',
+        section: 'AI Governance',
+        tags: ['ai governance', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Ethical Frameworks for Agentic AI: Build' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -221,6 +232,8 @@ export default function BlogAgenticAIEthicalFrameworks() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIEthicalFrameworks" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

@@ -6,6 +6,8 @@ import { ArrowLeft, Rocket, GitBranch, RotateCcw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAgentDeploymentStrategies() {
   return (
@@ -15,7 +17,16 @@ export default function BlogAgentDeploymentStrategies() {
         description="Deploy agents safely to production. Blue-green deployments, canary releases, gradual rollouts, and rollback procedures."
         url="/blog/agent-deployment-strategies"
         keywords={['agent deployment', 'blue-green deployment', 'canary release', 'rollback', 'production deployment']}
+        article={{
+        author: 'David Park',
+        datePublished: '2025-01-18',
+        image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200',
+        section: 'Agentic Capabilities',
+        tags: ['agentic capabilities', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agent Deployment Strategies: From Develo' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>

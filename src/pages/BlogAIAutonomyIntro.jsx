@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogAIAutonomyIntro() {
   return (
@@ -14,7 +16,16 @@ export default function BlogAIAutonomyIntro() {
         description="Explore the spectrum of AI autonomy, from simple automation to fully autonomous systems. Learn what true AI autonomy means and why it matters."
         url="/blog/ai-autonomy-intro"
         keywords={['AI autonomy', 'autonomous systems', 'automation levels', 'AI decision making', 'intelligent systems']}
+        article={{
+        author: 'James Wellington',
+        datePublished: '2025-01-21',
+        image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/bafc68c7d_generated_image.png',
+        section: 'AI Autonomy',
+        tags: ['ai autonomy', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Autonomous AI in Financial Services: Ris' }]} />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
@@ -251,6 +262,8 @@ export default function BlogAIAutonomyIntro() {
             </Link>
           </div>
         </div>
+      
+      <RelatedContent currentPage="BlogAIAutonomyIntro" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>
   );

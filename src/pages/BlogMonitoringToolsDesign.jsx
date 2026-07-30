@@ -6,6 +6,8 @@ import { ArrowLeft, Activity, BarChart3, Eye, Bell } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function BlogMonitoringToolsDesign() {
   return (
@@ -15,7 +17,16 @@ export default function BlogMonitoringToolsDesign() {
         description="Design monitoring and observability interfaces for AI agents. Metrics visualization, log analysis, trace viewing, and alert management."
         url="/blog/monitoring-tools-design"
         keywords={['monitoring tools', 'observability', 'metrics visualization', 'log analysis', 'agent monitoring', 'performance tracking']}
+        article={{
+        author: 'James Patterson',
+        datePublished: '2025-01-08',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
+        section: 'Agentic Design',
+        tags: ['agentic design', 'AI', 'agentic AI'],
+      }}
       />
+
+      <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Monitoring Tools for Agentic AI: Observa' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
         <Link to={createPageUrl('Blog')}>
