@@ -15,7 +15,7 @@ export default function BlogWhenUseAgenticAI() {
       <PageMeta 
         title="When to Use Agentic AI vs Traditional AI: Decision Framework"
         description="Practical guide to choosing between agentic and traditional AI. Decision trees, use case examples, and ROI considerations."
-        url="/blog/when-use-agentic-ai"
+        url="/BlogWhenUseAgenticAI"
         article={{
         author: 'James Patterson',
         datePublished: '2024-12-19',
@@ -24,6 +24,8 @@ export default function BlogWhenUseAgenticAI() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogWhenUseAgenticAI', url: '/BlogWhenUseAgenticAI' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'When to Use Agentic AI vs Traditional AI' }]} />

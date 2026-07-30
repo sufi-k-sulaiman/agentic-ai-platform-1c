@@ -15,7 +15,7 @@ export default function BlogAIGovernancePolicies() {
       <PageMeta 
         title="Creating AI Governance Policies: Templates and Best Practices"
         description="Step-by-step guide to developing comprehensive AI governance policies for autonomous agents. Includes templates and real-world examples."
-        url="/blog/ai-governance-policies"
+        url="/BlogAIGovernancePolicies"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIGovernancePolicies() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIGovernancePolicies', url: '/BlogAIGovernancePolicies' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernancePolicies' }]} />

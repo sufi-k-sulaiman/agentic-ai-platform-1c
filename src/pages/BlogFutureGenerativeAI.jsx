@@ -15,7 +15,7 @@ export default function BlogFutureGenerativeAI() {
       <PageMeta 
         title="The Future of Generative AI: Trends and Predictions for 2025-2030"
         description="Explore emerging trends, breakthroughs, and predictions for the next generation of generative AI technology and its impact on society."
-        url="/blog/future-generative-ai"
+        url="/BlogFutureGenerativeAI"
         keywords={['future of AI', 'AI trends', 'generative AI future', 'AI predictions', 'emerging technology']}
         article={{
         author: '1C Platform Team',
@@ -24,6 +24,8 @@ export default function BlogFutureGenerativeAI() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogFutureGenerativeAI', url: '/BlogFutureGenerativeAI' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

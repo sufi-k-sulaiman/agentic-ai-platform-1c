@@ -15,7 +15,7 @@ export default function BlogAIGovernanceBestPractices() {
       <PageMeta 
         title="AI Governance Best Practices: Lessons from Leading Organizations"
         description="Learn from organizations successfully governing autonomous AI. Proven strategies, common pitfalls, and practical recommendations."
-        url="/blog/ai-governance-best-practices"
+        url="/BlogAIGovernanceBestPractices"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIGovernanceBestPractices() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIGovernanceBestPractices', url: '/BlogAIGovernanceBestPractices' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernanceBestPractices' }]} />

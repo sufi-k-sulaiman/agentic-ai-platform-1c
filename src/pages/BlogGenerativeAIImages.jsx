@@ -15,7 +15,7 @@ export default function BlogGenerativeAIImages() {
       <PageMeta 
         title="AI Image Generation: From DALL-E to Midjourney"
         description="Explore how AI image generators are revolutionizing design. Learn about the technology, tools, and best practices for creating stunning visuals."
-        url="/blog/generative-ai-images"
+        url="/BlogGenerativeAIImages"
         article={{
         author: 'Rachel Kim',
         datePublished: '2024-12-05',
@@ -24,6 +24,8 @@ export default function BlogGenerativeAIImages() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAIImages', url: '/BlogGenerativeAIImages' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Image Generation: From DALL-E to Midj' }]} />

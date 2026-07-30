@@ -15,7 +15,7 @@ export default function BlogGenerativeAIvsTraditional() {
       <PageMeta 
         title="Generative AI vs Traditional AI: Key Differences Explained"
         description="Understand the fundamental differences between generative and traditional AI, their use cases, and which one is right for your business needs."
-        url="/blog/generative-ai-vs-traditional"
+        url="/BlogGenerativeAIvsTraditional"
         article={{
         author: 'Michael Rodriguez',
         datePublished: '2024-12-09',
@@ -24,6 +24,8 @@ export default function BlogGenerativeAIvsTraditional() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT12M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAIvsTraditional', url: '/BlogGenerativeAIvsTraditional' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Generative AI vs Traditional AI: Key Dif' }]} />

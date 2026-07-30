@@ -15,7 +15,7 @@ export default function BlogAgenticAICompliance() {
       <PageMeta 
         title="Regulatory Compliance for Agentic AI: Navigating Global Requirements"
         description="Comprehensive guide to AI regulations affecting autonomous agents. EU AI Act, US requirements, and industry-specific compliance."
-        url="/blog/agentic-ai-compliance"
+        url="/BlogAgenticAICompliance"
         article={{
         author: 'Maria Santos',
         datePublished: '2025-01-14',
@@ -24,6 +24,8 @@ export default function BlogAgenticAICompliance() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAICompliance', url: '/BlogAgenticAICompliance' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Regulatory Compliance for Agentic AI: Na' }]} />

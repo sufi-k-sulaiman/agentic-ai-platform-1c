@@ -16,7 +16,7 @@ export default function BlogManagingAICosts() {
       <PageMeta 
         title="Managing AI Model Costs in Production Applications"
         description="Cost optimization for generative AI apps. Token usage tracking, caching strategies, model selection, and budget management."
-        url="/blog/managing-ai-costs"
+        url="/BlogManagingAICosts"
         keywords={['AI costs', 'cost optimization', 'token management', 'AI budget', 'caching strategies']}
         article={{
         author: 'David Park',
@@ -26,6 +26,8 @@ export default function BlogManagingAICosts() {
         tags: ['agentic insights', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogManagingAICosts', url: '/BlogManagingAICosts' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Managing AI Model Costs in Production Ap' }]} />

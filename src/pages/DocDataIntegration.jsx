@@ -4,10 +4,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, Database, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 export default function DocDataIntegration() {
   return (
     <div className="bg-white min-h-screen">
+      <PageMeta
+        title="Data Integration"
+        description="Connect your AI agents to databases, APIs, and external data sources. Build real-time data pipelines and syncs."
+        url="/DocDataIntegration"
+        keywords={['data integration', 'database connection', 'API integration', 'data pipeline', 'ETL']}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Documentation', url: '/Documentation' }, { name: 'Data Integration', url: '/DocDataIntegration' }]}
+        howTo={{
+          name: 'Setting Up Data Integration',
+          description: 'Connect your AI agents to external data sources',
+          steps: [
+            { name: 'Choose your data source', text: 'Select from 500+ pre-built integrations or use the REST API to connect any external system.' },
+            { name: 'Configure authentication', text: 'Set up API keys, OAuth tokens, or database credentials. Store them securely as environment variables.' },
+            { name: 'Map your data', text: 'Define how data from external systems maps to your entities and agent context fields.' },
+            { name: 'Set up sync schedules', text: 'Configure real-time webhooks or scheduled syncs to keep data fresh between systems.' },
+            { name: 'Test the integration', text: 'Run a test query or sync to verify data flows correctly between your systems and agents.' },
+          ],
+        }}
+      />
       <div className="max-w-4xl mx-auto px-6 py-24">
         <Link to={createPageUrl('Documentation')} className="inline-flex items-center text-[#8B2EE5] hover:underline mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />

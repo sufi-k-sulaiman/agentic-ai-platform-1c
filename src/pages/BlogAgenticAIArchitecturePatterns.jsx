@@ -16,7 +16,7 @@ export default function BlogAgenticAIArchitecturePatterns() {
       <PageMeta 
         title="Agentic AI Architecture Patterns: Comparing Design Approaches"
         description="Compare different architectural patterns for building agentic AI systems. Learn about monolithic vs microservices, event-driven vs synchronous, and layered architectures."
-        url="/blog/agentic-ai-architecture-patterns"
+        url="/BlogAgenticAIArchitecturePatterns"
         keywords={['agentic AI architecture', 'AI design patterns', 'microservices AI', 'AI system design']}
         article={{
         author: 'Dr. Alex Thompson',
@@ -26,6 +26,8 @@ export default function BlogAgenticAIArchitecturePatterns() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT20M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIArchitecturePatterns', url: '/BlogAgenticAIArchitecturePatterns' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agentic AI Architecture Patterns: ReAct,' }]} />

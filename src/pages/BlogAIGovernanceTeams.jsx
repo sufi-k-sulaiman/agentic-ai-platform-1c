@@ -15,7 +15,7 @@ export default function BlogAIGovernanceTeams() {
       <PageMeta 
         title="Building AI Governance Teams: Roles, Skills, and Structure"
         description="How to staff and organize your AI governance function. Key roles, required skills, team structures, and hiring strategies."
-        url="/blog/ai-governance-teams"
+        url="/BlogAIGovernanceTeams"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIGovernanceTeams() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIGovernanceTeams', url: '/BlogAIGovernanceTeams' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernanceTeams' }]} />

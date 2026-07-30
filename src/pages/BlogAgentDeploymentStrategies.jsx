@@ -16,7 +16,7 @@ export default function BlogAgentDeploymentStrategies() {
       <PageMeta 
         title="Agent Deployment Strategies: From Development to Production"
         description="Deploy agents safely to production. Blue-green deployments, canary releases, gradual rollouts, and rollback procedures."
-        url="/blog/agent-deployment-strategies"
+        url="/BlogAgentDeploymentStrategies"
         keywords={['agent deployment', 'blue-green deployment', 'canary release', 'rollback', 'production deployment']}
         article={{
         author: 'David Park',
@@ -26,6 +26,8 @@ export default function BlogAgentDeploymentStrategies() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgentDeploymentStrategies', url: '/BlogAgentDeploymentStrategies' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agent Deployment Strategies: From Develo' }]} />

@@ -16,7 +16,7 @@ export default function BlogMultiModalProcessing() {
       <PageMeta 
         title="Multi-Modal Processing: Agents That See, Hear, and Understand"
         description="Explore multi-modal AI capabilities. Vision processing, speech recognition, image generation, cross-modal reasoning, and unified understanding."
-        url="/blog/multi-modal-processing"
+        url="/BlogMultiModalProcessing"
         keywords={['multi-modal AI', 'vision AI', 'speech recognition', 'image processing', 'audio processing', 'cross-modal reasoning']}
         article={{
         author: 'Dr. Emily Carter',
@@ -26,6 +26,8 @@ export default function BlogMultiModalProcessing() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogMultiModalProcessing', url: '/BlogMultiModalProcessing' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Multi-Modal Processing: Agents That See,' }]} />

@@ -15,7 +15,7 @@ export default function BlogAgenticAIEthics() {
       <PageMeta 
         title="Ethical Considerations in Deploying Autonomous AI Agents"
         description="Navigate the ethical challenges of agentic AI with frameworks for responsible deployment and governance."
-        url="/blog/agentic-ai-ethics"
+        url="/BlogAgenticAIEthics"
         keywords={['AI ethics', 'responsible AI', 'AI governance', 'ethical AI', 'AI accountability']}
         article={{
         author: 'Dr. Priya Sharma',
@@ -25,6 +25,8 @@ export default function BlogAgenticAIEthics() {
         tags: ['ai insights', 'AI', 'agentic AI'],
         timeRequired: 'PT12M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIEthics', url: '/BlogAgenticAIEthics' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

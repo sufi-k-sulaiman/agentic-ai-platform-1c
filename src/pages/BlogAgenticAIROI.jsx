@@ -15,7 +15,7 @@ export default function BlogAgenticAIROI() {
       <PageMeta 
         title="Measuring the ROI of Your Agentic AI Investment"
         description="Learn how to calculate, track, and maximize returns from autonomous AI agents with proven frameworks and metrics."
-        url="/blog/agentic-ai-roi"
+        url="/BlogAgenticAIROI"
         keywords={['AI ROI', 'return on investment', 'AI metrics', 'business value', 'cost savings']}
         article={{
         author: 'Robert Taylor',
@@ -25,6 +25,8 @@ export default function BlogAgenticAIROI() {
         tags: ['product', 'AI', 'agentic AI'],
         timeRequired: 'PT13M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIROI', url: '/BlogAgenticAIROI' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

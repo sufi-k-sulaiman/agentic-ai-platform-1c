@@ -15,7 +15,7 @@ export default function BlogAgenticAISecurity() {
       <PageMeta 
         title="Ensuring Trust and Security in Agentic AI Deployments"
         description="Comprehensive guide to securing autonomous AI agents in enterprise environments with best practices and frameworks."
-        url="/blog/agentic-ai-security"
+        url="/BlogAgenticAISecurity"
         keywords={['AI security', 'enterprise security', 'agent security', 'AI governance', 'cybersecurity']}
         article={{
         author: 'Lisa Anderson',
@@ -25,6 +25,8 @@ export default function BlogAgenticAISecurity() {
         tags: ['security', 'AI', 'agentic AI'],
         timeRequired: 'PT11M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAISecurity', url: '/BlogAgenticAISecurity' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

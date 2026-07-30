@@ -15,7 +15,7 @@ export default function BlogImageGeneration() {
       <PageMeta 
         title="AI Image Generation: From DALL-E to Midjourney"
         description="Comprehensive guide to AI image generation tools, techniques, and creative applications for businesses and creators."
-        url="/blog/ai-image-generation"
+        url="/BlogImageGeneration"
         keywords={['AI image generation', 'DALL-E', 'Midjourney', 'Stable Diffusion', 'text-to-image', 'AI art']}
         article={{
         author: '1C Platform Team',
@@ -24,6 +24,8 @@ export default function BlogImageGeneration() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogImageGeneration', url: '/BlogImageGeneration' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

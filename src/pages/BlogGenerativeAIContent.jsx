@@ -15,7 +15,7 @@ export default function BlogGenerativeAIContent() {
       <PageMeta 
         title="Generative AI for Content Creation: A Practical Guide"
         description="Learn how to leverage generative AI for creating high-quality content at scale. Tips, tools, and best practices for marketers and creators."
-        url="/blog/generative-ai-content"
+        url="/BlogGenerativeAIContent"
         article={{
         author: 'Jessica Martinez',
         datePublished: '2024-12-07',
@@ -24,6 +24,8 @@ export default function BlogGenerativeAIContent() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT11M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAIContent', url: '/BlogGenerativeAIContent' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Generative AI for Content Creation: A Pr' }]} />

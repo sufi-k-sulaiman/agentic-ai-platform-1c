@@ -16,7 +16,7 @@ export default function BlogContextWindowOptimization() {
       <PageMeta 
         title="Context Window Optimization for AI Applications"
         description="Maximize context efficiency in AI apps. Token management, context compression, sliding windows, and memory optimization strategies."
-        url="/blog/context-window-optimization"
+        url="/BlogContextWindowOptimization"
         keywords={['context window', 'token optimization', 'context compression', 'AI memory', 'token management']}
         article={{
         author: 'Dr. Sarah Kim',
@@ -26,6 +26,8 @@ export default function BlogContextWindowOptimization() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogContextWindowOptimization', url: '/BlogContextWindowOptimization' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Context Window Optimization for AI Appli' }]} />

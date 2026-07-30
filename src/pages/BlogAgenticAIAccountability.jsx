@@ -15,7 +15,7 @@ export default function BlogAgenticAIAccountability() {
       <PageMeta 
         title="AI Agent Accountability and Transparency: Who's Responsible?"
         description="Establish clear accountability for autonomous AI agents. Learn how to track decisions, explain actions, and assign responsibility."
-        url="/blog/agentic-ai-accountability"
+        url="/BlogAgenticAIAccountability"
         article={{
         author: 'Thomas Anderson',
         datePublished: '2025-01-10',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIAccountability() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT13M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIAccountability', url: '/BlogAgenticAIAccountability' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Agent Accountability and Transparency' }]} />

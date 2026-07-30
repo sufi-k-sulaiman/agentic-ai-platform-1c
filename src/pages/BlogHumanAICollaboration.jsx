@@ -15,7 +15,7 @@ export default function BlogHumanAICollaboration() {
       <PageMeta 
         title="The Future of Work: Human-AI Collaboration with Agentic Systems"
         description="Explore how humans and AI agents will work together in the future workplace, creating unprecedented productivity and innovation."
-        url="/blog/human-ai-collaboration"
+        url="/BlogHumanAICollaboration"
         keywords={['human-AI collaboration', 'future of work', 'AI workplace', 'augmented intelligence', 'workforce transformation']}
         article={{
         author: 'Jennifer Martinez',
@@ -25,6 +25,8 @@ export default function BlogHumanAICollaboration() {
         tags: ['ai insights', 'AI', 'agentic AI'],
         timeRequired: 'PT10M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogHumanAICollaboration', url: '/BlogHumanAICollaboration' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

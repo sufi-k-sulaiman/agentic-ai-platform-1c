@@ -16,7 +16,7 @@ export default function BlogAgentToolInterfaces() {
       <PageMeta 
         title="Designing Agent Tool Interfaces: Best Practices and Patterns"
         description="Create intuitive tool interfaces for AI agents. Input/output design, parameter configuration, and result visualization patterns."
-        url="/blog/agent-tool-interfaces"
+        url="/BlogAgentToolInterfaces"
         keywords={['tool interfaces', 'agent tools', 'UI design', 'parameter design', 'result visualization', 'tool UX']}
         article={{
         author: 'Sarah Mitchell',
@@ -26,6 +26,8 @@ export default function BlogAgentToolInterfaces() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgentToolInterfaces', url: '/BlogAgentToolInterfaces' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Designing Agent Tool Interfaces: Best Pr' }]} />

@@ -16,7 +16,7 @@ export default function BlogTaskExecutionWorkflow() {
       <PageMeta 
         title="Task Execution and Workflow Capabilities in AI Agents"
         description="Learn how agents execute complex workflows. Task orchestration, parallel execution, error recovery, and workflow optimization."
-        url="/blog/task-execution-workflow"
+        url="/BlogTaskExecutionWorkflow"
         keywords={['task execution', 'workflow automation', 'task orchestration', 'parallel execution', 'agent workflows']}
         article={{
         author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogTaskExecutionWorkflow() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT19M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogTaskExecutionWorkflow', url: '/BlogTaskExecutionWorkflow' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Task Execution and Workflow Capabilities' }]} />

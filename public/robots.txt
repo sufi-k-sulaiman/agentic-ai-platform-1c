@@ -10,3 +10,6 @@ Crawl-delay: 10
 
 # Sitemap
 Sitemap: https://1cplatform.com/sitemap.xml
+
+# RSS Feed
+# https://1cplatform.com/rss.xml

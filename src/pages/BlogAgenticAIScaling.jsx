@@ -15,7 +15,7 @@ export default function BlogAgenticAIScaling() {
       <PageMeta 
         title="Scaling Agentic AI from Pilot to Production: Lessons Learned"
         description="Learn from 500+ enterprise deployments. Strategies for scaling AI agents across your organization and achieving widespread adoption."
-        url="/blog/agentic-ai-scaling"
+        url="/BlogAgenticAIScaling"
         keywords={['AI scaling', 'enterprise AI', 'AI deployment', 'change management', 'AI adoption']}
         article={{
         author: '1C Platform Team',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIScaling() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIScaling', url: '/BlogAgenticAIScaling' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

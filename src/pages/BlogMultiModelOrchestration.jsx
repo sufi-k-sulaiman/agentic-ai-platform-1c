@@ -16,7 +16,7 @@ export default function BlogMultiModelOrchestration() {
       <PageMeta 
         title="Multi-Model Orchestration in AI Applications"
         description="Coordinate multiple AI models effectively. Model routing, fallback chains, ensemble methods, and cost-performance optimization."
-        url="/blog/multi-model-orchestration"
+        url="/BlogMultiModelOrchestration"
         keywords={['multi-model', 'model orchestration', 'model routing', 'ensemble AI', 'model fallback']}
         article={{
         author: 'Dr. Alex Thompson',
@@ -26,6 +26,8 @@ export default function BlogMultiModelOrchestration() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogMultiModelOrchestration', url: '/BlogMultiModelOrchestration' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Multi-Model Orchestration in AI Applicat' }]} />

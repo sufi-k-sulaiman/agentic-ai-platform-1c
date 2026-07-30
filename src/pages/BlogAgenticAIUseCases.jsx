@@ -15,7 +15,7 @@ export default function BlogAgenticAIUseCases() {
       <PageMeta 
         title="10 Proven Use Cases for Agentic AI in Enterprise Operations"
         description="Explore real-world applications of autonomous AI agents across departments with implementation guides and expected outcomes."
-        url="/blog/agentic-ai-use-cases"
+        url="/BlogAgenticAIUseCases"
         keywords={['AI use cases', 'AI applications', 'business automation', 'enterprise AI', 'real-world AI']}
         article={{
         author: 'Alexandra Moore',
@@ -26,6 +26,8 @@ export default function BlogAgenticAIUseCases() {
         timeRequired: 'PT16M',
       }}
       speakable={{ cssSelectors: ['h1', 'article > p'] }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIUseCases', url: '/BlogAgenticAIUseCases' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

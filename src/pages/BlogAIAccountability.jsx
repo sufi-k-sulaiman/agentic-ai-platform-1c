@@ -15,7 +15,7 @@ export default function BlogAIAccountability() {
       <PageMeta 
         title="AI Accountability: Who's Responsible When Agents Make Mistakes?"
         description="Exploring accountability frameworks for autonomous AI systems. Legal liability, organizational responsibility, and practical risk allocation."
-        url="/blog/ai-accountability"
+        url="/BlogAIAccountability"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIAccountability() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIAccountability', url: '/BlogAIAccountability' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIAccountability' }]} />

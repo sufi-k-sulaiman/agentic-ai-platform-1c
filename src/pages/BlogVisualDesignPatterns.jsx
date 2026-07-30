@@ -16,7 +16,7 @@ export default function BlogVisualDesignPatterns() {
       <PageMeta 
         title="Visual Design Patterns for Agentic AI: Component Library Guide"
         description="Build consistent AI agent interfaces with reusable design patterns. Explore component libraries, design systems, and visual guidelines."
-        url="/blog/visual-design-patterns"
+        url="/BlogVisualDesignPatterns"
         keywords={['design patterns', 'AI components', 'design system', 'UI patterns']}
         article={{
         author: 'David Chen',
@@ -26,6 +26,8 @@ export default function BlogVisualDesignPatterns() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogVisualDesignPatterns', url: '/BlogVisualDesignPatterns' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Visual Design Patterns for Agentic AI: C' }]} />

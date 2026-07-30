@@ -15,7 +15,7 @@ export default function BlogChatGPTLLMs() {
       <PageMeta 
         title="ChatGPT and Large Language Models: Understanding the Technology"
         description="Deep dive into how ChatGPT and other LLMs work, their capabilities, limitations, and best practices for business use."
-        url="/blog/chatgpt-llms"
+        url="/BlogChatGPTLLMs"
         keywords={['ChatGPT', 'large language models', 'LLM', 'GPT-4', 'AI chatbot', 'natural language processing']}
         article={{
         author: '1C Platform Team',
@@ -25,6 +25,8 @@ export default function BlogChatGPTLLMs() {
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
       speakable={{ cssSelectors: ['h1', 'article > p'] }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogChatGPTLLMs', url: '/BlogChatGPTLLMs' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

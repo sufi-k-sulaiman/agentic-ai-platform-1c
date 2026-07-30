@@ -15,7 +15,7 @@ export default function BlogAutonomousDecisionMaking() {
       <PageMeta 
         title="Autonomous Decision-Making: How AI Systems Think and Act Independently"
         description="Deep dive into how autonomous AI systems make decisions without human intervention. Frameworks, algorithms, and real-world examples."
-        url="/blog/autonomous-decision-making"
+        url="/BlogAutonomousDecisionMaking"
         article={{
         author: 'Dr. Sarah Kim',
         datePublished: '2025-01-18',
@@ -24,6 +24,8 @@ export default function BlogAutonomousDecisionMaking() {
         tags: ['ai autonomy', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAutonomousDecisionMaking', url: '/BlogAutonomousDecisionMaking' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Autonomous Decision-Making: How AI Syste' }]} />

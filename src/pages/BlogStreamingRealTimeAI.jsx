@@ -16,7 +16,7 @@ export default function BlogStreamingRealTimeAI() {
       <PageMeta 
         title="Streaming and Real-Time AI Responses: Building Responsive Apps"
         description="Implement streaming for instant feedback. Server-sent events, WebSockets, progressive rendering, and real-time UX patterns."
-        url="/blog/streaming-realtime-ai"
+        url="/BlogStreamingRealTimeAI"
         keywords={['streaming AI', 'real-time responses', 'SSE', 'WebSockets', 'progressive rendering']}
         article={{
         author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogStreamingRealTimeAI() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogStreamingRealTimeAI', url: '/BlogStreamingRealTimeAI' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Streaming and Real-Time AI Responses: Bu' }]} />

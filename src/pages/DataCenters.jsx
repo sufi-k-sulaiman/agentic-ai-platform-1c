@@ -108,6 +108,9 @@ export default function DataCenters() {
           name: '1C Platform - Data Center AI',
           telephone: '+1-800-1C-DATACENTER',
         }}
+      
+        faq={[{"question":"How does AI optimize data center operations?","answer":"Agents predict maintenance needs, optimize energy usage, automate capacity planning, and monitor security threats. The platform achieves 99.999% uptime while reducing operational costs by 35%."},{"question":"Can it monitor my existing infrastructure?","answer":"Yes. We integrate with Kubernetes, VMware, AWS, Azure, and GCP. Agents pull metrics from Prometheus, Grafana, and Datadog to predict issues before they impact users."},{"question":"What energy savings can I expect?","answer":"Data centers typically see 30% energy reduction, 35% cost savings, and 99.999% uptime when deploying agentic AI for grid optimization and predictive maintenance."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'DataCenters', url: '/DataCenters' }]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

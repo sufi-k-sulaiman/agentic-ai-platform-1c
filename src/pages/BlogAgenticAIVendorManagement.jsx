@@ -15,7 +15,7 @@ export default function BlogAgenticAIVendorManagement() {
       <PageMeta 
         title="AI Vendor Management: Assessing and Managing Third-Party AI Risks"
         description="Evaluate and manage risks from AI/LLM vendors. Due diligence, contracts, SLAs, and ongoing vendor governance."
-        url="/blog/agentic-ai-vendor-management"
+        url="/BlogAgenticAIVendorManagement"
         article={{
         author: 'Steven Martinez',
         datePublished: '2025-01-02',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIVendorManagement() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIVendorManagement', url: '/BlogAgenticAIVendorManagement' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Vendor Management: Assessing and Mana' }]} />

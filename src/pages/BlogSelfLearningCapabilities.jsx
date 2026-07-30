@@ -16,7 +16,7 @@ export default function BlogSelfLearningCapabilities() {
       <PageMeta 
         title="Self-Learning and Adaptive Capabilities in AI Agents"
         description="Understand how agents learn from experience and adapt over time. Reinforcement learning, feedback loops, and continuous improvement mechanisms."
-        url="/blog/self-learning-capabilities"
+        url="/BlogSelfLearningCapabilities"
         keywords={['self-learning AI', 'adaptive agents', 'reinforcement learning', 'continuous improvement', 'agent learning', 'feedback loops']}
         article={{
         author: 'Dr. Sarah Kim',
@@ -26,6 +26,8 @@ export default function BlogSelfLearningCapabilities() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogSelfLearningCapabilities', url: '/BlogSelfLearningCapabilities' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Self-Learning and Adaptive Capabilities ' }]} />

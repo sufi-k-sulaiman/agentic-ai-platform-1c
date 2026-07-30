@@ -15,7 +15,7 @@ export default function BlogMigratingToAgenticAI() {
       <PageMeta 
         title="Migration Guide: From Traditional AI to Agentic AI Systems"
         description="Step-by-step guide to migrating from traditional AI to agentic systems. Strategies, timelines, and risk mitigation."
-        url="/blog/migrating-to-agentic-ai"
+        url="/BlogMigratingToAgenticAI"
         article={{
         author: 'Michael Rodriguez',
         datePublished: '2024-12-13',
@@ -24,6 +24,8 @@ export default function BlogMigratingToAgenticAI() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogMigratingToAgenticAI', url: '/BlogMigratingToAgenticAI' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Migration Guide: From Traditional AI to ' }]} />

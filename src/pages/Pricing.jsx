@@ -40,6 +40,18 @@ export default function Pricing() {
             aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '500' },
           }
         ]}
+      
+        service={{ type: 'AI Platform Pricing & Plans', areaServed: 'Worldwide' }}
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'AggregateRating',
+            itemReviewed: { '@type': 'Service', name: '1C Platform' },
+            ratingValue: '4.9',
+            reviewCount: '500',
+            bestRating: '5',
+          }
+        ]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

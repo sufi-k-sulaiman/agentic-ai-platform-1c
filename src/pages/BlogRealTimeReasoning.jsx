@@ -16,7 +16,7 @@ export default function BlogRealTimeReasoning() {
       <PageMeta 
         title="Real-Time Reasoning: How Agents Think on Their Feet"
         description="Explore real-time reasoning capabilities. Dynamic problem solving, context switching, interrupt handling, and adaptive response generation."
-        url="/blog/real-time-reasoning"
+        url="/BlogRealTimeReasoning"
         keywords={['real-time AI', 'dynamic reasoning', 'context switching', 'interrupt handling', 'adaptive AI', 'instant decision making']}
         article={{
         author: 'Dr. Alex Thompson',
@@ -26,6 +26,8 @@ export default function BlogRealTimeReasoning() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogRealTimeReasoning', url: '/BlogRealTimeReasoning' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Real-Time Reasoning: How Agents Think on' }]} />

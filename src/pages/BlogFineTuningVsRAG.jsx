@@ -16,7 +16,7 @@ export default function BlogFineTuningVsRAG() {
       <PageMeta 
         title="Fine-Tuning vs RAG: Choosing the Right Approach for Your App"
         description="Compare fine-tuning and retrieval-augmented generation. When to use each, implementation patterns, and hybrid approaches."
-        url="/blog/fine-tuning-vs-rag"
+        url="/BlogFineTuningVsRAG"
         keywords={['fine-tuning', 'RAG', 'retrieval augmented generation', 'AI customization', 'model training']}
         article={{
         author: 'Dr. Sarah Kim',
@@ -26,6 +26,8 @@ export default function BlogFineTuningVsRAG() {
         tags: ['agentic insights', 'AI', 'agentic AI'],
         timeRequired: 'PT19M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogFineTuningVsRAG', url: '/BlogFineTuningVsRAG' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Fine-Tuning vs RAG: Choosing the Right A' }]} />

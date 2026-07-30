@@ -15,7 +15,7 @@ export default function BlogAIDataGovernance() {
       <PageMeta 
         title="Data Governance for Agentic AI: Managing Training Data and Agent Access"
         description="Best practices for governing data used by autonomous AI agents, from training datasets to runtime access controls."
-        url="/blog/ai-data-governance"
+        url="/BlogAIDataGovernance"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIDataGovernance() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIDataGovernance', url: '/BlogAIDataGovernance' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIDataGovernance' }]} />

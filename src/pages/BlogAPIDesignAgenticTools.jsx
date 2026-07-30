@@ -16,7 +16,7 @@ export default function BlogAPIDesignAgenticTools() {
       <PageMeta 
         title="API Design for Agentic AI Tools: Developer Experience Guide"
         description="Build developer-friendly APIs for AI agent tools. Endpoint design, authentication, versioning, and documentation best practices."
-        url="/blog/api-design-agentic-tools"
+        url="/BlogAPIDesignAgenticTools"
         keywords={['API design', 'REST API', 'GraphQL', 'agent APIs', 'developer experience', 'API best practices']}
         article={{
         author: 'Michael Chen',
@@ -26,6 +26,8 @@ export default function BlogAPIDesignAgenticTools() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAPIDesignAgenticTools', url: '/BlogAPIDesignAgenticTools' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'API Design for Agentic AI Tools: Develop' }]} />

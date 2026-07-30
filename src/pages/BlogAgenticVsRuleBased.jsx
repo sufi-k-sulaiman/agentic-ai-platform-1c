@@ -15,7 +15,7 @@ export default function BlogAgenticVsRuleBased() {
       <PageMeta 
         title="Agentic AI vs Rule-Based Systems: Why Intelligence Beats Rules"
         description="Compare agentic AI with traditional rule-based systems. Understand limitations of rules and advantages of autonomous intelligence."
-        url="/blog/agentic-vs-rule-based"
+        url="/BlogAgenticVsRuleBased"
         article={{
         author: 'Laura Martinez',
         datePublished: '2024-12-18',
@@ -24,6 +24,8 @@ export default function BlogAgenticVsRuleBased() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticVsRuleBased', url: '/BlogAgenticVsRuleBased' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agentic AI vs Rule-Based Systems: Why In' }]} />

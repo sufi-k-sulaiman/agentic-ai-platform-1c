@@ -15,7 +15,7 @@ export default function BlogAgenticVsTraditionalAI() {
       <PageMeta 
         title="Agentic AI vs Traditional AI: Complete Comparison Guide"
         description="Comprehensive comparison of agentic AI and traditional AI systems. Understand key differences, capabilities, limitations, and when to use each approach."
-        url="/blog/agentic-vs-traditional-ai"
+        url="/BlogAgenticVsTraditionalAI"
         keywords={['agentic AI vs traditional AI', 'AI comparison', 'autonomous AI', 'traditional machine learning', 'AI architecture comparison']}
         article={{
         author: 'Dr. Alex Thompson',
@@ -25,6 +25,8 @@ export default function BlogAgenticVsTraditionalAI() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT20M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticVsTraditionalAI', url: '/BlogAgenticVsTraditionalAI' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Comparing AI Agent Architectures: ReAct ' }]} />

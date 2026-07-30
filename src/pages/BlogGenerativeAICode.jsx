@@ -15,7 +15,7 @@ export default function BlogGenerativeAICode() {
       <PageMeta 
         title="AI-Powered Code Generation: Accelerating Software Development"
         description="Learn how AI code assistants like GitHub Copilot are transforming software development. Best practices, limitations, and real-world examples."
-        url="/blog/generative-ai-code"
+        url="/BlogGenerativeAICode"
         article={{
         author: 'Alex Thompson',
         datePublished: '2024-12-06',
@@ -24,6 +24,8 @@ export default function BlogGenerativeAICode() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT13M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAICode', url: '/BlogGenerativeAICode' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI-Powered Code Generation: Accelerating' }]} />

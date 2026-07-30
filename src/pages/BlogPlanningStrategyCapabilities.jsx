@@ -16,7 +16,7 @@ export default function BlogPlanningStrategyCapabilities() {
       <PageMeta 
         title="Planning and Strategy Capabilities in AI Agents"
         description="Learn how agents plan ahead and strategize. Goal decomposition, action sequencing, resource allocation, and long-term planning capabilities."
-        url="/blog/planning-strategy-capabilities"
+        url="/BlogPlanningStrategyCapabilities"
         keywords={['AI planning', 'strategic thinking', 'goal decomposition', 'action sequencing', 'resource allocation', 'long-term planning']}
         article={{
         author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogPlanningStrategyCapabilities() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogPlanningStrategyCapabilities', url: '/BlogPlanningStrategyCapabilities' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Planning and Strategy Capabilities in AI' }]} />

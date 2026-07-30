@@ -16,7 +16,7 @@ export default function BlogAgenticAIMemoryManagement() {
       <PageMeta 
         title="Memory Management in Agentic AI: Short-term vs Long-term Strategies"
         description="Complete guide to memory architecture for AI agents. Learn about short-term, long-term, and episodic memory patterns for autonomous systems."
-        url="/blog/agentic-ai-memory-management"
+        url="/BlogAgenticAIMemoryManagement"
         keywords={['AI memory', 'agent memory', 'agentic AI architecture', 'context management', 'RAG']}
         article={{
         author: 'Dr. Sarah Mitchell',
@@ -26,6 +26,8 @@ export default function BlogAgenticAIMemoryManagement() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIMemoryManagement', url: '/BlogAgenticAIMemoryManagement' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Memory Management in Agentic AI: Short-t' }]} />

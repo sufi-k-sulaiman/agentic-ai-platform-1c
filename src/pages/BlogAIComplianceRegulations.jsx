@@ -15,7 +15,7 @@ export default function BlogAIComplianceRegulations() {
       <PageMeta 
         title="Navigating AI Regulations: Compliance Guide for Agentic Systems"
         description="Comprehensive overview of global AI regulations including EU AI Act, US guidelines, and industry-specific requirements for autonomous agents."
-        url="/blog/ai-compliance-regulations"
+        url="/BlogAIComplianceRegulations"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIComplianceRegulations() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIComplianceRegulations', url: '/BlogAIComplianceRegulations' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIComplianceRegulations' }]} />

@@ -16,7 +16,7 @@ export default function BlogToolErrorHandling() {
       <PageMeta 
         title="Error Handling Design for Agent Tool Execution"
         description="Handle tool execution failures gracefully. Retry strategies, fallback patterns, user communication, and recovery workflows."
-        url="/blog/tool-error-handling"
+        url="/BlogToolErrorHandling"
         keywords={['error handling', 'retry logic', 'fallback patterns', 'agent reliability', 'fault tolerance', 'error recovery']}
         article={{
         author: 'David Park',
@@ -26,6 +26,8 @@ export default function BlogToolErrorHandling() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogToolErrorHandling', url: '/BlogToolErrorHandling' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Error Handling Design for Agent Tool Exe' }]} />

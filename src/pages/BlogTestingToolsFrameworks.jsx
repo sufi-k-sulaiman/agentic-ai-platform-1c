@@ -16,7 +16,7 @@ export default function BlogTestingToolsFrameworks() {
       <PageMeta 
         title="Testing Tools and Frameworks for Agentic AI Systems"
         description="Build comprehensive testing tools for AI agents. Unit testing, integration testing, simulation environments, and quality assurance patterns."
-        url="/blog/testing-tools-frameworks"
+        url="/BlogTestingToolsFrameworks"
         keywords={['AI testing', 'agent testing', 'test automation', 'QA tools', 'testing frameworks', 'agent simulation']}
         article={{
         author: 'Dr. Alex Kumar',
@@ -26,6 +26,8 @@ export default function BlogTestingToolsFrameworks() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT20M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogTestingToolsFrameworks', url: '/BlogTestingToolsFrameworks' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Testing Tools and Frameworks for Agentic' }]} />

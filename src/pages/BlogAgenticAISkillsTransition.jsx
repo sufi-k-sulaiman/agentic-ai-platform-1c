@@ -15,7 +15,7 @@ export default function BlogAgenticAISkillsTransition() {
       <PageMeta 
         title="Skills Transition: From Traditional AI to Agentic AI Development"
         description="How ML engineers and data scientists can transition to agentic AI. New skills needed, learning paths, and career implications."
-        url="/blog/agentic-ai-skills-transition"
+        url="/BlogAgenticAISkillsTransition"
         article={{
         author: 'Lisa Anderson',
         datePublished: '2024-12-09',
@@ -24,6 +24,8 @@ export default function BlogAgenticAISkillsTransition() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAISkillsTransition', url: '/BlogAgenticAISkillsTransition' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Skills Transition: From Traditional AI t' }]} />

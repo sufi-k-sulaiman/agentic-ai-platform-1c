@@ -100,6 +100,9 @@ export default function Gaming() {
           name: '1C Platform - Gaming AI',
           telephone: '+1-800-1C-GAMING',
         }}
+      
+        faq={[{"question":"How does AI optimize gaming infrastructure?","answer":"Agents handle player matchmaking, cheat detection, infrastructure scaling, and LiveOps automation. The platform reduces infrastructure costs by 40% with 99% cheat detection and 99.9% uptime."},{"question":"Can it integrate with your game engine?","answer":"Yes. We connect to Unity, Unreal Engine, and custom game servers via API. Agents monitor player behavior, scale infrastructure automatically, and detect anomalies in real time."},{"question":"What cost savings can I expect?","answer":"Gaming companies typically see 40% infrastructure cost reduction, 99% cheat detection accuracy, and 99.9% uptime when deploying agentic AI for operations and scaling."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Gaming', url: '/Gaming' }]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

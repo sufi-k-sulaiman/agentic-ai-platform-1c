@@ -15,7 +15,7 @@ export default function BlogAgenticAISecurityComparison() {
       <PageMeta 
         title="Security Comparison: Agentic AI vs Traditional AI Risk Profiles"
         description="Compare security risks and mitigations for agentic and traditional AI. Threat models, vulnerabilities, and best practices."
-        url="/blog/agentic-ai-security-comparison"
+        url="/BlogAgenticAISecurityComparison"
         article={{
         author: 'Marcus Johnson, CISO',
         datePublished: '2024-12-07',
@@ -24,6 +24,8 @@ export default function BlogAgenticAISecurityComparison() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAISecurityComparison', url: '/BlogAgenticAISecurityComparison' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Security Comparison: Agentic AI vs Tradi' }]} />

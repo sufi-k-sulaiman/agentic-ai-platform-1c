@@ -103,6 +103,9 @@ export default function PropertyManagement() {
         image="https://images.unsplash.com/photo-1560510525667-88b934b2c3c5?w=1200&h=630&fit=crop"
         service={{ type: 'Property Management AI', areaServed: 'Worldwide' }}
         localBusiness={{ name: '1C Platform - Property AI', telephone: '+1-800-1C-PROPERTY' }}
+      
+        faq={[{"question":"How does AI automate property management?","answer":"1C Platform uses autonomous AI agents to handle maintenance scheduling, tenant onboarding, rent collection, and lease renewals. Agents read sensor data to predict equipment failures, route work orders automatically, and draft communications without manual input."},{"question":"Can it integrate with your existing property management software?","answer":"Yes. We integrate with Salesforce, Microsoft 365, Google Workspace, and 500+ other tools. Use our SDK or REST API to connect any PM system, accounting tool, or IoT sensor network."},{"question":"What savings can I expect?","answer":"Property management teams typically see 40% cost reduction, 60% efficiency improvement, and 45% tenant satisfaction increase when deploying agentic AI for maintenance, communications, and operations."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'PropertyManagement', url: '/PropertyManagement' }]}
       />
       <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Property Management' }]} />
       <IndustryIntro currentPage="PropertyManagement" heading="Property Management, Reinvented with Agentic AI">

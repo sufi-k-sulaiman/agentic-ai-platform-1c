@@ -15,7 +15,7 @@ export default function BlogAIAutonomyVsOversight() {
       <PageMeta 
         title="AI Autonomy vs Human Oversight: Finding the Right Balance"
         description="When should AI act autonomously and when do humans need to intervene? Framework for balancing autonomy with oversight and control."
-        url="/blog/ai-autonomy-vs-oversight"
+        url="/BlogAIAutonomyVsOversight"
         article={{
         author: 'Jennifer Martinez',
         datePublished: '2025-01-16',
@@ -24,6 +24,8 @@ export default function BlogAIAutonomyVsOversight() {
         tags: ['ai autonomy', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIAutonomyVsOversight', url: '/BlogAIAutonomyVsOversight' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Autonomy vs Human Oversight: Finding ' }]} />

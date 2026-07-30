@@ -16,7 +16,7 @@ export default function BlogComplexProblemSolving() {
       <PageMeta 
         title="Complex Problem-Solving Capabilities of AI Agents"
         description="Discover how agents tackle multi-step problems. Problem decomposition, solution exploration, constraint satisfaction, and optimization strategies."
-        url="/blog/complex-problem-solving"
+        url="/BlogComplexProblemSolving"
         keywords={['problem solving', 'AI reasoning', 'problem decomposition', 'optimization', 'constraint satisfaction', 'agent intelligence']}
         article={{
         author: 'Kevin Zhang',
@@ -26,6 +26,8 @@ export default function BlogComplexProblemSolving() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT19M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogComplexProblemSolving', url: '/BlogComplexProblemSolving' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Complex Problem-Solving Capabilities of ' }]} />

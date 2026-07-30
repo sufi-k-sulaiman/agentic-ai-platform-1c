@@ -15,7 +15,7 @@ export default function BlogAgenticAIModelGovernance() {
       <PageMeta 
         title="AI Model Governance: Versioning, Testing, and Lifecycle Management"
         description="Manage AI models powering your agents. Version control, testing standards, deployment processes, and retirement procedures."
-        url="/blog/agentic-ai-model-governance"
+        url="/BlogAgenticAIModelGovernance"
         article={{
         author: 'Dr. Nina Patel',
         datePublished: '2025-01-03',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIModelGovernance() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIModelGovernance', url: '/BlogAgenticAIModelGovernance' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Model Governance: Versioning, Testing' }]} />

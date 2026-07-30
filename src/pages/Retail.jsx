@@ -101,6 +101,9 @@ export default function Retail() {
           name: '1C Platform - Retail AI',
           telephone: '+1-800-1C-RETAIL',
         }}
+      
+        faq={[{"question":"How does AI optimize retail operations?","answer":"Agentic AI unifies POS, e-commerce, and CRM data into 360-degree customer profiles. Agents automate dynamic pricing, inventory replenishment, and personalized recommendations that lift conversion by 35%."},{"question":"Can it integrate with my e-commerce platform?","answer":"Yes. We connect to Shopify, Magento, BigCommerce, and custom e-commerce platforms. Agents sync inventory, process orders, and personalize customer journeys in real time."},{"question":"What ROI can I expect?","answer":"Retailers typically see 35% conversion lift, 25% margin improvement, and 40% customer retention increase when deploying agentic AI across merchandising, pricing, and customer experience."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Retail', url: '/Retail' }]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

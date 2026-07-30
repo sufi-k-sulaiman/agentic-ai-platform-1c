@@ -16,7 +16,7 @@ export default function BlogMemoryContextManagement() {
       <PageMeta 
         title="Memory and Context Management in AI Agents"
         description="Master how agents store and retrieve information. Short-term memory, long-term storage, context windows, and memory optimization strategies."
-        url="/blog/memory-context-management"
+        url="/BlogMemoryContextManagement"
         keywords={['AI memory', 'context management', 'agent memory', 'context windows', 'memory optimization']}
         article={{
         author: 'Dr. Marcus Chen',
@@ -26,6 +26,8 @@ export default function BlogMemoryContextManagement() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogMemoryContextManagement', url: '/BlogMemoryContextManagement' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Memory and Context Management in AI Agen' }]} />

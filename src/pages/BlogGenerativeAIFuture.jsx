@@ -15,7 +15,7 @@ export default function BlogGenerativeAIFuture() {
       <PageMeta 
         title="The Future of Generative AI: Trends and Predictions for 2025-2030"
         description="Explore where generative AI is heading. From multimodal models to autonomous agents, discover the trends shaping the next 5 years."
-        url="/blog/generative-ai-future"
+        url="/BlogGenerativeAIFuture"
         article={{
         author: 'Dr. Kevin Park',
         datePublished: '2024-12-15',
@@ -24,6 +24,8 @@ export default function BlogGenerativeAIFuture() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT19M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAIFuture', url: '/BlogGenerativeAIFuture' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Advanced Generative AI Techniques: RAG, ' }]} />

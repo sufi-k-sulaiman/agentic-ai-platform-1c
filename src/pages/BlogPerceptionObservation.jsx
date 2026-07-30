@@ -16,7 +16,7 @@ export default function BlogPerceptionObservation() {
       <PageMeta 
         title="Perception and Observation Capabilities in AI Agents"
         description="Understand how agents perceive their environment. State detection, change monitoring, pattern recognition, and environmental awareness."
-        url="/blog/perception-observation"
+        url="/BlogPerceptionObservation"
         keywords={['AI perception', 'observation', 'state detection', 'change monitoring', 'environmental awareness']}
         article={{
         author: 'Dr. Emily Carter',
@@ -26,6 +26,8 @@ export default function BlogPerceptionObservation() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogPerceptionObservation', url: '/BlogPerceptionObservation' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Perception and Observation Capabilities ' }]} />

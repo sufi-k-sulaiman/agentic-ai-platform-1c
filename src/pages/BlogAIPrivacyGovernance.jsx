@@ -15,7 +15,7 @@ export default function BlogAIPrivacyGovernance() {
       <PageMeta 
         title="Privacy Governance for Agentic AI: GDPR, CCPA Compliance"
         description="Navigate privacy regulations for autonomous AI agents. Practical strategies for GDPR, CCPA compliance and privacy-preserving AI systems."
-        url="/blog/ai-privacy-governance"
+        url="/BlogAIPrivacyGovernance"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIPrivacyGovernance() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIPrivacyGovernance', url: '/BlogAIPrivacyGovernance' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIPrivacyGovernance' }]} />

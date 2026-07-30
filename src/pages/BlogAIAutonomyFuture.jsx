@@ -15,7 +15,7 @@ export default function BlogAIAutonomyFuture() {
       <PageMeta 
         title="The Future of AI Autonomy: Predictions and Emerging Trends for 2025-2030"
         description="Look ahead at the future of autonomous AI. Emerging capabilities, market trends, regulatory landscape, and what it means for your business."
-        url="/blog/ai-autonomy-future"
+        url="/BlogAIAutonomyFuture"
         article={{
         author: 'Dr. Emily Carter',
         datePublished: '2025-01-13',
@@ -24,6 +24,8 @@ export default function BlogAIAutonomyFuture() {
         tags: ['ai autonomy', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIAutonomyFuture', url: '/BlogAIAutonomyFuture' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'The Future of AI Autonomy: Predictions a' }]} />

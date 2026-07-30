@@ -108,6 +108,9 @@ export default function FinancialInstitutions() {
           name: '1C Platform - Financial AI',
           telephone: '+1-800-1C-FINANCE',
         }}
+      
+        faq={[{"question":"How does AI automate financial services?","answer":"Agents handle KYC/AML automation, loan processing, fraud detection, and customer support. The platform processes loans in under 3 minutes with 95% fraud detection accuracy."},{"question":"Is it compliant with banking regulations?","answer":"Yes. 1C Platform is SOC 2 Type II, ISO 27001, and GDPR compliant. Every AI agent decision is fully auditable with immutable logs for regulatory reporting."},{"question":"What speed improvements can I expect?","answer":"Financial institutions typically see 95% faster loan processing, 95% fraud detection accuracy, and 45% cost reduction in operations when deploying agentic AI."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'FinancialInstitutions', url: '/FinancialInstitutions' }]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

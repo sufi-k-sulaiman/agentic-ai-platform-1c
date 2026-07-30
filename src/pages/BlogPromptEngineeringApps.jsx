@@ -16,7 +16,7 @@ export default function BlogPromptEngineeringApps() {
       <PageMeta 
         title="Prompt Engineering Mastery for AI Applications"
         description="Advanced prompt engineering techniques. System prompts, few-shot learning, chain-of-thought, and prompt optimization strategies."
-        url="/blog/prompt-engineering-apps"
+        url="/BlogPromptEngineeringApps"
         keywords={['prompt engineering', 'system prompts', 'few-shot learning', 'chain of thought', 'prompt optimization']}
         article={{
         author: 'Maria Chen',
@@ -26,6 +26,8 @@ export default function BlogPromptEngineeringApps() {
         tags: ['agentic insights', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogPromptEngineeringApps', url: '/BlogPromptEngineeringApps' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Prompt Engineering Mastery for AI Applic' }]} />

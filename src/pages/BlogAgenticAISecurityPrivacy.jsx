@@ -15,7 +15,7 @@ export default function BlogAgenticAISecurityPrivacy() {
       <PageMeta 
         title="Security and Privacy in Agentic AI: Protecting Data and Systems"
         description="Comprehensive guide to securing autonomous AI agents, protecting sensitive data, and ensuring privacy compliance."
-        url="/blog/agentic-ai-security-privacy"
+        url="/BlogAgenticAISecurityPrivacy"
         article={{
         author: 'Marcus Williams',
         datePublished: '2025-01-12',
@@ -24,6 +24,8 @@ export default function BlogAgenticAISecurityPrivacy() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAISecurityPrivacy', url: '/BlogAgenticAISecurityPrivacy' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Security and Privacy in Agentic AI: Prot' }]} />

@@ -15,7 +15,7 @@ export default function BlogAgenticAIGovernanceBestPractices() {
       <PageMeta 
         title="Agentic AI Governance Best Practices: Lessons from Leaders"
         description="Learn from organizations with mature AI governance. Proven strategies, common mistakes, and practical implementation guidance."
-        url="/blog/agentic-ai-governance-best-practices"
+        url="/BlogAgenticAIGovernanceBestPractices"
         article={{
         author: 'Amanda Foster',
         datePublished: '2025-01-05',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIGovernanceBestPractices() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIGovernanceBestPractices', url: '/BlogAgenticAIGovernanceBestPractices' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agentic AI Governance Best Practices: Le' }]} />

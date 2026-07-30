@@ -15,7 +15,7 @@ export default function BlogAutomationToAutonomy() {
       <PageMeta 
         title="From Automation to Autonomy: The Evolution of AI in Business"
         description="Trace the journey from simple automation to autonomous AI systems and understand the technological leaps driving business transformation."
-        url="/blog/automation-to-autonomy"
+        url="/BlogAutomationToAutonomy"
         keywords={['AI evolution', 'automation', 'autonomous AI', 'AI history', 'business technology']}
         article={{
         author: 'Dr. Marcus Chen',
@@ -25,6 +25,8 @@ export default function BlogAutomationToAutonomy() {
         tags: ['ai insights', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAutomationToAutonomy', url: '/BlogAutomationToAutonomy' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

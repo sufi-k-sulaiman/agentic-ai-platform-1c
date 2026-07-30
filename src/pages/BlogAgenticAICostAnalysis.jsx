@@ -15,7 +15,7 @@ export default function BlogAgenticAICostAnalysis() {
       <PageMeta 
         title="Cost Comparison: Agentic AI vs Traditional AI Systems"
         description="Detailed cost analysis of agentic vs traditional AI. Development costs, operational expenses, ROI timelines, and total cost of ownership."
-        url="/blog/agentic-ai-cost-analysis"
+        url="/BlogAgenticAICostAnalysis"
         article={{
         author: 'David Chang, CFO',
         datePublished: '2024-12-17',
@@ -24,6 +24,8 @@ export default function BlogAgenticAICostAnalysis() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAICostAnalysis', url: '/BlogAgenticAICostAnalysis' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Cost Comparison: Agentic AI vs Tradition' }]} />

@@ -16,7 +16,7 @@ export default function BlogAutonomousDecisionCapabilities() {
       <PageMeta 
         title="Autonomous Decision-Making Capabilities: How AI Agents Choose Actions"
         description="Explore how AI agents make decisions independently. Decision frameworks, reasoning patterns, confidence scoring, and autonomous action selection."
-        url="/blog/autonomous-decision-capabilities"
+        url="/BlogAutonomousDecisionCapabilities"
         keywords={['autonomous decisions', 'AI decision making', 'agent reasoning', 'confidence scoring', 'action selection', 'decision frameworks']}
         article={{
         author: 'Dr. Marcus Chen',
@@ -26,6 +26,8 @@ export default function BlogAutonomousDecisionCapabilities() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAutonomousDecisionCapabilities', url: '/BlogAutonomousDecisionCapabilities' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Autonomous Decision-Making Capabilities:' }]} />

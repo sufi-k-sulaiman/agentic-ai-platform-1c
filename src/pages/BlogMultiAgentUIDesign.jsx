@@ -16,7 +16,7 @@ export default function BlogMultiAgentUIDesign() {
       <PageMeta 
         title="Multi-Agent System UI/UX: Coordinating Multiple AI Agents"
         description="Design interfaces for complex multi-agent systems. Agent coordination, status visualization, and managing agent interactions."
-        url="/blog/multi-agent-ui-design"
+        url="/BlogMultiAgentUIDesign"
         keywords={['multi-agent UI', 'agent coordination', 'system design', 'agent orchestration']}
         article={{
         author: 'Michael Torres',
@@ -26,6 +26,8 @@ export default function BlogMultiAgentUIDesign() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogMultiAgentUIDesign', url: '/BlogMultiAgentUIDesign' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Multi-Agent System UI/UX: Coordinating M' }]} />

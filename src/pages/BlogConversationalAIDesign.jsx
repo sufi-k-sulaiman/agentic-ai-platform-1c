@@ -16,7 +16,7 @@ export default function BlogConversationalAIDesign() {
       <PageMeta 
         title="Designing Conversational AI Interfaces: From Chatbots to Agents"
         description="Create engaging conversational experiences for AI agents. Message design, context management, and natural dialogue patterns."
-        url="/blog/conversational-ai-design"
+        url="/BlogConversationalAIDesign"
         keywords={['conversational AI', 'chatbot design', 'dialogue design', 'message UI']}
         article={{
         author: 'Sophie Martinez',
@@ -26,6 +26,8 @@ export default function BlogConversationalAIDesign() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogConversationalAIDesign', url: '/BlogConversationalAIDesign' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Designing Conversational AI Interfaces: ' }]} />

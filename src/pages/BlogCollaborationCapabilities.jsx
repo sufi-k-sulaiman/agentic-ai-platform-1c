@@ -16,7 +16,7 @@ export default function BlogCollaborationCapabilities() {
       <PageMeta 
         title="Collaboration Capabilities: How AI Agents Work Together"
         description="Understand agent-to-agent collaboration. Communication protocols, task delegation, shared memory, conflict resolution, and team coordination."
-        url="/blog/collaboration-capabilities"
+        url="/BlogCollaborationCapabilities"
         keywords={['agent collaboration', 'multi-agent systems', 'task delegation', 'agent communication', 'team coordination', 'distributed AI']}
         article={{
         author: 'Jennifer Martinez',
@@ -26,6 +26,8 @@ export default function BlogCollaborationCapabilities() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogCollaborationCapabilities', url: '/BlogCollaborationCapabilities' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Collaboration Capabilities: How AI Agent' }]} />

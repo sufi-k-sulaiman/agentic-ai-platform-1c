@@ -15,7 +15,7 @@ export default function BlogAgenticAIROIComparison() {
       <PageMeta 
         title="ROI Comparison: Agentic AI vs Traditional AI Business Value"
         description="Compare return on investment for agentic and traditional AI. Real metrics, payback periods, and long-term value creation."
-        url="/blog/agentic-ai-roi-comparison"
+        url="/BlogAgenticAIROIComparison"
         article={{
         author: 'Jennifer Lee, Business Analyst',
         datePublished: '2024-12-12',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIROIComparison() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT13M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIROIComparison', url: '/BlogAgenticAIROIComparison' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'ROI Comparison: Agentic AI vs Traditiona' }]} />

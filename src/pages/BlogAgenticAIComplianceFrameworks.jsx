@@ -15,7 +15,7 @@ export default function BlogAgenticAIComplianceFrameworks() {
       <PageMeta 
         title="Compliance Frameworks for Agentic AI: SOC 2, ISO, and Beyond"
         description="Navigate compliance requirements for AI agents. SOC 2, ISO 27001, GDPR, HIPAA, and industry-specific standards."
-        url="/blog/agentic-ai-compliance-frameworks"
+        url="/BlogAgenticAIComplianceFrameworks"
         article={{
         author: 'Patricia Johnson',
         datePublished: '2025-01-06',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIComplianceFrameworks() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIComplianceFrameworks', url: '/BlogAgenticAIComplianceFrameworks' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Compliance Frameworks for Agentic AI: SO' }]} />

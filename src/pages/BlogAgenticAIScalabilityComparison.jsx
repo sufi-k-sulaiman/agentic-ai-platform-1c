@@ -16,7 +16,7 @@ export default function BlogAgenticAIScalabilityComparison() {
       <PageMeta 
         title="Scalability Architectures for Agentic AI: Vertical vs Horizontal"
         description="Compare vertical and horizontal scaling strategies for agentic AI systems. Learn about load balancing, auto-scaling, and distributed architectures."
-        url="/blog/agentic-ai-scalability-comparison"
+        url="/BlogAgenticAIScalabilityComparison"
         keywords={['AI scalability', 'horizontal scaling', 'vertical scaling', 'distributed AI systems']}
         article={{
         author: '1C Platform Team',
@@ -25,6 +25,8 @@ export default function BlogAgenticAIScalabilityComparison() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIScalabilityComparison', url: '/BlogAgenticAIScalabilityComparison' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AgenticAIScalabilityComparison' }]} />

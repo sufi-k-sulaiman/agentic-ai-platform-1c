@@ -16,7 +16,7 @@ export default function BlogRateLimitingQuotaManagement() {
       <PageMeta 
         title="Rate Limiting and Quota Management for AI Applications"
         description="Control AI usage and costs. User quotas, rate limiting strategies, fair usage policies, and overage handling."
-        url="/blog/rate-limiting-quota-management"
+        url="/BlogRateLimitingQuotaManagement"
         keywords={['rate limiting', 'quota management', 'usage limits', 'fair usage', 'cost control']}
         article={{
         author: 'Jennifer Martinez',
@@ -26,6 +26,8 @@ export default function BlogRateLimitingQuotaManagement() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogRateLimitingQuotaManagement', url: '/BlogRateLimitingQuotaManagement' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Rate Limiting and Quota Management for A' }]} />

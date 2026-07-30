@@ -93,6 +93,9 @@ export default function PublicSafety() {
         image="https://images.unsplash.com/photo-1521295296519-6449b00d7773?w=1200&h=630&fit=crop"
         service={{ type: 'Public Safety AI', areaServed: 'Worldwide' }}
         localBusiness={{ name: '1C Platform - Public Safety AI', telephone: '+1-800-1C-SAFETY' }}
+      
+        faq={[{"question":"How does AI enhance public safety operations?","answer":"Agents automate surveillance analysis, incident detection, emergency response coordination, and security monitoring. The platform reduces incident response time by 60% while improving detection accuracy."},{"question":"Is it secure enough for public safety use?","answer":"Yes. 1C Platform meets FedRAMP, SOC 2, and ISO 27001 requirements. All data is encrypted with zero-knowledge architecture, and every AI decision is fully auditable."},{"question":"What response time improvements can I expect?","answer":"Public safety agencies typically see 60% faster incident response, 40% cost reduction, and 50% improved threat detection when deploying agentic AI for surveillance and coordination."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'PublicSafety', url: '/PublicSafety' }]}
       />
       <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Public Safety' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

@@ -15,7 +15,7 @@ export default function BlogAIGovernanceTools() {
       <PageMeta 
         title="AI Governance Tools and Platforms: Technology Stack Guide"
         description="Comprehensive guide to tools and platforms for AI governance. From monitoring to compliance automation, build your governance technology stack."
-        url="/blog/ai-governance-tools"
+        url="/BlogAIGovernanceTools"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIGovernanceTools() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIGovernanceTools', url: '/BlogAIGovernanceTools' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernanceTools' }]} />

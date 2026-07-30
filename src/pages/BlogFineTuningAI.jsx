@@ -15,7 +15,7 @@ export default function BlogFineTuningAI() {
       <PageMeta 
         title="Fine-Tuning Generative AI Models: Complete Guide"
         description="Learn how to customize and fine-tune generative AI models for your specific business needs, data, and use cases."
-        url="/blog/fine-tuning-ai"
+        url="/BlogFineTuningAI"
         keywords={['AI fine-tuning', 'custom AI models', 'model training', 'transfer learning', 'AI customization']}
         article={{
         author: '1C Platform Team',
@@ -24,6 +24,8 @@ export default function BlogFineTuningAI() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogFineTuningAI', url: '/BlogFineTuningAI' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

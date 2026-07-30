@@ -55,6 +55,11 @@ export default function Status() {
         description="Real-time monitoring of 1C Platform services. 99.99% uptime, all systems operational. Check current status and incident history."
         url="/status"
         keywords={['system status', 'uptime', 'service monitoring', 'platform health', 'API status']}
+        faq={[
+          { question: 'What is the uptime SLA for 1C Platform?', answer: '1C Platform provides a 99.99% uptime SLA for all production services. This equates to less than 5 minutes of downtime per month, with 24/7 monitoring and automated failover across multiple regions.' },
+          { question: 'How do I get incident notifications?', answer: 'Subscribe to status updates via email or webhook on the Status page. You can also integrate with Slack, PagerDuty, or Microsoft Teams for real-time alerts when incidents occur or are resolved.' },
+          { question: 'What happens during maintenance windows?', answer: 'Scheduled maintenance is performed during off-peak hours (typically weekends) with 72-hour advance notice. Maintenance is rolling with zero downtime for production services in the high-availability tiers.' },
+        ]}
       />
       
       {/* Hero */}

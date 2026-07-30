@@ -15,7 +15,7 @@ export default function BlogAgenticAIGovernanceIntro() {
       <PageMeta 
         title="Introduction to Agentic AI Governance: A Strategic Framework"
         description="Understand the critical importance of governance for autonomous AI agents. Learn frameworks, best practices, and how to implement effective oversight."
-        url="/blog/agentic-ai-governance-intro"
+        url="/BlogAgenticAIGovernanceIntro"
         keywords={['AI governance', 'agentic AI governance', 'AI compliance', 'AI risk management', 'autonomous AI oversight']}
         article={{
         author: 'Dr. Michelle Torres',
@@ -25,6 +25,8 @@ export default function BlogAgenticAIGovernanceIntro() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIGovernanceIntro', url: '/BlogAgenticAIGovernanceIntro' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Governance in Healthcare: Compliance ' }]} />

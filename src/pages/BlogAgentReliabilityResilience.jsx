@@ -16,7 +16,7 @@ export default function BlogAgentReliabilityResilience() {
       <PageMeta 
         title="Agent Reliability and Resilience: Building Fault-Tolerant Systems"
         description="Build agents that handle failures gracefully. Circuit breakers, timeouts, retries, fallbacks, and self-healing patterns."
-        url="/blog/agent-reliability-resilience"
+        url="/BlogAgentReliabilityResilience"
         keywords={['agent reliability', 'fault tolerance', 'circuit breakers', 'resilience', 'error recovery']}
         article={{
         author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogAgentReliabilityResilience() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT20M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgentReliabilityResilience', url: '/BlogAgentReliabilityResilience' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agent Reliability and Resilience: Buildi' }]} />

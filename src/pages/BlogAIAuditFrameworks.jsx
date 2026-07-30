@@ -15,7 +15,7 @@ export default function BlogAIAuditFrameworks() {
       <PageMeta 
         title="AI Audit Frameworks: Ensuring Accountability in Autonomous Systems"
         description="How to audit autonomous AI agents for performance, compliance, and ethical behavior. Frameworks, checklists, and automation strategies."
-        url="/blog/ai-audit-frameworks"
+        url="/BlogAIAuditFrameworks"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIAuditFrameworks() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIAuditFrameworks', url: '/BlogAIAuditFrameworks' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIAuditFrameworks' }]} />

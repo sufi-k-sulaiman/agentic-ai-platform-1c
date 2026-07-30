@@ -16,7 +16,7 @@ export default function BlogAccessibleAIDesign() {
       <PageMeta 
         title="Accessibility in Agentic AI Design: Inclusive Agent Experiences"
         description="Design accessible AI agents for all users. WCAG compliance, screen reader support, keyboard navigation, and inclusive design principles."
-        url="/blog/accessible-ai-design"
+        url="/BlogAccessibleAIDesign"
         keywords={['accessible AI', 'inclusive design', 'WCAG compliance', 'AI accessibility']}
         article={{
         author: 'Maria Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogAccessibleAIDesign() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAccessibleAIDesign', url: '/BlogAccessibleAIDesign' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Accessibility in Agentic AI Design: Incl' }]} />

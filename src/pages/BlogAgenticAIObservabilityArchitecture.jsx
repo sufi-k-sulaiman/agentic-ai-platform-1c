@@ -16,7 +16,7 @@ export default function BlogAgenticAIObservabilityArchitecture() {
       <PageMeta 
         title="Observability Architecture for Agentic AI: Monitoring Patterns Compared"
         description="Compare observability architectures for agentic AI systems. Learn about logging, tracing, metrics, and debugging patterns for autonomous agents."
-        url="/blog/agentic-ai-observability-architecture"
+        url="/BlogAgenticAIObservabilityArchitecture"
         keywords={['AI observability', 'AI monitoring', 'distributed tracing', 'LLM debugging']}
         article={{
           author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogAgenticAIObservabilityArchitecture() {
           tags: ['AI observability', 'AI monitoring', 'distributed tracing', 'LLM debugging', 'agentic AI'],
           timeRequired: 'PT12M',
         }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIObservabilityArchitecture', url: '/BlogAgenticAIObservabilityArchitecture' }]}
       />
 
       {/* Hero */}

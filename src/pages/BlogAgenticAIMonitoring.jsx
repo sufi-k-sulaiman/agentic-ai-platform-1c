@@ -15,7 +15,7 @@ export default function BlogAgenticAIMonitoring() {
       <PageMeta 
         title="Monitoring and Auditing AI Agents: Observability Best Practices"
         description="Learn how to monitor autonomous AI agents in production. Metrics, dashboards, alerting, and audit procedures."
-        url="/blog/agentic-ai-monitoring"
+        url="/BlogAgenticAIMonitoring"
         article={{
         author: 'Kevin Zhang',
         datePublished: '2025-01-08',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIMonitoring() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIMonitoring', url: '/BlogAgenticAIMonitoring' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Monitoring and Auditing AI Agents: Obser' }]} />

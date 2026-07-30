@@ -15,7 +15,7 @@ export default function BlogLLMGuide() {
       <PageMeta 
         title="Understanding Large Language Models: GPT, Claude, and Beyond"
         description="A comprehensive guide to large language models, how they work, and how businesses are using them to transform operations."
-        url="/blog/llm-guide"
+        url="/BlogLLMGuide"
         article={{
         author: 'Dr. Emily Wang',
         datePublished: '2024-12-08',
@@ -25,6 +25,8 @@ export default function BlogLLMGuide() {
         timeRequired: 'PT15M',
       }}
       speakable={{ cssSelectors: ['h1', 'article > p'] }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogLLMGuide', url: '/BlogLLMGuide' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Understanding Large Language Models: GPT' }]} />

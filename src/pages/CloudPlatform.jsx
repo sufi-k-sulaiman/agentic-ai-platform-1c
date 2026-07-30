@@ -23,6 +23,8 @@ export default function CloudPlatform() {
           { question: 'Which regions are available?', answer: 'We operate across 32 global regions including US, Canada, Europe, UK, Asia, and Australia. Edge locations are available in 200+ cities for low-latency content delivery.' },
           { question: 'How does auto-scaling work?', answer: 'Our platform automatically scales your AI agents and services based on demand. Configure scaling policies by CPU, memory, request queue depth, or custom metrics. Scale-to-zero is supported for cost optimization.' },
         ]}
+      
+        service={{ type: 'Cloud Platform - AI Infrastructure', areaServed: 'Worldwide' }}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

@@ -100,6 +100,9 @@ export default function Airports() {
           name: '1C Platform - Airport AI',
           telephone: '+1-800-1C-AIRPORT',
         }}
+      
+        faq={[{"question":"How does AI optimize airport operations?","answer":"Agents automate passenger flow, security screening, baggage handling, and operations coordination. The platform improves on-time performance by 25% while increasing passenger satisfaction by 40%."},{"question":"Can it integrate with airport systems?","answer":"Yes. We connect to flight scheduling systems, baggage tracking, security databases, and passenger apps. Agents coordinate operations across departments for smoother airport flow."},{"question":"What improvements can I expect?","answer":"Airports typically see 25% on-time performance improvement, 40% passenger satisfaction increase, and 30% cost reduction when deploying agentic AI for operations."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Airports', url: '/Airports' }]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

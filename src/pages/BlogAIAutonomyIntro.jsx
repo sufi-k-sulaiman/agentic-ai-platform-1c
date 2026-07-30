@@ -15,7 +15,7 @@ export default function BlogAIAutonomyIntro() {
       <PageMeta 
         title="Understanding AI Autonomy: From Basic Automation to True Intelligence"
         description="Explore the spectrum of AI autonomy, from simple automation to fully autonomous systems. Learn what true AI autonomy means and why it matters."
-        url="/blog/ai-autonomy-intro"
+        url="/BlogAIAutonomyIntro"
         keywords={['AI autonomy', 'autonomous systems', 'automation levels', 'AI decision making', 'intelligent systems']}
         article={{
         author: 'James Wellington',
@@ -25,6 +25,8 @@ export default function BlogAIAutonomyIntro() {
         tags: ['ai autonomy', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIAutonomyIntro', url: '/BlogAIAutonomyIntro' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Autonomous AI in Financial Services: Ris' }]} />

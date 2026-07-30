@@ -15,7 +15,7 @@ export default function BlogAgenticAIDataGovernance() {
       <PageMeta 
         title="Data Governance for Agentic AI: Managing Information Flows"
         description="Control how AI agents access, use, and share data. Frameworks for data classification, access control, and lifecycle management."
-        url="/blog/agentic-ai-data-governance"
+        url="/BlogAgenticAIDataGovernance"
         article={{
         author: 'Linda Chen',
         datePublished: '2025-01-09',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIDataGovernance() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIDataGovernance', url: '/BlogAgenticAIDataGovernance' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Data Governance for Agentic AI: Managing' }]} />

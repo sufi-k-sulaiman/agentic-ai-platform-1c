@@ -16,7 +16,7 @@ export default function BlogLearningFromFeedback() {
       <PageMeta 
         title="Learning from Feedback: How AI Agents Improve Through Interaction"
         description="Explore feedback mechanisms in AI agents. User corrections, implicit signals, reinforcement learning, and continuous improvement cycles."
-        url="/blog/learning-from-feedback"
+        url="/BlogLearningFromFeedback"
         keywords={['feedback learning', 'AI improvement', 'user feedback', 'reinforcement learning', 'continuous improvement']}
         article={{
         author: 'Dr. Alex Thompson',
@@ -26,6 +26,8 @@ export default function BlogLearningFromFeedback() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogLearningFromFeedback', url: '/BlogLearningFromFeedback' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Learning from Feedback: How AI Agents Im' }]} />

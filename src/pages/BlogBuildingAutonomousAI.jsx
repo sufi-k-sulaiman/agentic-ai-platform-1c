@@ -15,7 +15,7 @@ export default function BlogBuildingAutonomousAI() {
       <PageMeta 
         title="Building Truly Autonomous AI Systems: Architecture and Design Patterns"
         description="Practical guide to designing and building autonomous AI systems. Architecture patterns, key components, and implementation strategies."
-        url="/blog/building-autonomous-ai"
+        url="/BlogBuildingAutonomousAI"
         article={{
         author: 'Kevin Zhang',
         datePublished: '2025-01-17',
@@ -24,6 +24,8 @@ export default function BlogBuildingAutonomousAI() {
         tags: ['ai autonomy', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogBuildingAutonomousAI', url: '/BlogBuildingAutonomousAI' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Building Truly Autonomous AI Systems: Ar' }]} />

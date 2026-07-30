@@ -15,7 +15,7 @@ export default function BlogAgenticAIGovernanceCommittee() {
       <PageMeta 
         title="Building an AI Governance Committee: Structure and Operations"
         description="Create an effective AI governance committee. Roles, responsibilities, meeting cadence, and decision-making processes."
-        url="/blog/agentic-ai-governance-committee"
+        url="/BlogAgenticAIGovernanceCommittee"
         article={{
         author: 'Richard Brown',
         datePublished: '2025-01-04',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIGovernanceCommittee() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT13M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIGovernanceCommittee', url: '/BlogAgenticAIGovernanceCommittee' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Building an AI Governance Committee: Str' }]} />

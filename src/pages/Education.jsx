@@ -100,6 +100,9 @@ export default function Education() {
           name: '1C Platform - Education AI',
           telephone: '+1-800-1C-LEARN',
         }}
+      
+        faq={[{"question":"How does AI transform educational operations?","answer":"Agents automate student engagement, grading, administrative tasks, and learning analytics. The platform increases student engagement by 60% while saving 50% of administrative time."},{"question":"Can it integrate with your LMS?","answer":"Yes. We connect to Canvas, Blackboard, Moodle, Google Classroom, and custom LMS platforms. Agents track student progress, automate grading, and personalize learning paths."},{"question":"What engagement improvements can I expect?","answer":"Educational institutions typically see 60% engagement increase, 50% time savings, and 30% better learning outcomes when deploying agentic AI."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Education', url: '/Education' }]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

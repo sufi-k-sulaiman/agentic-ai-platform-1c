@@ -15,7 +15,7 @@ export default function BlogGenerativeAIFineTuning() {
       <PageMeta 
         title="Fine-Tuning Generative AI Models: A Practical Guide"
         description="Learn how to customize generative AI models for your specific needs through fine-tuning. Techniques, best practices, and real-world examples."
-        url="/blog/generative-ai-finetuning"
+        url="/BlogGenerativeAIFineTuning"
         article={{
         author: 'Dr. Lisa Anderson',
         datePublished: '2024-12-02',
@@ -24,6 +24,8 @@ export default function BlogGenerativeAIFineTuning() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAIFineTuning', url: '/BlogGenerativeAIFineTuning' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Fine-Tuning Generative AI Models: A Prac' }]} />

@@ -15,7 +15,7 @@ export default function BlogAgenticAIEnterprise() {
       <PageMeta 
         title="The Rise of Agentic AI: A Game Changer for Enterprises"
         description="Discover how autonomous AI agents are transforming enterprise operations and enabling intelligent decision-making across industries."
-        url="/blog/agentic-ai-enterprise"
+        url="/BlogAgenticAIEnterprise"
         keywords={['Agentic AI', 'enterprise AI', 'autonomous agents', 'AI transformation', 'business automation']}
         article={{
           author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogAgenticAIEnterprise() {
         timeRequired: 'PT15M',
         }}
         speakable={{ cssSelectors: ['h1', 'article > p'] }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIEnterprise', url: '/BlogAgenticAIEnterprise' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

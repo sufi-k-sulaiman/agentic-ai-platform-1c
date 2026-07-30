@@ -16,7 +16,7 @@ export default function BlogQualityEvaluationAI() {
       <PageMeta 
         title="Quality Evaluation and Testing for Generative AI Apps"
         description="Build robust evaluation frameworks. Automated testing, human evaluation, quality metrics, and continuous monitoring."
-        url="/blog/quality-evaluation-ai"
+        url="/BlogQualityEvaluationAI"
         keywords={['AI testing', 'quality evaluation', 'AI metrics', 'automated testing', 'human evaluation']}
         article={{
         author: 'Rachel Foster',
@@ -26,6 +26,8 @@ export default function BlogQualityEvaluationAI() {
         tags: ['agentic insights', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogQualityEvaluationAI', url: '/BlogQualityEvaluationAI' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Quality Evaluation and Testing for Gener' }]} />

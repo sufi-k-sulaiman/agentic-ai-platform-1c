@@ -71,6 +71,8 @@ export default function Cyber() {
           { question: 'What encryption standards do we use?', answer: 'We use AES-256 encryption for data at rest and TLS 1.3 for data in transit. We employ zero-knowledge architecture for sensitive workloads.' },
           { question: 'Do we offer bug bounty programs?', answer: 'Yes, we run a bug bounty program. Security researchers can submit vulnerabilities through our Cyber page and earn rewards for confirmed findings.' },
         ]}
+      
+        service={{ type: 'Cybersecurity & Compliance', areaServed: 'Worldwide' }}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

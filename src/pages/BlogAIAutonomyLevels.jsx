@@ -15,7 +15,7 @@ export default function BlogAIAutonomyLevels() {
       <PageMeta 
         title="The 6 Levels of AI Autonomy: A Complete Framework"
         description="Understand the six levels of AI autonomy from assisted to full autonomy. Learn where your AI systems fit and how to advance them."
-        url="/blog/ai-autonomy-levels"
+        url="/BlogAIAutonomyLevels"
         article={{
         author: 'Michael Stevens',
         datePublished: '2025-01-19',
@@ -24,6 +24,8 @@ export default function BlogAIAutonomyLevels() {
         tags: ['ai autonomy', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIAutonomyLevels', url: '/BlogAIAutonomyLevels' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'The 6 Levels of AI Autonomy: A Complete ' }]} />

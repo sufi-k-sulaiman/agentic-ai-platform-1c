@@ -16,7 +16,7 @@ export default function BlogAgenticAIDataFlowPatterns() {
       <PageMeta 
         title="Data Flow Architectures in Agentic AI: Push vs Pull vs Stream"
         description="Compare data flow patterns for agentic AI systems. Learn about push-based, pull-based, and streaming architectures for different use cases."
-        url="/blog/agentic-ai-data-flow-patterns"
+        url="/BlogAgenticAIDataFlowPatterns"
         keywords={['AI data flow', 'streaming architecture', 'push pull patterns', 'event streaming']}
         article={{
         author: '1C Platform Team',
@@ -25,6 +25,8 @@ export default function BlogAgenticAIDataFlowPatterns() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIDataFlowPatterns', url: '/BlogAgenticAIDataFlowPatterns' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AgenticAIDataFlowPatterns' }]} />

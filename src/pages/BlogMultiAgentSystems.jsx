@@ -15,7 +15,7 @@ export default function BlogMultiAgentSystems() {
       <PageMeta 
         title="Designing Effective Multi-Agent Systems: A Practical Guide"
         description="Master the art of building multi-agent AI systems with orchestration patterns and best practices for enterprise deployments."
-        url="/blog/multi-agent-systems"
+        url="/BlogMultiAgentSystems"
         keywords={['multi-agent systems', 'AI orchestration', 'distributed AI', 'agent coordination', 'system design']}
         article={{
           author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogMultiAgentSystems() {
         timeRequired: 'PT15M',
         }}
         speakable={{ cssSelectors: ['h1', 'article > p'] }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogMultiAgentSystems', url: '/BlogMultiAgentSystems' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

@@ -16,7 +16,7 @@ export default function BlogAIResponseQuality() {
       <PageMeta 
         title="AI Response Quality and Consistency: Ensuring Reliable Outputs"
         description="Maintain output quality across requests. Validation schemas, consistency checks, quality scoring, and improvement loops."
-        url="/blog/ai-response-quality"
+        url="/BlogAIResponseQuality"
         keywords={['AI quality', 'output validation', 'consistency', 'quality scoring', 'response validation']}
         article={{
         author: 'Dr. Emily Carter',
@@ -26,6 +26,8 @@ export default function BlogAIResponseQuality() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIResponseQuality', url: '/BlogAIResponseQuality' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Response Quality and Consistency: Ens' }]} />

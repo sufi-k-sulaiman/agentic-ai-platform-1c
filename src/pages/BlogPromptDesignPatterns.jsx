@@ -16,7 +16,7 @@ export default function BlogPromptDesignPatterns() {
       <PageMeta 
         title="Prompt Design Patterns for AI Agents: System Instructions Guide"
         description="Craft effective system prompts for agents. Role definition, constraint setting, output formatting, and behavior tuning strategies."
-        url="/blog/prompt-design-patterns"
+        url="/BlogPromptDesignPatterns"
         keywords={['prompt design', 'system prompts', 'agent instructions', 'prompt patterns', 'behavior tuning']}
         article={{
         author: 'Rachel Foster',
@@ -26,6 +26,8 @@ export default function BlogPromptDesignPatterns() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogPromptDesignPatterns', url: '/BlogPromptDesignPatterns' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Prompt Design Patterns for AI Agents: Sy' }]} />

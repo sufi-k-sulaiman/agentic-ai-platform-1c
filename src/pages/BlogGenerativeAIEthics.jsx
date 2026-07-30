@@ -15,7 +15,7 @@ export default function BlogGenerativeAIEthics() {
       <PageMeta 
         title="Ethics and Bias in Generative AI: A Responsible AI Guide"
         description="Navigate the ethical challenges of generative AI. Learn about bias, fairness, transparency, and building responsible AI systems."
-        url="/blog/generative-ai-ethics"
+        url="/BlogGenerativeAIEthics"
         article={{
         author: 'Rachel Foster',
         datePublished: '2024-12-25',
@@ -24,6 +24,8 @@ export default function BlogGenerativeAIEthics() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAIEthics', url: '/BlogGenerativeAIEthics' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Generative AI Content Moderation: Balanc' }]} />

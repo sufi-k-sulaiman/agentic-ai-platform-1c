@@ -16,7 +16,7 @@ export default function BlogMonitoringToolsDesign() {
       <PageMeta 
         title="Monitoring Tools for Agentic AI: Observability Interface Design"
         description="Design monitoring and observability interfaces for AI agents. Metrics visualization, log analysis, trace viewing, and alert management."
-        url="/blog/monitoring-tools-design"
+        url="/BlogMonitoringToolsDesign"
         keywords={['monitoring tools', 'observability', 'metrics visualization', 'log analysis', 'agent monitoring', 'performance tracking']}
         article={{
         author: 'James Patterson',
@@ -26,6 +26,8 @@ export default function BlogMonitoringToolsDesign() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogMonitoringToolsDesign', url: '/BlogMonitoringToolsDesign' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Monitoring Tools for Agentic AI: Observa' }]} />

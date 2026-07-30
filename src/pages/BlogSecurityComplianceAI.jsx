@@ -16,7 +16,7 @@ export default function BlogSecurityComplianceAI() {
       <PageMeta 
         title="Security and Compliance in Generative AI Applications"
         description="Secure your AI apps. Data privacy, prompt injection prevention, output filtering, compliance requirements, and security best practices."
-        url="/blog/security-compliance-ai"
+        url="/BlogSecurityComplianceAI"
         keywords={['AI security', 'prompt injection', 'data privacy', 'AI compliance', 'output filtering']}
         article={{
         author: 'Dr. Alex Kumar',
@@ -26,6 +26,8 @@ export default function BlogSecurityComplianceAI() {
         tags: ['agentic insights', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogSecurityComplianceAI', url: '/BlogSecurityComplianceAI' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Security and Compliance in Generative AI' }]} />

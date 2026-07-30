@@ -94,6 +94,9 @@ export default function EnergyUtilities() {
         image="https://images.unsplash.com/photo-1593350677244-7e6d8b0b0b0b?w=1200&h=630&fit=crop"
         service={{ type: 'Energy & Utilities AI', areaServed: 'Worldwide' }}
         localBusiness={{ name: '1C Platform - Energy AI', telephone: '+1-800-1C-ENERGY' }}
+      
+        faq={[{"question":"How does AI optimize energy grid operations?","answer":"Agents predict outages, optimize grid performance, automate customer service, and integrate renewable systems. The platform prevents 90% of outages while improving efficiency by 25%."},{"question":"Can it monitor my existing grid infrastructure?","answer":"Yes. We integrate with SCADA systems, IoT sensors, and customer billing platforms. Agents pull real-time data to predict failures and coordinate field operations automatically."},{"question":"What outage prevention can I expect?","answer":"Energy and utility companies typically prevent 90% of outages, see 25% efficiency improvement, and achieve 45% customer satisfaction increase when deploying agentic AI."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'EnergyUtilities', url: '/EnergyUtilities' }]}
       />
       <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Energy & Utilities' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

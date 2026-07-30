@@ -15,7 +15,7 @@ export default function BlogBuildingWithAPIs() {
       <PageMeta 
         title="Building with Generative AI APIs: Developer's Guide"
         description="Practical guide for developers building applications with OpenAI, Anthropic, and other generative AI APIs. Code examples, best practices, and architecture patterns."
-        url="/blog/building-with-ai-apis"
+        url="/BlogBuildingWithAPIs"
         keywords={['AI APIs', 'OpenAI API', 'Anthropic API', 'AI development', 'ChatGPT API', 'AI integration']}
         article={{
         author: '1C Platform Team',
@@ -24,6 +24,8 @@ export default function BlogBuildingWithAPIs() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogBuildingWithAPIs', url: '/BlogBuildingWithAPIs' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

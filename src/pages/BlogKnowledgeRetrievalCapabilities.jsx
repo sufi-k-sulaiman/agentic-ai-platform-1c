@@ -16,7 +16,7 @@ export default function BlogKnowledgeRetrievalCapabilities() {
       <PageMeta 
         title="Knowledge Retrieval Capabilities: How Agents Find Information"
         description="Master information retrieval in AI agents. Vector search, semantic similarity, ranking algorithms, and retrieval optimization."
-        url="/blog/knowledge-retrieval-capabilities"
+        url="/BlogKnowledgeRetrievalCapabilities"
         keywords={['knowledge retrieval', 'vector search', 'semantic search', 'RAG', 'information retrieval']}
         article={{
         author: 'Rachel Foster',
@@ -26,6 +26,8 @@ export default function BlogKnowledgeRetrievalCapabilities() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogKnowledgeRetrievalCapabilities', url: '/BlogKnowledgeRetrievalCapabilities' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Knowledge Retrieval Capabilities: How Ag' }]} />

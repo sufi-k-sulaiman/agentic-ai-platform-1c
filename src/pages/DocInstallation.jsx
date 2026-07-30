@@ -5,10 +5,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, ArrowRight, Terminal, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 export default function DocInstallation() {
   return (
     <div className="bg-white min-h-screen">
+      <PageMeta
+        title="Installation & Setup"
+        description="Get up and running with 1C Platform in under 5 minutes. Install the SDK, configure your API key, and verify your setup."
+        url="/DocInstallation"
+        keywords={['installation', 'setup guide', 'SDK install', 'API key setup', 'getting started']}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Documentation', url: '/Documentation' }, { name: 'Installation', url: '/DocInstallation' }]}
+        howTo={{
+          name: 'Installing 1C Platform SDK',
+          description: 'Follow these steps to install and configure the 1C Platform SDK in your project',
+          steps: [
+            { name: 'Install the SDK', text: 'Run npm install @base44/sdk for Node.js or pip install base44 for Python to add the SDK to your project.' },
+            { name: 'Get your API key', text: 'Navigate to Settings > API Keys in the dashboard and generate a new API key. Store it securely as an environment variable.' },
+            { name: 'Initialize the client', text: 'Create a new client instance with your API key: const base44 = createClient(process.env.API_KEY).' },
+            { name: 'Verify your connection', text: 'Run a test call to list your agents or create a simple test agent to verify the SDK is properly configured.' },
+            { name: 'Set up your environment', text: 'Configure environment variables for development, staging, and production. Use separate API keys for each environment.' },
+          ],
+        }}
+      />
       <div className="max-w-4xl mx-auto px-6 py-24">
         <Link to={createPageUrl('Documentation')} className="inline-flex items-center text-[#8B2EE5] hover:underline mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />

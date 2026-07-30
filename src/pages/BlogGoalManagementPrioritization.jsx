@@ -16,7 +16,7 @@ export default function BlogGoalManagementPrioritization() {
       <PageMeta 
         title="Goal Management and Prioritization in AI Agents"
         description="Master goal handling in AI agents. Goal setting, priority scoring, conflict resolution, and dynamic goal adjustment."
-        url="/blog/goal-management-prioritization"
+        url="/BlogGoalManagementPrioritization"
         keywords={['goal management', 'prioritization', 'AI goals', 'task priority', 'objective management']}
         article={{
         author: 'Jennifer Martinez',
@@ -26,6 +26,8 @@ export default function BlogGoalManagementPrioritization() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGoalManagementPrioritization', url: '/BlogGoalManagementPrioritization' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Goal Management and Prioritization in AI' }]} />

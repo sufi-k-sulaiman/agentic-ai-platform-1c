@@ -16,7 +16,7 @@ export default function BlogScalingGenAIApps() {
       <PageMeta 
         title="Scaling Generative AI Applications: Architecture and Strategies"
         description="Scale from prototype to millions of users. Load balancing, caching, rate limiting, queue management, and infrastructure patterns."
-        url="/blog/scaling-genai-apps"
+        url="/BlogScalingGenAIApps"
         keywords={['scaling AI', 'AI infrastructure', 'load balancing', 'caching strategies', 'rate limiting']}
         article={{
         author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogScalingGenAIApps() {
         tags: ['agentic insights', 'AI', 'agentic AI'],
         timeRequired: 'PT21M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogScalingGenAIApps', url: '/BlogScalingGenAIApps' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Scaling Generative AI Applications: Arch' }]} />

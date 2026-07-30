@@ -16,7 +16,7 @@ export default function BlogToolDiscoveryUX() {
       <PageMeta 
         title="Tool Discovery UX: Helping Agents Find the Right Tools"
         description="Design effective tool discovery experiences for AI agents. Search, categorization, recommendations, and intelligent tool matching."
-        url="/blog/tool-discovery-ux"
+        url="/BlogToolDiscoveryUX"
         keywords={['tool discovery', 'search UX', 'tool marketplace', 'agent tools', 'recommendation systems', 'tool matching']}
         article={{
         author: 'Emma Wilson',
@@ -26,6 +26,8 @@ export default function BlogToolDiscoveryUX() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogToolDiscoveryUX', url: '/BlogToolDiscoveryUX' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Discovery UX: Helping Agents Find t' }]} />

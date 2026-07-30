@@ -15,7 +15,7 @@ export default function BlogAgenticAIEthicalFrameworks() {
       <PageMeta 
         title="Ethical Frameworks for Agentic AI: Building Responsible Systems"
         description="Develop ethical guidelines for autonomous AI agents. Frameworks, principles, and practical implementation strategies."
-        url="/blog/agentic-ai-ethical-frameworks"
+        url="/BlogAgenticAIEthicalFrameworks"
         article={{
         author: 'Dr. Aisha Patel',
         datePublished: '2025-01-11',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIEthicalFrameworks() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIEthicalFrameworks', url: '/BlogAgenticAIEthicalFrameworks' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Ethical Frameworks for Agentic AI: Build' }]} />

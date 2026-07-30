@@ -16,7 +16,7 @@ export default function BlogAgenticAIDeploymentPatterns() {
       <PageMeta 
         title="Deployment Architectures for Agentic AI: Cloud vs On-Premises vs Hybrid"
         description="Compare deployment patterns for agentic AI systems. Learn about cloud, on-premises, hybrid, and edge deployment strategies with pros and cons."
-        url="/blog/agentic-ai-deployment-patterns"
+        url="/BlogAgenticAIDeploymentPatterns"
         keywords={['AI deployment', 'cloud vs on-premise', 'hybrid cloud', 'edge computing AI']}
         article={{
         author: '1C Platform Team',
@@ -25,6 +25,8 @@ export default function BlogAgenticAIDeploymentPatterns() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIDeploymentPatterns', url: '/BlogAgenticAIDeploymentPatterns' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AgenticAIDeploymentPatterns' }]} />

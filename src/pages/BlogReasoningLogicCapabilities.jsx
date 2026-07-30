@@ -16,7 +16,7 @@ export default function BlogReasoningLogicCapabilities() {
       <PageMeta 
         title="Reasoning and Logic Capabilities in Agentic AI"
         description="Explore logical reasoning in AI agents. Deductive reasoning, inductive learning, analogical thinking, and causal inference."
-        url="/blog/reasoning-logic-capabilities"
+        url="/BlogReasoningLogicCapabilities"
         keywords={['AI reasoning', 'logical thinking', 'deductive reasoning', 'inductive learning', 'causal inference']}
         article={{
         author: 'Dr. Sarah Mitchell',
@@ -26,6 +26,8 @@ export default function BlogReasoningLogicCapabilities() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogReasoningLogicCapabilities', url: '/BlogReasoningLogicCapabilities' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Reasoning and Logic Capabilities in Agen' }]} />

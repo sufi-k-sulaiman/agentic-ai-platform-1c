@@ -15,7 +15,7 @@ export default function BlogAgenticAIIndustryAdoption() {
       <PageMeta 
         title="Industry Adoption: Agentic AI vs Traditional AI Across Sectors"
         description="Compare adoption rates of agentic and traditional AI across industries. Trends, drivers, and predictions for each sector."
-        url="/blog/agentic-ai-industry-adoption"
+        url="/BlogAgenticAIIndustryAdoption"
         article={{
         author: 'Robert Kim',
         datePublished: '2024-12-08',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIIndustryAdoption() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIIndustryAdoption', url: '/BlogAgenticAIIndustryAdoption' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Industry Adoption: Agentic AI vs Traditi' }]} />

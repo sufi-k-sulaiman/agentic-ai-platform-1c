@@ -16,7 +16,7 @@ export default function BlogInterAgentCommunication() {
       <PageMeta 
         title="Inter-Agent Communication Protocols: Building Connected Systems"
         description="Design robust communication between agents. Message formats, protocols, event buses, and coordination patterns."
-        url="/blog/inter-agent-communication"
+        url="/BlogInterAgentCommunication"
         keywords={['agent communication', 'message protocols', 'event bus', 'multi-agent systems', 'agent coordination']}
         article={{
         author: 'Dr. Sarah Mitchell',
@@ -26,6 +26,8 @@ export default function BlogInterAgentCommunication() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogInterAgentCommunication', url: '/BlogInterAgentCommunication' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Inter-Agent Communication Protocols: Bui' }]} />

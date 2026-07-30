@@ -15,7 +15,7 @@ export default function BlogAIRiskManagement() {
       <PageMeta 
         title="AI Risk Management: Identifying and Mitigating Agentic AI Risks"
         description="Framework for assessing, monitoring, and mitigating risks in autonomous AI agent deployments. Practical strategies for enterprise risk management."
-        url="/blog/ai-risk-management"
+        url="/BlogAIRiskManagement"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIRiskManagement() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIRiskManagement', url: '/BlogAIRiskManagement' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIRiskManagement' }]} />

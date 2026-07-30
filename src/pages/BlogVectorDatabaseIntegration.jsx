@@ -16,7 +16,7 @@ export default function BlogVectorDatabaseIntegration() {
       <PageMeta 
         title="Vector Database Integration for AI Applications"
         description="Master vector databases for AI apps. Embeddings, similarity search, indexing strategies, and production deployment patterns."
-        url="/blog/vector-database-integration"
+        url="/BlogVectorDatabaseIntegration"
         keywords={['vector database', 'embeddings', 'similarity search', 'Pinecone', 'Weaviate', 'RAG']}
         article={{
         author: 'Kevin Zhang',
@@ -26,6 +26,8 @@ export default function BlogVectorDatabaseIntegration() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogVectorDatabaseIntegration', url: '/BlogVectorDatabaseIntegration' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Vector Database Integration for AI Appli' }]} />

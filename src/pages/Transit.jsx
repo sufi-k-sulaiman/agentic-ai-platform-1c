@@ -101,6 +101,9 @@ export default function Transit() {
           name: '1C Platform - Transit AI',
           telephone: '+1-800-1C-TRANSIT',
         }}
+      
+        faq={[{"question":"How does AI optimize public transit?","answer":"Agents predict maintenance needs, reroute buses in real time, and answer passenger questions autonomously. The platform improves on-time performance by 35% while reducing costs by 25%."},{"question":"Can it integrate with legacy transit systems?","answer":"Yes. We connect to existing ticketing, scheduling, and fleet management systems via API. Agents pull data from GPS sensors, ticketing platforms, and your ERP to coordinate operations."},{"question":"What improvements can I expect?","answer":"Public transit operators typically see 35% on-time performance improvement, 50% passenger satisfaction increase, and 25% cost reduction when deploying agentic AI."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Transit', url: '/Transit' }]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

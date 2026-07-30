@@ -16,7 +16,7 @@ export default function BlogAIPluginsExtensions() {
       <PageMeta 
         title="Building AI Plugins and Extensions: Modular AI Architecture"
         description="Create extensible AI applications. Plugin systems, extension APIs, marketplace patterns, and third-party integration frameworks."
-        url="/blog/ai-plugins-extensions"
+        url="/BlogAIPluginsExtensions"
         keywords={['AI plugins', 'extensions', 'modular AI', 'plugin architecture', 'marketplace']}
         article={{
         author: 'David Park',
@@ -26,6 +26,8 @@ export default function BlogAIPluginsExtensions() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIPluginsExtensions', url: '/BlogAIPluginsExtensions' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Building AI Plugins and Extensions: Modu' }]} />

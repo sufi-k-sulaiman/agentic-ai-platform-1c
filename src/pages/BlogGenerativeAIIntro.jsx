@@ -15,7 +15,7 @@ export default function BlogGenerativeAIIntro() {
       <PageMeta 
         title="Introduction to Generative AI: A Complete Guide"
         description="Discover what generative AI is, how it works, and why it's transforming industries. Learn about the technology behind ChatGPT, DALL-E, and more."
-        url="/blog/generative-ai-intro"
+        url="/BlogGenerativeAIIntro"
         keywords={['generative AI', 'ChatGPT', 'DALL-E', 'large language models', 'AI content creation', 'transformers']}
         article={{
         author: 'Sarah Chen',
@@ -25,6 +25,8 @@ export default function BlogGenerativeAIIntro() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT10M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAIIntro', url: '/BlogGenerativeAIIntro' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Introduction to Generative AI: A Complet' }]} />

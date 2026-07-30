@@ -15,7 +15,7 @@ export default function BlogGenerativeAIBusiness() {
       <PageMeta 
         title="Generative AI for Business Automation: ROI and Use Cases"
         description="Discover how enterprises are using generative AI to automate processes, reduce costs, and drive growth. Real use cases and ROI metrics."
-        url="/blog/generative-ai-business"
+        url="/BlogGenerativeAIBusiness"
         article={{
         author: 'David Park',
         datePublished: '2024-12-03',
@@ -24,6 +24,8 @@ export default function BlogGenerativeAIBusiness() {
         tags: ['generative ai', 'AI', 'agentic AI'],
         timeRequired: 'PT14M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeAIBusiness', url: '/BlogGenerativeAIBusiness' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Generative AI for Business Automation: R' }]} />

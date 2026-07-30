@@ -15,7 +15,7 @@ export default function BlogAutonomousAIApplications() {
       <PageMeta 
         title="Autonomous AI in Action: 10 Real-World Enterprise Applications"
         description="Explore real-world deployments of autonomous AI across industries. Use cases, results, and lessons learned from leading organizations."
-        url="/blog/autonomous-ai-applications"
+        url="/BlogAutonomousAIApplications"
         article={{
         author: 'Robert Chen',
         datePublished: '2025-01-15',
@@ -24,6 +24,8 @@ export default function BlogAutonomousAIApplications() {
         tags: ['ai autonomy', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAutonomousAIApplications', url: '/BlogAutonomousAIApplications' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Autonomous AI in Action: 10 Real-World E' }]} />

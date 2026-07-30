@@ -15,7 +15,7 @@ export default function BlogAgenticAIArchitecture() {
       <PageMeta 
         title="Architecture Differences: Agentic AI vs Traditional AI Systems"
         description="Deep dive into architectural patterns for agentic and traditional AI. Components, data flow, and infrastructure requirements."
-        url="/blog/agentic-ai-architecture"
+        url="/BlogAgenticAIArchitecture"
         article={{
         author: 'Kevin Zhang, Solutions Architect',
         datePublished: '2024-12-15',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIArchitecture() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIArchitecture', url: '/BlogAgenticAIArchitecture' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Architecture Differences: Agentic AI vs ' }]} />

@@ -16,7 +16,7 @@ export default function BlogAgentTestingValidation() {
       <PageMeta 
         title="Testing and Validation Strategies for AI Agents"
         description="Comprehensive testing approaches for agents. Unit tests, integration tests, behavior validation, and quality assurance."
-        url="/blog/agent-testing-validation"
+        url="/BlogAgentTestingValidation"
         keywords={['agent testing', 'AI validation', 'unit tests', 'integration tests', 'quality assurance']}
         article={{
         author: 'Jennifer Martinez',
@@ -26,6 +26,8 @@ export default function BlogAgentTestingValidation() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgentTestingValidation', url: '/BlogAgentTestingValidation' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Testing and Validation Strategies for AI' }]} />

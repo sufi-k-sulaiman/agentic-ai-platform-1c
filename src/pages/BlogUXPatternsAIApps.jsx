@@ -16,7 +16,7 @@ export default function BlogUXPatternsAIApps() {
       <PageMeta 
         title="User Experience Design Patterns for AI-Powered Applications"
         description="Design delightful AI app experiences. Loading states, streaming UX, error handling, feedback collection, and trust-building patterns."
-        url="/blog/ux-patterns-ai-apps"
+        url="/BlogUXPatternsAIApps"
         keywords={['AI UX', 'user experience', 'loading states', 'streaming UI', 'AI design patterns']}
         article={{
         author: 'Emma Wilson',
@@ -26,6 +26,8 @@ export default function BlogUXPatternsAIApps() {
         tags: ['agentic insights', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogUXPatternsAIApps', url: '/BlogUXPatternsAIApps' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'User Experience Design Patterns for AI-P' }]} />

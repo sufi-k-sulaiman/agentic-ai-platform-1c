@@ -15,7 +15,7 @@ export default function BlogAIGovernanceMetrics() {
       <PageMeta 
         title="AI Governance Metrics: Measuring and Reporting Effectiveness"
         description="Key performance indicators for AI governance. How to measure effectiveness, report to stakeholders, and drive continuous improvement."
-        url="/blog/ai-governance-metrics"
+        url="/BlogAIGovernanceMetrics"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIGovernanceMetrics() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIGovernanceMetrics', url: '/BlogAIGovernanceMetrics' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernanceMetrics' }]} />

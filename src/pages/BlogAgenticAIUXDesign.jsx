@@ -16,7 +16,7 @@ export default function BlogAgenticAIUXDesign() {
       <PageMeta 
         title="User Experience Design for AI Agents: Best Practices Guide"
         description="Master UX design principles for autonomous AI agents. Learn interaction patterns, user flows, and interface guidelines for intuitive agent experiences."
-        url="/blog/agentic-ai-ux-design"
+        url="/BlogAgenticAIUXDesign"
         keywords={['AI UX design', 'agent interface design', 'AI user experience', 'interaction patterns']}
         article={{
         author: 'Rachel Foster',
@@ -26,6 +26,8 @@ export default function BlogAgenticAIUXDesign() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIUXDesign', url: '/BlogAgenticAIUXDesign' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'User Experience Design for AI Agents: Be' }]} />

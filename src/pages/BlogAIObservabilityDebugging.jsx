@@ -16,7 +16,7 @@ export default function BlogAIObservabilityDebugging() {
       <PageMeta 
         title="AI Application Observability and Debugging"
         description="Debug AI apps effectively. Tracing, logging, replay systems, LLM call inspection, and troubleshooting methodologies."
-        url="/blog/ai-observability-debugging"
+        url="/BlogAIObservabilityDebugging"
         keywords={['AI debugging', 'observability', 'tracing', 'logging', 'troubleshooting', 'LLM debugging']}
         article={{
         author: 'Rachel Foster',
@@ -26,6 +26,8 @@ export default function BlogAIObservabilityDebugging() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT19M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIObservabilityDebugging', url: '/BlogAIObservabilityDebugging' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Application Observability and Debuggi' }]} />

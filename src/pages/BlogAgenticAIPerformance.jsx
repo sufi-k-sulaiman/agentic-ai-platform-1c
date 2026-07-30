@@ -15,7 +15,7 @@ export default function BlogAgenticAIPerformance() {
       <PageMeta 
         title="Performance Analysis: Agentic AI vs Traditional AI Benchmarks"
         description="Compare performance metrics between agentic and traditional AI. Speed, accuracy, reliability, and scalability benchmarks."
-        url="/blog/agentic-ai-performance"
+        url="/BlogAgenticAIPerformance"
         article={{
         author: 'Dr. Alex Kumar',
         datePublished: '2024-12-16',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIPerformance() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIPerformance', url: '/BlogAgenticAIPerformance' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Performance Analysis: Agentic AI vs Trad' }]} />

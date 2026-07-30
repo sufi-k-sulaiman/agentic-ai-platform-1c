@@ -109,6 +109,9 @@ export default function Healthcare() {
           name: '1C Platform - Healthcare AI',
           telephone: '+1-800-1C-HEALTH',
         }}
+      
+        faq={[{"question":"Is the platform HIPAA compliant?","answer":"Yes. 1C Platform is HIPAA compliant, SOC 2 Type II certified, and ISO 27001 compliant. All data is encrypted at rest and in transit, with full audit trails for every AI agent decision."},{"question":"What healthcare tasks can AI automate?","answer":"Agents automate patient intake, clinical documentation, prior authorization, claims processing, appointment scheduling, and medical coding while flagging risks and coordinating follow-ups automatically."},{"question":"How does it integrate with EMRs?","answer":"The platform connects to all major EMRs including Epic, Cerner, and Medtrakt via API. Agents pull and sync data across systems while maintaining HIPAA compliance at every step."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Healthcare', url: '/Healthcare' }]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

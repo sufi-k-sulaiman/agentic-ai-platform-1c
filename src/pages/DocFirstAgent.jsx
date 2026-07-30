@@ -5,10 +5,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, Brain, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 export default function DocFirstAgent() {
   return (
     <div className="bg-white min-h-screen">
+      <PageMeta
+        title="Building Your First AI Agent"
+        description="Learn how to create, configure, and deploy your first autonomous AI agent on 1C Platform."
+        url="/DocFirstAgent"
+        keywords={['first AI agent', 'agent creation', 'agent tutorial', 'autonomous agent', 'no-code AI']}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Documentation', url: '/Documentation' }, { name: 'First Agent', url: '/DocFirstAgent' }]}
+        howTo={{
+          name: 'Building Your First AI Agent',
+          description: 'Step-by-step guide to creating and deploying your first autonomous AI agent',
+          steps: [
+            { name: 'Choose a template', text: 'Browse the agent template gallery and select a template that matches your use case, or start from a blank agent.' },
+            { name: 'Configure the agent', text: 'Set the agent name, description, system prompt, and select the AI model that powers your agent.' },
+            { name: 'Add tools and integrations', text: 'Connect tools like databases, APIs, and external services that your agent needs to interact with.' },
+            { name: 'Test in the sandbox', text: 'Run your agent in the sandbox environment to test its behavior with sample inputs before going live.' },
+            { name: 'Deploy to production', text: 'Once tested, deploy your agent with a single click. Monitor its performance and iterate as needed.' },
+          ],
+        }}
+      />
       <div className="max-w-4xl mx-auto px-6 py-24">
         <Link to={createPageUrl('Documentation')} className="inline-flex items-center text-[#8B2EE5] hover:underline mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />

@@ -15,7 +15,7 @@ export default function BlogAIGovernanceFuture() {
       <PageMeta 
         title="The Future of AI Governance: Emerging Trends and Predictions"
         description="Where AI governance is heading. Automated governance, regulatory evolution, and preparing for autonomous AI at scale."
-        url="/blog/ai-governance-future"
+        url="/BlogAIGovernanceFuture"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIGovernanceFuture() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIGovernanceFuture', url: '/BlogAIGovernanceFuture' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernanceFuture' }]} />

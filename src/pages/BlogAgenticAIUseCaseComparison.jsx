@@ -15,7 +15,7 @@ export default function BlogAgenticAIUseCaseComparison() {
       <PageMeta 
         title="Use Cases: Where Agentic AI and Traditional AI Each Excel"
         description="Real-world use cases comparing agentic and traditional AI approaches. See which technology fits your specific business need."
-        url="/blog/agentic-ai-use-case-comparison"
+        url="/BlogAgenticAIUseCaseComparison"
         article={{
         author: 'Rachel Thompson',
         datePublished: '2024-12-14',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIUseCaseComparison() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIUseCaseComparison', url: '/BlogAgenticAIUseCaseComparison' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Use Cases: Where Agentic AI and Traditio' }]} />

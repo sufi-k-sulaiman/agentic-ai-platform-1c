@@ -16,7 +16,7 @@ export default function BlogAgenticAIStateManagement() {
       <PageMeta 
         title="State Management in Agentic AI: Stateless vs Stateful Architectures"
         description="Compare stateless and stateful architectures for agentic AI systems. Learn about session management, context persistence, and memory patterns."
-        url="/blog/agentic-ai-state-management"
+        url="/BlogAgenticAIStateManagement"
         keywords={['AI state management', 'stateless architecture', 'stateful systems', 'session management']}
         article={{
         author: '1C Platform Team',
@@ -25,6 +25,8 @@ export default function BlogAgenticAIStateManagement() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIStateManagement', url: '/BlogAgenticAIStateManagement' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AgenticAIStateManagement' }]} />

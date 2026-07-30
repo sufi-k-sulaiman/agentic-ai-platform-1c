@@ -16,7 +16,7 @@ export default function BlogProductionGenAIApps() {
       <PageMeta 
         title="Building Production-Ready Generative AI Applications"
         description="Essential patterns for deploying generative AI apps. Reliability, monitoring, error handling, versioning, and production best practices."
-        url="/blog/production-genai-apps"
+        url="/BlogProductionGenAIApps"
         keywords={['production AI', 'generative AI deployment', 'AI reliability', 'AI monitoring', 'production best practices']}
         article={{
         author: 'Dr. James Wilson',
@@ -26,6 +26,8 @@ export default function BlogProductionGenAIApps() {
         tags: ['agentic insights', 'AI', 'agentic AI'],
         timeRequired: 'PT20M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogProductionGenAIApps', url: '/BlogProductionGenAIApps' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Building Production-Ready Generative AI ' }]} />

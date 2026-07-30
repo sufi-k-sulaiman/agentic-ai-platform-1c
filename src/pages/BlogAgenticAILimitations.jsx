@@ -15,7 +15,7 @@ export default function BlogAgenticAILimitations() {
       <PageMeta 
         title="Limitations of Agentic AI: When Traditional AI is Still Better"
         description="Honest assessment of where agentic AI falls short. Understand constraints and when to stick with traditional approaches."
-        url="/blog/agentic-ai-limitations"
+        url="/BlogAgenticAILimitations"
         article={{
         author: 'Mark Stevens',
         datePublished: '2024-12-10',
@@ -24,6 +24,8 @@ export default function BlogAgenticAILimitations() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT12M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAILimitations', url: '/BlogAgenticAILimitations' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Limitations of Agentic AI: When Traditio' }]} />

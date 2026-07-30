@@ -16,7 +16,7 @@ export default function BlogAgentPerformanceOptimization() {
       <PageMeta 
         title="Performance Optimization for AI Agents: Speed and Efficiency"
         description="Optimize agent performance. Latency reduction, parallel execution, caching strategies, and resource management."
-        url="/blog/agent-performance-optimization"
+        url="/BlogAgentPerformanceOptimization"
         keywords={['performance optimization', 'latency reduction', 'agent speed', 'parallel execution', 'caching']}
         article={{
         author: 'Dr. Emily Carter',
@@ -26,6 +26,8 @@ export default function BlogAgentPerformanceOptimization() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgentPerformanceOptimization', url: '/BlogAgentPerformanceOptimization' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Performance Optimization for AI Agents: ' }]} />

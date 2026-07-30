@@ -16,7 +16,7 @@ export default function BlogAIDesignSystems() {
       <PageMeta 
         title="Design Systems for AI-First Products: Scalable UI Architecture"
         description="Build design systems optimized for AI products. Component architecture, token systems, and scaling AI interfaces."
-        url="/blog/ai-design-systems"
+        url="/BlogAIDesignSystems"
         keywords={['design systems', 'AI UI', 'component architecture', 'scalable design']}
         article={{
         author: 'Alex Kumar',
@@ -26,6 +26,8 @@ export default function BlogAIDesignSystems() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT19M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIDesignSystems', url: '/BlogAIDesignSystems' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Design Systems for AI-First Products: Sc' }]} />

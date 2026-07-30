@@ -16,7 +16,7 @@ export default function BlogAIAgentPersonas() {
       <PageMeta 
         title="Designing AI Agent Personas: Character and Voice Guidelines"
         description="Create compelling AI agent personalities. Persona development, voice design, tone guidelines, and character consistency."
-        url="/blog/ai-agent-personas"
+        url="/BlogAIAgentPersonas"
         keywords={['AI personas', 'agent personality', 'voice design', 'character design']}
         article={{
         author: 'Jessica Park',
@@ -26,6 +26,8 @@ export default function BlogAIAgentPersonas() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT13M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIAgentPersonas', url: '/BlogAIAgentPersonas' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Designing AI Agent Personas: Character a' }]} />

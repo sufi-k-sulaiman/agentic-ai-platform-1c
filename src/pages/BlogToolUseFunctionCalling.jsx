@@ -16,7 +16,7 @@ export default function BlogToolUseFunctionCalling() {
       <PageMeta 
         title="Tool Use and Function Calling Capabilities in AI Agents"
         description="Learn how agents interact with external tools and APIs. Function calling, parameter extraction, tool selection, and execution patterns."
-        url="/blog/tool-use-function-calling"
+        url="/BlogToolUseFunctionCalling"
         keywords={['function calling', 'AI tools', 'tool use', 'API integration', 'agent capabilities']}
         article={{
         author: 'Kevin Zhang',
@@ -26,6 +26,8 @@ export default function BlogToolUseFunctionCalling() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT18M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogToolUseFunctionCalling', url: '/BlogToolUseFunctionCalling' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Use and Function Calling Capabiliti' }]} />

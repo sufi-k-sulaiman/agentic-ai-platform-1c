@@ -16,7 +16,7 @@ export default function BlogAgentStateManagement() {
       <PageMeta 
         title="Agent State Management: Tracking Context and Progress"
         description="Learn how to manage agent state effectively. State persistence, transitions, recovery, and distributed state synchronization."
-        url="/blog/agent-state-management"
+        url="/BlogAgentStateManagement"
         keywords={['state management', 'agent state', 'state persistence', 'state transitions', 'context tracking']}
         article={{
         author: 'Kevin Zhang',
@@ -26,6 +26,8 @@ export default function BlogAgentStateManagement() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgentStateManagement', url: '/BlogAgentStateManagement' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agent State Management: Tracking Context' }]} />

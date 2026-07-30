@@ -365,6 +365,9 @@ export default function Cities() {
         description="Transform urban operations with AI. 30% cost savings, 50% faster services, 40% higher citizen satisfaction. Smart infrastructure and automated city management."
         url="/cities"
         keywords={['smart cities', 'urban AI', 'city infrastructure', 'citizen services', 'traffic management', 'urban planning']}
+      
+        faq={[{"question":"How does AI transform smart city operations?","answer":"Agents optimize urban infrastructure, traffic flow, public services, and energy management. The platform coordinates city-wide systems for improved efficiency and citizen satisfaction."},{"question":"Can it integrate with existing city systems?","answer":"Yes. We connect to IoT sensor networks, traffic cameras, public transit, and government databases. Agents pull and synthesize data across systems to optimize city operations in real time."},{"question":"What improvements can I expect?","answer":"Smart cities typically see 30% traffic congestion reduction, 45% citizen satisfaction increase, and 35% operational cost reduction when deploying agentic AI."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Cities', url: '/Cities' }]}
       />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

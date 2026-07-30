@@ -94,6 +94,9 @@ export default function SportsEntertainment() {
         image="https://images.unsplash.com/photo-1533178425135-5b92b19a6e7c?w=1200&h=630&fit=crop"
         service={{ type: 'Sports & Entertainment AI', areaServed: 'Worldwide' }}
         localBusiness={{ name: '1C Platform - Sports AI', telephone: '+1-800-1C-SPORTS' }}
+      
+        faq={[{"question":"How does AI transform sports and entertainment?","answer":"Agents automate fan engagement, ticketing optimization, venue operations, and revenue management. The platform increases revenue per fan by 30% while improving operational efficiency by 45%."},{"question":"Can it integrate with your ticketing platform?","answer":"Yes. We connect to Ticketmaster, Eventbrite, and custom ticketing systems. Agents optimize pricing, personalize fan experiences, and coordinate venue logistics automatically."},{"question":"What revenue improvements can I expect?","answer":"Sports and entertainment organizations typically see 30% revenue increase per fan, 45% efficiency improvement, and 50% fan satisfaction increase when deploying agentic AI."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'SportsEntertainment', url: '/SportsEntertainment' }]}
       />
       <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Sports & Entertainment' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

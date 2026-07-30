@@ -94,6 +94,9 @@ export default function Traffic() {
         image="https://images.unsplash.com/photo-1542882771-6e5b7d8c2c3c?w=1200&h=630&fit=crop"
         service={{ type: 'Traffic Management AI', areaServed: 'Worldwide' }}
         localBusiness={{ name: '1C Platform - Traffic AI', telephone: '+1-800-1C-TRAFFIC' }}
+      
+        faq={[{"question":"How does AI optimize traffic management?","answer":"Agents automate signal optimization, incident detection, congestion prediction, and emergency response. The platform reduces traffic congestion by 30% while improving response times by 60%."},{"question":"Can it integrate with existing traffic systems?","answer":"Yes. We connect to traffic cameras, sensor networks, and signal control systems. Agents pull real-time data to optimize traffic flow and predict congestion before it occurs."},{"question":"What congestion improvements can I expect?","answer":"Traffic management teams typically see 30% congestion reduction, 60% faster response times, and 40% cost reduction when deploying agentic AI."}]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Traffic', url: '/Traffic' }]}
       />
       <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Traffic Management' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

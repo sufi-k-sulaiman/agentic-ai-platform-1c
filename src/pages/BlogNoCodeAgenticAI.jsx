@@ -15,7 +15,7 @@ export default function BlogNoCodeAgenticAI() {
       <PageMeta 
         title="No-Code Agentic AI: Empowering Every Business User"
         description="Discover how no-code platforms democratize AI agent development for business users without technical backgrounds."
-        url="/blog/no-code-agentic-ai"
+        url="/BlogNoCodeAgenticAI"
         keywords={['no-code AI', 'citizen developers', 'business users', 'AI democratization', 'low-code automation']}
         article={{
         author: 'David Kim',
@@ -25,6 +25,8 @@ export default function BlogNoCodeAgenticAI() {
         tags: ['tutorials', 'AI', 'agentic AI'],
         timeRequired: 'PT9M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogNoCodeAgenticAI', url: '/BlogNoCodeAgenticAI' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

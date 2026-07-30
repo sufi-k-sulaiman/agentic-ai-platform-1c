@@ -4,10 +4,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, Workflow } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 export default function DocWorkflowAutomation() {
   return (
     <div className="bg-white min-h-screen">
+      <PageMeta
+        title="Workflow Automation"
+        description="Build multi-step automated workflows with AI agents. Chain tools, add conditions, and orchestrate complex business processes."
+        url="/DocWorkflowAutomation"
+        keywords={['workflow automation', 'agent workflows', 'process automation', 'task chaining', 'business automation']}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Documentation', url: '/Documentation' }, { name: 'Workflow Automation', url: '/DocWorkflowAutomation' }]}
+        howTo={{
+          name: 'Creating a Workflow Automation',
+          description: 'Build an automated multi-step workflow with AI agents',
+          steps: [
+            { name: 'Define your workflow', text: 'Map out the steps, triggers, and conditions of your business process that you want to automate.' },
+            { name: 'Create trigger events', text: 'Set up triggers that initiate the workflow—schedule, webhook, entity change, or manual trigger.' },
+            { name: 'Add agent steps', text: 'Configure each step with an AI agent that processes data, makes decisions, and passes context to the next step.' },
+            { name: 'Add conditional logic', text: 'Use switch branches to route the workflow based on agent decisions, data values, or external conditions.' },
+            { name: 'Test and deploy', text: 'Run the workflow in the sandbox, verify each step, then deploy to production with monitoring enabled.' },
+          ],
+        }}
+      />
       <div className="max-w-4xl mx-auto px-6 py-24">
         <Link to={createPageUrl('Documentation')} className="inline-flex items-center text-[#8B2EE5] hover:underline mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />

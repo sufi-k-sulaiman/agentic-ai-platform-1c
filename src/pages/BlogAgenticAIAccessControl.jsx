@@ -15,7 +15,7 @@ export default function BlogAgenticAIAccessControl() {
       <PageMeta 
         title="AI Agent Access Control: Permissions and Authorization Strategies"
         description="Implement robust access control for AI agents. Learn about RBAC, ABAC, least privilege, and managing agent permissions at scale."
-        url="/blog/agentic-ai-access-control"
+        url="/BlogAgenticAIAccessControl"
         article={{
         author: 'Brian Mitchell',
         datePublished: '2025-01-07',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIAccessControl() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT12M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIAccessControl', url: '/BlogAgenticAIAccessControl' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AI Agent Access Control: Permissions and' }]} />

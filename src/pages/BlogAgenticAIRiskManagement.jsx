@@ -15,7 +15,7 @@ export default function BlogAgenticAIRiskManagement() {
       <PageMeta 
         title="Risk Management for Agentic AI: Identifying and Mitigating Threats"
         description="Learn how to assess, prioritize, and mitigate risks from autonomous AI agents. Frameworks, tools, and real-world examples."
-        url="/blog/agentic-ai-risk-management"
+        url="/BlogAgenticAIRiskManagement"
         article={{
         author: 'Robert Chen',
         datePublished: '2025-01-13',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIRiskManagement() {
         tags: ['ai governance', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIRiskManagement', url: '/BlogAgenticAIRiskManagement' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Risk Management for Agentic AI: Identify' }]} />

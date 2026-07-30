@@ -15,7 +15,7 @@ export default function BlogAIAutonomyChallenges() {
       <PageMeta 
         title="Overcoming Challenges in AI Autonomy: Risk, Trust, and Control"
         description="Navigate the key challenges of deploying autonomous AI. Risk management, building trust, maintaining control, and ensuring safety."
-        url="/blog/ai-autonomy-challenges"
+        url="/BlogAIAutonomyChallenges"
         article={{
         author: 'Dr. Marcus Williams',
         datePublished: '2025-01-14',
@@ -24,6 +24,8 @@ export default function BlogAIAutonomyChallenges() {
         tags: ['ai autonomy', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIAutonomyChallenges', url: '/BlogAIAutonomyChallenges' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Overcoming Challenges in AI Autonomy: Ri' }]} />

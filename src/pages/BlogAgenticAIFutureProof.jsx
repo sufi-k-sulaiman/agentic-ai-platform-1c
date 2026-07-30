@@ -15,7 +15,7 @@ export default function BlogAgenticAIFutureProof() {
       <PageMeta 
         title="Future-Proofing with Agentic AI: Why Autonomous Systems Win Long-Term"
         description="Why agentic AI is the future. Technology trends, market predictions, and strategic advantages of autonomous systems."
-        url="/blog/agentic-ai-future-proof"
+        url="/BlogAgenticAIFutureProof"
         article={{
         author: 'Dr. Emily Carter',
         datePublished: '2024-12-11',
@@ -24,6 +24,8 @@ export default function BlogAgenticAIFutureProof() {
         tags: ['ai comparison', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgenticAIFutureProof', url: '/BlogAgenticAIFutureProof' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Future-Proofing with Agentic AI: Why Aut' }]} />

@@ -234,6 +234,18 @@ export default function EnterpriseSuite() {
           { question: 'Does the Enterprise Suite integrate with my existing tools?', answer: 'The Enterprise Suite integrates natively with 500+ tools including Salesforce, Microsoft 365, Google Workspace, Slack, Zoom, Tableau, Power BI, QuickBooks, and more. Custom integrations are available via REST API and webhooks.' },
           { question: 'What is the typical implementation timeline?', answer: 'Implementation typically takes 4-8 weeks depending on scope. SMB deployments can go live in 2 weeks, while full enterprise rollouts with custom modules and data migration take 6-12 weeks.' },
         ]}
+      
+        service={{ type: 'Enterprise Suite - AI-Powered ERP & CRM', areaServed: 'Worldwide' }}
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'AggregateRating',
+            itemReviewed: { '@type': 'Service', name: '1C Platform' },
+            ratingValue: '4.9',
+            reviewCount: '500',
+            bestRating: '5',
+          }
+        ]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

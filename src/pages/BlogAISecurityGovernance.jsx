@@ -15,7 +15,7 @@ export default function BlogAISecurityGovernance() {
       <PageMeta 
         title="Security Governance for Agentic AI: Protecting Autonomous Systems"
         description="Comprehensive security governance framework for autonomous AI agents. Threat models, controls, and incident response strategies."
-        url="/blog/ai-security-governance"
+        url="/BlogAISecurityGovernance"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAISecurityGovernance() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAISecurityGovernance', url: '/BlogAISecurityGovernance' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AISecurityGovernance' }]} />

@@ -4,10 +4,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, Shield, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
 
 export default function DocAuthentication() {
   return (
     <div className="bg-white min-h-screen">
+      <PageMeta
+        title="Authentication & Security"
+        description="Learn about authentication methods, API keys, OAuth, and security best practices for 1C Platform."
+        url="/DocAuthentication"
+        keywords={['authentication', 'API security', 'OAuth', 'API keys', 'access control']}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Documentation', url: '/Documentation' }, { name: 'Authentication', url: '/DocAuthentication' }]}
+        howTo={{
+          name: 'Setting Up Authentication',
+          description: 'Secure your 1C Platform integration with proper authentication',
+          steps: [
+            { name: 'Create an API key', text: 'Navigate to Settings > API Keys and generate a new key with the minimum required scope for your use case.' },
+            { name: 'Store credentials securely', text: 'Never hardcode API keys. Store them as environment variables or use a secrets manager like AWS Secrets Manager.' },
+            { name: 'Set up OAuth (optional)', text: 'For user-facing apps, configure OAuth 2.0 so each user authorizes your app to act on their behalf with scoped permissions.' },
+            { name: 'Configure rate limits', text: 'Set rate limits and quotas to prevent abuse and control costs. Use the dashboard to monitor usage patterns.' },
+            { name: 'Enable audit logging', text: 'Turn on audit logging to track all API calls, agent actions, and data access for compliance and debugging.' },
+          ],
+        }}
+      />
       <div className="max-w-4xl mx-auto px-6 py-24">
         <Link to={createPageUrl('Documentation')} className="inline-flex items-center text-[#8B2EE5] hover:underline mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />

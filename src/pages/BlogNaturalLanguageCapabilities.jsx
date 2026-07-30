@@ -16,7 +16,7 @@ export default function BlogNaturalLanguageCapabilities() {
       <PageMeta 
         title="Natural Language Understanding Capabilities in Agentic AI"
         description="Master NLU in AI agents. Intent recognition, entity extraction, context understanding, sentiment analysis, and conversational capabilities."
-        url="/blog/natural-language-capabilities"
+        url="/BlogNaturalLanguageCapabilities"
         keywords={['NLU', 'natural language processing', 'intent recognition', 'entity extraction', 'conversational AI', 'sentiment analysis']}
         article={{
         author: 'Rachel Foster',
@@ -26,6 +26,8 @@ export default function BlogNaturalLanguageCapabilities() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT16M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogNaturalLanguageCapabilities', url: '/BlogNaturalLanguageCapabilities' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Natural Language Understanding Capabilit' }]} />

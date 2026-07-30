@@ -15,7 +15,7 @@ export default function BlogAIGovernanceIncidents() {
       <PageMeta 
         title="AI Incident Response: Handling Autonomous Agent Failures"
         description="Comprehensive guide to managing AI incidents. Detection, response procedures, root cause analysis, and prevention strategies."
-        url="/blog/ai-governance-incidents"
+        url="/BlogAIGovernanceIncidents"
         article={{
         author: '1C Platform Team',
         datePublished: '2025-01-01',
@@ -23,6 +23,8 @@ export default function BlogAIGovernanceIncidents() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAIGovernanceIncidents', url: '/BlogAIGovernanceIncidents' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'AIGovernanceIncidents' }]} />

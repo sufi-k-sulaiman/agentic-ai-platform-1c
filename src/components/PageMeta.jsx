@@ -22,6 +22,7 @@ import { SITE_NAME, SITE_URL } from '@/lib/seoConfig';
  * @param {Object[]} [schemas] - Additional custom JSON-LD schema objects
  * @param {Object} [collectionPage] - If true, generates CollectionPage schema
  * @param {Object} [speakable] - Speakable schema: { cssSelectors: ['h1', '.summary'] }
+ * @param {Array} [breadcrumbs] - Custom breadcrumb path: [{ name, url }]
  */
 export default function PageMeta({
   title,
@@ -39,6 +40,7 @@ export default function PageMeta({
   collectionPage = false,
   schemas = [],
   speakable,
+  breadcrumbs,
 }) {
   const fullTitle = `${title} | ${SITE_NAME}`;
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : SITE_URL;
@@ -49,14 +51,25 @@ export default function PageMeta({
     : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 
   // BreadcrumbList structured data
-  const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: title, item: fullUrl },
-    ],
-  };
+  const breadcrumbJsonLd = breadcrumbs
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((item, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: item.name,
+          item: `${siteUrl}${item.url}`,
+        })),
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: title, item: fullUrl },
+        ],
+      };
 
   // BlogPosting structured data
   const articleJsonLd = article

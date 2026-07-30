@@ -15,7 +15,7 @@ export default function BlogAutonomousAgents() {
       <PageMeta 
         title="How Autonomous Agents are Revolutionizing Business Operations"
         description="Explore the transformative power of autonomous AI agents in modern business operations and their impact on productivity and efficiency."
-        url="/blog/autonomous-agents"
+        url="/BlogAutonomousAgents"
         keywords={['autonomous agents', 'AI automation', 'business operations', 'intelligent automation', 'productivity']}
         article={{
           author: 'Michael Rodriguez',
@@ -26,6 +26,8 @@ export default function BlogAutonomousAgents() {
         timeRequired: 'PT10M',
         }}
         speakable={{ cssSelectors: ['h1', 'article > p'] }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAutonomousAgents', url: '/BlogAutonomousAgents' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

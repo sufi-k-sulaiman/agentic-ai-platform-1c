@@ -16,7 +16,7 @@ export default function BlogToolSelectionDesign() {
       <PageMeta 
         title="Tool Selection and Integration Design for AI Agents"
         description="Master the art of selecting and integrating tools for AI agents. Design patterns for tool discovery, evaluation, and seamless integration."
-        url="/blog/tool-selection-design"
+        url="/BlogToolSelectionDesign"
         keywords={['AI agent tools', 'tool selection', 'tool integration', 'agent design', 'API integration', 'tool discovery']}
         article={{
         author: 'Kevin Zhang',
@@ -26,6 +26,8 @@ export default function BlogToolSelectionDesign() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT17M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogToolSelectionDesign', url: '/BlogToolSelectionDesign' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Selection and Integration Design fo' }]} />

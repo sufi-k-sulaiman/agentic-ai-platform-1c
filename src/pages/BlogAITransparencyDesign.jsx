@@ -16,7 +16,7 @@ export default function BlogAITransparencyDesign() {
       <PageMeta 
         title="Designing for AI Transparency: Building Trust Through Design"
         description="Design interfaces that make AI decision-making transparent. Explainability patterns, trust indicators, and confidence displays."
-        url="/blog/ai-transparency-design"
+        url="/BlogAITransparencyDesign"
         keywords={['AI transparency', 'explainable AI', 'trust design', 'AI explainability']}
         article={{
         author: 'Emma Wilson',
@@ -26,6 +26,8 @@ export default function BlogAITransparencyDesign() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT15M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAITransparencyDesign', url: '/BlogAITransparencyDesign' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Designing for AI Transparency: Building ' }]} />

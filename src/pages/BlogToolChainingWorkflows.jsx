@@ -16,7 +16,7 @@ export default function BlogToolChainingWorkflows() {
       <PageMeta 
         title="Tool Chaining and Workflow Design for AI Agents"
         description="Design complex tool chains and workflows. Sequential execution, parallel processing, conditional logic, and workflow visualization."
-        url="/blog/tool-chaining-workflows"
+        url="/BlogToolChainingWorkflows"
         keywords={['tool chaining', 'workflow design', 'agent workflows', 'sequential execution', 'parallel processing', 'workflow automation']}
         article={{
         author: 'Rachel Foster',
@@ -26,6 +26,8 @@ export default function BlogToolChainingWorkflows() {
         tags: ['agentic design', 'AI', 'agentic AI'],
         timeRequired: 'PT19M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogToolChainingWorkflows', url: '/BlogToolChainingWorkflows' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Chaining and Workflow Design for AI' }]} />

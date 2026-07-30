@@ -685,6 +685,11 @@ export default function Community() {
         description="Join 10,000+ Ai practitioners discussing generative AI, agentic systems, governance, and ML operations. Share knowledge and learn from experts."
         url="/community"
         keywords={['AI community', 'developer forum', 'AI discussions', 'machine learning community', 'agent development']}
+        faq={[
+          { question: 'How do I join the 1C Platform community?', answer: 'Sign up for a free 1C Platform account, then visit the Community page. You can immediately browse discussions, share projects, and ask questions. No separate registration is required.' },
+          { question: 'Can I share my AI agents with the community?', answer: 'Yes. Publish your agents to the community marketplace for others to discover and use. You maintain ownership, can set usage limits, and earn credits when others use your agents.' },
+          { question: 'Is the community free to use?', answer: 'Yes, the community is free for all registered users. Browse discussions, share code, collaborate on projects, and get support from peers and experts at no cost.' },
+        ]}
       />
       
       {/* Hero */}

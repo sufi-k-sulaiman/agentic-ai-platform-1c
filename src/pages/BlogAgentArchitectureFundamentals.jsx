@@ -16,7 +16,7 @@ export default function BlogAgentArchitectureFundamentals() {
       <PageMeta 
         title="Agent Architecture Fundamentals: Building Blocks of Autonomous AI"
         description="Master the core components of agent architecture. Control loops, decision engines, memory systems, and modular design patterns."
-        url="/blog/agent-architecture-fundamentals"
+        url="/BlogAgentArchitectureFundamentals"
         keywords={['agent architecture', 'AI design', 'control loops', 'agent components', 'modular design']}
         article={{
         author: 'Dr. Marcus Chen',
@@ -26,6 +26,8 @@ export default function BlogAgentArchitectureFundamentals() {
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
         timeRequired: 'PT19M',
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogAgentArchitectureFundamentals', url: '/BlogAgentArchitectureFundamentals' }]}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agent Architecture Fundamentals: Buildin' }]} />

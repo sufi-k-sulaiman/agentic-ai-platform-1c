@@ -15,7 +15,7 @@ export default function BlogGenerativeVsTraditional() {
       <PageMeta 
         title="Generative AI vs Traditional AI: Understanding the Difference"
         description="Compare generative AI and traditional AI approaches, their capabilities, use cases, and when to use each technology."
-        url="/blog/generative-vs-traditional-ai"
+        url="/BlogGenerativeVsTraditional"
         keywords={['generative AI', 'traditional AI', 'machine learning', 'AI comparison', 'AI types']}
         article={{
         author: '1C Platform Team',
@@ -24,6 +24,8 @@ export default function BlogGenerativeVsTraditional() {
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
       }}
+      
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/Blog' }, { name: 'BlogGenerativeVsTraditional', url: '/BlogGenerativeVsTraditional' }]}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">

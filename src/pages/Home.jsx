@@ -21,6 +21,25 @@ export default function Home() {
         schemas={[
           {
             '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: '1C Platform',
+            url: 'https://1cplatform.com',
+            applicationCategory: 'EnterpriseApplication',
+            operatingSystem: 'Cloud',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+              description: 'Free Starter plan with 1,000 API calls per month',
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              reviewCount: '500',
+            },
+          },
+          {
+            '@context': 'https://schema.org',
             '@type': 'WebSite',
             potentialAction: {
               '@type': 'SubscribeAction',
