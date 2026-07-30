@@ -173,6 +173,8 @@ export default function BlogAgentPerformanceOptimization() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAgentPerformanceOptimization" category="blog" title="Related Articles" />
       </article>
     </div>
   );

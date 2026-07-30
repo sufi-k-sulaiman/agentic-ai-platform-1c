@@ -206,6 +206,8 @@ export default function BlogComplexProblemSolving() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogComplexProblemSolving" category="blog" title="Related Articles" />
       </article>
     </div>
   );

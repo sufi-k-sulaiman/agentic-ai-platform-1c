@@ -281,6 +281,8 @@ export default function BlogAutonomousDecisionCapabilities() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAutonomousDecisionCapabilities" category="blog" title="Related Articles" />
       </article>
     </div>
   );

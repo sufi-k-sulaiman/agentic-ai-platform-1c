@@ -181,6 +181,8 @@ export default function BlogPerceptionObservation() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogPerceptionObservation" category="blog" title="Related Articles" />
       </article>
     </div>
   );

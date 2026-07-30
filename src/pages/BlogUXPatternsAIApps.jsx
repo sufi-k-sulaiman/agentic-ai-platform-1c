@@ -197,6 +197,8 @@ export default function BlogUXPatternsAIApps() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogUXPatternsAIApps" category="blog" title="Related Articles" />
       </article>
     </div>
   );

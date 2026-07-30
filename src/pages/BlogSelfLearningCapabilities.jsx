@@ -221,6 +221,8 @@ export default function BlogSelfLearningCapabilities() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogSelfLearningCapabilities" category="blog" title="Related Articles" />
       </article>
     </div>
   );

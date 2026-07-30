@@ -209,6 +209,8 @@ export default function BlogAgenticAISecurity() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAgenticAISecurity" category="blog" title="Related Articles" />
       </article>
     </div>
   );

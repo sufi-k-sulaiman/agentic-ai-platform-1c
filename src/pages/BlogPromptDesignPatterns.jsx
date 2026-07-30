@@ -199,6 +199,8 @@ You have access to:
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogPromptDesignPatterns" category="blog" title="Related Articles" />
       </article>
     </div>
   );

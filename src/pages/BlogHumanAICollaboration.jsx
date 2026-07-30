@@ -219,6 +219,8 @@ export default function BlogHumanAICollaboration() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogHumanAICollaboration" category="blog" title="Related Articles" />
       </article>
     </div>
   );

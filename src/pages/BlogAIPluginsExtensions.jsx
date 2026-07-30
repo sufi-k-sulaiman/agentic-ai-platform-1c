@@ -179,6 +179,8 @@ export default function BlogAIPluginsExtensions() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAIPluginsExtensions" category="blog" title="Related Articles" />
       </article>
     </div>
   );

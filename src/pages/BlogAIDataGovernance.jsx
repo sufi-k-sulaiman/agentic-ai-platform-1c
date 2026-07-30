@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAIDataGovernance() {
   return (
@@ -71,6 +72,7 @@ export default function BlogAIDataGovernance() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogAIDataGovernance">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               Data is the foundation of agentic AI. Autonomous agents learn from training data and access operational data to make decisions. Poor data governance leads to biased agents, privacy violations, and compliance failures. This guide shows how to govern data throughout the AI lifecycle.
             </p>
@@ -226,7 +228,8 @@ export default function BlogAIDataGovernance() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Strong data governance is the foundation of trustworthy agentic AI. It protects privacy, ensures compliance, reduces bias, and enables confident scaling. Invest in data governance early—it's harder and more expensive to retrofit later.
             </p>
-          </div>
+          
+            </InternalLinker></div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Master AI data governance</h3>

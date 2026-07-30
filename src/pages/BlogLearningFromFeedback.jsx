@@ -213,6 +213,8 @@ export default function BlogLearningFromFeedback() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogLearningFromFeedback" category="blog" title="Related Articles" />
       </article>
     </div>
   );

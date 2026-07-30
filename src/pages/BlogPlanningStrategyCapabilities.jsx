@@ -212,6 +212,8 @@ export default function BlogPlanningStrategyCapabilities() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogPlanningStrategyCapabilities" category="blog" title="Related Articles" />
       </article>
     </div>
   );

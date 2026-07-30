@@ -216,6 +216,8 @@ export default function BlogProductionGenAIApps() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogProductionGenAIApps" category="blog" title="Related Articles" />
       </article>
     </div>
   );

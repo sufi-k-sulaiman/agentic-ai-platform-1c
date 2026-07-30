@@ -238,6 +238,8 @@ export default function BlogToolErrorHandling() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogToolErrorHandling" category="blog" title="Related Articles" />
       </article>
     </div>
   );

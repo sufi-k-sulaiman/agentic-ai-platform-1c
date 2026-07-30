@@ -301,6 +301,8 @@ for chunk in stream:
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogBuildingWithAPIs" category="blog" title="Related Articles" />
       </article>
     </div>
   );

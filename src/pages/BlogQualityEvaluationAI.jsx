@@ -205,6 +205,8 @@ export default function BlogQualityEvaluationAI() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogQualityEvaluationAI" category="blog" title="Related Articles" />
       </article>
     </div>
   );

@@ -238,6 +238,8 @@ POST   /v1/tools/{id}/validate       # Validate inputs`}
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAPIDesignAgenticTools" category="blog" title="Related Articles" />
       </article>
     </div>
   );

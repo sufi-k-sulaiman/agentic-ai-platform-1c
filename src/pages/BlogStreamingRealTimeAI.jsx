@@ -195,6 +195,8 @@ while (true) {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogStreamingRealTimeAI" category="blog" title="Related Articles" />
       </article>
     </div>
   );

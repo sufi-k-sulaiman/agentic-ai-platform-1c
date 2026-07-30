@@ -226,6 +226,8 @@ export default function BlogToolChainingWorkflows() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogToolChainingWorkflows" category="blog" title="Related Articles" />
       </article>
     </div>
   );

@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAIGovernanceMetrics() {
   return (
@@ -71,6 +72,7 @@ export default function BlogAIGovernanceMetrics() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogAIGovernanceMetrics">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               "What gets measured gets managed." AI governance requires robust metrics to demonstrate effectiveness, identify issues, and drive improvement. This guide provides a comprehensive framework for governance measurement.
             </p>
@@ -216,7 +218,8 @@ export default function BlogAIGovernanceMetrics() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Governance metrics provide visibility into AI operations, demonstrate value to stakeholders, and enable data-driven decision-making. What you measure signals what matters. Choose metrics that align with strategic objectives and drive the right behaviors.
             </p>
-          </div>
+          
+            </InternalLinker></div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Track governance effectiveness</h3>

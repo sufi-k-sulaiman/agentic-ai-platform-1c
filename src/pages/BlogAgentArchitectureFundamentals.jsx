@@ -229,6 +229,8 @@ export default function BlogAgentArchitectureFundamentals() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAgentArchitectureFundamentals" category="blog" title="Related Articles" />
       </article>
     </div>
   );

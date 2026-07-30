@@ -266,6 +266,8 @@ export default function BlogAgenticAIEthics() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAgenticAIEthics" category="blog" title="Related Articles" />
       </article>
     </div>
   );

@@ -219,6 +219,8 @@ export default function BlogToolDiscoveryUX() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogToolDiscoveryUX" category="blog" title="Related Articles" />
       </article>
     </div>
   );

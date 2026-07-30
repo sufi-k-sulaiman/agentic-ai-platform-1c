@@ -198,6 +198,8 @@ export default function BlogManagingAICosts() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogManagingAICosts" category="blog" title="Related Articles" />
       </article>
     </div>
   );

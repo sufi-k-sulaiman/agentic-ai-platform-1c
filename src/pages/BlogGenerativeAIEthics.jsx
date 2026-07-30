@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogGenerativeAIEthics() {
   return (
@@ -72,6 +73,7 @@ export default function BlogGenerativeAIEthics() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogGenerativeAIEthics">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               As generative AI becomes more powerful and prevalent, addressing ethical concerns and bias is critical. Organizations must build responsible AI systems that are fair, transparent, and accountable.
             </p>
@@ -283,7 +285,8 @@ export default function BlogGenerativeAIEthics() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Organizations that prioritize responsible AI will build trust with users, avoid legal risks, and create systems that benefit everyone. The business case for ethics grows stronger as regulatory frameworks emerge worldwide. The EU AI Act, anticipated US regulations, and industry-specific requirements are transforming ethics from nice-to-have into mandatory compliance. Companies that viewed ethical AI as optional will scramble to retrofit safeguards into deployed systems—expensive, disruptive, and risky. Those that built ethics into foundations from the start will glide through regulatory transitions with minimal friction, maintaining deployment velocity while competitors stall for compliance remediation. The future of AI depends on getting this right.
             </p>
-          </div>
+          
+            </InternalLinker></div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Build responsible AI systems</h3>

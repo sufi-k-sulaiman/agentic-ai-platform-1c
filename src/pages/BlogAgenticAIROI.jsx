@@ -240,6 +240,8 @@ export default function BlogAgenticAIROI() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAgenticAIROI" category="blog" title="Related Articles" />
       </article>
     </div>
   );

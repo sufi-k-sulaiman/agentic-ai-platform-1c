@@ -200,6 +200,8 @@ const embedding = await openai.embeddings.create({
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogVectorDatabaseIntegration" category="blog" title="Related Articles" />
       </article>
     </div>
   );

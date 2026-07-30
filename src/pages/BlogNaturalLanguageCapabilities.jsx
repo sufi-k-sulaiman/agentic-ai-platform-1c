@@ -199,6 +199,8 @@ export default function BlogNaturalLanguageCapabilities() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogNaturalLanguageCapabilities" category="blog" title="Related Articles" />
       </article>
     </div>
   );

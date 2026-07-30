@@ -220,6 +220,8 @@ export default function BlogGoalManagementPrioritization() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogGoalManagementPrioritization" category="blog" title="Related Articles" />
       </article>
     </div>
   );

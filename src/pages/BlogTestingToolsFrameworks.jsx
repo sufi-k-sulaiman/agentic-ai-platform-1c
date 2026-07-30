@@ -266,6 +266,8 @@ test('agent uses email tool correctly', async () => {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogTestingToolsFrameworks" category="blog" title="Related Articles" />
       </article>
     </div>
   );

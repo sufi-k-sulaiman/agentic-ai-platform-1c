@@ -184,6 +184,12 @@ import BlogAIObservabilityDebugging from './pages/BlogAIObservabilityDebugging';
 import BlogRateLimitingQuotaManagement from './pages/BlogRateLimitingQuotaManagement';
 import BlogAIResponseQuality from './pages/BlogAIResponseQuality';
 import BlogAIPluginsExtensions from './pages/BlogAIPluginsExtensions';
+import BlogCategoryAgenticCapabilities from './pages/BlogCategoryAgenticCapabilities';
+import BlogCategoryAIComparison from './pages/BlogCategoryAIComparison';
+import BlogCategoryAgenticDesign from './pages/BlogCategoryAgenticDesign';
+import BlogCategoryAIGovernance from './pages/BlogCategoryAIGovernance';
+import BlogCategoryGenerativeAI from './pages/BlogCategoryGenerativeAI';
+import BlogCategoryAIAutonomy from './pages/BlogCategoryAIAutonomy';
 import __Layout from './Layout.jsx';
 
 
@@ -374,6 +380,12 @@ export const PAGES = {
     "BlogRateLimitingQuotaManagement": BlogRateLimitingQuotaManagement,
     "BlogAIResponseQuality": BlogAIResponseQuality,
     "BlogAIPluginsExtensions": BlogAIPluginsExtensions,
+    "BlogCategoryAgenticCapabilities": BlogCategoryAgenticCapabilities,
+    "BlogCategoryAIComparison": BlogCategoryAIComparison,
+    "BlogCategoryAgenticDesign": BlogCategoryAgenticDesign,
+    "BlogCategoryAIGovernance": BlogCategoryAIGovernance,
+    "BlogCategoryGenerativeAI": BlogCategoryGenerativeAI,
+    "BlogCategoryAIAutonomy": BlogCategoryAIAutonomy,
 }
 
 export const pagesConfig = {

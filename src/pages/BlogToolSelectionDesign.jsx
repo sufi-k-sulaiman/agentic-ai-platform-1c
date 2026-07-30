@@ -228,6 +228,8 @@ export default function BlogToolSelectionDesign() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogToolSelectionDesign" category="blog" title="Related Articles" />
       </article>
     </div>
   );

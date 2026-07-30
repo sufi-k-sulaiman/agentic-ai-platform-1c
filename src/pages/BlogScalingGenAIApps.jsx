@@ -214,6 +214,8 @@ async function worker() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogScalingGenAIApps" category="blog" title="Related Articles" />
       </article>
     </div>
   );

@@ -203,6 +203,8 @@ export default function BlogKnowledgeRetrievalCapabilities() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogKnowledgeRetrievalCapabilities" category="blog" title="Related Articles" />
       </article>
     </div>
   );

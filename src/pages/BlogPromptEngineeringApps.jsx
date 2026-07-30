@@ -166,6 +166,8 @@ Input: "Dashboard loads very slowly"`}
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogPromptEngineeringApps" category="blog" title="Related Articles" />
       </article>
     </div>
   );

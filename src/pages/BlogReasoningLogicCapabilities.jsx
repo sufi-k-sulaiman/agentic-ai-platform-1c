@@ -212,6 +212,8 @@ export default function BlogReasoningLogicCapabilities() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogReasoningLogicCapabilities" category="blog" title="Related Articles" />
       </article>
     </div>
   );

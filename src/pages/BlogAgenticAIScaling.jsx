@@ -275,6 +275,8 @@ export default function BlogAgenticAIScaling() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAgenticAIScaling" category="blog" title="Related Articles" />
       </article>
     </div>
   );

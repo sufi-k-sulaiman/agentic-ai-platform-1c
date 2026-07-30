@@ -266,6 +266,8 @@ export default function BlogGenerativeVsTraditional() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogGenerativeVsTraditional" category="blog" title="Related Articles" />
       </article>
     </div>
   );

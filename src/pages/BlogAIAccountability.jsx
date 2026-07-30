@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAIAccountability() {
   return (
@@ -71,6 +72,7 @@ export default function BlogAIAccountability() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogAIAccountability">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               When an autonomous AI agent makes a mistake—approving a bad loan, sending inappropriate communications, or making a costly error—who's accountable? This question sits at the heart of AI governance and affects deployment strategies, insurance, and organizational structure.
             </p>
@@ -241,7 +243,8 @@ export default function BlogAIAccountability() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Clear accountability isn't about blame—it's about ensuring someone owns each aspect of AI governance. When everyone's responsible, no one is. Define explicit ownership, document decisions, and create transparency. Accountability drives better AI systems.
             </p>
-          </div>
+          
+            </InternalLinker></div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Establish clear AI accountability</h3>

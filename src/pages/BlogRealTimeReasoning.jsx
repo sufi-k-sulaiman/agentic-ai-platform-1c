@@ -199,6 +199,8 @@ export default function BlogRealTimeReasoning() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogRealTimeReasoning" category="blog" title="Related Articles" />
       </article>
     </div>
   );

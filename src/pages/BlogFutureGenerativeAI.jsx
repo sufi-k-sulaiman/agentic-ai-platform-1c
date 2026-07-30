@@ -244,6 +244,8 @@ export default function BlogFutureGenerativeAI() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogFutureGenerativeAI" category="blog" title="Related Articles" />
       </article>
     </div>
   );

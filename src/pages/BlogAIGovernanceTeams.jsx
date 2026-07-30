@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAIGovernanceTeams() {
   return (
@@ -71,6 +72,7 @@ export default function BlogAIGovernanceTeams() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogAIGovernanceTeams">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               Effective AI governance requires the right people with the right skills in the right structure. This guide shows how to build and organize your AI governance team.
             </p>
@@ -232,7 +234,8 @@ export default function BlogAIGovernanceTeams() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Building an AI governance team is an investment in responsible, scalable AI deployment. The right team structure and talent enable innovation while managing risk. Start lean, prove value, and scale governance alongside AI adoption.
             </p>
-          </div>
+          
+            </InternalLinker></div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Build your governance team</h3>

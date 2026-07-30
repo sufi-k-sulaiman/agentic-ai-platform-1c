@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAIRiskManagement() {
   return (
@@ -71,6 +72,7 @@ export default function BlogAIRiskManagement() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogAIRiskManagement">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               Autonomous AI agents introduce unique risks that traditional risk management frameworks don't address. From rogue decisions to cascading failures, organizations need structured approaches to identify, assess, and mitigate agentic AI risks.
             </p>
@@ -183,7 +185,8 @@ export default function BlogAIRiskManagement() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Effective risk management enables aggressive AI deployment by building confidence that risks are controlled. Organizations with mature risk practices deploy agents 3x faster than those without clear frameworks.
             </p>
-          </div>
+          
+            </InternalLinker></div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Deploy AI confidently</h3>

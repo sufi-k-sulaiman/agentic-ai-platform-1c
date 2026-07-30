@@ -256,6 +256,8 @@ export default function BlogAutomationToAutonomy() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAutomationToAutonomy" category="blog" title="Related Articles" />
       </article>
     </div>
   );

@@ -205,6 +205,8 @@ export default function BlogCollaborationCapabilities() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogCollaborationCapabilities" category="blog" title="Related Articles" />
       </article>
     </div>
   );

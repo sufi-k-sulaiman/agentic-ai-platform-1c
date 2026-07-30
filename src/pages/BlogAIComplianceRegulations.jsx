@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAIComplianceRegulations() {
   return (
@@ -71,6 +72,7 @@ export default function BlogAIComplianceRegulations() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogAIComplianceRegulations">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               AI regulations are evolving rapidly worldwide. Organizations deploying autonomous agents must navigate complex requirements across jurisdictions, industries, and use cases. Non-compliance carries severe penalties—up to 6% of global revenue under EU rules.
             </p>
@@ -217,7 +219,8 @@ export default function BlogAIComplianceRegulations() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Compliance isn't just about avoiding penalties—it's about building trustworthy AI that customers, employees, and regulators can rely on. Invest in compliance now to avoid expensive retrofitting later.
             </p>
-          </div>
+          
+            </InternalLinker></div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ensure regulatory compliance</h3>

@@ -218,6 +218,8 @@ export default function BlogImageGeneration() {
           </Link>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogImageGeneration" category="blog" title="Related Articles" />
       </article>
     </div>
   );

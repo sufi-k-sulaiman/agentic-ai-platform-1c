@@ -54,11 +54,14 @@ export default function BlogAgenticAIObservabilityArchitecture() {
             </div>
           </motion.div>
         </div>
+      
+      <RelatedContent currentPage="BlogAgenticAIObservabilityArchitecture" category="blog" title="Related Articles" />
       </section>
 
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-6 py-16">
         <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogAgenticAIObservabilityArchitecture">
           <h2>Introduction</h2>
           <p>
             Observability is critical for agentic AI systems - without it, you're flying blind. This guide 
@@ -474,7 +477,8 @@ async function processRequest(userPrompt) {
             for prompt optimization. Invest in observability early - the cost of debugging without it 
             far exceeds the infrastructure investment.
           </p>
-        </div>
+        
+            </InternalLinker></div>
 
         {/* Share */}
         <div className="mt-16 pt-8 border-t border-gray-200">

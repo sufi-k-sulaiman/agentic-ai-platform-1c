@@ -221,6 +221,8 @@ export default function BlogToolUseFunctionCalling() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogToolUseFunctionCalling" category="blog" title="Related Articles" />
       </article>
     </div>
   );

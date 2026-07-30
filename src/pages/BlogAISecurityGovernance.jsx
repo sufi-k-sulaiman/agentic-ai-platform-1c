@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAISecurityGovernance() {
   return (
@@ -71,6 +72,7 @@ export default function BlogAISecurityGovernance() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
+            <InternalLinker currentPage="BlogAISecurityGovernance">
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               Autonomous AI agents present unique security challenges. They process sensitive data, make consequential decisions, and operate continuously with limited human oversight. Security governance for agentic AI requires new frameworks beyond traditional application security.
             </p>
@@ -205,7 +207,8 @@ export default function BlogAISecurityGovernance() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Security governance for agentic AI requires vigilance, investment, and expertise. But it's non-negotiable. A single security failure can destroy trust, trigger regulatory action, and cause massive financial damage. Strong security governance enables confident AI deployment.
             </p>
-          </div>
+          
+            </InternalLinker></div>
 
           <div className="mt-16 p-8 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Secure your AI systems</h3>

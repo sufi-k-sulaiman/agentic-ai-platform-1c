@@ -186,6 +186,8 @@ export default function BlogInterAgentCommunication() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogInterAgentCommunication" category="blog" title="Related Articles" />
       </article>
     </div>
   );

@@ -193,6 +193,8 @@ if (!validate(output, responseSchema)) {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAIResponseQuality" category="blog" title="Related Articles" />
       </article>
     </div>
   );

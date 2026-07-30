@@ -204,6 +204,8 @@ export default function BlogMultiModalProcessing() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogMultiModalProcessing" category="blog" title="Related Articles" />
       </article>
     </div>
   );

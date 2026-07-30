@@ -173,6 +173,8 @@ export default function BlogAgentTestingValidation() {
           </div>
         </div>
       </InternalLinker>
+      
+      <RelatedContent currentPage="BlogAgentTestingValidation" category="blog" title="Related Articles" />
       </article>
     </div>
   );
