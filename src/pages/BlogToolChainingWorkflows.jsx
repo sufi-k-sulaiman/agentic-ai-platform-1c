@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogToolChainingWorkflows() {
   return (
@@ -23,12 +24,14 @@ export default function BlogToolChainingWorkflows() {
         image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200',
         section: 'Agentic Design',
         tags: ['agentic design', 'AI', 'agentic AI'],
+        timeRequired: 'PT19M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Chaining and Workflow Design for AI' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogToolChainingWorkflows">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -222,6 +225,7 @@ export default function BlogToolChainingWorkflows() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

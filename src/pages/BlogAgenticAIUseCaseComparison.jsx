@@ -21,6 +21,7 @@ export default function BlogAgenticAIUseCaseComparison() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/a2e628435_generated_image.png',
         section: 'AI Comparison',
         tags: ['ai comparison', 'AI', 'agentic AI'],
+        timeRequired: 'PT15M',
       }}
       />
 

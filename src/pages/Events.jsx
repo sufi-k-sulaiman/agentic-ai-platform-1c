@@ -621,6 +621,20 @@ export default function Events() {
         description="Join AI conferences, workshops, webinars, and hackathons. Learn about agentic AI, generative AI, and autonomous agents from industry experts."
         url="/events"
         keywords={['AI events', 'AI conferences', 'AI workshops', 'webinars', 'hackathons', 'tech events']}
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Event',
+            name: 'AI for Property Management Summit 2026',
+            description: 'Explore AI automation for property operations, tenant management, and smart buildings.',
+            startDate: '2026-03-12',
+            endDate: '2026-03-14',
+            eventStatus: 'https://schema.org/EventScheduled',
+            eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+            location: { '@type': 'Place', name: 'New York, NY', address: { '@type': 'PostalAddress', addressLocality: 'New York', addressCountry: 'US' } },
+            organizer: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.com' },
+          }
+        ]}
       />
       
       {/* Hero */}

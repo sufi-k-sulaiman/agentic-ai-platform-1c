@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogGoalManagementPrioritization() {
   return (
@@ -23,12 +24,14 @@ export default function BlogGoalManagementPrioritization() {
         image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200',
         section: 'Agentic Capabilities',
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
+        timeRequired: 'PT14M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Goal Management and Prioritization in AI' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogGoalManagementPrioritization">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -216,6 +219,7 @@ export default function BlogGoalManagementPrioritization() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

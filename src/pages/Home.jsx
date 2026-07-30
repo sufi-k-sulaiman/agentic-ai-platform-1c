@@ -17,6 +17,16 @@ export default function Home() {
         keywords={['Agentic AI', 'AI platform', 'autonomous AI', 'enterprise AI', 'AI automation', 'business intelligence']}
         image="https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200&h=630&fit=crop"
         speakable={{ cssSelectors: ['h1', 'h2', '.hero-title'] }}
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            potentialAction: {
+              '@type': 'SubscribeAction',
+              target: 'https://1cplatform.com/onboarding',
+            },
+          }
+        ]}
         faq={[
           { question: 'What is Agentic AI?', answer: 'Agentic AI is autonomous AI that can think, decide, and act independently. Unlike traditional AI that only generates responses, agentic AI agents can execute multi-step workflows, integrate with external tools, and make complex decisions.' },
           { question: 'How does 1C Platform integrate with existing tools?', answer: '1C Platform integrates with 500+ enterprise tools including Salesforce, Microsoft 365, Google Workspace, Slack, SAP, Oracle, Workday, ServiceNow, Jira, HubSpot, and more. Use our SDK, REST API, or no-code builder to connect any system.' },

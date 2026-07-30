@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogComplexProblemSolving() {
   return (
@@ -23,12 +24,14 @@ export default function BlogComplexProblemSolving() {
         image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200',
         section: 'Agentic Capabilities',
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
+        timeRequired: 'PT19M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Complex Problem-Solving Capabilities of ' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogComplexProblemSolving">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -202,6 +205,7 @@ export default function BlogComplexProblemSolving() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAgenticAIArchitecturePatterns() {
   return (
@@ -23,6 +24,7 @@ export default function BlogAgenticAIArchitecturePatterns() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/bda3167c8_generated_image.png',
         section: 'AI Comparison',
         tags: ['ai comparison', 'AI', 'agentic AI'],
+        timeRequired: 'PT20M',
       }}
       />
 
@@ -68,6 +70,7 @@ export default function BlogAgenticAIArchitecturePatterns() {
 
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-6 py-16">
+        <InternalLinker currentPage="BlogAgenticAIArchitecturePatterns">
         <div className="prose prose-lg max-w-none">
           <h2>Introduction</h2>
           <p>
@@ -312,6 +315,7 @@ export default function BlogAgenticAIArchitecturePatterns() {
             </Button>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

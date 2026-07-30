@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogVisualDesignPatterns() {
   return (
@@ -23,6 +24,7 @@ export default function BlogVisualDesignPatterns() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/3fb58ca0f_generated_image.png',
         section: 'Agentic Design',
         tags: ['agentic design', 'AI', 'agentic AI'],
+        timeRequired: 'PT17M',
       }}
       />
 
@@ -72,12 +74,13 @@ export default function BlogVisualDesignPatterns() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
+          <InternalLinker currentPage="BlogVisualDesignPatterns">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/3fb58ca0f_generated_image.png"
               alt="Visual Design Patterns"
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
             />
-          </motion.div>
+          </InternalLinker></motion.div>
         </div>
       </section>
 

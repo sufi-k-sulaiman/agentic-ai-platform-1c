@@ -21,6 +21,7 @@ export default function BlogAgenticAISecurityPrivacy() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/940a4a4c2_generated_image.png',
         section: 'AI Governance',
         tags: ['ai governance', 'AI', 'agentic AI'],
+        timeRequired: 'PT18M',
       }}
       />
 

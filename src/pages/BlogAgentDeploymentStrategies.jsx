@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAgentDeploymentStrategies() {
   return (
@@ -23,12 +24,14 @@ export default function BlogAgentDeploymentStrategies() {
         image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200',
         section: 'Agentic Capabilities',
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
+        timeRequired: 'PT17M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Agent Deployment Strategies: From Develo' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogAgentDeploymentStrategies">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -197,6 +200,7 @@ export default function BlogAgentDeploymentStrategies() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

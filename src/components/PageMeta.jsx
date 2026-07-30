@@ -20,6 +20,7 @@ import { SITE_NAME, SITE_URL } from '@/lib/seoConfig';
  * @param {Object} [course] - Course schema: { name, provider, description, rating, reviewCount }
  * @param {Object} [localBusiness] - LocalBusiness schema: { name, address, telephone }
  * @param {Object[]} [schemas] - Additional custom JSON-LD schema objects
+ * @param {Object} [collectionPage] - If true, generates CollectionPage schema
  * @param {Object} [speakable] - Speakable schema: { cssSelectors: ['h1', '.summary'] }
  */
 export default function PageMeta({
@@ -35,6 +36,7 @@ export default function PageMeta({
   service,
   course,
   localBusiness,
+  collectionPage = false,
   schemas = [],
   speakable,
 }) {
@@ -82,6 +84,8 @@ export default function PageMeta({
         url: fullUrl,
         ...(article.section ? { articleSection: article.section } : {}),
         ...(article.tags ? { keywords: article.tags.join(', ') } : {}),
+        ...(article.wordCount ? { wordCount: article.wordCount } : {}),
+        ...(article.timeRequired ? { timeRequired: article.timeRequired } : {}),
       }
     : null;
 
@@ -184,6 +188,17 @@ export default function PageMeta({
       }
     : null;
 
+  // CollectionPage structured data
+  const collectionPageJsonLd = collectionPage
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: title,
+        description,
+        url: fullUrl,
+      }
+    : null;
+
   // Speakable structured data (for voice search optimization)
   const speakableJsonLd = speakable
     ? {
@@ -203,6 +218,7 @@ export default function PageMeta({
     serviceJsonLd,
     courseJsonLd,
     localBusinessJsonLd,
+    collectionPageJsonLd,
     speakableJsonLd,
     ...schemas,
   ].filter(Boolean);
@@ -220,6 +236,7 @@ export default function PageMeta({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:alt" content={image ? title : '1C Platform - Agentic AI for Enterprise'} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={SITE_NAME} />

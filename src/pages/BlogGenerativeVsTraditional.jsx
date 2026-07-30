@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogGenerativeVsTraditional() {
   return (
@@ -26,6 +27,7 @@ export default function BlogGenerativeVsTraditional() {
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogGenerativeVsTraditional">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'Generative AI vs Traditional AI' }
@@ -263,6 +265,7 @@ export default function BlogGenerativeVsTraditional() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

@@ -21,6 +21,7 @@ export default function BlogGenerativeAIBusiness() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/53f2b0881_generated_image.png',
         section: 'Generative AI',
         tags: ['generative ai', 'AI', 'agentic AI'],
+        timeRequired: 'PT14M',
       }}
       />
 

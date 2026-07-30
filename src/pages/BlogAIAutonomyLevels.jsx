@@ -21,6 +21,7 @@ export default function BlogAIAutonomyLevels() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/05ae80f12_generated_image.png',
         section: 'AI Autonomy',
         tags: ['ai autonomy', 'AI', 'agentic AI'],
+        timeRequired: 'PT14M',
       }}
       />
 

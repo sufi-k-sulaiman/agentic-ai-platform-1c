@@ -23,6 +23,7 @@ export default function BlogAgenticAIEnterprise() {
           image: 'https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200',
           section: 'Enterprise AI',
           tags: ['Agentic AI', 'enterprise AI', 'AI transformation'],
+        timeRequired: 'PT15M',
         }}
       />
 

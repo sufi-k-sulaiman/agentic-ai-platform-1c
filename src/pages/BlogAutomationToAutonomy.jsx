@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAutomationToAutonomy() {
   return (
@@ -22,10 +23,12 @@ export default function BlogAutomationToAutonomy() {
         image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200',
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
+        timeRequired: 'PT14M',
       }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogAutomationToAutonomy">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'Automation to Autonomy' }
@@ -252,6 +255,7 @@ export default function BlogAutomationToAutonomy() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

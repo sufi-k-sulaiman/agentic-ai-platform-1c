@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogNoCodeAgenticAI() {
   return (
@@ -22,10 +23,12 @@ export default function BlogNoCodeAgenticAI() {
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200',
         section: 'Tutorials',
         tags: ['tutorials', 'AI', 'agentic AI'],
+        timeRequired: 'PT9M',
       }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogNoCodeAgenticAI">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'No-Code Agentic AI' }
@@ -181,6 +184,7 @@ export default function BlogNoCodeAgenticAI() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

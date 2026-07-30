@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAPIDesignAgenticTools() {
   return (
@@ -23,12 +24,14 @@ export default function BlogAPIDesignAgenticTools() {
         image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200',
         section: 'Agentic Design',
         tags: ['agentic design', 'AI', 'agentic AI'],
+        timeRequired: 'PT18M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'API Design for Agentic AI Tools: Develop' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogAPIDesignAgenticTools">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -234,6 +237,7 @@ POST   /v1/tools/{id}/validate       # Validate inputs`}
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

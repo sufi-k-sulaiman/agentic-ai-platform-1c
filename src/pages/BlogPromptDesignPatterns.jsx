@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogPromptDesignPatterns() {
   return (
@@ -23,12 +24,14 @@ export default function BlogPromptDesignPatterns() {
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200',
         section: 'Agentic Capabilities',
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
+        timeRequired: 'PT16M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Prompt Design Patterns for AI Agents: Sy' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogPromptDesignPatterns">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -195,6 +198,7 @@ You have access to:
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

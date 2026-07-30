@@ -23,6 +23,7 @@ export default function BlogAutonomousAgents() {
           image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200',
           section: 'AI Automation',
           tags: ['autonomous agents', 'AI automation', 'business operations'],
+        timeRequired: 'PT10M',
         }}
       />
 

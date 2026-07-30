@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogSelfLearningCapabilities() {
   return (
@@ -23,12 +24,14 @@ export default function BlogSelfLearningCapabilities() {
         image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200',
         section: 'Agentic Capabilities',
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
+        timeRequired: 'PT17M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Self-Learning and Adaptive Capabilities ' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogSelfLearningCapabilities">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -217,6 +220,7 @@ export default function BlogSelfLearningCapabilities() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

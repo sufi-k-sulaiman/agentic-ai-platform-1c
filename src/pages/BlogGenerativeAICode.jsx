@@ -21,6 +21,7 @@ export default function BlogGenerativeAICode() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/8df7d2e10_generated_image.png',
         section: 'Generative AI',
         tags: ['generative ai', 'AI', 'agentic AI'],
+        timeRequired: 'PT13M',
       }}
       />
 

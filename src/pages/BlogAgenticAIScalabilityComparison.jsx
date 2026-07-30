@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAgenticAIScalabilityComparison() {
   return (
@@ -68,6 +69,7 @@ export default function BlogAgenticAIScalabilityComparison() {
 
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-6 py-16">
+        <InternalLinker currentPage="BlogAgenticAIScalabilityComparison">
         <div className="prose prose-lg max-w-none">
           <h2>Introduction</h2>
           <p>
@@ -326,6 +328,7 @@ spec:
             </Button>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

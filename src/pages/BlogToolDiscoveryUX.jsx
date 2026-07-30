@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogToolDiscoveryUX() {
   return (
@@ -23,12 +24,14 @@ export default function BlogToolDiscoveryUX() {
         image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200',
         section: 'Agentic Design',
         tags: ['agentic design', 'AI', 'agentic AI'],
+        timeRequired: 'PT14M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Tool Discovery UX: Helping Agents Find t' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogToolDiscoveryUX">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -215,6 +218,7 @@ export default function BlogToolDiscoveryUX() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogUXPatternsAIApps() {
   return (
@@ -23,12 +24,14 @@ export default function BlogUXPatternsAIApps() {
         image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200',
         section: 'Agentic Insights',
         tags: ['agentic insights', 'AI', 'agentic AI'],
+        timeRequired: 'PT15M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'User Experience Design Patterns for AI-P' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogUXPatternsAIApps">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -193,6 +196,7 @@ export default function BlogUXPatternsAIApps() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

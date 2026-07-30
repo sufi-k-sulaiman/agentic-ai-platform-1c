@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogFutureGenerativeAI() {
   return (
@@ -26,6 +27,7 @@ export default function BlogFutureGenerativeAI() {
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogFutureGenerativeAI">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'The Future of Generative AI' }
@@ -241,6 +243,7 @@ export default function BlogFutureGenerativeAI() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

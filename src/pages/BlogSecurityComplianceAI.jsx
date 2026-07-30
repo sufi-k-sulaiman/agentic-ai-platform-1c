@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogSecurityComplianceAI() {
   return (
@@ -23,12 +24,14 @@ export default function BlogSecurityComplianceAI() {
         image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200',
         section: 'Agentic Insights',
         tags: ['agentic insights', 'AI', 'agentic AI'],
+        timeRequired: 'PT18M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Security and Compliance in Generative AI' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogSecurityComplianceAI">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -201,6 +204,7 @@ export default function BlogSecurityComplianceAI() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

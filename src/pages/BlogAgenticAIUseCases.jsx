@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAgenticAIUseCases() {
   return (
@@ -22,10 +23,12 @@ export default function BlogAgenticAIUseCases() {
         image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200',
         section: 'Case Studies',
         tags: ['case studies', 'AI', 'agentic AI'],
+        timeRequired: 'PT16M',
       }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogAgenticAIUseCases">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'Agentic AI Use Cases' }
@@ -316,6 +319,7 @@ export default function BlogAgenticAIUseCases() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

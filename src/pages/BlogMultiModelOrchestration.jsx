@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogMultiModelOrchestration() {
   return (
@@ -23,12 +24,14 @@ export default function BlogMultiModelOrchestration() {
         image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200',
         section: 'Agentic Capabilities',
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
+        timeRequired: 'PT18M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Multi-Model Orchestration in AI Applicat' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogMultiModelOrchestration">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -197,6 +200,7 @@ export default function BlogMultiModelOrchestration() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

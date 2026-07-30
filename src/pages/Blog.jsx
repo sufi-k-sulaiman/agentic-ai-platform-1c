@@ -1335,6 +1335,7 @@ export default function Blog() {
         description="Insights, tutorials, and stories from the forefront of enterprise AI. Learn about Agentic AI, autonomous agents, implementation strategies, and digital transformation."
         url="/blog"
         keywords={['AI blog', 'Agentic AI articles', 'enterprise AI insights', 'AI tutorials', 'autonomous agents']}
+        collectionPage
         schemas={[
           {
             '@context': 'https://schema.org',

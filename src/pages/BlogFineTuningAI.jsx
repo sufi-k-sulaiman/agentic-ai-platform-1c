@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogFineTuningAI() {
   return (
@@ -26,6 +27,7 @@ export default function BlogFineTuningAI() {
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogFineTuningAI">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'Fine-Tuning Generative AI Models' }
@@ -234,6 +236,7 @@ export default function BlogFineTuningAI() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

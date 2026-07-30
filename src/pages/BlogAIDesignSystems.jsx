@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAIDesignSystems() {
   return (
@@ -23,6 +24,7 @@ export default function BlogAIDesignSystems() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/f51c460f9_generated_image.png',
         section: 'Agentic Design',
         tags: ['agentic design', 'AI', 'agentic AI'],
+        timeRequired: 'PT19M',
       }}
       />
 
@@ -72,12 +74,13 @@ export default function BlogAIDesignSystems() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
+          <InternalLinker currentPage="BlogAIDesignSystems">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/f51c460f9_generated_image.png"
               alt="AI Design Systems"
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
             />
-          </motion.div>
+          </InternalLinker></motion.div>
         </div>
       </section>
 

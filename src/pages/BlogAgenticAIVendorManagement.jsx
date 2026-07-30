@@ -21,6 +21,7 @@ export default function BlogAgenticAIVendorManagement() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/05f386c60_generated_image.png',
         section: 'AI Governance',
         tags: ['ai governance', 'AI', 'agentic AI'],
+        timeRequired: 'PT14M',
       }}
       />
 

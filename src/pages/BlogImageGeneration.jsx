@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogImageGeneration() {
   return (
@@ -26,6 +27,7 @@ export default function BlogImageGeneration() {
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogImageGeneration">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'AI Image Generation' }
@@ -215,6 +217,7 @@ export default function BlogImageGeneration() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

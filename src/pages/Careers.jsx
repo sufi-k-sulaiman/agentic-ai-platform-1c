@@ -212,6 +212,19 @@ export default function Careers() {
         url="/careers"
         keywords={['careers', 'jobs', 'AI careers', 'engineering jobs', 'remote work', 'tech careers']}
         image="https://images.unsplash.com/photo-1522202172294-6940c44f7c74?w=1200&h=630&fit=crop"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'JobPosting',
+            title: 'Enterprise Sales Executive at 1C Platform',
+            description: 'Drive enterprise deals with Fortune 500 companies. Join a remote-first team building the future of enterprise AI.',
+            employmentType: 'FULL_TIME',
+            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.com' },
+            jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: 'Remote', addressCountry: 'US' } },
+            datePosted: '2026-07-30',
+            url: 'https://1cplatform.com/careers',
+          }
+        ]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

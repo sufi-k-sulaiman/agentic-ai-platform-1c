@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogHumanAICollaboration() {
   return (
@@ -22,10 +23,12 @@ export default function BlogHumanAICollaboration() {
         image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200',
         section: 'AI Insights',
         tags: ['ai insights', 'AI', 'agentic AI'],
+        timeRequired: 'PT10M',
       }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogHumanAICollaboration">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'Human-AI Collaboration' }
@@ -215,6 +218,7 @@ export default function BlogHumanAICollaboration() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAgenticAISecurity() {
   return (
@@ -22,10 +23,12 @@ export default function BlogAgenticAISecurity() {
         image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200',
         section: 'Security',
         tags: ['security', 'AI', 'agentic AI'],
+        timeRequired: 'PT11M',
       }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogAgenticAISecurity">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'Agentic AI Security' }
@@ -205,6 +208,7 @@ export default function BlogAgenticAISecurity() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

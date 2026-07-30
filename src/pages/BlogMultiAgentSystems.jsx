@@ -23,6 +23,7 @@ export default function BlogMultiAgentSystems() {
           image: 'https://images.unsplash.com/photo-1526116215124-5d9c3a7b9c3e?w=1200',
           section: 'AI Architecture',
           tags: ['multi-agent systems', 'AI orchestration', 'distributed AI'],
+        timeRequired: 'PT15M',
         }}
       />
 

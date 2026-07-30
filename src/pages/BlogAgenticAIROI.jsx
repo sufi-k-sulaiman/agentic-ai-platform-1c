@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAgenticAIROI() {
   return (
@@ -22,10 +23,12 @@ export default function BlogAgenticAIROI() {
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
         section: 'Product',
         tags: ['product', 'AI', 'agentic AI'],
+        timeRequired: 'PT13M',
       }}
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogAgenticAIROI">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'Measuring AI ROI' }
@@ -236,6 +239,7 @@ export default function BlogAgenticAIROI() {
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

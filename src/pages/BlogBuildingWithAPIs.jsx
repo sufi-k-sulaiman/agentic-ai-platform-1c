@@ -7,6 +7,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogBuildingWithAPIs() {
   return (
@@ -26,6 +27,7 @@ export default function BlogBuildingWithAPIs() {
       />
 
       <article className="max-w-4xl mx-auto px-6 py-32">
+        <InternalLinker currentPage="BlogBuildingWithAPIs">
         <BreadcrumbNav items={[
           { label: 'Blog', page: 'Blog' },
           { label: 'Building with Generative AI APIs' }
@@ -298,6 +300,7 @@ for chunk in stream:
             </Button>
           </Link>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

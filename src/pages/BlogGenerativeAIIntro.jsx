@@ -7,6 +7,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogGenerativeAIIntro() {
   return (
@@ -22,6 +23,7 @@ export default function BlogGenerativeAIIntro() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/946ae1662_generated_image.png',
         section: 'Generative AI',
         tags: ['generative ai', 'AI', 'agentic AI'],
+        timeRequired: 'PT10M',
       }}
       />
 
@@ -41,6 +43,7 @@ export default function BlogGenerativeAIIntro() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
+          <InternalLinker currentPage="BlogGenerativeAIIntro">
             <div className="flex items-center gap-3 mb-6">
               <span className="px-4 py-1 bg-purple-100 text-[#8B2EE5] rounded-full text-sm font-medium">
                 Generative AI
@@ -69,7 +72,7 @@ export default function BlogGenerativeAIIntro() {
               alt="Generative AI"
               className="w-full h-[400px] object-cover rounded-2xl mb-12"
             />
-          </motion.div>
+          </InternalLinker></motion.div>
         </div>
       </section>
 

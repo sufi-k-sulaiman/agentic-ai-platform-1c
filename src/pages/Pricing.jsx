@@ -25,6 +25,21 @@ export default function Pricing() {
           { question: 'Are there any hidden fees?', answer: 'No. Our pricing is fully transparent. The price you see is the price you pay. No setup fees, no per-user fees, no hidden charges.' },
           { question: 'What payment methods do we accept?', answer: 'We accept all major credit cards, ACH transfers, and wire transfers for enterprise plans.' },
         ]}
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: '1C Platform',
+            description: 'Agentic AI platform delivering autonomous AI agents, ERP, CRM, and intelligent automation for enterprises.',
+            brand: { '@type': 'Brand', name: '1C Platform' },
+            offers: [
+              { '@type': 'Offer', name: 'Starter', price: '0', priceCurrency: 'USD', description: 'Free plan with 1,000 API calls/month, 1 AI agent' },
+              { '@type': 'Offer', name: 'Professional', price: '99', priceCurrency: 'USD', description: 'Pro plan with 10 AI agents and 50K API calls' },
+              { '@type': 'Offer', name: 'Enterprise', price: '0', priceCurrency: 'USD', description: 'Custom pricing - contact sales', availability: 'https://schema.org/InStock' },
+            ],
+            aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '500' },
+          }
+        ]}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

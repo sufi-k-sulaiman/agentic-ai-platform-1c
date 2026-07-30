@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogFineTuningVsRAG() {
   return (
@@ -23,12 +24,14 @@ export default function BlogFineTuningVsRAG() {
         image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200',
         section: 'Agentic Insights',
         tags: ['agentic insights', 'AI', 'agentic AI'],
+        timeRequired: 'PT19M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Fine-Tuning vs RAG: Choosing the Right A' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogFineTuningVsRAG">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -218,6 +221,7 @@ export default function BlogFineTuningVsRAG() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

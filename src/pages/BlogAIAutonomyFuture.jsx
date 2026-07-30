@@ -21,6 +21,7 @@ export default function BlogAIAutonomyFuture() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/eca3b3375_generated_image.png',
         section: 'AI Autonomy',
         tags: ['ai autonomy', 'AI', 'agentic AI'],
+        timeRequired: 'PT17M',
       }}
       />
 

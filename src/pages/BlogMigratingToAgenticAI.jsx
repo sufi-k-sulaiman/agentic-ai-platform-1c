@@ -21,6 +21,7 @@ export default function BlogMigratingToAgenticAI() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/586fe2f5d_generated_image.png',
         section: 'AI Comparison',
         tags: ['ai comparison', 'AI', 'agentic AI'],
+        timeRequired: 'PT14M',
       }}
       />
 

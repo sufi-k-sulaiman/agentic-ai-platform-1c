@@ -64,6 +64,17 @@ export default function VideoTutorialsGuide() {
         title="Video Tutorials"
         description="Learn by watching our comprehensive video tutorials covering all aspects of 1cPlatform."
         url="/video-tutorials"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'VideoObject',
+            name: '1C Platform Video Tutorials',
+            description: 'Learn by watching our comprehensive video tutorials covering all aspects of 1cPlatform.',
+            uploadDate: '2025-01-01',
+            thumbnailUrl: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200',
+            contentUrl: 'https://1cplatform.com/video-tutorials',
+          }
+        ]}
       />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

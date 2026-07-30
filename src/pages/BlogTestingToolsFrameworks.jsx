@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogTestingToolsFrameworks() {
   return (
@@ -23,12 +24,14 @@ export default function BlogTestingToolsFrameworks() {
         image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200',
         section: 'Agentic Design',
         tags: ['agentic design', 'AI', 'agentic AI'],
+        timeRequired: 'PT20M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Testing Tools and Frameworks for Agentic' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogTestingToolsFrameworks">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -262,6 +265,7 @@ test('agent uses email tool correctly', async () => {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

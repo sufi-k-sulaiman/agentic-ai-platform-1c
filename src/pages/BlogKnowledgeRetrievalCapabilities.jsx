@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogKnowledgeRetrievalCapabilities() {
   return (
@@ -23,12 +24,14 @@ export default function BlogKnowledgeRetrievalCapabilities() {
         image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200',
         section: 'Agentic Capabilities',
         tags: ['agentic capabilities', 'AI', 'agentic AI'],
+        timeRequired: 'PT16M',
       }}
       />
 
       <BreadcrumbNav items={[{ label: 'Blog', page: 'Blog' }, { label: 'Knowledge Retrieval Capabilities: How Ag' }]} />
 
       <article className="max-w-4xl mx-auto px-6 py-12">
+        <InternalLinker currentPage="BlogKnowledgeRetrievalCapabilities">
         <Link to={createPageUrl('Blog')}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -199,6 +202,7 @@ export default function BlogKnowledgeRetrievalCapabilities() {
             </Link>
           </div>
         </div>
+      </InternalLinker>
       </article>
     </div>
   );

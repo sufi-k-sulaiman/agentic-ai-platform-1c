@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function BlogAgenticAIMemoryManagement() {
   return (
@@ -23,6 +24,7 @@ export default function BlogAgenticAIMemoryManagement() {
         image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/96c754a07_generated_image.png',
         section: 'AI Comparison',
         tags: ['ai comparison', 'AI', 'agentic AI'],
+        timeRequired: 'PT18M',
       }}
       />
 
@@ -72,12 +74,13 @@ export default function BlogAgenticAIMemoryManagement() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
+          <InternalLinker currentPage="BlogAgenticAIMemoryManagement">
             <img
               src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=1200"
               alt="AI Memory"
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
             />
-          </motion.div>
+          </InternalLinker></motion.div>
         </div>
       </section>
 
