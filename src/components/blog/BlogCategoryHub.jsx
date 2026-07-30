@@ -114,6 +114,32 @@ export default function BlogCategoryHub({
                 </Button>
               </Link>
             </div>
+
+            <div className="mt-16 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Apply These Insights to Your Industry</h2>
+              <p className="text-gray-600 mb-6">Explore how agentic AI transforms operations across 14 industries:</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {[
+                  { label: 'Property Management', page: 'PropertyManagement' },
+                  { label: 'Healthcare', page: 'Healthcare' },
+                  { label: 'Retail', page: 'Retail' },
+                  { label: 'Financial Services', page: 'FinancialInstitutions' },
+                  { label: 'Data Centers', page: 'DataCenters' },
+                  { label: 'Public Transit', page: 'Transit' },
+                  { label: 'Energy & Utilities', page: 'EnergyUtilities' },
+                  { label: 'Corporate Campuses', page: 'CorporateCampuses' },
+                ].map((item) => (
+                  <Link
+                    key={item.page}
+                    to={createPageUrl(item.page)}
+                    className="flex items-center justify-between p-3 bg-white rounded-xl border border-gray-200 hover:border-[#8B2EE5] transition-all text-sm font-medium text-gray-700 hover:text-[#8B2EE5]"
+                  >
+                    {item.label}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

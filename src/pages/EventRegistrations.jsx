@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Search, Download, Calendar, Users, CheckCircle, Clock, XCircle } from 'lucide-react';
+import PageMeta from '@/components/PageMeta';
 
 export default function EventRegistrations() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -55,6 +56,12 @@ export default function EventRegistrations() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
+      <PageMeta 
+        title="Event Registrations"
+        description="Manage event registrations"
+        url="/event-registrations"
+        noIndex
+      />
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-8">

@@ -18,6 +18,14 @@ export default function BlogAgenticAIObservabilityArchitecture() {
         description="Compare observability architectures for agentic AI systems. Learn about logging, tracing, metrics, and debugging patterns for autonomous agents."
         url="/blog/agentic-ai-observability-architecture"
         keywords={['AI observability', 'AI monitoring', 'distributed tracing', 'LLM debugging']}
+        article={{
+          author: 'Michael Rodriguez',
+          datePublished: '2024-12-10',
+          image: 'https://images.unsplash.com/photo-1551288044-60e67c10b9b3?w=1200',
+          section: 'AI Insights',
+          tags: ['AI observability', 'AI monitoring', 'distributed tracing', 'LLM debugging', 'agentic AI'],
+          timeRequired: 'PT12M',
+        }}
       />
 
       {/* Hero */}

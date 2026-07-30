@@ -22,6 +22,7 @@ export default function NewsletterSignups() {
         title="Newsletter Signups"
         description="Manage newsletter subscriptions"
         url="/newsletter-signups"
+        noIndex
       />
       
       <div className="max-w-7xl mx-auto px-6">

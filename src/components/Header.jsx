@@ -85,6 +85,7 @@ export default function Header() {
             <img 
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/334042dc2_1C-logocopy.png" 
               alt="1C Platform" 
+              loading="lazy"
               className="h-9 w-9"
             />
             <span className="font-semibold text-[15.84px] lg:text-xl tracking-tight">

@@ -44,6 +44,7 @@ export default function Footer() {
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/334042dc2_1C-logocopy.png" 
                 alt="1C Platform" 
+                loading="lazy"
                 className="h-10 w-10"
               />
               <span className="font-semibold text-xl text-white">1c</span>

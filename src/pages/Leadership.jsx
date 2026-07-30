@@ -90,6 +90,7 @@ export default function Leadership() {
                   <img
                     src={leader.image}
                     alt={leader.name}
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>
