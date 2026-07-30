@@ -33,6 +33,8 @@ export default function Home() {
           { question: 'How does 1C Platform integrate with existing tools?', answer: '1C Platform integrates with 500+ enterprise tools including Salesforce, Microsoft 365, Google Workspace, Slack, SAP, Oracle, Workday, ServiceNow, Jira, HubSpot, and more. Use our SDK, REST API, or no-code builder to connect any system.' },
           { question: 'Is there a free trial?', answer: 'Yes, our Starter plan is free forever with 1,000 API calls per month, 1 AI agent, and community support. You can also request a 30-day enterprise trial with full features and dedicated support.' },
           { question: 'How secure is my data?', answer: '1C Platform is SOC 2 Type II certified, ISO 27001 compliant, and GDPR/HIPAA ready. Your data is encrypted at rest and in transit, with optional on-premise or hybrid deployment for sensitive workloads.' },
+          { question: 'What industries does 1C Platform support?', answer: 'We serve 14 industries including property management, healthcare, retail, financial services, data centers, public transit, energy and utilities, corporate campuses, traffic management, education, gaming, government, airports, and sports and entertainment.' },
+          { question: 'How fast can I get started?', answer: 'You can sign up for the free Starter plan instantly, or request a 30-day enterprise trial. Most teams deploy their first AI agent within a week using our no-code builder or developer tools.' },
         ]}
       />
       <HeroSection />

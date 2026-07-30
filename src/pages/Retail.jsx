@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -105,6 +106,9 @@ export default function Retail() {
         { label: 'Home', page: 'Home' },
         { label: 'Retail' }
       ]} />
+      <IndustryIntro currentPage="Retail" heading="Retail Transformation with Agentic AI">
+        Retailers struggle with margin pressure, inventory waste, and disconnected POS, e-commerce, and CRM data. Agentic AI on 1C Platform unifies these systems into 360° customer profiles and real-time inventory visibility, then acts on it: dynamic pricing, automated replenishment, and personalized recommendations that lift conversion by 35%. Because agents connect directly to your enterprise suite and ERP, finance and merchandising see the same numbers in real time. Use our ROI calculator to estimate gains, then scale on our cloud platform with enterprise-grade cybersecurity.
+      </IndustryIntro>
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

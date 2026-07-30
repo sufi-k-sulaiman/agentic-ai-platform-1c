@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -104,6 +105,9 @@ export default function PropertyManagement() {
         localBusiness={{ name: '1C Platform - Property AI', telephone: '+1-800-1C-PROPERTY' }}
       />
       <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Property Management' }]} />
+      <IndustryIntro currentPage="PropertyManagement" heading="Property Management, Reinvented with Agentic AI">
+        Property management teams handle maintenance, tenant onboarding, and rent collection across hundreds of units — tasks that eat 60% of staff time. With agentic AI on 1C Platform, these workflows run autonomously: agents read sensor data to predict equipment failures, route work orders to the right vendor, and draft lease renewals without manual input. Because every action flows back into your enterprise suite and CRM, you get a single source of truth across operations and finance. Start with our ROI calculator to model your savings, then connect existing tools through our developer tools and API.
+      </IndustryIntro>
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">

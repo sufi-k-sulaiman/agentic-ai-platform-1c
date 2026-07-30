@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -105,6 +106,9 @@ export default function Transit() {
         { label: 'Home', page: 'Home' },
         { label: 'Public Transit' }
       ]} />
+      <IndustryIntro currentPage="Transit" heading="Public Transit, Optimized with Agentic AI">
+        Public transit operators balance route optimization, fleet maintenance, and passenger communication across complex schedules. Agentic AI on 1C Platform predicts maintenance needs, reroutes buses in real time, and answers passenger questions autonomously — improving on-time performance by 25%. Agents pull data from sensors, ticketing, and your ERP to schedule crews and forecast demand. Deploy on a multi-region cloud platform with compliance automation, and use our developer tools and API to connect legacy transit systems.
+      </IndustryIntro>
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

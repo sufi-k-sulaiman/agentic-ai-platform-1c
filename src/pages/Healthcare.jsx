@@ -8,6 +8,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -113,6 +114,9 @@ export default function Healthcare() {
         { label: 'Home', page: 'Home' },
         { label: 'Healthcare' }
       ]} />
+      <IndustryIntro currentPage="Healthcare" heading="Healthcare Operations, Automated with Agentic AI">
+        Clinical and administrative teams lose 70% of their day to paperwork, scheduling, and claims. Agentic AI on 1C Platform automates intake, documentation, and prior authorization end-to-end while keeping every step HIPAA-compliant. Agents pull data from EMRs, labs, and wearables into a unified patient record, flag risks, and coordinate follow-ups without staff chasing phone calls. With enterprise-grade cybersecurity and compliance automation built in, you can deploy across sites on a multi-region cloud platform and track every decision for audit.
+      </IndustryIntro>
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -367,6 +367,8 @@ export default function AgenticAI() {
           { question: 'Do I need coding skills to build AI agents?', answer: 'No. Our no-code visual builder lets you create AI agents by defining goals, selecting tools, and configuring behavior — all through an intuitive drag-and-drop interface. Developers can also use our SDK and CLI for advanced control.' },
           { question: 'How many agents can I deploy?', answer: 'The number of agents depends on your plan. Starter plan includes 1 agent, Professional plan includes 10 agents, and Enterprise plan offers unlimited agents with auto-scaling across multiple regions.' },
           { question: 'Can agents work together on complex tasks?', answer: 'Yes. Our multi-agent orchestration system allows agents to communicate, delegate tasks, share context, and coordinate on complex workflows. You can define agent teams, role hierarchies, and collaboration patterns.' },
+          { question: 'What tools can my AI agents use?', answer: 'Agents can call any REST API, query databases, read and write files, search the web, send emails, and integrate with 500+ enterprise tools including Salesforce, Microsoft 365, Google Workspace, Slack, SAP, Oracle, and Workday.' },
+          { question: 'How do I monitor and debug my agents?', answer: 'Every agent run is logged with full traceability — inputs, tool calls, decisions, and outputs. Use our observability dashboard to replay runs, inspect failures, and optimize prompts. Alerts notify you of errors, cost overruns, and policy violations in real time.' },
         ]}
       />
       <BreadcrumbNav items={[
