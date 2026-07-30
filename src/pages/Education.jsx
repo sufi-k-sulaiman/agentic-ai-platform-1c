@@ -6,6 +6,7 @@ import { GraduationCap, TrendingDown, Database, Workflow, DollarSign, Users, Boo
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -304,6 +305,12 @@ export default function Education() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="Education"
+        category="industry"
+        crossCategories={['product', 'resources']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

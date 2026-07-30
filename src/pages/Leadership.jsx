@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 const leaders = [
   {
@@ -136,6 +137,12 @@ export default function Leadership() {
           </div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="Leadership"
+        category="company"
+        crossCategories={['product']}
+        title="Explore the Platform"
+      />
     </div>
   );
 }

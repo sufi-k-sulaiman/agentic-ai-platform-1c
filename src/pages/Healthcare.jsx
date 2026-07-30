@@ -6,6 +6,7 @@ import { Heart, TrendingDown, Database, Workflow, DollarSign, Shield, Users, Arr
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -319,6 +320,12 @@ export default function Healthcare() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="Healthcare"
+        category="industry"
+        crossCategories={['product']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

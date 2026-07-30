@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { MessageSquare, Calendar, Mail, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 import TicketForm from '@/components/contact/TicketForm';
 import CallScheduleForm from '@/components/contact/CallScheduleForm';
 import EmailForm from '@/components/contact/EmailForm';
@@ -155,6 +156,12 @@ export default function Contact() {
           )}
         </AnimatePresence>
       </div>
+      <RelatedContent
+        currentPage="Contact"
+        category="company"
+        crossCategories={['support']}
+        title="Explore More"
+      />
     </div>
   );
 }

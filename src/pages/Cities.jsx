@@ -7,6 +7,7 @@ import { Building, TrendingDown, Database, Workflow, DollarSign, Zap, Users, Arr
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 const challenges = [
   {
@@ -653,6 +654,12 @@ export default function Cities() {
           )}
         </DialogContent>
       </Dialog>
+      <RelatedContent
+        currentPage="Cities"
+        category="industry"
+        crossCategories={['product']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

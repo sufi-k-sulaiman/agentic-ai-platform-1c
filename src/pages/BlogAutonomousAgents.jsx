@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedContent from '@/components/seo/RelatedContent';
 import { Button } from '@/components/ui/button';
 
 export default function BlogAutonomousAgents() {
@@ -150,6 +151,11 @@ export default function BlogAutonomousAgents() {
           </Link>
         </div>
       </article>
+      <RelatedContent
+        currentPage="BlogAutonomousAgents"
+        manualPages={['AgenticAI', 'BlogMultiAgentSystems', 'BlogAgenticAIArchitecture', 'BlogAIAutonomyIntro']}
+        title="Related Articles & Resources"
+      />
     </div>
   );
 }

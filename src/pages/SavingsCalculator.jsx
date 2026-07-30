@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, TrendingUp, DollarSign, Clock, Users, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import RelatedContent from '@/components/seo/RelatedContent';
 import PageMeta from '@/components/PageMeta';
 
 export default function SavingsCalculator() {
@@ -474,6 +475,12 @@ export default function SavingsCalculator() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="SavingsCalculator"
+        category="product"
+        crossCategories={['resources']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

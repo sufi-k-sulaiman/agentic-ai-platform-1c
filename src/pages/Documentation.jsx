@@ -7,6 +7,7 @@ import { Search, BookOpen, Code, Zap, Terminal, FileText, ArrowRight, ExternalLi
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 const categories = [
   {
@@ -283,6 +284,12 @@ console.log('Agent created:', agent.id);`}</code>
           </div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="Documentation"
+        category="resources"
+        crossCategories={['product']}
+        title="Explore Related Resources"
+      />
     </div>
   );
 }

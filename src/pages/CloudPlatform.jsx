@@ -5,6 +5,7 @@ import { Cloud, Server, Lock, Zap, Globe, Shield, Database, CheckCircle, ArrowRi
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function CloudPlatform() {
   return (
@@ -582,6 +583,12 @@ export default function CloudPlatform() {
           </div>
         </motion.div>
       </section>
+      <RelatedContent
+        currentPage="CloudPlatform"
+        category="product"
+        crossCategories={['resources']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

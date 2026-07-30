@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Shield, Lock, Eye, FileCheck, AlertTriangle, CheckCircle2, Download, Search, X, Globe, XCircle, ChevronRight } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 import BugBountyForm from '@/components/contact/BugBountyForm';
 import { base44 } from '@/api/base44Client';
 
@@ -914,6 +915,12 @@ export default function Cyber() {
         <BugBountyForm onClose={() => setShowContactForm(false)} />
       )}
 
+      <RelatedContent
+        currentPage="Cyber"
+        category="product"
+        crossCategories={['resources']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { ShoppingBag, TrendingDown, Database, Workflow, DollarSign, Users, Trend
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 
 const challenges = [
@@ -304,6 +305,12 @@ export default function Retail() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="Retail"
+        category="industry"
+        crossCategories={['product']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

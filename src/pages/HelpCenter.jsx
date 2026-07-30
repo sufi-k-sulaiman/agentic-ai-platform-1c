@@ -8,6 +8,7 @@ import { Search, MessageCircle, Book, Video, FileQuestion, ArrowRight, HelpCircl
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 const categories = [
   {
@@ -256,6 +257,12 @@ export default function HelpCenter() {
           </motion.div>
         </div>
       </section>
+      <RelatedContent
+        currentPage="HelpCenter"
+        category="support"
+        crossCategories={['resources']}
+        title="Explore More"
+      />
     </div>
   );
 }

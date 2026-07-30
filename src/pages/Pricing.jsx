@@ -5,6 +5,7 @@ import { Check, ArrowRight, Zap, Shield, TrendingUp, Users, CheckCircle } from '
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function Pricing() {
   return (
@@ -797,6 +798,11 @@ export default function Pricing() {
           </div>
         </motion.div>
       </section>
+      <RelatedContent
+        currentPage="Pricing"
+        crossCategories={['product', 'company']}
+        title="Explore More"
+      />
     </div>
   );
 }

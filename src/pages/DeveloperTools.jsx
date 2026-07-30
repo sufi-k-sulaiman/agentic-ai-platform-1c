@@ -5,6 +5,7 @@ import { Code, Terminal, Book, Boxes, Webhook, Cpu, CheckCircle, ArrowRight, Zap
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 export default function DeveloperTools() {
   return (
@@ -797,6 +798,12 @@ $ 1c migrate v1 v2
           </div>
         </motion.div>
       </section>
+      <RelatedContent
+        currentPage="DeveloperTools"
+        category="product"
+        crossCategories={['resources']}
+        title="Explore Related Solutions"
+      />
     </div>
   );
 }

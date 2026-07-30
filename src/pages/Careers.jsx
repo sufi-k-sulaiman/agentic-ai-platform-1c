@@ -7,6 +7,7 @@ import { MapPin, Clock, Briefcase, Search, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import RelatedContent from '@/components/seo/RelatedContent';
 
 const benefits = [
   { title: 'Competitive Salary', description: 'Top-tier compensation packages' },
@@ -323,6 +324,12 @@ export default function Careers() {
           )}
         </div>
       </section>
+      <RelatedContent
+        currentPage="Careers"
+        category="company"
+        crossCategories={['product']}
+        title="Explore the Platform"
+      />
     </div>
   );
 }
