@@ -4,6 +4,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function DocAPIReference() {
   const endpoints = [

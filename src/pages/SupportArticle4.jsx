@@ -4,10 +4,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function SupportArticle4() {
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      <PageMeta
+        title="Troubleshooting Common Errors"
+        description="Quick solutions to the most common errors you might encounter when working with 1cPlatform agents, APIs, and integrations."
+        url="/SupportArticle4"
+        keywords={['troubleshooting', 'error handling', 'common errors', 'debugging AI', 'API errors', 'error solutions', 'fixing errors']}
+        article={{ datePublished: '2025-12-14', section: 'Troubleshooting', tags: ['troubleshooting','error handling','common errors','debugging AI','API errors','error solutions','fixing errors'] }}
+      />
+      <div className="bg-white min-h-screen">
+        <InternalLinker currentPage="SupportArticle4">
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
           <Link to={createPageUrl('HelpCenter')}>
@@ -128,6 +139,8 @@ export default function SupportArticle4() {
           </div>
         </div>
       </section>
+      </InternalLinker>
     </div>
+    </>
   );
 }

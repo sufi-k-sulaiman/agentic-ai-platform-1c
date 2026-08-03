@@ -4,10 +4,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function SupportArticle6() {
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      <PageMeta
+        title="Integrating with Third-Party Services"
+        description="Connect your AI agents with popular third-party services and APIs to extend functionality and automate cross-platform workflows."
+        url="/SupportArticle6"
+        keywords={['third-party integration', 'API integration', 'service connectors', 'workflow automation', 'external services', 'webhook integration']}
+        article={{ datePublished: '2025-12-14', section: 'Integration', tags: ['third-party integration','API integration','service connectors','workflow automation','external services','webhook integration'] }}
+      />
+      <div className="bg-white min-h-screen">
+        <InternalLinker currentPage="SupportArticle6">
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
           <Link to={createPageUrl('HelpCenter')}>
@@ -123,6 +134,8 @@ export default function SupportArticle6() {
           </div>
         </div>
       </section>
+      </InternalLinker>
     </div>
+    </>
   );
 }

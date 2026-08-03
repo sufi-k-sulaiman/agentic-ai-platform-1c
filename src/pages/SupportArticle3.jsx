@@ -4,10 +4,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function SupportArticle3() {
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      <PageMeta
+        title="Understanding Rate Limits"
+        description="Learn about 1cPlatform's API rate limits, how they work, and best practices for staying within your limits to ensure smooth API usage."
+        url="/SupportArticle3"
+        keywords={['API rate limits', 'rate limiting', 'API usage', 'throttling', 'API quotas', 'API limits']}
+        article={{ datePublished: '2025-12-14', section: 'API Usage', tags: ['API rate limits','rate limiting','API usage','throttling','API quotas','API limits'] }}
+      />
+      <div className="bg-white min-h-screen">
+        <InternalLinker currentPage="SupportArticle3">
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
           <Link to={createPageUrl('HelpCenter')}>
@@ -98,6 +109,8 @@ export default function SupportArticle3() {
           </div>
         </div>
       </section>
+      </InternalLinker>
     </div>
+    </>
   );
 }

@@ -4,10 +4,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function SupportArticle9() {
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      <PageMeta
+        title="Team Management and Permissions"
+        description="Learn how to invite team members, manage role-based permissions, and collaborate effectively on 1cPlatform projects and agents."
+        url="/SupportArticle9"
+        keywords={['team management', 'permissions', 'user roles', 'collaboration', 'team access control', 'invite users', 'RBAC']}
+        article={{ datePublished: '2025-12-14', section: 'Collaboration', tags: ['team management','permissions','user roles','collaboration','team access control','invite users','RBAC'] }}
+      />
+      <div className="bg-white min-h-screen">
+        <InternalLinker currentPage="SupportArticle9">
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
           <Link to={createPageUrl('HelpCenter')}>
@@ -128,6 +139,8 @@ export default function SupportArticle9() {
           </div>
         </div>
       </section>
+      </InternalLinker>
     </div>
+    </>
   );
 }

@@ -4,10 +4,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function SupportArticle5() {
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      <PageMeta
+        title="Best Practices for Production"
+        description="Essential best practices for deploying and maintaining AI agents in production environments with reliability, monitoring, and scaling guidance."
+        url="/SupportArticle5"
+        keywords={['production best practices', 'AI deployment', 'production AI', 'deployment strategies', 'AI agent maintenance', 'scaling AI']}
+        article={{ datePublished: '2025-12-14', section: 'Best Practices', tags: ['production best practices','AI deployment','production AI','deployment strategies','AI agent maintenance','scaling AI'] }}
+      />
+      <div className="bg-white min-h-screen">
+        <InternalLinker currentPage="SupportArticle5">
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
           <Link to={createPageUrl('HelpCenter')}>
@@ -119,6 +130,8 @@ export default function SupportArticle5() {
           </div>
         </div>
       </section>
+      </InternalLinker>
     </div>
+    </>
   );
 }

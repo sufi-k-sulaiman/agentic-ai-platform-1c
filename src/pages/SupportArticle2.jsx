@@ -4,10 +4,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function SupportArticle2() {
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      <PageMeta
+        title="API Authentication Guide"
+        description="Learn how to securely authenticate your API requests to 1cPlatform using API keys, OAuth 2.0, and JWT tokens with security best practices."
+        url="/SupportArticle2"
+        keywords={['API authentication', 'API keys', 'OAuth 2.0', 'JWT tokens', 'secure API requests', 'API security', 'bearer token']}
+        article={{ datePublished: '2025-12-14', section: 'Authentication', tags: ['API authentication','API keys','OAuth 2.0','JWT tokens','secure API requests','API security','bearer token'] }}
+      />
+      <div className="bg-white min-h-screen">
+        <InternalLinker currentPage="SupportArticle2">
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
           <Link to={createPageUrl('HelpCenter')}>
@@ -97,6 +108,8 @@ export default function SupportArticle2() {
           </div>
         </div>
       </section>
+      </InternalLinker>
     </div>
+    </>
   );
 }

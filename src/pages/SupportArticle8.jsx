@@ -4,10 +4,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function SupportArticle8() {
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      <PageMeta
+        title="Managing Your Subscription"
+        description="Everything you need to know about managing your 1cPlatform subscription, billing, plan upgrades, downgrades, and renewal cycles."
+        url="/SupportArticle8"
+        keywords={['subscription management', 'billing', 'plan changes', 'upgrade plan', 'subscription billing', 'plan management']}
+        article={{ datePublished: '2025-12-14', section: 'Account Management', tags: ['subscription management','billing','plan changes','upgrade plan','subscription billing','plan management'] }}
+      />
+      <div className="bg-white min-h-screen">
+        <InternalLinker currentPage="SupportArticle8">
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-4xl mx-auto px-6">
           <Link to={createPageUrl('HelpCenter')}>
@@ -124,6 +135,8 @@ export default function SupportArticle8() {
           </div>
         </div>
       </section>
+      </InternalLinker>
     </div>
+    </>
   );
 }
