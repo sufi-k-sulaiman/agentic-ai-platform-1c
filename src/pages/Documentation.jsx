@@ -9,6 +9,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const categories = [
   {
@@ -277,7 +278,6 @@ npm install @1cplatform/sdk
 
 // Initialize the client
 import { OneC } from '@1cplatform/sdk';
-import InternalLinker from '@/components/seo/InternalLinker';
 
 const client = new OneC({
   apiKey: process.env.ONEC_API_KEY

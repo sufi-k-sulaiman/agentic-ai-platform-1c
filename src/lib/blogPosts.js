@@ -1269,5 +1269,65 @@ export const blogPosts = [
     "category": "Generative AI",
     "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/42c6ece83_generated_image.png",
     "page": "BlogGenerativeAIEthics"
+  },
+  {
+    "title": "Context Management in Agentic AI: Building Agents That Remember",
+    "excerpt": "Master context management for agentic AI systems. Learn about memory types, context window optimization, RAG integration, and best practices for building agents that maintain coherent conversations.",
+    "author": "Dr. Sarah Chen",
+    "date": "January 15, 2025",
+    "readTime": "12 min read",
+    "category": "Agentic Capabilities",
+    "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7195?w=800",
+    "page": "BlogAgenticAIContextManagement"
+  },
+  {
+    "title": "Error Handling Patterns for Agentic AI Systems",
+    "excerpt": "Learn proven error handling patterns for agentic AI systems including retry strategies, fallback mechanisms, circuit breakers, and graceful degradation. Build resilient autonomous agents.",
+    "author": "Marcus Thompson",
+    "date": "January 18, 2025",
+    "readTime": "11 min read",
+    "category": "Agentic Capabilities",
+    "image": "https://images.unsplash.com/photo-1554228120-beb55d5a5e7e?w=800",
+    "page": "BlogAgenticAIErrorHandling"
+  },
+  {
+    "title": "Observability for Agentic AI: Monitoring Autonomous Agents in Production",
+    "excerpt": "Complete guide to observability for agentic AI systems. Learn about logging, tracing, metrics, debugging techniques, and tools for monitoring autonomous agents in production environments.",
+    "author": "Priya Sharma",
+    "date": "January 20, 2025",
+    "readTime": "13 min read",
+    "category": "Agentic Capabilities",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+    "page": "BlogAgenticAIObservability"
+  },
+  {
+    "title": "Prompt Engineering for Agentic AI: Beyond Simple Chat",
+    "excerpt": "Advanced prompt engineering techniques for agentic AI systems. Learn system prompt design, chain-of-thought reasoning, tool-calling prompts, few-shot patterns, and best practices for autonomous agents.",
+    "author": "James Park",
+    "date": "January 22, 2025",
+    "readTime": "14 min read",
+    "category": "Agentic Capabilities",
+    "image": "https://images.unsplash.com/photo-1516192518150-0d812546f7f0?w=800",
+    "page": "BlogAgenticAIPromptEngineering"
+  },
+  {
+    "title": "Scaling Agentic AI: From Prototype to Production at Enterprise Scale",
+    "excerpt": "Learn how to scale agentic AI systems from prototype to production. Covers horizontal and vertical scaling, resource management, load balancing, cost optimization, and architectural patterns for enterprise agent deployments.",
+    "author": "David Okafor",
+    "date": "January 25, 2025",
+    "readTime": "15 min read",
+    "category": "Agentic Capabilities",
+    "image": "https://images.unsplash.com/photo-1460925895917-afd1b6a8e7c2?w=800",
+    "page": "BlogAgenticAIScalability"
+  },
+  {
+    "title": "Tool Integration in Agentic AI: Connecting Agents to Your Tech Stack",
+    "excerpt": "Complete guide to tool integration for agentic AI. Learn API integration patterns, function calling, custom tool development, security considerations, and workflow automation for connecting AI agents to your existing systems.",
+    "author": "Elena Rodriguez",
+    "date": "January 28, 2025",
+    "readTime": "12 min read",
+    "category": "Agentic Capabilities",
+    "image": "https://images.unsplash.com/photo-1551434677-e2f30fe36d28?w=800",
+    "page": "BlogAgenticAIToolIntegration"
   }
 ];
