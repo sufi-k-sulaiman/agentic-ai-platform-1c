@@ -8,6 +8,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import TicketForm from '@/components/contact/TicketForm';
 import CallScheduleForm from '@/components/contact/CallScheduleForm';
 import EmailForm from '@/components/contact/EmailForm';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function Contact() {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -46,6 +47,7 @@ export default function Contact() {
   };
 
   return (
+        <InternalLinker currentPage="Contact">
     <div className="min-h-screen bg-gradient-to-br from-[#7C3AED] via-[#6209e6] to-[#6B21A8]">
       <PageMeta 
         title="Contact Support"
@@ -170,5 +172,6 @@ export default function Contact() {
         title="Explore More"
       />
     </div>
+    </InternalLinker>
   );
 }

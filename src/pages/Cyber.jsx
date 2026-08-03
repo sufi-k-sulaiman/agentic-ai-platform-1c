@@ -12,6 +12,7 @@ import BugBountyForm from '@/components/contact/BugBountyForm';
 import { base44 } from '@/api/base44Client';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 
 
@@ -59,6 +60,7 @@ export default function Cyber() {
 
 
   return (
+        <InternalLinker currentPage="Cyber">
     <div className="bg-white">
       <PageMeta 
         title="Security"
@@ -941,5 +943,6 @@ export default function Cyber() {
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

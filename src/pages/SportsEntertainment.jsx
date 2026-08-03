@@ -11,6 +11,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -87,6 +88,7 @@ const metrics = [
 
 export default function SportsEntertainment() {
   return (
+        <InternalLinker currentPage="SportsEntertainment">
     <div className="bg-white">
       <PageMeta 
         title="Sports & Entertainment AI"
@@ -340,5 +342,6 @@ export default function SportsEntertainment() {
       <FeatureDetailSection {...featureDetails.SportsEntertainment} />
 <RelatedContent currentPage="SportsEntertainment" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
+    </InternalLinker>
   );
 }

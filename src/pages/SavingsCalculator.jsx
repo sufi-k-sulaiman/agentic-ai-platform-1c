@@ -14,6 +14,7 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 // BreadcrumbNav and RelatedContent added for SEO
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function SavingsCalculator() {
   const [employees, setEmployees] = useState(100);
@@ -75,6 +76,7 @@ export default function SavingsCalculator() {
   const tasksAutomatedDaily = dailyTasks * (automationRate / 100) * totalFTEs;
 
   return (
+        <InternalLinker currentPage="SavingsCalculator">
     <div className="bg-white">
       <PageMeta 
         title="ROI & Savings Calculator"
@@ -490,5 +492,6 @@ export default function SavingsCalculator() {
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

@@ -10,6 +10,7 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const platforms = [
   {
@@ -236,6 +237,7 @@ function PlatformComparison() {
 
   return (
     <section className="min-h-screen flex items-center bg-white py-32">
+            <InternalLinker currentPage="AgenticAI">
       <div className="max-w-7xl mx-auto px-6 w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -1128,5 +1130,6 @@ export default function AgenticAI() {
         title="Explore Related Solutions"
       />
     </div>
+      </InternalLinker>
   );
 }

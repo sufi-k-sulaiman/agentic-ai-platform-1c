@@ -11,6 +11,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -87,6 +88,7 @@ const metrics = [
 
 export default function EnergyUtilities() {
   return (
+        <InternalLinker currentPage="EnergyUtilities">
     <div className="bg-white">
       <PageMeta 
         title="Energy & Utilities AI"
@@ -308,5 +310,6 @@ export default function EnergyUtilities() {
       <FeatureDetailSection {...featureDetails.EnergyUtilities} />
 <RelatedContent currentPage="EnergyUtilities" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
+    </InternalLinker>
   );
 }

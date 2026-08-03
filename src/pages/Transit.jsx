@@ -12,6 +12,7 @@ import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -88,6 +89,7 @@ const metrics = [
 
 export default function Transit() {
   return (
+        <InternalLinker currentPage="Transit">
     <div className="bg-white">
       <PageMeta
         title="Transit AI Solutions"
@@ -365,5 +367,6 @@ export default function Transit() {
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

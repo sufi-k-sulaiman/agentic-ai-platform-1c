@@ -7,9 +7,11 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function DeveloperTools() {
   return (
+        <InternalLinker currentPage="DeveloperTools">
     <div className="bg-white">
       <PageMeta 
         title="Developer Tools"
@@ -811,5 +813,6 @@ $ 1c migrate v1 v2
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

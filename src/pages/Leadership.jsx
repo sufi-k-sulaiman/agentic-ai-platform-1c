@@ -4,6 +4,7 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const leaders = [
   {
@@ -46,6 +47,7 @@ const leaders = [
 
 export default function Leadership() {
   return (
+        <InternalLinker currentPage="Leadership">
     <div className="bg-white">
       <PageMeta 
         title="Leadership Team"
@@ -150,5 +152,6 @@ export default function Leadership() {
         title="Explore the Platform"
       />
     </div>
+    </InternalLinker>
   );
 }

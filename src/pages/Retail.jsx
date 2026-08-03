@@ -12,6 +12,7 @@ import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -88,6 +89,7 @@ const metrics = [
 
 export default function Retail() {
   return (
+        <InternalLinker currentPage="Retail">
     <div className="bg-white">
       <PageMeta 
         title="Retail AI Solutions"
@@ -337,5 +339,6 @@ export default function Retail() {
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

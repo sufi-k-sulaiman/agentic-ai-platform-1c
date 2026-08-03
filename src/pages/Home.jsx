@@ -9,9 +9,11 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import ContentParagraphs from '@/components/home/ContentParagraphs';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function Home() {
   return (
+        <InternalLinker currentPage="Home">
     <div className="bg-white">
       <PageMeta 
         title="Home"
@@ -72,5 +74,6 @@ export default function Home() {
         title="Explore 1C Platform"
       />
     </div>
+    </InternalLinker>
   );
 }

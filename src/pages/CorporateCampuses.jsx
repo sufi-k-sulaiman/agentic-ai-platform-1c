@@ -11,6 +11,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -95,6 +96,7 @@ const metrics = [
 
 export default function CorporateCampuses() {
   return (
+        <InternalLinker currentPage="CorporateCampuses">
     <div className="bg-white">
       <PageMeta 
         title="Corporate Campus AI"
@@ -348,5 +350,6 @@ export default function CorporateCampuses() {
       <FeatureDetailSection {...featureDetails.CorporateCampuses} />
 <RelatedContent currentPage="CorporateCampuses" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
+    </InternalLinker>
   );
 }

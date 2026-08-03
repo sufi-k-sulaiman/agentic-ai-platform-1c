@@ -11,6 +11,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -95,6 +96,7 @@ const metrics = [
 
 export default function FinancialInstitutions() {
   return (
+        <InternalLinker currentPage="FinancialInstitutions">
     <div className="bg-white">
       <PageMeta 
         title="Financial Services AI"
@@ -368,5 +370,6 @@ export default function FinancialInstitutions() {
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

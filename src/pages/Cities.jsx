@@ -10,6 +10,7 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -361,6 +362,7 @@ export default function Cities() {
   const [selectedFeature, setSelectedFeature] = useState(null);
 
   return (
+        <InternalLinker currentPage="Cities">
     <div className="bg-white">
       <PageMeta 
         title="Smart Cities AI"
@@ -668,5 +670,6 @@ export default function Cities() {
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

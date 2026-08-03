@@ -11,6 +11,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -87,6 +88,7 @@ const metrics = [
 
 export default function GovernmentAgencies() {
   return (
+        <InternalLinker currentPage="GovernmentAgencies">
     <div className="bg-white">
       <PageMeta
         title="Government AI Solutions"
@@ -340,5 +342,6 @@ export default function GovernmentAgencies() {
       <FeatureDetailSection {...featureDetails.GovernmentAgencies} />
 <RelatedContent currentPage="GovernmentAgencies" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
+    </InternalLinker>
   );
 }

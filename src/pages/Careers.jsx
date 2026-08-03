@@ -9,6 +9,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const benefits = [
   { title: 'Competitive Salary', description: 'Top-tier compensation packages' },
@@ -205,6 +206,7 @@ export default function Careers() {
   );
 
   return (
+        <InternalLinker currentPage="Careers">
     <div className="bg-white">
       <PageMeta 
         title="Careers"
@@ -350,5 +352,6 @@ export default function Careers() {
         title="Explore the Platform"
       />
     </div>
+    </InternalLinker>
   );
 }

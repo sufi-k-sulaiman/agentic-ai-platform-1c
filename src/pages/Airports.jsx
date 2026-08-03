@@ -11,6 +11,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -87,6 +88,7 @@ const metrics = [
 
 export default function Airports() {
   return (
+        <InternalLinker currentPage="Airports">
     <div className="bg-white">
       <PageMeta 
         title="Airport AI Solutions"
@@ -333,5 +335,6 @@ export default function Airports() {
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

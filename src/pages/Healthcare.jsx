@@ -12,6 +12,7 @@ import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -96,6 +97,7 @@ const metrics = [
 
 export default function Healthcare() {
   return (
+        <InternalLinker currentPage="Healthcare">
     <div className="bg-white">
       <PageMeta 
         title="Healthcare AI Solutions"
@@ -352,5 +354,6 @@ export default function Healthcare() {
         title="Explore Related Solutions"
       />
     </div>
+    </InternalLinker>
   );
 }

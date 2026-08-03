@@ -10,6 +10,7 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -86,6 +87,7 @@ const metrics = [
 
 export default function PublicSafety() {
   return (
+        <InternalLinker currentPage="PublicSafety">
     <div className="bg-white">
       <PageMeta 
         title="Public Safety AI"
@@ -284,5 +286,6 @@ export default function PublicSafety() {
       <FeatureDetailSection {...featureDetails.PublicSafety} />
 <RelatedContent currentPage="PublicSafety" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
+    </InternalLinker>
   );
 }

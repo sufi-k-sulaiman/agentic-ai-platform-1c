@@ -42,8 +42,17 @@ export default function DocAPIReference() {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-6 py-24">
+    <>
+      <PageMeta
+        title="API Reference"
+        description="Complete REST API documentation for all endpoints including authentication, agent management, and chat capabilities."
+        url="/DocAPIReference"
+        keywords={['API reference', 'REST API', 'API documentation', 'endpoints', 'developer documentation', 'API endpoints', 'API guide']}
+        service={{ type: 'Developer Documentation' }}
+      />
+      <div className="bg-white min-h-screen">
+        <InternalLinker currentPage="DocAPIReference">
+          <div className="max-w-4xl mx-auto px-6 py-24">
         <Link to={createPageUrl('Documentation')} className="inline-flex items-center text-[#8B2EE5] hover:underline mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Documentation
@@ -122,6 +131,8 @@ Content-Type: application/json
           </section>
         </motion.div>
       </div>
+        </InternalLinker>
     </div>
+    </>
   );
 }

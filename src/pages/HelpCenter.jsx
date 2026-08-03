@@ -10,6 +10,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const categories = [
   {
@@ -86,6 +87,7 @@ export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
+        <InternalLinker currentPage="HelpCenter">
     <div className="bg-white">
       <PageMeta 
         title="Help Center"
@@ -271,5 +273,6 @@ export default function HelpCenter() {
         title="Explore More"
       />
     </div>
+    </InternalLinker>
   );
 }

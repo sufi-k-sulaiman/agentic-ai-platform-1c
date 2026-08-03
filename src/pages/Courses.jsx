@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import SubscriptionWorkflow from '@/components/SubscriptionWorkflow';
 import RelatedContent from '@/components/seo/RelatedContent';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const categories = [
   { id: 'agentic-ai-fundamentals', name: 'Agentic AI Fundamentals', count: 12, level: 'Beginner' },
@@ -176,6 +177,7 @@ export default function Courses() {
   const [workflowOpen, setWorkflowOpen] = useState(false);
 
   return (
+        <InternalLinker currentPage="Courses">
     <div className="bg-white">
       <SubscriptionWorkflow isOpen={workflowOpen} onClose={() => setWorkflowOpen(false)} />
       <PageMeta 
@@ -560,5 +562,6 @@ export default function Courses() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

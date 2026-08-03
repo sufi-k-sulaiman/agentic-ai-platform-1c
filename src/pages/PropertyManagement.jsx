@@ -12,6 +12,7 @@ import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const challenges = [
   {
@@ -96,6 +97,7 @@ const metrics = [
 
 export default function PropertyManagement() {
   return (
+        <InternalLinker currentPage="PropertyManagement">
     <div className="bg-white">
       <PageMeta 
         title="Property Management AI"
@@ -358,5 +360,6 @@ export default function PropertyManagement() {
       </section>
       <RelatedContent currentPage="PropertyManagement" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
+    </InternalLinker>
   );
 }
