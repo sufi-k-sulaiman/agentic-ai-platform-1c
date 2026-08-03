@@ -9,6 +9,7 @@ import { base44 } from '@/api/base44Client';
 import PageMeta from '@/components/PageMeta';
 import { getAggregatedChallengeData } from '@/components/ChallengeDataCards';
 import { createPageUrl } from '@/utils';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const verticals = [
   { 
@@ -456,6 +457,7 @@ export default function Onboarding() {
   const renderRightSide = () => {
     if (step === 1) {
       return (
+                <InternalLinker currentPage="Onboarding">
         <div className="text-white text-center">
           <div className="w-32 h-32 mx-auto mb-8 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
             <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center">
@@ -1632,6 +1634,7 @@ export default function Onboarding() {
         </div>
       </div>
     </div>
+        </InternalLinker>
   </>
   );
 }

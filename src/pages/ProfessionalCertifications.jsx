@@ -7,6 +7,7 @@ import { Award, CheckCircle, ArrowRight, Star, Users, Clock, FileCheck, Briefcas
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const certifications = [
   {
@@ -152,6 +153,7 @@ const process = [
 
 export default function ProfessionalCertifications() {
   return (
+        <InternalLinker currentPage="ProfessionalCertifications">
     <div className="bg-white">
       <PageMeta 
         title="Professional Certifications"
@@ -390,5 +392,6 @@ export default function ProfessionalCertifications() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

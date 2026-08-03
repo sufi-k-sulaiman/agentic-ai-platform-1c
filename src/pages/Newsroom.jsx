@@ -9,6 +9,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import { base44 } from '@/api/base44Client';
 import { toast } from 'sonner';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const news = [
   {
@@ -237,6 +238,7 @@ export default function Newsroom() {
   };
 
   return (
+        <InternalLinker currentPage="Newsroom">
     <div className="bg-white">
       <PageMeta 
         title="Newsroom"
@@ -398,5 +400,6 @@ export default function Newsroom() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle2, AlertCircle, Activity, Clock, TrendingUp } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const systems = [
   { name: 'API Gateway', status: 'operational', uptime: '99.99%' },
@@ -49,6 +50,7 @@ const metrics = [
 
 export default function Status() {
   return (
+        <InternalLinker currentPage="Status">
     <div className="bg-white">
       <PageMeta 
         title="System Status"
@@ -239,5 +241,6 @@ export default function Status() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

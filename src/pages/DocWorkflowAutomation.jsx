@@ -5,9 +5,11 @@ import { ArrowLeft, Workflow } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function DocWorkflowAutomation() {
   return (
+        <InternalLinker currentPage="DocWorkflowAutomation">
     <div className="bg-white min-h-screen">
       <PageMeta
         title="Workflow Automation"
@@ -122,5 +124,6 @@ export default function DocWorkflowAutomation() {
         </motion.div>
       </div>
     </div>
+    </InternalLinker>
   );
 }

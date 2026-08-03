@@ -7,6 +7,7 @@ import { CheckCircle, Clock, BookOpen, Star, Play, ArrowLeft, Award, Target, Tre
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const trackData = {
   'beginner-to-professional': {
@@ -485,6 +486,7 @@ export default function LearningTrack() {
   const progressPercent = (totalCompleted / track.totalCourses) * 100;
 
   return (
+        <InternalLinker currentPage="LearningTrack">
     <div className="bg-white">
       <PageMeta 
         title={track.title}
@@ -697,5 +699,6 @@ export default function LearningTrack() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

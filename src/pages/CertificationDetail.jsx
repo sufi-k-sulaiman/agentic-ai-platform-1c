@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import CertificationRegistrationWorkflow from '@/components/CertificationRegistrationWorkflow';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const certificationData = {
   'ai-specialist': {
@@ -192,6 +193,7 @@ export default function CertificationDetail() {
   const cert = useMemo(() => certificationData[certId] || certificationData['ai-developer'], [certId]);
 
   return (
+        <InternalLinker currentPage="CertificationDetail">
     <div className="bg-white">
       <CertificationRegistrationWorkflow 
         isOpen={workflowOpen} 
@@ -497,5 +499,6 @@ export default function CertificationDetail() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

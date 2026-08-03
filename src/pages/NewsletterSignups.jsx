@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Mail, Calendar, MapPin } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function NewsletterSignups() {
   const { data: signups = [], isLoading } = useQuery({
@@ -17,6 +18,7 @@ export default function NewsletterSignups() {
   const unsubscribedCount = signups.filter(s => s.status === 'unsubscribed').length;
 
   return (
+        <InternalLinker currentPage="NewsletterSignups">
     <div className="min-h-screen bg-gray-50 py-12">
       <PageMeta 
         title="Newsletter Signups"
@@ -114,5 +116,6 @@ export default function NewsletterSignups() {
         </Card>
       </div>
     </div>
+    </InternalLinker>
   );
 }

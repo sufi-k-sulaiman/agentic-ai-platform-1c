@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Users, MessageSquare, ThumbsUp, MessageCircle, Eye, Pin, TrendingUp, Clock, Sparkles, Bot, Shield, Brain, Zap, ChevronRight, Send } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const categories = [
   { id: 'all', name: 'All Discussions', icon: MessageSquare, count: 45 },
@@ -679,6 +680,7 @@ export default function Community() {
     : discussions.filter(d => d.category === selectedCategory);
 
   return (
+        <InternalLinker currentPage="Community">
     <div className="bg-white">
       <PageMeta 
         title="Community Forum"
@@ -1210,5 +1212,6 @@ export default function Community() {
         </div>
       )}
     </div>
+    </InternalLinker>
   );
 }

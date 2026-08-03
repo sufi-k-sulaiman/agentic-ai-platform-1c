@@ -5,6 +5,7 @@ import { ArrowLeft, CreditCard, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const articles = [
   { title: 'Managing your subscription', page: 'SupportArticle8', description: 'Upgrade, downgrade, or cancel your plan anytime', time: '5 min read' },
@@ -19,6 +20,7 @@ const articles = [
 
 export default function AccountBillingGuide() {
   return (
+        <InternalLinker currentPage="AccountBillingGuide">
     <div className="bg-white min-h-screen">
       <PageMeta 
         title="Account & Billing Guide"
@@ -78,5 +80,6 @@ export default function AccountBillingGuide() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

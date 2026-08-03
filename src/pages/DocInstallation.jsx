@@ -6,9 +6,11 @@ import { ArrowLeft, ArrowRight, Terminal, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function DocInstallation() {
   return (
+        <InternalLinker currentPage="DocInstallation">
     <div className="bg-white min-h-screen">
       <PageMeta
         title="Installation & Setup"
@@ -133,5 +135,6 @@ console.log('Connected:', status);`}</code>
         </motion.div>
       </div>
     </div>
+    </InternalLinker>
   );
 }

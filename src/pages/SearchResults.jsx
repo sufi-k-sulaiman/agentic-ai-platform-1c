@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { createPageUrl } from '@/utils';
 import { base44 } from '@/api/base44Client';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 // All available pages (SearchResults is noIndex'd to avoid search result pages in Google)
 const allPages = [
@@ -165,6 +166,7 @@ Return ONLY these relevant topics and pages, ranked by relevance.`,
   };
 
   return (
+        <InternalLinker currentPage="SearchResults">
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <PageMeta
         title="Search Results"
@@ -313,5 +315,6 @@ Return ONLY these relevant topics and pages, ranked by relevance.`,
         )}
       </div>
     </div>
+    </InternalLinker>
   );
 }

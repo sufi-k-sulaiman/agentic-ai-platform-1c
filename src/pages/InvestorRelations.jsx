@@ -13,6 +13,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import toast from 'react-hot-toast';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const investmentSlides = [
   { id: 'cover', title: '1C Platform', subtitle: 'The No-Code Agentic AI Revolution', type: 'cover' },
@@ -161,6 +162,7 @@ export default function InvestorRelations() {
   };
 
   return (
+        <InternalLinker currentPage="InvestorRelations">
     <div className="bg-white">
       <PageMeta 
         title="Investor Relations"
@@ -3809,5 +3811,6 @@ export default function InvestorRelations() {
         </div>
       )}
     </div>
+    </InternalLinker>
   );
 }

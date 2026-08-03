@@ -9,6 +9,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Code, Terminal, Copy, Key, Shield, Zap, AlertCircle, Check, Clock, Globe, Package, Webhook, PlayCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const endpoints = [
   {
@@ -257,6 +258,7 @@ export default function APIReference() {
   };
 
   return (
+        <InternalLinker currentPage="APIReference">
     <div className="bg-white">
       <PageMeta 
         title="API Reference"
@@ -744,5 +746,6 @@ export default function APIReference() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

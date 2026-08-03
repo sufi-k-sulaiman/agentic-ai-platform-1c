@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Search, Download, Calendar, Users, CheckCircle, Clock, XCircle } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function EventRegistrations() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -55,6 +56,7 @@ export default function EventRegistrations() {
   };
 
   return (
+        <InternalLinker currentPage="EventRegistrations">
     <div className="min-h-screen bg-gray-50 py-8">
       <PageMeta 
         title="Event Registrations"
@@ -200,5 +202,6 @@ export default function EventRegistrations() {
         </Card>
       </div>
     </div>
+    </InternalLinker>
   );
 }

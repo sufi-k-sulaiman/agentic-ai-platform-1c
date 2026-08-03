@@ -10,6 +10,7 @@ import { useQuery } from '@tanstack/react-query';
 import RegistrationForm from '@/components/events/RegistrationForm';
 import { toast } from 'sonner';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const events = [
   {
@@ -615,6 +616,7 @@ export default function Events() {
   };
 
   return (
+        <InternalLinker currentPage="Events">
     <div className="bg-white">
       <PageMeta 
         title="Events & Webinars"
@@ -863,5 +865,6 @@ export default function Events() {
         )}
       </AnimatePresence>
     </div>
+    </InternalLinker>
   );
 }

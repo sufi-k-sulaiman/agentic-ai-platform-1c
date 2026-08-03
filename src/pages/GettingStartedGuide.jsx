@@ -5,6 +5,7 @@ import { ArrowLeft, Book, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const articles = [
   { title: 'Creating your first AI agent', page: 'SupportArticle1', description: 'Step-by-step guide to building your first autonomous agent', time: '5 min read' },
@@ -19,6 +20,7 @@ const articles = [
 
 export default function GettingStartedGuide() {
   return (
+        <InternalLinker currentPage="GettingStartedGuide">
     <div className="bg-white min-h-screen">
       <PageMeta 
         title="Getting Started Guide"
@@ -91,5 +93,6 @@ export default function GettingStartedGuide() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

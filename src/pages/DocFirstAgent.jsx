@@ -6,9 +6,11 @@ import { ArrowLeft, Brain, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function DocFirstAgent() {
   return (
+        <InternalLinker currentPage="DocFirstAgent">
     <div className="bg-white min-h-screen">
       <PageMeta
         title="Building Your First AI Agent"
@@ -157,5 +159,6 @@ console.log('Agent response:', response.message);`}</code>
         </motion.div>
       </div>
     </div>
+    </InternalLinker>
   );
 }

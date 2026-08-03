@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function JobApplication() {
   const [step, setStep] = useState(1);
@@ -61,6 +62,7 @@ export default function JobApplication() {
   };
 
   return (
+        <InternalLinker currentPage="JobApplication">
     <div className="bg-white min-h-screen">
       <PageMeta 
         title="Job Application"
@@ -352,5 +354,6 @@ export default function JobApplication() {
         </div>
       </div>
     </div>
+    </InternalLinker>
   );
 }

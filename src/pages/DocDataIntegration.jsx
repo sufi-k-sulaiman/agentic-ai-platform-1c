@@ -5,9 +5,11 @@ import { ArrowLeft, Database, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function DocDataIntegration() {
   return (
+        <InternalLinker currentPage="DocDataIntegration">
     <div className="bg-white min-h-screen">
       <PageMeta
         title="Data Integration"
@@ -103,5 +105,6 @@ const results = await client.query({
         </motion.div>
       </div>
     </div>
+    </InternalLinker>
   );
 }

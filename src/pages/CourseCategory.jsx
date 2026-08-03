@@ -7,6 +7,7 @@ import { BookOpen, Clock, Star, Play, ArrowLeft, Filter } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const categoryData = {
   'agentic-ai-fundamentals': {
@@ -203,6 +204,7 @@ export default function CourseCategory() {
   const category = useMemo(() => categoryData[categoryId] || categoryData['agentic-ai-fundamentals'], [categoryId]);
 
   return (
+        <InternalLinker currentPage="CourseCategory">
     <div className="bg-white">
       <PageMeta 
         title={`${category.name} Courses`}
@@ -305,5 +307,6 @@ export default function CourseCategory() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

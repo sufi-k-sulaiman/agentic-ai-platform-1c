@@ -10,6 +10,7 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 
 import { posts } from '@/lib/blogIndexPosts';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 
 export default function Blog() {
@@ -56,6 +57,7 @@ export default function Blog() {
   };
 
   return (
+        <InternalLinker currentPage="Blog">
     <div className="bg-white">
       <PageMeta 
         title="Blog"
@@ -240,5 +242,6 @@ export default function Blog() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

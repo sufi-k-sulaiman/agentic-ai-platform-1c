@@ -5,9 +5,11 @@ import { ArrowLeft, Shield, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 export default function DocAuthentication() {
   return (
+        <InternalLinker currentPage="DocAuthentication">
     <div className="bg-white min-h-screen">
       <PageMeta
         title="Authentication & Security"
@@ -128,5 +130,6 @@ const { access_token } = await response.json();`}</code>
         </motion.div>
       </div>
     </div>
+    </InternalLinker>
   );
 }

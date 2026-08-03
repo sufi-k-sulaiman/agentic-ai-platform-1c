@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const sections = [
   { id: 'overview', title: 'Overview' },
@@ -57,6 +58,7 @@ export default function Cookies() {
         description="1cPlatform Cookie Policy. Learn how we use cookies and similar technologies."
         url="/cookies"
       />
+            <InternalLinker currentPage="Cookies">
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
           <div className="lg:grid lg:grid-cols-12 lg:gap-16">
@@ -320,6 +322,7 @@ export default function Cookies() {
           </div>
         </div>
       </div>
+      </InternalLinker>
     </>
   );
 }

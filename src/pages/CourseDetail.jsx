@@ -8,6 +8,7 @@ import { BookOpen, Clock, Star, Play, ArrowLeft, CheckCircle, Users, Award, Down
 import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const courseData = {
   'intro-agentic-ai': {
@@ -243,6 +244,7 @@ export default function CourseDetail() {
   const course = useMemo(() => courseData[courseId] || courseData['intro-agentic-ai'], [courseId]);
 
   return (
+        <InternalLinker currentPage="CourseDetail">
     <div className="bg-white">
       <PageMeta 
         title={course.title}
@@ -440,5 +442,6 @@ export default function CourseDetail() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

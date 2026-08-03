@@ -5,6 +5,7 @@ import { ArrowLeft, Wrench, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const articles = [
   { title: 'Troubleshooting common errors', page: 'SupportArticle4', description: 'Solutions to the most frequent issues', time: '10 min read' },
@@ -21,6 +22,7 @@ const articles = [
 
 export default function TechnicalSupportGuide() {
   return (
+        <InternalLinker currentPage="TechnicalSupportGuide">
     <div className="bg-white min-h-screen">
       <PageMeta 
         title="Technical Support Guide"
@@ -80,5 +82,6 @@ export default function TechnicalSupportGuide() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }

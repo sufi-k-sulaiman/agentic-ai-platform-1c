@@ -5,6 +5,7 @@ import { ArrowLeft, Video, Play, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const videos = [
   { 
@@ -59,6 +60,7 @@ const videos = [
 
 export default function VideoTutorialsGuide() {
   return (
+        <InternalLinker currentPage="VideoTutorialsGuide">
     <div className="bg-white min-h-screen">
       <PageMeta 
         title="Video Tutorials"
@@ -150,5 +152,6 @@ export default function VideoTutorialsGuide() {
         </div>
       </section>
     </div>
+    </InternalLinker>
   );
 }
