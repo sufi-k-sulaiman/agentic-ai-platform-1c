@@ -10,6 +10,8 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const challenges = [
   {
@@ -326,7 +328,9 @@ export default function Retail() {
           </motion.div>
         </div>
       </section>
-      <RelatedContent
+      
+      <FeatureDetailSection {...featureDetails.Retail} />
+<RelatedContent
         currentPage="Retail"
         category="industry"
         crossCategories={['product']}

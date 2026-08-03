@@ -9,6 +9,8 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const challenges = [
   {
@@ -342,7 +344,9 @@ export default function CorporateCampuses() {
           </motion.div>
         </div>
       </section>
-      <RelatedContent currentPage="CorporateCampuses" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
+      
+      <FeatureDetailSection {...featureDetails.CorporateCampuses} />
+<RelatedContent currentPage="CorporateCampuses" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
   );
 }

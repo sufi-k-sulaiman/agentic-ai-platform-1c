@@ -10,6 +10,8 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const revenueData = [
   { month: 'Jan', revenue: 45000, expenses: 32000, profit: 13000 },
@@ -1244,7 +1246,9 @@ await suite.crm.updateLead({...});`}
         </div>
       </section>
 
-      {/* CTA */}
+      
+      <FeatureDetailSection {...featureDetails.EnterpriseSuite} />
+{/* CTA */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />

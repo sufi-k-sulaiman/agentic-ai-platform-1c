@@ -10,6 +10,8 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const challenges = [
   {
@@ -354,7 +356,9 @@ export default function Transit() {
           </motion.div>
         </div>
       </section>
-      <RelatedContent
+      
+      <FeatureDetailSection {...featureDetails.Transit} />
+<RelatedContent
         currentPage="Transit"
         category="industry"
         crossCategories={['product']}

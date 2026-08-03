@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const challenges = [
   {
@@ -657,7 +659,9 @@ export default function Cities() {
           )}
         </DialogContent>
       </Dialog>
-      <RelatedContent
+      
+      <FeatureDetailSection {...featureDetails.Cities} />
+<RelatedContent
         currentPage="Cities"
         category="industry"
         crossCategories={['product']}

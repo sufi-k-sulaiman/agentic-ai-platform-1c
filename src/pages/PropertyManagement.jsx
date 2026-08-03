@@ -10,6 +10,8 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import IndustryIntro from '@/components/seo/IndustryIntro';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const challenges = [
   {
@@ -327,7 +329,9 @@ export default function PropertyManagement() {
         </div>
       </section>
 
-      {/* CTA */}
+      
+      <FeatureDetailSection {...featureDetails.PropertyManagement} />
+{/* CTA */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

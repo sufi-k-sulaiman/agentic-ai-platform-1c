@@ -7,6 +7,8 @@ import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 export default function Pricing() {
   return (
@@ -795,7 +797,9 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* CTA - Fold 19 */}
+      
+      <FeatureDetailSection {...featureDetails.Pricing} />
+{/* CTA - Fold 19 */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />

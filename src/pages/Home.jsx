@@ -7,6 +7,8 @@ import CTASection from '@/components/home/CTASection';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import ContentParagraphs from '@/components/home/ContentParagraphs';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 export default function Home() {
   return (
@@ -60,7 +62,9 @@ export default function Home() {
       <FeaturesSection />
       <ProductsSection />
       <SolutionsSection />
-      <CTASection />
+      
+      <FeatureDetailSection {...featureDetails.Home} />
+<CTASection />
       <ContentParagraphs />
       <RelatedContent
         currentPage="Home"

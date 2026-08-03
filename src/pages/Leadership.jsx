@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const leaders = [
   {
@@ -139,7 +141,9 @@ export default function Leadership() {
           </div>
         </div>
       </section>
-      <RelatedContent
+      
+      <FeatureDetailSection {...featureDetails.Leadership} />
+<RelatedContent
         currentPage="Leadership"
         category="company"
         crossCategories={['product']}

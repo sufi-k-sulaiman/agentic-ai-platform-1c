@@ -9,6 +9,8 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const challenges = [
   {
@@ -332,7 +334,9 @@ export default function FinancialInstitutions() {
         </div>
       </section>
 
-      {/* CTA */}
+      
+      <FeatureDetailSection {...featureDetails.FinancialInstitutions} />
+{/* CTA */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

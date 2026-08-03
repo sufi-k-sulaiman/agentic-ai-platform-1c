@@ -9,6 +9,8 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import VerticalAnalytics from '@/components/VerticalAnalytics';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const challenges = [
   {
@@ -322,7 +324,9 @@ export default function Education() {
           </motion.div>
         </div>
       </section>
-      <RelatedContent
+      
+      <FeatureDetailSection {...featureDetails.Education} />
+<RelatedContent
         currentPage="Education"
         category="industry"
         crossCategories={['product', 'resources']}

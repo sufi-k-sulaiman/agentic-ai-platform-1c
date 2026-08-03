@@ -8,6 +8,8 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import toast from 'react-hot-toast';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 const values = [
 {
@@ -292,7 +294,9 @@ export default function AboutUs() {
           </div>
         </div>
       }
-      <RelatedContent
+      
+      <FeatureDetailSection {...featureDetails.AboutUs} />
+<RelatedContent
         currentPage="AboutUs"
         category="company"
         crossCategories={['product']}

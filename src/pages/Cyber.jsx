@@ -10,6 +10,8 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import BugBountyForm from '@/components/contact/BugBountyForm';
 import { base44 } from '@/api/base44Client';
+import FeatureDetailSection from '@/components/FeatureDetailSection';
+import { featureDetails } from '@/lib/featureDetails';
 
 
 
@@ -930,7 +932,9 @@ export default function Cyber() {
         <BugBountyForm onClose={() => setShowContactForm(false)} />
       )}
 
-      <RelatedContent
+      
+      <FeatureDetailSection {...featureDetails.Cyber} />
+<RelatedContent
         currentPage="Cyber"
         category="product"
         crossCategories={['resources']}
