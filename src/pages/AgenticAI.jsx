@@ -10,6 +10,7 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const platforms = [
   {
@@ -357,6 +358,7 @@ function PlatformComparison() {
 
 export default function AgenticAI() {
   return (
+    <InternalLinker currentPage="AgenticAI">
     <div className="bg-white">
       <PageMeta 
         title="Agentic AI"
@@ -1128,5 +1130,6 @@ export default function AgenticAI() {
         title="Explore Related Solutions"
       />
     </div>
+  </InternalLinker>
   );
 }

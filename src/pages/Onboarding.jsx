@@ -9,6 +9,7 @@ import { base44 } from '@/api/base44Client';
 import PageMeta from '@/components/PageMeta';
 import { getAggregatedChallengeData } from '@/components/ChallengeDataCards';
 import { createPageUrl } from '@/utils';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const verticals = [
   { 
@@ -1041,6 +1042,7 @@ export default function Onboarding() {
 
   return (
     <>
+      <InternalLinker currentPage="Onboarding">
       <PageMeta 
         title="Get Started"
         description="Create your custom Agentic AI solution. Select your industry and design AI agents tailored to your business needs. 14 industries, infinite possibilities."
@@ -1632,6 +1634,7 @@ export default function Onboarding() {
         </div>
       </div>
     </div>
-  </>
+        </InternalLinker>
+    </>
   );
 }

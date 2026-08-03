@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const revenueData = [
   { month: 'Jan', revenue: 45000, expenses: 32000, profit: 13000 },
@@ -223,6 +224,7 @@ function PlatformIntegrations() {
 
 export default function EnterpriseSuite() {
   return (
+    <InternalLinker currentPage="EnterpriseSuite">
     <div className="bg-white">
       <PageMeta 
         title="Enterprise Suite"
@@ -1301,5 +1303,6 @@ await suite.crm.updateLead({...});`}
         title="Explore Related Solutions"
       />
     </div>
+  </InternalLinker>
   );
 }

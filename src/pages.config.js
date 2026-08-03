@@ -190,6 +190,17 @@ import BlogCategoryAgenticDesign from './pages/BlogCategoryAgenticDesign';
 import BlogCategoryAIGovernance from './pages/BlogCategoryAIGovernance';
 import BlogCategoryGenerativeAI from './pages/BlogCategoryGenerativeAI';
 import BlogCategoryAIAutonomy from './pages/BlogCategoryAIAutonomy';
+import BlogAgenticAIContextManagement from './pages/BlogAgenticAIContextManagement';
+import BlogAgenticAIErrorHandling from './pages/BlogAgenticAIErrorHandling';
+import BlogAgenticAIObservability from './pages/BlogAgenticAIObservability';
+import BlogAgenticAIPromptEngineering from './pages/BlogAgenticAIPromptEngineering';
+import BlogAgenticAIScalability from './pages/BlogAgenticAIScalability';
+import BlogAgenticAIToolIntegration from './pages/BlogAgenticAIToolIntegration';
+import ContactUs from './pages/ContactUs';
+import Security from './pages/Security';
+import Rewards from './pages/Rewards';
+import LearningJourney from './pages/LearningJourney';
+import DigitalLearningSubscriptions from './pages/DigitalLearningSubscriptions';
 import __Layout from './Layout.jsx';
 
 
@@ -386,6 +397,17 @@ export const PAGES = {
     "BlogCategoryAIGovernance": BlogCategoryAIGovernance,
     "BlogCategoryGenerativeAI": BlogCategoryGenerativeAI,
     "BlogCategoryAIAutonomy": BlogCategoryAIAutonomy,
+    "BlogAgenticAIContextManagement": BlogAgenticAIContextManagement,
+    "BlogAgenticAIErrorHandling": BlogAgenticAIErrorHandling,
+    "BlogAgenticAIObservability": BlogAgenticAIObservability,
+    "BlogAgenticAIPromptEngineering": BlogAgenticAIPromptEngineering,
+    "BlogAgenticAIScalability": BlogAgenticAIScalability,
+    "BlogAgenticAIToolIntegration": BlogAgenticAIToolIntegration,
+    "ContactUs": ContactUs,
+    "Security": Security,
+    "Rewards": Rewards,
+    "LearningJourney": LearningJourney,
+    "DigitalLearningSubscriptions": DigitalLearningSubscriptions,
 }
 
 export const pagesConfig = {

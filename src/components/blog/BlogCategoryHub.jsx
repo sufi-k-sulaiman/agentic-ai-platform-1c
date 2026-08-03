@@ -5,6 +5,7 @@ import { ArrowRight, Clock, User, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import InternalLinker from '@/components/seo/InternalLinker';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import { blogPosts } from '@/lib/blogPosts';
@@ -42,6 +43,7 @@ export default function BlogCategoryHub({
         keywords={keywords}
         collectionPage={collectionPageJsonLd}
       />
+      <InternalLinker currentPage={pageName}>
       <div className="bg-white min-h-screen">
         <section className="pt-32 pb-12 bg-gradient-to-br from-purple-50 via-white to-violet-50">
           <div className="max-w-6xl mx-auto px-6">
@@ -145,6 +147,7 @@ export default function BlogCategoryHub({
 
         <RelatedContent currentPage={pageName} category="blog" title="Explore Other Topics" />
       </div>
-    </>
+      </InternalLinker>
+       </>
   );
 }
