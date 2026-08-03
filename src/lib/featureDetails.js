@@ -1,11 +1,10 @@
 import {
-  Brain, Zap, Shield, Database, Cloud, Code, Workflow, Users, TrendingUp,
-  Lock, Globe, Cpu, GitBranch, BarChart3, MessageSquare, FileText, Calendar,
-  Bell, Search, Eye, Settings, Server, Layers, Rocket, Target, Sparkles,
+  Brain, Zap, Shield, Database, Workflow, Users, TrendingUp,
+  Lock, Globe, GitBranch, BarChart3, MessageSquare, FileText, Calendar,
+  Bell, Eye, Server, Layers, Rocket, Target,
   Bot, Network, Gauge, Activity, Building2, Heart, ShoppingBag, Train,
-  Plane, GraduationCap, Gamepad2, TrafficCone, Landmark, Building, ShieldCheck,
-  DollarSign, Clock, CheckSquare, Workflow as WorkflowIcon, ServerCog,
-  Smartphone, Languages, Plug, Fingerprint, Gauge as GaugeIcon, LineChart,
+  Plane, GraduationCap, Gamepad2, TrafficCone, Building, ShieldCheck,
+  DollarSign, CheckSquare, Plug,
 } from 'lucide-react';
 
 /**
@@ -46,7 +45,6 @@ export const featureDetails = {
         icon: Workflow,
         title: 'Visual Workflow Builder',
         description: 'Build multi-step AI workflows visually — no code required. Chain agents, add conditional branches, integrate with external systems, and set durable waits that survive restarts. Deploy workflows that run for minutes, days, or months with full state management and error recovery.',
-        useCases: 'Automate end-to-end business processes',
         useCases: ['Automate end-to-end business processes', 'Build approval chains with human-in-the-loop steps', 'Schedule recurring AI-driven reports and actions'],
       },
       {
