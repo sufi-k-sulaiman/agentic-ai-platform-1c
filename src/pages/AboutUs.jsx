@@ -10,6 +10,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import toast from 'react-hot-toast';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
+import InternalLinker from '@/components/seo/InternalLinker';
 
 const values = [
 {
@@ -91,6 +92,7 @@ export default function AboutUs() {
         { label: 'Home', page: 'Home' },
         { label: 'About Us' }
       ]} />
+      <InternalLinker currentPage="AboutUs">
 
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
@@ -302,6 +304,7 @@ export default function AboutUs() {
         crossCategories={['product']}
         title="Explore the Platform"
       />
+      </InternalLinker>
     </div>);
 
 }

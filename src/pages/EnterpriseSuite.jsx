@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
-import InternalLinker from '@/components/seo/InternalLinker';
 
 const revenueData = [
   { month: 'Jan', revenue: 45000, expenses: 32000, profit: 13000 },
@@ -113,7 +112,6 @@ function PlatformIntegrations() {
 
   return (
     <section className="py-32 bg-white">
-            <InternalLinker currentPage="EnterpriseSuite">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -1303,6 +1301,5 @@ await suite.crm.updateLead({...});`}
         title="Explore Related Solutions"
       />
     </div>
-      </InternalLinker>
   );
 }

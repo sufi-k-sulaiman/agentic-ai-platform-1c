@@ -69,7 +69,6 @@ export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
-        <InternalLinker currentPage="Documentation">
     <div className="bg-white">
       <PageMeta 
         title="Documentation"
@@ -277,7 +276,6 @@ npm install @1cplatform/sdk
 
 // Initialize the client
 import { OneC } from '@1cplatform/sdk';
-import InternalLinker from '@/components/seo/InternalLinker';
 
 const client = new OneC({
   apiKey: process.env.ONEC_API_KEY
@@ -310,6 +308,5 @@ console.log('Agent created:', agent.id);`}</code>
         title="Explore Related Resources"
       />
     </div>
-    </InternalLinker>
   );
 }
