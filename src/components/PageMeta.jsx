@@ -23,6 +23,10 @@ import { SITE_NAME, SITE_URL } from '@/lib/seoConfig';
  * @param {Object} [collectionPage] - If true, generates CollectionPage schema
  * @param {Object} [speakable] - Speakable schema: { cssSelectors: ['h1', '.summary'] }
  * @param {Array} [breadcrumbs] - Custom breadcrumb path: [{ name, url }]
+ * @param {Object} [prevNext] - Pagination: { prev: { url, title }, next: { url, title } }
+ * @param {Object} [video] - VideoObject schema: { name, description, thumbnailUrl, uploadDate, duration }
+ * @param {Object} [event] - Event schema: { name, startDate, endDate, location, offers }
+ * @param {Object} [jobPosting] - JobPosting schema: { title, description, datePosted, location }
  */
 export default function PageMeta({
   title,
@@ -41,6 +45,10 @@ export default function PageMeta({
   schemas = [],
   speakable,
   breadcrumbs,
+  prevNext,
+  video,
+  event,
+  jobPosting,
 }) {
   const fullTitle = `${title} | ${SITE_NAME}`;
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : SITE_URL;
@@ -222,6 +230,91 @@ export default function PageMeta({
       }
     : null;
 
+  // VideoObject structured data
+  const videoJsonLd = video
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: video.name || title,
+        description: video.description || description,
+        thumbnailUrl: video.thumbnailUrl || [ogImage],
+        uploadDate: video.uploadDate,
+        ...(video.duration ? { duration: video.duration } : {}),
+        url: fullUrl,
+      }
+    : null;
+
+  // Event structured data
+  const eventJsonLd = event
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Event',
+        name: event.name || title,
+        description: event.description || description,
+        startDate: event.startDate,
+        ...(event.endDate ? { endDate: event.endDate } : {}),
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: event.attendanceMode || 'https://schema.org/OfflineEventAttendanceMode',
+        location: event.location
+          ? {
+              '@type': event.location.type || 'Place',
+              name: event.location.name,
+              ...(event.location.address
+                ? {
+                    address: {
+                      '@type': 'PostalAddress',
+                      ...event.location.address,
+                    },
+                  }
+                : {}),
+            }
+          : { '@type': 'Place', name: 'Online' },
+        ...(event.offers
+          ? {
+              offers: {
+                '@type': 'Offer',
+                price: event.offers.price || '0',
+                priceCurrency: event.offers.currency || 'USD',
+                availability: 'https://schema.org/InStock',
+                url: fullUrl,
+              },
+            }
+          : {}),
+        url: fullUrl,
+      }
+    : null;
+
+  // JobPosting structured data
+  const jobPostingJsonLd = jobPosting
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'JobPosting',
+        title: jobPosting.title,
+        description: jobPosting.description,
+        datePosted: jobPosting.datePosted,
+        ...(jobPosting.validThrough ? { validThrough: jobPosting.validThrough } : {}),
+        hiringOrganization: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+        },
+        jobLocation: jobPosting.location
+          ? {
+              '@type': 'Place',
+              address: {
+                '@type': 'PostalAddress',
+                ...jobPosting.location,
+              },
+            }
+          : {
+              '@type': 'Place',
+              address: { '@type': 'PostalAddress', addressCountry: 'CA' },
+            },
+        ...(jobPosting.employmentType
+          ? { employmentType: jobPosting.employmentType }
+          : { employmentType: 'FULL_TIME' }),
+      }
+    : null;
+
   // Collect all JSON-LD schemas
   const allSchemas = [
     breadcrumbJsonLd,
@@ -233,6 +326,9 @@ export default function PageMeta({
     localBusinessJsonLd,
     collectionPageJsonLd,
     speakableJsonLd,
+    videoJsonLd,
+    eventJsonLd,
+    jobPostingJsonLd,
     ...schemas,
   ].filter(Boolean);
 
@@ -270,6 +366,10 @@ export default function PageMeta({
       {/* hreflang */}
       <link rel="alternate" href={fullUrl} hrefLang="en" />
       <link rel="alternate" href={fullUrl} hrefLang="x-default" />
+
+      {/* Pagination prev/next */}
+      {prevNext?.prev && <link rel="prev" href={`${siteUrl}${prevNext.prev.url}`} />}
+      {prevNext?.next && <link rel="next" href={`${siteUrl}${prevNext.next.url}`} />}
 
       {/* JSON-LD Structured Data */}
       {allSchemas.map((schema, idx) => (

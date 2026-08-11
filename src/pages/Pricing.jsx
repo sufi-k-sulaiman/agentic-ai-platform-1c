@@ -10,6 +10,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
 
 export default function Pricing() {
   return (
@@ -42,11 +43,7 @@ export default function Pricing() {
               { '@type': 'Offer', name: 'Enterprise', price: '0', priceCurrency: 'USD', description: 'Custom pricing - contact sales', availability: 'https://schema.org/InStock' },
             ],
             aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '500' },
-          }
-        ]}
-      
-        service={{ type: 'AI Platform Pricing & Plans', areaServed: 'Worldwide' }}
-        schemas={[
+          },
           {
             '@context': 'https://schema.org',
             '@type': 'AggregateRating',
@@ -56,6 +53,8 @@ export default function Pricing() {
             bestRating: '5',
           }
         ]}
+
+        service={{ type: 'AI Platform Pricing & Plans', areaServed: 'Worldwide' }}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },
@@ -845,6 +844,18 @@ export default function Pricing() {
           </div>
         </motion.div>
       </section>
+      <FAQSection
+        title="Pricing FAQ"
+        subtitle="Everything you need to know about our pricing and plans."
+        faqs={[
+          { question: 'Is there a free plan?', answer: 'Yes, our Starter plan is free forever and includes 1,000 API calls per month, 1 AI agent, and community support. No credit card required to sign up.' },
+          { question: 'Can I upgrade or downgrade my plan anytime?', answer: 'Absolutely. You can upgrade, downgrade, or cancel your subscription at any time from your account settings. Changes take effect immediately and we prorate any billing differences. No long-term contracts required.' },
+          { question: 'How is pricing calculated?', answer: 'Pricing is based on your plan tier, number of AI agents, API calls per month, and storage usage. You only pay for what you use beyond your plan limits. Enterprise plans offer custom pricing based on volume.' },
+          { question: 'Do you offer enterprise support?', answer: 'Yes! Enterprise plans include 24/7 phone and chat support, a dedicated account manager, custom SLAs, priority access to new features, and on-premise deployment options.' },
+          { question: 'Are there any hidden fees?', answer: 'No. Our pricing is fully transparent. The price you see is the price you pay. No setup fees, no per-user fees, no hidden charges. You only pay for the plan and usage you select.' },
+          { question: 'What payment methods do you accept?', answer: 'We accept all major credit cards (Visa, Mastercard, American Express), ACH transfers, and wire transfers for enterprise plans. Invoicing is available for annual enterprise contracts.' },
+        ]}
+      />
       <RelatedContent
         currentPage="Pricing"
         crossCategories={['product', 'company']}

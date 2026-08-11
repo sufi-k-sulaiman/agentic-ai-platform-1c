@@ -10,6 +10,7 @@ import { createPageUrl } from '@/utils';
 import SubscriptionWorkflow from '@/components/SubscriptionWorkflow';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
 
 const categories = [
   { id: 'agentic-ai-fundamentals', name: 'Agentic AI Fundamentals', count: 12, level: 'Beginner' },
@@ -537,6 +538,19 @@ export default function Courses() {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        title="Courses FAQ"
+        subtitle="Common questions about learning with 1C Platform."
+        faqs={[
+          { question: 'Are courses free or paid?', answer: 'We offer both free and paid courses. Free courses cover fundamentals and introductory topics. Paid courses include advanced content, hands-on labs, certificates, and instructor support. Subscription plans give you unlimited access to all courses.' },
+          { question: 'Do I get a certificate upon completion?', answer: 'Yes. Every paid course includes a verifiable certificate of completion. Our Professional Certifications require passing a proctored exam and are recognized by industry partners. Certificates can be shared on LinkedIn and added to your resume.' },
+          { question: 'How long do courses take to complete?', answer: 'Course durations range from 2 hours for introductory modules to 40+ hours for comprehensive learning tracks. Most courses are self-paced, so you can learn on your schedule. Instructor-led cohorts follow a structured weekly schedule.' },
+          { question: 'What skill level do I need to start?', answer: 'We offer courses for all levels: Beginner (no prior AI knowledge), Intermediate (basic programming and AI concepts), and Advanced (ML engineering and production deployment). Start with our "Introduction to Agentic AI" course if you are new to the field.' },
+          { question: 'Can I access courses on mobile?', answer: 'Yes. All courses are fully responsive and work on mobile devices, tablets, and desktops. Video lessons include downloadable transcripts and offline access is available with a subscription.' },
+          { question: 'Do you offer team or enterprise training?', answer: 'Yes. We provide custom training programs for teams, including private cohorts, custom curricula, and group discounts. Enterprise plans include dedicated learning paths, progress tracking, and certification management for your organization.' },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-24 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] text-white">

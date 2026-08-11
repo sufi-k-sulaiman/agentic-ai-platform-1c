@@ -13,6 +13,7 @@ import { createPageUrl } from '@/utils';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
 
 const revenueData = [
   { month: 'Jan', revenue: 45000, expenses: 32000, profit: 13000 },
@@ -1296,6 +1297,18 @@ await suite.crm.updateLead({...});`}
           </div>
         </motion.div>
       </section>
+      <FAQSection
+        title="Enterprise Suite FAQ"
+        subtitle="Common questions about our unified enterprise platform."
+        faqs={[
+          { question: 'What modules are included in the Enterprise Suite?', answer: 'The Enterprise Suite includes Financial Management (ERP), HR & Payroll, Supply Chain Management, CRM, Business Intelligence, and custom module development. All modules are unified on a single platform with shared data and AI-powered automation.' },
+          { question: 'Can I use individual modules or do I need the full suite?', answer: 'You can deploy individual modules independently or combine them into a unified suite. Each module integrates seamlessly with the others, but there is no requirement to purchase all modules. Start with what you need and add more as your business grows.' },
+          { question: 'How does the Enterprise Suite integrate with existing systems?', answer: 'The suite includes 500+ pre-built integrations including Salesforce, Microsoft 365, Google Workspace, SAP, Oracle, Workday, ServiceNow, and more. Our REST API and SDK enable custom integrations with any system. We also support data migration from legacy ERP and CRM systems.' },
+          { question: 'Is the Enterprise Suite suitable for small businesses?', answer: 'Yes. Our Starter plan supports small businesses with core modules at no cost. As you grow, you can add modules and upgrade to Professional or Enterprise plans. The suite scales from 1 user to 10,000+ users across multiple entities and locations.' },
+          { question: 'What compliance standards does the suite meet?', answer: 'The Enterprise Suite is SOC 2 Type II certified, ISO 27001 compliant, and GDPR/HIPAA ready. Financial modules support SOX, GAAP, and IFRS standards. HR modules handle multi-jurisdiction payroll compliance automatically.' },
+          { question: 'How long does implementation take?', answer: 'Most organizations are live in 2-4 weeks. Our no-code configuration and pre-built templates accelerate deployment. Enterprise implementations with complex data migration typically take 4-8 weeks with dedicated implementation support.' },
+        ]}
+      />
       <RelatedContent
         currentPage="EnterpriseSuite"
         category="product"

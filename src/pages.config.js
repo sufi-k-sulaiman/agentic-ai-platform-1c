@@ -201,6 +201,7 @@ import Security from './pages/Security';
 import Rewards from './pages/Rewards';
 import LearningJourney from './pages/LearningJourney';
 import DigitalLearningSubscriptions from './pages/DigitalLearningSubscriptions';
+import AIGlossary from './pages/AIGlossary';
 import __Layout from './Layout.jsx';
 
 
@@ -408,6 +409,7 @@ export const PAGES = {
     "Rewards": Rewards,
     "LearningJourney": LearningJourney,
     "DigitalLearningSubscriptions": DigitalLearningSubscriptions,
+    "AIGlossary": AIGlossary,
 }
 
 export const pagesConfig = {

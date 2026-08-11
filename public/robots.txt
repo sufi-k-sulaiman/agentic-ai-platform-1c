@@ -1,15 +1,37 @@
+# robots.txt for 1C Platform
+# https://1cplatform.com
+
+# Allow all crawlers access to all content
 User-agent: *
 Allow: /
-Disallow: /SearchResults
-Disallow: /*?q=
-Disallow: /NewsletterSignups
-Disallow: /EventRegistrations
 
-# Crawl delay for polite crawling
-Crawl-delay: 10
+# Disallow utility/search parameter pages from indexing
+Disallow: /SearchResults?
+Disallow: /onboarding?
+Disallow: /*?utm_
 
-# Sitemap
+# Block resource paths from being indexed
+Disallow: /assets/
+Disallow: /static/
+
+# Allow important resource paths for rendering
+Allow: /assets/*.css
+Allow: /assets/*.js
+Allow: /assets/*.png
+Allow: /assets/*.jpg
+Allow: /assets/*.svg
+
+# Crawl rate limiting for large crawlers
+Crawl-delay: 1
+
+# Sitemap locations
 Sitemap: https://1cplatform.com/sitemap.xml
+Sitemap: https://1cplatform.com/rss.xml
 
-# RSS Feed
-Allow: /rss.xml
+# Block AI training bots (optional - uncomment to block)
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+# User-agent: Google-Extended
+# Disallow: /

@@ -10,6 +10,7 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
 
 const categories = [
   {
@@ -303,6 +304,18 @@ console.log('Agent created:', agent.id);`}</code>
           </div>
         </div>
       </section>
+      <FAQSection
+        title="Documentation FAQ"
+        subtitle="Common questions about building with 1C Platform."
+        faqs={[
+          { question: 'How do I get started with 1C Platform?', answer: 'Sign up for a free Starter account, install our SDK via npm, and follow our Quick Start guide to build your first AI agent in under 5 minutes. The Starter plan includes 1,000 API calls per month at no cost.' },
+          { question: 'What programming languages are supported?', answer: 'We provide official SDKs for JavaScript/TypeScript, Python, and Go. Our REST API works with any language that can make HTTP requests. Community SDKs are available for Rust, Ruby, PHP, and Java.' },
+          { question: 'Do I need coding skills to build AI agents?', answer: 'No. Our no-code visual builder lets you create AI agents by defining goals, selecting tools, and configuring behavior through a drag-and-drop interface. Developers can use our SDK and CLI for advanced control and custom integrations.' },
+          { question: 'How do I authenticate API requests?', answer: 'Use API keys for server-side requests and OAuth 2.0 for user-facing applications. API keys are available in your dashboard under Settings > API Keys. Never expose server-side API keys in client-side code.' },
+          { question: 'What is the rate limit for API calls?', answer: 'Rate limits depend on your plan: Starter (1,000/month), Professional (50,000/month), and Enterprise (custom). All plans allow 10 requests per second. Contact us for higher limits on Enterprise plans.' },
+          { question: 'Where can I find code examples?', answer: 'Our documentation includes code examples in JavaScript, Python, and Go for every API endpoint. The API Reference provides interactive examples you can run directly in your browser. Check our GitHub for sample projects and tutorials.' },
+        ]}
+      />
       <RelatedContent
         currentPage="Documentation"
         category="resources"
