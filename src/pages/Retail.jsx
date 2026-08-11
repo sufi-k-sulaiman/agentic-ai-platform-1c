@@ -13,6 +13,8 @@ import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const challenges = [
   {
@@ -332,6 +334,7 @@ export default function Retail() {
       </section>
       
       <FeatureDetailSection {...featureDetails.Retail} />
+      <FAQSection faqs={getFAQs('Retail')} />
 <RelatedContent
         currentPage="Retail"
         category="industry"

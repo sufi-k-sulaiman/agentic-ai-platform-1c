@@ -13,6 +13,8 @@ import { base44 } from '@/api/base44Client';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 
 
@@ -936,6 +938,7 @@ export default function Cyber() {
 
       
       <FeatureDetailSection {...featureDetails.Cyber} />
+      <FAQSection faqs={getFAQs('Cyber')} />
 <RelatedContent
         currentPage="Cyber"
         category="product"

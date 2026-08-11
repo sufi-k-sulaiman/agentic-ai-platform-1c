@@ -12,6 +12,8 @@ import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const challenges = [
   {
@@ -328,6 +330,7 @@ export default function Airports() {
       </section>
       
       <FeatureDetailSection {...featureDetails.Airports} />
+      <FAQSection faqs={getFAQs('Airports')} />
 <RelatedContent
         currentPage="Airports"
         category="industry"

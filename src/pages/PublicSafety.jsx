@@ -11,6 +11,8 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const challenges = [
   {
@@ -284,6 +286,7 @@ export default function PublicSafety() {
       </section>
       
       <FeatureDetailSection {...featureDetails.PublicSafety} />
+      <FAQSection faqs={getFAQs('PublicSafety')} />
 <RelatedContent currentPage="PublicSafety" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
     </InternalLinker>

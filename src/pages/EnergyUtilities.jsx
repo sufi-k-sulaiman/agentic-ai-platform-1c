@@ -12,6 +12,8 @@ import VerticalAnalytics from '@/components/VerticalAnalytics';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const challenges = [
   {
@@ -308,6 +310,7 @@ export default function EnergyUtilities() {
       </section>
       
       <FeatureDetailSection {...featureDetails.EnergyUtilities} />
+      <FAQSection faqs={getFAQs('EnergyUtilities')} />
 <RelatedContent currentPage="EnergyUtilities" category="industry" crossCategories={['product']} title="Explore Related Solutions" />
     </div>
     </InternalLinker>

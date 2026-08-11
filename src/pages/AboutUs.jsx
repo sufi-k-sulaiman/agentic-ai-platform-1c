@@ -11,6 +11,8 @@ import toast from 'react-hot-toast';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const values = [
 {
@@ -298,6 +300,7 @@ export default function AboutUs() {
       }
       
       <FeatureDetailSection {...featureDetails.AboutUs} />
+      <FAQSection faqs={getFAQs('AboutUs')} />
 <RelatedContent
         currentPage="AboutUs"
         category="company"

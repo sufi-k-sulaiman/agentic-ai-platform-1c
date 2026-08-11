@@ -1,461 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>1C Platform Blog</title>
+    <title>1C Platform Blog - Agentic AI Insights</title>
     <link>https://1cplatform.com/Blog</link>
-    <description>In-depth articles on agentic AI, generative AI, AI governance, architecture, design, and enterprise adoption.</description>
+    <atom:link href="https://1cplatform.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>In-depth articles on agentic AI, generative AI, AI governance, architecture, design patterns, and enterprise adoption. Learn how autonomous AI agents transform enterprise operations.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 05:22:57 GMT</lastBuildDate>
-    <atom:link href="https://1cplatform.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <copyright>Copyright 2026 1C Platform. All rights reserved.</copyright>
+    <managingEditor>contact@1cplatform.com (1C Platform Team)</managingEditor>
+    <webMaster>contact@1cplatform.com (1C Platform Team)</webMaster>
+    <lastBuildDate>Mon, 11 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <ttl>60</ttl>
+    <image>
+      <url>https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png</url>
+      <title>1C Platform Blog</title>
+      <link>https://1cplatform.com/Blog</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+    <category>Artificial Intelligence</category>
+    <category>Agentic AI</category>
+    <category>Enterprise AI</category>
+    <category>AI Governance</category>
+    <category>Generative AI</category>
+
+    <!-- Featured Articles -->
     <item>
-      <title>User Experience Design for AI Agents: Best Practices Guide</title>
-      <link>https://1cplatform.com/BlogAgenticAIUXDesign</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIUXDesign</guid>
-      <description>Master UX design principles for autonomous AI agents. Learn interaction patterns, user flows, and interface guidelines for intuitive agent experiences.</description>
-      <author>Rachel Foster</author>
-      <pubDate>Wed, 22 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
+      <title>The Rise of Agentic AI: A Game Changer for Enterprises</title>
+      <link>https://1cplatform.com/BlogAgenticAIEnterprise</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIEnterprise</guid>
+      <description>Discover how autonomous AI agents are transforming enterprise operations and enabling intelligent decision-making at scale.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>AI Insights</category>
+      <category>Agentic AI</category>
+      <pubDate>Mon, 04 Aug 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Designing Conversational AI Interfaces: From Chatbots to Agents</title>
-      <link>https://1cplatform.com/BlogConversationalAIDesign</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogConversationalAIDesign</guid>
-      <description>Create engaging conversational experiences for AI agents. Message design, context management, and natural dialogue patterns.</description>
-      <author>Sophie Martinez</author>
-      <pubDate>Tue, 21 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
+      <title>Measuring the ROI of Your Agentic AI Investment</title>
+      <link>https://1cplatform.com/BlogAgenticAIROI</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIROI</guid>
+      <description>Learn how to calculate, track, and maximize returns from autonomous AI agents with proven frameworks and real-world metrics.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>Product</category>
+      <category>Agentic AI</category>
+      <pubDate>Thu, 31 Jul 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Visual Design Patterns for Agentic AI: Component Library Guide</title>
-      <link>https://1cplatform.com/BlogVisualDesignPatterns</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogVisualDesignPatterns</guid>
-      <description>Build consistent AI agent interfaces with reusable design patterns. Explore component libraries, design systems, and visual guidelines.</description>
-      <author>David Chen</author>
-      <pubDate>Mon, 20 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
+      <title>Designing Effective Multi-Agent Systems: A Practical Guide</title>
+      <link>https://1cplatform.com/BlogMultiAgentSystems</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogMultiAgentSystems</guid>
+      <description>Master the art of building multi-agent AI systems with orchestration patterns and best practices for enterprise deployment.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>Tutorials</category>
+      <category>Agentic AI</category>
+      <pubDate>Tue, 29 Jul 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Designing for AI Transparency: Building Trust Through Design</title>
-      <link>https://1cplatform.com/BlogAITransparencyDesign</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAITransparencyDesign</guid>
-      <description>Design interfaces that make AI decision-making transparent. Explainability patterns, trust indicators, and confidence displays.</description>
-      <author>Emma Wilson</author>
-      <pubDate>Sun, 19 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Multi-Agent System UI/UX: Coordinating Multiple AI Agents</title>
-      <link>https://1cplatform.com/BlogMultiAgentUIDesign</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogMultiAgentUIDesign</guid>
-      <description>Design interfaces for complex multi-agent systems. Agent coordination, status visualization, and managing agent interactions.</description>
-      <author>Michael Torres</author>
-      <pubDate>Sat, 18 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Designing AI Agent Personas: Character and Voice Guidelines</title>
-      <link>https://1cplatform.com/BlogAIAgentPersonas</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAIAgentPersonas</guid>
-      <description>Create compelling AI agent personalities. Persona development, voice design, tone guidelines, and character consistency.</description>
-      <author>Jessica Park</author>
-      <pubDate>Fri, 17 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Design Systems for AI-First Products: Scalable UI Architecture</title>
-      <link>https://1cplatform.com/BlogAIDesignSystems</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAIDesignSystems</guid>
-      <description>Build design systems optimized for AI products. Component architecture, token systems, and scaling AI interfaces.</description>
-      <author>Alex Kumar</author>
-      <pubDate>Thu, 16 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Accessibility in Agentic AI Design: Inclusive Agent Experiences</title>
-      <link>https://1cplatform.com/BlogAccessibleAIDesign</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAccessibleAIDesign</guid>
-      <description>Design accessible AI agents for all users. WCAG compliance, screen reader support, keyboard navigation, and inclusive design principles.</description>
-      <author>Maria Rodriguez</author>
-      <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Tool Selection and Integration Design for AI Agents</title>
-      <link>https://1cplatform.com/BlogToolSelectionDesign</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogToolSelectionDesign</guid>
-      <description>Master the art of selecting and integrating tools for AI agents. Design patterns for tool discovery, evaluation, and seamless integration.</description>
-      <author>Kevin Zhang</author>
-      <pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Designing Agent Tool Interfaces: Best Practices and Patterns</title>
-      <link>https://1cplatform.com/BlogAgentToolInterfaces</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgentToolInterfaces</guid>
-      <description>Create intuitive tool interfaces for AI agents. Input/output design, parameter configuration, and result visualization patterns.</description>
-      <author>Sarah Mitchell</author>
-      <pubDate>Mon, 13 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>API Design for Agentic AI Tools: Developer Experience Guide</title>
-      <link>https://1cplatform.com/BlogAPIDesignAgenticTools</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAPIDesignAgenticTools</guid>
-      <description>Build developer-friendly APIs for AI agent tools. Endpoint design, authentication, versioning, and documentation best practices.</description>
-      <author>Michael Chen</author>
-      <pubDate>Sun, 12 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Tool Discovery UX: Helping Agents Find the Right Tools</title>
-      <link>https://1cplatform.com/BlogToolDiscoveryUX</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogToolDiscoveryUX</guid>
-      <description>Design effective tool discovery experiences for AI agents. Search, categorization, recommendations, and intelligent tool matching.</description>
-      <author>Emma Wilson</author>
-      <pubDate>Sat, 11 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Error Handling Design for Agent Tool Execution</title>
-      <link>https://1cplatform.com/BlogToolErrorHandling</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogToolErrorHandling</guid>
-      <description>Handle tool execution failures gracefully. Retry strategies, fallback patterns, user communication, and recovery workflows.</description>
-      <author>David Park</author>
-      <pubDate>Fri, 10 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Tool Chaining and Workflow Design for AI Agents</title>
-      <link>https://1cplatform.com/BlogToolChainingWorkflows</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogToolChainingWorkflows</guid>
-      <description>Design complex tool chains and workflows. Sequential execution, parallel processing, conditional logic, and workflow visualization.</description>
-      <author>Rachel Foster</author>
-      <pubDate>Thu, 09 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Monitoring Tools for Agentic AI: Observability Interface Design</title>
-      <link>https://1cplatform.com/BlogMonitoringToolsDesign</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogMonitoringToolsDesign</guid>
-      <description>Design monitoring and observability interfaces for AI agents. Metrics visualization, log analysis, trace viewing, and alert management.</description>
-      <author>James Patterson</author>
-      <pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
-    </item>
-    <item>
-      <title>Testing Tools and Frameworks for Agentic AI Systems</title>
-      <link>https://1cplatform.com/BlogTestingToolsFrameworks</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogTestingToolsFrameworks</guid>
-      <description>Build comprehensive testing tools for AI agents. Unit testing, integration testing, simulation environments, and quality assurance patterns.</description>
-      <author>Dr. Alex Kumar</author>
-      <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
-      <category>Agentic Design</category>
+      <title>Ensuring Trust and Security in Agentic AI Deployments</title>
+      <link>https://1cplatform.com/BlogAgenticAISecurity</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAISecurity</guid>
+      <description>Comprehensive guide to securing autonomous AI agents in enterprise environments with best practices for deployment.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>Security</category>
+      <category>Agentic AI</category>
+      <pubDate>Fri, 25 Jul 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Agentic AI vs Traditional AI: Complete Comparison Guide</title>
       <link>https://1cplatform.com/BlogAgenticVsTraditionalAI</link>
       <guid isPermaLink="true">https://1cplatform.com/BlogAgenticVsTraditionalAI</guid>
-      <description>Comprehensive comparison of agentic AI and traditional AI systems. Understand key differences, capabilities, limitations, and when to use each approach.</description>
-      <author>Dr. Sarah Mitchell</author>
-      <pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate>
+      <description>Comprehensive comparison of agentic AI and traditional AI systems. Understand key differences, capabilities, and when to use each.</description>
+      <dc:creator>1C Platform Team</dc:creator>
       <category>AI Comparison</category>
+      <category>Agentic AI</category>
+      <pubDate>Wed, 23 Jul 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>When to Use Agentic AI vs Traditional AI: Decision Framework</title>
-      <link>https://1cplatform.com/BlogWhenUseAgenticAI</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogWhenUseAgenticAI</guid>
-      <description>Practical guide to choosing between agentic and traditional AI. Decision trees, use case examples, and ROI considerations.</description>
-      <author>James Patterson</author>
-      <pubDate>Thu, 19 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Agentic AI vs Rule-Based Systems: Why Intelligence Beats Rules</title>
-      <link>https://1cplatform.com/BlogAgenticVsRuleBased</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticVsRuleBased</guid>
-      <description>Compare agentic AI with traditional rule-based systems. Understand limitations of rules and advantages of autonomous intelligence.</description>
-      <author>Laura Martinez</author>
-      <pubDate>Wed, 18 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Cost Comparison: Agentic AI vs Traditional AI Systems</title>
-      <link>https://1cplatform.com/BlogAgenticAICostAnalysis</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAICostAnalysis</guid>
-      <description>Detailed cost analysis of agentic vs traditional AI. Development costs, operational expenses, ROI timelines, and total cost of ownership.</description>
-      <author>David Chang, CFO</author>
-      <pubDate>Tue, 17 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Performance Analysis: Agentic AI vs Traditional AI Benchmarks</title>
-      <link>https://1cplatform.com/BlogAgenticAIPerformance</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIPerformance</guid>
-      <description>Compare performance metrics between agentic and traditional AI. Speed, accuracy, reliability, and scalability benchmarks.</description>
-      <author>Dr. Alex Kumar</author>
-      <pubDate>Mon, 16 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Architecture Differences: Agentic AI vs Traditional AI Systems</title>
-      <link>https://1cplatform.com/BlogAgenticAIArchitecture</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIArchitecture</guid>
-      <description>Deep dive into architectural patterns for agentic and traditional AI. Components, data flow, and infrastructure requirements.</description>
-      <author>Kevin Zhang, Solutions Architect</author>
-      <pubDate>Sun, 15 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Agentic AI Architecture Patterns: ReAct, Chain-of-Thought, and Beyond</title>
-      <link>https://1cplatform.com/BlogAgenticAIArchitecturePatterns</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIArchitecturePatterns</guid>
-      <description>Comprehensive guide to AI agent architecture patterns. Compare ReAct, Chain-of-Thought, ReWOO, and other frameworks for building autonomous agents.</description>
-      <author>Dr. Alex Thompson</author>
-      <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Memory Management in Agentic AI: Short-term vs Long-term Strategies</title>
-      <link>https://1cplatform.com/BlogAgenticAIMemoryManagement</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIMemoryManagement</guid>
-      <description>Complete guide to memory architecture for AI agents. Learn about short-term, long-term, and episodic memory patterns for autonomous systems.</description>
-      <author>Dr. Sarah Mitchell</author>
-      <pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Tool Integration in Agentic AI: APIs, Functions, and External Systems</title>
-      <link>https://1cplatform.com/BlogAgenticAIToolIntegration</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIToolIntegration</guid>
-      <description>Master tool integration for AI agents. Learn how to connect agents with APIs, databases, and external systems for powerful autonomous capabilities.</description>
-      <author>Kevin Zhang</author>
-      <pubDate>Mon, 13 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Observability for Agentic AI: Monitoring, Debugging, and Optimization</title>
-      <link>https://1cplatform.com/BlogAgenticAIObservability</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIObservability</guid>
-      <description>Comprehensive guide to observability in AI agents. Learn how to monitor, debug, and optimize autonomous systems with traces, metrics, and logs.</description>
-      <author>Dr. Marcus Chen</author>
-      <pubDate>Sun, 12 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Prompt Engineering for Agentic AI: Techniques and Best Practices</title>
-      <link>https://1cplatform.com/BlogAgenticAIPromptEngineering</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIPromptEngineering</guid>
-      <description>Master prompt engineering for autonomous agents. Learn techniques for system prompts, few-shot examples, and structured outputs.</description>
-      <author>Rachel Foster</author>
-      <pubDate>Sat, 11 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Error Handling and Recovery in Agentic AI Systems</title>
-      <link>https://1cplatform.com/BlogAgenticAIErrorHandling</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIErrorHandling</guid>
-      <description>Master error handling for AI agents. Learn retry strategies, fallback patterns, and graceful degradation for robust autonomous systems.</description>
-      <author>James Patterson</author>
-      <pubDate>Fri, 10 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Context Window Management in Agentic AI: Strategies and Techniques</title>
-      <link>https://1cplatform.com/BlogAgenticAIContextManagement</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIContextManagement</guid>
-      <description>Master context management for AI agents. Learn how to work within token limits while maintaining rich context for autonomous decision-making.</description>
-      <author>Laura Martinez</author>
-      <pubDate>Thu, 09 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Scaling Agentic AI: From Prototype to Production at Enterprise Scale</title>
-      <link>https://1cplatform.com/BlogAgenticAIScalability</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIScalability</guid>
-      <description>Learn how to scale AI agents to handle millions of requests. Infrastructure patterns, performance optimization, and cost management at scale.</description>
-      <author>Michael Rodriguez</author>
-      <pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Use Cases: Where Agentic AI and Traditional AI Each Excel</title>
-      <link>https://1cplatform.com/BlogAgenticAIUseCaseComparison</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIUseCaseComparison</guid>
-      <description>Real-world use cases comparing agentic and traditional AI approaches. See which technology fits your specific business need.</description>
-      <author>Rachel Thompson</author>
-      <pubDate>Sat, 14 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Migration Guide: From Traditional AI to Agentic AI Systems</title>
-      <link>https://1cplatform.com/BlogMigratingToAgenticAI</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogMigratingToAgenticAI</guid>
-      <description>Step-by-step guide to migrating from traditional AI to agentic systems. Strategies, timelines, and risk mitigation.</description>
-      <author>Michael Rodriguez</author>
-      <pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>ROI Comparison: Agentic AI vs Traditional AI Business Value</title>
-      <link>https://1cplatform.com/BlogAgenticAIROIComparison</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIROIComparison</guid>
-      <description>Compare return on investment for agentic and traditional AI. Real metrics, payback periods, and long-term value creation.</description>
-      <author>Jennifer Lee, Business Analyst</author>
-      <pubDate>Thu, 12 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Future-Proofing with Agentic AI: Why Autonomous Systems Win Long-Term</title>
-      <link>https://1cplatform.com/BlogAgenticAIFutureProof</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIFutureProof</guid>
-      <description>Why agentic AI is the future. Technology trends, market predictions, and strategic advantages of autonomous systems.</description>
-      <author>Dr. Emily Carter</author>
-      <pubDate>Wed, 11 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Limitations of Agentic AI: When Traditional AI is Still Better</title>
-      <link>https://1cplatform.com/BlogAgenticAILimitations</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAILimitations</guid>
-      <description>Honest assessment of where agentic AI falls short. Understand constraints and when to stick with traditional approaches.</description>
-      <author>Mark Stevens</author>
-      <pubDate>Tue, 10 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Skills Transition: From Traditional AI to Agentic AI Development</title>
-      <link>https://1cplatform.com/BlogAgenticAISkillsTransition</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAISkillsTransition</guid>
-      <description>How ML engineers and data scientists can transition to agentic AI. New skills needed, learning paths, and career implications.</description>
-      <author>Lisa Anderson</author>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Industry Adoption: Agentic AI vs Traditional AI Across Sectors</title>
-      <link>https://1cplatform.com/BlogAgenticAIIndustryAdoption</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIIndustryAdoption</guid>
-      <description>Compare adoption rates of agentic and traditional AI across industries. Trends, drivers, and predictions for each sector.</description>
-      <author>Robert Kim</author>
-      <pubDate>Sun, 08 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
-    </item>
-    <item>
-      <title>Security Comparison: Agentic AI vs Traditional AI Risk Profiles</title>
-      <link>https://1cplatform.com/BlogAgenticAISecurityComparison</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAISecurityComparison</guid>
-      <description>Compare security risks and mitigations for agentic and traditional AI. Threat models, vulnerabilities, and best practices.</description>
-      <author>Marcus Johnson, CISO</author>
-      <pubDate>Sat, 07 Dec 2024 00:00:00 GMT</pubDate>
-      <category>AI Comparison</category>
+      <title>10 Proven Use Cases for Agentic AI in Enterprise Operations</title>
+      <link>https://1cplatform.com/BlogAgenticAIUseCases</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIUseCases</guid>
+      <description>Explore real-world applications of autonomous AI agents across departments with implementation guides and results.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>Case Studies</category>
+      <category>Agentic AI</category>
+      <pubDate>Mon, 21 Jul 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Introduction to Generative AI: A Complete Guide</title>
       <link>https://1cplatform.com/BlogGenerativeAIIntro</link>
       <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAIIntro</guid>
-      <description>Discover what generative AI is, how it works, and why it\'s transforming industries. Learn about the technology behind ChatGPT, DALL-E, and more.</description>
-      <author>Sarah Chen</author>
-      <pubDate>Tue, 10 Dec 2024 00:00:00 GMT</pubDate>
+      <description>Discover what generative AI is, how it works, and why it's transforming industries. Learn about the technology behind ChatGPT, DALL-E, and more.</description>
+      <dc:creator>1C Platform Team</dc:creator>
       <category>Generative AI</category>
+      <pubDate>Thu, 17 Jul 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Generative AI vs Traditional AI: Key Differences Explained</title>
-      <link>https://1cplatform.com/BlogGenerativeAIvsTraditional</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAIvsTraditional</guid>
-      <description>Understand the fundamental differences between generative and traditional AI, their use cases, and which one is right for your business needs.</description>
-      <author>Michael Rodriguez</author>
-      <pubDate>Mon, 09 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
+      <title>Understanding AI Autonomy: From Basic Automation to True Intelligence</title>
+      <link>https://1cplatform.com/BlogAIAutonomyIntro</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAIAutonomyIntro</guid>
+      <description>Explore the spectrum of AI autonomy, from simple automation to fully autonomous systems. Learn what makes AI truly autonomous.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>AI Autonomy</category>
+      <pubDate>Tue, 15 Jul 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Understanding Large Language Models: GPT, Claude, and Beyond</title>
-      <link>https://1cplatform.com/BlogLLMGuide</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogLLMGuide</guid>
-      <description>A comprehensive guide to large language models, how they work, and how businesses are using them to transform operations.</description>
-      <author>Dr. Emily Wang</author>
-      <pubDate>Sun, 08 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
-    </item>
-    <item>
-      <title>Generative AI for Content Creation: A Practical Guide</title>
-      <link>https://1cplatform.com/BlogGenerativeAIContent</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAIContent</guid>
-      <description>Learn how to leverage generative AI for creating high-quality content at scale. Tips, tools, and best practices for marketers and creators.</description>
-      <author>Jessica Martinez</author>
-      <pubDate>Sat, 07 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
-    </item>
-    <item>
-      <title>AI-Powered Code Generation: Accelerating Software Development</title>
-      <link>https://1cplatform.com/BlogGenerativeAICode</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAICode</guid>
-      <description>Learn how AI code assistants like GitHub Copilot are transforming software development. Best practices, limitations, and real-world examples.</description>
-      <author>Alex Thompson</author>
-      <pubDate>Fri, 06 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
-    </item>
-    <item>
-      <title>AI Image Generation: From DALL-E to Midjourney</title>
-      <link>https://1cplatform.com/BlogGenerativeAIImages</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAIImages</guid>
-      <description>Explore how AI image generators are revolutionizing design. Learn about the technology, tools, and best practices for creating stunning visuals.</description>
-      <author>Rachel Kim</author>
-      <pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
-    </item>
-    <item>
-      <title>Ethics and Bias in Generative AI: A Responsible AI Guide</title>
-      <link>https://1cplatform.com/BlogGenerativeAIEthics</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAIEthics</guid>
-      <description>Navigate the ethical challenges of generative AI. Learn about bias, fairness, transparency, and building responsible AI systems.</description>
-      <author>Dr. James Carter</author>
-      <pubDate>Wed, 04 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
-    </item>
-    <item>
-      <title>Generative AI for Business Automation: ROI and Use Cases</title>
-      <link>https://1cplatform.com/BlogGenerativeAIBusiness</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAIBusiness</guid>
-      <description>Discover how enterprises are using generative AI to automate processes, reduce costs, and drive growth. Real use cases and ROI metrics.</description>
-      <author>David Park</author>
-      <pubDate>Tue, 03 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
-    </item>
-    <item>
-      <title>Fine-Tuning Generative AI Models: A Practical Guide</title>
-      <link>https://1cplatform.com/BlogGenerativeAIFineTuning</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAIFineTuning</guid>
-      <description>Learn how to customize generative AI models for your specific needs through fine-tuning. Techniques, best practices, and real-world examples.</description>
-      <author>Dr. Lisa Anderson</author>
-      <pubDate>Mon, 02 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
-    </item>
-    <item>
-      <title>The Future of Generative AI: Trends and Predictions for 2025-2030</title>
-      <link>https://1cplatform.com/BlogGenerativeAIFuture</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogGenerativeAIFuture</guid>
-      <description>Explore where generative AI is heading. From multimodal models to autonomous agents, discover the trends shaping the next 5 years.</description>
-      <author>Dr. Sarah Chen</author>
-      <pubDate>Sun, 01 Dec 2024 00:00:00 GMT</pubDate>
-      <category>Generative AI</category>
-    </item>
-    <item>
-      <title>Introduction to Agentic AI Governance: A Strategic Framework</title>
-      <link>https://1cplatform.com/BlogAgenticAIGovernanceIntro</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIGovernanceIntro</guid>
-      <description>Understand the critical importance of governance for autonomous AI agents. Learn frameworks, best practices, and how to implement effective oversight.</description>
-      <author>Dr. Katherine Morrison</author>
-      <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
+      <title>AI Governance Best Practices: Lessons from Leading Organizations</title>
+      <link>https://1cplatform.com/BlogAIGovernanceBestPractices</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAIGovernanceBestPractices</guid>
+      <description>Learn from organizations successfully governing autonomous AI. Proven strategies, common pitfalls, and practical implementation guides.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>AI Insights</category>
       <category>AI Governance</category>
+      <pubDate>Fri, 11 Jul 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Regulatory Compliance for Agentic AI: Navigating Global Requirements</title>
-      <link>https://1cplatform.com/BlogAgenticAICompliance</link>
-      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAICompliance</guid>
-      <description>Comprehensive guide to AI regulations affecting autonomous agents. EU AI Act, US requirements, and industry-specific compliance.</description>
-      <author>Maria Santos</author>
-      <pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate>
-      <category>AI Governance</category>
+      <title>Agent Architecture Fundamentals: Building Blocks of Autonomous AI</title>
+      <link>https://1cplatform.com/BlogAgentArchitectureFundamentals</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAgentArchitectureFundamentals</guid>
+      <description>Master the core components of agent architecture. Control loops, decision engines, memory systems, and tool interfaces.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>Agentic Capabilities</category>
+      <pubDate>Wed, 09 Jul 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Fine-Tuning vs RAG: Choosing the Right Approach for Your App</title>
+      <link>https://1cplatform.com/BlogFineTuningVsRAG</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogFineTuningVsRAG</guid>
+      <description>Compare fine-tuning and retrieval-augmented generation. When to use each, implementation patterns, and cost considerations.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>Agentic Insights</category>
+      <pubDate>Mon, 07 Jul 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>No-Code Agentic AI: Empowering Every Business User</title>
+      <link>https://1cplatform.com/BlogNoCodeAgenticAI</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogNoCodeAgenticAI</guid>
+      <description>Discover how no-code platforms democratize AI agent development for business users without technical backgrounds.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>Tutorials</category>
+      <pubDate>Thu, 03 Jul 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Scaling Agentic AI from Pilot to Production: Lessons Learned</title>
+      <link>https://1cplatform.com/BlogAgenticAIScaling</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAgenticAIScaling</guid>
+      <description>Learn from 500+ enterprise deployments. Strategies for scaling AI agents across your organization and avoiding common pitfalls.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>AI Insights</category>
+      <pubDate>Tue, 01 Jul 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Future of Work: Human-AI Collaboration with Agentic Systems</title>
+      <link>https://1cplatform.com/BlogHumanAICollaboration</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogHumanAICollaboration</guid>
+      <description>Explore how humans and AI agents will work together in the future workplace, creating unprecedented productivity gains.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>AI Insights</category>
+      <pubDate>Fri, 27 Jun 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Testing and Validation Strategies for AI Agents</title>
+      <link>https://1cplatform.com/BlogAgentTestingValidation</link>
+      <guid isPermaLink="true">https://1cplatform.com/BlogAgentTestingValidation</guid>
+      <description>Comprehensive testing approaches for agents. Unit tests, integration tests, behavior validation, and production monitoring.</description>
+      <dc:creator>1C Platform Team</dc:creator>
+      <category>Agentic Capabilities</category>
+      <pubDate>Wed, 25 Jun 2026 09:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

@@ -10,6 +10,8 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const benefits = [
   { title: 'Competitive Salary', description: 'Top-tier compensation packages' },
@@ -345,6 +347,7 @@ export default function Careers() {
           )}
         </div>
       </section>
+      <FAQSection faqs={getFAQs('Careers')} />
       <RelatedContent
         currentPage="Careers"
         category="company"
