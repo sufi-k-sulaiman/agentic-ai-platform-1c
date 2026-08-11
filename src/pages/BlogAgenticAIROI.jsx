@@ -8,6 +8,8 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 
 export default function BlogAgenticAIROI() {
   return (
@@ -197,6 +199,11 @@ export default function BlogAgenticAIROI() {
             <li><strong>Cost per transaction:</strong> Total costs divided by transaction volume</li>
           </ul>
 
+          <InlineRelatedGuides
+            currentPage="BlogAgenticAIROI"
+            pages={['BlogAgenticAIEnterprise', 'SavingsCalculator', 'BlogAgenticAICostAnalysis', 'BlogAgenticAIROIComparison']}
+          />
+
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Best Practices for ROI Tracking</h2>
           <ol className="space-y-3 text-gray-700 mb-8 list-decimal list-inside">
             <li><strong>Establish baseline metrics</strong> before AI deployment</li>
@@ -243,6 +250,15 @@ export default function BlogAgenticAIROI() {
         </div>
       </InternalLinker>
       
+      <PeopleAlsoAsk
+        currentPage="BlogAgenticAIROI"
+        questions={[
+          { question: 'What is the ROI of agentic AI?', answer: 'Well-implemented agentic AI typically delivers 300-500% ROI within the first year, with payback periods of 3-6 months. ROI compounds over time as agents learn and organizations discover adjacent use cases, with year-two ROI often exceeding 800-1000%.' },
+          { question: 'How do you measure agentic AI ROI?', answer: 'Measure agentic AI ROI by establishing baseline metrics before deployment, defining success criteria upfront, tracking cost savings, productivity gains, revenue impact, and error reduction with automated dashboards, and accounting for ramp-up time. Include both quantitative and qualitative benefits like employee satisfaction.' },
+          { question: 'How long does it take to see ROI from AI agents?', answer: 'Most enterprises see measurable ROI within 3-6 months of deployment. Initial gains come from automating high-volume tasks, while compounding value emerges as agents learn and organizations scale to adjacent use cases. Year-two ROI often exceeds 800-1000%.' },
+          { question: 'What costs should I include in AI ROI calculations?', answer: 'Include implementation costs (development, integration, training), operational costs (compute, API calls, maintenance), and opportunity costs. Offset these against cost savings from automation, productivity gains, revenue from new capabilities, and risk reduction benefits.' },
+        ]}
+      />
       <RelatedContent currentPage="BlogAgenticAIROI" category="blog" title="Related Articles" />
       </article>
     </div>

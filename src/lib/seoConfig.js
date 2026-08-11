@@ -58,6 +58,7 @@ export const ogImages = {
   BlogCategoryAIGovernance: 'https://images.unsplash.com/photo-1563206157-b3e1599f7397?w=1200&h=630&fit=crop',
   BlogCategoryGenerativeAI: 'https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop',
   BlogCategoryAIAutonomy: 'https://images.unsplash.com/photo-1501386764911-4d7e9b6c5e0f?w=1200&h=630&fit=crop',
+  AIGlossary: 'https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop',
 };
 
 /**
