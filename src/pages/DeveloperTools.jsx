@@ -806,6 +806,53 @@ $ 1c migrate v1 v2
           </div>
         </motion.div>
       </section>
+
+      {/* Cross-linked content section */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 space-y-10">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Build Agents, Not Boilerplate
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Developer productivity is the bottleneck for most AI initiatives.
+              1C Platform removes that bottleneck with developer tools designed for
+              agentic AI from the ground up. Instead of wiring together
+              authentication, tool use, and agent state management from scratch,
+              developers use our SDK and CLI to scaffold agents in minutes. The
+              REST and GraphQL APIs integrate with any system, while webhooks and
+              edge functions let agents respond to events in real time. This means
+              your team spends time on the logic that matters—reasoning and logic
+              capabilities, tool selection, and multi-agent orchestration—rather
+              than reinventing infrastructure. The result is faster time-to-market
+              for agentic AI use cases and a developer experience that scales from
+              prototype to production without rewrites.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Enterprise-Ready by Default, Not by Retrofit
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Most developer tools optimize for speed and ignore the concerns that
+              block enterprise adoption: AI governance, AI compliance, and AI
+              observability. 1C Platform bakes these in. Every agent built with our
+              SDK inherits access control, audit logging, and compliance frameworks
+              for SOC 2, ISO, and HIPAA. Agent testing and validation tools catch
+              issues before production, while agent deployment strategies support
+              safe rollouts. In production, AI observability and monitoring provide
+              real-time visibility, and AI governance metrics give leaders the
+              dashboards they need. This means developers can move fast without
+              leaving security and compliance behind—making it possible to deploy
+              agentic AI in regulated industries like financial institutions and
+              healthcare with confidence. Start with the documentation and API
+              reference, then join the community to share patterns with other AI
+              developers.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <RelatedContent
         currentPage="DeveloperTools"
         category="product"

@@ -60,6 +60,67 @@ export default function ContentParagraphs() {
             </InternalLinker>
           </p>
         </div>
+
+        <div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            From Pilot to Production Without the Growing Pains
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            <InternalLinker currentPage="Home">
+              Many teams stall after their first AI agent because scaling agentic AI
+              across an organization introduces new challenges in multi-agent systems,
+              agent state management, and agent reliability and resilience. 1C
+              Platform is built to take you from a single pilot to a fleet of
+              coordinated autonomous agents without re-architecting. Our agent
+              deployment strategies support blue-green releases and canary rollouts,
+              while built-in agent performance optimization keeps latency low as
+              workloads grow. Whether you're expanding into new verticals or adding
+              agentic AI governance for regulated environments, the platform scales
+              with the same developer tools and SDK you started with.
+            </InternalLinker>
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            Trust, Transparency, and Responsible AI at the Core
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            <InternalLinker currentPage="Home">
+              Deploying autonomous AI means answering hard questions about AI
+              accountability, AI governance, and ethical frameworks for agentic AI.
+              1C Platform bakes these concerns into the product. Every agent decision
+              is logged for AI observability and monitoring, access control enforces
+              least privilege, and compliance frameworks for SOC 2, ISO, and HIPAA are
+              built in. Leaders can audit agent behavior, review AI governance
+              metrics, and demonstrate AI compliance to regulators. Pair that with
+              AI cybersecurity and threat detection, and you get a platform where
+              trust is not an afterthought—it's the foundation that lets you deploy
+              with confidence.
+            </InternalLinker>
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            Built for Every Industry, Not Just One
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            <InternalLinker currentPage="Home">
+              Agentic AI delivers the most value when it understands your industry's
+              workflows. That's why 1C Platform ships vertical-specific solutions for
+              property management, healthcare, financial institutions, retail,
+              education, and smart cities, among others. An agent in a data center
+              optimizes cooling and infrastructure monitoring, while an agent in
+              transit handles route optimization and scheduling. In financial
+              services, agents power fraud detection and compliance. Each vertical
+              inherits the same enterprise suite, cloud platform, and developer tools,
+              so your team builds once and deploys everywhere. Explore our blog for
+              deep dives on agentic AI use cases, or check the AI glossary to get
+              fluent in the terminology driving the next wave of enterprise AI.
+            </InternalLinker>
+          </p>
+        </div>
       </div>
     </section>
   );

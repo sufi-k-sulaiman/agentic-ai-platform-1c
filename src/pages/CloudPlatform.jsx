@@ -603,6 +603,51 @@ export default function CloudPlatform() {
           </div>
         </motion.div>
       </section>
+
+      {/* Cross-linked content section */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 space-y-10">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              The Foundation for Enterprise AI at Scale
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              A cloud platform is only as valuable as the workloads it supports.
+              1C Platform's cloud infrastructure is purpose-built for agentic AI,
+              giving autonomous agents the compute, storage, and networking they
+              need to operate reliably at enterprise scale. Whether you're running
+              a single agent or coordinating multi-agent systems across 32 regions,
+              the platform auto-scales to meet demand and scales to zero to control
+              costs. This means your AI agents are always responsive without
+              overpaying for idle capacity. Pair that with enterprise-grade
+              cybersecurity and compliance automation, and you have a foundation
+              that meets the bar for financial institutions, healthcare, and
+              government agencies.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              From Infrastructure to Intelligent Operations
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Infrastructure alone doesn't deliver business value—the applications
+              on top of it do. That's why our cloud platform integrates seamlessly
+              with the enterprise suite, bringing ERP, CRM, and business
+              intelligence into the same environment as your AI agents. Developers
+              use our developer tools, SDK, and API to build and deploy agents
+              quickly, while AI observability and monitoring give operations teams
+              real-time visibility into performance. As you scale, agent
+              performance optimization keeps latency low, and AI governance ensures
+              every decision is auditable. The result is a platform that grows
+              from a single pilot to a fleet of autonomous agents without forcing
+              you to re-architect or compromise on security. Use our ROI calculator
+              to model the savings, then explore the documentation to start
+              building.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <RelatedContent
         currentPage="CloudPlatform"
         category="product"
