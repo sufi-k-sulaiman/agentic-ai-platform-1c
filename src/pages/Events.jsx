@@ -11,6 +11,8 @@ import RegistrationForm from '@/components/events/RegistrationForm';
 import { toast } from 'sonner';
 import PageMeta from '@/components/PageMeta';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const events = [
   {
@@ -864,6 +866,7 @@ export default function Events() {
           />
         )}
       </AnimatePresence>
+      <FAQSection faqs={getFAQs('Events')} />
     </div>
     </InternalLinker>
   );

@@ -44,6 +44,7 @@ const navItems = [
     submenu: [
       { label: 'Documentation', description: 'Complete guides', href: createPageUrl('Documentation') },
       { label: 'API Reference', description: 'API endpoints', href: createPageUrl('APIReference') },
+      { label: 'AI Automation', description: 'Topic cluster hub', href: createPageUrl('AIAutomation') },
       { label: 'AI Glossary', description: 'Key terms & definitions', href: createPageUrl('AIGlossary') },
       { label: 'Community', description: 'Join developers', href: createPageUrl('Community') },
       { label: 'Blog', description: 'Insights & updates', href: createPageUrl('Blog') },

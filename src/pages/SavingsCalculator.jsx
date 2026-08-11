@@ -15,6 +15,8 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 // BreadcrumbNav and RelatedContent added for SEO
 import PageMeta from '@/components/PageMeta';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 export default function SavingsCalculator() {
   const [employees, setEmployees] = useState(100);
@@ -485,6 +487,7 @@ export default function SavingsCalculator() {
           </motion.div>
         </div>
       </section>
+      <FAQSection faqs={getFAQs('SavingsCalculator')} />
       <RelatedContent
         currentPage="SavingsCalculator"
         category="product"

@@ -8,6 +8,8 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAgenticAIScaling() {
   return (
@@ -277,7 +279,9 @@ export default function BlogAgenticAIScaling() {
           </Link>
         </div>
       </InternalLinker>
-      
+
+      <PeopleAlsoAsk currentPage="BlogAgenticAIScaling" questions={getPAA('BlogAgenticAIScaling')} />
+
       <RelatedContent currentPage="BlogAgenticAIScaling" category="blog" title="Related Articles" />
       </article>
     </div>

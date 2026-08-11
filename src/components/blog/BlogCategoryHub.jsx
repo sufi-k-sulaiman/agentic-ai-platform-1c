@@ -8,6 +8,7 @@ import PageMeta from '@/components/PageMeta';
 import InternalLinker from '@/components/seo/InternalLinker';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
+import ContentHub from '@/components/seo/ContentHub';
 import { blogPosts } from '@/lib/blogPosts';
 
 export default function BlogCategoryHub({
@@ -144,6 +145,12 @@ export default function BlogCategoryHub({
             </div>
           </div>
         </section>
+
+        <ContentHub
+          currentPage={pageName}
+          title="Topic Cluster Resources"
+          subtitle="Dive deeper into related concepts, capabilities, and implementation guides."
+        />
 
         <RelatedContent currentPage={pageName} category="blog" title="Explore Other Topics" />
       </div>

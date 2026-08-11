@@ -9,6 +9,8 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Users, MessageSquare, ThumbsUp, MessageCircle, Eye, Pin, TrendingUp, Clock, Sparkles, Bot, Shield, Brain, Zap, ChevronRight, Send } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const categories = [
   { id: 'all', name: 'All Discussions', icon: MessageSquare, count: 45 },
@@ -1211,6 +1213,7 @@ export default function Community() {
           </div>
         </div>
       )}
+      <FAQSection faqs={getFAQs('Community')} />
     </div>
     </InternalLinker>
   );

@@ -8,6 +8,8 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogNoCodeAgenticAI() {
   return (
@@ -187,7 +189,9 @@ export default function BlogNoCodeAgenticAI() {
           </Link>
         </div>
       </InternalLinker>
-      
+
+      <PeopleAlsoAsk currentPage="BlogNoCodeAgenticAI" questions={getPAA('BlogNoCodeAgenticAI')} />
+
       <RelatedContent currentPage="BlogNoCodeAgenticAI" category="blog" title="Related Articles" />
       </article>
     </div>

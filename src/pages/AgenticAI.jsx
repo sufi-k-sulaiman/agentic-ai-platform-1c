@@ -11,6 +11,8 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 
 const platforms = [
   {
@@ -1123,6 +1125,7 @@ export default function AgenticAI() {
           </div>
         </motion.div>
       </section>
+      <FAQSection faqs={getFAQs('AgenticAI')} />
       <RelatedContent
         currentPage="AgenticAI"
         category="product"
