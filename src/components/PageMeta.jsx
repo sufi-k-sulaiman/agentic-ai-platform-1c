@@ -27,6 +27,9 @@ import { SITE_NAME, SITE_URL } from '@/lib/seoConfig';
  * @param {Object} [video] - VideoObject schema: { name, description, thumbnailUrl, uploadDate, duration }
  * @param {Object} [event] - Event schema: { name, startDate, endDate, location, offers }
  * @param {Object} [jobPosting] - JobPosting schema: { title, description, datePosted, location }
+ * @param {Object} [product] - Product schema: { name, brand, category, offers: { price, currency }, rating, reviewCount }
+ * @param {Object} [webPage] - WebPage schema overrides: { type, lastReviewed, breadcrumb }
+ * @param {Object} [review] - Review schema: { author, rating, body }
  */
 export default function PageMeta({
   title,
@@ -49,6 +52,9 @@ export default function PageMeta({
   video,
   event,
   jobPosting,
+  product,
+  webPage,
+  review,
 }) {
   const fullTitle = `${title} | ${SITE_NAME}`;
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : SITE_URL;
@@ -315,8 +321,81 @@ export default function PageMeta({
       }
     : null;
 
+  // Product structured data
+  const productJsonLd = product
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: product.name || title,
+        description: product.description || description,
+        brand: {
+          '@type': 'Brand',
+          name: product.brand || SITE_NAME,
+        },
+        ...(product.category ? { category: product.category } : {}),
+        ...(product.offers
+          ? {
+              offers: {
+                '@type': 'Offer',
+                price: product.offers.price || '0',
+                priceCurrency: product.offers.currency || 'USD',
+                availability: 'https://schema.org/InStock',
+                url: fullUrl,
+              },
+            }
+          : {}),
+        ...(product.rating
+          ? {
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: product.rating,
+                reviewCount: product.reviewCount || 1,
+              },
+            }
+          : {}),
+      }
+    : null;
+
+  // WebPage structured data (base schema for all pages)
+  const webPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': webPage?.type || 'WebPage',
+    name: title,
+    description,
+    url: fullUrl,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: SITE_NAME,
+      url: siteUrl,
+    },
+    ...(webPage?.lastReviewed ? { lastReviewed: webPage.lastReviewed } : {}),
+  };
+
+  // Review structured data
+  const reviewJsonLd = review
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Review',
+        itemReviewed: {
+          '@type': 'SoftwareApplication',
+          name: review.itemName || title,
+        },
+        author: {
+          '@type': 'Person',
+          name: review.author || '1C Platform Team',
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: review.rating || 5,
+          bestRating: 5,
+        },
+        ...(review.body ? { reviewBody: review.body } : {}),
+      }
+    : null;
+
   // Collect all JSON-LD schemas
   const allSchemas = [
+    webPageJsonLd,
     breadcrumbJsonLd,
     articleJsonLd,
     faqJsonLd,
@@ -329,6 +408,8 @@ export default function PageMeta({
     videoJsonLd,
     eventJsonLd,
     jobPostingJsonLd,
+    productJsonLd,
+    reviewJsonLd,
     ...schemas,
   ].filter(Boolean);
 

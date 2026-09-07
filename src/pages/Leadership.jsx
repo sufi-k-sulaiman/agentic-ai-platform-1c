@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PageMeta from '@/components/PageMeta';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import SeoImage from '@/components/seo/SeoImage';
 
 const leaders = [
   {
@@ -56,6 +58,11 @@ export default function Leadership() {
         keywords={['leadership', 'executive team', 'CEO', 'CTO', 'management team', 'company leaders']}
         image="https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop"
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'About', page: 'AboutUs' },
+        { label: 'Leadership' }
+      ]} />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -91,10 +98,11 @@ export default function Leadership() {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square bg-white">
-                  <img
+                  <SeoImage
                     src={leader.image}
-                    alt={leader.name}
-                    loading="lazy"
+                    alt={`${leader.name} - ${leader.title} at 1C Platform`}
+                    width={400}
+                    height={400}
                     className="w-full h-full object-contain"
                   />
                 </div>

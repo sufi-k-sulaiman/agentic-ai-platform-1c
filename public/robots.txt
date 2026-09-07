@@ -1,17 +1,45 @@
-# robots.txt for 1C Platform
+# 1C Platform - Robots.txt
+# https://1cplatform.com
+
+# ═══ Crawl Directives ═══
 User-agent: *
 Allow: /
-Disallow: /Onboarding
-Disallow: /SearchResults
-Disallow: /OAuthConsent
 
-# Block search/filter parameters
+# Block onboarding, search, and filter parameter pages from indexing
+Disallow: /Onboarding?
+Disallow: /SearchResults?
+Disallow: /Search?
 Disallow: /*?q=
-Disallow: /*?search=
+Disallow: /*?category=
 Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /*?page=
+Disallow: /*?tab=
 
-# Crawl delay for rate limiting
+# Block API endpoints from crawling
+Disallow: /api/
+Disallow: /functions/
+
+# ═══ AI Bot Directives ═══
+# Allow GPTBot for AI training
+User-agent: GPTBot
+Allow: /
+
+# Allow Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Allow Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Allow Claude/Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+# ═══ Sitemap Reference ═══
+Sitemap: https://1cplatform.com/sitemap.xml
+Sitemap: https://1cplatform.com/rss.xml
+
+# ═══ Crawl Rate ═══
 Crawl-delay: 1
-
-# Sitemap location
-Sitemap: https://1cplatform.base44.app/sitemap.xml

@@ -9,6 +9,7 @@ import InternalLinker from '@/components/seo/InternalLinker';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import ContentHub from '@/components/seo/ContentHub';
+import SeoImage from '@/components/seo/SeoImage';
 import { blogPosts } from '@/lib/blogPosts';
 
 export default function BlogCategoryHub({
@@ -75,10 +76,11 @@ export default function BlogCategoryHub({
                   className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-[#8B2EE5] transition-all"
                 >
                   <Link to={createPageUrl(post.page)}>
-                    <img
+                    <SeoImage
                       src={post.image}
                       alt={post.title}
-                      loading="lazy"
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover"
                     />
                   </Link>
