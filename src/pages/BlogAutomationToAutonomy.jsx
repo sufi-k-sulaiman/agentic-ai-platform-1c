@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAutomationToAutonomy() {
@@ -261,6 +262,10 @@ export default function BlogAutomationToAutonomy() {
         </div>
       </InternalLinker>
       
+      <InlineRelatedGuides
+        currentPage="BlogAutomationToAutonomy"
+        pages={['BlogAIAutonomyLevels', 'BlogAIAutonomyIntro', 'BlogAutonomousDecisionMaking', 'BlogMigratingToAgenticAI']}
+      />
       <PeopleAlsoAsk currentPage="BlogAutomationToAutonomy" questions={getPAA('BlogAutomationToAutonomy')} />
 
       <RelatedContent currentPage="BlogAutomationToAutonomy" category="blog" title="Related Articles" />

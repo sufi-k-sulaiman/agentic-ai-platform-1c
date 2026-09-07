@@ -13,6 +13,7 @@ import PageMeta from '@/components/PageMeta';
 import InternalLinker from '@/components/seo/InternalLinker';
 import FAQSection from '@/components/seo/FAQSection';
 import { getFAQs } from '@/lib/seoFAQs';
+import SeoImage from '@/components/seo/SeoImage';
 
 const events = [
   {
@@ -692,7 +693,7 @@ export default function Events() {
               <Card className="overflow-hidden border-2 border-[#6209e6]">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="relative aspect-video lg:aspect-auto">
-                    <img
+                    <SeoImage
                       src={featuredEvent.image}
                       alt={featuredEvent.title}
                       className="w-full h-full object-cover"
@@ -772,7 +773,7 @@ export default function Events() {
               >
                 <Card className="h-full hover:shadow-xl transition-all group">
                   <div className="relative aspect-video overflow-hidden">
-                    <img
+                    <SeoImage
                       src={event.image}
                       alt={event.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

@@ -10,6 +10,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
+import SeoImage from '@/components/seo/SeoImage';
 
 export default function CloudPlatform() {
   return (
@@ -170,7 +171,7 @@ export default function CloudPlatform() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800" 
                 alt="Auto-scaling" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -272,7 +273,7 @@ export default function CloudPlatform() {
               transition={{ duration: 0.8 }}
               className="relative aspect-square"
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800" 
                 alt="Kubernetes" 
                 className="w-full h-full object-cover rounded-3xl shadow-2xl"
@@ -439,7 +440,7 @@ export default function CloudPlatform() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" 
                 alt="Monitoring dashboard" 
                 className="w-full rounded-3xl shadow-2xl"

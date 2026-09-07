@@ -10,6 +10,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogPromptEngineeringApps() {
@@ -171,6 +172,10 @@ Input: "Dashboard loads very slowly"`}
         </div>
       </InternalLinker>
       
+      <InlineRelatedGuides
+        currentPage="BlogPromptEngineeringApps"
+        pages={['BlogPromptDesignPatterns', 'BlogAgenticAIPromptEngineering', 'BlogContextWindowOptimization', 'BlogLLMGuide']}
+      />
       <PeopleAlsoAsk currentPage="BlogPromptEngineeringApps" questions={getPAA('BlogPromptEngineeringApps')} />
 
       <RelatedContent currentPage="BlogPromptEngineeringApps" category="blog" title="Related Articles" />

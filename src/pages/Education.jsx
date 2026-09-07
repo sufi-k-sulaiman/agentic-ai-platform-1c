@@ -14,6 +14,7 @@ import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
 import FAQSection from '@/components/seo/FAQSection';
 import { getFAQs } from '@/lib/seoFAQs';
+import SeoImage from '@/components/seo/SeoImage';
 
 const challenges = [
   {
@@ -145,7 +146,7 @@ export default function Education() {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
-              <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80" alt="Education" className="rounded-3xl shadow-2xl" />
+              <SeoImage src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80" alt="Education" className="rounded-3xl shadow-2xl" />
             </motion.div>
           </div>
         </div>

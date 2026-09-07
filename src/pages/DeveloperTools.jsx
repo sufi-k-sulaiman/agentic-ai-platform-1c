@@ -8,6 +8,7 @@ import PageMeta from '@/components/PageMeta';
 import RelatedContent from '@/components/seo/RelatedContent';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import InternalLinker from '@/components/seo/InternalLinker';
+import SeoImage from '@/components/seo/SeoImage';
 
 export default function DeveloperTools() {
   return (
@@ -300,7 +301,7 @@ $ 1c deploy
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800" 
                 alt="Webhooks" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -442,7 +443,7 @@ $ 1c deploy
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800" 
                 alt="Code editor" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -520,7 +521,7 @@ $ 1c deploy
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800" 
                 alt="Error debugging" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -670,7 +671,7 @@ $ 1c migrate v1 v2
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" 
                 alt="Analytics" 
                 className="w-full rounded-3xl shadow-2xl"

@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAgenticAIEthics() {
@@ -271,6 +272,10 @@ export default function BlogAgenticAIEthics() {
         </div>
       </InternalLinker>
       
+      <InlineRelatedGuides
+        currentPage="BlogAgenticAIEthics"
+        pages={['BlogAgenticAIEthicalFrameworks', 'BlogAgenticAIAccountability', 'BlogAIAccountability', 'BlogAgenticAIGovernanceIntro']}
+      />
       <PeopleAlsoAsk currentPage="BlogAgenticAIEthics" questions={getPAA('BlogAgenticAIEthics')} />
 
       <RelatedContent currentPage="BlogAgenticAIEthics" category="blog" title="Related Articles" />

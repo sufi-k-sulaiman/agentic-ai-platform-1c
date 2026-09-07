@@ -9,6 +9,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogLLMGuide() {
@@ -248,6 +249,10 @@ export default function BlogLLMGuide() {
           </div>
         </div>
       
+      <InlineRelatedGuides
+        currentPage="BlogLLMGuide"
+        pages={['BlogChatGPTLLMs', 'BlogContextWindowOptimization', 'BlogMultiModelOrchestration', 'BlogGenerativeAIIntro']}
+      />
       <PeopleAlsoAsk currentPage="BlogLLMGuide" questions={getPAA('BlogLLMGuide')} />
 
       <RelatedContent currentPage="BlogLLMGuide" category="resources" crossCategories={['product']} title="Explore Related Content" />

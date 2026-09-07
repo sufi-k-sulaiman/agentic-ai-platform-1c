@@ -15,6 +15,7 @@ import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
 import FAQSection from '@/components/seo/FAQSection';
 import { getFAQs } from '@/lib/seoFAQs';
+import SeoImage from '@/components/seo/SeoImage';
 
 const challenges = [
   {
@@ -157,7 +158,7 @@ export default function Healthcare() {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800" alt="Healthcare" className="rounded-3xl shadow-2xl" />
+              <SeoImage src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800" alt="Healthcare" className="rounded-3xl shadow-2xl" />
             </motion.div>
           </div>
         </div>

@@ -9,6 +9,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAgenticAICompliance() {
@@ -241,6 +242,10 @@ export default function BlogAgenticAICompliance() {
           </div>
         </div>
       
+      <InlineRelatedGuides
+        currentPage="BlogAgenticAICompliance"
+        pages={['BlogAgenticAIComplianceFrameworks', 'BlogAgenticAISecurity', 'BlogAIAuditFrameworks', 'BlogAIComplianceRegulations']}
+      />
       <PeopleAlsoAsk currentPage="BlogAgenticAICompliance" questions={getPAA('BlogAgenticAICompliance')} />
 
       <RelatedContent currentPage="BlogAgenticAICompliance" category="resources" crossCategories={['product']} title="Explore Related Content" />

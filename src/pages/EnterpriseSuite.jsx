@@ -14,6 +14,7 @@ import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
 import FAQSection from '@/components/seo/FAQSection';
+import SeoImage from '@/components/seo/SeoImage';
 
 const revenueData = [
   { month: 'Jan', revenue: 45000, expenses: 32000, profit: 13000 },
@@ -396,7 +397,7 @@ export default function EnterpriseSuite() {
               className="relative"
             >
               <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl bg-white p-8">
-                <img 
+                <SeoImage 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" 
                   alt="Dashboard" 
                   className="w-full h-full object-cover rounded-2xl"
@@ -601,7 +602,7 @@ export default function EnterpriseSuite() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-[#8B2EE5] to-[#A855F7] rounded-full flex items-center justify-center">
-                    <img 
+                    <SeoImage 
                       src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png" 
                       alt="1C" 
                       className="w-12 h-12"
@@ -689,7 +690,7 @@ export default function EnterpriseSuite() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800" 
                 alt="Financial Dashboard" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -710,7 +711,7 @@ export default function EnterpriseSuite() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800" 
                 alt="Team collaboration" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -826,7 +827,7 @@ export default function EnterpriseSuite() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" 
                 alt="CRM Dashboard" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -860,7 +861,7 @@ export default function EnterpriseSuite() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200" 
                 alt="BI Dashboard" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -918,7 +919,7 @@ export default function EnterpriseSuite() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800" 
                 alt="Document Management" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -939,7 +940,7 @@ export default function EnterpriseSuite() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800" 
                 alt="Mobile apps" 
                 className="w-full rounded-3xl shadow-2xl"

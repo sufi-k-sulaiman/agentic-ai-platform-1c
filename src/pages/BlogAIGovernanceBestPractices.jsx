@@ -9,6 +9,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAIGovernanceBestPractices() {
@@ -229,6 +230,10 @@ export default function BlogAIGovernanceBestPractices() {
           </div>
         </div>
       
+      <InlineRelatedGuides
+        currentPage="BlogAIGovernanceBestPractices"
+        pages={['BlogAIGovernancePolicies', 'BlogAIGovernanceTeams', 'BlogAIGovernanceMetrics', 'BlogAIGovernanceIncidents']}
+      />
       <PeopleAlsoAsk currentPage="BlogAIGovernanceBestPractices" questions={getPAA('BlogAIGovernanceBestPractices')} />
 
       <RelatedContent currentPage="BlogAIGovernanceBestPractices" category="resources" crossCategories={['product']} title="Explore Related Content" />

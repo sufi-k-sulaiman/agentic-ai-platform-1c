@@ -14,6 +14,7 @@ import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
 import FAQSection from '@/components/seo/FAQSection';
 import { getFAQs } from '@/lib/seoFAQs';
+import SeoImage from '@/components/seo/SeoImage';
 
 const challenges = [
   {
@@ -154,7 +155,7 @@ export default function FinancialInstitutions() {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
-              <img src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=800" alt="Banking" className="rounded-3xl shadow-2xl" />
+              <SeoImage src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=800" alt="Banking" className="rounded-3xl shadow-2xl" />
             </motion.div>
           </div>
         </div>

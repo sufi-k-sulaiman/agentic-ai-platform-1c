@@ -9,6 +9,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogGenerativeAIIntro() {
@@ -187,6 +188,10 @@ export default function BlogGenerativeAIIntro() {
           </div>
         </div>
       
+      <InlineRelatedGuides
+        currentPage="BlogGenerativeAIIntro"
+        pages={['BlogGenerativeAIFuture', 'BlogGenerativeAIFineTuning', 'BlogFineTuningVsRAG', 'BlogGenerativeAIContent']}
+      />
       <PeopleAlsoAsk currentPage="BlogGenerativeAIIntro" questions={getPAA('BlogGenerativeAIIntro')} />
 
       <RelatedContent currentPage="BlogGenerativeAIIntro" category="resources" crossCategories={['product']} title="Explore Related Content" />

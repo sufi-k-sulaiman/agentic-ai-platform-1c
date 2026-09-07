@@ -9,6 +9,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogBuildingAutonomousAI() {
@@ -331,6 +332,10 @@ export default function BlogBuildingAutonomousAI() {
           </div>
         </div>
       
+      <InlineRelatedGuides
+        currentPage="BlogBuildingAutonomousAI"
+        pages={['BlogAutonomousAgents', 'BlogAIAutonomyIntro', 'BlogAutonomousDecisionMaking', 'BlogAutonomousAIApplications']}
+      />
       <PeopleAlsoAsk currentPage="BlogBuildingAutonomousAI" questions={getPAA('BlogBuildingAutonomousAI')} />
 
       <RelatedContent currentPage="BlogBuildingAutonomousAI" category="resources" crossCategories={['product']} title="Explore Related Content" />

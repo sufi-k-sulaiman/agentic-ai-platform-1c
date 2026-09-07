@@ -10,6 +10,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogFineTuningVsRAG() {
@@ -227,6 +228,10 @@ export default function BlogFineTuningVsRAG() {
         </div>
       </InternalLinker>
       
+      <InlineRelatedGuides
+        currentPage="BlogFineTuningVsRAG"
+        pages={['BlogGenerativeAIFineTuning', 'BlogFineTuningAI', 'BlogVectorDatabaseIntegration', 'BlogGenerativeAIIntro']}
+      />
       <PeopleAlsoAsk currentPage="BlogFineTuningVsRAG" questions={getPAA('BlogFineTuningVsRAG')} />
 
       <RelatedContent currentPage="BlogFineTuningVsRAG" category="blog" title="Related Articles" />

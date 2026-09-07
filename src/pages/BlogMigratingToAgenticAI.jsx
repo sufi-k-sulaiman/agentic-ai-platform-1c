@@ -8,6 +8,7 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 
 export default function BlogMigratingToAgenticAI() {
   return (
@@ -241,6 +242,10 @@ export default function BlogMigratingToAgenticAI() {
           </div>
         </div>
       
+      <InlineRelatedGuides
+        currentPage="BlogMigratingToAgenticAI"
+        pages={['BlogAgenticVsTraditionalAI', 'BlogWhenUseAgenticAI', 'BlogAutomationToAutonomy', 'BlogAgenticAIScaling']}
+      />
       <RelatedContent currentPage="BlogMigratingToAgenticAI" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>

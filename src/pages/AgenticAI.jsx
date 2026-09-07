@@ -13,6 +13,7 @@ import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
 import FAQSection from '@/components/seo/FAQSection';
 import { getFAQs } from '@/lib/seoFAQs';
+import SeoImage from '@/components/seo/SeoImage';
 
 const platforms = [
   {
@@ -497,7 +498,7 @@ export default function AgenticAI() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1 relative aspect-square"
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" 
                 alt="Real-time Processing" 
                 className="w-full h-full object-cover rounded-3xl shadow-2xl"
@@ -626,7 +627,7 @@ export default function AgenticAI() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" 
                 alt="Analytics" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -703,7 +704,7 @@ export default function AgenticAI() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img 
+            <SeoImage 
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200" 
               alt="No-code builder" 
               className="w-full rounded-3xl shadow-2xl"
@@ -791,7 +792,7 @@ export default function AgenticAI() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800" 
                 alt="Customer Support" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -812,7 +813,7 @@ export default function AgenticAI() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <img 
+              <SeoImage 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" 
                 alt="Sales Dashboard" 
                 className="w-full rounded-3xl shadow-2xl"
@@ -917,7 +918,7 @@ export default function AgenticAI() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img 
+            <SeoImage 
               src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200" 
               alt="Workflow automation" 
               className="w-full rounded-3xl shadow-2xl"
