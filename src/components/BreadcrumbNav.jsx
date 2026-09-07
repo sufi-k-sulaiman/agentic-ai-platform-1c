@@ -5,7 +5,7 @@ import { createPageUrl } from '@/utils';
 
 export default function BreadcrumbNav({ items }) {
   return (
-    <nav className="flex items-center gap-2 text-sm leading-none text-gray-600 mb-8">
+    <nav className="flex items-center gap-2 text-sm leading-none text-gray-600 pt-6 mt-2 mb-8">
       <Link 
         to={createPageUrl('Home')} 
         className="flex items-center gap-1 hover:text-[#8B2EE5] transition-colors"

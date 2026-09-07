@@ -59,6 +59,7 @@ const navItems = [
       { label: 'Newsroom', description: 'Latest news', href: createPageUrl('Newsroom') },
       { label: 'Leadership', description: 'Meet the team', href: createPageUrl('Leadership') },
       { label: 'Investor Relations', description: 'For investors', href: createPageUrl('InvestorRelations') },
+      { label: 'Top 100 AI Questions', description: 'Enterprise, ecommerce & dev', href: '/top-100-questions' },
     ]
   },
   { 

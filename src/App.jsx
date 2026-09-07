@@ -11,6 +11,7 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ProgrammaticSEO from '@/pages/ProgrammaticSEO';
 import AIAutomation from '@/pages/AIAutomation';
+import Top100Questions from '@/pages/Top100Questions';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -65,6 +66,11 @@ const AuthenticatedApp = () => {
       <Route path="/ai-automation" element={
         <LayoutWrapper currentPageName="AIAutomation">
           <AIAutomation />
+        </LayoutWrapper>
+      } />
+      <Route path="/top-100-questions" element={
+        <LayoutWrapper currentPageName="Top100Questions">
+          <Top100Questions />
         </LayoutWrapper>
       } />
       <Route path="/ai-for/:industry/in/:location" element={
