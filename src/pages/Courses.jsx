@@ -197,7 +197,7 @@ export default function Courses() {
         }}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Courses' }
       ]} />
       

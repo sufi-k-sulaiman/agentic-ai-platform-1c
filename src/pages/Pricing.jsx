@@ -57,7 +57,7 @@ export default function Pricing() {
         service={{ type: 'AI Platform Pricing & Plans', areaServed: 'Worldwide' }}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Pricing' }
       ]} />
 

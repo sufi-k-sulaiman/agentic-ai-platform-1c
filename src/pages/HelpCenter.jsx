@@ -98,7 +98,7 @@ export default function HelpCenter() {
         image="https://images.unsplash.com/photo-1584444932173-9b1c1b1e8e0c?w=1200&h=630&fit=crop"
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Help Center' }
       ]} />
       

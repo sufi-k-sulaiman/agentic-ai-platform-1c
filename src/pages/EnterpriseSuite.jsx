@@ -262,7 +262,7 @@ export default function EnterpriseSuite() {
         ]}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Enterprise Suite' }
       ]} />
       {/* Hero */}

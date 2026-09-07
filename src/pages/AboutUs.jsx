@@ -91,7 +91,7 @@ export default function AboutUs() {
         keywords={['about 1C Platform', 'AI company', 'enterprise AI leader', 'company values', 'AI innovation']}
         image="https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop" />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'About Us' }
       ]} />
       <InternalLinker currentPage="AboutUs">

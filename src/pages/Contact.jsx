@@ -57,7 +57,7 @@ export default function Contact() {
         image="https://images.unsplash.com/photo-1573437675149-ce6dc4be8c46?w=1200&h=630&fit=crop"
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Contact' }
       ]} />
 

@@ -231,7 +231,7 @@ export default function Careers() {
         ]}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Careers' }
       ]} />
       {/* Hero */}

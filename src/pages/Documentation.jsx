@@ -92,7 +92,7 @@ export default function Documentation() {
         }}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Documentation' }
       ]} />
       

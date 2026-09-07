@@ -112,7 +112,7 @@ export default function CorporateCampuses() {
         faq={[{"question":"How does AI optimize corporate facility management?","answer":"Agents automate space management, visitor coordination, energy optimization, and employee services. The platform optimizes space utilization by 40% while reducing costs by 30%."},{"question":"Can it integrate with your workplace tools?","answer":"Yes. We connect to Microsoft 365, Google Workspace, ServiceNow, and IoT sensors. Agents coordinate building access, schedule maintenance, and manage employee requests automatically."},{"question":"What efficiency gains can I expect?","answer":"Corporate campuses typically see 40% space optimization, 30% cost reduction, and 60% employee satisfaction improvement when deploying agentic AI."}]}
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'CorporateCampuses', url: '/CorporateCampuses' }]}
       />
-      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Corporate Campuses' }]} />
+      <BreadcrumbNav items={[ { label: 'Corporate Campuses' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

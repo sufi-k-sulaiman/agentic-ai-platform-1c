@@ -388,7 +388,7 @@ export default function AgenticAI() {
         }}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Agentic AI' }
       ]} />
 

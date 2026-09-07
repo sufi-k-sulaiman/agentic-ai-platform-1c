@@ -73,7 +73,7 @@ export default function AIAutomation() {
         />
 
         <div className="max-w-7xl mx-auto px-6 pt-8">
-          <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'AI Automation' }]} />
+          <BreadcrumbNav items={[{ label: 'AI Automation' }]} />
         </div>
 
         {/* Hero */}

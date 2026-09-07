@@ -120,7 +120,7 @@ export default function FinancialInstitutions() {
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'FinancialInstitutions', url: '/FinancialInstitutions' }]}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Financial Institutions' }
       ]} />
       {/* Hero */}

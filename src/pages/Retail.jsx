@@ -113,7 +113,7 @@ export default function Retail() {
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Retail', url: '/Retail' }]}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Retail' }
       ]} />
       <IndustryIntro currentPage="Retail" heading="Retail Transformation with Agentic AI">

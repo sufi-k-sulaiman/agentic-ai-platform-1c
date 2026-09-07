@@ -40,7 +40,7 @@ export default function CloudPlatform() {
         }}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Cloud Platform' }
       ]} />
 

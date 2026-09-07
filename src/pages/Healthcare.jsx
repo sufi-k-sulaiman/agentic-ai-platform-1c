@@ -121,7 +121,7 @@ export default function Healthcare() {
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Healthcare', url: '/Healthcare' }]}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Healthcare' }
       ]} />
       <IndustryIntro currentPage="Healthcare" heading="Healthcare Operations, Automated with Agentic AI">

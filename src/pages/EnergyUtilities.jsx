@@ -104,7 +104,7 @@ export default function EnergyUtilities() {
         faq={[{"question":"How does AI optimize energy grid operations?","answer":"Agents predict outages, optimize grid performance, automate customer service, and integrate renewable systems. The platform prevents 90% of outages while improving efficiency by 25%."},{"question":"Can it monitor my existing grid infrastructure?","answer":"Yes. We integrate with SCADA systems, IoT sensors, and customer billing platforms. Agents pull real-time data to predict failures and coordinate field operations automatically."},{"question":"What outage prevention can I expect?","answer":"Energy and utility companies typically prevent 90% of outages, see 25% efficiency improvement, and achieve 45% customer satisfaction increase when deploying agentic AI."}]}
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'EnergyUtilities', url: '/EnergyUtilities' }]}
       />
-      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Energy & Utilities' }]} />
+      <BreadcrumbNav items={[ { label: 'Energy & Utilities' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

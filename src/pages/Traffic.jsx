@@ -102,7 +102,7 @@ export default function Traffic() {
         faq={[{"question":"How does AI optimize traffic management?","answer":"Agents automate signal optimization, incident detection, congestion prediction, and emergency response. The platform reduces traffic congestion by 30% while improving response times by 60%."},{"question":"Can it integrate with existing traffic systems?","answer":"Yes. We connect to traffic cameras, sensor networks, and signal control systems. Agents pull real-time data to optimize traffic flow and predict congestion before it occurs."},{"question":"What congestion improvements can I expect?","answer":"Traffic management teams typically see 30% congestion reduction, 60% faster response times, and 40% cost reduction when deploying agentic AI."}]}
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Traffic', url: '/Traffic' }]}
       />
-      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Traffic Management' }]} />
+      <BreadcrumbNav items={[ { label: 'Traffic Management' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -89,7 +89,7 @@ export default function ProgrammaticSEO() {
         <div className="max-w-7xl mx-auto px-6 pt-8">
           <BreadcrumbNav
             items={[
-              { label: 'Home', page: 'Home' },
+              
               { label: industry.label, page: industry.pageName },
               { label: location.city },
             ]}

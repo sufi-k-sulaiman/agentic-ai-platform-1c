@@ -105,7 +105,7 @@ export default function GovernmentAgencies() {
         faq={[{"question":"How does AI transform government services?","answer":"Agents automate citizen services, document processing, compliance reporting, and budget optimization. The platform improves citizen satisfaction by 55% while reducing operational costs by 35%."},{"question":"Is it secure enough for government use?","answer":"Yes. 1C Platform meets FedRAMP, SOC 2, and ISO 27001 requirements. All data is encrypted, and every AI agent action is fully auditable for transparency and accountability."},{"question":"What efficiency gains can I expect?","answer":"Government agencies typically see 55% citizen satisfaction improvement, 35% cost reduction, and 50% efficiency improvement when deploying agentic AI for public services."}]}
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'GovernmentAgencies', url: '/GovernmentAgencies' }]}
       />
-      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Government' }]} />
+      <BreadcrumbNav items={[ { label: 'Government' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

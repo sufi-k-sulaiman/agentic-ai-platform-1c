@@ -104,7 +104,7 @@ export default function SportsEntertainment() {
         faq={[{"question":"How does AI transform sports and entertainment?","answer":"Agents automate fan engagement, ticketing optimization, venue operations, and revenue management. The platform increases revenue per fan by 30% while improving operational efficiency by 45%."},{"question":"Can it integrate with your ticketing platform?","answer":"Yes. We connect to Ticketmaster, Eventbrite, and custom ticketing systems. Agents optimize pricing, personalize fan experiences, and coordinate venue logistics automatically."},{"question":"What revenue improvements can I expect?","answer":"Sports and entertainment organizations typically see 30% revenue increase per fan, 45% efficiency improvement, and 50% fan satisfaction increase when deploying agentic AI."}]}
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'SportsEntertainment', url: '/SportsEntertainment' }]}
       />
-      <BreadcrumbNav items={[{ label: 'Home', page: 'Home' }, { label: 'Sports & Entertainment' }]} />
+      <BreadcrumbNav items={[ { label: 'Sports & Entertainment' }]} />
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -112,7 +112,7 @@ export default function Transit() {
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'Transit', url: '/Transit' }]}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Public Transit' }
       ]} />
       <IndustryIntro currentPage="Transit" heading="Public Transit, Optimized with Agentic AI">

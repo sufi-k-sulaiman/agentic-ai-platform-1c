@@ -81,7 +81,7 @@ export default function Cyber() {
         service={{ type: 'Cybersecurity & Compliance', areaServed: 'Worldwide' }}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Security' }
       ]} />
       {/* Hero */}

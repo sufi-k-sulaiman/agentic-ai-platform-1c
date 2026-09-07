@@ -30,7 +30,7 @@ export default function DeveloperTools() {
         }}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Developer Tools' }
       ]} />
 

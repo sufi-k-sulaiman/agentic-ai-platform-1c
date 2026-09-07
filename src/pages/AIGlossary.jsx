@@ -154,7 +154,7 @@ export default function AIGlossary() {
 
         <div className="max-w-7xl mx-auto px-6 pt-8">
           <BreadcrumbNav items={[
-            { label: 'Home', page: 'Home' },
+            
             { label: 'Resources', page: 'Documentation' },
             { label: 'AI Glossary' },
           ]} />

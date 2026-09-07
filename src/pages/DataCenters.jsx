@@ -119,7 +119,7 @@ export default function DataCenters() {
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Industries', url: '/Blog' }, { name: 'DataCenters', url: '/DataCenters' }]}
       />
       <BreadcrumbNav items={[
-        { label: 'Home', page: 'Home' },
+        
         { label: 'Data Centers' }
       ]} />
       {/* Hero */}
