@@ -158,6 +158,14 @@ export default function BlogCategoryHub({
           subtitle="Dive deeper into related concepts, capabilities, and implementation guides."
         />
 
+        {faqs.length > 0 && (
+          <FAQSection
+            faqs={faqs}
+            title="Frequently Asked Questions"
+            subtitle="Common questions about this topic"
+          />
+        )}
+
         <RelatedContent currentPage={pageName} category="blog" title="Explore Other Topics" />
       </div>
       </InternalLinker>
