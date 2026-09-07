@@ -9,6 +9,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogWhenUseAgenticAI() {
@@ -266,6 +267,10 @@ export default function BlogWhenUseAgenticAI() {
           </div>
         </div>
       
+      <InlineRelatedGuides
+        currentPage="BlogWhenUseAgenticAI"
+        pages={['BlogAgenticVsTraditionalAI', 'BlogAgenticVsRuleBased', 'BlogAgenticAICostAnalysis', 'BlogAgenticAIROI']}
+      />
       <PeopleAlsoAsk currentPage="BlogWhenUseAgenticAI" questions={getPAA('BlogWhenUseAgenticAI')} />
 
       <RelatedContent currentPage="BlogWhenUseAgenticAI" category="resources" crossCategories={['product']} title="Explore Related Content" />

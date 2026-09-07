@@ -9,6 +9,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAgenticAIArchitecture() {
@@ -239,6 +240,10 @@ export default function BlogAgenticAIArchitecture() {
           </div>
         </div>
       
+      <InlineRelatedGuides
+        currentPage="BlogAgenticAIArchitecture"
+        pages={['BlogAgenticAIArchitecturePatterns', 'BlogAgenticAIMemoryManagement', 'BlogAgenticAIToolIntegration', 'BlogAutonomousAgents']}
+      />
       <PeopleAlsoAsk currentPage="BlogAgenticAIArchitecture" questions={getPAA('BlogAgenticAIArchitecture')} />
 
       <RelatedContent currentPage="BlogAgenticAIArchitecture" category="resources" crossCategories={['product']} title="Explore Related Content" />

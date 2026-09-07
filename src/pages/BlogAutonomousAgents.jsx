@@ -8,6 +8,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
 import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 import { Button } from '@/components/ui/button';
 
@@ -170,6 +171,10 @@ export default function BlogAutonomousAgents() {
           </Link>
         </div>
       </article>
+      <InlineRelatedGuides
+        currentPage="BlogAutonomousAgents"
+        pages={['BlogAgenticAIEnterprise', 'BlogAgenticAIArchitecture', 'BlogMultiAgentSystems', 'AgenticAI']}
+      />
       <PeopleAlsoAsk currentPage="BlogAutonomousAgents" questions={getPAA('BlogAutonomousAgents')} />
 
       <RelatedContent
