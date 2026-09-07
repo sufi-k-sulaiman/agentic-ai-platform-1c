@@ -5,6 +5,9 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
+import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 const AUTHOR = {
   name: 'Sufi Khan Sulaiman',
@@ -189,7 +192,7 @@ export default function Top100Questions() {
   const [openSection, setOpenSection] = useState('ai');
 
   return (
-    <>
+    <InternalLinker currentPage="Top100Questions">
       <PageMeta
         title="Top 100 Questions: AI, Ecommerce, Digital Commerce & Integration"
         description="The 100 most important questions about AI, ecommerce, digital commerce, integration, customer acquisition, tech debt, current adoption, and challenges—with expert answers by Sufi Khan Sulaiman."
@@ -197,6 +200,8 @@ export default function Top100Questions() {
         keywords={['AI questions', 'ecommerce AI', 'digital commerce', 'AI integration', 'customer acquisition AI', 'tech debt', 'AI adoption', 'AI challenges', 'AI FAQ']}
         faq={FAQ_SCHEMA}
         breadcrumbs={[{ name: 'Company', url: '/AboutUs' }, { name: 'Top 100 AI Questions', url: '/top-100-questions' }]}
+        speakable={{ cssSelectors: ['h1', '.hero-subtitle'] }}
+        image="https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200&h=630&fit=crop"
       />
 
       <BreadcrumbNav items={[{ label: 'Company', page: 'AboutUs' }, { label: 'Top 100 AI Questions' }]} />
@@ -216,7 +221,7 @@ export default function Top100Questions() {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             Top 100 Questions: AI, Ecommerce, Digital Commerce & Integration
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-5">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-5 hero-subtitle">
             The definitive guide to the most pressing questions about AI fundamentals, ecommerce,
             digital commerce, integration, customer acquisition, tech debt, current adoption, and
             critical issues—with expert answers.
@@ -329,12 +334,17 @@ export default function Top100Questions() {
         </div>
       </div>
 
+      <PeopleAlsoAsk
+        pageName="Top100Questions"
+        questions={getPAA('Top100Questions')}
+      />
+
       <RelatedContent
         currentPage="Top100Questions"
         category="product"
         crossCategories={['blog']}
         title="Keep Exploring"
       />
-    </>
+    </InternalLinker>
   );
 }
