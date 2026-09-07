@@ -162,9 +162,9 @@ export default function Top100Questions() {
         breadcrumbs={[{ name: 'Company', url: '/AboutUs' }, { name: 'Top 100 AI Questions', url: '/top-100-questions' }]}
       />
 
-      <div className="max-w-5xl mx-auto px-6">
-        <BreadcrumbNav items={[{ label: 'Company', page: 'AboutUs' }, { label: 'Top 100 AI Questions' }]} />
+      <BreadcrumbNav items={[{ label: 'Company', page: 'AboutUs' }, { label: 'Top 100 AI Questions' }]} />
 
+      <div className="max-w-5xl mx-auto px-6">
         {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -72,9 +72,7 @@ export default function AIAutomation() {
           collectionPage={true}
         />
 
-        <div className="max-w-7xl mx-auto px-6 pt-8">
-          <BreadcrumbNav items={[{ label: 'AI Automation' }]} />
-        </div>
+        <BreadcrumbNav items={[{ label: 'AI Automation' }]} />
 
         {/* Hero */}
         <section className="relative py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white overflow-hidden">

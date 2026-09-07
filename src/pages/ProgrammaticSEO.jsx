@@ -86,15 +86,12 @@ export default function ProgrammaticSEO() {
           faq={locationFAQs}
         />
 
-        <div className="max-w-7xl mx-auto px-6 pt-8">
-          <BreadcrumbNav
-            items={[
-              
-              { label: industry.label, page: industry.pageName },
-              { label: location.city },
-            ]}
-          />
-        </div>
+        <BreadcrumbNav
+          items={[
+            { label: industry.label, page: industry.pageName },
+            { label: location.city },
+          ]}
+        />
 
         {/* Hero */}
         <section className="relative py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white overflow-hidden">

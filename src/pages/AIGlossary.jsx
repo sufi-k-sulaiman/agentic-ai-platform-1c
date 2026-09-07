@@ -152,13 +152,10 @@ export default function AIGlossary() {
           ]}
         />
 
-        <div className="max-w-7xl mx-auto px-6 pt-8">
-          <BreadcrumbNav items={[
-            
-            { label: 'Resources', page: 'Documentation' },
-            { label: 'AI Glossary' },
-          ]} />
-        </div>
+        <BreadcrumbNav items={[
+          { label: 'Resources', page: 'Documentation' },
+          { label: 'AI Glossary' },
+        ]} />
 
         {/* Hero */}
         <section className="py-16 bg-gradient-to-br from-purple-50 to-white border-b border-gray-100">
