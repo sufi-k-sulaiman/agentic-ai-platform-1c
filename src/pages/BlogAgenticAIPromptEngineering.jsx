@@ -7,6 +7,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 import { Button } from '@/components/ui/button';
 
 export default function BlogAgenticAIPromptEngineering() {
@@ -117,6 +119,8 @@ export default function BlogAgenticAIPromptEngineering() {
           <Link to={createPageUrl('Blog')}><Button variant="ghost" className="gap-2"><ArrowLeft className="w-4 h-4" />Back to Blog</Button></Link>
         </div>
       </article>
+      <PeopleAlsoAsk currentPage="BlogAgenticAIPromptEngineering" questions={getPAA('BlogAgenticAIPromptEngineering')} />
+
       <RelatedContent currentPage="BlogAgenticAIPromptEngineering" manualPages={['BlogPromptDesignPatterns', 'BlogPromptEngineeringApps', 'BlogToolUseFunctionCalling', 'BlogAgentArchitectureFundamentals']} title="Related Articles" />
     </div>
   );

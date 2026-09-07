@@ -8,6 +8,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAgenticAICostAnalysis() {
   return (
@@ -241,6 +243,8 @@ export default function BlogAgenticAICostAnalysis() {
           </div>
         </div>
       
+      <PeopleAlsoAsk currentPage="BlogAgenticAICostAnalysis" questions={getPAA('BlogAgenticAICostAnalysis')} />
+
       <RelatedContent currentPage="BlogAgenticAICostAnalysis" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>

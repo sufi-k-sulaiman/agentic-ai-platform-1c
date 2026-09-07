@@ -1,229 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Main Pages -->
-  <url>
-    <loc>https://1cplatform.com/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/AgenticAI</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/AgenticAI" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/AgenticAI" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/EnterpriseSuite</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/EnterpriseSuite" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/EnterpriseSuite" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/CloudPlatform</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/CloudPlatform" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/CloudPlatform" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/DeveloperTools</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/DeveloperTools" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/DeveloperTools" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/Pricing</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/Pricing" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/Pricing" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/SavingsCalculator</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/SavingsCalculator" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/SavingsCalculator" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-automation</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/ai-automation" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/ai-automation" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/AIGlossary</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/AIGlossary" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/AIGlossary" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/healthcare/in/toronto</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/healthcare/in/vancouver</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/healthcare/in/new-york</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/financial-institutions/in/toronto</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/financial-institutions/in/new-york</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/retail/in/toronto</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/retail/in/los-angeles</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/education/in/toronto</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/education/in/boston</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/government/in/ottawa</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/transit/in/toronto</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/ai-for/transit/in/chicago</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://1cplatform.com/Cyber</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.com/Cyber" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://1cplatform.com/Cyber" />
-  </url>
-  <url>
-    <loc>https://1cplatform.com/Onboarding</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- ═══ Main Pages ═══════════════════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/</loc><changefreq>daily</changefreq><priority>1.0</priority><xhtml:link rel="alternate" hreflang="en" href="https://1cplatform.base44.app/"/></url>
+  <url><loc>https://1cplatform.base44.app/AgenticAI</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/EnterpriseSuite</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/CloudPlatform</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/DeveloperTools</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/Cyber</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/AIAutomation</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/AIGlossary</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.base44.app/AboutUs</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.base44.app/Leadership</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/Careers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/Contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/Pricing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.base44.app/SavingsCalculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.base44.app/Events</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/Community</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/Newsroom</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/InvestorRelations</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/Security</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Industry Pages -->
-  <url><loc>https://1cplatform.com/PropertyManagement</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/DataCenters</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/FinancialInstitutions</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/CorporateCampuses</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/Healthcare</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/Transit</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/GovernmentAgencies</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/EnergyUtilities</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/SportsEntertainment</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/Gaming</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/PublicSafety</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/Cities</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/Airports</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/Retail</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/Education</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- ═══ Documentation ═════════════════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/Documentation</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.base44.app/APIReference</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://1cplatform.base44.app/DocInstallation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/DocAuthentication</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/DocDataIntegration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/DocWorkflowAutomation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/DocAPIReference</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/DocFirstAgent</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Resources -->
-  <url><loc>https://1cplatform.com/Documentation</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://1cplatform.com/APIReference</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/Blog</loc><lastmod>2026-08-11</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://1cplatform.com/Community</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/Events</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/Courses</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/ProfessionalCertifications</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/AIGlossary</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- ═══ Industry Verticals ════════════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/Healthcare</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/FinancialInstitutions</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/Retail</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/Education</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/PropertyManagement</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/DataCenters</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/GovernmentAgencies</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/Transit</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/EnergyUtilities</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/SportsEntertainment</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/Airports</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/CorporateCampuses</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/PublicSafety</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/Traffic</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/Gaming</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/Cities</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <!-- Company -->
-  <url><loc>https://1cplatform.com/AboutUs</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://1cplatform.com/Careers</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/Leadership</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://1cplatform.com/InvestorRelations</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://1cplatform.com/Newsroom</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/Contact</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <!-- ═══ Blog ══════════════════════════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/Blog</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIEnterprise</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIROI</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogMultiAgentSystems</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAISecurity</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticVsTraditionalAI</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAutonomousAgents</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIArchitecture</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIMemoryManagement</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIToolIntegration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIObservability</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIPromptEngineering</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAICostAnalysis</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIPerformance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogWhenUseAgenticAI</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticVsRuleBased</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIArchitecturePatterns</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogGenerativeAIIntro</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogFineTuningVsRAG</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAIAutonomyIntro</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAutonomousDecisionMaking</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAIGovernanceBestPractices</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgenticAIEthics</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgentArchitectureFundamentals</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogAgentTestingValidation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Support -->
-  <url><loc>https://1cplatform.com/HelpCenter</loc><lastmod>2026-08-11</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/Status</loc><lastmod>2026-08-11</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+  <!-- ═══ Blog Category Hubs ═══════════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/BlogCategoryAIAutonomy</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogCategoryAIGovernance</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogCategoryAgenticDesign</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogCategoryAIComparison</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogCategoryGenerativeAI</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/BlogCategoryAgenticCapabilities</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 
-  <!-- Blog Category Hubs (Topic Clusters) -->
-  <url><loc>https://1cplatform.com/BlogCategoryAgenticCapabilities</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/BlogCategoryAIComparison</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/BlogCategoryAgenticDesign</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/BlogCategoryAIGovernance</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/BlogCategoryGenerativeAI</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://1cplatform.com/BlogCategoryAIAutonomy</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <!-- ═══ Learning ══════════════════════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/Courses</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/ProfessionalCertifications</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/GettingStartedGuide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/VideoTutorialsGuide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <!-- Key Blog Posts (High-Traffic) -->
-  <url><loc>https://1cplatform.com/BlogAgenticAIEnterprise</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAutonomousAgents</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogMultiAgentSystems</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogNoCodeAgenticAI</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAISecurity</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIROI</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogHumanAICollaboration</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIUseCases</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIEthics</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIScaling</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIContextManagement</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIErrorHandling</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIObservability</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIPromptEngineering</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIScalability</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://1cplatform.com/BlogAgenticAIToolIntegration</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- ═══ Support ══════════════════════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/HelpCenter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://1cplatform.base44.app/TechnicalSupportGuide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/AccountBillingGuide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/Status</loc><changefreq>daily</changefreq><priority>0.5</priority></url>
+
+  <!-- ═══ Legal ════════════════════════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/Privacy</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://1cplatform.base44.app/Terms</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://1cplatform.base44.app/Cookies</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
+  <!-- ═══ Programmatic SEO: Healthcare ════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/healthcare/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/healthcare/in/vancouver</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/healthcare/in/montreal</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/healthcare/in/new-york</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/healthcare/in/san-francisco</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/healthcare/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/healthcare/in/singapore</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/healthcare/in/dubai</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Financial Institutions ════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/financial-institutions/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/financial-institutions/in/new-york</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/financial-institutions/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/financial-institutions/in/singapore</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/financial-institutions/in/hong-kong</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Retail ════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/retail/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/retail/in/new-york</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/retail/in/los-angeles</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/retail/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/retail/in/tokyo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Education ═════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/education/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/education/in/boston</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/education/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/education/in/singapore</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Property Management ══════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/property-management/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/property-management/in/new-york</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/property-management/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Data Centers ══════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/data-centers/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/data-centers/in/dallas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/data-centers/in/singapore</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/data-centers/in/frankfurt</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Government ════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/government/in/ottawa</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/government/in/washington-dc</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/government/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Transit ═══════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/transit/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/transit/in/new-york</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/transit/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Energy & Utilities ═══════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/energy-utilities/in/calgary</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/energy-utilities/in/houston</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/energy-utilities/in/dubai</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Sports & Entertainment ═══════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/sports-entertainment/in/los-angeles</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/sports-entertainment/in/las-vegas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/sports-entertainment/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Airports ═════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/airports/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/airports/in/new-york</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/airports/in/dubai</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Corporate Campuses ═══════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/corporate-campuses/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/corporate-campuses/in/san-francisco</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/corporate-campuses/in/seattle</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Public Safety ════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/public-safety/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/public-safety/in/washington-dc</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/public-safety/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Traffic Management ═══════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/traffic-management/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/traffic-management/in/los-angeles</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/traffic-management/in/london</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Gaming ════════════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/gaming/in/las-vegas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/gaming/in/macau</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/gaming/in/singapore</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ═══ Programmatic SEO: Smart Cities ═════════════════════════ -->
+  <url><loc>https://1cplatform.base44.app/ai-for/cities/in/toronto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/cities/in/singapore</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://1cplatform.base44.app/ai-for/cities/in/dubai</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
 </urlset>

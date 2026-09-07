@@ -8,6 +8,7 @@ import { Search, Calendar, Clock, ArrowRight, User, Loader2 } from 'lucide-react
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
+import SeoImage from '@/components/seo/SeoImage';
 
 import { posts } from '@/lib/blogIndexPosts';
 import InternalLinker from '@/components/seo/InternalLinker';
@@ -163,10 +164,11 @@ export default function Blog() {
                   className="group cursor-pointer"
                 >
                 <div className="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6">
-                  <img
+                  <SeoImage
                     src={post.image}
                     alt={post.title}
-                    loading="lazy"
+                    width={400}
+                    height={225}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
