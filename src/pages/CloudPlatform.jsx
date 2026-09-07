@@ -29,6 +29,14 @@ export default function CloudPlatform() {
         ]}
       
         service={{ type: 'Cloud Platform - AI Infrastructure', areaServed: 'Worldwide' }}
+        product={{
+          name: '1C Platform - Cloud Platform',
+          brand: '1C Platform',
+          category: 'Cloud Infrastructure',
+          offers: { price: '99', currency: 'USD' },
+          rating: 4.9,
+          reviewCount: 300,
+        }}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

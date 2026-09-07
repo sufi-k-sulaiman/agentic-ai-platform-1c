@@ -10,6 +10,8 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import ContentHub from '@/components/seo/ContentHub';
 import SeoImage from '@/components/seo/SeoImage';
+import FAQSection from '@/components/seo/FAQSection';
+import { getFAQs } from '@/lib/seoFAQs';
 import { blogPosts } from '@/lib/blogPosts';
 
 export default function BlogCategoryHub({
@@ -21,6 +23,7 @@ export default function BlogCategoryHub({
   keywords = [],
 }) {
   const posts = blogPosts.filter(p => p.category === category);
+  const faqs = getFAQs(pageName);
 
   const collectionPageJsonLd = {
     "@context": "https://schema.org",
@@ -44,6 +47,7 @@ export default function BlogCategoryHub({
         url={`/${pageName}`}
         keywords={keywords}
         collectionPage={collectionPageJsonLd}
+        faq={faqs}
       />
       <InternalLinker currentPage={pageName}>
       <div className="bg-white min-h-screen">

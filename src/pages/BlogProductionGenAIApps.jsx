@@ -9,6 +9,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogProductionGenAIApps() {
   return (
@@ -219,6 +221,8 @@ export default function BlogProductionGenAIApps() {
         </div>
       </InternalLinker>
       
+      <PeopleAlsoAsk currentPage="BlogProductionGenAIApps" questions={getPAA('BlogProductionGenAIApps')} />
+
       <RelatedContent currentPage="BlogProductionGenAIApps" category="blog" title="Related Articles" />
       </article>
     </div>

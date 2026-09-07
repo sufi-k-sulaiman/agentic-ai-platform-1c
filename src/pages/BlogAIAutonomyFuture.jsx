@@ -8,6 +8,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAIAutonomyFuture() {
   return (
@@ -306,6 +308,8 @@ export default function BlogAIAutonomyFuture() {
           </div>
         </div>
       
+      <PeopleAlsoAsk currentPage="BlogAIAutonomyFuture" questions={getPAA('BlogAIAutonomyFuture')} />
+
       <RelatedContent currentPage="BlogAIAutonomyFuture" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>

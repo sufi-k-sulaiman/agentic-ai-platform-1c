@@ -9,6 +9,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogSecurityComplianceAI() {
   return (
@@ -208,6 +210,8 @@ export default function BlogSecurityComplianceAI() {
         </div>
       </InternalLinker>
       
+      <PeopleAlsoAsk currentPage="BlogSecurityComplianceAI" questions={getPAA('BlogSecurityComplianceAI')} />
+
       <RelatedContent currentPage="BlogSecurityComplianceAI" category="blog" title="Related Articles" />
       </article>
     </div>

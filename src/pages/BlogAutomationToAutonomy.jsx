@@ -261,6 +261,8 @@ export default function BlogAutomationToAutonomy() {
         </div>
       </InternalLinker>
       
+      <PeopleAlsoAsk currentPage="BlogAutomationToAutonomy" questions={getPAA('BlogAutomationToAutonomy')} />
+
       <RelatedContent currentPage="BlogAutomationToAutonomy" category="blog" title="Related Articles" />
       </article>
     </div>

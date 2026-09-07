@@ -377,6 +377,14 @@ export default function AgenticAI() {
           { question: 'How do I monitor and debug my agents?', answer: 'Every agent run is logged with full traceability — inputs, tool calls, decisions, and outputs. Use our observability dashboard to replay runs, inspect failures, and optimize prompts. Alerts notify you of errors, cost overruns, and policy violations in real time.' },
         ]}
         speakable={{ cssSelectors: ['h1', '.hero-subtitle'] }}
+        product={{
+          name: '1C Platform - Agentic AI',
+          brand: '1C Platform',
+          category: 'AI Platform',
+          offers: { price: '0', currency: 'USD' },
+          rating: 4.8,
+          reviewCount: 500,
+        }}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },

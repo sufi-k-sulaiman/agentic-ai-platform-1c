@@ -9,6 +9,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogUXPatternsAIApps() {
   return (
@@ -200,6 +202,8 @@ export default function BlogUXPatternsAIApps() {
         </div>
       </InternalLinker>
       
+      <PeopleAlsoAsk currentPage="BlogUXPatternsAIApps" questions={getPAA('BlogUXPatternsAIApps')} />
+
       <RelatedContent currentPage="BlogUXPatternsAIApps" category="blog" title="Related Articles" />
       </article>
     </div>

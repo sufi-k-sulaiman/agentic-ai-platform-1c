@@ -241,6 +241,14 @@ export default function EnterpriseSuite() {
         ]}
       
         service={{ type: 'Enterprise Suite - AI-Powered ERP & CRM', areaServed: 'Worldwide' }}
+        product={{
+          name: '1C Platform - Enterprise Suite',
+          brand: '1C Platform',
+          category: 'Enterprise Software',
+          offers: { price: '99', currency: 'USD' },
+          rating: 4.9,
+          reviewCount: 500,
+        }}
         schemas={[
           {
             '@context': 'https://schema.org',

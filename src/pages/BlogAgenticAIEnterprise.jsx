@@ -9,6 +9,7 @@ import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
 import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 import { Button } from '@/components/ui/button';
 
 export default function BlogAgenticAIEnterprise() {
@@ -214,6 +215,8 @@ export default function BlogAgenticAIEnterprise() {
             { question: 'How do I get started with agentic AI?', answer: 'Start by identifying high-impact use cases with measurable ROI, ensure data quality and accessibility, establish AI governance frameworks, build cross-functional teams, and plan for change management. No-code platforms make deployment accessible without PhD-level research teams.' },
           ]}
         />
+
+        <PeopleAlsoAsk currentPage="BlogAgenticAIEnterprise" questions={getPAA('BlogAgenticAIEnterprise')} />
 
         <RelatedContent
           currentPage="BlogAgenticAIEnterprise"

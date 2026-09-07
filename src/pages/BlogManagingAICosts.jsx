@@ -9,6 +9,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogManagingAICosts() {
   return (
@@ -201,6 +203,8 @@ export default function BlogManagingAICosts() {
         </div>
       </InternalLinker>
       
+      <PeopleAlsoAsk currentPage="BlogManagingAICosts" questions={getPAA('BlogManagingAICosts')} />
+
       <RelatedContent currentPage="BlogManagingAICosts" category="blog" title="Related Articles" />
       </article>
     </div>

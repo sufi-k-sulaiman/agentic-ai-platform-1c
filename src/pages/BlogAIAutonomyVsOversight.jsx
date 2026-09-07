@@ -8,6 +8,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAIAutonomyVsOversight() {
   return (
@@ -353,6 +355,8 @@ export default function BlogAIAutonomyVsOversight() {
           </div>
         </div>
       
+      <PeopleAlsoAsk currentPage="BlogAIAutonomyVsOversight" questions={getPAA('BlogAIAutonomyVsOversight')} />
+
       <RelatedContent currentPage="BlogAIAutonomyVsOversight" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>

@@ -9,6 +9,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogAgentArchitectureFundamentals() {
   return (
@@ -232,6 +234,8 @@ export default function BlogAgentArchitectureFundamentals() {
         </div>
       </InternalLinker>
       
+      <PeopleAlsoAsk currentPage="BlogAgentArchitectureFundamentals" questions={getPAA('BlogAgentArchitectureFundamentals')} />
+
       <RelatedContent currentPage="BlogAgentArchitectureFundamentals" category="blog" title="Related Articles" />
       </article>
     </div>

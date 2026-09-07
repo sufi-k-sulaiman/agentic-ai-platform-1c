@@ -157,6 +157,44 @@ export const seoFAQs = {
     { question: 'What enterprise systems can AI agents integrate with?', answer: '1C Platform integrates with 30+ enterprise platforms including Salesforce, SAP, Microsoft 365, Google Workspace, ServiceNow, Slack, Teams, and major databases and cloud providers. Agents can read, write, and orchestrate across all connected systems.' },
     { question: 'How do you ensure AI agent safety and governance?', answer: '1C Platform includes built-in AI governance with role-based access control, audit trails, human-in-the-loop approvals, compliance frameworks (SOC 2, ISO, HIPAA), and real-time monitoring. Every agent decision is logged, reviewable, and reversible.' },
   ],
+
+  // ── Blog Category Hubs ──────────────────────────────────────────
+  BlogCategoryAIAutonomy: [
+    { question: 'What is AI autonomy?', answer: 'AI autonomy is the degree to which an AI system can operate independently—making decisions, taking actions, and adapting to changes without human intervention. It spans a spectrum from basic automation (predefined rules) to full autonomy (self-directed goal pursuit with learning and adaptation).' },
+    { question: 'What are the levels of AI autonomy?', answer: 'AI autonomy levels range from Level 0 (no autonomy, human does everything) through Level 5 (full autonomy, AI does everything independently). Most enterprise AI today operates at Levels 1-3, with agentic AI pushing toward Levels 4-5 for specific workflows.' },
+    { question: 'How is AI autonomy different from automation?', answer: 'Automation follows predefined rules to execute repetitive tasks. AI autonomy involves reasoning, planning, and adaptive decision-making—handling novel situations, choosing between approaches, and learning from outcomes.' },
+    { question: 'What are the risks of AI autonomy?', answer: 'Risks include unpredictable behavior, bias amplification, security vulnerabilities, accountability gaps, and loss of human control. Mitigate these with AI governance frameworks, human-in-the-loop oversight, audit trails, and continuous monitoring.' },
+  ],
+  BlogCategoryAgenticCapabilities: [
+    { question: 'What are agentic AI capabilities?', answer: 'Agentic AI capabilities include reasoning, planning, tool use, memory management, knowledge retrieval, perception, multi-agent collaboration, and autonomous goal pursuit. These building blocks enable AI agents to handle complex, multi-step business workflows independently.' },
+    { question: 'How do AI agents use tools?', answer: 'AI agents use tools via function calling—the LLM determines which tool to invoke, generates parameters, calls the API, processes the response, and incorporates results into reasoning. This enables agents to interact with any system that has an API.' },
+    { question: 'What is memory management in AI agents?', answer: 'Memory management in AI agents involves storing and retrieving context across conversations and tasks. It includes short-term memory (current conversation), long-term memory (persistent knowledge via vector databases), and episodic memory (past interactions).' },
+    { question: 'How do multi-agent systems work?', answer: 'Multi-agent systems assign specialized roles to individual agents (researcher, planner, executor, validator). Agents communicate via message passing, share state through memory systems, and coordinate actions through orchestration patterns like hierarchical or peer-to-peer.' },
+  ],
+  BlogCategoryAIGovernance: [
+    { question: 'What is AI governance?', answer: 'AI governance is the framework of policies, controls, and processes that ensure AI agents operate safely, ethically, and in compliance with regulations. It includes access controls, audit trails, human oversight, bias testing, and incident response for autonomous AI systems.' },
+    { question: 'Why is AI governance important?', answer: 'Governance is critical because agentic AI makes autonomous decisions and takes actions. Without governance, agents could access unauthorized data, make incorrect decisions, violate regulations, or cause harm. Governance ensures accountability, transparency, and control.' },
+    { question: 'What compliance frameworks apply to AI?', answer: 'Key frameworks include HIPAA, SOC 2, GDPR, CCPA, SOX, PCI-DSS, ISO 27001, and emerging AI regulations like the EU AI Act and NIST AI Risk Management Framework. 1C Platform provides built-in compliance controls for all of these.' },
+    { question: 'How do you implement AI governance?', answer: 'Implement governance by defining policies, establishing a governance committee, deploying access controls and audit logging, setting up monitoring and alerts, creating incident response procedures, and ensuring regulatory compliance. 1C Platform provides built-in governance tools.' },
+  ],
+  BlogCategoryAgenticDesign: [
+    { question: 'What is agentic AI UX design?', answer: 'Agentic AI UX design is the practice of designing user experiences for autonomous AI agents—covering conversational interfaces, visual patterns, transparency, accessibility, tool discovery, error handling, and scalable design systems for AI-first products.' },
+    { question: 'How do you design trust in AI interfaces?', answer: 'Build trust with transparency (explain AI decisions), consistency (reliable behavior), control (let users override), feedback (show confidence), and accountability (audit trails). Avoid presenting AI as infallible; show it as a tool that augments human judgment.' },
+    { question: 'What are key UX patterns for AI apps?', answer: 'Key patterns include streaming responses, confidence indicators, human-in-the-loop checkpoints, undo/rollback, progressive disclosure, error recovery, and transparent AI labeling. These patterns build trust and improve user experience.' },
+    { question: 'How do you make AI accessible?', answer: 'Make AI accessible with screen reader support, keyboard navigation, voice input, high contrast, clear error messages, and alternative text for AI-generated content. Follow WCAG guidelines and test with assistive technologies.' },
+  ],
+  BlogCategoryAIComparison: [
+    { question: 'What is the difference between agentic AI and traditional AI?', answer: 'Traditional AI responds to single inputs with single outputs. Agentic AI operates autonomously—planning multi-step workflows, using tools, maintaining memory, and adapting to changes. Agentic AI handles complex business processes; traditional AI handles individual tasks.' },
+    { question: 'When should I use agentic AI vs traditional AI?', answer: 'Use agentic AI for complex, multi-step workflows requiring planning, tool use, and autonomy. Use traditional AI for single-task predictions like classification, recommendation, or sentiment analysis. Many enterprise systems combine both.' },
+    { question: 'Is agentic AI more expensive than traditional AI?', answer: 'Agentic AI has higher per-task compute costs but delivers greater ROI through automation of entire workflows. Traditional AI is cheaper per inference but requires human orchestration. For complex business processes, agentic AI is more cost-effective overall.' },
+    { question: 'Can I migrate from traditional AI to agentic AI?', answer: 'Yes. Migration is a phased process: assess current AI workloads, identify automation opportunities, build agents that wrap existing models, and gradually expand agent autonomy. 1C Platform provides migration tools and patterns.' },
+  ],
+  BlogCategoryGenerativeAI: [
+    { question: 'What is generative AI?', answer: 'Generative AI is a class of AI that creates new content—text, images, code, audio, video—by learning patterns from training data. Models like GPT, Claude, and DALL-E generate outputs based on prompts, producing novel content that matches the style and structure of their training data.' },
+    { question: 'How does generative AI work?', answer: 'Generative AI uses deep learning models (typically transformers or diffusion models) trained on massive datasets. The models learn statistical patterns and generate new content by sampling from the learned distribution—predicting the next token for text or denoising for images.' },
+    { question: 'What is the difference between generative AI and agentic AI?', answer: 'Generative AI creates content. Agentic AI takes autonomous action. They complement each other: agentic AI uses generative AI models as reasoning engines to plan, decide, and act on complex workflows.' },
+    { question: 'What are the business use cases for generative AI?', answer: 'Business use cases include content creation, code generation, customer support, data analysis, document summarization, image generation, and personalized marketing. Enterprises use generative AI to automate creative and analytical work at scale.' },
+  ],
 };
 
 /**

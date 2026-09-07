@@ -8,6 +8,8 @@ import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
+import PeopleAlsoAsk from '@/components/seo/PeopleAlsoAsk';
+import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 
 export default function BlogGenerativeAICode() {
   return (
@@ -280,6 +282,8 @@ export default function BlogGenerativeAICode() {
           </div>
         </div>
       
+      <PeopleAlsoAsk currentPage="BlogGenerativeAICode" questions={getPAA('BlogGenerativeAICode')} />
+
       <RelatedContent currentPage="BlogGenerativeAICode" category="resources" crossCategories={['product']} title="Explore Related Content" />
       </section>
     </div>

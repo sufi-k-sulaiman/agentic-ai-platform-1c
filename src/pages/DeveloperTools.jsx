@@ -19,6 +19,14 @@ export default function DeveloperTools() {
         url="/developer-tools"
         keywords={['developer tools', 'API', 'SDK', 'CLI', 'webhooks', 'GraphQL', 'REST API', 'edge functions']}
         image="https://images.unsplash.com/photo-1555066925-5d3719e8b3a0?w=1200&h=630&fit=crop"
+        product={{
+          name: '1C Platform - Developer Tools',
+          brand: '1C Platform',
+          category: 'Developer Platform',
+          offers: { price: '0', currency: 'USD' },
+          rating: 4.8,
+          reviewCount: 200,
+        }}
       />
       <BreadcrumbNav items={[
         { label: 'Home', page: 'Home' },
