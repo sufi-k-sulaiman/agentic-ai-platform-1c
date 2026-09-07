@@ -9,6 +9,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import ContentHub from '@/components/seo/ContentHub';
 import FAQSection from '@/components/seo/FAQSection';
 import InternalLinker from '@/components/seo/InternalLinker';
+import Top100QuestionsPromo from '@/components/seo/Top100QuestionsPromo';
 import { createPageUrl } from '@/utils';
 
 /**
@@ -221,6 +222,8 @@ export default function AIAutomation() {
             </div>
           </div>
         </section>
+
+        <Top100QuestionsPromo />
 
         <RelatedContent
           currentPage="AIAutomation"

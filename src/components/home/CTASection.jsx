@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, MessageSquare, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import Top100QuestionsPromo from '@/components/seo/Top100QuestionsPromo';
 
 export default function CTASection() {
   return (
@@ -63,6 +64,23 @@ export default function CTASection() {
               <MessageSquare className="mr-2 w-5 h-5" />
               Talk to sales
             </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.25 }}
+            className="mt-8"
+          >
+            <Link
+              to="/top-100-questions"
+              className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm group"
+            >
+              <HelpCircle className="w-4 h-4 text-[#A855F7]" />
+              <span>Explore the Top 100 AI, Ecommerce & Integration Questions</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </motion.div>
 
           {/* Support Info */}

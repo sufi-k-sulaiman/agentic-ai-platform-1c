@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import PageMeta from '@/components/PageMeta';
 import SeoImage from '@/components/seo/SeoImage';
+import Top100QuestionsPromo from '@/components/seo/Top100QuestionsPromo';
 
 import { posts } from '@/lib/blogIndexPosts';
 import InternalLinker from '@/components/seo/InternalLinker';
@@ -243,6 +244,8 @@ export default function Blog() {
           </motion.div>
         </div>
       </section>
+
+      <Top100QuestionsPromo />
     </div>
     </InternalLinker>
   );

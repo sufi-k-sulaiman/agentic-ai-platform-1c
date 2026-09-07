@@ -6,6 +6,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import FAQSection from '@/components/seo/FAQSection';
+import Top100QuestionsPromo from '@/components/seo/Top100QuestionsPromo';
 
 const glossaryTerms = [
   {
@@ -245,6 +246,8 @@ export default function AIGlossary() {
         </section>
 
         <FAQSection faqs={faqs} title="Common AI Questions" />
+
+        <Top100QuestionsPromo />
 
         <RelatedContent
           currentPage="AIGlossary"
