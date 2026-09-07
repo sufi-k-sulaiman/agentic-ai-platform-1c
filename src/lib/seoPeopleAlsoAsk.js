@@ -334,6 +334,15 @@ export const seoPAA = {
     { question: 'How do you prevent AI hallucinations?', answer: 'Prevent hallucinations with RAG (grounding in source data), output validation, confidence scoring, fact-checking, and human review for sensitive content. 1C Platform provides hallucination detection and prevention tools.' },
     { question: 'How do you test AI systems?', answer: 'Test AI systems with unit tests for components, integration tests for workflows, evaluation suites for output quality, adversarial tests for security, and user acceptance testing. 1C Platform provides testing frameworks for AI applications.' },
   ],
+
+  // ── Top 100 Questions Page ──────────────────────────────────────
+  Top100Questions: [
+    { question: 'What are the top questions about AI in business?', answer: 'The top questions about AI in business cover AI fundamentals, ecommerce, digital commerce, integration, customer acquisition, tech debt, current adoption rates, and critical challenges. Explore all 100 questions with expert answers on the 1C Platform Top 100 Questions guide.' },
+    { question: 'How is AI used in ecommerce and digital commerce?', answer: 'AI in ecommerce and digital commerce powers product recommendations, dynamic pricing, visual search, chatbots, fraud detection, personalized marketing, conversational commerce, and autonomous shopping agents—touching every stage of the customer journey.' },
+    { question: 'What are the biggest challenges of AI adoption?', answer: 'The biggest challenges of AI adoption include data silos, legacy system integration, talent shortages, regulatory compliance, change management, ROI measurement, security concerns, and scaling from pilot to production.' },
+    { question: 'How does AI help with customer acquisition?', answer: 'AI improves customer acquisition through lead scoring, ad spend optimization, personalized outreach, predictive segmentation, churn prediction, and lookalike audience targeting—lowering customer acquisition cost while increasing quality.' },
+    { question: 'What is tech debt and how does AI help manage it?', answer: 'Technical debt is the cost of expedient shortcuts over better long-term solutions. AI helps manage tech debt by identifying hotspots, prioritizing refactoring, modernizing legacy code, generating tests, and documenting undocumented systems.' },
+  ],
 };
 
 /**

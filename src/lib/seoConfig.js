@@ -59,6 +59,7 @@ export const ogImages = {
   BlogCategoryGenerativeAI: 'https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop',
   BlogCategoryAIAutonomy: 'https://images.unsplash.com/photo-1501386764911-4d7e9b6c5e0f?w=1200&h=630&fit=crop',
   AIGlossary: 'https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop',
+  Top100Questions: 'https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200&h=630&fit=crop',
 };
 
 /**
@@ -437,7 +438,7 @@ export const seoPages = {
   BlogCategoryAIAutonomy: { pageName: 'BlogCategoryAIAutonomy', title: 'AI Autonomy: Levels, Challenges & Future', description: 'Understand the spectrum of AI autonomy from basic automation to fully autonomous systems. Levels, challenges, and future predictions.', url: '/BlogCategoryAIAutonomy', category: 'blog', keywords: ['AI autonomy', 'autonomy levels', 'autonomous AI', 'AI oversight', 'future of AI'] },
   AIGlossary: { pageName: 'AIGlossary', title: 'AI Glossary: Key Terms & Definitions', description: 'Comprehensive glossary of AI, agentic AI, and enterprise AI terms. Understand LLMs, RAG, multi-agent systems, governance, observability, and more.', url: '/AIGlossary', category: 'resources', keywords: ['AI glossary', 'AI terms', 'agentic AI definitions', 'LLM glossary', 'AI terminology', 'machine learning terms', 'RAG', 'vector database', 'prompt engineering'] },
   AIAutomation: { pageName: 'AIAutomation', title: 'AI Automation: The Complete Guide to Automating Business with AI', description: 'Comprehensive guide to AI automation. Learn how autonomous AI agents automate complex business workflows, reduce costs by 40-70%, and transform enterprise operations.', url: '/ai-automation', category: 'product', keywords: ['AI automation', 'business automation', 'agentic AI', 'autonomous agents', 'workflow automation', 'enterprise AI', 'process automation', 'intelligent automation'] },
-  Top100Questions: { pageName: 'Top100Questions', title: 'Top 100 Questions: Enterprise AI, Ecommerce & Development', description: 'The 100 most important questions about AI in enterprise, the future of AI, ecommerce, and software development—with expert answers on adoption, strategy, tools, and trends.', url: '/top-100-questions', category: 'product', keywords: ['enterprise AI questions', 'AI future questions', 'AI ecommerce', 'AI development', 'AI FAQ', 'artificial intelligence Q&A', 'enterprise AI', 'AI in software development'] },
+  Top100Questions: { pageName: 'Top100Questions', title: 'Top 100 Questions: AI, Ecommerce, Digital Commerce & Integration', description: 'The 100 most important questions about AI, ecommerce, digital commerce, integration, customer acquisition, tech debt, current adoption, and challenges—with expert answers by Sufi Khan Sulaiman.', url: '/top-100-questions', category: 'product', keywords: ['AI questions', 'ecommerce AI', 'digital commerce AI', 'AI integration', 'customer acquisition AI', 'tech debt AI', 'AI adoption', 'AI challenges', 'AI FAQ', 'artificial intelligence Q&A', 'AI issues', 'current AI adoption'] },
 };
 
 /**
