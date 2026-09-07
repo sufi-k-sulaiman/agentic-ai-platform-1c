@@ -11,6 +11,7 @@ import SubscriptionWorkflow from '@/components/SubscriptionWorkflow';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InternalLinker from '@/components/seo/InternalLinker';
 import FAQSection from '@/components/seo/FAQSection';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const categories = [
   { id: 'agentic-ai-fundamentals', name: 'Agentic AI Fundamentals', count: 12, level: 'Beginner' },
@@ -195,6 +196,10 @@ export default function Courses() {
           reviewCount: '2840',
         }}
       />
+      <BreadcrumbNav items={[
+        { label: 'Home', page: 'Home' },
+        { label: 'Courses' }
+      ]} />
       
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
