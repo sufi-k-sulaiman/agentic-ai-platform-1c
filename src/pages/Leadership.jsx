@@ -134,7 +134,7 @@ export default function Leadership() {
                 </div>
                 {leader.name === 'Suf K Sulaiman' && (
                   <Link
-                    to={createPageUrl('AuthorSufiKhanSulaiman')}
+                    to={'/author/sufi-khan-sulaiman'}
                     className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-[#8B2EE5] hover:gap-2 transition-all"
                   >
                     View author profile & articles
