@@ -17,9 +17,41 @@ const AUTHOR = {
   linkedin: 'https://ca.linkedin.com/in/sufikhan-sulaiman',
   image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e26495cc8_CTO.png',
   bio: [
-    'Sufi Khan Sulaiman is the Chief Technology Officer of 1C Platform, where he leads the technical vision for agentic AI, autonomous agents, and enterprise AI transformation. With over 30 years of experience spanning AI, hardware, and software engineering, he has been at the forefront of every major technology wave—from early computing systems to today\'s cutting-edge AI architectures.',
-    'As CTO, Sufi architected the 1C Platform\'s agentic AI engine, combining deep expertise in machine learning, computer vision, and distributed systems to build autonomous AI agents that reason, plan, and act across enterprise tools. His work powers AI-driven ecommerce, digital commerce, and enterprise technology solutions for 500+ organizations.',
-    'Before 1C Platform, Sufi served as Vice President of Ecommerce & Digital Technology, where he drove eCommerce revenue growth through AI-powered personalization, dynamic pricing, and autonomous operations. He writes extensively on AI automation, digital commerce strategy, and enterprise technology trends—translating decades of hands-on engineering leadership into practical guidance for business and technology leaders.',
+    'Sufi Khan Sulaiman is an experienced technology executive, ecommerce strategist, and digital automation specialist with more than 20 years of experience. He is known for managing global engineering teams and building large-scale software systems that serve millions of people across North America and the Middle East.',
+    'As Chief Technology Officer of 1C Platform, Sufi leads the technical vision for agentic AI, autonomous agents, and enterprise AI transformation. He architected the platform\'s agentic AI engine—combining machine learning, computer vision, and distributed systems to build autonomous AI agents that reason, plan, and act across enterprise tools for 500+ organizations.',
+    'Before 1C Platform, Sufi served as Vice President of Technology and Chief Technology Officer for several enterprise brands, where he drove ecommerce revenue growth through AI-powered personalization, dynamic pricing, and autonomous operations. He writes extensively on AI automation, digital commerce strategy, and enterprise technology trends—translating decades of hands-on engineering leadership into practical guidance for business and technology leaders.',
+  ],
+  accomplishments: [
+    {
+      title: 'Executive Leadership',
+      description: 'Served as Vice President (VP) of Technology and Chief Technology Officer (CTO) for several enterprise brands, setting technical direction and driving digital transformation across organizations.',
+    },
+    {
+      title: 'Project Deliveries',
+      description: 'Successfully managed the complete redesign and relaunch of the major ecommerce platform Lorex as VP of eCommerce & Digital, delivering a modern, high-performance digital storefront.',
+    },
+    {
+      title: 'Massive Scale',
+      description: 'Designs distributed computer systems using techniques like database sharding and caching to support huge amounts of traffic and millions of users across North America and the Middle East.',
+    },
+    {
+      title: 'Team Management',
+      description: 'Directed cross-functional teams of over 100 people spanning technical engineering, marketing, and operations—building and mentoring high-performing global engineering organizations.',
+    },
+  ],
+  coreExpertise: [
+    { title: 'Ecommerce & UX', description: 'Building digital storefronts focused on user experience to turn casual visitors into shoppers.', icon: ShoppingBag },
+    { title: 'Artificial Intelligence', description: 'Creating autonomous software agents and AI systems to automate complex business workflows and reduce corporate costs.', icon: Sparkles },
+    { title: 'Cloud Architecture', description: 'Navigating complex software setups using programming tools like Java, PHP, and TypeScript to build resilient, scalable systems.', icon: Building2 },
+    { title: 'Mentorship', description: 'Developing guidebooks, workshops, and educational programs to train the next generation of online business leaders.', icon: BookOpen },
+  ],
+  sufikhanLinks: [
+    { label: 'Professional Experience', url: 'https://sufikhan.com/experience', description: '20+ years of progressive technology leadership across global brands.' },
+    { label: 'Ecommerce Strategy', url: 'https://sufikhan.com/ecommerce', description: 'End-to-end ecommerce expertise—from headless commerce to AI-powered personalization.' },
+    { label: 'Articles & Insights', url: 'https://sufikhan.com/articles', description: 'Practical insights from 20+ years building enterprise systems and deploying AI at scale.' },
+    { label: 'Skills & Certifications', url: 'https://sufikhan.com/skills', description: 'A comprehensive technical toolkit built over 25+ years of hands-on engineering.' },
+    { label: 'Knowledge Base', url: 'https://sufikhan.com/knowledge', description: 'An interactive map of programming languages, algorithms, AI/ML, cloud, and DevOps.' },
+    { label: 'Contact', url: 'https://sufikhan.com/contact', description: 'Hire Sufi K. Sulaiman for CTO and technology leadership roles.' },
   ],
   expertise: [
     'Agentic AI & Autonomous Agents',
@@ -90,7 +122,7 @@ export default function AuthorSufiKhanSulaiman() {
       url: 'https://1cplatform.com',
     },
     knowsAbout: AUTHOR.expertise,
-    description: 'Chief Technology Officer of 1C Platform. AI, ecommerce, and digital commerce expert with 30+ years building autonomous AI, enterprise systems, and agentic AI platforms.',
+    description: 'Technology executive, ecommerce strategist, and digital automation specialist with 20+ years of experience. CTO of 1C Platform, building agentic AI, autonomous agents, and large-scale enterprise systems serving millions across North America and the Middle East.',
   };
 
   const profilePageSchema = {
@@ -122,7 +154,7 @@ export default function AuthorSufiKhanSulaiman() {
   };
 
   const faqSchema = [
-    { question: 'Who is Sufi Khan Sulaiman?', answer: 'Sufi Khan Sulaiman is the Chief Technology Officer of 1C Platform, a leading agentic AI platform for enterprises. He has over 30 years of experience in AI, hardware, and software engineering, and leads the technical vision for autonomous AI agents, ecommerce AI, and enterprise digital transformation.' },
+    { question: 'Who is Sufi Khan Sulaiman?', answer: 'Sufi Khan Sulaiman is an experienced technology executive, ecommerce strategist, and digital automation specialist with more than 20 years of experience. He is the Chief Technology Officer of 1C Platform and is known for managing global engineering teams and building large-scale software systems that serve millions of people across North America and the Middle East.' },
     { question: 'What is Sufi Khan Sulaiman\'s role at 1C Platform?', answer: 'As CTO of 1C Platform, Sufi Khan Sulaiman leads the technical vision and architecture for the company\'s agentic AI engine, autonomous agents, and enterprise AI platform. He architected the platform that powers AI-driven ecommerce, digital commerce, and enterprise technology solutions for 500+ organizations.' },
     { question: 'What does Sufi Khan Sulaiman write about?', answer: 'Sufi writes about agentic AI, AI automation, ecommerce AI, digital commerce strategy, and enterprise technology trends. His articles cover AI personalization, dynamic pricing, autonomous inventory management, headless commerce, cloud-native architecture, and AI governance.' },
     { question: 'Where can I read Sufi Khan Sulaiman\'s articles?', answer: 'Sufi Khan Sulaiman\'s articles are published on the 1C Platform blog, including guides on AI in ecommerce, digital commerce strategy, enterprise technology trends, and the Top 100 Questions about AI and commerce. You can also find his work and projects at sufikhan.com.' },
@@ -220,26 +252,96 @@ export default function AuthorSufiKhanSulaiman() {
         </div>
       </section>
 
-      {/* Expertise */}
+      {/* Key Roles & Accomplishments */}
       <section className="py-16 bg-white border-y border-gray-100">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-[#8B2EE5]" />
-            Areas of Expertise
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+            <Award className="w-6 h-6 text-[#8B2EE5]" />
+            Key Roles & Accomplishments
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {AUTHOR.expertise.map((area, i) => (
+          <p className="text-gray-600 mb-10">Two decades of executive leadership building and scaling enterprise technology.</p>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {AUTHOR.accomplishments.map((item, i) => (
               <motion.div
-                key={area}
+                key={item.title}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-purple-50 border border-purple-100"
+                className="p-5 rounded-xl bg-gradient-to-br from-purple-50 to-white border border-purple-100"
               >
-                <div className="w-2 h-2 rounded-full bg-[#8B2EE5] shrink-0" />
-                <span className="text-gray-800 font-medium text-sm">{area}</span>
+                <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#8B2EE5]" />
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Areas of Expertise */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+            <Sparkles className="w-6 h-6 text-[#8B2EE5]" />
+            Core Areas of Expertise
+          </h2>
+          <p className="text-gray-600 mb-10">Where deep engineering meets real-world business outcomes.</p>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {AUTHOR.coreExpertise.map((area, i) => {
+              const Icon = area.icon;
+              return (
+                <motion.div
+                  key={area.title}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  className="p-5 rounded-xl bg-white border border-gray-200 hover:border-[#8B2EE5] transition-colors"
+                >
+                  <div className="flex items-start gap-3 mb-2">
+                    <div className="w-9 h-9 rounded-lg bg-[#8B2EE5]/10 flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5 text-[#8B2EE5]" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 pt-1.5">{area.title}</h3>
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed">{area.description}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* sufikhan.com links */}
+      <section className="py-16 bg-white border-y border-gray-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+            <Globe className="w-6 h-6 text-[#8B2EE5]" />
+            Explore More on sufikhan.com
+          </h2>
+          <p className="text-gray-600 mb-10">Visit Sufi Khan Sulaiman's personal site for his full portfolio, case studies, and technical knowledge base.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {AUTHOR.sufikhanLinks.map((link, i) => (
+              <motion.a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="group block p-4 rounded-xl bg-purple-50 border border-purple-100 hover:border-[#8B2EE5] hover:shadow-md transition-all"
+              >
+                <div className="flex items-center justify-between mb-1">
+                  <h3 className="font-bold text-gray-900 text-sm group-hover:text-[#8B2EE5] transition-colors">{link.label}</h3>
+                  <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#8B2EE5] transition-colors" />
+                </div>
+                <p className="text-xs text-gray-600 leading-relaxed">{link.description}</p>
+              </motion.a>
             ))}
           </div>
         </div>
