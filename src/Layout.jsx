@@ -23,7 +23,7 @@ export default function Layout({ children }) {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "1C Platform",
-            "url": "https://1cplatform.com",
+            "url": "https://1cplatform.base44.app",
             "logo": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png",
             "description": "Agentic AI platform delivering autonomous AI agents, ERP, CRM, and intelligent automation for 500+ enterprises.",
             "sameAs": [

@@ -88,9 +88,24 @@ export default function AboutUs() {
       <PageMeta
         title="About Us"
         description="Building the future of intelligent enterprise. 2000+ team members, 500+ enterprise clients, $2.5B valuation. Our mission is to empower every organization with autonomous AI."
-        url="/about-us"
+        url="/AboutUs"
         keywords={['about 1C Platform', 'AI company', 'enterprise AI leader', 'company values', 'AI innovation']}
-        image="https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop" />
+        image="https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'About Us', url: '/AboutUs' }]}
+        schemas={[{
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: 'About 1C Platform',
+          url: 'https://1cplatform.base44.app/AboutUs',
+          mainEntity: {
+            '@type': 'Organization',
+            name: '1C Platform',
+            foundingDate: '2023',
+            employees: '2000+',
+            description: 'Agentic AI platform delivering autonomous AI agents, ERP, CRM, and intelligent automation for 500+ enterprises.',
+          },
+        }]}
+      />
       <BreadcrumbNav items={[
         
         { label: 'About Us' }

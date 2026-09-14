@@ -624,7 +624,7 @@ export default function Events() {
       <PageMeta 
         title="Events & Webinars"
         description="Join AI conferences, workshops, webinars, and hackathons. Learn about agentic AI, generative AI, and autonomous agents from industry experts."
-        url="/events"
+        url="/Events"
         keywords={['AI events', 'AI conferences', 'AI workshops', 'webinars', 'hackathons', 'tech events']}
         schemas={[
           {
@@ -637,7 +637,7 @@ export default function Events() {
             eventStatus: 'https://schema.org/EventScheduled',
             eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
             location: { '@type': 'Place', name: 'New York, NY', address: { '@type': 'PostalAddress', addressLocality: 'New York', addressCountry: 'US' } },
-            organizer: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.com' },
+            organizer: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.base44.app' },
           }
         ]}
       />

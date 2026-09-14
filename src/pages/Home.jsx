@@ -27,7 +27,7 @@ export default function Home() {
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
             name: '1C Platform',
-            url: 'https://1cplatform.com',
+            url: 'https://1cplatform.base44.app',
             applicationCategory: 'EnterpriseApplication',
             operatingSystem: 'Cloud',
             offers: {
@@ -47,7 +47,7 @@ export default function Home() {
             '@type': 'WebSite',
             potentialAction: {
               '@type': 'SubscribeAction',
-              target: 'https://1cplatform.com/onboarding',
+              target: 'https://1cplatform.base44.app/onboarding',
             },
           }
         ]}

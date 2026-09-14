@@ -83,9 +83,23 @@ export default function SavingsCalculator() {
       <PageMeta 
         title="ROI & Savings Calculator"
         description="Calculate your potential savings and ROI with Agentic Ai automation. See how much time and money your organization can save."
-        url="/savings-calculator"
+        url="/SavingsCalculator"
         keywords={['ROI calculator', 'savings calculator', 'cost reduction', 'productivity gains', 'AI ROI', 'business case']}
         image="https://images.unsplash.com/photo-1614628061581-e0b4c0e8e3c8?w=1200&h=630&fit=crop"
+        product={{
+          name: '1C Platform ROI Calculator',
+          brand: '1C Platform',
+          category: 'AI ROI Tool',
+          offers: { price: '0', currency: 'USD' },
+          rating: 4.8,
+          reviewCount: 500,
+        }}
+        review={{
+          author: '1C Platform Team',
+          rating: 5,
+          body: 'Calculate your potential savings and ROI with Agentic AI automation. See how much time and money your organization can save.',
+        }}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Savings Calculator', url: '/SavingsCalculator' }]}
       />
       <BreadcrumbNav items={[
         

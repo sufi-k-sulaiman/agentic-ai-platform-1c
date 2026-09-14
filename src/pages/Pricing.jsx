@@ -19,7 +19,7 @@ export default function Pricing() {
       <PageMeta 
         title="Pricing"
         description="Simple, transparent pricing for AI automation. Free Starter plan, Professional from $99/mo, Enterprise custom pricing. No hidden fees."
-        url="/pricing"
+        url="/Pricing"
         keywords={['AI pricing', 'platform pricing', 'enterprise AI cost', 'subscription plans', 'AI automation pricing']}
         image="https://images.unsplash.com/photo-1554224075-ff6c8ad421b8?w=1200&h=630&fit=crop"
         faq={[

@@ -78,7 +78,7 @@ export default function Blog() {
               '@type': 'ListItem',
               position: idx + 1,
               name: post.title,
-              url: `https://1cplatform.com/${post.page}`,
+              url: `https://1cplatform.base44.app/${post.page}`,
               image: post.image,
             })),
           }

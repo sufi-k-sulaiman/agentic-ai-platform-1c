@@ -57,9 +57,26 @@ export default function Leadership() {
       <PageMeta 
         title="Leadership Team"
         description="Meet our world-class leadership team. Experienced executives driving AI innovation across enterprise technology."
-        url="/leadership"
+        url="/Leadership"
         keywords={['leadership', 'executive team', 'CEO', 'CTO', 'management team', 'company leaders']}
         image="https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'AboutPage',
+            name: 'Leadership Team',
+            url: 'https://1cplatform.base44.app/Leadership',
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: '1C Platform Leadership Team',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Sufi Khan Sulaiman — CTO', url: 'https://1cplatform.base44.app/author/sufi-khan-sulaiman' },
+            ],
+          },
+        ]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Company', url: '/AboutUs' }, { name: 'Leadership', url: '/Leadership' }]}
       />
       <BreadcrumbNav items={[
         

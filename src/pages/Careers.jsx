@@ -213,9 +213,10 @@ export default function Careers() {
       <PageMeta 
         title="Careers"
         description="Join our team building the future of enterprise AI. Competitive salary, remote-first culture, unlimited PTO, and equity options. Open positions in engineering, product, and more."
-        url="/careers"
+        url="/Careers"
         keywords={['careers', 'jobs', 'AI careers', 'engineering jobs', 'remote work', 'tech careers']}
         image="https://images.unsplash.com/photo-1522202172294-6940c44f7c74?w=1200&h=630&fit=crop"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Company', url: '/AboutUs' }, { name: 'Careers', url: '/Careers' }]}
         schemas={[
           {
             '@context': 'https://schema.org',
@@ -223,11 +224,33 @@ export default function Careers() {
             title: 'Enterprise Sales Executive at 1C Platform',
             description: 'Drive enterprise deals with Fortune 500 companies. Join a remote-first team building the future of enterprise AI.',
             employmentType: 'FULL_TIME',
-            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.com' },
+            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.base44.app' },
             jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: 'Remote', addressCountry: 'US' } },
             datePosted: '2026-07-30',
-            url: 'https://1cplatform.com/careers',
-          }
+            url: 'https://1cplatform.base44.app/Careers',
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'JobPosting',
+            title: 'Senior AI Agent Engineer at 1C Platform',
+            description: 'Build production-grade agentic AI systems. Design agent architectures, implement tool integrations, and scale autonomous workflows for enterprise clients.',
+            employmentType: 'FULL_TIME',
+            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.base44.app' },
+            jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: 'Remote', addressCountry: 'US' } },
+            datePosted: '2026-08-15',
+            url: 'https://1cplatform.base44.app/Careers',
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'JobPosting',
+            title: 'Product Manager - AI Platform at 1C Platform',
+            description: 'Lead product strategy for our agentic AI platform. Define features, prioritize roadmap, and work with engineering to deliver world-class AI products.',
+            employmentType: 'FULL_TIME',
+            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.base44.app' },
+            jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: 'Remote', addressCountry: 'CA' } },
+            datePosted: '2026-08-20',
+            url: 'https://1cplatform.base44.app/Careers',
+          },
         ]}
       />
       <BreadcrumbNav items={[

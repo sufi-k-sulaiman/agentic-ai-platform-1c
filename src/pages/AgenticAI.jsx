@@ -366,7 +366,7 @@ export default function AgenticAI() {
       <PageMeta 
         title="Agentic AI"
         description="Deploy autonomous AI agents that think, decide, and act. No-code builder, multi-agent orchestration, and enterprise-grade security. 70% faster response times."
-        url="/agentic-ai"
+        url="/AgenticAI"
         keywords={['Agentic AI', 'autonomous agents', 'AI automation', 'intelligent agents', 'no-code AI', 'multi-agent systems']}
         image="https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop"
         faq={[

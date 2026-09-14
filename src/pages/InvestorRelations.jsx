@@ -2423,13 +2423,13 @@ export default function InvestorRelations() {
               {/* Website - Bottom Center */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
                 <a 
-                  href="https://1cplatform.com" 
+                  href="https://1cplatform.base44.app" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-white text-sm font-medium transition-colors"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  1cplatform.com
+                  1cplatform.base44.app
                 </a>
               </div>
 

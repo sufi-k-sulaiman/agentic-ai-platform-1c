@@ -52,9 +52,15 @@ export default function Contact() {
       <PageMeta 
         title="Contact Support"
         description="Get help from our 24/7 support team. Create a ticket, schedule a call, or send us an email."
-        url="/contact"
+        url="/Contact"
         keywords={['contact', 'support', 'customer service', 'schedule a call', 'support ticket']}
         image="https://images.unsplash.com/photo-1573437675149-ce6dc4be8c46?w=1200&h=630&fit=crop"
+        localBusiness={{
+          name: '1C Platform',
+          address: { locality: 'Toronto', region: 'ON', country: 'CA' },
+          telephone: '+1-800-1C-PLATFORM',
+        }}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Contact', url: '/Contact' }]}
       />
       <BreadcrumbNav items={[
         

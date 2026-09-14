@@ -30,12 +30,12 @@ export default function BlogCategoryHub({
     "@type": "CollectionPage",
     "name": title,
     "description": description,
-    "url": `https://1cplatform.com/${pageName}`,
+    "url": `https://1cplatform.base44.app/${pageName}`,
     "numberOfItems": posts.length,
     "hasPart": posts.map(p => ({
       "@type": "Article",
       "name": p.title,
-      "url": `https://1cplatform.com/${p.page}`
+      "url": `https://1cplatform.base44.app/${p.page}`
     }))
   };
 

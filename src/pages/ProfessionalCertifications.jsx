@@ -158,8 +158,16 @@ export default function ProfessionalCertifications() {
       <PageMeta 
         title="Professional Certifications"
         description="Industry-recognized AI certifications that validate your expertise. Get certified, get ahead. 15K+ certified professionals."
-        url="/professional-certifications"
+        url="/ProfessionalCertifications"
         keywords={['AI certification', 'professional certification', 'certified AI developer', 'AI architect certification', 'career advancement']}
+        course={{
+          name: 'Certified Agentic AI Developer',
+          provider: '1C Platform',
+          description: 'Industry-recognized AI certification validating proficiency in developing and deploying production-ready AI agents.',
+          rating: '4.9',
+          reviewCount: '2840',
+        }}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Resources', url: '/Courses' }, { name: 'Professional Certifications', url: '/ProfessionalCertifications' }]}
       />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">

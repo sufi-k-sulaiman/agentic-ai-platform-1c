@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { SITE_NAME, SITE_URL } from '@/lib/seoConfig';
+import { getBlogFAQs } from '@/lib/blogFAQs';
 
 /**
  * PageMeta - Comprehensive SEO component with structured data support.
@@ -59,7 +60,7 @@ export default function PageMeta({
   const fullTitle = `${title} | ${SITE_NAME}`;
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : SITE_URL;
   const fullUrl = `${siteUrl}${url}`;
-  const ogImage = image || 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png';
+  const ogImage = (image && !image.includes('unsplash.com')) ? image : 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png';
   const robotsContent = noIndex
     ? 'noindex, nofollow'
     : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
@@ -116,13 +117,16 @@ export default function PageMeta({
       }
     : null;
 
+  // Auto-lookup FAQs from registry for blog posts that don't pass their own
+  const effectiveFaq = faq && faq.length > 0 ? faq : (url && url.startsWith('/Blog') ? getBlogFAQs(url.slice(1)) : []);
+
   // FAQPage structured data
   const faqJsonLd =
-    faq && faq.length > 0
+    effectiveFaq && effectiveFaq.length > 0
       ? {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: faq.map((item) => ({
+          mainEntity: effectiveFaq.map((item) => ({
             '@type': 'Question',
             name: item.question,
             acceptedAnswer: {

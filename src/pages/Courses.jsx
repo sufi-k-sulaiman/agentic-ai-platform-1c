@@ -185,7 +185,7 @@ export default function Courses() {
       <PageMeta 
         title="Courses & Learning"
         description="Master Agentic AI with 100+ expert-led courses, structured learning paths, and unlimited subscriptions. From beginner to advanced."
-        url="/courses"
+        url="/Courses"
         keywords={['AI courses', 'Agentic AI training', 'learning paths', 'AI certification', 'online learning', 'AI subscription']}
         image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop"
         course={{

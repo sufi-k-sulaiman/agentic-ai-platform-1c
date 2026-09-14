@@ -74,7 +74,7 @@ export default function VideoTutorialsGuide() {
             description: 'Learn by watching our comprehensive video tutorials covering all aspects of 1cPlatform.',
             uploadDate: '2025-01-01',
             thumbnailUrl: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200',
-            contentUrl: 'https://1cplatform.com/video-tutorials',
+            contentUrl: 'https://1cplatform.base44.app/video-tutorials',
           }
         ]}
       />
