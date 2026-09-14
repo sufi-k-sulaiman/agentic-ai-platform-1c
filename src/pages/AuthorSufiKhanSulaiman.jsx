@@ -50,7 +50,7 @@ const ARTICLES = [
     readTime: '16 min read',
     category: 'Digital Commerce',
     icon: TrendingUp,
-    image: 'https://images.unsplash.com/photo-1460925895917-7f55b6d7e1c2?w=800',
+    image: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/3ed99b59a_generated_image.png',
   },
   {
     page: 'BlogTechTrendsEnterpriseAI',
@@ -60,7 +60,7 @@ const ARTICLES = [
     readTime: '15 min read',
     category: 'Technology',
     icon: Building2,
-    image: 'https://images.unsplash.com/photo-1451187580453-466d7b8e8c4f?w=800',
+    image: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/572679d25_generated_image.png',
   },
   {
     page: 'Top100Questions',
@@ -70,7 +70,7 @@ const ARTICLES = [
     readTime: '45 min read',
     category: 'AI Q&A',
     icon: BookOpen,
-    image: 'https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=800',
+    image: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/62d701c71_generated_image.png',
   },
 ];
 
@@ -103,6 +103,24 @@ export default function AuthorSufiKhanSulaiman() {
     },
   };
 
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Articles by ${AUTHOR.name}`,
+    itemListElement: ARTICLES.map((article, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      item: {
+        '@type': 'Article',
+        headline: article.title,
+        description: article.excerpt,
+        image: article.image,
+        author: { '@type': 'Person', name: AUTHOR.name },
+        datePublished: '2025-09-14',
+      },
+    })),
+  };
+
   const faqSchema = [
     { question: 'Who is Sufi Khan Sulaiman?', answer: 'Sufi Khan Sulaiman is the Chief Technology Officer of 1C Platform, a leading agentic AI platform for enterprises. He has over 30 years of experience in AI, hardware, and software engineering, and leads the technical vision for autonomous AI agents, ecommerce AI, and enterprise digital transformation.' },
     { question: 'What is Sufi Khan Sulaiman\'s role at 1C Platform?', answer: 'As CTO of 1C Platform, Sufi Khan Sulaiman leads the technical vision and architecture for the company\'s agentic AI engine, autonomous agents, and enterprise AI platform. He architected the platform that powers AI-driven ecommerce, digital commerce, and enterprise technology solutions for 500+ organizations.' },
@@ -121,7 +139,7 @@ export default function AuthorSufiKhanSulaiman() {
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Authors', url: '/author/sufi-khan-sulaiman' }, { name: 'Sufi Khan Sulaiman', url: '/author/sufi-khan-sulaiman' }]}
         faq={faqSchema}
         speakable={{ cssSelectors: ['h1', '.author-bio'] }}
-        schemas={[personSchema, profilePageSchema]}
+        schemas={[personSchema, profilePageSchema, itemListSchema]}
       />
 
       <BreadcrumbNav items={[

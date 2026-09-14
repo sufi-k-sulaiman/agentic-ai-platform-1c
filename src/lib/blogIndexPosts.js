@@ -1351,7 +1351,7 @@ export const posts = [
     date: 'September 14, 2025',
     readTime: '16 min read',
     category: 'Digital Commerce',
-    image: 'https://images.unsplash.com/photo-1460925895917-7f55b6d7e1c2?w=800',
+    image: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/3ed99b59a_generated_image.png',
     page: 'BlogDigitalCommerceStrategy',
     featured: true
   },
@@ -1362,7 +1362,7 @@ export const posts = [
     date: 'September 14, 2025',
     readTime: '15 min read',
     category: 'Technology',
-    image: 'https://images.unsplash.com/photo-1451187580453-466d7b8e8c4f?w=800',
+    image: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/572679d25_generated_image.png',
     page: 'BlogTechTrendsEnterpriseAI',
     featured: true
   }

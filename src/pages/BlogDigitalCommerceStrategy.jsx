@@ -30,7 +30,7 @@ export default function BlogDigitalCommerceStrategy() {
         article={{
           author: AUTHOR.name,
           datePublished: '2025-09-14',
-          image: 'https://images.unsplash.com/photo-1460925895917-7f55b6d7e1c2?w=1200',
+          image: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/3ed99b59a_generated_image.png',
           section: 'Digital Commerce',
           tags: ['digital commerce', 'AI customer journeys', 'omnichannel', 'headless commerce', 'composable architecture'],
           timeRequired: 'PT16M',
@@ -89,8 +89,8 @@ export default function BlogDigitalCommerceStrategy() {
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1460925895917-7f55b6d7e1c2?w=1200"
-            alt="AI-powered digital commerce customer journeys across channels"
+            src="https://media.base44.com/images/public/693e529a64adb72abf9804a1/3ed99b59a_generated_image.png"
+            alt="AI-powered digital commerce customer journeys across omnichannel touchpoints with personalization data streams"
             width={1200}
             height={384}
             loading="eager"

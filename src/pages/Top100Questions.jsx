@@ -204,7 +204,7 @@ export default function Top100Questions() {
         faq={FAQ_SCHEMA}
         breadcrumbs={[{ name: 'Company', url: '/AboutUs' }, { name: 'Top 100 AI Questions', url: '/top-100-questions' }]}
         speakable={{ cssSelectors: ['h1', '.hero-subtitle'] }}
-        image="https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200&h=630&fit=crop"
+        image="https://media.base44.com/images/public/693e529a64adb72abf9804a1/62d701c71_generated_image.png"
       />
 
       <BreadcrumbNav items={[{ label: 'Company', page: 'AboutUs' }, { label: 'Top 100 AI Questions' }]} />

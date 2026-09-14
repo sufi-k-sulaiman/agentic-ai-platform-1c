@@ -30,7 +30,7 @@ export default function BlogTechTrendsEnterpriseAI() {
         article={{
           author: AUTHOR.name,
           datePublished: '2025-09-14',
-          image: 'https://images.unsplash.com/photo-1451187580453-466d7b8e8c4f?w=1200',
+          image: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/572679d25_generated_image.png',
           section: 'Technology',
           tags: ['enterprise technology', 'AI agents', 'digital infrastructure', 'cloud-native', 'edge computing'],
           timeRequired: 'PT15M',
@@ -89,8 +89,8 @@ export default function BlogTechTrendsEnterpriseAI() {
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1451187580453-466d7b8e8c4f?w=1200"
-            alt="AI agents reshaping enterprise digital infrastructure"
+            src="https://media.base44.com/images/public/693e529a64adb72abf9804a1/572679d25_generated_image.png"
+            alt="AI agents reshaping enterprise digital infrastructure with cloud-native architecture and edge computing"
             width={1200}
             height={384}
             loading="eager"

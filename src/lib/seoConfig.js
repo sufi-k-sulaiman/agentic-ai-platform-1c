@@ -59,10 +59,10 @@ export const ogImages = {
   BlogCategoryGenerativeAI: 'https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop',
   BlogCategoryAIAutonomy: 'https://images.unsplash.com/photo-1501386764911-4d7e9b6c5e0f?w=1200&h=630&fit=crop',
   AIGlossary: 'https://images.unsplash.com/photo-1620712949828-7e7e8d3b5e0f?w=1200&h=630&fit=crop',
-  Top100Questions: 'https://images.unsplash.com/photo-1677443339387-014f0b8d18e3?w=1200&h=630&fit=crop',
+  Top100Questions: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/62d701c71_generated_image.png',
   BlogEcommerceAIAutomation: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&fit=crop',
-  BlogDigitalCommerceStrategy: 'https://images.unsplash.com/photo-1460925895917-7f55b6d7e1c2?w=1200&h=630&fit=crop',
-  BlogTechTrendsEnterpriseAI: 'https://images.unsplash.com/photo-1451187580453-466d7b8e8c4f?w=1200&h=630&fit=crop',
+  BlogDigitalCommerceStrategy: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/3ed99b59a_generated_image.png',
+  BlogTechTrendsEnterpriseAI: 'https://media.base44.com/images/public/693e529a64adb72abf9804a1/572679d25_generated_image.png',
   AuthorSufiKhanSulaiman: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e26495cc8_CTO.png',
 };
 
