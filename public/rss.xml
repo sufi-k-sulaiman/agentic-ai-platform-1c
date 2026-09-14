@@ -8,178 +8,171 @@
     <lastBuildDate>2026-09-14T00:00:00Z</lastBuildDate>
     <atom:link href="https://1cplatform.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog - AI Insights &amp; Articles</title>
-      <link>https://1cplatform.com/Blog</link>
-      <description>In-depth articles on agentic AI, generative AI, AI governance, architecture, design, and enterprise adoption.</description>
-      <guid>https://1cplatform.com/Blog</guid>
+      <title>How AI Is Transforming Ecommerce: From Personalization to Autonomous Operations</title>
+      <link>https://1cplatform.com/BlogEcommerceAIAutomation</link>
+      <description>Discover how AI and agentic AI are revolutionizing ecommerce—from hyper-personalization and dynamic pricing to autonomous inventory management and AI-driven customer support.</description>
+      <guid>https://1cplatform.com/BlogEcommerceAIAutomation</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Designing AI Agent Personas: Character and Voice Guidelines</title>
-      <link>https://1cplatform.com/BlogAIAgentPersonas</link>
-      <description>Create compelling AI agent personalities. Persona development, voice design, tone guidelines, and ch</description>
-      <guid>https://1cplatform.com/BlogAIAgentPersonas</guid>
+      <title>Digital Commerce in 2025: Building AI-Powered Customer Journeys</title>
+      <link>https://1cplatform.com/BlogDigitalCommerceStrategy</link>
+      <description>A comprehensive guide to digital commerce strategy in 2025. Learn how AI agents power omnichannel experiences, headless commerce, composable architecture, and autonomous customer journeys.</description>
+      <guid>https://1cplatform.com/BlogDigitalCommerceStrategy</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>AI Audit Frameworks: Ensuring Accountability in Autonomous Systems</title>
-      <link>https://1cplatform.com/BlogAIAuditFrameworks</link>
-      <description>How to audit autonomous AI agents for performance, compliance, and ethical behavior. Frameworks, che</description>
-      <guid>https://1cplatform.com/BlogAIAuditFrameworks</guid>
+      <title>Enterprise Technology Trends: How AI Agents Are Reshaping Digital Infrastructure</title>
+      <link>https://1cplatform.com/BlogTechTrendsEnterpriseAI</link>
+      <description>Explore the top enterprise technology trends of 2025. From AI agents and cloud-native architecture to edge computing and digital transformation, learn how autonomous AI is reshaping enterprise technology.</description>
+      <guid>https://1cplatform.com/BlogTechTrendsEnterpriseAI</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Overcoming Challenges in AI Autonomy: Risk, Trust, and Control</title>
-      <link>https://1cplatform.com/BlogAIAutonomyChallenges</link>
-      <description>Navigate the key challenges of deploying autonomous AI. Risk management, building trust, maintaining</description>
-      <guid>https://1cplatform.com/BlogAIAutonomyChallenges</guid>
+      <title>Top 100 Questions: AI, Ecommerce, Digital Commerce &amp; Integration</title>
+      <link>https://1cplatform.com/top-100-questions</link>
+      <description>The 100 most important questions about AI, ecommerce, digital commerce, integration, customer acquisition, tech debt, current adoption, and challenges—with expert answers by Sufi Khan Sulaiman.</description>
+      <guid>https://1cplatform.com/top-100-questions</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>The Future of AI Autonomy: Predictions and Emerging Trends for 2025-2030</title>
-      <link>https://1cplatform.com/BlogAIAutonomyFuture</link>
-      <description>Look ahead at the future of autonomous AI. Emerging capabilities, market trends, regulatory landscap</description>
-      <guid>https://1cplatform.com/BlogAIAutonomyFuture</guid>
+      <title>AI Automation: The Complete Guide to Automating Business with AI</title>
+      <link>https://1cplatform.com/ai-automation</link>
+      <description>Comprehensive guide to AI automation. Learn how autonomous AI agents automate complex business workflows, reduce costs by 40-70%, and transform enterprise operations.</description>
+      <guid>https://1cplatform.com/ai-automation</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Understanding AI Autonomy: From Basic Automation to True Intelligence</title>
-      <link>https://1cplatform.com/BlogAIAutonomyIntro</link>
-      <description>Explore the spectrum of AI autonomy, from simple automation to fully autonomous systems. Learn what </description>
-      <guid>https://1cplatform.com/BlogAIAutonomyIntro</guid>
+      <title>Agentic AI vs Traditional AI: Complete Comparison Guide</title>
+      <link>https://1cplatform.com/BlogAgenticVsTraditionalAI</link>
+      <description>Comprehensive comparison of agentic AI and traditional AI systems. Understand key differences, capabilities, and when to use each approach.</description>
+      <guid>https://1cplatform.com/BlogAgenticVsTraditionalAI</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>The 6 Levels of AI Autonomy: A Complete Framework</title>
-      <link>https://1cplatform.com/BlogAIAutonomyLevels</link>
-      <description>Understand the six levels of AI autonomy from assisted to full autonomy. Learn where your AI systems</description>
-      <guid>https://1cplatform.com/BlogAIAutonomyLevels</guid>
+      <title>Designing Effective Multi-Agent Systems: A Practical Guide</title>
+      <link>https://1cplatform.com/BlogMultiAgentSystems</link>
+      <description>Master the art of building multi-agent AI systems with orchestration patterns and best practices for enterprise deployment.</description>
+      <guid>https://1cplatform.com/BlogMultiAgentSystems</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>AI Autonomy vs Human Oversight: Finding the Right Balance</title>
-      <link>https://1cplatform.com/BlogAIAutonomyVsOversight</link>
-      <description>When should AI act autonomously and when do humans need to intervene? Framework for balancing autono</description>
-      <guid>https://1cplatform.com/BlogAIAutonomyVsOversight</guid>
+      <title>Introduction to Generative AI: A Complete Guide</title>
+      <link>https://1cplatform.com/BlogGenerativeAIIntro</link>
+      <description>Discover what generative AI is, how it works, and why it's transforming industries. Learn about the technology behind ChatGPT, DALL-E, and more.</description>
+      <guid>https://1cplatform.com/BlogGenerativeAIIntro</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Navigating AI Regulations: Compliance Guide for Agentic Systems</title>
-      <link>https://1cplatform.com/BlogAIComplianceRegulations</link>
-      <description>Comprehensive overview of global AI regulations including EU AI Act, US guidelines, and industry-spe</description>
-      <guid>https://1cplatform.com/BlogAIComplianceRegulations</guid>
+      <title>Understanding Large Language Models: GPT, Claude, and Beyond</title>
+      <link>https://1cplatform.com/BlogLLMGuide</link>
+      <description>A comprehensive guide to large language models, how they work, and how businesses are using them to transform operations.</description>
+      <guid>https://1cplatform.com/BlogLLMGuide</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Data Governance for Agentic AI: Managing Training Data and Agent Access</title>
-      <link>https://1cplatform.com/BlogAIDataGovernance</link>
-      <description>Best practices for governing data used by autonomous AI agents, from training datasets to runtime ac</description>
-      <guid>https://1cplatform.com/BlogAIDataGovernance</guid>
+      <title>Measuring the ROI of Your Agentic AI Investment</title>
+      <link>https://1cplatform.com/BlogAgenticAIROI</link>
+      <description>Learn how to calculate, track, and maximize returns from autonomous AI agents with proven frameworks and real-world metrics.</description>
+      <guid>https://1cplatform.com/BlogAgenticAIROI</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Design Systems for AI-First Products: Scalable UI Architecture</title>
-      <link>https://1cplatform.com/BlogAIDesignSystems</link>
-      <description>Build design systems optimized for AI products. Component architecture, token systems, and scaling A</description>
-      <guid>https://1cplatform.com/BlogAIDesignSystems</guid>
+      <title>10 Proven Use Cases for Agentic AI in Enterprise Operations</title>
+      <link>https://1cplatform.com/BlogAgenticAIUseCases</link>
+      <description>Explore real-world applications of autonomous AI agents across departments with implementation guides and measurable outcomes.</description>
+      <guid>https://1cplatform.com/BlogAgenticAIUseCases</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
       <title>AI Governance Best Practices: Lessons from Leading Organizations</title>
       <link>https://1cplatform.com/BlogAIGovernanceBestPractices</link>
-      <description>Learn from organizations successfully governing autonomous AI. Proven strategies, common pitfalls, a</description>
+      <description>Learn from organizations successfully governing autonomous AI. Proven strategies, common pitfalls, and practical implementation guidance.</description>
       <guid>https://1cplatform.com/BlogAIGovernanceBestPractices</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>The Future of AI Governance: Emerging Trends and Predictions</title>
-      <link>https://1cplatform.com/BlogAIGovernanceFuture</link>
-      <description>Where AI governance is heading. Automated governance, regulatory evolution, and preparing for autono</description>
-      <guid>https://1cplatform.com/BlogAIGovernanceFuture</guid>
+      <title>Ensuring Trust and Security in Agentic AI Deployments</title>
+      <link>https://1cplatform.com/BlogAgenticAISecurity</link>
+      <description>Comprehensive guide to securing autonomous AI agents in enterprise environments with best practices and frameworks.</description>
+      <guid>https://1cplatform.com/BlogAgenticAISecurity</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>AI Incident Response: Handling Autonomous Agent Failures</title>
-      <link>https://1cplatform.com/BlogAIGovernanceIncidents</link>
-      <description>Comprehensive guide to managing AI incidents. Detection, response procedures, root cause analysis, a</description>
-      <guid>https://1cplatform.com/BlogAIGovernanceIncidents</guid>
+      <title>Scaling Agentic AI from Pilot to Production: Lessons Learned</title>
+      <link>https://1cplatform.com/BlogAgenticAIScaling</link>
+      <description>Learn from 500+ enterprise deployments. Strategies for scaling AI agents across your organization and achieving production reliability.</description>
+      <guid>https://1cplatform.com/BlogAgenticAIScaling</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>AI Governance Metrics: Measuring and Reporting Effectiveness</title>
-      <link>https://1cplatform.com/BlogAIGovernanceMetrics</link>
-      <description>Key performance indicators for AI governance. How to measure effectiveness, report to stakeholders, </description>
-      <guid>https://1cplatform.com/BlogAIGovernanceMetrics</guid>
+      <title>From Automation to Autonomy: The Evolution of AI in Business</title>
+      <link>https://1cplatform.com/BlogAutomationToAutonomy</link>
+      <description>Trace the journey from simple automation to autonomous AI systems and understand the technological leap.</description>
+      <guid>https://1cplatform.com/BlogAutomationToAutonomy</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Creating AI Governance Policies: Templates and Best Practices</title>
-      <link>https://1cplatform.com/BlogAIGovernancePolicies</link>
-      <description>Step-by-step guide to developing comprehensive AI governance policies for autonomous agents. Include</description>
-      <guid>https://1cplatform.com/BlogAIGovernancePolicies</guid>
+      <title>How Autonomous Agents are Revolutionizing Business Operations</title>
+      <link>https://1cplatform.com/BlogAutonomousAgents</link>
+      <description>Explore the transformative power of autonomous AI agents in modern business operations and their impact on productivity.</description>
+      <guid>https://1cplatform.com/BlogAutonomousAgents</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Building AI Governance Teams: Roles, Skills, and Structure</title>
-      <link>https://1cplatform.com/BlogAIGovernanceTeams</link>
-      <description>How to staff and organize your AI governance function. Key roles, required skills, team structures, </description>
-      <guid>https://1cplatform.com/BlogAIGovernanceTeams</guid>
+      <title>No-Code Agentic AI: Empowering Every Business User</title>
+      <link>https://1cplatform.com/BlogNoCodeAgenticAI</link>
+      <description>Discover how no-code platforms democratize AI agent development for business users without technical expertise.</description>
+      <guid>https://1cplatform.com/BlogNoCodeAgenticAI</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>AI Governance Tools and Platforms: Technology Stack Guide</title>
-      <link>https://1cplatform.com/BlogAIGovernanceTools</link>
-      <description>Comprehensive guide to tools and platforms for AI governance. From monitoring to compliance automati</description>
-      <guid>https://1cplatform.com/BlogAIGovernanceTools</guid>
+      <title>The Future of Work: Human-AI Collaboration with Agentic Systems</title>
+      <link>https://1cplatform.com/BlogHumanAICollaboration</link>
+      <description>Explore how humans and AI agents will work together in the future workplace, creating unprecedented productivity gains.</description>
+      <guid>https://1cplatform.com/BlogHumanAICollaboration</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>AI Application Observability and Debugging</title>
-      <link>https://1cplatform.com/BlogAIObservabilityDebugging</link>
-      <description>Debug AI apps effectively. Tracing, logging, replay systems, LLM call inspection, and troubleshootin</description>
-      <guid>https://1cplatform.com/BlogAIObservabilityDebugging</guid>
+      <title>Fine-Tuning vs RAG: Choosing the Right Approach for Your App</title>
+      <link>https://1cplatform.com/BlogFineTuningVsRAG</link>
+      <description>Compare fine-tuning and retrieval-augmented generation. When to use each, implementation patterns, and cost considerations.</description>
+      <guid>https://1cplatform.com/BlogFineTuningVsRAG</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Building AI Plugins and Extensions: Modular AI Architecture</title>
-      <link>https://1cplatform.com/BlogAIPluginsExtensions</link>
-      <description>Create extensible AI applications. Plugin systems, extension APIs, marketplace patterns, and third-p</description>
-      <guid>https://1cplatform.com/BlogAIPluginsExtensions</guid>
+      <title>Building Production-Ready Generative AI Applications</title>
+      <link>https://1cplatform.com/BlogProductionGenAIApps</link>
+      <description>Essential patterns for deploying generative AI apps. Reliability, monitoring, error handling, versioning, and scaling strategies.</description>
+      <guid>https://1cplatform.com/BlogProductionGenAIApps</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Privacy Governance for Agentic AI: GDPR, CCPA Compliance</title>
-      <link>https://1cplatform.com/BlogAIPrivacyGovernance</link>
-      <description>Navigate privacy regulations for autonomous AI agents. Practical strategies for GDPR, CCPA complianc</description>
-      <guid>https://1cplatform.com/BlogAIPrivacyGovernance</guid>
+      <title>Agent Architecture Fundamentals: Building Blocks of Autonomous AI</title>
+      <link>https://1cplatform.com/BlogAgentArchitectureFundamentals</link>
+      <description>Master the core components of agent architecture. Control loops, decision engines, memory systems, and tool integration.</description>
+      <guid>https://1cplatform.com/BlogAgentArchitectureFundamentals</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>AI Response Quality and Consistency: Ensuring Reliable Outputs</title>
-      <link>https://1cplatform.com/BlogAIResponseQuality</link>
-      <description>Maintain output quality across requests. Validation schemas, consistency checks, quality scoring, an</description>
-      <guid>https://1cplatform.com/BlogAIResponseQuality</guid>
+      <title>Migration Guide: From Traditional AI to Agentic AI Systems</title>
+      <link>https://1cplatform.com/BlogMigratingToAgenticAI</link>
+      <description>Step-by-step guide to migrating from traditional AI to agentic systems. Strategies, timelines, and risk mitigation.</description>
+      <guid>https://1cplatform.com/BlogMigratingToAgenticAI</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>AI Risk Management: Identifying and Mitigating Agentic AI Risks</title>
-      <link>https://1cplatform.com/BlogAIRiskManagement</link>
-      <description>Framework for assessing, monitoring, and mitigating risks in autonomous AI agent deployments. Practi</description>
-      <guid>https://1cplatform.com/BlogAIRiskManagement</guid>
+      <title>When to Use Agentic AI vs Traditional AI: Decision Framework</title>
+      <link>https://1cplatform.com/BlogWhenUseAgenticAI</link>
+      <description>Practical guide to choosing between agentic and traditional AI. Decision trees, use case examples, and implementation guidance.</description>
+      <guid>https://1cplatform.com/BlogWhenUseAgenticAI</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
     <item>
-      <title>Security Governance for Agentic AI: Protecting Autonomous Systems</title>
-      <link>https://1cplatform.com/BlogAISecurityGovernance</link>
-      <description>Comprehensive security governance framework for autonomous AI agents. Threat models, controls, and i</description>
-      <guid>https://1cplatform.com/BlogAISecurityGovernance</guid>
-      <pubDate>2026-09-14T00:00:00Z</pubDate>
-    </item>
-    <item>
-      <title>Designing for AI Transparency: Building Trust Through Design</title>
-      <link>https://1cplatform.com/BlogAITransparencyDesign</link>
-      <description>Design interfaces that make AI decision-making transparent. Explainability patterns, trust indicator</description>
-      <guid>https://1cplatform.com/BlogAITransparencyDesign</guid>
+      <title>AI Glossary: Key Terms &amp; Definitions</title>
+      <link>https://1cplatform.com/AIGlossary</link>
+      <description>Comprehensive glossary of AI, agentic AI, and enterprise AI terms. Understand LLMs, RAG, multi-agent systems, governance, observability, and more.</description>
+      <guid>https://1cplatform.com/AIGlossary</guid>
       <pubDate>2026-09-14T00:00:00Z</pubDate>
     </item>
   </channel>
