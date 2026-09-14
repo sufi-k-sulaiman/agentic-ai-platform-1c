@@ -2273,7 +2273,7 @@ export default function InvestorRelations() {
                 background: 'Visionary entrepreneur and disciplined investor who combines innovation with financial wisdom to create lasting impact, now pioneering enterprise AI transformation with a vision for autonomous business intelligence. Deep understanding of healthcare and life sciences AI applications.'
               },
               {
-                name: 'Suf K Sulaiman',
+                name: 'Sufi Khan Sulaiman',
                 role: 'CTO & Co-Founder',
                 background: '30+ years driving innovation across AI, hardware, and software at global tech giants. Architect of systems processing billions of transactions daily. Holds 12 patents in distributed systems and machine learning.'
               },
@@ -2296,7 +2296,7 @@ export default function InvestorRelations() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{leader.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">{leader.name === 'Sufi Khan Sulaiman' ? <Link to="/author/sufi-khan-sulaiman" className="hover:text-[#8B2EE5] transition-colors">{leader.name}</Link> : leader.name}</h3>
                 <p className="text-[#8B2EE5] font-semibold mb-4">{leader.role}</p>
                 <p className="text-gray-600 leading-relaxed">{leader.background}</p>
               </motion.div>
@@ -3312,12 +3312,12 @@ export default function InvestorRelations() {
                     <div className="grid md:grid-cols-2 gap-6">
                       {[
                         { name: 'Henry Schurbach', role: 'CEO & Co-Founder', bg: 'Visionary entrepreneur and investor → Enterprise AI pioneer' },
-                        { name: 'Suf K Sulaiman', role: 'CTO & Co-Founder', bg: '30+ years AI/hardware. 12 patents' },
+                        { name: 'Sufi Khan Sulaiman', role: 'CTO & Co-Founder', bg: '30+ years AI/hardware. 12 patents' },
                         { name: 'Emily Zhang', role: 'Chief Product Officer', bg: 'VP at SaaS unicorn. 5M+ users' },
                         { name: 'Advisory Board', role: '5 Industry Experts', bg: 'Fortune 500 C-suite executives' }
                       ].map((leader, idx) => (
                         <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5">
-                          <h3 className="text-lg font-bold mb-1">{leader.name}</h3>
+                          <h3 className="text-lg font-bold mb-1">{leader.name === 'Sufi Khan Sulaiman' ? <Link to="/author/sufi-khan-sulaiman" className="hover:text-purple-300 transition-colors">{leader.name}</Link> : leader.name}</h3>
                           <p className="text-sm text-purple-300 font-semibold mb-2">{leader.role}</p>
                           <p className="text-xs text-purple-200">{leader.bg}</p>
                         </div>

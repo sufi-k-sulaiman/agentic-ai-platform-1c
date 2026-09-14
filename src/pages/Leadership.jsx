@@ -19,7 +19,7 @@ const leaders = [
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/0636a8715_Henry-Schnurbach.png'
   },
   {
-    name: 'Suf K Sulaiman',
+    name: 'Sufi Khan Sulaiman',
     title: 'Chief Technology Officer',
     bio: ['A true technology polymath with over 30 years of experience spanning AI, hardware, and software engineering. He has been at the forefront of every major technology wave, from early computing systems to today\'s cutting-edge AI architectures.', 'As CTO of 1cPlatform, his deep expertise in both hardware and software allows him to architect solutions that are not just innovative but fundamentally sound, driving the technical vision and ensuring AI systems are built on rock-solid engineering principles that scale.'],
     image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/693e529a64adb72abf9804a1/e26495cc8_CTO.png'
@@ -126,13 +126,21 @@ export default function Leadership() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{leader.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  {leader.name === 'Sufi Khan Sulaiman' ? (
+                    <Link to="/author/sufi-khan-sulaiman" className="hover:text-[#8B2EE5] transition-colors">
+                      {leader.name}
+                    </Link>
+                  ) : (
+                    leader.name
+                  )}
+                </h3>
                 <p className="text-[#8B2EE5] font-medium mb-4">{leader.title}</p>
                 <div className="space-y-3">
                   <p className="text-gray-600 text-sm leading-relaxed">{leader.bio[0]}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{leader.bio[1]}</p>
                 </div>
-                {leader.name === 'Suf K Sulaiman' && (
+                {leader.name === 'Sufi Khan Sulaiman' && (
                   <Link
                     to={'/author/sufi-khan-sulaiman'}
                     className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-[#8B2EE5] hover:gap-2 transition-all"
