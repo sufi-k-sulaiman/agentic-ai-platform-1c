@@ -15,6 +15,7 @@ import Top100Questions from '@/pages/Top100Questions';
 import BlogEcommerceAIAutomation from '@/pages/BlogEcommerceAIAutomation';
 import BlogDigitalCommerceStrategy from '@/pages/BlogDigitalCommerceStrategy';
 import BlogTechTrendsEnterpriseAI from '@/pages/BlogTechTrendsEnterpriseAI';
+import AuthorSufiKhanSulaiman from '@/pages/AuthorSufiKhanSulaiman';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -89,6 +90,11 @@ const AuthenticatedApp = () => {
       <Route path="/BlogTechTrendsEnterpriseAI" element={
         <LayoutWrapper currentPageName="BlogTechTrendsEnterpriseAI">
           <BlogTechTrendsEnterpriseAI />
+        </LayoutWrapper>
+      } />
+      <Route path="/author/sufi-khan-sulaiman" element={
+        <LayoutWrapper currentPageName="AuthorSufiKhanSulaiman">
+          <AuthorSufiKhanSulaiman />
         </LayoutWrapper>
       } />
       <Route path="/ai-for/:industry/in/:location" element={

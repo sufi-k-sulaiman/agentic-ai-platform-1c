@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ChevronDown, HelpCircle, Brain, ShoppingBag, ShoppingCart, Plug, Users, Bug, TrendingUp, AlertTriangle } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
+import { createPageUrl } from '@/utils';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
 import InlineRelatedGuides from '@/components/seo/InlineRelatedGuides';
@@ -12,6 +14,7 @@ import { getPAA } from '@/lib/seoPeopleAlsoAsk';
 const AUTHOR = {
   name: 'Sufi Khan Sulaiman',
   url: 'https://sufikhan.com/',
+  page: 'AuthorSufiKhanSulaiman',
 };
 
 const SECTIONS = [
@@ -228,14 +231,12 @@ export default function Top100Questions() {
           </p>
           <p className="text-sm text-gray-500">
             By{' '}
-            <a
-              href={AUTHOR.url}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={createPageUrl(AUTHOR.page)}
               className="text-[#8B2EE5] hover:text-[#7325C4] font-semibold underline decoration-[#8B2EE5]/30 hover:decoration-[#8B2EE5] transition-colors"
             >
               {AUTHOR.name}
-            </a>
+            </Link>
           </p>
         </motion.div>
 

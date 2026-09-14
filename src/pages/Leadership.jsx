@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedContent from '@/components/seo/RelatedContent';
@@ -7,6 +9,7 @@ import FeatureDetailSection from '@/components/FeatureDetailSection';
 import { featureDetails } from '@/lib/featureDetails';
 import InternalLinker from '@/components/seo/InternalLinker';
 import SeoImage from '@/components/seo/SeoImage';
+import { createPageUrl } from '@/utils';
 
 const leaders = [
   {
@@ -112,6 +115,15 @@ export default function Leadership() {
                   <p className="text-gray-600 text-sm leading-relaxed">{leader.bio[0]}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{leader.bio[1]}</p>
                 </div>
+                {leader.name === 'Suf K Sulaiman' && (
+                  <Link
+                    to={createPageUrl('AuthorSufiKhanSulaiman')}
+                    className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-[#8B2EE5] hover:gap-2 transition-all"
+                  >
+                    View author profile & articles
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>

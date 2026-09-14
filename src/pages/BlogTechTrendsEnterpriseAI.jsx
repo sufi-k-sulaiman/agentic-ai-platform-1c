@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 const AUTHOR = {
   name: 'Sufi Khan Sulaiman',
   url: 'https://sufikhan.com/',
+  page: 'AuthorSufiKhanSulaiman',
 };
 
 export default function BlogTechTrendsEnterpriseAI() {
@@ -73,9 +74,9 @@ export default function BlogTechTrendsEnterpriseAI() {
           <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-8">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5" />
-              <a href={AUTHOR.url} target="_blank" rel="noopener noreferrer" className="font-medium text-[#8B2EE5] hover:underline">
+              <Link to={createPageUrl(AUTHOR.page)} className="font-medium text-[#8B2EE5] hover:underline">
                 {AUTHOR.name}
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5" />
