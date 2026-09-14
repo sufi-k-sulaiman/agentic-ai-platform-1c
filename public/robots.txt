@@ -1,20 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /Onboarding
-Disallow: /EventRegistrations
-Disallow: /NewsletterSignups
 Disallow: /OAuthConsent
 
-# AI Crawlers
-User-agent: GPTBot
-Allow: /
-User-agent: ClaudeBot
-Allow: /
-User-agent: anthropic-ai
-Allow: /
-User-agent: PerplexityBot
-Allow: /
-User-agent: Google-Extended
-Allow: /
+Crawl-delay: 1
 
-Sitemap: https://1cplatform.base44.app/sitemap.xml
+Sitemap: https://1cplatform.com/sitemap.xml
