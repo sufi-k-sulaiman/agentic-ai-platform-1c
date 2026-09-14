@@ -220,7 +220,7 @@ export default function BlogAgenticAIEnterprise() {
 
         <RelatedContent
           currentPage="BlogAgenticAIEnterprise"
-          manualPages={['AgenticAI', 'EnterpriseSuite', 'BlogAgenticAIArchitecture', 'BlogAgenticAIROI']}
+          manualPages={['AgenticAI', 'EnterpriseSuite', 'BlogEcommerceAIAutomation', 'BlogTechTrendsEnterpriseAI']}
           title="Related Articles & Resources"
         />
 

@@ -12,6 +12,9 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ProgrammaticSEO from '@/pages/ProgrammaticSEO';
 import AIAutomation from '@/pages/AIAutomation';
 import Top100Questions from '@/pages/Top100Questions';
+import BlogEcommerceAIAutomation from '@/pages/BlogEcommerceAIAutomation';
+import BlogDigitalCommerceStrategy from '@/pages/BlogDigitalCommerceStrategy';
+import BlogTechTrendsEnterpriseAI from '@/pages/BlogTechTrendsEnterpriseAI';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -71,6 +74,21 @@ const AuthenticatedApp = () => {
       <Route path="/top-100-questions" element={
         <LayoutWrapper currentPageName="Top100Questions">
           <Top100Questions />
+        </LayoutWrapper>
+      } />
+      <Route path="/BlogEcommerceAIAutomation" element={
+        <LayoutWrapper currentPageName="BlogEcommerceAIAutomation">
+          <BlogEcommerceAIAutomation />
+        </LayoutWrapper>
+      } />
+      <Route path="/BlogDigitalCommerceStrategy" element={
+        <LayoutWrapper currentPageName="BlogDigitalCommerceStrategy">
+          <BlogDigitalCommerceStrategy />
+        </LayoutWrapper>
+      } />
+      <Route path="/BlogTechTrendsEnterpriseAI" element={
+        <LayoutWrapper currentPageName="BlogTechTrendsEnterpriseAI">
+          <BlogTechTrendsEnterpriseAI />
         </LayoutWrapper>
       } />
       <Route path="/ai-for/:industry/in/:location" element={

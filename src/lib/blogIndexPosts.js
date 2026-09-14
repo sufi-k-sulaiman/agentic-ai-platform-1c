@@ -1332,5 +1332,38 @@ export const posts = [
     category: 'Agentic Capabilities',
     image: 'https://images.unsplash.com/photo-1551434677-e2f30fe36d28?w=800',
     page: 'BlogAgenticAIToolIntegration'
+  },
+  {
+    title: 'How AI Is Transforming Ecommerce: From Personalization to Autonomous Operations',
+    excerpt: 'Discover how AI and agentic AI are revolutionizing ecommerce—from hyper-personalization and dynamic pricing to autonomous inventory management and AI-driven customer support.',
+    author: 'Sufi Khan Sulaiman',
+    date: 'September 14, 2025',
+    readTime: '14 min read',
+    category: 'Ecommerce',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800',
+    page: 'BlogEcommerceAIAutomation',
+    featured: true
+  },
+  {
+    title: 'Digital Commerce in 2025: Building AI-Powered Customer Journeys',
+    excerpt: 'A comprehensive guide to digital commerce strategy in 2025. Learn how AI agents power omnichannel experiences, headless commerce, composable architecture, and autonomous customer journeys.',
+    author: 'Sufi Khan Sulaiman',
+    date: 'September 14, 2025',
+    readTime: '16 min read',
+    category: 'Digital Commerce',
+    image: 'https://images.unsplash.com/photo-1460925895917-7f55b6d7e1c2?w=800',
+    page: 'BlogDigitalCommerceStrategy',
+    featured: true
+  },
+  {
+    title: 'Enterprise Technology Trends: How AI Agents Are Reshaping Digital Infrastructure',
+    excerpt: 'Explore the top enterprise technology trends of 2025. From AI agents and cloud-native architecture to edge computing and digital transformation, learn how autonomous AI is reshaping enterprise technology.',
+    author: 'Sufi Khan Sulaiman',
+    date: 'September 14, 2025',
+    readTime: '15 min read',
+    category: 'Technology',
+    image: 'https://images.unsplash.com/photo-1451187580453-466d7b8e8c4f?w=800',
+    page: 'BlogTechTrendsEnterpriseAI',
+    featured: true
   }
 ];

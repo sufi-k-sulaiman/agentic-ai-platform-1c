@@ -328,7 +328,7 @@ export default function Top100Questions() {
         <div className="my-12">
           <InlineRelatedGuides
             currentPage="Top100Questions"
-            relatedPages={['AgenticAI', 'EnterpriseSuite', 'AIAutomation', 'Blog']}
+            relatedPages={['AgenticAI', 'EnterpriseSuite', 'AIAutomation', 'BlogEcommerceAIAutomation', 'BlogDigitalCommerceStrategy', 'BlogTechTrendsEnterpriseAI']}
             title="Deep Dive Further"
           />
         </div>
