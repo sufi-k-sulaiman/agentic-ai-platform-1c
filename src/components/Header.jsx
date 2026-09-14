@@ -45,6 +45,7 @@ const navItems = [
       { label: 'Documentation', description: 'Complete guides', href: createPageUrl('Documentation') },
       { label: 'API Reference', description: 'API endpoints', href: createPageUrl('APIReference') },
       { label: 'AI Automation', description: 'Topic cluster hub', href: '/ai-automation' },
+      { label: 'AI Overview', description: 'History, pros & cons, future of AI', href: createPageUrl('AIOverview') },
       { label: 'AI Glossary', description: 'Key terms & definitions', href: createPageUrl('AIGlossary') },
       { label: 'Community', description: 'Join developers', href: createPageUrl('Community') },
       { label: 'Blog', description: 'Insights & updates', href: createPageUrl('Blog') },

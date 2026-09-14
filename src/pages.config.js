@@ -202,6 +202,32 @@ import Rewards from './pages/Rewards';
 import LearningJourney from './pages/LearningJourney';
 import DigitalLearningSubscriptions from './pages/DigitalLearningSubscriptions';
 import AIGlossary from './pages/AIGlossary';
+import AIOverview from './pages/AIOverview';
+import BlogAIAccountability from './pages/BlogAIAccountability';
+import BlogAIAuditFrameworks from './pages/BlogAIAuditFrameworks';
+import BlogAIComplianceRegulations from './pages/BlogAIComplianceRegulations';
+import BlogAIDataGovernance from './pages/BlogAIDataGovernance';
+import BlogAIGovernanceBestPractices from './pages/BlogAIGovernanceBestPractices';
+import BlogAIGovernanceFuture from './pages/BlogAIGovernanceFuture';
+import BlogAIGovernanceIncidents from './pages/BlogAIGovernanceIncidents';
+import BlogAIGovernanceMetrics from './pages/BlogAIGovernanceMetrics';
+import BlogAIGovernancePolicies from './pages/BlogAIGovernancePolicies';
+import BlogAIGovernanceTeams from './pages/BlogAIGovernanceTeams';
+import BlogAIGovernanceTools from './pages/BlogAIGovernanceTools';
+import BlogAIPrivacyGovernance from './pages/BlogAIPrivacyGovernance';
+import BlogAIRiskManagement from './pages/BlogAIRiskManagement';
+import BlogAISecurityGovernance from './pages/BlogAISecurityGovernance';
+import BlogAgenticAIDataFlowPatterns from './pages/BlogAgenticAIDataFlowPatterns';
+import BlogAgenticAIDeploymentPatterns from './pages/BlogAgenticAIDeploymentPatterns';
+import BlogAgenticAIObservabilityArchitecture from './pages/BlogAgenticAIObservabilityArchitecture';
+import BlogAgenticAIScalabilityComparison from './pages/BlogAgenticAIScalabilityComparison';
+import BlogAgenticAIStateManagement from './pages/BlogAgenticAIStateManagement';
+import BlogBuildingWithAPIs from './pages/BlogBuildingWithAPIs';
+import BlogChatGPTLLMs from './pages/BlogChatGPTLLMs';
+import BlogFineTuningAI from './pages/BlogFineTuningAI';
+import BlogFutureGenerativeAI from './pages/BlogFutureGenerativeAI';
+import BlogGenerativeVsTraditional from './pages/BlogGenerativeVsTraditional';
+import BlogImageGeneration from './pages/BlogImageGeneration';
 import __Layout from './Layout.jsx';
 
 
@@ -410,6 +436,32 @@ export const PAGES = {
     "LearningJourney": LearningJourney,
     "DigitalLearningSubscriptions": DigitalLearningSubscriptions,
     "AIGlossary": AIGlossary,
+    "AIOverview": AIOverview,
+    "BlogAIAccountability": BlogAIAccountability,
+    "BlogAIAuditFrameworks": BlogAIAuditFrameworks,
+    "BlogAIComplianceRegulations": BlogAIComplianceRegulations,
+    "BlogAIDataGovernance": BlogAIDataGovernance,
+    "BlogAIGovernanceBestPractices": BlogAIGovernanceBestPractices,
+    "BlogAIGovernanceFuture": BlogAIGovernanceFuture,
+    "BlogAIGovernanceIncidents": BlogAIGovernanceIncidents,
+    "BlogAIGovernanceMetrics": BlogAIGovernanceMetrics,
+    "BlogAIGovernancePolicies": BlogAIGovernancePolicies,
+    "BlogAIGovernanceTeams": BlogAIGovernanceTeams,
+    "BlogAIGovernanceTools": BlogAIGovernanceTools,
+    "BlogAIPrivacyGovernance": BlogAIPrivacyGovernance,
+    "BlogAIRiskManagement": BlogAIRiskManagement,
+    "BlogAISecurityGovernance": BlogAISecurityGovernance,
+    "BlogAgenticAIDataFlowPatterns": BlogAgenticAIDataFlowPatterns,
+    "BlogAgenticAIDeploymentPatterns": BlogAgenticAIDeploymentPatterns,
+    "BlogAgenticAIObservabilityArchitecture": BlogAgenticAIObservabilityArchitecture,
+    "BlogAgenticAIScalabilityComparison": BlogAgenticAIScalabilityComparison,
+    "BlogAgenticAIStateManagement": BlogAgenticAIStateManagement,
+    "BlogBuildingWithAPIs": BlogBuildingWithAPIs,
+    "BlogChatGPTLLMs": BlogChatGPTLLMs,
+    "BlogFineTuningAI": BlogFineTuningAI,
+    "BlogFutureGenerativeAI": BlogFutureGenerativeAI,
+    "BlogGenerativeVsTraditional": BlogGenerativeVsTraditional,
+    "BlogImageGeneration": BlogImageGeneration,
 }
 
 export const pagesConfig = {

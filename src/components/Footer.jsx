@@ -20,6 +20,7 @@ const footerLinks = {
   resources: [
     { label: 'Documentation', href: createPageUrl('Documentation') },
     { label: 'API Reference', href: createPageUrl('APIReference') },
+    { label: 'AI Overview', href: createPageUrl('AIOverview') },
     { label: 'AI Glossary', href: createPageUrl('AIGlossary') },
     { label: 'Community', href: createPageUrl('Community') },
     { label: 'Blog', href: createPageUrl('Blog') },
