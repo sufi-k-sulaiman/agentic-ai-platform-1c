@@ -3,7 +3,9 @@ import { Anchor } from 'lucide-react';
 import ModuleBanner from './ModuleBanner';
 import IssuesPanel from './IssuesPanel';
 import FeaturePanel from './FeaturePanel';
+import ModuleDeepDive from './ModuleDeepDive';
 import { moduleOne } from './defenseModules';
+import { deepDiveOne } from './moduleDeepDives';
 
 export default function DefenseModulePerimeter() {
   const m = moduleOne;
@@ -45,6 +47,8 @@ export default function DefenseModulePerimeter() {
               ))}
             </div>
           </div>
+
+          <ModuleDeepDive deepDive={deepDiveOne} tone="cream" />
         </div>
       </section>
     </>

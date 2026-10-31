@@ -3,7 +3,9 @@ import { Badge } from '@/components/ui/badge';
 import { AlertTriangle, FileCheck2 } from 'lucide-react';
 import ModuleBanner from './ModuleBanner';
 import FeaturePanel from './FeaturePanel';
+import ModuleDeepDive from './ModuleDeepDive';
 import { moduleThree } from './defenseModules';
+import { deepDiveThree } from './moduleDeepDives';
 
 export default function DefenseModuleAppSec() {
   const m = moduleThree;
@@ -59,6 +61,8 @@ export default function DefenseModuleAppSec() {
               </p>
             </div>
           </div>
+
+          <ModuleDeepDive deepDive={deepDiveThree} tone="dark" />
         </div>
       </section>
     </>

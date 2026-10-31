@@ -2,7 +2,9 @@ import React from 'react';
 import { ShieldCheck } from 'lucide-react';
 import ModuleBanner from './ModuleBanner';
 import IssuesPanel from './IssuesPanel';
+import ModuleDeepDive from './ModuleDeepDive';
 import { moduleFour } from './defenseModules';
+import { deepDiveFour } from './moduleDeepDives';
 
 export default function DefenseModuleImpact() {
   const m = moduleFour;
@@ -58,6 +60,8 @@ export default function DefenseModuleImpact() {
               ))}
             </div>
           </div>
+
+          <ModuleDeepDive deepDive={deepDiveFour} tone="cream" />
         </div>
       </section>
     </>

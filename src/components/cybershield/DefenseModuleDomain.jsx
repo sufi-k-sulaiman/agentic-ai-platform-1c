@@ -1,7 +1,9 @@
 import React from 'react';
 import { AlertTriangle, ArrowRight } from 'lucide-react';
 import ModuleBanner from './ModuleBanner';
+import ModuleDeepDive from './ModuleDeepDive';
 import { moduleTwo } from './defenseModules';
+import { deepDiveTwo } from './moduleDeepDives';
 
 export default function DefenseModuleDomain() {
   const m = moduleTwo;
@@ -86,6 +88,8 @@ export default function DefenseModuleDomain() {
               </div>
             ))}
           </div>
+
+          <ModuleDeepDive deepDive={deepDiveTwo} tone="white" />
         </div>
       </section>
     </>
