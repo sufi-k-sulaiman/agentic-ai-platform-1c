@@ -61,7 +61,7 @@ export default function AgentOrchestration() {
     <section className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-14">
-          <Badge className="bg-purple-50 text-[#8B2EE5] border border-purple-100 hover:bg-purple-50 mb-4">
+          <Badge className="bg-[#FFFFF4] text-[#003DA5] border border-[#003DA5]/20 hover:bg-[#FFFFF4] mb-4">
             <Workflow className="w-3.5 h-3.5 mr-1.5" />
             Multi-Agent AI Orchestration Core
           </Badge>
@@ -83,10 +83,10 @@ export default function AgentOrchestration() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.45, delay: i * 0.06 }}
-              className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 hover:border-[#8B2EE5]/40 hover:shadow-xl hover:shadow-purple-100/60 transition-all"
+              className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 hover:border-[#003DA5]/40 hover:shadow-xl hover:shadow-[#003DA5]/10 transition-all"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-11 w-11 shrink-0 rounded-xl bg-gradient-to-br from-[#8B2EE5] to-[#5B21B6] flex items-center justify-center">
+                <div className="h-11 w-11 shrink-0 rounded-xl bg-gradient-to-br from-[#003DA5] to-[#001B4D] flex items-center justify-center">
                   <agent.icon className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 leading-snug">{agent.name}</h3>
@@ -102,7 +102,7 @@ export default function AgentOrchestration() {
                 <ul className="space-y-1.5">
                   {agent.outputs.map((out) => (
                     <li key={out} className="flex items-center gap-2 text-sm text-gray-700">
-                      <ArrowRight className="w-3.5 h-3.5 text-[#8B2EE5] shrink-0" />
+                      <ArrowRight className="w-3.5 h-3.5 text-[#FFB605] shrink-0" />
                       {out}
                     </li>
                   ))}

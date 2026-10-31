@@ -30,7 +30,7 @@ export default function XAISection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5">
-            <Badge className="bg-purple-50 text-[#8B2EE5] border border-purple-100 hover:bg-purple-50 mb-4">
+            <Badge className="bg-[#FFFFF4] text-[#003DA5] border border-[#003DA5]/20 hover:bg-[#FFFFF4] mb-4">
               <Sparkles className="w-3.5 h-3.5 mr-1.5" />
               Explainable AI (XAI)
             </Badge>
@@ -41,7 +41,7 @@ export default function XAISection() {
               CyberShield removes the opacity problem of automated AI platforms with total visibility
               into how every agent reaches its conclusion — from a single alert to a board-level report.
             </p>
-            <div className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <div className="mt-8 rounded-2xl border border-[#003DA5]/20 bg-[#FFFFF4] p-6">
               <div className="text-sm font-semibold text-gray-900 mb-2">Analyst trust, by design</div>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Cryptographic audit trails and explanation records make every autonomous action
@@ -58,9 +58,9 @@ export default function XAISection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="flex items-start gap-4 rounded-2xl border border-gray-200 p-6 hover:border-[#8B2EE5]/40 hover:shadow-md transition-all"
+                className="flex items-start gap-4 rounded-2xl border border-gray-200 p-6 hover:border-[#003DA5]/40 hover:shadow-md transition-all"
               >
-                <div className="h-11 w-11 shrink-0 rounded-xl bg-gradient-to-br from-[#8B2EE5] to-[#5B21B6] flex items-center justify-center">
+                <div className="h-11 w-11 shrink-0 rounded-xl bg-gradient-to-br from-[#003DA5] to-[#001B4D] flex items-center justify-center">
                   <item.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>

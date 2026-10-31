@@ -18,10 +18,10 @@ export default function ExecutiveSummary() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative rounded-3xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-8 lg:p-12"
+          className="relative rounded-3xl border border-[#003DA5]/20 bg-[#FFFFF4] p-8 lg:p-12"
         >
-          <Quote className="absolute top-6 right-8 w-14 h-14 text-purple-100" />
-          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8B2EE5] mb-4">
+          <Quote className="absolute top-6 right-8 w-14 h-14 text-[#FFB605]/40" />
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[#003DA5] mb-4">
             Executive Summary
           </div>
           <p className="text-lg lg:text-xl text-gray-800 leading-relaxed relative">
@@ -36,8 +36,8 @@ export default function ExecutiveSummary() {
 
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {highlights.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2.5 rounded-xl bg-white border border-gray-200 px-4 py-3">
-                <Icon className="w-4 h-4 text-[#8B2EE5] shrink-0" />
+              <div key={label} className="flex items-center gap-2.5 rounded-xl bg-white border border-[#003DA5]/10 px-4 py-3">
+                <Icon className="w-4 h-4 text-[#003DA5] shrink-0" />
                 <span className="text-sm font-medium text-gray-800 leading-snug">{label}</span>
               </div>
             ))}
