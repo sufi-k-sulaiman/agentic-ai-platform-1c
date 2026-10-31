@@ -5,6 +5,7 @@ import InvestorRelations from './pages/InvestorRelations';
 import Leadership from './pages/Leadership';
 import Newsroom from './pages/Newsroom';
 import AgenticAI from './pages/AgenticAI';
+import CyberShield from './pages/CyberShield';
 import EnterpriseSuite from './pages/EnterpriseSuite';
 import CloudPlatform from './pages/CloudPlatform';
 import DeveloperTools from './pages/DeveloperTools';
@@ -239,6 +240,7 @@ export const PAGES = {
     "Leadership": Leadership,
     "Newsroom": Newsroom,
     "AgenticAI": AgenticAI,
+    "CyberShield": CyberShield,
     "EnterpriseSuite": EnterpriseSuite,
     "CloudPlatform": CloudPlatform,
     "DeveloperTools": DeveloperTools,

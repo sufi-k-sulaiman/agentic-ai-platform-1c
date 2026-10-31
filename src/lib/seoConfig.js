@@ -22,6 +22,7 @@ export const ogImages = {
   DeveloperTools: 'https://images.unsplash.com/photo-1555066925-5d3719e8b3a0?w=1200&h=630&fit=crop',
   Pricing: 'https://images.unsplash.com/photo-1554224075-ff6c8ad421b8?w=1200&h=630&fit=crop',
   Cyber: 'https://images.unsplash.com/photo-1563206157-b3e1599f7397?w=1200&h=630&fit=crop',
+  CyberShield: 'https://images.unsplash.com/photo-1563206157-b3e1599f7397?w=1200&h=630&fit=crop',
   AboutUs: 'https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop',
   Careers: 'https://images.unsplash.com/photo-1522202172294-6940c44f7c74?w=1200&h=630&fit=crop',
   Leadership: 'https://images.unsplash.com/photo-1521737859070-249a39c8e16e?w=1200&h=630&fit=crop',
@@ -204,6 +205,14 @@ export const seoPages = {
     url: '/Cyber',
     category: 'product',
     keywords: ['cybersecurity', 'threat detection', 'compliance automation', 'enterprise security', 'AI security']
+  },
+  CyberShield: {
+    pageName: 'CyberShield',
+    title: 'CyberShield — AI-Driven Cybersecurity & Threat Defense',
+    description: 'Enterprise-grade AI cybersecurity platform with multi-agent orchestration, graph-native attack-path analytics, explainable AI, and continuous compliance mapping.',
+    url: '/CyberShield',
+    category: 'product',
+    keywords: ['CyberShield', 'AI cybersecurity', 'threat defense', 'multi-agent AI security', 'SOC automation', 'explainable AI', 'compliance mapping']
   },
   AboutUs: {
     pageName: 'AboutUs',

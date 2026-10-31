@@ -12,6 +12,7 @@ const footerLinks = {
   ],
   products: [
     { label: 'Agentic Ai', href: createPageUrl('AgenticAI') },
+    { label: 'CyberShield', href: createPageUrl('CyberShield') },
     { label: 'Enterprise Suite', href: createPageUrl('EnterpriseSuite') },
     { label: 'Cloud Platform', href: createPageUrl('CloudPlatform') },
     { label: 'Developer Tools', href: createPageUrl('DeveloperTools') },
