@@ -637,7 +637,7 @@ export default function Events() {
             eventStatus: 'https://schema.org/EventScheduled',
             eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
             location: { '@type': 'Place', name: 'New York, NY', address: { '@type': 'PostalAddress', addressLocality: 'New York', addressCountry: 'US' } },
-            organizer: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.base44.app' },
+            organizer: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.com' },
           }
         ]}
       />

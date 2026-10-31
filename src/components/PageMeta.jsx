@@ -58,7 +58,7 @@ export default function PageMeta({
   review,
 }) {
   const fullTitle = `${title} | ${SITE_NAME}`;
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : SITE_URL;
+  const siteUrl = SITE_URL;
   const fullUrl = `${siteUrl}${url}`;
   const ogImage = (image && !image.includes('unsplash.com')) ? image : 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png';
   const robotsContent = noIndex

@@ -96,7 +96,7 @@ export default function AboutUs() {
           '@context': 'https://schema.org',
           '@type': 'AboutPage',
           name: 'About 1C Platform',
-          url: 'https://1cplatform.base44.app/AboutUs',
+          url: 'https://1cplatform.com/AboutUs',
           mainEntity: {
             '@type': 'Organization',
             name: '1C Platform',

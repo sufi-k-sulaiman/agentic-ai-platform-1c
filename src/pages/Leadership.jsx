@@ -65,14 +65,14 @@ export default function Leadership() {
             '@context': 'https://schema.org',
             '@type': 'AboutPage',
             name: 'Leadership Team',
-            url: 'https://1cplatform.base44.app/Leadership',
+            url: 'https://1cplatform.com/Leadership',
           },
           {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             name: '1C Platform Leadership Team',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Sufi Khan Sulaiman — CTO', url: 'https://1cplatform.base44.app/author/sufi-khan-sulaiman' },
+              { '@type': 'ListItem', position: 1, name: 'Sufi Khan Sulaiman — CTO', url: 'https://1cplatform.com/author/sufi-khan-sulaiman' },
             ],
           },
         ]}

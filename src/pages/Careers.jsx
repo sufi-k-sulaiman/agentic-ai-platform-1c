@@ -224,10 +224,10 @@ export default function Careers() {
             title: 'Enterprise Sales Executive at 1C Platform',
             description: 'Drive enterprise deals with Fortune 500 companies. Join a remote-first team building the future of enterprise AI.',
             employmentType: 'FULL_TIME',
-            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.base44.app' },
+            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.com' },
             jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: 'Remote', addressCountry: 'US' } },
             datePosted: '2026-07-30',
-            url: 'https://1cplatform.base44.app/Careers',
+            url: 'https://1cplatform.com/Careers',
           },
           {
             '@context': 'https://schema.org',
@@ -235,10 +235,10 @@ export default function Careers() {
             title: 'Senior AI Agent Engineer at 1C Platform',
             description: 'Build production-grade agentic AI systems. Design agent architectures, implement tool integrations, and scale autonomous workflows for enterprise clients.',
             employmentType: 'FULL_TIME',
-            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.base44.app' },
+            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.com' },
             jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: 'Remote', addressCountry: 'US' } },
             datePosted: '2026-08-15',
-            url: 'https://1cplatform.base44.app/Careers',
+            url: 'https://1cplatform.com/Careers',
           },
           {
             '@context': 'https://schema.org',
@@ -246,10 +246,10 @@ export default function Careers() {
             title: 'Product Manager - AI Platform at 1C Platform',
             description: 'Lead product strategy for our agentic AI platform. Define features, prioritize roadmap, and work with engineering to deliver world-class AI products.',
             employmentType: 'FULL_TIME',
-            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.base44.app' },
+            hiringOrganization: { '@type': 'Organization', name: '1C Platform', url: 'https://1cplatform.com' },
             jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: 'Remote', addressCountry: 'CA' } },
             datePosted: '2026-08-20',
-            url: 'https://1cplatform.base44.app/Careers',
+            url: 'https://1cplatform.com/Careers',
           },
         ]}
       />

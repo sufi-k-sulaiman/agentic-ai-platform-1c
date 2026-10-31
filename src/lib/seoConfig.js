@@ -6,7 +6,7 @@
  * to the relevant pages across the site.
  */
 
-export const SITE_URL = 'https://1cplatform.base44.app';
+export const SITE_URL = 'https://1cplatform.com';
 export const SITE_NAME = '1C Platform';
 export const SITE_DESCRIPTION = 'Agentic AI platform delivering autonomous AI agents, ERP, CRM, and intelligent automation for 500+ enterprises.';
 
