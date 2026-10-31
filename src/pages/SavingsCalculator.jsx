@@ -91,13 +91,6 @@ export default function SavingsCalculator() {
           brand: '1C Platform',
           category: 'AI ROI Tool',
           offers: { price: '0', currency: 'USD' },
-          rating: 4.8,
-          reviewCount: 500,
-        }}
-        review={{
-          author: '1C Platform Team',
-          rating: 5,
-          body: 'Calculate your potential savings and ROI with Agentic AI automation. See how much time and money your organization can save.',
         }}
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Savings Calculator', url: '/SavingsCalculator' }]}
       />

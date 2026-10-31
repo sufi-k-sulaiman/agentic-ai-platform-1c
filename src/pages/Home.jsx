@@ -36,11 +36,6 @@ export default function Home() {
               priceCurrency: 'USD',
               description: 'Free Starter plan with 1,000 API calls per month',
             },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '500',
-            },
           },
           {
             '@context': 'https://schema.org',

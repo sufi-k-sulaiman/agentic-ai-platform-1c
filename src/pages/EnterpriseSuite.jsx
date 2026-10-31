@@ -247,19 +247,7 @@ export default function EnterpriseSuite() {
           brand: '1C Platform',
           category: 'Enterprise Software',
           offers: { price: '99', currency: 'USD' },
-          rating: 4.9,
-          reviewCount: 500,
         }}
-        schemas={[
-          {
-            '@context': 'https://schema.org',
-            '@type': 'AggregateRating',
-            itemReviewed: { '@type': 'Service', name: '1C Platform' },
-            ratingValue: '4.9',
-            reviewCount: '500',
-            bestRating: '5',
-          }
-        ]}
       />
       <BreadcrumbNav items={[
         

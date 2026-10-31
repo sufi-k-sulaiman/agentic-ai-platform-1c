@@ -943,6 +943,7 @@ export default function Cyber() {
         currentPage="Cyber"
         category="product"
         crossCategories={['resources']}
+        manualPages={['CyberShield', 'AgenticAI', 'EnterpriseSuite', 'AIOverview']}
         title="Explore Related Solutions"
       />
     </div>

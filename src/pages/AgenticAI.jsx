@@ -383,8 +383,6 @@ export default function AgenticAI() {
           brand: '1C Platform',
           category: 'AI Platform',
           offers: { price: '0', currency: 'USD' },
-          rating: 4.8,
-          reviewCount: 500,
         }}
       />
       <BreadcrumbNav items={[
@@ -1139,6 +1137,7 @@ export default function AgenticAI() {
         currentPage="AgenticAI"
         category="product"
         crossCategories={['resources', 'industry']}
+        manualPages={['CyberShield', 'EnterpriseSuite', 'CloudPlatform', 'AIOverview']}
         title="Explore Related Solutions"
       />
     </div>

@@ -67,6 +67,12 @@ export default function CyberShield() {
           keywords={['CyberShield', 'AI cybersecurity', 'threat defense platform', 'multi-agent AI security', 'SOC automation', 'compliance automation', 'explainable AI security']}
           image="https://images.unsplash.com/photo-1563206157-b3e1599f7397?w=1200&h=630&fit=crop"
           service={{ type: 'AI Cybersecurity Platform', areaServed: 'Worldwide' }}
+          product={{
+            name: 'CyberShield',
+            brand: '1C Platform',
+            category: 'SecurityApplication',
+            description: 'Multi-agent AI threat-defense platform for autonomous detection, containment, and continuous compliance mapping.',
+          }}
           faq={faqs}
           webPage={{ lastReviewed: '2026-10-31' }}
         />

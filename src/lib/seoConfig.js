@@ -212,7 +212,7 @@ export const seoPages = {
     description: 'Enterprise-grade AI cybersecurity platform with multi-agent orchestration, graph-native attack-path analytics, explainable AI, and continuous compliance mapping.',
     url: '/CyberShield',
     category: 'product',
-    keywords: ['CyberShield', 'AI cybersecurity', 'threat defense', 'multi-agent AI security', 'SOC automation', 'explainable AI', 'compliance mapping']
+    keywords: ['CyberShield', 'AI cybersecurity', 'threat defense', 'multi-agent AI security', 'SOC automation', 'explainable AI', 'compliance mapping', 'AI SOC', 'agentic security', 'attack-path analytics', 'security operations center', 'autonomous threat defense']
   },
   AboutUs: {
     pageName: 'AboutUs',
