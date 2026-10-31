@@ -11,6 +11,7 @@ import CyberShieldHero from '@/components/cybershield/CyberShieldHero';
 import ExecutiveSummary from '@/components/cybershield/ExecutiveSummary';
 import AgentOrchestration from '@/components/cybershield/AgentOrchestration';
 import ThreatModules from '@/components/cybershield/ThreatModules';
+import DefenseModules from '@/components/cybershield/DefenseModules';
 import ComplianceGraph from '@/components/cybershield/ComplianceGraph';
 import XAISection from '@/components/cybershield/XAISection';
 import CalloutBanner from '@/components/cybershield/CalloutBanner';
@@ -86,6 +87,8 @@ export default function CyberShield() {
         <ExecutiveSummary />
         <AgentOrchestration />
         <ThreatModules />
+
+        <DefenseModules />
 
         <CalloutBanner
           tone="blue"
