@@ -1,38 +1,27 @@
 import React from 'react';
 
 const tones = {
-  cream: {
-    card: 'bg-[#FFFFF4] border-[#003DA5]/10',
-    eyebrow: 'text-[#003DA5]',
-    title: 'text-gray-900',
-    lead: 'text-gray-700',
-    heading: 'text-gray-900',
-    body: 'text-gray-600',
-    num: 'text-[#003DA5]/25',
-    divider: 'border-[#003DA5]/10',
-    quote: 'border-[#FFB605] text-gray-900',
-  },
   white: {
     card: 'bg-white border-[#003DA5]/15',
     eyebrow: 'text-[#003DA5]',
-    title: 'text-gray-900',
-    lead: 'text-gray-700',
-    heading: 'text-gray-900',
-    body: 'text-gray-600',
-    num: 'text-[#003DA5]/25',
+    title: 'text-[#001B4D]',
+    lead: 'text-[#001B4D]/70',
+    heading: 'text-[#001B4D]',
+    body: 'text-[#001B4D]/65',
+    num: 'text-[#FFB605]',
     divider: 'border-[#003DA5]/10',
-    quote: 'border-[#FFB605] text-gray-900',
+    quote: 'border-[#FFB605] text-[#001B4D]',
   },
-  dark: {
-    card: 'bg-[#FFFFF4]/[0.03] border-[#FFFFF4]/10',
-    eyebrow: 'text-[#FFB605]',
-    title: 'text-[#FFFFF4]',
-    lead: 'text-[#FFFFF4]/70',
-    heading: 'text-[#FFFFF4]',
-    body: 'text-[#FFFFF4]/60',
-    num: 'text-[#FFB605]/40',
-    divider: 'border-[#FFFFF4]/10',
-    quote: 'border-[#FFB605] text-[#FFFFF4]',
+  cream: {
+    card: 'bg-[#FFFFF4] border-[#003DA5]/10',
+    eyebrow: 'text-[#003DA5]',
+    title: 'text-[#001B4D]',
+    lead: 'text-[#001B4D]/70',
+    heading: 'text-[#001B4D]',
+    body: 'text-[#001B4D]/65',
+    num: 'text-[#FFB605]',
+    divider: 'border-[#003DA5]/10',
+    quote: 'border-[#FFB605] text-[#001B4D]',
   },
 };
 
@@ -40,7 +29,7 @@ export default function ModuleDeepDive({ deepDive, tone = 'cream' }) {
   const t = tones[tone] || tones.cream;
 
   return (
-    <div className={`mt-12 lg:mt-16 rounded-3xl border p-6 lg:p-10 ${t.card}`}>
+    <div className={`mt-14 lg:mt-20 rounded-3xl border p-6 lg:p-10 ${t.card}`}>
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
         <div className="lg:col-span-4">
           <div className={`text-[11px] font-bold uppercase tracking-[0.22em] ${t.eyebrow}`}>

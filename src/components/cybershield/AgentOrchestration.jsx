@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
 import {
   Radar, Globe2, Bug, Siren, ScrollText, FileText, Workflow, ArrowRight,
 } from 'lucide-react';
@@ -61,14 +60,16 @@ export default function AgentOrchestration() {
     <section className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-14">
-          <Badge className="bg-[#FFFFF4] text-[#003DA5] border border-[#003DA5]/20 hover:bg-[#FFFFF4] mb-4">
-            <Workflow className="w-3.5 h-3.5 mr-1.5" />
-            Multi-Agent AI Orchestration Core
-          </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+          <div className="flex items-center gap-2 mb-4 text-[#003DA5]">
+            <Workflow className="w-5 h-5" strokeWidth={1.5} />
+            <span className="text-[11px] font-bold uppercase tracking-[0.22em]">
+              Multi-Agent AI Orchestration Core
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#001B4D] tracking-tight">
             Specialized agents that negotiate evidence in real time
           </h2>
-          <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+          <p className="mt-4 text-lg text-[#001B4D]/70 leading-relaxed">
             Rather than operating in isolated silos, CyberShield agents communicate over a secure
             shared context bus to negotiate evidence, calculate risk, and execute remediation
             workflows — no manual swivel-chairing between tools.
@@ -83,25 +84,23 @@ export default function AgentOrchestration() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.45, delay: i * 0.06 }}
-              className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 hover:border-[#003DA5]/40 hover:shadow-xl hover:shadow-[#003DA5]/10 transition-all"
+              className="group relative flex flex-col rounded-2xl border border-[#003DA5]/15 bg-white p-6 hover:border-[#003DA5]/40 transition-colors"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="h-11 w-11 shrink-0 rounded-xl bg-gradient-to-br from-[#003DA5] to-[#001B4D] flex items-center justify-center">
-                  <agent.icon className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="font-bold text-gray-900 leading-snug">{agent.name}</h3>
+              <div className="flex items-start gap-3 mb-4">
+                <agent.icon className="w-6 h-6 shrink-0 text-[#003DA5] mt-0.5" strokeWidth={1.5} />
+                <h3 className="font-bold text-[#001B4D] leading-snug">{agent.name}</h3>
               </div>
 
-              <p className="text-sm font-medium text-gray-900 mb-2">{agent.role}</p>
-              <p className="text-sm text-gray-600 leading-relaxed mb-5">{agent.capabilities}</p>
+              <p className="text-sm font-medium text-[#001B4D] mb-2">{agent.role}</p>
+              <p className="text-sm text-[#001B4D]/65 leading-relaxed mb-5">{agent.capabilities}</p>
 
-              <div className="mt-auto pt-4 border-t border-gray-100">
-                <div className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-2">
+              <div className="mt-auto pt-4 border-t border-[#003DA5]/10">
+                <div className="text-[11px] font-semibold uppercase tracking-wider text-[#003DA5] mb-2">
                   Outputs
                 </div>
                 <ul className="space-y-1.5">
                   {agent.outputs.map((out) => (
-                    <li key={out} className="flex items-center gap-2 text-sm text-gray-700">
+                    <li key={out} className="flex items-center gap-2 text-sm text-[#001B4D]/75">
                       <ArrowRight className="w-3.5 h-3.5 text-[#FFB605] shrink-0" />
                       {out}
                     </li>

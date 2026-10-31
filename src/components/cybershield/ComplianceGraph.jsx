@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
 import { ScrollText, GitBranch, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 const frameworks = ['NIST', 'ISO/IEC 27001', 'SOC 2', 'GDPR'];
@@ -28,16 +27,19 @@ const blocks = [
 
 export default function ComplianceGraph() {
   return (
-    <section className="py-20 lg:py-28 bg-[#FFFFF4]">
+    <section className="py-20 lg:py-28 bg-white border-t border-[#003DA5]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
-          <Badge className="bg-[#003DA5] text-[#FFFFF4] border border-[#003DA5] hover:bg-[#003DA5] mb-4">
-            Compliance Mapping & Graph Analytics
-          </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+          <div className="flex items-center gap-2 mb-4 text-[#003DA5]">
+            <ScrollText className="w-5 h-5" strokeWidth={1.5} />
+            <span className="text-[11px] font-bold uppercase tracking-[0.22em]">
+              Compliance Mapping &amp; Graph Analytics
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#001B4D] tracking-tight">
             Your defensive posture, matched to your obligations
           </h2>
-          <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+          <p className="mt-4 text-lg text-[#001B4D]/70 leading-relaxed">
             CyberShield closes the gap between technical security signals and executive governance —
             without manual cross-referencing between frameworks.
           </p>
@@ -51,22 +53,20 @@ export default function ComplianceGraph() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.45, delay: i * 0.08 }}
-              className="rounded-2xl bg-white border border-[#003DA5]/10 p-6 hover:shadow-lg transition-shadow"
+              className="rounded-2xl bg-white border border-[#003DA5]/15 p-6 hover:border-[#003DA5]/40 transition-colors"
             >
-              <div className="h-11 w-11 rounded-xl bg-[#003DA5]/10 border border-[#003DA5]/20 flex items-center justify-center mb-4">
-                <b.icon className="w-5 h-5 text-[#003DA5]" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">{b.title}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{b.body}</p>
+              <b.icon className="w-7 h-7 text-[#003DA5] mb-4" strokeWidth={1.5} />
+              <h3 className="font-bold text-[#001B4D] mb-2">{b.title}</h3>
+              <p className="text-sm text-[#001B4D]/65 leading-relaxed">{b.body}</p>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-[#003DA5]/20 bg-white p-6">
+        <div className="mt-8 rounded-2xl border border-[#003DA5]/15 bg-[#FFFFF4] p-6">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-sm font-semibold text-gray-900">Continuously mapped to:</span>
+            <span className="text-sm font-semibold text-[#001B4D]">Continuously mapped to:</span>
             {frameworks.map((f) => (
-              <span key={f} className="inline-flex items-center gap-1.5 rounded-full bg-[#003DA5]/10 border border-[#003DA5]/20 px-3 py-1 text-sm font-medium text-[#003DA5]">
+              <span key={f} className="inline-flex items-center gap-1.5 rounded-full bg-white border border-[#003DA5]/20 px-3 py-1 text-sm font-medium text-[#003DA5]">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#FFB605]" />
                 {f}
               </span>

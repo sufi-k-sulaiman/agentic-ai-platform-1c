@@ -1,47 +1,55 @@
 import React from 'react';
 
 const tones = {
+  cream: {
+    section: 'bg-[#FFFFF4]',
+    rule: 'bg-[#FFB605]',
+    eyebrow: 'text-[#003DA5]',
+    title: 'text-[#001B4D]',
+    body: 'text-[#001B4D]/70',
+    numeral: 'text-[#003DA5]/10',
+  },
+  white: {
+    section: 'bg-white border-y border-[#003DA5]/10',
+    rule: 'bg-[#003DA5]',
+    eyebrow: 'text-[#003DA5]',
+    title: 'text-[#001B4D]',
+    body: 'text-[#001B4D]/70',
+    numeral: 'text-[#003DA5]/10',
+  },
   blue: {
-    section: 'bg-[#003DA5] text-[#FFFFF4]',
+    section: 'bg-[#003DA5]',
+    rule: 'bg-[#FFB605]',
     eyebrow: 'text-[#FFB605]',
-    body: 'text-[#FFFFF4]/75',
-    numeral: 'text-[#FFFFF4]/10',
-  },
-  dark: {
-    section: 'bg-black text-[#FFFFF4]',
-    eyebrow: 'text-[#FFB605]',
+    title: 'text-[#FFFFF4]',
     body: 'text-[#FFFFF4]/70',
-    numeral: 'text-[#003DA5]/40',
-  },
-  yellow: {
-    section: 'bg-[#FFB605] text-black',
-    eyebrow: 'text-black/60',
-    body: 'text-black/75',
-    numeral: 'text-black/10',
+    numeral: 'text-[#FFFFF4]/10',
   },
 };
 
-export default function ModuleBanner({ moduleNumber, phase, title, body, tone = 'blue' }) {
-  const t = tones[tone] || tones.blue;
+export default function ModuleBanner({ moduleNumber, phase, title, body, tone = 'cream' }) {
+  const t = tones[tone] || tones.cream;
 
   return (
     <section className={`relative overflow-hidden ${t.section}`}>
+      <div className={`h-1.5 w-full ${t.rule}`} />
+
       <span
         aria-hidden="true"
-        className={`pointer-events-none select-none hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 text-[140px] lg:text-[200px] font-black leading-none ${t.numeral}`}
+        className={`pointer-events-none select-none hidden md:block absolute right-0 top-1/2 -translate-y-1/2 text-[150px] lg:text-[220px] font-black leading-none ${t.numeral}`}
       >
         {moduleNumber}
       </span>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
         <div className="max-w-3xl">
           <div className={`text-[11px] font-bold uppercase tracking-[0.22em] ${t.eyebrow}`}>
             Module {moduleNumber} · {phase}
           </div>
-          <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15]">
+          <h2 className={`mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] ${t.title}`}>
             {title}
           </h2>
-          <p className={`mt-3 text-base lg:text-lg leading-relaxed ${t.body}`}>{body}</p>
+          <p className={`mt-4 text-base lg:text-lg leading-relaxed ${t.body}`}>{body}</p>
         </div>
       </div>
     </section>

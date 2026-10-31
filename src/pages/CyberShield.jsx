@@ -76,7 +76,7 @@ export default function CyberShield() {
         <CyberShieldHero />
 
         <CalloutBanner
-          tone="yellow"
+          tone="cream"
           eyebrow="The callout every CISO needs"
           title="Dwell time is the damage. Shrink it to seconds."
           body="Most breaches are caught weeks after entry. CyberShield agents reach consensus, size the blast radius, and stage containment on their own — your analysts approve, not assemble."
@@ -107,7 +107,7 @@ export default function CyberShield() {
         <XAISection />
 
         <CalloutBanner
-          tone="dark"
+          tone="white"
           eyebrow="Analyst-first automation"
           title="Your SOC doesn't need more alerts. It needs decisions."
           body="Every detection arrives explained, scored, and paired with a remediation path — with human approval gates on anything that touches critical infrastructure."
@@ -116,17 +116,17 @@ export default function CyberShield() {
         />
 
         {/* Outcome strip */}
-        <section className="py-16 bg-[#FFFFF4] border-y border-[#003DA5]/10">
+        <section className="py-16 lg:py-20 bg-white border-t border-[#003DA5]/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#001B4D] mb-10">
               Built for security operations that never sleep
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
               {capabilities.map(({ icon: Icon, title, body }) => (
-                <div key={title} className="rounded-2xl bg-white border border-[#003DA5]/10 p-6">
-                  <Icon className="w-5 h-5 text-[#003DA5] mb-3" />
-                  <h3 className="font-bold text-gray-900 mb-1.5">{title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
+                <div key={title} className="border-t border-[#003DA5]/15 pt-5">
+                  <Icon className="w-6 h-6 text-[#003DA5] mb-3" strokeWidth={1.5} />
+                  <h3 className="font-bold text-[#001B4D] mb-1.5">{title}</h3>
+                  <p className="text-sm text-[#001B4D]/65 leading-relaxed">{body}</p>
                 </div>
               ))}
             </div>

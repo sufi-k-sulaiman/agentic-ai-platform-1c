@@ -18,13 +18,13 @@ export default function ExecutiveSummary() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative rounded-3xl border border-[#003DA5]/20 bg-[#FFFFF4] p-8 lg:p-12"
+          className="relative rounded-3xl border border-[#003DA5]/15 bg-[#FFFFF4] p-8 lg:p-12"
         >
-          <Quote className="absolute top-6 right-8 w-14 h-14 text-[#FFB605]/40" />
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[#003DA5] mb-4">
+          <Quote className="absolute top-7 right-9 w-14 h-14 text-[#FFB605]/40" />
+          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#003DA5] mb-5">
             Executive Summary
           </div>
-          <p className="text-lg lg:text-xl text-gray-800 leading-relaxed relative">
+          <p className="text-lg lg:text-xl text-[#001B4D]/80 leading-relaxed relative">
             CyberShield is an enterprise-grade, AI-powered cybersecurity framework and threat-defense
             platform designed to autonomously detect, analyze, and mitigate multi-layer cyberattacks
             while continuously enforcing global compliance. By combining an advanced multi-agent AI
@@ -34,11 +34,11 @@ export default function ExecutiveSummary() {
             proactive, autonomous defense ecosystems.
           </p>
 
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="mt-9 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4">
             {highlights.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2.5 rounded-xl bg-white border border-[#003DA5]/10 px-4 py-3">
-                <Icon className="w-4 h-4 text-[#003DA5] shrink-0" />
-                <span className="text-sm font-medium text-gray-800 leading-snug">{label}</span>
+              <div key={label} className="flex items-center gap-2.5">
+                <Icon className="w-5 h-5 text-[#003DA5] shrink-0" strokeWidth={1.5} />
+                <span className="text-sm font-medium text-[#001B4D] leading-snug">{label}</span>
               </div>
             ))}
           </div>

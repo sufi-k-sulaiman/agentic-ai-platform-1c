@@ -15,10 +15,10 @@ export default function DefenseModuleDomain() {
         phase={m.phase}
         title={m.title}
         body={m.body}
-        tone="dark"
+        tone="cream"
       />
 
-      <section className="py-16 lg:py-24 bg-[#FFFFF4] border-b border-[#003DA5]/10">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-6">
             <AlertTriangle className="w-4 h-4 text-[#003DA5]" />
@@ -36,10 +36,10 @@ export default function DefenseModuleDomain() {
                 <span className="text-[11px] font-bold tracking-[0.14em] text-[#003DA5]/60">
                   0{i + 1}
                 </span>
-                <div className="mt-2 text-sm font-bold text-gray-900 leading-snug">
+                <div className="mt-2 text-sm font-bold text-[#001B4D] leading-snug">
                   {issue.label}
                 </div>
-                <p className="mt-1.5 text-sm text-gray-600 leading-relaxed">{issue.body}</p>
+                <p className="mt-1.5 text-sm text-[#001B4D]/65 leading-relaxed">{issue.body}</p>
               </div>
             ))}
           </div>
@@ -55,14 +55,14 @@ export default function DefenseModuleDomain() {
                     <span className="inline-block text-[11px] font-black tracking-[0.12em] px-2.5 py-1 rounded-md bg-[#003DA5] text-[#FFFFF4]">
                       {f.code}
                     </span>
-                    <h3 className="mt-3 text-xl font-bold text-gray-900 leading-snug">
+                    <h3 className="mt-3 text-xl font-bold text-[#001B4D] leading-snug">
                       {f.name}
                     </h3>
-                    <p className="mt-3 text-sm text-gray-600 leading-relaxed">{f.what}</p>
+                    <p className="mt-3 text-sm text-[#001B4D]/65 leading-relaxed">{f.what}</p>
                   </div>
 
                   <div className="lg:col-span-8 lg:border-l lg:border-[#003DA5]/10 lg:pl-8">
-                    <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-gray-400 mb-3">
+                    <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#003DA5] mb-3">
                       How it resolves &amp; mitigates
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -73,11 +73,11 @@ export default function DefenseModuleDomain() {
                         >
                           <div className="flex gap-2">
                             <ArrowRight className="w-4 h-4 mt-0.5 shrink-0 text-[#FFB605]" />
-                            <span className="text-sm font-semibold text-gray-900 leading-snug">
+                            <span className="text-sm font-semibold text-[#001B4D] leading-snug">
                               {mit.title}
                             </span>
                           </div>
-                          <p className="mt-1.5 text-sm text-gray-600 leading-relaxed">
+                          <p className="mt-1.5 text-sm text-[#001B4D]/65 leading-relaxed">
                             {mit.body}
                           </p>
                         </div>

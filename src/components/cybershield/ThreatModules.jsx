@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
 import { Network, Mail, Users, Layers } from 'lucide-react';
 
 const modules = [
@@ -29,25 +28,27 @@ const modules = [
 
 export default function ThreatModules() {
   return (
-    <section className="py-20 lg:py-28 bg-black text-[#FFFFF4]">
+    <section className="py-20 lg:py-28 bg-white border-t border-[#003DA5]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
-            <Badge className="bg-[#003DA5] text-[#FFFFF4] border border-[#003DA5] hover:bg-[#003DA5] mb-4">
-              <Layers className="w-3.5 h-3.5 mr-1.5" />
-              Multi-Layer Attack Modules
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <div className="flex items-center gap-2 mb-4 text-[#003DA5]">
+              <Layers className="w-5 h-5" strokeWidth={1.5} />
+              <span className="text-[11px] font-bold uppercase tracking-[0.22em]">
+                Multi-Layer Attack Modules
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#001B4D]">
               Threat-vector specific models, not signatures
             </h2>
-            <p className="mt-4 text-lg text-[#FFFFF4]/60 leading-relaxed">
+            <p className="mt-4 text-lg text-[#001B4D]/70 leading-relaxed">
               CyberShield deploys high-precision machine learning models optimized for each attack
               surface, eliminating reliance on easily bypassed, signature-based detection.
             </p>
 
-            <div className="mt-8 rounded-xl border border-[#003DA5]/60 bg-[#003DA5]/20 p-5">
-              <div className="text-sm font-semibold text-[#FFB605] mb-1">Why models beat signatures</div>
-              <p className="text-sm text-[#FFFFF4]/60 leading-relaxed">
+            <div className="mt-8 rounded-2xl border border-[#003DA5]/15 bg-[#FFFFF4] p-6">
+              <div className="text-sm font-semibold text-[#003DA5] mb-1.5">Why models beat signatures</div>
+              <p className="text-sm text-[#001B4D]/65 leading-relaxed">
                 Signatures fail against polymorphic and zero-day attacks. Continuous models reason
                 over behavior, context, and intent — catching what has never been seen before.
               </p>
@@ -62,20 +63,18 @@ export default function ThreatModules() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="group rounded-2xl border border-[#FFFFF4]/10 bg-[#FFFFF4]/[0.03] p-6 hover:border-[#FFB605]/40 hover:bg-[#003DA5]/20 transition-all"
+                className="rounded-2xl border border-[#003DA5]/15 bg-white p-6 hover:border-[#003DA5]/40 transition-colors"
               >
                 <div className="flex items-start gap-4">
-                  <div className="h-11 w-11 shrink-0 rounded-xl bg-[#003DA5]/30 border border-[#003DA5]/60 flex items-center justify-center">
-                    <m.icon className="w-5 h-5 text-[#FFB605]" />
-                  </div>
+                  <m.icon className="w-6 h-6 shrink-0 text-[#003DA5] mt-1" strokeWidth={1.5} />
                   <div>
-                    <div className="flex flex-wrap items-center gap-3 mb-1.5">
-                      <h3 className="font-bold text-[#FFFFF4]">{m.title}</h3>
-                      <span className="text-[11px] uppercase tracking-wider text-[#FFB605] bg-[#003DA5]/25 border border-[#003DA5]/50 rounded-full px-2 py-0.5">
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                      <h3 className="font-bold text-[#001B4D]">{m.title}</h3>
+                      <span className="text-[11px] uppercase tracking-wider text-[#003DA5] border-b border-[#FFB605] pb-0.5">
                         {m.tag}
                       </span>
                     </div>
-                    <p className="text-sm text-[#FFFFF4]/60 leading-relaxed">{m.body}</p>
+                    <p className="text-sm text-[#001B4D]/65 leading-relaxed">{m.body}</p>
                   </div>
                 </div>
               </motion.div>
