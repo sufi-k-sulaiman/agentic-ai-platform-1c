@@ -163,7 +163,7 @@ export default function AuthorSufiKhanSulaiman() {
   return (
     <div className="bg-white min-h-screen">
       <PageMeta
-        title="Sufi Khan Sulaiman — CTO, 1C Platform | AI, Ecommerce & Digital Commerce Expert"
+        title="Sufi Khan Sulaiman — CTO, 1C Platform"
         description="Sufi Khan Sulaiman is Chief Technology Officer of 1C Platform and an expert in agentic AI, ecommerce, and digital commerce. Read his articles on AI automation, digital commerce strategy, and enterprise technology trends."
         url="/author/sufi-khan-sulaiman"
         keywords={['Sufi Khan Sulaiman', 'Sufi K Sulaiman', '1C Platform CTO', 'AI author', 'ecommerce AI expert', 'digital commerce expert', 'agentic AI author', 'enterprise AI leader']}

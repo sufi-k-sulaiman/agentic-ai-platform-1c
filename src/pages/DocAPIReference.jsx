@@ -44,7 +44,7 @@ export default function DocAPIReference() {
   return (
     <>
       <PageMeta
-        title="API Reference"
+        title="API Reference: Endpoints & Schemas"
         description="Complete REST API documentation for all endpoints including authentication, agent management, and chat capabilities."
         url="/DocAPIReference"
         keywords={['API reference', 'REST API', 'API documentation', 'endpoints', 'developer documentation', 'API endpoints', 'API guide']}

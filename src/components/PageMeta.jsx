@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { SITE_NAME, SITE_URL } from '@/lib/seoConfig';
+import { SITE_NAME, SITE_URL, seoPages } from '@/lib/seoConfig';
 import { getBlogFAQs } from '@/lib/blogFAQs';
 
 /**
@@ -59,7 +59,17 @@ export default function PageMeta({
 }) {
   const fullTitle = `${title} | ${SITE_NAME}`;
   const siteUrl = SITE_URL;
-  const fullUrl = `${siteUrl}${url}`;
+  // Resolve the canonical to this page's real route. Routes are PascalCase page names;
+  // many pages pass a lowercase/kebab `url`, which would canonicalize to a URL that 404s.
+  const normalizePath = (p) => (p || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const canonicalPath = (() => {
+    if (!url || url === '/') return '/';
+    const match = Object.values(seoPages).find(
+      (p) => normalizePath(p.pageName) === normalizePath(url) || normalizePath(p.url) === normalizePath(url)
+    );
+    return match ? match.url : url;
+  })();
+  const fullUrl = `${siteUrl}${canonicalPath}`;
   const ogImage = (image && !image.includes('unsplash.com')) ? image : 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_68fe34ce85471ea8927c980f/01840dc23_1C-logo.png';
   const robotsContent = noIndex
     ? 'noindex, nofollow'

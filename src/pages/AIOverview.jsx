@@ -13,7 +13,7 @@ export default function AIOverview() {
   return (
     <div className="bg-white min-h-screen">
       <PageMeta
-        title="Artificial Intelligence: History, Invention, Pros & Cons, Status & Future"
+        title="Artificial Intelligence: History, Pros, Cons & Future"
         description="A comprehensive guide to Artificial Intelligence — its history, invention, advantages and disadvantages, current state in 2025, and what the future holds for AI technology."
         url="/AIOverview"
         keywords={['artificial intelligence', 'AI history', 'AI invention', 'AI pros and cons', 'AI future', 'AI current status', 'machine learning', 'deep learning', 'neural networks']}

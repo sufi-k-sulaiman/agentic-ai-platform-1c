@@ -16,7 +16,7 @@ export default function BlogGenerativeAIFuture() {
   return (
     <div className="bg-white min-h-screen">
       <PageMeta 
-        title="The Future of Generative AI: Trends and Predictions for 2025-2030"
+        title="Generative AI in 2025-2030: Trends, Predictions & What's Next"
         description="Explore where generative AI is heading. From multimodal models to autonomous agents, discover the trends shaping the next 5 years."
         url="/BlogGenerativeAIFuture"
         article={{

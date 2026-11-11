@@ -13,7 +13,7 @@ export default function BlogImageGeneration() {
   return (
     <div className="bg-white min-h-screen">
       <PageMeta 
-        title="AI Image Generation: From DALL-E to Midjourney"
+        title="AI Image Generation Tools & Techniques: A Practical Guide"
         description="Comprehensive guide to AI image generation tools, techniques, and creative applications for businesses and creators."
         url="/BlogImageGeneration"
         keywords={['AI image generation', 'DALL-E', 'Midjourney', 'Stable Diffusion', 'text-to-image', 'AI art']}
