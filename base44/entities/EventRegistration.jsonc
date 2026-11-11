@@ -51,6 +51,12 @@
         "cancelled",
         "attended"
       ],
+      "enumColors": [
+        "green",
+        "yellow",
+        "red",
+        "blue"
+      ],
       "default": "confirmed",
       "description": "Registration status"
     },
@@ -62,8 +68,19 @@
         "student",
         "speaker"
       ],
+      "enumColors": [
+        "gray",
+        "purple",
+        "blue",
+        "pink"
+      ],
       "default": "general",
       "description": "Ticket type"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Optional notes about this registration (up to 1000 characters)"
     }
   },
   "required": [

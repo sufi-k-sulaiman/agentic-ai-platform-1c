@@ -8,7 +8,7 @@ const footerLinks = {
     { label: 'Careers', href: createPageUrl('Careers') },
     { label: 'Investor Relations', href: createPageUrl('InvestorRelations') },
     { label: 'Leadership', href: createPageUrl('Leadership') },
-    { label: 'Newsroom', href: createPageUrl('Newsroom') },
+    { label: 'Newsroom', href: createPageUrl('MediaNewsroom') },
   ],
   products: [
     { label: 'Agentic Ai', href: createPageUrl('AgenticAI') },

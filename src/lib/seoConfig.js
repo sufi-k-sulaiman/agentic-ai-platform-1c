@@ -246,11 +246,11 @@ export const seoPages = {
     category: 'company',
     keywords: ['investor relations', 'investors', 'financials', 'company performance']
   },
-  Newsroom: {
-    pageName: 'Newsroom',
-    title: 'Newsroom',
-    description: 'Latest news, press releases, and announcements from 1C Platform.',
-    url: '/Newsroom',
+  MediaNewsroom: {
+    pageName: 'MediaNewsroom',
+    title: 'Newsroom: Press Releases & Company Announcements',
+    description: 'Press releases, product launches, awards, and partnerships from 1C Platform, the agentic AI platform for enterprise teams.',
+    url: '/MediaNewsroom',
     category: 'company',
     keywords: ['newsroom', 'press releases', 'news', 'announcements']
   },

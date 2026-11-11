@@ -71,6 +71,11 @@
       "type": "boolean",
       "default": false,
       "description": "Whether onboarding is completed"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Optional notes or summary about this onboarding submission (up to 1000 characters)"
     }
   },
   "required": [

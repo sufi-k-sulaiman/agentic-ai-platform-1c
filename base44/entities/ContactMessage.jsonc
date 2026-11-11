@@ -27,8 +27,19 @@
         "Replied",
         "Archived"
       ],
+      "enumColors": [
+        "blue",
+        "yellow",
+        "green",
+        "gray"
+      ],
       "default": "New",
       "description": "Message status"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Optional internal notes about this message (up to 1000 characters)"
     }
   },
   "required": [

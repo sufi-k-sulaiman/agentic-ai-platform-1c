@@ -5,7 +5,7 @@ import { queryClientInstance } from '@/lib/query-client'
 import VisualEditAgent from '@/lib/VisualEditAgent'
 import NavigationTracker from '@/lib/NavigationTracker'
 import { pagesConfig } from './pages.config'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
@@ -102,6 +102,8 @@ const AuthenticatedApp = () => {
           <ProgrammaticSEO />
         </LayoutWrapper>
       } />
+      <Route path="/Newsroom" element={<Navigate to="/MediaNewsroom" replace />} />
+      <Route path="/NewsletterSignups" element={<Navigate to="/NewsletterSubscribers" replace />} />
       <Route path="*" element={
         <LayoutWrapper currentPageName="PageNotFound">
           <PageNotFound />

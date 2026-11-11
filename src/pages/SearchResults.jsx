@@ -41,7 +41,7 @@ const allPages = [
   { name: 'Events', path: 'Events', description: 'Upcoming events and webinars' },
   { name: 'About Us', path: 'AboutUs', description: 'Our company story' },
   { name: 'Careers', path: 'Careers', description: 'Join our team' },
-  { name: 'Newsroom', path: 'Newsroom', description: 'Latest news and press releases' },
+  { name: 'Newsroom', path: 'MediaNewsroom', description: 'Latest news and press releases' },
   { name: 'Leadership', path: 'Leadership', description: 'Meet our leadership team' },
   { name: 'Investor Relations', path: 'InvestorRelations', description: 'Information for investors' },
   { name: 'Help Center', path: 'HelpCenter', description: 'Get help and support' },

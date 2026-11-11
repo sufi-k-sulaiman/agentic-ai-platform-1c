@@ -8,7 +8,7 @@ import { Mail, Calendar, MapPin } from 'lucide-react';
 import PageMeta from '@/components/PageMeta';
 import InternalLinker from '@/components/seo/InternalLinker';
 
-export default function NewsletterSignups() {
+export default function NewsletterSubscribers() {
   const { data: signups = [], isLoading } = useQuery({
     queryKey: ['newsletter-signups'],
     queryFn: () => base44.entities.NewsletterSignup.list('-created_date', 1000)
@@ -18,18 +18,18 @@ export default function NewsletterSignups() {
   const unsubscribedCount = signups.filter(s => s.status === 'unsubscribed').length;
 
   return (
-        <InternalLinker currentPage="NewsletterSignups">
+        <InternalLinker currentPage="NewsletterSubscribers">
     <div className="min-h-screen bg-gray-50 py-12">
-      <PageMeta 
-        title="Newsletter Signups"
-        description="Manage newsletter subscriptions"
-        url="/newsletter-signups"
+      <PageMeta
+        title="Newsletter Subscribers Dashboard"
+        description="View, filter, and manage every newsletter subscriber collected across the 1C Platform website."
+        url="/NewsletterSubscribers"
         noIndex
       />
-      
+
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Newsletter Signups</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Newsletter Subscribers</h1>
           <p className="text-gray-600">Manage and view all newsletter subscriptions</p>
         </div>
 

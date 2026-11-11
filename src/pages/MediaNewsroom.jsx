@@ -209,24 +209,24 @@ const news = [
   }
 ];
 
-export default function Newsroom() {
+export default function MediaNewsroom() {
   const [activeTab, setActiveTab] = useState('all');
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const filteredNews = activeTab === 'all' 
-    ? news 
+  const filteredNews = activeTab === 'all'
+    ? news
     : news.filter(item => item.category.toLowerCase().replace(' ', '-') === activeTab);
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!email) return;
-    
+
     setIsSubmitting(true);
     try {
       await base44.entities.NewsletterSignup.create({
         email,
-        source: 'Newsroom'
+        source: 'MediaNewsroom'
       });
       toast.success('Successfully subscribed to newsletter!');
       setEmail('');
@@ -238,12 +238,12 @@ export default function Newsroom() {
   };
 
   return (
-        <InternalLinker currentPage="Newsroom">
+        <InternalLinker currentPage="MediaNewsroom">
     <div className="bg-white">
-      <PageMeta 
-        title="Newsroom"
-        description="Latest news, product launches, and company updates from 1cPlatform. Stay informed about AI innovation and enterprise transformation."
-        url="/newsroom"
+      <PageMeta
+        title="Newsroom: Press Releases & Company Announcements"
+        description="Press releases, product launches, awards, and partnerships from 1cPlatform — the agentic AI platform for enterprise teams."
+        url="/MediaNewsroom"
         keywords={['newsroom', 'press releases', 'company news', 'product updates', 'AI news']}
       />
       {/* Hero */}
@@ -273,8 +273,8 @@ export default function Newsroom() {
                 required
                 className="flex-1 h-12 px-6 rounded-full border-2 border-[#6209e6]/20 focus:border-[#6209e6] focus:outline-none transition-colors"
               />
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 disabled={isSubmitting}
                 className="bg-[#6209e6] hover:bg-[#5008c5] rounded-full px-8 h-12"
               >

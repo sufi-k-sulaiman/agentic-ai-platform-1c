@@ -40,8 +40,19 @@
         "Completed",
         "Cancelled"
       ],
+      "enumColors": [
+        "yellow",
+        "blue",
+        "green",
+        "red"
+      ],
       "default": "Pending",
       "description": "Call status"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Optional notes or summary for this call request (up to 1000 characters)"
     }
   },
   "required": [

@@ -3,7 +3,7 @@ import AboutUs from './pages/AboutUs';
 import Careers from './pages/Careers';
 import InvestorRelations from './pages/InvestorRelations';
 import Leadership from './pages/Leadership';
-import Newsroom from './pages/Newsroom';
+import MediaNewsroom from './pages/MediaNewsroom';
 import AgenticAI from './pages/AgenticAI';
 import CyberShield from './pages/CyberShield';
 import EnterpriseSuite from './pages/EnterpriseSuite';
@@ -120,7 +120,7 @@ import BlogAIAutonomyChallenges from './pages/BlogAIAutonomyChallenges';
 import BlogAIAutonomyFuture from './pages/BlogAIAutonomyFuture';
 import SavingsCalculator from './pages/SavingsCalculator';
 import EventRegistrations from './pages/EventRegistrations';
-import NewsletterSignups from './pages/NewsletterSignups';
+import NewsletterSubscribers from './pages/NewsletterSubscribers';
 import DocInstallation from './pages/DocInstallation';
 import DocFirstAgent from './pages/DocFirstAgent';
 import DocAuthentication from './pages/DocAuthentication';
@@ -238,7 +238,7 @@ export const PAGES = {
     "Careers": Careers,
     "InvestorRelations": InvestorRelations,
     "Leadership": Leadership,
-    "Newsroom": Newsroom,
+    "MediaNewsroom": MediaNewsroom,
     "AgenticAI": AgenticAI,
     "CyberShield": CyberShield,
     "EnterpriseSuite": EnterpriseSuite,
@@ -355,7 +355,7 @@ export const PAGES = {
     "BlogAIAutonomyFuture": BlogAIAutonomyFuture,
     "SavingsCalculator": SavingsCalculator,
     "EventRegistrations": EventRegistrations,
-    "NewsletterSignups": NewsletterSignups,
+    "NewsletterSubscribers": NewsletterSubscribers,
     "DocInstallation": DocInstallation,
     "DocFirstAgent": DocFirstAgent,
     "DocAuthentication": DocAuthentication,

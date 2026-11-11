@@ -58,7 +58,7 @@ const navItems = [
     submenu: [
       { label: 'About Us', description: 'Our story', href: createPageUrl('AboutUs') },
       { label: 'Careers', description: 'Join our team', href: createPageUrl('Careers') },
-      { label: 'Newsroom', description: 'Latest news', href: createPageUrl('Newsroom') },
+      { label: 'Newsroom', description: 'Latest news', href: createPageUrl('MediaNewsroom') },
       { label: 'Leadership', description: 'Meet the team', href: createPageUrl('Leadership') },
       { label: 'Investor Relations', description: 'For investors', href: createPageUrl('InvestorRelations') },
       { label: 'Top 100 AI Questions', description: 'AI, ecommerce & integration', href: '/top-100-questions' },

@@ -36,7 +36,7 @@ const pageIndex = [
   { name: 'Events', path: 'Events', description: 'Upcoming events', keywords: ['events', 'conferences', 'webinars'] },
   { name: 'About Us', path: 'AboutUs', description: 'Our story', keywords: ['about', 'company', 'story'] },
   { name: 'Careers', path: 'Careers', description: 'Join our team', keywords: ['careers', 'jobs', 'hiring'] },
-  { name: 'Newsroom', path: 'Newsroom', description: 'Latest news', keywords: ['news', 'press', 'media'] },
+  { name: 'Newsroom', path: 'MediaNewsroom', description: 'Latest news', keywords: ['news', 'press', 'media'] },
   { name: 'Leadership', path: 'Leadership', description: 'Meet the team', keywords: ['leadership', 'team', 'executives'] },
   { name: 'Investor Relations', path: 'InvestorRelations', description: 'For investors', keywords: ['investors', 'ir', 'financial'] },
   { name: 'Help Center', path: 'HelpCenter', description: 'Get help', keywords: ['help', 'support', 'faq'] },
